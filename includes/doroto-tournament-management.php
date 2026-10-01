@@ -10,6 +10,17 @@ if (!defined('ABSPATH')) {
  */
 function doroto_tournament_progress(int $tournament_id)
 {
+	return doroto_with_tournament_lock($tournament_id, function () use ($tournament_id) {
+		return doroto_tournament_progress_locked($tournament_id);
+	});
+}
+
+/**
+ * Body of doroto_tournament_progress(); caller must hold the tournament lock.
+ * @since 1.6.0
+ */
+function doroto_tournament_progress_locked(int $tournament_id)
+{
 	global $wpdb;
 
 	$tournament = doroto_prepare_tournament($tournament_id);
@@ -104,6 +115,7 @@ function doroto_tournament_progress(int $tournament_id)
 			'statistics' => serialize($statistics),
 			'planned_combinations' => intval(floor($matches_planned_reduced)),
 			'rest_combinations' => intval(floor($matches_to_play_reduced)),
+			'last_update' => doroto_now_ms(),
 		),
 		array('id' => $tournament_id)
 	);
@@ -117,8 +129,18 @@ function doroto_tournament_progress(int $tournament_id)
  */
 function doroto_offer_games(int $tournament_id, int $matches_to_select)
 {
+	return doroto_with_tournament_lock($tournament_id, function () use ($tournament_id, $matches_to_select) {
+		return doroto_offer_games_locked($tournament_id, $matches_to_select);
+	});
+}
+
+/**
+ * Body of doroto_offer_games(); caller must hold the tournament lock.
+ * @since 1.6.0
+ */
+function doroto_offer_games_locked(int $tournament_id, int $matches_to_select)
+{
 	global $wpdb;
-	//return 'zde tady';
 
 	$tournament_id = intval($tournament_id);
 	if ($tournament_id == 0) {
@@ -889,23 +911,18 @@ function doroto_offer_games(int $tournament_id, int $matches_to_select)
 			'result_2' => 0
 		);
 
-		// Step 52: Save the $playing array back to the database
-		$wpdb->update($wpdb->prefix . 'doroto_tournaments', array(
-			'playing' => serialize($playing),
-			'last_update'  => round(microtime(true) * 1000)
-		), array('id' => $tournament_id));
-
-		// Step 53: Add a new match to the $matches_list array and save back to the database
+		// Step 52 + 53: Save the $playing array and the new match in one write
 		$matches_list[] = $match;
 		$wpdb->update($wpdb->prefix . 'doroto_tournaments', array(
+			'playing' => serialize($playing),
 			'matches_list' => serialize($matches_list),
-			'last_update'  => round(microtime(true) * 1000)
+			'last_update'  => doroto_now_ms()
 		), array('id' => $tournament_id));
 
 		// Step 54: Repeat all steps as needed
 		$matches_to_select--;
 		if ($matches_to_select > 0) {
-			doroto_offer_games($tournament_id, $matches_to_select); // We recursively call the function for the next matches
+			doroto_offer_games_locked($tournament_id, $matches_to_select); // We recursively call the function for the next matches
 		}
 	}
 	return '';
@@ -913,8 +930,9 @@ function doroto_offer_games(int $tournament_id, int $matches_to_select)
 
 
 /**
- * create wp database for DoRoTo
- * @version 1.4.9 (add last_update)
+ * create or upgrade wp database for DoRoTo
+ * dbDelta() creates the table when missing and adds missing columns otherwise.
+ * @version 1.6.0 (always run dbDelta so upgraded sites get new columns)
  * @since 1.0.0
  */
 function doroto_create_tournaments_table()
@@ -923,7 +941,7 @@ function doroto_create_tournaments_table()
 	ob_start();
 
 	$table_name = $wpdb->prefix . 'doroto_tournaments';
-	if ($wpdb->get_var("SHOW TABLES LIKE '$table_name'") != $table_name) {
+	{
 		$charset_collate = $wpdb->get_charset_collate();
 
 		$sql = "CREATE TABLE $table_name (
@@ -972,6 +990,7 @@ function doroto_create_tournaments_table()
 		require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
 		dbDelta($sql);
 	}
+	ob_end_clean();
 }
 
 
@@ -1156,7 +1175,9 @@ function doroto_create_statistics_table(?stdClass $tournament, array|string $pla
 		return array();
 	}
 
-	$players = array_values($players);
+	// Normalize IDs to int: the strict comparison below used to treat "12" and 12
+	// as different players and created duplicate statistics rows.
+	$players = array_values(array_map('intval', (array) maybe_unserialize($players)));
 	$statistics = maybe_unserialize($tournament->statistics);
 	$statistics = empty($statistics) ? array() : doroto_add_player_statistics_table($statistics, $tournament, $players);
 
@@ -1170,7 +1191,7 @@ function doroto_create_statistics_table(?stdClass $tournament, array|string $pla
 	foreach ($players as $player_id) {
 		$existing_player = false;
 		foreach ($statistics as $existing) {
-			if ($existing['player_id'] === $player_id) {
+			if (intval($existing['player_id']) === $player_id) {
 				$existing_player = true;
 				break;
 			}
@@ -1426,6 +1447,7 @@ function doroto_select_final_doubles(array $player_results, ?stdClass $tournamen
 		$output .= '</select></td>';
 		$output .= '</tr></table></div>';
 		$output .= '<input type="hidden" name="tournament_id" value="' . esc_attr($tournament_id) . '">';
+		$output .= wp_nonce_field('doroto_final_doubles_' . $tournament_id, 'doroto_final_doubles_nonce', true, false);
 		$output .= '<input type="submit" name="final_doubles" value="' . esc_html__("Save the composition of the final group", "doubles-rotation-tournament") . '">';
 		$output .= '</form></p>';
 	} else {
@@ -1446,6 +1468,17 @@ function doroto_save_final_doubles()
 	$output = '';
 
 	if (isset($_POST['final_doubles']) && isset($_POST['tournament_id'])) {
+		$tournament_id_check = intval($_POST['tournament_id']);
+		$nonce = isset($_POST['doroto_final_doubles_nonce']) ? sanitize_text_field(wp_unslash($_POST['doroto_final_doubles_nonce'])) : '';
+		if (
+			!is_user_logged_in()
+			|| !wp_verify_nonce($nonce, 'doroto_final_doubles_' . $tournament_id_check)
+			|| doroto_prepare_tournament($tournament_id_check) === null
+			|| doroto_is_admin($tournament_id_check) == 0
+		) {
+			$doroto_output_form = esc_html__('You do not have permission to perform this action.', 'doubles-rotation-tournament');
+			return $doroto_output_form;
+		}
 		$l1 = intval($_POST['l1']);
 		$p1 = intval($_POST['p1']);
 		$l2 = intval($_POST['l2']);
@@ -1764,9 +1797,29 @@ function doroto_update_match_result()
 /**
  * saving result, divided for floating help icon
  * @since 1.3.7
- * @version 1.4.7 (last update info)
+ * @version 1.6.0 (tournament lock, fresh read, last_update always written)
  */
 function doroto_save_match_result(int $match_number_post, int $tournament_id, ?stdClass $tournament, int $result_1, int $result_2, bool $hide, string &$output, int $last_update, bool $endpoint_request)
+{
+	doroto_lock_tournament($tournament_id);
+	try {
+		// Re-read under the lock: the object passed in may be stale if another
+		// court saved its result in the meantime.
+		$fresh = doroto_prepare_tournament($tournament_id);
+		if ($fresh) {
+			$tournament = $fresh;
+		}
+		return doroto_save_match_result_locked($match_number_post, $tournament_id, $tournament, $result_1, $result_2, $hide, $output, $last_update, $endpoint_request);
+	} finally {
+		doroto_unlock_tournament($tournament_id);
+	}
+}
+
+/**
+ * Body of doroto_save_match_result(); caller must hold the tournament lock.
+ * @since 1.6.0
+ */
+function doroto_save_match_result_locked(int $match_number_post, int $tournament_id, ?stdClass $tournament, int $result_1, int $result_2, bool $hide, string &$output, int $last_update, bool $endpoint_request)
 {
 	global $wpdb;
 	global $doroto_output_form;
@@ -1778,8 +1831,12 @@ function doroto_save_match_result(int $match_number_post, int $tournament_id, ?s
 
 		if (is_array($matches)) {
 
-			foreach ($matches as &$match) {
+			$found = false;
+			$found_key = null;
+			foreach ($matches as $match_key => &$match) {
 				if ($match['match_number'] == $match_number_post) {
+					$found = true;
+					$found_key = $match_key;
 					if ($match['result_1'] == 0 && $match['result_2'] == 0 && $match['hide'] == 0) {
 						$match['result_1'] = $result_1;
 						$match['result_2'] = $result_2;
@@ -1814,7 +1871,16 @@ function doroto_save_match_result(int $match_number_post, int $tournament_id, ?s
 					break;
 				}
 			}
-			if ($last_update == 0) round(microtime(true) * 1000);
+			unset($match);
+			if (!$found) {
+				$output = esc_html__('The match was not found.', 'doubles-rotation-tournament');
+				return;
+			}
+			$match = $matches[$found_key];
+			// The Doroto app reloads only when last_update grows, so it must never be 0.
+			if ($last_update == 0) {
+				$last_update = doroto_now_ms();
+			}
 			if ($match['hide'] != 1) {
 				$wpdb->update("{$wpdb->prefix}doroto_tournaments", [
 					'matches_list' => serialize($matches),
@@ -2112,6 +2178,7 @@ function doroto_toggle_tournament()
 	}
 
 	$tournament_id = intval($_REQUEST['tournament_id']);
+	doroto_require_admin_action('doroto_toggle_tournament', $tournament_id);
 
 	$tournament = doroto_prepare_tournament($tournament_id);
 
@@ -2171,7 +2238,8 @@ function doroto_toggle_registration()
 {
 	global $wpdb;
 	$table_name = $wpdb->prefix . 'doroto_tournaments';
-	$tournament_id = intval($_GET['tournament_id']);
+	$tournament_id = isset($_GET['tournament_id']) ? intval($_GET['tournament_id']) : 0;
+	doroto_require_admin_action('doroto_toggle_registration', $tournament_id);
 	$output = '';
 	$tournament = doroto_prepare_tournament($tournament_id);
 
@@ -2780,8 +2848,26 @@ function doroto_create_tournament_record()
 	ob_get_clean();
 	return ($result);
 }
-add_action('wp_ajax_doroto_create_tournament_record', 'doroto_create_tournament_record');
-add_action('wp_ajax_nopriv_doroto_create_tournament_record', 'doroto_create_tournament_record');
+/**
+ * AJAX entry point used by the guided tour to regenerate the example tournaments.
+ * Requires the tour nonce and is throttled, because regenerating creates users
+ * and simulates ~100 draws (an open endpoint allowed cheap denial of service).
+ * @since 1.6.0
+ */
+function doroto_ajax_create_tournament_record()
+{
+	if (!check_ajax_referer('doroto_help_tour', 'nonce', false)) {
+		wp_send_json_error(['message' => 'Invalid nonce'], 403);
+	}
+	if (get_transient('doroto_example_regenerated') && !current_user_can('manage_options')) {
+		wp_send_json_success(['throttled' => true]);
+	}
+	set_transient('doroto_example_regenerated', 1, MINUTE_IN_SECONDS);
+	doroto_create_tournament_record();
+	wp_send_json_success();
+}
+add_action('wp_ajax_doroto_create_tournament_record', 'doroto_ajax_create_tournament_record');
+add_action('wp_ajax_nopriv_doroto_create_tournament_record', 'doroto_ajax_create_tournament_record');
 
 /**
  * generate random result
@@ -3297,14 +3383,14 @@ function doroto_notice_round_end(int $tournament_id, ?stdClass $tournament, int 
 
 		if ($announce_round_end == 1) {
 			$show_it_again = esc_html__("continue to the next round", "doubles-rotation-tournament");
-			$option[] = "<a href='" . esc_url(admin_url('admin-ajax.php?action=doroto_next_notice_round_end&tournament_id=' . esc_html($tournament_id))) . "'>" . esc_html($show_it_again) . "</a>";
+			$option[] = "<a href='" . esc_url(doroto_action_url('doroto_next_notice_round_end', intval($tournament_id))) . "'>" . esc_html($show_it_again) . "</a>";
 		}
 
 		$close_tournament_text = esc_html__("end the tournament", "doubles-rotation-tournament");
-		$option[] = "<a href='" . esc_url(admin_url('admin-ajax.php?action=doroto_toggle_tournament&tournament_id=' . esc_html($tournament_id))) . "'>" . esc_html($close_tournament_text) . "</a>";
+		$option[] = "<a href='" . esc_url(doroto_action_url('doroto_toggle_tournament', intval($tournament_id))) . "'>" . esc_html($close_tournament_text) . "</a>";
 
 		$hide_notice_text = esc_html__("hide this message", "doubles-rotation-tournament");
-		$option[] = "<a href='" . esc_url(admin_url('admin-ajax.php?action=doroto_hide_notice_round_end&tournament_id=' . esc_html($tournament_id))) . "'>" . esc_html($hide_notice_text) . "</a>";
+		$option[] = "<a href='" . esc_url(doroto_action_url('doroto_hide_notice_round_end', intval($tournament_id))) . "'>" . esc_html($hide_notice_text) . "</a>";
 
 		if (!empty($option)) {
 			$output .= '<p>' . esc_html__("If you wish, you can as an administrator", "doubles-rotation-tournament") . ' ';
@@ -3336,6 +3422,7 @@ function doroto_hide_notice_round_end()
 	}
 
 	$tournament_id = intval($_REQUEST['tournament_id']);
+	doroto_require_admin_action('doroto_hide_notice_round_end', $tournament_id);
 	$tournament = doroto_prepare_tournament($tournament_id);
 
 	if ($tournament == null) {
@@ -3387,6 +3474,7 @@ function doroto_next_notice_round_end()
 	}
 
 	$tournament_id = intval($_REQUEST['tournament_id']);
+	doroto_require_admin_action('doroto_next_notice_round_end', $tournament_id);
 	$tournament = doroto_prepare_tournament($tournament_id);
 
 	if ($tournament == null) {

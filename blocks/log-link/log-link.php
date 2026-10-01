@@ -125,6 +125,6 @@ if (!function_exists('doroto_log_link_get_login_link')) {
 		if (empty($tournament_id)) {
 			return '';
 		}
-		return get_site_url() . '/wp-admin/admin-ajax.php?action=doroto_register_player&tournament_id=' . $tournament_id;
+		return doroto_join_url(intval($tournament_id));
 	}
 }

@@ -56,6 +56,20 @@ function doroto_handle_player_registration(WP_REST_Request $request)
 	$user = new WP_User($user_id);
 	$user->set_role('subscriber');
 
+	// When an organizer creates the account from the app (request carries the
+	// organizer's token), remember the creator. Without this meta the new player
+	// never appeared in the organizer's "Add from database" list (users-all),
+	// and could not be re-created either ("e-mail exists").
+	$creator_id = doroto_get_current_user_id_from_token();
+	if ($creator_id > 0 && $creator_id !== intval($user_id)) {
+		update_user_meta($user_id, 'doroto_creator', $creator_id);
+		// The organizer did not choose a password for the player, so let the
+		// player set one; otherwise the account could never be used.
+		if (empty($params['password'])) {
+			doroto_send_account_created_email($user_id);
+		}
+	}
+
 	$accessToken = bin2hex(random_bytes(32));
 	$accessTokenExpiration = time() + 86400;
 
@@ -213,27 +227,46 @@ function doroto_handle_refresh_token($request)
 }
 
 /**
+ * Read the raw Authorization header.
+ * getallheaders() alone is not enough: on FPM/CGI hosts the header is often
+ * only available in $_SERVER (HTTP_AUTHORIZATION or REDIRECT_HTTP_AUTHORIZATION).
+ * @since 1.6.0
+ */
+function doroto_get_authorization_header()
+{
+	$candidates = [];
+	if (function_exists('getallheaders')) {
+		foreach ((array) getallheaders() as $name => $value) {
+			if (strtolower($name) === 'authorization') {
+				$candidates[] = $value;
+			}
+		}
+	}
+	// phpcs:disable WordPress.Security.ValidatedSanitizedInput -- sanitized by the caller
+	if (!empty($_SERVER['HTTP_AUTHORIZATION'])) {
+		$candidates[] = wp_unslash($_SERVER['HTTP_AUTHORIZATION']);
+	}
+	if (!empty($_SERVER['REDIRECT_HTTP_AUTHORIZATION'])) {
+		$candidates[] = wp_unslash($_SERVER['REDIRECT_HTTP_AUTHORIZATION']);
+	}
+	// phpcs:enable
+	foreach ($candidates as $value) {
+		if (is_string($value) && $value !== '') {
+			return $value;
+		}
+	}
+	return '';
+}
+
+/**
  * REST API: provide user token
  * @since 1.4.7
- * @version 1.4.7 
+ * @version 1.6.0 (header lookup via doroto_get_authorization_header)
  */
 function doroto_get_current_user_id_from_token()
 {
-	$headers = getallheaders();
-	$token = '';
-
-	if (isset($headers['Authorization'])) {
-		$token = $headers['Authorization'];
-	} elseif (isset($headers['HTTP_AUTHORIZATION'])) {
-		$token = $headers['HTTP_AUTHORIZATION'];
-	} elseif (function_exists('apache_request_headers')) {
-		$apacheHeaders = apache_request_headers();
-		if (isset($apacheHeaders['Authorization'])) {
-			$token = $apacheHeaders['Authorization'];
-		}
-	}
-
-	$token = sanitize_text_field(str_replace('Bearer ', '', $token));
+	$token = doroto_get_authorization_header();
+	$token = sanitize_text_field(trim(preg_replace('/^Bearer\s+/i', '', $token)));
 
 	if (empty($token)) {
 		return 0;
@@ -504,14 +537,18 @@ function doroto_get_tournament_detail(WP_REST_Request $data)
 		];
 	}
 
+	// Draw pending matches first and only then read the row, so the response
+	// already contains the newly drawn match (previously the app saw it only
+	// on the next poll, which looked like a long lag after saving a result).
+	$offer_html = doroto_offer_games($tournament_id, 0);
+	if ($offer_html != "")
+		$offer_html = 'display warning';
+
 	$tournament = $wpdb->get_row($wpdb->prepare("SELECT * FROM {$wpdb->prefix}doroto_tournaments WHERE id = %d", $tournament_id), ARRAY_A);
 	if (!$tournament) {
 		return new WP_Error('not_found', 'Tournament not found', ['status' => 404]);
 	}
 	$tournament_diff = doroto_prepare_tournament($tournament_id);
-	$offer_html = doroto_offer_games($tournament_id, 0);
-	if ($offer_html != "")
-		$offer_html = 'display warning';
 
 	$fields_to_unserialize = [
 		'players',
@@ -619,14 +656,6 @@ function doroto_get_tournament_detail(WP_REST_Request $data)
 
 	// Upravená podmínka:
 	$tournament['is_super_admin'] = ($current_user_id === $super_admin_id || $tournament['is_admin'] == 2) ? 1 : 0;
-
-	$tournament['debug'] = [
-		'current_user_id' => $current_user_id,
-		'user_roles' => wp_get_current_user()->roles,
-		'admin_users' => $tournament['admin_users'],
-		'is_admin' => $tournament['is_admin'],
-		'special_group_message' => $tournament['special_group_message'],
-	];
 
 	$admin_names = [];
 	foreach ($tournament['admin_users'] as $admin_id) {
@@ -896,18 +925,6 @@ function doroto_tournament_save_via_api(WP_REST_Request $request)
 		'success' => true,
 		'action' => 'tournament_updated',
 		'last_update' => $new_last_update,
-		'debug' => [
-			'user_id' => $current_user_id,
-			'headers' => getallheaders(),
-			'is_admin' => doroto_is_admin($tournament_id),
-			'closed' => intval($tournament->close_tournament),
-			'updated_fields' => array_keys($fields),
-			'json_params' => $request->get_json_params(),
-			'all_params' => $request->get_params(),
-			'fields' => $fields,
-			'after_final_result' => $saved_un,
-			'doroto_offer_games' => $offer_html,
-		]
 	]);
 }
 
@@ -936,14 +953,6 @@ function doroto_rest_add_tournament(WP_REST_Request $request)
 	}
 	$current_user_id = $result;
 
-
-	$headers = getallheaders();
-	$raw_token = '';
-	if (isset($headers['Authorization'])) {
-		$raw_token = $headers['Authorization'];
-	} elseif (isset($headers['HTTP_AUTHORIZATION'])) {
-		$raw_token = $headers['HTTP_AUTHORIZATION'];
-	}
 
 	if ($current_user_id <= 0) {
 		return new WP_REST_Response(['error_code' => 'auth_not_authenticated'], 401);
@@ -1030,8 +1039,32 @@ function doroto_rest_register_player(WP_REST_Request $request)
 	if (!is_array($special_group))
 		$special_group = [];
 
-	$already_registered = in_array($current_user_id, $players);
-	$new_last_update = round(microtime(true) * 1000);
+	$already_registered = in_array($current_user_id, array_map('intval', $players), true);
+	$new_last_update = doroto_now_ms();
+
+	// Optional 'mode' (since 1.6.0): 'join' or 'leave' makes the call idempotent,
+	// so a repeated request can no longer flip the registration back.
+	// Without 'mode' the endpoint keeps the old toggle behaviour for old app versions.
+	$mode = sanitize_key((string) $request->get_param('mode'));
+	if ($mode === 'join' && $already_registered) {
+		return new WP_REST_Response([
+			'success' => true,
+			'action' => 'already_registered',
+			'last_update' => intval($tournament->last_update),
+			'player_id' => $current_user_id,
+			'tournament_id' => $tournament_id,
+		]);
+	}
+	if ($mode === 'leave' && !$already_registered) {
+		return new WP_REST_Response([
+			'success' => true,
+			'action' => 'unregistered',
+			'last_update' => intval($tournament->last_update),
+			'player_id' => $current_user_id,
+			'tournament_id' => $tournament_id,
+		]);
+	}
+
 	if ($already_registered) {
 		$statistics = maybe_unserialize($tournament->statistics);
 		$statistics_new = doroto_remove_player_from_statistics_table($tournament, $statistics, $current_user_id);
@@ -1139,11 +1172,12 @@ function doroto_get_website_info(WP_REST_Request $request)
 		'privacy_policy_url' => esc_url_raw($privacy_policy_url ?: ''),
 		'terms_of_service_url' => esc_url_raw($terms_of_service_url ?: ''),
 		'doroto_url' => esc_url_raw($doroto_url ?: ''),
-
-		'debug_privacy_id' => $privacy_page_id,
-		'debug_terms_id' => $terms_page_id,
-		'debug_privacy_url_raw' => $privacy_policy_url,
-		'debug_terms_url_raw' => $terms_of_service_url,
+		// Since 1.6.0: lets the app detect available endpoints (e.g. create-player)
+		// and explain why self-registration is not possible.
+		'api_version' => 2,
+		'plugin_version' => doroto_VERSION,
+		'users_can_register' => get_option('users_can_register') ? 1 : 0,
+		'register_url' => get_option('users_can_register') ? esc_url_raw(wp_registration_url()) : '',
 	];
 }
 
@@ -1322,32 +1356,44 @@ function doroto_add_player_via_api(WP_REST_Request $request)
 	}
 
 
-	$players = maybe_unserialize($tournament->players);
-	if (!is_array($players)) {
-		$players = [];
+	if (get_userdata($player_id) === false) {
+		return new WP_REST_Response(['error_code' => 'missing_tournament_or_player_id'], 400);
 	}
 
-	if (!in_array($player_id, $players)) {
+	$new_last_update = doroto_now_ms();
+	$already_added = false;
+	$result = doroto_with_tournament_lock($tournament_id, function () use ($wpdb, $table_name, $tournament_id, $player_id, $new_last_update, &$already_added) {
+		// Fresh read under the lock, so a concurrent change is not overwritten.
+		$tournament = doroto_prepare_tournament($tournament_id);
+		$players = maybe_unserialize($tournament->players);
+		if (!is_array($players)) {
+			$players = [];
+		}
+		$players = array_map('intval', $players);
+
+		if (in_array($player_id, $players, true)) {
+			$already_added = true;
+			return true;
+		}
 		$players[] = $player_id;
-	}
 
-	$statistics = doroto_create_statistics_table($tournament, $players, intval($tournament->whole_names));
-	$new_last_update = round(microtime(true) * 1000);
-	$result = $wpdb->update(
-		$table_name,
-		[
-			'players' => serialize($players),
-			'statistics' => serialize($statistics),
-			'last_update' => $new_last_update
-		],
-		['id' => $tournament_id]
-	);
+		$statistics = doroto_create_statistics_table($tournament, $players, intval($tournament->whole_names));
+		return $wpdb->update(
+			$table_name,
+			[
+				'players' => serialize($players),
+				'statistics' => serialize($statistics),
+				'last_update' => $new_last_update
+			],
+			['id' => $tournament_id]
+		);
+	});
 
 	if ($result === false) {
 		return new WP_REST_Response(['error_code' => 'db_update_failed'], 500);
 	}
 
-	$player_data = get_userdata($player_id);
+	$player_data = $already_added ? false : get_userdata($player_id);
 
 	if ($player_data) {
 		$to = $player_data->user_email;
@@ -1355,8 +1401,8 @@ function doroto_add_player_via_api(WP_REST_Request $request)
 		$tournament_name = $tournament->name;
 
 		$subject = sprintf(
-			/* translators: %s: Tournament number. */
-			__('Your account has been created and you have been added to the tournament: %s', 'doubles-rotation-tournament'),
+			/* translators: %s: Tournament name. */
+			__('You have been added to the tournament: %s', 'doubles-rotation-tournament'),
 			$tournament_name
 		);
 
@@ -1367,10 +1413,6 @@ function doroto_add_player_via_api(WP_REST_Request $request)
 				esc_html__('Hello %s,', 'doubles-rotation-tournament'),
 				$player_name
 			)
-		);
-		$body .= wp_sprintf(
-			'<p>%s</p>',
-			esc_html__('Your account has been successfully created in our application.', 'doubles-rotation-tournament')
 		);
 		$body .= wp_sprintf(
 			'<p>%s</p>',
@@ -1390,7 +1432,11 @@ function doroto_add_player_via_api(WP_REST_Request $request)
 		);
 
 		$headers = ['Content-Type: text/html; charset=UTF-8'];
+		// A mail transport warning printed before the JSON broke the app's parser,
+		// so the app reported an error although the player had been added.
+		ob_start();
 		wp_mail($to, $subject, $body, $headers);
+		ob_end_clean();
 	}
 
 	doroto_tournament_progress($tournament_id);
@@ -1577,14 +1623,18 @@ function doroto_rest_update_match_result(WP_REST_Request $request)
 
 	if (!$is_admin) {
 		$matches = maybe_unserialize($tournament->matches_list);
+		if (!is_array($matches)) {
+			$matches = [];
+		}
+		// IDs may be stored as strings or ints in the serialized data, so compare as ints.
 		$allowed = array_filter($matches, function ($m) use ($match_number, $current_user_id) {
 			return $m['match_number'] == $match_number
-				&& in_array($current_user_id, [
+				&& in_array($current_user_id, array_map('intval', [
 					$m['player_1'],
 					$m['player_2'],
 					$m['player_3'],
 					$m['player_4']
-				], true);
+				]), true);
 		});
 		if (empty($allowed) || $allow_input_results == 0) {
 			return new WP_REST_Response(['error_code' => 'edit_match_forbidden'], 403);
@@ -1592,44 +1642,49 @@ function doroto_rest_update_match_result(WP_REST_Request $request)
 	}
 
 	$output_message = '';
-	$new_last_update = round(microtime(true) * 1000);
-	ob_start();
+	$new_last_update = doroto_now_ms();
 	$endpoint_request = true;
-	$save_result = doroto_save_match_result(
-		$match_number,
-		$tournament_id,
-		$tournament,
-		$result_1,
-		$result_2,
-		$hide,
-		$output_message,
-		$new_last_update,
-		$endpoint_request
-	);
-	ob_end_clean();
-	if (is_wp_error($save_result)) {
-		return $save_result;
+
+	// Save, recompute progress and draw the next match as one atomic step,
+	// so results entered on several courts at once cannot overwrite each other.
+	doroto_lock_tournament($tournament_id);
+	try {
+		ob_start();
+		$save_result = doroto_save_match_result(
+			$match_number,
+			$tournament_id,
+			$tournament,
+			$result_1,
+			$result_2,
+			$hide,
+			$output_message,
+			$new_last_update,
+			$endpoint_request
+		);
+		ob_end_clean();
+		if (is_wp_error($save_result)) {
+			return $save_result;
+		}
+		doroto_tournament_progress($tournament_id);
+
+		$offer_html = doroto_offer_games($tournament_id, 0);
+		$no_new_match = ($offer_html !== '');
+	} finally {
+		doroto_unlock_tournament($tournament_id);
 	}
-	doroto_tournament_progress($tournament_id);
 
-	$tournament = doroto_prepare_tournament($tournament_id);
-
-	$offer_html = doroto_offer_games($tournament_id, 0);
-	$no_new_match = ($offer_html !== '');
+	// Return the real stored value (progress and the draw bump it again),
+	// otherwise the app's next check-update would report a "newer" version.
+	$stored_last_update = intval($wpdb->get_var($wpdb->prepare(
+		"SELECT last_update FROM {$wpdb->prefix}doroto_tournaments WHERE id = %d",
+		$tournament_id
+	)));
 
 	return rest_ensure_response([
 		'success' => true,
 		'action' => 'match_result_updated',
 		'no_new_match' => $no_new_match,
-		'last_update' => $new_last_update,
-		'debug' => [
-			'user_id' => $current_user_id,
-			'is_admin' => $is_admin,
-			'match_number' => $match_number,
-			'result_1' => $result_1,
-			'result_2' => $result_2,
-			'hide' => $hide,
-		],
+		'last_update' => max($stored_last_update, $new_last_update),
 	]);
 }
 
@@ -2151,6 +2206,11 @@ function doroto_handle_google_login(WP_REST_Request $request)
 
 	$email = sanitize_email($payload['email'] ?? '');
 	$logs[] = "Email in token: {$email}";
+	$email_verified = $payload['email_verified'] ?? false;
+	if ($email_verified !== true && $email_verified !== 'true') {
+		// Never match an existing account by an unverified address.
+		return new WP_REST_Response(['error_code' => 'google_login_missing_email'], 400);
+	}
 	if (empty($email)) {
 		$logs[] = 'ERROR: Email missing in token payload';
 		return new WP_REST_Response(['error_code' => 'google_login_missing_email'], 400);
@@ -2187,7 +2247,9 @@ function doroto_handle_google_login(WP_REST_Request $request)
 
 	// 1. Generování obou tokenů (Access a Refresh)
 	$accessToken = bin2hex(random_bytes(32));
-	$accessTokenExpiration = time() + 3600; // Platnost 1 hodina
+	// Same lifetime as e-mail login. 1 hour logged Google users out quickly,
+	// because older app versions never use the refresh token.
+	$accessTokenExpiration = time() + 86400;
 
 	$refreshToken = bin2hex(random_bytes(64));
 	$refreshTokenExpiration = time() + (90 * 24 * 3600); // Platnost 90 dní
@@ -2213,7 +2275,6 @@ function doroto_handle_google_login(WP_REST_Request $request)
 			'name' => $user->first_name,
 			'surname' => $user->last_name,
 		],
-		'logs' => $logs,
 	], 200);
 }
 
@@ -2408,10 +2469,6 @@ function doroto_rest_get_disable_player_candidates(\WP_REST_Request $request)
 		'current_user_id' => $current_user,
 		'is_admin' => $is_admin ? 1 : 0,
 		'candidates' => $candidates,
-		'debug' => [
-			'query_params' => $request->get_query_params(),
-			'auth_header' => $request->get_header('authorization'),
-		],
 	]);
 }
 
@@ -2490,12 +2547,6 @@ function doroto_rest_post_tournament_disable_player(\WP_REST_Request $request)
 		'success' => true,
 		'message' => $message,
 		'last_update' => $new_last_update,
-		'debug' => [
-			'tournament_id' => $tournament_id,
-			'player_id' => $player_id,
-			'auth_header' => $request->get_header('authorization'),
-			'body_params' => $request->get_body_params(),
-		],
 	]);
 }
 
@@ -2721,6 +2772,10 @@ function doroto_rest_post_enter_payment(\WP_REST_Request $request)
 	if (!$t) {
 		return new WP_REST_Response(['error_code' => 'tournament_not_found'], 404);
 	}
+	// Only tournament admins may change payments (was open to any logged-in user).
+	if (doroto_is_admin($tid) == 0) {
+		return new WP_REST_Response(['error_code' => 'auth_insufficient_permissions'], 403);
+	}
 
 	$paid = maybe_unserialize($t->payment_done);
 	if (!is_array($paid))
@@ -2838,6 +2893,10 @@ function doroto_rest_post_remove_payment(\WP_REST_Request $request)
 	if (!$t) {
 		return new WP_REST_Response(['error_code' => 'tournament_not_found'], 404);
 	}
+	// Only tournament admins may change payments (was open to any logged-in user).
+	if (doroto_is_admin($tid) == 0) {
+		return new WP_REST_Response(['error_code' => 'auth_insufficient_permissions'], 403);
+	}
 
 	$paid = maybe_unserialize($t->payment_done);
 	if (!is_array($paid))
@@ -2891,13 +2950,13 @@ function doroto_check_update(WP_REST_Request $data)
 		return new WP_REST_Response(['error_code' => 'invalid_tournament_id'], 400);
 	}
 
-	$tournament = $wpdb->get_row($wpdb->prepare("SELECT * FROM {$wpdb->prefix}doroto_tournaments WHERE id = %d", $tournament_id), ARRAY_A);
-	if (!$tournament) {
+	// Polled by the app every 30 s: read only the one column it needs.
+	$last_update = $wpdb->get_var($wpdb->prepare("SELECT last_update FROM {$wpdb->prefix}doroto_tournaments WHERE id = %d", $tournament_id));
+	if ($last_update === null) {
 		return new WP_REST_Response(['error_code' => 'tournament_not_found'], 404);
 	}
 
-	$tournament['last_update'] = intval($tournament['last_update']);
-	return $tournament['last_update'];
+	return intval($last_update);
 }
 
 add_action('rest_api_init', function () {
@@ -3580,7 +3639,7 @@ function doroto_rest_remove_admin(WP_REST_Request $request)
 
 		$wpdb->update(
 			"{$wpdb->prefix}doroto_tournaments",
-			['admin_users' => $updated_admins],
+			['admin_users' => $updated_admins, 'last_update' => doroto_now_ms()],
 			['id' => $tournament_id]
 		);
 
@@ -3589,3 +3648,151 @@ function doroto_rest_remove_admin(WP_REST_Request $request)
 
 	return new WP_REST_Response(['success' => false, 'message' => 'Admin not found'], 404);
 }
+
+
+/**
+ * REST API: organizer creates a player account and adds it to the tournament in one step.
+ * Replaces the two-step flow (player/register + add-player) of older app versions,
+ * which left half-created players behind when the second step failed:
+ * the account existed but was not in the tournament and could not be created again.
+ * Idempotent: when the e-mail already exists the existing user is added instead.
+ * Response contains 'created' (bool) and 'email_sent' (bool).
+ * @since 1.6.0
+ */
+add_action('rest_api_init', function () {
+	register_rest_route('doroto/v1', '/create-player', [
+		'methods' => 'POST',
+		'callback' => 'doroto_rest_create_player',
+		'permission_callback' => function () {
+			return doroto_get_current_user_id_from_token() > 0;
+		},
+	]);
+});
+
+function doroto_rest_create_player(WP_REST_Request $request)
+{
+	$current_user_id = doroto_get_current_user_id_from_token();
+	if ($current_user_id <= 0) {
+		return new WP_REST_Response(['error_code' => 'auth_unauthorized'], 401);
+	}
+	wp_set_current_user($current_user_id);
+
+	$params = $request->get_json_params();
+	if (!is_array($params)) {
+		$params = $request->get_params();
+	}
+	$tournament_id = intval($params['tournament_id'] ?? 0);
+	$email = sanitize_email($params['email'] ?? '');
+	$name = sanitize_text_field($params['name'] ?? '');
+	$surname = sanitize_text_field($params['surname'] ?? '');
+
+	if ($tournament_id <= 0 || !doroto_prepare_tournament($tournament_id)) {
+		return new WP_REST_Response(['error_code' => 'tournament_not_found'], 404);
+	}
+	if (doroto_is_admin($tournament_id) < 1) {
+		return new WP_REST_Response(['error_code' => 'add_player_forbidden'], 403);
+	}
+	if (empty($email) || !is_email($email) || empty($name) || empty($surname)) {
+		return new WP_REST_Response(['error_code' => 'registration_incomplete_data'], 400);
+	}
+
+	$created = false;
+	$email_sent = false;
+	$existing = get_user_by('email', $email);
+	if ($existing) {
+		$user_id = intval($existing->ID);
+	} else {
+		$username = sanitize_user(explode('@', $email)[0] . '_' . wp_generate_password(4, false));
+		$user_id = wp_create_user($username, wp_generate_password(16, true), $email);
+		if (is_wp_error($user_id)) {
+			return new WP_REST_Response(['error_code' => 'registration_creation_failed'], 500);
+		}
+		$user_id = intval($user_id);
+		wp_update_user([
+			'ID' => $user_id,
+			'first_name' => $name,
+			'last_name' => $surname,
+			'display_name' => trim($name . ' ' . $surname),
+		]);
+		(new WP_User($user_id))->set_role('subscriber');
+		update_user_meta($user_id, 'doroto_creator', $current_user_id);
+		$created = true;
+		$email_sent = doroto_send_account_created_email($user_id);
+	}
+
+	$status = doroto_add_user_to_tournament($tournament_id, $user_id, true);
+	if ($status === 'full') {
+		return new WP_REST_Response(['error_code' => 'registration_max_players', 'created' => $created], 400);
+	}
+	if ($status === 'not_found') {
+		return new WP_REST_Response(['error_code' => 'tournament_not_found'], 404);
+	}
+
+	$tournament = doroto_prepare_tournament($tournament_id);
+	return new WP_REST_Response([
+		'success' => true,
+		'action' => 'player_added_to_tournament',
+		'created' => $created,
+		'already_in_tournament' => $status === 'already',
+		'email_sent' => $email_sent,
+		'player_id' => $user_id,
+		'player_name' => doroto_find_player_name($user_id, intval($tournament->whole_names)),
+		'last_update' => intval($tournament->last_update),
+	], 200);
+}
+
+
+/**
+ * E-mail a newly created player a link to set the password.
+ * Accounts created by an organizer used to get a random password nobody knew.
+ * @since 1.6.0
+ */
+function doroto_send_account_created_email(int $user_id)
+{
+	$user = get_userdata($user_id);
+	if (!$user) {
+		return false;
+	}
+	$key = get_password_reset_key($user);
+	if (is_wp_error($key)) {
+		return false;
+	}
+	$reset_url = network_site_url('wp-login.php?action=rp&key=' . rawurlencode($key) . '&login=' . rawurlencode($user->user_login), 'login');
+	$site_name = wp_specialchars_decode(get_option('blogname'), ENT_QUOTES);
+
+	$subject = sprintf(
+		/* translators: %s: Site name. */
+		__('[%s] Your player account has been created', 'doubles-rotation-tournament'),
+		$site_name
+	);
+	$body = '<p>' . sprintf(
+		/* translators: %s: Player name. */
+		esc_html__('Hello %s,', 'doubles-rotation-tournament'),
+		esc_html($user->display_name)
+	) . '</p>';
+	$body .= '<p>' . esc_html__('A tournament organizer has created a player account for you.', 'doubles-rotation-tournament') . '</p>';
+	$body .= '<p>' . esc_html__('To sign in on the website or in the Doroto app, first set your password here:', 'doubles-rotation-tournament') . '<br>';
+	$body .= '<a href="' . esc_url($reset_url) . '">' . esc_html($reset_url) . '</a></p>';
+	$body .= '<p>' . esc_html__('Your login e-mail:', 'doubles-rotation-tournament') . ' ' . esc_html($user->user_email) . '</p>';
+	$body .= '<p>' . esc_html__('Best regards,', 'doubles-rotation-tournament') . '<br>' . esc_html__('The Doroto Team', 'doubles-rotation-tournament') . '</p>';
+
+	ob_start();
+	$sent = wp_mail($user->user_email, $subject, $body, ['Content-Type: text/html; charset=UTF-8']);
+	ob_end_clean();
+	return (bool) $sent;
+}
+
+
+/**
+ * Tournament data changes all the time; make sure page caches, CDNs and
+ * caching plugins never serve a stale copy of the Doroto REST responses.
+ * @since 1.6.0
+ */
+add_filter('rest_post_dispatch', function ($response, $server, $request) {
+	$route = $request instanceof WP_REST_Request ? $request->get_route() : '';
+	if ($response instanceof WP_REST_Response && (strpos($route, '/doroto/v1/') === 0 || strpos($route, '/player/') === 0)) {
+		$response->header('Cache-Control', 'no-cache, no-store, must-revalidate, max-age=0');
+		$response->header('Pragma', 'no-cache');
+	}
+	return $response;
+}, 10, 3);

@@ -3477,7 +3477,13 @@ function doroto_add_link_to_tournament($atts = [], $content = null, $tag = '')
 
 	if ($open_registration) {
 		$site_url = sanitize_text_field(wp_unslash(get_site_url()));
-		$output .= "<p id='doroto-link-login-logout'>" . esc_html__("You can enter the tournament using this link:", "doubles-rotation-tournament") . " <a href=\"" . esc_url("{$site_url}/wp-admin/admin-ajax.php?action=doroto_register_player&tournament_id=" . esc_html($tournament_id)) . "\" data-type=\"URL\" data-id=\"" . esc_url("{$site_url}/wp-admin/admin-ajax.php?action=doroto_register_player&tournament_id=" . esc_html($tournament_id)) . "\">" . esc_html__("Log in/Log out from the tournament", "doubles-rotation-tournament") . "</a>.</p>";
+		$join_url = doroto_join_url(intval($tournament_id));
+		$output .= "<p id='doroto-link-login-logout'>" . esc_html__("You can enter the tournament using this link:", "doubles-rotation-tournament") . " <a href=\"" . esc_url($join_url) . "\" data-type=\"URL\" data-id=\"" . esc_url($join_url) . "\">" . esc_html__("Sign up for the tournament", "doubles-rotation-tournament") . "</a>.";
+		$current_players = maybe_unserialize($tournament->players);
+		if (is_user_logged_in() && is_array($current_players) && in_array(get_current_user_id(), array_map('intval', $current_players), true)) {
+			$output .= " <a href=\"" . esc_url(doroto_leave_url(intval($tournament_id))) . "\">" . esc_html__("Leave the tournament", "doubles-rotation-tournament") . "</a>.";
+		}
+		$output .= "</p>";
 	}
 
 	$admin_users = maybe_unserialize($tournament->admin_users);
@@ -3496,7 +3502,7 @@ function doroto_add_link_to_tournament($atts = [], $content = null, $tag = '')
 		$option = [];
 		if ($tournament->close_tournament != '1') {
 			$open_registration_text = $tournament->open_registration == '1' ? esc_html__("close registration", "doubles-rotation-tournament") : esc_html__("reopen registration", "doubles-rotation-tournament");
-			$option[] = "<a href='" . esc_url(admin_url('admin-ajax.php?action=doroto_toggle_registration&tournament_id=' . esc_html($tournament->id))) . "'>" . esc_html($open_registration_text) . "</a>";
+			$option[] = "<a href='" . esc_url(doroto_action_url('doroto_toggle_registration', intval($tournament->id))) . "'>" . esc_html($open_registration_text) . "</a>";
 		}
 
 		if ($tournament->close_date === '9999-09-09 09:09:09') {
@@ -3511,11 +3517,11 @@ function doroto_add_link_to_tournament($atts = [], $content = null, $tag = '')
 			if ($play_final_match) {
 				if (empty($final_result)) {
 					$close_tournament_text = $tournament->close_tournament == '1' ? esc_html__("back to drawn matches", "doubles-rotation-tournament") : esc_html__("start the final match", "doubles-rotation-tournament");
-					$option[] = "<a href='" . esc_url(admin_url('admin-ajax.php?action=doroto_toggle_tournament&tournament_id=' . esc_html($tournament_id))) . "'>" . esc_html($close_tournament_text) . "</a>";
+					$option[] = "<a href='" . esc_url(doroto_action_url('doroto_toggle_tournament', intval($tournament_id))) . "'>" . esc_html($close_tournament_text) . "</a>";
 				}
 			} else {
 				$close_tournament_text = $tournament->close_tournament == '1' ? esc_html__("reopen the tournament", "doubles-rotation-tournament") : esc_html__("end the tournament", "doubles-rotation-tournament");
-				$option[] = "<a href='" . esc_url(admin_url('admin-ajax.php?action=doroto_toggle_tournament&tournament_id=' . esc_html($tournament_id))) . "'>" . esc_html($close_tournament_text) . "</a>";
+				$option[] = "<a href='" . esc_url(doroto_action_url('doroto_toggle_tournament', intval($tournament_id))) . "'>" . esc_html($close_tournament_text) . "</a>";
 			}
 		}
 
@@ -3631,7 +3637,9 @@ function doroto_display_table(array|string $atts)
 				$output .= "<td>";
 			}
 			if ($row->close_tournament != '1' && $row->open_registration != '0') {
-				$output .= "<a href='" . esc_url(admin_url('admin-ajax.php?action=doroto_register_player&tournament_id=' . esc_html($row->id))) . "'>" . esc_html($login_text) . "</a></td>";
+				$is_registered = is_array($players) && in_array(get_current_user_id(), array_map('intval', $players), true);
+				$login_url = $is_registered ? doroto_leave_url(intval($row->id)) : doroto_join_url(intval($row->id));
+				$output .= "<a href='" . esc_url($login_url) . "'>" . esc_html($login_text) . "</a></td>";
 			} else {
 				$output .= esc_html($login_text) . "</td>";
 			}
@@ -3662,7 +3670,7 @@ function doroto_display_table(array|string $atts)
 			if (doroto_is_admin(intval($row->id)) > 0) {
 				$open_registration_text = $row->open_registration == '1' ? esc_html__("close registration", "doubles-rotation-tournament") : esc_html__("reopen registration", "doubles-rotation-tournament");
 				if ($row->close_tournament != '1') {
-					$output .= $output_registration_status . "<a href='" . esc_url(admin_url('admin-ajax.php?action=doroto_toggle_registration&tournament_id=' . esc_html($row->id))) . "'>" . esc_html($open_registration_text) . "</a></td>";
+					$output .= $output_registration_status . "<a href='" . esc_url(doroto_action_url('doroto_toggle_registration', intval($row->id))) . "'>" . esc_html($open_registration_text) . "</a></td>";
 				} else {
 					$output .= $output_registration_status . esc_html($open_registration_text) . "</td>";
 				}
@@ -3702,14 +3710,14 @@ function doroto_display_table(array|string $atts)
 				if ($play_final_match) {
 					if (empty($final_result)) {
 						$close_tournament_text = $row->close_tournament == '1' ? esc_html__("back to drawn matches", "doubles-rotation-tournament") : esc_html__("start the final match", "doubles-rotation-tournament");
-						$output .= $output_tournament_status . "<a href='" . esc_url(admin_url('admin-ajax.php?action=doroto_toggle_tournament&tournament_id=' . esc_html($row->id))) . "'>" . esc_html($close_tournament_text) . "</a></td>";
+						$output .= $output_tournament_status . "<a href='" . esc_url(doroto_action_url('doroto_toggle_tournament', intval($row->id))) . "'>" . esc_html($close_tournament_text) . "</a></td>";
 					} else {
 						$close_tournament_text = $row->close_tournament == '1' ? esc_html__("finished tournament", "doubles-rotation-tournament") : esc_html__("open tournament", "doubles-rotation-tournament");
 						$output .= $output_tournament_status . esc_html($close_tournament_text) . "</td>";
 					}
 				} else {
 					$close_tournament_text = $row->close_tournament == '1' ? esc_html__("reopen the tournament", "doubles-rotation-tournament") : esc_html__("end the tournament", "doubles-rotation-tournament");
-					$output .= $output_tournament_status . "<a href='" . esc_url(admin_url('admin-ajax.php?action=doroto_toggle_tournament&tournament_id=' . esc_html($row->id))) . "'>" . esc_html($close_tournament_text) . "</a></td>";
+					$output .= $output_tournament_status . "<a href='" . esc_url(doroto_action_url('doroto_toggle_tournament', intval($row->id))) . "'>" . esc_html($close_tournament_text) . "</a></td>";
 				}
 			} else {
 				$close_tournament_text = $row->close_tournament == '1' ? esc_html__("finished tournament", "doubles-rotation-tournament") : esc_html__("open tournament", "doubles-rotation-tournament");

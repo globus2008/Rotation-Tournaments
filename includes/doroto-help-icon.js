@@ -3705,6 +3705,13 @@ function callCreateTournamentRecord() {
       : "/wp-admin/admin-ajax.php";
   fetch(dorotoAjax.ajaxurl + "?action=doroto_create_tournament_record", {
     method: "POST",
+    credentials: "same-origin",
+    headers: {
+      "Content-Type": "application/x-www-form-urlencoded",
+    },
+    body: new URLSearchParams({
+      nonce: typeof dorotoAjax !== "undefined" ? dorotoAjax.nonce : "",
+    }),
   })
     .then(() => {
       console.log("Tournament record created without response.");
@@ -3733,6 +3740,7 @@ function doroto_AddAdminToTournament(tournamentId) {
     body: new URLSearchParams({
       action: "doroto_add_current_user_to_admin",
       tournament_id: tournamentId,
+      nonce: typeof dorotoAjax !== "undefined" ? dorotoAjax.nonce : "",
     }),
   })
     .then((response) => response.json())

@@ -4,7 +4,7 @@
  * Plugin Name: Rotation Tournaments
  * Plugin URI: https://doroto.ltcchrast.cz/
  * Description: Organize Rotation Tournaments where each player competes against every other player without eliminations. Suitable for sports like tennis, table tennis, squash, padel, and beach volleyball.
- * Version: 1.5.8
+ * Version: 1.6.0
  * Author: globus2008
  * Author URI: https://doroto.ltcchrast.cz/
  * License: GPL-3.0-or-later
@@ -13,7 +13,8 @@
  * Domain Path: /languages
  * Requires at least: 6.5
  * Tested up to: 7.0
- * Stable tag: 1.5.8
+ * Requires PHP: 8.0
+ * Stable tag: 1.6.0
  * 
  * @since             1.0.0
  * @package           doubles-rotation-tournament
@@ -28,10 +29,14 @@ if (!defined('ABSPATH'))
 
 // GLOBALS AND CONSTANTS
 if (!defined('doroto_VERSION')) {
-	define('doroto_VERSION', '1.5.8');
+	define('doroto_VERSION', '1.6.0');
 }
 if (!defined('doroto_PLUGIN_NAME')) {
 	define('doroto_PLUGIN_NAME', 'doubles-rotation-tournament');
+}
+// Bump whenever the CREATE TABLE statement in doroto_create_tournaments_table() changes.
+if (!defined('DOROTO_DB_VERSION')) {
+	define('DOROTO_DB_VERSION', '1.6.0');
 }
 if (!defined('doroto_PATH')) {
 	define('doroto_PATH', __DIR__);
@@ -145,6 +150,7 @@ add_action('admin_enqueue_scripts', 'doroto_enqueue_admin_map_scripts');
 
 require_once plugin_dir_path(__FILE__) . 'includes/doroto-shortcodes.php';
 require_once plugin_dir_path(__FILE__) . 'includes/doroto-repeated-functions.php';
+require_once plugin_dir_path(__FILE__) . 'includes/doroto-security.php';
 require_once plugin_dir_path(__FILE__) . 'includes/doroto-players-management.php';
 require_once plugin_dir_path(__FILE__) . 'includes/doroto-tournament-management.php';
 require_once plugin_dir_path(__FILE__) . 'includes/doroto-frontend-pages.php';
@@ -222,6 +228,14 @@ function doroto_check_version()
 		update_option('doroto_version', doroto_VERSION);
 		doroto_settings_check_existence();
 	}
+
+	// Schema migration. Sites upgraded from old versions never received columns
+	// added later (e.g. last_update, visibility), because the table was only
+	// created when missing. Without last_update every save failed silently.
+	if (get_option('doroto_db_version') !== DOROTO_DB_VERSION) {
+		doroto_create_tournaments_table();
+		update_option('doroto_db_version', DOROTO_DB_VERSION);
+	}
 }
 add_action('init', 'doroto_check_version', 5);
 
@@ -261,7 +275,8 @@ function doroto_enqueue_shepherd_assets()
 
 	wp_enqueue_script('doroto-custom-help-script', plugins_url('includes/doroto-help-icon.js', __FILE__), array('shepherd-js', 'jquery'), '1.0.0', true);
 	wp_localize_script('doroto-custom-help-script', 'dorotoAjax', [
-		'ajaxurl' => site_url('/wp-admin/admin-ajax.php'),
+		'ajaxurl' => admin_url('admin-ajax.php'),
+		'nonce' => wp_create_nonce('doroto_help_tour'),
 	]);
 
 

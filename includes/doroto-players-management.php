@@ -153,86 +153,145 @@ function doroto_get_players_from_tournaments($tournament_id)
 
 
 /**
- * register a new player in the tournament
- * @version 1.3.6 (not only web admin can change game results)
- * @since 1.0.0
+ * Public URL of the page that shows a tournament.
+ * Used as redirect target instead of HTTP_REFERER: invitation links are opened
+ * from e-mail, WhatsApp or Facebook, where the referer is an external host and
+ * wp_safe_redirect() fell back to /wp-admin/.
+ * @since 1.6.0
  */
-function doroto_register_player($tournament_id)
+function doroto_tournament_page_url(int $tournament_id)
+{
+	$main_page_id = intval(get_option('doroto_main_page_id'));
+	$base = ($main_page_id && get_post($main_page_id)) ? get_permalink($main_page_id) : home_url('/');
+	return $tournament_id > 0 ? add_query_arg('tournament_id', $tournament_id, $base) : $base;
+}
+
+/**
+ * Invitation (join) link of a tournament. Safe to share and to click repeatedly.
+ * @since 1.6.0
+ */
+function doroto_join_url(int $tournament_id)
+{
+	return add_query_arg(
+		['action' => 'doroto_register_player', 'tournament_id' => $tournament_id],
+		admin_url('admin-ajax.php')
+	);
+}
+
+/**
+ * Link that removes the current user from a tournament (nonce protected).
+ * @since 1.6.0
+ */
+function doroto_leave_url(int $tournament_id)
+{
+	return wp_nonce_url(
+		add_query_arg(
+			['action' => 'doroto_register_player', 'tournament_id' => $tournament_id, 'doroto_leave' => 1],
+			admin_url('admin-ajax.php')
+		),
+		'doroto_leave_' . $tournament_id
+	);
+}
+
+/**
+ * Add the given user to a tournament (used by the invitation link and REST).
+ * Returns one of: 'added', 'already', 'closed', 'full', 'not_found'.
+ * @since 1.6.0
+ */
+function doroto_add_user_to_tournament(int $tournament_id, int $user_id, bool $ignore_closed = false)
 {
 	global $wpdb;
+	return doroto_with_tournament_lock($tournament_id, function () use ($wpdb, $tournament_id, $user_id, $ignore_closed) {
+		$tournament = doroto_prepare_tournament($tournament_id);
+		if ($tournament === null || $user_id <= 0 || get_userdata($user_id) === false) {
+			return 'not_found';
+		}
+		$players = maybe_unserialize($tournament->players);
+		if (!is_array($players)) {
+			$players = [];
+		}
+		$players = array_map('intval', $players);
+		if (in_array($user_id, $players, true)) {
+			return 'already';
+		}
+		if (!$ignore_closed && $tournament->open_registration != '1') {
+			return 'closed';
+		}
+		$max_players = intval($tournament->max_players);
+		if ($max_players > 0 && count($players) >= $max_players) {
+			return 'full';
+		}
+		$players[] = $user_id;
+		$statistics = doroto_create_statistics_table($tournament, $players, intval($tournament->whole_names));
+		$wpdb->update(
+			$wpdb->prefix . 'doroto_tournaments',
+			array(
+				'players' => serialize($players),
+				'statistics' => serialize($statistics),
+				'last_update'  => doroto_now_ms()
+			),
+			array('id' => $tournament_id)
+		);
+		doroto_tournament_progress($tournament_id);
+		return 'added';
+	});
+}
 
-	$current_user = wp_get_current_user();
-	$current_user_id = intval($current_user->ID);
-	$output = '';
+/**
+ * Invitation link handler: register the current user in the tournament.
+ * Before 1.6.0 the link toggled the registration, so a second click (or a
+ * link preview opened by a messenger) silently unregistered the player.
+ * Now it only joins; leaving needs the nonce-protected doroto_leave_url().
+ * @since 1.0.0
+ * @version 1.6.0 (join only, login redirect, stable redirect target)
+ */
+function doroto_register_player()
+{
+	$tournament_id = isset($_GET['tournament_id']) ? intval($_GET['tournament_id']) : 0;
+	$current_user_id = intval(get_current_user_id());
 
-	if (isset($_GET['tournament_id'])) {
-		$tournament_id = intval($_GET['tournament_id']);
-	} else {
-		$output = sanitize_text_field(__("Tournament ID was not provided.", "doubles-rotation-tournament"));
-		doroto_info_messsages_save($output);
-		doroto_redirect_modify_url($tournament_id, "");
+	if ($tournament_id <= 0) {
+		doroto_info_messsages_save(sanitize_text_field(__("Tournament ID was not provided.", "doubles-rotation-tournament")));
+		wp_safe_redirect(doroto_tournament_page_url(0));
 		exit;
 	}
 
 	if (!is_user_logged_in()) {
-		$output = sanitize_text_field(__("If you want to register for the tournament, you must log in to your account!", "doubles-rotation-tournament"));
-		doroto_info_messsages_save($output);
-		doroto_redirect_modify_url($tournament_id, "");
+		// Send the visitor to log in (or register) and come back to the same link.
+		wp_safe_redirect(wp_login_url(doroto_join_url($tournament_id)));
 		exit;
 	}
 
-	$table_name = $wpdb->prefix . 'doroto_tournaments';
 	$tournament = doroto_prepare_tournament($tournament_id);
-
-	if ($tournament !== null) {
-		// Checking if the tournament is open
-		if ($tournament->open_registration == '1') {
-			// Checking if the player field is defined and if it really is an field            
-			// Get a list of tournament players
-			$players = maybe_unserialize($tournament->players);
-			$special_group = maybe_unserialize($tournament->special_group);
-
-			if (!is_array($players)) {
-				$players = [];
-			}
-
-			if (!is_array($special_group)) {
-				$special_group = [];
-			}
-
-			// Checking if the user is already registered
-			if (in_array($current_user_id, $players)) {
-				doroto_remove_player_from_tournament($tournament_id, $current_user_id);
-			} else {
-				// The user is not registered, we will add him
-				$max_players = intval($tournament->max_players);
-				if (count($players) < $max_players || $max_players == 0) {
-					$players[] = intval($current_user->ID);
-					$statistics = doroto_create_statistics_table($tournament, $players, intval($tournament->whole_names));
-					$wpdb->update(
-						$table_name,
-						array(
-							'players' => serialize($players),
-							'statistics' => serialize($statistics),
-							'last_update'  => round(microtime(true) * 1000)
-						),
-						array('id' => $tournament_id)
-					);
-					$output = sanitize_text_field(__("You signed up for tournament no.", "doubles-rotation-tournament") . ' ' . $tournament_id . '.');
-				} else {
-					//the tournament has reached the maximum number of entries
-					$output = sanitize_text_field(__("We are sorry, but the maximum number of registered participants has been reached in tournament no.", "doubles-rotation-tournament") . ' ' . $tournament_id . '.');
-				}
-			}
-		} else {
-			$output = sanitize_text_field(__("The registration for the tournament has already been closed.", "doubles-rotation-tournament"));
-		}
-	} else {
+	if ($tournament === null) {
 		$output = sanitize_text_field(__("The tournament was not found.", "doubles-rotation-tournament"));
+	} elseif (!empty($_GET['doroto_leave'])) {
+		$nonce = isset($_GET['_wpnonce']) ? sanitize_text_field(wp_unslash($_GET['_wpnonce'])) : '';
+		if (wp_verify_nonce($nonce, 'doroto_leave_' . $tournament_id) && $tournament->open_registration == '1') {
+			doroto_remove_player_from_tournament($tournament_id, $current_user_id);
+			exit; // doroto_remove_player_from_tournament() saves the message and redirects
+		}
+		$output = sanitize_text_field(__("The registration for the tournament has already been closed.", "doubles-rotation-tournament"));
+	} else {
+		switch (doroto_add_user_to_tournament($tournament_id, $current_user_id)) {
+			case 'added':
+				$output = sanitize_text_field(__("You signed up for tournament no.", "doubles-rotation-tournament") . ' ' . $tournament_id . '.');
+				break;
+			case 'already':
+				$output = sanitize_text_field(__("You are already registered in tournament no.", "doubles-rotation-tournament") . ' ' . $tournament_id . '.');
+				break;
+			case 'full':
+				$output = sanitize_text_field(__("We are sorry, but the maximum number of registered participants has been reached in tournament no.", "doubles-rotation-tournament") . ' ' . $tournament_id . '.');
+				break;
+			case 'closed':
+				$output = sanitize_text_field(__("The registration for the tournament has already been closed.", "doubles-rotation-tournament"));
+				break;
+			default:
+				$output = sanitize_text_field(__("The tournament was not found.", "doubles-rotation-tournament"));
+		}
 	}
-	doroto_tournament_progress($tournament_id);
 	doroto_info_messsages_save($output);
-	doroto_redirect_modify_url($tournament_id, "");
+	wp_safe_redirect(doroto_tournament_page_url($tournament_id));
 	exit;
 }
 
@@ -261,7 +320,8 @@ function doroto_current_user_in_tournaments($level)
 	}
 
 	$table_name = $wpdb->prefix . 'doroto_tournaments';
-	$tournaments = $wpdb->get_results("SELECT * FROM $table_name");
+	// Only the two columns we need; SELECT * loaded all match lists and statistics.
+	$tournaments = $wpdb->get_results("SELECT players, admin_users FROM $table_name");
 
 	foreach ($tournaments as $tournament) {
 		$players = maybe_unserialize($tournament->players);
@@ -270,8 +330,15 @@ function doroto_current_user_in_tournaments($level)
 		if (!is_array($players) || !is_array($admin_users)) {
 			continue;
 		}
+		$players = array_map('intval', $players);
+		$admin_users = array_map('intval', $admin_users);
 
-		if (!in_array($current_user_id, $players)) {
+		// An organizer who does not play himself must still see the players of
+		// his own tournaments (previously only tournaments he played in counted,
+		// so a non-playing organizer saw an almost empty list).
+		$is_player = in_array($current_user_id, $players, true);
+		$is_organizer = in_array($current_user_id, $admin_users, true);
+		if (!$is_player && !$is_organizer) {
 			continue;
 		}
 
@@ -280,7 +347,7 @@ function doroto_current_user_in_tournaments($level)
 			return $all_players;
 		}
 
-		if ($level == 2 && !in_array($current_user_id, $admin_users)) {
+		if ($level == 2 && !$is_organizer) {
 			continue;
 		}
 
@@ -314,6 +381,19 @@ function doroto_add_current_user_to_admin()
 		return;
 	}
 
+	check_ajax_referer('doroto_help_tour', 'nonce');
+
+	// The guided tour may only make the visitor admin of the example tournaments.
+	// Previously any user could take over (and then delete) any tournament.
+	$example_ids = [];
+	for ($i = 1; $i <= 4; $i++) {
+		$example_ids[] = intval(doroto_read_settings('tournament_example_' . $i, 0));
+	}
+	if (!in_array($tournament_id, $example_ids, true) && !current_user_can('manage_options')) {
+		wp_send_json_error(['message' => 'Not allowed']);
+		return;
+	}
+
 	$table_name = $wpdb->prefix . 'doroto_tournaments';
 	$tournament = doroto_prepare_tournament($tournament_id);
 
@@ -323,6 +403,9 @@ function doroto_add_current_user_to_admin()
 	}
 
 	$admin_users = maybe_unserialize($tournament->admin_users);
+	if (!is_array($admin_users)) {
+		$admin_users = [];
+	}
 	if (!in_array($player_id, $admin_users)) {
 		$admin_users[] = $player_id;
 		$wpdb->update(
@@ -338,7 +421,6 @@ function doroto_add_current_user_to_admin()
 	wp_send_json_success(['message' => 'User added as admin successfully']);
 }
 add_action('wp_ajax_doroto_add_current_user_to_admin', 'doroto_add_current_user_to_admin');
-add_action('wp_ajax_nopriv_doroto_add_current_user_to_admin', 'doroto_add_current_user_to_admin');
 
 
 /**

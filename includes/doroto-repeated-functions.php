@@ -246,8 +246,9 @@ function doroto_find_player_name(int $player_id, int $whole_names)
 		$output = esc_html__('Unknown player', 'doubles-rotation-tournament');
 	}
 	$max_length = intval(doroto_read_settings('player_name_length', 16));
-	if (strlen($output) > $max_length) {
-		$output = substr($output, 0, $max_length);
+	// Multibyte-safe: substr() would cut UTF-8 characters (Czech, Cyrillic...) in half.
+	if ($max_length > 0 && mb_strlen($output, 'UTF-8') > $max_length) {
+		$output = mb_substr($output, 0, $max_length, 'UTF-8');
 	}
 	return $output;
 }
@@ -332,6 +333,12 @@ function doroto_redirect_modify_url(int $tournament_id, $container = '')
 		}
 	}
 
+	// A referer from another host (link opened from e-mail or a messenger) would make
+	// wp_safe_redirect() fall back to /wp-admin/, so use the tournament page instead.
+	$fallback_page_id = intval(get_option('doroto_main_page_id'));
+	$fallback_url = ($fallback_page_id && get_post($fallback_page_id)) ? get_permalink($fallback_page_id) : home_url('/');
+	$current_url = wp_validate_redirect($current_url, $fallback_url);
+
 	// Add tournament_id parameter to the URL
 	$new_url = add_query_arg('tournament_id', $tournament_id, $current_url);
 
@@ -379,12 +386,16 @@ function doroto_is_admin(int $tournament_id)
 		wp_die(esc_html__('The tournament was not found.', 'doubles-rotation-tournament'));
 	}
 
-	$admin_users = unserialize($tournament->admin_users);
+	$admin_users = maybe_unserialize($tournament->admin_users);
+	if (!is_array($admin_users)) {
+		$admin_users = [];
+	}
+	$admin_users = array_map('intval', $admin_users);
 	$roles = (array) $current_user->roles;
 	$user_id = $current_user->ID;
 
 	$has_web_role = in_array('administrator', $roles) || in_array('editor', $roles) || in_array('author', $roles);
-	$is_admin_user = in_array($user_id, $admin_users);
+	$is_admin_user = $user_id > 0 && in_array(intval($user_id), $admin_users, true);
 
 	if (!$has_web_role && !$is_admin_user) {
 		return 0;
@@ -524,4 +535,127 @@ function doroto_empty_special_group_notice(object $tournament): string
 		return $output;
 	}
 	return '';
+}
+
+
+/**
+ * Per-tournament lock around read-modify-write of the serialized columns.
+ * Without it, two requests (e.g. results from two courts entered at the same time)
+ * read the same blob and the later write silently drops the earlier change,
+ * which leaves players stuck in `playing` or drops freshly added players.
+ * Uses MySQL named locks (released automatically when the connection ends).
+ * Re-entrant within one request, so nested helpers may lock again safely.
+ * @since 1.6.0
+ */
+function doroto_lock_tournament(int $tournament_id, int $timeout = 10)
+{
+	global $wpdb, $doroto_tournament_locks;
+	if ($tournament_id <= 0) {
+		return false;
+	}
+	if (!is_array($doroto_tournament_locks)) {
+		$doroto_tournament_locks = [];
+	}
+	if (!empty($doroto_tournament_locks[$tournament_id])) {
+		$doroto_tournament_locks[$tournament_id]++;
+		return true;
+	}
+	$name = 'doroto_t_' . $wpdb->prefix . $tournament_id;
+	$got = intval($wpdb->get_var($wpdb->prepare('SELECT GET_LOCK(%s, %d)', $name, $timeout)));
+	// Even when the lock times out we continue (better than failing the request),
+	// but the counter must be set so the matching unlock stays balanced.
+	$doroto_tournament_locks[$tournament_id] = $got === 1 ? 1 : -1;
+	return $got === 1;
+}
+
+/**
+ * Release a lock taken by doroto_lock_tournament().
+ * @since 1.6.0
+ */
+function doroto_unlock_tournament(int $tournament_id)
+{
+	global $wpdb, $doroto_tournament_locks;
+	if (empty($doroto_tournament_locks[$tournament_id])) {
+		return;
+	}
+	if ($doroto_tournament_locks[$tournament_id] > 1) {
+		$doroto_tournament_locks[$tournament_id]--;
+		return;
+	}
+	if ($doroto_tournament_locks[$tournament_id] === 1) {
+		$wpdb->get_var($wpdb->prepare('SELECT RELEASE_LOCK(%s)', 'doroto_t_' . $wpdb->prefix . $tournament_id));
+	}
+	unset($doroto_tournament_locks[$tournament_id]);
+}
+
+/**
+ * Run a callback while holding the tournament lock.
+ * @since 1.6.0
+ */
+function doroto_with_tournament_lock(int $tournament_id, callable $callback)
+{
+	doroto_lock_tournament($tournament_id);
+	try {
+		return $callback();
+	} finally {
+		doroto_unlock_tournament($tournament_id);
+	}
+}
+
+/**
+ * Current time in milliseconds, the format of the `last_update` column.
+ * The Doroto app compares this value to decide whether to reload a tournament,
+ * so every write to a tournament must store a fresh value.
+ * @since 1.6.0
+ */
+function doroto_now_ms()
+{
+	return (int) round(microtime(true) * 1000);
+}
+
+/**
+ * Bump `last_update` of a tournament after a write that did not set it.
+ * @since 1.6.0
+ */
+function doroto_touch_tournament(int $tournament_id)
+{
+	global $wpdb;
+	if ($tournament_id > 0) {
+		$wpdb->update($wpdb->prefix . 'doroto_tournaments', ['last_update' => doroto_now_ms()], ['id' => $tournament_id]);
+	}
+}
+
+/**
+ * admin-ajax URL for a tournament admin action, protected by a nonce.
+ * Plain GET links let a third party trigger the action (CSRF) by sending
+ * the link to a logged-in organizer.
+ * @since 1.6.0
+ */
+function doroto_action_url(string $action, int $tournament_id)
+{
+	return wp_nonce_url(
+		admin_url('admin-ajax.php?action=' . rawurlencode($action) . '&tournament_id=' . intval($tournament_id)),
+		'doroto_' . $action . '_' . intval($tournament_id)
+	);
+}
+
+/**
+ * Verify the current request is an allowed admin action on the tournament:
+ * logged in, valid nonce from doroto_action_url() and tournament admin rights.
+ * On failure saves a message and redirects back (does not return).
+ * @since 1.6.0
+ */
+function doroto_require_admin_action(string $action, int $tournament_id)
+{
+	$nonce = isset($_REQUEST['_wpnonce']) ? sanitize_text_field(wp_unslash($_REQUEST['_wpnonce'])) : '';
+	$ok = is_user_logged_in()
+		&& $tournament_id > 0
+		&& wp_verify_nonce($nonce, 'doroto_' . $action . '_' . $tournament_id) !== false
+		&& doroto_prepare_tournament($tournament_id) !== null
+		&& doroto_is_admin($tournament_id) > 0;
+	if (!$ok) {
+		doroto_info_messsages_save(sanitize_text_field(__('You do not have permission to perform this action.', 'doubles-rotation-tournament')));
+		doroto_redirect_modify_url($tournament_id, "");
+		exit;
+	}
 }
