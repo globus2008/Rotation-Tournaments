@@ -1395,6 +1395,19 @@ function doroto_add_player_via_api(WP_REST_Request $request)
 
 	$player_data = $already_added ? false : get_userdata($player_id);
 
+	// Backward compatibility with app versions before 1.1: they create the
+	// account via player/register WITHOUT the organizer's token and add it right
+	// after. Treat an account registered minutes ago and not yet claimed as
+	// created by this organizer, so it shows up in his "Add from database" list,
+	// and let the player set a password (otherwise nobody knows it).
+	if ($player_data && get_user_meta($player_id, 'doroto_creator', true) === '') {
+		$registered = strtotime($player_data->user_registered . ' UTC');
+		if ($registered && (time() - $registered) < 15 * MINUTE_IN_SECONDS && $player_id !== intval($current_user_id)) {
+			update_user_meta($player_id, 'doroto_creator', intval($current_user_id));
+			doroto_send_account_created_email($player_id);
+		}
+	}
+
 	if ($player_data) {
 		$to = $player_data->user_email;
 		$player_name = doroto_find_player_name($player_id, intval($tournament->whole_names));
