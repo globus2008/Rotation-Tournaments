@@ -30,7 +30,10 @@
 
 ## REST contract with the app
 - Base URL: `<site>/index.php?rest_route=/doroto/v1/...`
-- Auth header: `Authorization: Bearer <token>`. The token is stored in user meta `doroto_access_token`.
+- Auth header: `Authorization: Bearer <token>`. Since 1.6.0 every device has its own session
+  (`doroto_store_session()`): multi-row metas `doroto_access_token` / `doroto_refresh_token` for lookup and
+  `doroto_sessions` (sha256(refresh) => access, access_exp, refresh_exp, created). Max 10 devices per user.
+  Single tokens issued by 1.5.x are migrated on first use.
 - Success: `{success:true, action:"...", last_update?}`. Error: `{error_code:"..."}` plus an HTTP status.
 - **Keep the existing endpoints backward compatible.** Old app versions stay in use. Add new endpoints or optional params instead of changing the old ones.
 

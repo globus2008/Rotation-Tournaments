@@ -76,10 +76,7 @@ function doroto_handle_player_registration(WP_REST_Request $request)
 	$refreshToken = bin2hex(random_bytes(64));
 	$refreshTokenExpiration = time() + (90 * 24 * 3600); // valid 90 days
 
-	update_user_meta($user_id, 'doroto_access_token', $accessToken);
-	update_user_meta($user_id, 'doroto_access_token_expiration', $accessTokenExpiration);
-	update_user_meta($user_id, 'doroto_refresh_token', $refreshToken);
-	update_user_meta($user_id, 'doroto_refresh_token_expiration', $refreshTokenExpiration);
+	doroto_store_session($user_id, $accessToken, $accessTokenExpiration, $refreshToken, $refreshTokenExpiration);
 
 	return new WP_REST_Response([
 		'success' => true,
@@ -135,10 +132,7 @@ function doroto_handle_login(WP_REST_Request $request)
 	$refreshTokenExpiration = time() + (90 * 24 * 3600); // 90 dní
 
 	// Uložení obou tokenů do databáze
-	update_user_meta($user->ID, 'doroto_access_token', $accessToken);
-	update_user_meta($user->ID, 'doroto_access_token_expiration', $accessTokenExpiration);
-	update_user_meta($user->ID, 'doroto_refresh_token', $refreshToken);
-	update_user_meta($user->ID, 'doroto_refresh_token_expiration', $refreshTokenExpiration);
+	doroto_store_session($user->ID, $accessToken, $accessTokenExpiration, $refreshToken, $refreshTokenExpiration);
 
 	return new WP_REST_Response([
 		'success' => true,
@@ -195,27 +189,24 @@ function doroto_handle_refresh_token($request)
 		return new WP_REST_Response(['error_code' => 'refresh_token_invalid'], 401);
 	}
 
-	$user_id = $users[0]->ID;
+	$user_id = intval($users[0]->ID);
 
 	// 3. Kontrola platnosti (expirace) refresh tokenu
-	$expiration = get_user_meta($user_id, 'doroto_refresh_token_expiration', true);
+	$expiration = doroto_refresh_token_expiration($user_id, $refreshToken);
 
 	if (!$expiration || time() >= intval($expiration)) {
-		// Token vypršel nebo neexistuje, pro jistotu ho smažeme
-		delete_user_meta($user_id, 'doroto_refresh_token');
-		delete_user_meta($user_id, 'doroto_refresh_token_expiration');
+		doroto_remove_session($user_id, $refreshToken);
 		return new WP_REST_Response(['error_code' => 'refresh_token_expired'], 401);
 	}
 
-	// 4. Pokud je vše v pořádku, generujeme nové tokeny
+	// 4. New access token for this device only; other devices stay signed in.
 	$newAccessToken = bin2hex(random_bytes(32));
 	$newAccessTokenExpiration = time() + 86400; // Platnost 24 hodin
 
 	$newRefreshToken = $refreshToken;
 
 	// 5. Aktualizace databáze s novými tokeny
-	update_user_meta($user_id, 'doroto_access_token', $newAccessToken);
-	update_user_meta($user_id, 'doroto_access_token_expiration', $newAccessTokenExpiration);
+	doroto_store_session($user_id, $newAccessToken, $newAccessTokenExpiration, $refreshToken, intval($expiration));
 
 	// 6. Vrácení nových tokenů klientské aplikaci
 	return new WP_REST_Response([
@@ -224,6 +215,152 @@ function doroto_handle_refresh_token($request)
 		'access_token' => $newAccessToken,
 		'refresh_token' => $newRefreshToken,
 	], 200);
+}
+
+/**
+ * Sessions: one pair of tokens per signed-in device.
+ *
+ * Before 1.6.0 every login overwrote the single token pair of the user, so
+ * signing in on a second phone (or the organizer's tablet) logged out the
+ * first one. Now each device keeps its own pair:
+ *  - user meta 'doroto_access_token' / 'doroto_refresh_token' hold one row per
+ *    device (multi-value meta), so the lookup by meta value keeps working;
+ *  - user meta 'doroto_sessions' maps sha256(refresh token) to
+ *    [access, access_exp, refresh_exp, created].
+ * Tokens issued by older versions (single rows with the *_expiration metas)
+ * remain valid until they expire.
+ * @since 1.6.0
+ */
+const DOROTO_MAX_SESSIONS = 10;
+
+function doroto_session_key(string $refresh_token)
+{
+	return hash('sha256', $refresh_token);
+}
+
+function doroto_get_sessions(int $user_id)
+{
+	$sessions = get_user_meta($user_id, 'doroto_sessions', true);
+	if (!is_array($sessions)) {
+		$sessions = [];
+	}
+	// One-time migration of the single token pair issued before 1.6.0, so a
+	// device signed in with an old token is not logged out by a new login.
+	if (empty($sessions)) {
+		$legacy_access = get_user_meta($user_id, 'doroto_access_token', true);
+		$legacy_refresh = get_user_meta($user_id, 'doroto_refresh_token', true);
+		$legacy_rexp = intval(get_user_meta($user_id, 'doroto_refresh_token_expiration', true));
+		if ($legacy_access && $legacy_refresh && $legacy_rexp > time()) {
+			$key = doroto_session_key($legacy_refresh);
+			$sessions[$key] = [
+				'access' => $legacy_access,
+				'access_exp' => intval(get_user_meta($user_id, 'doroto_access_token_expiration', true)),
+				'refresh_exp' => $legacy_rexp,
+				'created' => 0,
+			];
+			update_user_meta($user_id, 'doroto_sessions', $sessions);
+			update_user_meta($user_id, 'doroto_refresh_tokens_plain', [$key => $legacy_refresh]);
+		}
+	}
+	return $sessions;
+}
+
+/**
+ * Store (or update) the session identified by the refresh token.
+ */
+function doroto_store_session(int $user_id, string $access_token, int $access_exp, string $refresh_token, int $refresh_exp)
+{
+	$sessions = doroto_get_sessions($user_id);
+	$key = doroto_session_key($refresh_token);
+	$now = time();
+
+	// Replace the previous access token of this device.
+	if (isset($sessions[$key]['access'])) {
+		delete_user_meta($user_id, 'doroto_access_token', $sessions[$key]['access']);
+	}
+	$created = isset($sessions[$key]['created']) ? intval($sessions[$key]['created']) : $now;
+	$is_new = !isset($sessions[$key]);
+	$sessions[$key] = [
+		'access' => $access_token,
+		'access_exp' => $access_exp,
+		'refresh_exp' => $refresh_exp,
+		'created' => $created,
+	];
+
+	// Drop expired sessions and keep only the newest ones.
+	$sessions = array_filter($sessions, function ($s) use ($now) {
+		return intval($s['refresh_exp'] ?? 0) > $now;
+	});
+	uasort($sessions, function ($a, $b) {
+		return intval($b['created']) <=> intval($a['created']);
+	});
+	$kept = array_slice($sessions, 0, DOROTO_MAX_SESSIONS, true);
+
+	// Rebuild the lookup rows so they match the kept sessions exactly.
+	delete_user_meta($user_id, 'doroto_access_token');
+	delete_user_meta($user_id, 'doroto_refresh_token');
+	delete_user_meta($user_id, 'doroto_access_token_expiration');
+	delete_user_meta($user_id, 'doroto_refresh_token_expiration');
+	foreach ($kept as $s) {
+		add_user_meta($user_id, 'doroto_access_token', $s['access']);
+	}
+	$refresh_of = get_user_meta($user_id, 'doroto_refresh_tokens_plain', true);
+	$refresh_of = is_array($refresh_of) ? $refresh_of : [];
+	if ($is_new) {
+		$refresh_of[$key] = $refresh_token;
+	}
+	$refresh_of = array_intersect_key($refresh_of, $kept);
+	foreach ($refresh_of as $plain) {
+		add_user_meta($user_id, 'doroto_refresh_token', $plain);
+	}
+	update_user_meta($user_id, 'doroto_refresh_tokens_plain', $refresh_of);
+	update_user_meta($user_id, 'doroto_sessions', $kept);
+}
+
+function doroto_remove_session(int $user_id, string $refresh_token)
+{
+	$sessions = doroto_get_sessions($user_id);
+	$key = doroto_session_key($refresh_token);
+	if (isset($sessions[$key])) {
+		delete_user_meta($user_id, 'doroto_access_token', $sessions[$key]['access']);
+		unset($sessions[$key]);
+		update_user_meta($user_id, 'doroto_sessions', $sessions);
+	}
+	delete_user_meta($user_id, 'doroto_refresh_token', $refresh_token);
+	$refresh_of = get_user_meta($user_id, 'doroto_refresh_tokens_plain', true);
+	if (is_array($refresh_of)) {
+		unset($refresh_of[$key]);
+		update_user_meta($user_id, 'doroto_refresh_tokens_plain', $refresh_of);
+	}
+}
+
+/**
+ * Expiration timestamp of the given access token, 0 when unknown.
+ */
+function doroto_access_token_expiration(int $user_id, string $access_token)
+{
+	foreach (doroto_get_sessions($user_id) as $s) {
+		if (isset($s['access']) && hash_equals($s['access'], $access_token)) {
+			return intval($s['access_exp']);
+		}
+	}
+	// Token issued before 1.6.0
+	return intval(get_user_meta($user_id, 'doroto_access_token_expiration', true));
+}
+
+/**
+ * Expiration timestamp of the given refresh token, 0 when unknown.
+ */
+function doroto_refresh_token_expiration(int $user_id, string $refresh_token)
+{
+	$sessions = doroto_get_sessions($user_id);
+	$key = doroto_session_key($refresh_token);
+	if (isset($sessions[$key])) {
+		return intval($sessions[$key]['refresh_exp']);
+	}
+	// Token issued before 1.6.0: migrate it into a session on first use.
+	$legacy = intval(get_user_meta($user_id, 'doroto_refresh_token_expiration', true));
+	return $legacy;
 }
 
 /**
@@ -281,7 +418,7 @@ function doroto_get_current_user_id_from_token()
 		]);
 		if (!empty($users)) {
 			$user_id = $users[0]->ID;
-			$expiration = get_user_meta($user_id, 'doroto_access_token_expiration', true);
+			$expiration = doroto_access_token_expiration(intval($user_id), $token);
 
 			if ($expiration && time() < intval($expiration)) {
 				return (int) $user_id;
@@ -2268,10 +2405,7 @@ function doroto_handle_google_login(WP_REST_Request $request)
 	$refreshTokenExpiration = time() + (90 * 24 * 3600); // Platnost 90 dní
 
 	// 2. Uložení obou tokenů a jejich expirací do databáze
-	update_user_meta($user->ID, 'doroto_access_token', $accessToken);
-	update_user_meta($user->ID, 'doroto_access_token_expiration', $accessTokenExpiration);
-	update_user_meta($user->ID, 'doroto_refresh_token', $refreshToken);
-	update_user_meta($user->ID, 'doroto_refresh_token_expiration', $refreshTokenExpiration);
+	doroto_store_session($user->ID, $accessToken, $accessTokenExpiration, $refreshToken, $refreshTokenExpiration);
 
 	$logs[] = "Generated new access and refresh tokens for user ID {$user->ID}";
 
