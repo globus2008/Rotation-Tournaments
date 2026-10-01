@@ -1,0 +1,81 @@
+# Rotation Tournaments – WordPress plugin (notes for Claude and contributors)
+
+- Slug: `doubles-rotation-tournament`. Text domain: the same.
+- Published on WordPress.org.
+- Repo: https://github.com/globus2008/Rotation-Tournaments
+- Runs doubles tournaments where partners rotate every match. Server side of the Android app **Doroto** (`c:\scr\doroto`).
+- Code comments and notes are in **English**; the owner chats in Czech.
+- `c:\scr\doubles-rotation-tournament` is a full local WP install; the plugin lives in this folder.
+- PHP and MySQL are not on PATH on the dev machine.
+- The code requires **PHP 8.0+**: it uses `mixed` and union types.
+
+## Files
+| File | Purpose |
+|---|---|
+| `doubles-rotation-tournament.php` | Bootstrap, assets, activation hooks, version check, admin notices |
+| `includes/doroto-endpoints.php` | All REST routes (namespaces `doroto/v1`, `player`) and token auth |
+| `includes/doroto-tournament-management.php` | Drawing algorithm `doroto_offer_games`, table creation, scoring, toggles, demo data |
+| `includes/doroto-shortcodes.php` | About 30 shortcodes and their admin-post form handlers |
+| `includes/doroto-players-management.php` | Invitation link `doroto_register_player`, winner logic, AJAX helpers |
+| `includes/doroto-repeated-functions.php` | `doroto_is_admin`, `doroto_getTournamentId`, flash messages, redirects |
+| `includes/doroto-backend-pages.php` | Admin menu (9 tabs), settings defaults `doroto_settings` |
+| `includes/doroto-frontend-pages.php` | Pages created on activation |
+| `blocks/log-link` | "Log link" block |
+| `languages/` | cs_CZ only |
+
+## Data model
+- One table, `{prefix}doroto_tournaments`. Lists are serialized PHP arrays in text columns: `players`, `playing`, `statistics`, `matches_list`, `admin_users`, `special_group`, `payment_done`, `final_four`, `final_result`.
+- `last_update` is a BIGINT in ms. The app uses it for change detection, so **every write must bump it.**
+- Settings: the option `doroto_settings`. Defaults are in `doroto-backend-pages.php`.
+
+## REST contract with the app
+- Base URL: `<site>/index.php?rest_route=/doroto/v1/...`
+- Auth header: `Authorization: Bearer <token>`. The token is stored in user meta `doroto_access_token`.
+- Success: `{success:true, action:"...", last_update?}`. Error: `{error_code:"..."}` plus an HTTP status.
+- **Keep the existing endpoints backward compatible.** Old app versions stay in use. Add new endpoints or optional params instead of changing the old ones.
+
+## Known issues (analysis from 2026-10-01)
+### Security (critical)
+- `doroto_add_current_user_to_admin` (also `nopriv`, no checks): anyone can become admin of any tournament.
+- `doroto_save_final_doubles` runs on `init` with no nonce, login or admin check.
+- `wp_ajax_nopriv_doroto_create_tournament_record`: any visitor can rebuild the demo data and create users.
+- `doroto_toggle_registration`: no permission check.
+- admin-post handlers in `doroto-shortcodes.php` check the nonce plus `is_user_logged_in()` only, never `doroto_is_admin()`. `tournament_parameters` can delete a tournament.
+- REST payment endpoints: token only, no admin check.
+- `debug` blocks in REST responses. `tournament-save` echoes `getallheaders()`, including the token.
+- `player/register` and `google-login` ignore `users_can_register`. `player/login` bypasses `authenticate` filters.
+
+### Data integrity
+- `doroto_save_match_result`: `if ($last_update == 0) round(...)` computes the value but never assigns it. Web results store `last_update = 0` and the app stops refreshing.
+- Other paths that don't bump `last_update`:
+  - remove-admin
+  - `doroto_tournament_progress`
+  - final doubles
+- `dbDelta` only runs when the table is missing (`SHOW TABLES` guard). Columns added in later versions never reach upgraded sites.
+- No locking: concurrent results and draws overwrite whole serialized blobs (lost updates, players stuck in `playing`).
+- The `tournament-detail` GET calls `doroto_offer_games`, so a GET draws matches and writes to the DB.
+- `doroto_create_statistics_table` compares IDs with strict `===` (int vs string).
+- `getallheaders()`-only token lookup: the Authorization header is often stripped on FPM/CGI hosts.
+
+### Players and invitations
+- The invitation link `admin-ajax.php?action=doroto_register_player` is a **toggle**: a second click unregisters the player.
+  - Logged-out users get no `redirect_to` back to the link.
+  - The redirect goes to `HTTP_REFERER`.
+- `users-all` with the default `only_admin_players = 1` lists only players from tournaments where the organizer **played**.
+  - App-created users don't get `doroto_creator`, so they never show up.
+  - A WP administrator sees everyone, which is why the owner never noticed.
+- Accounts created by an organizer get a random password that is never sent.
+
+### Other
+- Assets (Leaflet, Shepherd, the tour) load on every page.
+- Site-wide no-cache header.
+- `ip-api.com` is called over HTTP on table render.
+- `delete_database` defaults to 1.
+- Activation creates 13 demo users.
+
+## Directory / reach (deferred by the owner)
+- `website-info` feeds the directory plugin `doroto-websites`.
+- The site never registers itself.
+- `website_visible` defaults to 0.
+- The app notice option `doroto_show_app_notice` is never set to `'true'`.
+- See `c:\scr\doroto-websites\CLAUDE.md`.
