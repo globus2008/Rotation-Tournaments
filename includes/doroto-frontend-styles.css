@@ -1,114 +1,209 @@
 .doroto-special-group-text {
-    color: blue;
+  color: blue;
 }
 
 .doroto-special-group-text-underlined {
-    color: blue;
-	text-decoration: underline;
+  color: blue;
+  text-decoration: underline;
 }
+
 .doroto-winner-text {
-    color: red;
+  color: red;
+}
+
+.doroto-winner-text-underlined {
+  color: red;
+  text-decoration: underline;
 }
 
 .doroto-winner-background {
-    background-color: LightPink !important;
+  background-color: LightPink !important;
+}
+
+.doroto-winner-background-underlined {
+  background-color: LightPink !important;
+  text-decoration: underline;
+}
+
+.doroto-winner-background-special {
+  background-color: Thistle !important;
+}
+
+.doroto-winner-background-special-underlined {
+  background-color: Thistle !important;
+  text-decoration: underline;
+}
+
+.doroto-message-background {
+  background-color: Plum !important;
+}
+
+.doroto-tournament-background {
+  background-color: LightPink !important;
 }
 
 .doroto-separator-background {
-    background-color: Orange !important;
+  background-color: Orange !important;
 }
 
 .doroto-info-text {
-    color: green;
+  color: green;
 }
 
 .doroto-warning-text {
-    color: red;
+  color: red;
 }
 .doroto-table-width {
-    width: 70%;
+  width: 70%;
 }
 
 .doroto-table-width-red {
-    width: 70%;
-	color: red;
+  width: 70%;
+  color: red;
 }
 
 .doroto-table {
-    width: 100%;	
+  width: 100%;
+  border: 1px solid #000;
+  border-collapse: collapse;
+}
+
+.doroto-table td,
+.doroto-table th {
+  border: 1px solid #ccc;
+  padding: 8px;
+}
+
+.doroto-clickable-submenu {
+  cursor: pointer;
+  background-color: LemonChiffon;
 }
 
 .doroto-clickable-title {
-    cursor: pointer;
-	background-color: gainsboro; 
+  cursor: pointer;
+  background-color: gainsboro;
 }
 
 .doroto-content-container {
-    display: none;
+  display: none;
 }
 
 .doroto-content-main {
-    margin-top: 10px; 
-    margin-bottom: 15px; 
+  margin-top: 10px;
+  margin-bottom: 15px;
 }
 
 .doroto-table-responsive {
-    overflow-x: auto;
+  overflow-x: auto;
 }
 
-.doroto-table-responsive table tbody tr:nth-child(2n+1) { /*each table will have a zebra, i.e. the second row is a different color*/
-    background-color: #f2f2f2;
+.doroto-table-responsive table tbody tr:nth-child(2n + 1) {
+  /*each table will have a zebra, i.e. the second row is a different color*/
+  background-color: #f2f2f2;
 }
 
-.doroto-table-responsive table tr:first-child { /*each table will have a different colored label*/
-    background-color: #ffcc99 !important;
+.doroto-table-responsive table tr:first-child {
+  /*each table will have a different colored label*/
+  background-color: #ffcc99 !important;
 }
 #tournament_parameters_allow_quit {
-    width: 100%;  
+  width: 100%;
 }
 
 #tournament_parameters_allow_quit option {
-    height: 150px; 
-    overflow: auto; 
-    text-overflow: ellipsis;
+  height: 150px;
+  overflow: auto;
+  text-overflow: ellipsis;
 }
 #tournament_parameters_name {
-    height: 50px;
-	width: 100%; 
+  height: 50px;
+  width: 100%;
 }
 #tournament_parameters_whole_names {
-	width: 100%; 
+  width: 100%;
 }
 #tournament_parameters_whole_names option {
-    height: 150px; 
-    overflow: auto; 
-    text-overflow: ellipsis;
+  height: 150px;
+  overflow: auto;
+  text-overflow: ellipsis;
 }
 
 .doroto-red-text {
-    color: red;
+  color: red;
 }
 
-.doroto-text-underlined { /* Text underlining */
-    text-decoration: underline;
+.doroto-text-underlined {
+  text-decoration: underline;
 }
-
 
 .doroto-grey-background {
-        background-color: #f2f2f2; /* You can use any gray color here */
-        padding: 10px;
-        border: 1px solid #ccc; /* You can optionally add a border */
-    }
-.doroto-other-background {
-        background-color: #FAF0E6; 
-        padding: 10px;
-        border: 1px solid #ccc; /* You can optionally add a border */
-    }
+  background-color: #f2f2f2;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
 
 .doroto-select-width {
-    width: 300px;
-	}
+  width: 300px;
+}
 
 .doroto-left-aligned {
-        text-align: left;
-	}
+  text-align: left;
+}
+
+.doroto-no-wrap {
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 10ch;
+  text-overflow: ellipsis;
+}
+
+#doroto-floating-help-icon {
+  position: fixed;
+  top: 100px;
+  right: 20px;
+  background-color: #0073aa;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+#doroto-help-dropdown {
+  width: 300px;
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  position: absolute;
+  display: none;
+  right: 0;
+}
+
+#doroto-help-dropdown li {
+  margin: 5px 0;
+}
+
+#doroto-help-dropdown li a {
+  text-decoration: none;
+  color: #0073aa;
+  padding: 5px;
+  display: block;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+#doroto-help-dropdown li a:hover {
+  background-color: #f0f0f0;
+}
+
+#doroto-floating-help-icon.active #doroto-help-dropdown {
+  display: block;
+}
