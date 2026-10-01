@@ -23,6 +23,10 @@ if (!defined('ABSPATH')) {
  *                   value is the POST field holding the affected player ID
  * 'match_player' - tournament admin, or a player of that match when the
  *                   tournament allows players to enter results
+ * 'final_player' - tournament admin, or one of the four finalists when the
+ *                   tournament allows players to enter results
+ * Tournament admin = organizer listed in admin_users, or a web administrator,
+ * editor or author (see doroto_is_admin()).
  */
 function doroto_form_permissions()
 {
@@ -41,6 +45,7 @@ function doroto_form_permissions()
 		'doroto_enable_player_in_tournament' => ['admin_or_self', 'enable_player'],
 		'doroto_remove_player_from_tournament' => ['admin_or_self', 'player_to_remove'],
 		'doroto_submit_match_result' => ['match_player'],
+		'doroto_submit_final_result' => ['final_player'],
 	];
 }
 
@@ -68,6 +73,15 @@ function doroto_user_may_submit_form(string $action, array $rule, int $tournamen
 		// phpcs:ignore WordPress.Security.NonceVerification.Missing -- the handler verifies the nonce
 		$player_id = isset($_POST[$field]) ? intval($_POST[$field]) : 0;
 		return $player_id > 0 && $player_id === $current_user_id;
+	}
+
+	if ($rule[0] === 'final_player') {
+		if (intval($tournament->allow_input_results) !== 1) {
+			return false;
+		}
+		$final_four = maybe_unserialize($tournament->final_four);
+		$finalists = is_array($final_four) ? array_map('intval', array_values($final_four)) : [];
+		return in_array($current_user_id, $finalists, true);
 	}
 
 	if ($rule[0] === 'match_player') {
