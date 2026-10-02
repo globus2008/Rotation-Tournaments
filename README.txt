@@ -154,6 +154,8 @@ You can use this plugin for tennis, table tennis, squash, padel, badminton, beac
 * Change - tournament links to the home page ("?tournament_id=5") and the old app QR codes ("/tournament?id=5") open the tournament page
 * Add - REST endpoint create-player: the organizer creates a player and adds them to the tournament in one step; the player gets an e-mail to set the password
 * Add - optional mode join/leave for the app join endpoint
+* Add - the tournament page shows a short link to the Android app (can be turned off in Settings -> Mobile app)
+* Change - the review request is shown only to administrators, 14 days after activation once the site has its own tournament, and comes back 7 days after "Remind me" until the plugin is rated
 = 1.5.8 - 2026/06/12 =
 * Fix - fixed some errors found in Plugin Check
 

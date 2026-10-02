@@ -3534,9 +3534,32 @@ function doroto_add_link_to_tournament($atts = [], $content = null, $tag = '')
 	if (!$open_registration && !doroto_check_if_presentation_on()) {
 		$output .= '</div></div>';
 	}
+	$output .= doroto_app_link_box();
 	return $output;
 }
 add_shortcode('doroto_tournament_log_link', 'doroto_add_link_to_tournament');
+
+
+/**
+ * Small box on the tournament page pointing players to the Android app.
+ * The page is where players already follow the tournament, so it is the best
+ * place to tell them about the app. Can be turned off in the plugin settings
+ * (Mobile app -> show_app_link).
+ * @since 1.6.0
+ */
+function doroto_app_link_box()
+{
+	if (intval(doroto_read_settings('show_app_link', 1)) !== 1) {
+		return '';
+	}
+	$store_url = 'https://play.google.com/store/apps/details?id=cz.doroto.app&referrer=utm_source%3Dplugin%26utm_medium%3Dtournament_page';
+	$output = '<div class="doroto-app-link" style="margin:12px 0;padding:8px 12px;border-left:4px solid #ff9800;background:#fff8e1;">';
+	$output .= '&#128241; ' . esc_html__('Follow the tournament and enter results on your phone:', 'doubles-rotation-tournament') . ' ';
+	$output .= '<a href="' . esc_url($store_url) . '" target="_blank" rel="noopener">';
+	$output .= esc_html__('Rotation Tournaments app for Android', 'doubles-rotation-tournament') . '</a>';
+	$output .= '</div>';
+	return $output;
+}
 
 
 /**

@@ -1082,6 +1082,7 @@ function doroto_application_data_options_callback()
 	$website_address = get_option('siteurl');
 	$website_description = isset($doroto_settings['website_description']) ? sanitize_text_field(wp_unslash($doroto_settings['website_description'])) : '';
 	$website_visible = isset($doroto_settings['website_visible']) ? intval($doroto_settings['website_visible']) : 0;
+	$show_app_link = isset($doroto_settings['show_app_link']) ? intval($doroto_settings['show_app_link']) : 1;
 	$anyone_can_register = get_option('users_can_register');
 	$latitude = isset($doroto_settings['latitude']) ? floatval($doroto_settings['latitude']) : 50;
 	$longitude = isset($doroto_settings['longitude']) ? floatval($doroto_settings['longitude']) : 15;
@@ -1123,6 +1124,18 @@ function doroto_application_data_options_callback()
 	echo '<option value="0" ' . selected(0, esc_attr($website_visible), false) . '>' . esc_html__("No", "doubles-rotation-tournament") . '</option>';
 	echo '</select>';
 	echo '<p class="description">' . esc_html__("Should this club website be shown in the list of available servers?", "doubles-rotation-tournament") . '</p>';
+	echo '</td>';
+	echo '</tr>';
+
+	// settings 'show_app_link'
+	echo '<tr class="iedit">';
+	echo '<th scope="row"><label for="doroto_settings_show_app_link"> ' . esc_html__('Show a link to the app on the tournament page?', 'doubles-rotation-tournament') . ' </label></th>';
+	echo '<td>';
+	echo '<select name="doroto_settings[show_app_link]">';
+	echo '<option value="1" ' . selected(1, esc_attr($show_app_link), false) . '>' . esc_html__("Yes", "doubles-rotation-tournament") . '</option>';
+	echo '<option value="0" ' . selected(0, esc_attr($show_app_link), false) . '>' . esc_html__("No", "doubles-rotation-tournament") . '</option>';
+	echo '</select>';
+	echo '<p class="description">' . esc_html__("A short note under the tournament details tells players about the Android app.", "doubles-rotation-tournament") . '</p>';
 	echo '</td>';
 	echo '</tr>';
 
@@ -1563,6 +1576,7 @@ function doroto_settings_check_existence()
 		'tournament_example_4' => 0,
 		'website_description' => get_option('blogdescription'),
 		'website_visible' => 0,
+		'show_app_link' => 1,
 		'visibility' => 1,
 		'longitude' => 15,
 		'latitude' => 50,
@@ -1598,81 +1612,119 @@ function doroto_presentation_check_existence()
 
 
 /**
- * display message on the dashboard to promote doing a review
+ * Asking the site administrator for a review on WordPress.org.
+ *
+ * The notice appears 14 days after activation, once the site has created a
+ * tournament of its own (not only the examples). "Remind me in 7 days" brings
+ * it back after a week, until the administrator rates the plugin or says it is
+ * already done. Before 1.6.0 it was shown to every user who could open the
+ * admin area, the long text was easy to skip, and "Hide this text" removed it
+ * for good: after two years the plugin had no review at all.
  * @since 1.0.0
+ * @version 1.6.0 (reminder every 7 days, only for administrators, nonce)
  */
-function doroto_display_dashboard_message()
+const DOROTO_REVIEW_URL = 'https://wordpress.org/support/plugin/doubles-rotation-tournament/reviews/#new-post';
+const DOROTO_REVIEW_FIRST_DAYS = 14;
+const DOROTO_REVIEW_AGAIN_DAYS = 7;
+
+function doroto_review_state()
 {
-	global $wpdb;
-	$doroto_settings = get_option('doroto_settings');
-	$hide_promo = isset($doroto_settings['hide_promo']) ? intval($doroto_settings['hide_promo']) : 0;
-	$promo_next = isset($doroto_settings['promo_next']) ? strtotime($doroto_settings['promo_next']) : 0;
-
-	if (current_time('timestamp') > $promo_next) {
-
-		if ($hide_promo == 0) {
-			echo '<p>' . '<div class="notice notice-info">';
-			echo '<h3>' . esc_html__('You probably already have some experience using the plugin', 'doubles-rotation-tournament') . ' ';
-			echo "<a href='" . esc_url('https://wordpress.org/plugins/doubles-rotation-tournament/') . "' target='_blank'>" . esc_html__('Rotation Tournaments', 'doubles-rotation-tournament') . "</a>.</h3>";
-			echo esc_html__('I would like to ask you for your reaction, which would be an invaluable source of information for me, as well as motivation and maybe even inspiration, why and how to continue developing this plugin.', 'doubles-rotation-tournament') . '<br><ol>';
-			echo '<li>' . esc_html__('If you have any objections about the functionality, suggestions for improvement, please use the', 'doubles-rotation-tournament') . ' ';
-			echo " <a href='" . esc_url('https://wordpress.org/support/plugin/doubles-rotation-tournament/') . "' target='_blank'>Support link</a> " . '</li>';
-			echo '<li>' . esc_html__('Since my native language is not English, I believe I made a lot of mistakes. If there is a volunteer to correct wrong expressions, that would be great. For example, a correction can be made for British English', 'doubles-rotation-tournament') . ' ';
-			echo "<a href='" . esc_url('https://translate.wordpress.org/locale/en-gb/default/wp-plugins/doubles-rotation-tournament/') . "' target='_blank'>" . esc_html__('here', 'doubles-rotation-tournament') . "</a>. ";
-			echo  esc_html__('From there I then copy the fixes to the source files.', 'doubles-rotation-tournament') . '</li>';
-			echo '<li>' . esc_html__("I would be very happy if you could give my plugin a positive rating. Positive feedback from users is a very strong motivation to continue developing the plugin.", 'doubles-rotation-tournament') . ' ';
-			echo "<a href='" . esc_url('https://wordpress.org/support/plugin/doubles-rotation-tournament/reviews/#new-post') . "' target='_blank'>" . esc_html__('You can use this link to redirect to the review section of the plugin.', 'doubles-rotation-tournament') . "</a> " . '</li></ol>';
-			echo '<h4>' . esc_html__('Please share your experience with others and give a nice rating to', 'doubles-rotation-tournament') . ' ';
-			echo '<b>' . esc_html__('Rotation Tournaments', 'doubles-rotation-tournament') . '</b>.</h4></p>';
-
-			echo '<form method="post" action="">';
-			echo '<input type="hidden" name="action" value="doroto_update_hide_promo">';
-			echo '<button class="button" type="submit" name="i_did" value="1">' . esc_html__('I have already written a review.', 'doubles-rotation-tournament') . '</button>' . '  ';
-			echo '<button class="button" type="submit" name="maybe_later" value="1">' . esc_html__("Maybe I'll write a review later.", 'doubles-rotation-tournament') . '</button>' . '  ';
-			echo '<button class="button" type="submit" name="hide_message" value="1">' . esc_html__('Hide this text', 'doubles-rotation-tournament') . '</button>';
-			echo '</form>';
-			echo '</div>';
+	$state = get_option('doroto_review_notice');
+	if (!is_array($state)) {
+		$settings = get_option('doroto_settings');
+		$activated = isset($settings['activation_date']) ? strtotime($settings['activation_date'] . ' UTC') : false;
+		if (!$activated) {
+			$activated = time();
 		}
+		$state = [
+			'done' => 0,
+			'next' => max($activated + DOROTO_REVIEW_FIRST_DAYS * DAY_IN_SECONDS, time()),
+		];
+		update_option('doroto_review_notice', $state, false);
 	}
-
-	if ($hide_promo == 1) {
-		echo '<div class="notice notice-success is-dismissible"><p>' . esc_html__('Thank you for your review of', 'doubles-rotation-tournament') . ' <b>' . esc_html__('Rotation Tournaments', 'doubles-rotation-tournament') . '</b>!</p></div>';
-		$doroto_settings['hide_promo'] = 2;
-		update_option('doroto_settings', $doroto_settings);
-	}
+	return $state;
 }
-
-add_action('admin_notices', 'doroto_display_dashboard_message');
-
 
 /**
- * action after submitting the promo form
- * @since 1.0.0
+ * The site really uses the plugin: at least one tournament created after the
+ * activation (the example tournaments are created during the activation).
  */
-function doroto_handle_dashboard_form()
+function doroto_review_site_is_active()
 {
 	global $wpdb;
-
-	if (isset($_POST['action']) && $_POST['action'] === 'doroto_update_hide_promo') {
-		$doroto_settings = get_option('doroto_settings');
-		if (isset($_POST['hide_message'])) {
-			$doroto_settings['hide_promo'] = 2;
-		} else {
-			if (isset($_POST['maybe_later'])) {
-				// phpcs:ignore WordPress.DateTime.CurrentTimeTimestamp.PassedToExecute
-				$doroto_settings['promo_next'] = gmdate('Y-m-d H:i:s', strtotime('+3 days'));
-			} else {
-				$doroto_settings['hide_promo'] = 1;
-			}
-		}
-
-		update_option('doroto_settings', $doroto_settings);
-		wp_safe_redirect(sanitize_text_field(wp_unslash(admin_url())));
-		exit;
-	}
+	$settings = get_option('doroto_settings');
+	$activated = isset($settings['activation_date']) ? $settings['activation_date'] : '1970-01-01 00:00:00';
+	// phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
+	$count = intval($wpdb->get_var($wpdb->prepare(
+		"SELECT COUNT(*) FROM {$wpdb->prefix}doroto_tournaments WHERE create_date > %s",
+		gmdate('Y-m-d H:i:s', strtotime($activated . ' UTC') + 3600)
+	)));
+	return $count > 0;
 }
 
-add_action('admin_init', 'doroto_handle_dashboard_form');
+function doroto_review_action_url(string $choice)
+{
+	return wp_nonce_url(
+		admin_url('admin-post.php?action=doroto_review_notice&choice=' . $choice),
+		'doroto_review_notice'
+	);
+}
+
+function doroto_display_dashboard_message()
+{
+	if (!current_user_can('manage_options')) {
+		return;
+	}
+	$state = doroto_review_state();
+	if (!empty($state['done']) || time() < intval($state['next'])) {
+		return;
+	}
+	if (!doroto_review_site_is_active()) {
+		return;
+	}
+
+	echo '<div class="notice notice-info" style="border-left-color:#ffb900;padding:12px 16px;">';
+	echo '<p style="font-size:15px;margin:0 0 6px;"><span style="color:#ffb900;font-size:18px;">&#9733;&#9733;&#9733;&#9733;&#9733;</span> <strong>';
+	echo esc_html__('Do you find Rotation Tournaments useful?', 'doubles-rotation-tournament') . '</strong></p>';
+	echo '<p style="margin:0 0 10px;">' . esc_html__('A short review on WordPress.org helps other clubs find the plugin and keeps its development going. It takes about a minute.', 'doubles-rotation-tournament') . '</p>';
+	echo '<p style="margin:0;">';
+	echo '<a class="button button-primary" href="' . esc_url(doroto_review_action_url('rate')) . '" target="_blank" rel="noopener">' . esc_html__('Rate the plugin', 'doubles-rotation-tournament') . '</a> ';
+	echo '<a class="button" href="' . esc_url(doroto_review_action_url('later')) . '">' . esc_html__('Remind me in 7 days', 'doubles-rotation-tournament') . '</a> ';
+	echo '<a class="button-link" style="margin-left:8px;" href="' . esc_url(doroto_review_action_url('done')) . '">' . esc_html__('I have already rated it', 'doubles-rotation-tournament') . '</a>';
+	echo '<span style="margin-left:16px;">' . esc_html__('A problem or an idea?', 'doubles-rotation-tournament') . ' ';
+	echo '<a href="' . esc_url('https://wordpress.org/support/plugin/doubles-rotation-tournament/') . '" target="_blank" rel="noopener">' . esc_html__('Support forum', 'doubles-rotation-tournament') . '</a></span>';
+	echo '</p></div>';
+}
+add_action('admin_notices', 'doroto_display_dashboard_message');
+
+/**
+ * Buttons of the review notice.
+ * @since 1.6.0
+ */
+function doroto_handle_review_notice()
+{
+	if (!current_user_can('manage_options')) {
+		wp_die(esc_html__('You do not have permission to perform this action.', 'doubles-rotation-tournament'), 403);
+	}
+	check_admin_referer('doroto_review_notice');
+	$choice = isset($_GET['choice']) ? sanitize_key(wp_unslash($_GET['choice'])) : '';
+	$state = doroto_review_state();
+	if ($choice === 'later') {
+		$state['next'] = time() + DOROTO_REVIEW_AGAIN_DAYS * DAY_IN_SECONDS;
+	} elseif ($choice === 'rate' || $choice === 'done') {
+		$state['done'] = 1;
+	}
+	update_option('doroto_review_notice', $state, false);
+
+	if ($choice === 'rate') {
+		// phpcs:ignore WordPress.Security.SafeRedirect.wp_redirect_wp_redirect -- fixed wordpress.org address
+		wp_redirect(DOROTO_REVIEW_URL);
+		exit;
+	}
+	wp_safe_redirect(wp_get_referer() ? wp_get_referer() : admin_url());
+	exit;
+}
+add_action('admin_post_doroto_review_notice', 'doroto_handle_review_notice');
 
 
 /**
