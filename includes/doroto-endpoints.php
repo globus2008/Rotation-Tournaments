@@ -820,6 +820,12 @@ function doroto_get_tournament_detail(WP_REST_Request $data)
 	if (!is_array($tournament['special_group'])) {
 		$tournament['special_group'] = [];
 	}
+	// These are plain ID lists. A removal with array_diff() used to leave gaps
+	// in the keys and json_encode then sent an object ({"0":3,"2":7}), which
+	// the app could not read as a list.
+	foreach (['players', 'payment_done', 'special_group', 'admin_users'] as $field) {
+		$tournament[$field] = is_array($tournament[$field]) ? array_values($tournament[$field]) : [];
+	}
 	foreach ($tournament['statistics'] as &$stat) {
 		$stat['player_id'] = intval($stat['player_id']);
 		$stat['active'] = intval($stat['active']);
@@ -3157,7 +3163,8 @@ function doroto_rest_post_remove_payment(\WP_REST_Request $request)
 		$paid = [];
 
 	if (in_array($pid, $paid, true)) {
-		$paid = array_diff($paid, [$pid]);
+		// array_values: a gap in the keys made json_encode send an object, not a list.
+		$paid = array_values(array_diff($paid, [$pid]));
 		global $wpdb;
 		$new_last_update = round(microtime(true) * 1000);
 

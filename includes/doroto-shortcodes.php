@@ -4141,7 +4141,7 @@ function doroto_remove_payment_manually_form_submit()
 	}
 
 	if (in_array($player_id, $payment_done)) {
-		$payment_done = array_diff($payment_done, array($player_id));
+		$payment_done = array_values(array_diff($payment_done, array($player_id)));
 	}
 
 	$wpdb->update(
