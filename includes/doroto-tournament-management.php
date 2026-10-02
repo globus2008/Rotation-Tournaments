@@ -3521,3 +3521,50 @@ function doroto_games_points(?stdClass $tournament)
 	}
 	return $games_points;
 }
+
+
+/**
+ * Send tournament links that point to the site root to the tournament page.
+ * Without the app installed, a shared link "<site>/?tournament_id=5" ended on
+ * the home page, and the QR code of app versions before 1.1
+ * ("<site>/tournament?id=5") on a 404 page.
+ * @since 1.6.0
+ */
+// Priority 1: before redirect_canonical() rewrites the old link.
+add_action('template_redirect', 'doroto_redirect_tournament_links', 1);
+
+function doroto_redirect_tournament_links()
+{
+	global $wpdb;
+	if (is_admin() || wp_doing_ajax() || (defined('REST_REQUEST') && REST_REQUEST)) {
+		return;
+	}
+
+	$tournament_id = 0;
+	// phpcs:disable WordPress.Security.NonceVerification.Recommended -- read-only redirect
+	if (isset($_GET['tournament_id']) && (is_front_page() || is_home())) {
+		$tournament_id = absint(wp_unslash($_GET['tournament_id']));
+	} elseif (is_404() && isset($_GET['id'])) {
+		$path = wp_parse_url(isset($_SERVER['REQUEST_URI']) ? esc_url_raw(wp_unslash($_SERVER['REQUEST_URI'])) : '', PHP_URL_PATH);
+		if (is_string($path) && preg_match('#/tournament/?$#', $path)) {
+			$tournament_id = absint(wp_unslash($_GET['id']));
+		}
+	}
+	// phpcs:enable WordPress.Security.NonceVerification.Recommended
+	if ($tournament_id <= 0) {
+		return;
+	}
+
+	$main_page_id = intval(get_option('doroto_main_page_id'));
+	if (!$main_page_id || !get_post($main_page_id) || is_page($main_page_id)) {
+		return;
+	}
+	// phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
+	$exists = $wpdb->get_var($wpdb->prepare("SELECT id FROM {$wpdb->prefix}doroto_tournaments WHERE id = %d", $tournament_id));
+	if (!$exists) {
+		return;
+	}
+
+	wp_safe_redirect(add_query_arg('tournament_id', $tournament_id, get_permalink($main_page_id)), 302);
+	exit;
+}

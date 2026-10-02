@@ -6,7 +6,7 @@ if (!defined('ABSPATH')) {
 /**
  * REST API: player registration and log in
  * @since 1.4.7
- * @version 1.5.6(password not generated) 
+ * @version 1.6.0 (respects "Anyone can register", no session for organizer-created accounts)
  */
 
 add_action('rest_api_init', function () {
@@ -35,6 +35,18 @@ function doroto_handle_player_registration(WP_REST_Request $request)
 		return new WP_REST_Response(['error_code' => 'registration_incomplete_data'], 400);
 	}
 
+	// An organizer creating a player from the app sends their own token.
+	// Self-registration (no token) must respect Settings -> General ->
+	// "Anyone can register"; before, it ignored the site owner's choice.
+	$creator_id = doroto_get_current_user_id_from_token();
+	if (!get_option('users_can_register')) {
+		// With registration disabled only an organizer may create accounts.
+		// Before, any signed-in player could create accounts with their token.
+		if ($creator_id === 0 || !doroto_user_is_organizer($creator_id)) {
+			return new WP_REST_Response(['error_code' => 'registration_disabled'], 403);
+		}
+	}
+
 	if (email_exists($email)) {
 		return new WP_REST_Response(['error_code' => 'registration_email_exists'], 409);
 	}
@@ -60,7 +72,6 @@ function doroto_handle_player_registration(WP_REST_Request $request)
 	// organizer's token), remember the creator. Without this meta the new player
 	// never appeared in the organizer's "Add from database" list (users-all),
 	// and could not be re-created either ("e-mail exists").
-	$creator_id = doroto_get_current_user_id_from_token();
 	if ($creator_id > 0 && $creator_id !== intval($user_id)) {
 		update_user_meta($user_id, 'doroto_creator', $creator_id);
 		// The organizer did not choose a password for the player, so let the
@@ -68,6 +79,21 @@ function doroto_handle_player_registration(WP_REST_Request $request)
 		if (empty($params['password'])) {
 			doroto_send_account_created_email($user_id);
 		}
+
+		// No session for the new player: the tokens went to the organizer, who
+		// could then act as the player for 90 days. Apps read only user.ID here.
+		return new WP_REST_Response([
+			'success' => true,
+			'action' => 'user_registered',
+			'user_id' => $user_id,
+			'user' => [
+				'ID' => $user_id,
+				'email' => $email,
+				'username' => $name . ' ' . $surname,
+				'name' => $name,
+				'surname' => $surname
+			]
+		], 200);
 	}
 
 	$accessToken = bin2hex(random_bytes(32));
@@ -2369,6 +2395,11 @@ function doroto_handle_google_login(WP_REST_Request $request)
 	$user = get_user_by('email', $email);
 
 	if (!$user) {
+		// A Google sign-in of an unknown address creates an account, which is a
+		// self-registration: respect "Anyone can register" (since 1.6.0).
+		if (!get_option('users_can_register')) {
+			return new WP_REST_Response(['error_code' => 'registration_disabled'], 403);
+		}
 		$logs[] = 'User not found, creating new user';
 
 		$first_name = sanitize_text_field($payload['given_name'] ?? '');

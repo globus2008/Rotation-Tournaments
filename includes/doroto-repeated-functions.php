@@ -408,6 +408,42 @@ function doroto_is_admin(int $tournament_id)
 
 
 /**
+ * checking if the user organizes at least one tournament or has a web role
+ * (administrator, editor, author), i.e. may create player accounts
+ * @since 1.6.0
+ * @param int $user_id WordPress user ID.
+ * @return bool
+ */
+function doroto_user_is_organizer(int $user_id)
+{
+	global $wpdb;
+	if ($user_id <= 0) {
+		return false;
+	}
+
+	$user = get_userdata($user_id);
+	if (!$user) {
+		return false;
+	}
+	$roles = (array) $user->roles;
+	if (in_array('administrator', $roles) || in_array('editor', $roles) || in_array('author', $roles)) {
+		return true;
+	}
+
+	// admin_users is a serialized array, so compare the unserialized values.
+	// phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
+	$rows = $wpdb->get_col("SELECT admin_users FROM {$wpdb->prefix}doroto_tournaments");
+	foreach ((array) $rows as $row) {
+		$admin_users = maybe_unserialize($row);
+		if (is_array($admin_users) && in_array($user_id, array_map('intval', $admin_users), true)) {
+			return true;
+		}
+	}
+	return false;
+}
+
+
+/**
  * display player name as an output
  * @since 1.0.0
  * @param string $output        HTML output string passed by reference.

@@ -3,7 +3,7 @@ Contributors: globus2008
 Tags: tournament, game, ranking, sport, tennis
 Requires at least: 6.5
 Tested up to: 7.0
-Stable tag: 1.5.8
+Stable tag: 1.6.0
 License: GPLv3 or later
 License URI: [GNU GPL v3.0](https://www.gnu.org/licenses/gpl-3.0.html)
 
@@ -132,6 +132,25 @@ You can use this plugin for tennis, table tennis, squash, padel, badminton, beac
 
 
 == Changelog ==
+= 1.6.0 - 2026/10/02 =
+* Security - front-end forms check tournament admin rights, not only the nonce (any logged-in user could change players, payments or delete a tournament)
+* Security - admin actions sent as links are protected by a nonce (CSRF)
+* Security - guided tour actions need a nonce; regenerating the example tournaments is throttled
+* Security - final doubles and registration toggle check tournament admin rights
+* Security - registration from the app (incl. a new Google account) respects "Anyone can register"
+* Security - an account created by an organizer no longer returns a login session of the new player to the organizer
+* Security - with registration disabled only tournament organizers can create player accounts from the app (before, any signed-in player could)
+* Fix - results entered on the web no longer store last_update = 0, so the Android app refreshes again
+* Fix - every write to a tournament updates last_update
+* Fix - tournament lock: results entered at the same time on several courts are no longer lost
+* Fix - database upgrade adds new columns also on already installed sites
+* Fix - Authorization header is read also on FPM/CGI hosts
+* Fix - REST responses are never served from page caches or CDNs
+* Change - invitation link only joins the tournament (a second click no longer unregisters the player), redirects to the login page and back, and then to the tournament page
+* Change - the app can be signed in on several devices at once (up to 10 per user)
+* Change - tournament links to the home page ("?tournament_id=5") and the old app QR codes ("/tournament?id=5") open the tournament page
+* Add - REST endpoint create-player: the organizer creates a player and adds them to the tournament in one step; the player gets an e-mail to set the password
+* Add - optional mode join/leave for the app join endpoint
 = 1.5.8 - 2026/06/12 =
 * Fix - fixed some errors found in Plugin Check
 

@@ -47,6 +47,7 @@
 - REST payment endpoints: token only, no admin check.
 - `debug` blocks in REST responses. `tournament-save` echoes `getallheaders()`, including the token.
 - `player/register` and `google-login` ignore `users_can_register`. `player/login` bypasses `authenticate` filters.
+  - Fixed in 1.6.0. With registration disabled, `player/register` with a token only works for an organizer (`doroto_user_is_organizer()`: web role or in some tournament's `admin_users`).
 
 ### Data integrity
 - `doroto_save_match_result`: `if ($last_update == 0) round(...)` computes the value but never assigns it. Web results store `last_update = 0` and the app stops refreshing.
