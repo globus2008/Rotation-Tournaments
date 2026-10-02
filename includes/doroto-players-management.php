@@ -475,3 +475,82 @@ function doroto_player_filter_help()
 }
 add_action('wp_ajax_doroto_player_filter_help', 'doroto_player_filter_help');
 add_action('wp_ajax_nopriv_doroto_player_filter_help', 'doroto_player_filter_help');
+
+/**
+ * A deleted account (the app's "Delete profile" or deletion in wp-admin) stayed
+ * an active player of its tournaments: it kept being drawn into matches as
+ * "Unknown player". In every tournament that is not closed the player is
+ * removed when they have not played yet, otherwise suspended so the played
+ * matches and statistics stay. They also leave the organizers, the special
+ * group and the payment list.
+ * @since 1.6.1
+ */
+function doroto_remove_deleted_user_from_tournaments($user_id)
+{
+	global $wpdb;
+	$user_id = intval($user_id);
+	if ($user_id <= 0) {
+		return;
+	}
+	$table = $wpdb->prefix . 'doroto_tournaments';
+	$like = '%' . $wpdb->esc_like('i:' . $user_id . ';') . '%';
+	$ids = $wpdb->get_col($wpdb->prepare(
+		"SELECT id FROM $table WHERE close_tournament = 0 AND (players LIKE %s OR admin_users LIKE %s)",
+		$like,
+		$like
+	));
+
+	foreach ($ids as $tournament_id) {
+		$tournament_id = intval($tournament_id);
+		doroto_with_tournament_lock($tournament_id, function () use ($wpdb, $table, $tournament_id, $user_id) {
+			$tournament = doroto_prepare_tournament($tournament_id);
+			if (!$tournament) {
+				return;
+			}
+			$without = function ($value) use ($user_id) {
+				$list = maybe_unserialize($value);
+				$list = is_array($list) ? $list : [];
+				return array_values(array_filter($list, function ($id) use ($user_id) {
+					return intval($id) !== $user_id;
+				}));
+			};
+			$players = maybe_unserialize($tournament->players);
+			$players = is_array($players) ? $players : [];
+			$statistics = maybe_unserialize($tournament->statistics);
+			$statistics = is_array($statistics) ? $statistics : [];
+
+			$fields = [
+				'special_group' => serialize($without($tournament->special_group)),
+				'payment_done' => serialize($without($tournament->payment_done)),
+			];
+			// Never leave a tournament without its organizer (index 0).
+			$admins = maybe_unserialize($tournament->admin_users);
+			if (is_array($admins) && count($admins) > 1 && intval(reset($admins)) !== $user_id) {
+				$fields['admin_users'] = serialize($without($tournament->admin_users));
+			}
+
+			if (in_array($user_id, array_map('intval', $players), true)) {
+				$statistics_new = doroto_remove_player_from_statistics_table($tournament, $statistics, $user_id);
+				if ($statistics_new !== $statistics) {
+					// Not played yet: remove completely.
+					$fields['players'] = serialize($without($tournament->players));
+					$fields['statistics'] = serialize($statistics_new);
+				} else {
+					// Played already: suspend, keep the history.
+					foreach ($statistics as &$row) {
+						if (intval($row['player_id']) === $user_id) {
+							$row['active'] = 0;
+						}
+					}
+					unset($row);
+					$fields['statistics'] = serialize($statistics);
+				}
+			}
+
+			$fields['last_update'] = doroto_now_ms();
+			$wpdb->update($table, $fields, ['id' => $tournament_id]);
+			doroto_tournament_progress($tournament_id);
+		});
+	}
+}
+add_action('delete_user', 'doroto_remove_deleted_user_from_tournaments');
