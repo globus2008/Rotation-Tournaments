@@ -125,6 +125,13 @@ function doroto_guard_form_submission()
 		doroto_redirect_modify_url(max(0, $tournament_id), "");
 		exit;
 	}
+
+	// The handlers read the tournament, change it and write it back. Hold the
+	// tournament lock until the request ends (they finish with a redirect and
+	// exit), so a form sent on the web cannot overwrite a result saved in the
+	// app at the same moment. MySQL also frees the lock when the connection ends.
+	doroto_lock_tournament($tournament_id);
+	register_shutdown_function('doroto_unlock_tournament', $tournament_id);
 }
 
 foreach (array_keys(doroto_form_permissions()) as $doroto_guarded_action) {

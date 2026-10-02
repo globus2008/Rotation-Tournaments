@@ -1492,6 +1492,9 @@ function doroto_save_final_doubles()
 		}
 
 		$tournament_id = isset($_POST['tournament_id']) ? intval($_POST['tournament_id']) : 0;
+		// Read and write the final four under the tournament lock.
+		doroto_lock_tournament($tournament_id);
+		register_shutdown_function('doroto_unlock_tournament', $tournament_id);
 		$tournament = doroto_prepare_tournament($tournament_id);
 
 		if ($tournament == null) {

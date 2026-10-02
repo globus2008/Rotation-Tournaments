@@ -57,6 +57,7 @@
   - final doubles
 - `dbDelta` only runs when the table is missing (`SHOW TABLES` guard). Columns added in later versions never reach upgraded sites.
 - No locking: concurrent results and draws overwrite whole serialized blobs (lost updates, players stuck in `playing`).
+  - Fixed in 1.6.0: `doroto_with_tournament_lock()`; REST writers are wrapped with `doroto_rest_locked()`, web forms lock in `doroto_guard_form_submission()` / `doroto_require_admin_action()`. Sessions use `doroto_with_user_lock()`. Tests: `c:\scr\doroto	oolspi-tests`.
 - The `tournament-detail` GET calls `doroto_offer_games`, so a GET draws matches and writes to the DB.
 - `doroto_create_statistics_table` compares IDs with strict `===` (int vs string).
 - `getallheaders()`-only token lookup: the Authorization header is often stripped on FPM/CGI hosts.

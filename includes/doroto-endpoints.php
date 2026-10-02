@@ -4,6 +4,31 @@ if (!defined('ABSPATH')) {
 }
 
 /**
+ * Wrap a REST callback so that it runs while holding the tournament lock.
+ * Every endpoint that reads a tournament, changes it and writes it back must
+ * hold the lock for the whole read-modify-write. Before, e.g. correcting an old
+ * result while another court saved its result wrote back a stale matches_list:
+ * the new result and the newly drawn match were lost and the players stayed
+ * "on court" for good, so nothing was drawn any more.
+ * @since 1.6.0
+ */
+function doroto_rest_locked(callable $callback)
+{
+	return function (WP_REST_Request $request) use ($callback) {
+		$tournament_id = intval($request->get_param('tournament_id'));
+		if ($tournament_id <= 0) {
+			$tournament_id = intval($request->get_param('id'));
+		}
+		if ($tournament_id <= 0) {
+			return $callback($request);
+		}
+		return doroto_with_tournament_lock($tournament_id, function () use ($callback, $request) {
+			return $callback($request);
+		});
+	};
+}
+
+/**
  * REST API: player registration and log in
  * @since 1.4.7
  * @version 1.6.0 (respects "Anyone can register", no session for organizer-created accounts)
@@ -292,19 +317,48 @@ function doroto_get_sessions(int $user_id)
 }
 
 /**
+ * Run a callback while holding a per-user lock, with fresh user meta.
+ * All sessions of a user live in one meta array that is read, changed and
+ * written back. Two devices signing in or refreshing at the same moment
+ * overwrote each other's session, so all but one device were signed out.
+ * @since 1.6.0
+ */
+function doroto_with_user_lock(int $user_id, callable $callback)
+{
+	global $wpdb;
+	$name = 'doroto_u_' . $wpdb->prefix . $user_id;
+	$got = intval($wpdb->get_var($wpdb->prepare('SELECT GET_LOCK(%s, %d)', $name, 10))) === 1;
+	// The meta may have been cached earlier in this request (token lookup).
+	wp_cache_delete($user_id, 'user_meta');
+	try {
+		return $callback();
+	} finally {
+		if ($got) {
+			$wpdb->get_var($wpdb->prepare('SELECT RELEASE_LOCK(%s)', $name));
+		}
+	}
+}
+
+/**
  * Store (or update) the session identified by the refresh token.
  */
 function doroto_store_session(int $user_id, string $access_token, int $access_exp, string $refresh_token, int $refresh_exp)
+{
+	doroto_with_user_lock($user_id, function () use ($user_id, $access_token, $access_exp, $refresh_token, $refresh_exp) {
+		doroto_store_session_locked($user_id, $access_token, $access_exp, $refresh_token, $refresh_exp);
+	});
+}
+
+function doroto_store_session_locked(int $user_id, string $access_token, int $access_exp, string $refresh_token, int $refresh_exp)
 {
 	$sessions = doroto_get_sessions($user_id);
 	$key = doroto_session_key($refresh_token);
 	$now = time();
 
-	// Replace the previous access token of this device.
-	if (isset($sessions[$key]['access'])) {
-		delete_user_meta($user_id, 'doroto_access_token', $sessions[$key]['access']);
-	}
-	$created = isset($sessions[$key]['created']) ? intval($sessions[$key]['created']) : $now;
+	// Milliseconds: logins within one second must still have a clear order,
+	// otherwise the session cap dropped a random new device, not the oldest.
+	// (Sessions stored in seconds sort as older, which they are.)
+	$created = isset($sessions[$key]['created']) ? intval($sessions[$key]['created']) : doroto_now_ms();
 	$is_new = !isset($sessions[$key]);
 	$sessions[$key] = [
 		'access' => $access_token,
@@ -322,28 +376,50 @@ function doroto_store_session(int $user_id, string $access_token, int $access_ex
 	});
 	$kept = array_slice($sessions, 0, DOROTO_MAX_SESSIONS, true);
 
-	// Rebuild the lookup rows so they match the kept sessions exactly.
-	delete_user_meta($user_id, 'doroto_access_token');
-	delete_user_meta($user_id, 'doroto_refresh_token');
-	delete_user_meta($user_id, 'doroto_access_token_expiration');
-	delete_user_meta($user_id, 'doroto_refresh_token_expiration');
-	foreach ($kept as $s) {
-		add_user_meta($user_id, 'doroto_access_token', $s['access']);
-	}
 	$refresh_of = get_user_meta($user_id, 'doroto_refresh_tokens_plain', true);
 	$refresh_of = is_array($refresh_of) ? $refresh_of : [];
 	if ($is_new) {
 		$refresh_of[$key] = $refresh_token;
 	}
 	$refresh_of = array_intersect_key($refresh_of, $kept);
-	foreach ($refresh_of as $plain) {
-		add_user_meta($user_id, 'doroto_refresh_token', $plain);
-	}
+
+	// Store the session data first, then sync the lookup rows. Only rows that
+	// changed are touched: deleting all rows and adding them back left a moment
+	// in which the tokens of the user's other devices were not found, and their
+	// requests failed with 401 (or their refresh with "invalid").
 	update_user_meta($user_id, 'doroto_refresh_tokens_plain', $refresh_of);
 	update_user_meta($user_id, 'doroto_sessions', $kept);
+	doroto_sync_meta_rows($user_id, 'doroto_access_token', array_column($kept, 'access'));
+	doroto_sync_meta_rows($user_id, 'doroto_refresh_token', array_values($refresh_of));
+	delete_user_meta($user_id, 'doroto_access_token_expiration');
+	delete_user_meta($user_id, 'doroto_refresh_token_expiration');
+}
+
+/**
+ * Make the multi-row user meta $meta_key hold exactly $values, adding the
+ * new rows before removing the old ones.
+ * @since 1.6.0
+ */
+function doroto_sync_meta_rows(int $user_id, string $meta_key, array $values)
+{
+	$current = array_map('strval', (array) get_user_meta($user_id, $meta_key));
+	$values = array_values(array_unique(array_map('strval', $values)));
+	foreach (array_diff($values, $current) as $value) {
+		add_user_meta($user_id, $meta_key, $value);
+	}
+	foreach (array_diff($current, $values) as $value) {
+		delete_user_meta($user_id, $meta_key, $value);
+	}
 }
 
 function doroto_remove_session(int $user_id, string $refresh_token)
+{
+	doroto_with_user_lock($user_id, function () use ($user_id, $refresh_token) {
+		doroto_remove_session_locked($user_id, $refresh_token);
+	});
+}
+
+function doroto_remove_session_locked(int $user_id, string $refresh_token)
 {
 	$sessions = doroto_get_sessions($user_id);
 	$key = doroto_session_key($refresh_token);
@@ -878,7 +954,7 @@ function doroto_get_tournament_detail(WP_REST_Request $data)
 add_action('rest_api_init', function () {
 	register_rest_route('doroto/v1', '/tournament-save', [
 		'methods' => 'POST',
-		'callback' => 'doroto_tournament_save_via_api',
+		'callback' => doroto_rest_locked('doroto_tournament_save_via_api'),
 		'permission_callback' => '__return_true',
 	]);
 });
@@ -1162,7 +1238,7 @@ function doroto_rest_add_tournament(WP_REST_Request $request)
 add_action('rest_api_init', function () {
 	register_rest_route('doroto/v1', '/tournament-register/(?P<id>\d+)', [
 		'methods' => 'POST',
-		'callback' => 'doroto_rest_register_player',
+		'callback' => doroto_rest_locked('doroto_rest_register_player'),
 		'permission_callback' => function () {
 			return doroto_get_current_user_id_from_token() > 0;
 		},
@@ -1634,7 +1710,7 @@ function doroto_add_player_via_api(WP_REST_Request $request)
 add_action('rest_api_init', function () {
 	register_rest_route('doroto/v1', '/remove-player', [
 		'methods' => 'POST',
-		'callback' => 'doroto_remove_player_via_api',
+		'callback' => doroto_rest_locked('doroto_remove_player_via_api'),
 		'permission_callback' => '__return_true',
 	]);
 });
@@ -1873,7 +1949,7 @@ function doroto_rest_update_match_result(WP_REST_Request $request)
 add_action('rest_api_init', function () {
 	register_rest_route('doroto/v1', '/round-end-action', [
 		'methods' => 'POST',
-		'callback' => 'doroto_rest_round_end_action',
+		'callback' => doroto_rest_locked('doroto_rest_round_end_action'),
 		'permission_callback' => '__return_true',
 		'args' => [
 			'tournament_id' => [
@@ -1951,7 +2027,7 @@ function doroto_rest_round_end_action(WP_REST_Request $req)
 add_action('rest_api_init', function () {
 	register_rest_route('doroto/v1', '/tournament-toggle', [
 		'methods' => ['POST', 'OPTIONS'],
-		'callback' => 'doroto_rest_toggle',
+		'callback' => doroto_rest_locked('doroto_rest_toggle'),
 		'permission_callback' => '__return_true',
 	]);
 });
@@ -2069,7 +2145,7 @@ function doroto_rest_toggle(WP_REST_Request $req)
 add_action('rest_api_init', function () {
 	register_rest_route('doroto/v1', '/tournament-add-admin', [
 		'methods' => ['POST', 'OPTIONS'],
-		'callback' => 'doroto_rest_add_admin',
+		'callback' => doroto_rest_locked('doroto_rest_add_admin'),
 		'permission_callback' => function (WP_REST_Request $request) {
 			if ($request->get_method() === 'OPTIONS') {
 				return true;
@@ -2582,7 +2658,7 @@ add_action('rest_api_init', function () {
 	]);
 	register_rest_route('doroto/v1', '/tournament-disable-player', [
 		'methods' => 'POST',
-		'callback' => 'doroto_rest_post_tournament_disable_player',
+		'callback' => doroto_rest_locked('doroto_rest_post_tournament_disable_player'),
 		'permission_callback' => function ($req) {
 			return doroto_get_current_user_id_from_token() > 0;
 		},
@@ -2744,7 +2820,7 @@ add_action('rest_api_init', function () {
 	]);
 	register_rest_route('doroto/v1', '/tournament-restore-player', [
 		'methods' => 'POST',
-		'callback' => 'doroto_rest_post_tournament_restore_player',
+		'callback' => doroto_rest_locked('doroto_rest_post_tournament_restore_player'),
 		'permission_callback' => function ($req) {
 			return doroto_get_current_user_id_from_token() > 0;
 		},
@@ -2884,7 +2960,7 @@ add_action('rest_api_init', function () {
 	]);
 	register_rest_route('doroto/v1', '/tournament-enter-payment', [
 		'methods' => 'POST',
-		'callback' => 'doroto_rest_post_enter_payment',
+		'callback' => doroto_rest_locked('doroto_rest_post_enter_payment'),
 		'permission_callback' => function ($req) {
 			return doroto_get_current_user_id_from_token() > 0;
 		},
@@ -3007,7 +3083,7 @@ add_action('rest_api_init', function () {
 	]);
 	register_rest_route('doroto/v1', '/tournament-remove-payment', [
 		'methods' => 'POST',
-		'callback' => 'doroto_rest_post_remove_payment',
+		'callback' => doroto_rest_locked('doroto_rest_post_remove_payment'),
 		'permission_callback' => function ($req) {
 			return doroto_get_current_user_id_from_token() > 0;
 		},
@@ -3140,7 +3216,7 @@ function doroto_check_update(WP_REST_Request $data)
 add_action('rest_api_init', function () {
 	register_rest_route('doroto/v1', '/change-match-result', array(
 		'methods' => 'POST',
-		'callback' => 'doroto_api_change_match_result',
+		'callback' => doroto_rest_locked('doroto_api_change_match_result'),
 		'permission_callback' => '__return_true',
 	));
 });
@@ -3375,7 +3451,7 @@ add_action('rest_api_init', function () {
 
 	register_rest_route('doroto/v1', '/add-to-special-group', [
 		'methods' => 'POST',
-		'callback' => 'doroto_rest_post_add_to_special_group',
+		'callback' => doroto_rest_locked('doroto_rest_post_add_to_special_group'),
 		'permission_callback' => function () {
 			return doroto_get_current_user_id_from_token() > 0;
 		},
@@ -3520,7 +3596,7 @@ add_action('rest_api_init', function () {
 
 	register_rest_route('doroto/v1', '/remove-from-special-group', [
 		'methods' => 'POST',
-		'callback' => 'doroto_rest_post_remove_from_special_group',
+		'callback' => doroto_rest_locked('doroto_rest_post_remove_from_special_group'),
 		'permission_callback' => function () {
 			return doroto_get_current_user_id_from_token() > 0;
 		},
@@ -3726,7 +3802,7 @@ add_action('rest_api_init', function () {
 	// Endpoint pro odebrání admina
 	register_rest_route('doroto/v1', '/tournament-remove-admin', [
 		'methods' => ['POST', 'OPTIONS'],
-		'callback' => 'doroto_rest_remove_admin',
+		'callback' => doroto_rest_locked('doroto_rest_remove_admin'),
 		'permission_callback' => 'doroto_super_admin_check',
 	]);
 });

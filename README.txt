@@ -143,6 +143,8 @@ You can use this plugin for tennis, table tennis, squash, padel, badminton, beac
 * Fix - results entered on the web no longer store last_update = 0, so the Android app refreshes again
 * Fix - every write to a tournament updates last_update
 * Fix - tournament lock: results entered at the same time on several courts are no longer lost
+* Fix - every change of a running tournament (correcting a result, suspending or removing a player, settings, payments, special group, web forms) runs under the tournament lock; correcting a result while another court saved its result could stall the whole tournament
+* Fix - several devices signing in or refreshing their session at the same moment no longer sign each other out
 * Fix - database upgrade adds new columns also on already installed sites
 * Fix - Authorization header is read also on FPM/CGI hosts
 * Fix - REST responses are never served from page caches or CDNs

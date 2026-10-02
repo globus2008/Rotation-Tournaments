@@ -694,4 +694,8 @@ function doroto_require_admin_action(string $action, int $tournament_id)
 		doroto_redirect_modify_url($tournament_id, "");
 		exit;
 	}
+	// The action changes the tournament; keep it locked until the request ends
+	// so it cannot overwrite a result saved at the same moment.
+	doroto_lock_tournament($tournament_id);
+	register_shutdown_function('doroto_unlock_tournament', $tournament_id);
 }
