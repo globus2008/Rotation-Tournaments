@@ -148,6 +148,7 @@ You can use this plugin for tennis, table tennis, squash, padel, badminton, beac
 * Fix - REST responses are never served from page caches or CDNs
 * Change - invitation link only joins the tournament (a second click no longer unregisters the player), redirects to the login page and back, and then to the tournament page
 * Change - the app can be signed in on several devices at once (up to 10 per user)
+* Change - the default name of a new tournament uses the site time zone, not UTC
 * Change - tournament links to the home page ("?tournament_id=5") and the old app QR codes ("/tournament?id=5") open the tournament page
 * Add - REST endpoint create-player: the organizer creates a player and adds them to the tournament in one step; the player gets an e-mail to set the password
 * Add - optional mode join/leave for the app join endpoint

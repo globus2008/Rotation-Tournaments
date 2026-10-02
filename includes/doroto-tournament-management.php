@@ -1015,7 +1015,8 @@ function doroto_insert_tournament(int $tournament_type)
 	$allowed_html = doroto_allowed_html();
 	$tournament_short_name = sanitize_text_field($options[$tournament_type]);
 	$invitation = wp_kses(__('I invite you to', 'doubles-rotation-tournament') . ' <b>' . ' ' . $tournament_short_name . ' ' . __('Rotation Tournament!', 'doubles-rotation-tournament') . '</b>', $allowed_html);
-	$name = sanitize_text_field($tournament_short_name . ' ' . gmdate('d-H-i'));
+	// Site time zone: the UTC time in the name confused organizers (12:56 showed as 10-56).
+	$name = sanitize_text_field($tournament_short_name . ' ' . wp_date('d-H-i'));
 
 	$last_tournament = $wpdb->get_row($wpdb->prepare(
 		"SELECT * FROM $table_name WHERE admin_users LIKE %s ORDER BY id DESC LIMIT 1",
