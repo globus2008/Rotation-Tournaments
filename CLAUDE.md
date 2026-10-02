@@ -63,9 +63,12 @@
 - `getallheaders()`-only token lookup: the Authorization header is often stripped on FPM/CGI hosts.
 
 ### Players and invitations
-- The invitation link `admin-ajax.php?action=doroto_register_player` is a **toggle**: a second click unregisters the player.
-  - Logged-out users get no `redirect_to` back to the link.
-  - The redirect goes to `HTTP_REFERER`.
+- Fixed in 1.6.0 (tested 2026-10-02 on localhost): the invitation link `admin-ajax.php?action=doroto_register_player`
+  only joins. Logged-out users go to the login page and back to the link, then to the tournament page.
+- Fixed in 1.6.1: a deleted account (`delete_user`) leaves its open tournaments. It is removed if it has not played,
+  otherwise suspended.
+- The front-end settings form (`doroto_tournament_parameters`) is shown to plain players too. Saving is refused
+  (`doroto_require_admin_action`), but showing it is confusing.
 - `users-all` with the default `only_admin_players = 1` lists only players from tournaments where the organizer **played**.
   - App-created users don't get `doroto_creator`, so they never show up.
   - A WP administrator sees everyone, which is why the owner never noticed.
