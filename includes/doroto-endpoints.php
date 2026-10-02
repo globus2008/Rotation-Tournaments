@@ -1066,6 +1066,13 @@ function doroto_tournament_save_via_api(WP_REST_Request $request)
 		'longitude' => 'floatval',
 	];
 
+	// An unknown type was stored as is (e.g. 11) and the tournament then
+	// silently played as singles.
+	$requested_type = $request->get_param('tournament_type');
+	if ($requested_type !== null && !array_key_exists(intval($requested_type), doroto_tournament_types())) {
+		return new WP_REST_Response(['error_code' => 'invalid_tournament_type'], 400);
+	}
+
 	foreach ($allowed_fields as $key => $sanitizer) {
 		if ($request->get_param($key) !== null) {
 			$fields[$key] = is_callable($sanitizer)
