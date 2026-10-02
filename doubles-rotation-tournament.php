@@ -4,7 +4,7 @@
  * Plugin Name: Rotation Tournaments
  * Plugin URI: https://doroto.ltcchrast.cz/
  * Description: Organize Rotation Tournaments where each player competes against every other player without eliminations. Suitable for sports like tennis, table tennis, squash, padel, and beach volleyball.
- * Version: 1.6.0
+ * Version: 1.6.1
  * Author: globus2008
  * Author URI: https://doroto.ltcchrast.cz/
  * License: GPL-3.0-or-later
@@ -28,7 +28,7 @@ if (!defined('ABSPATH'))
 
 // GLOBALS AND CONSTANTS
 if (!defined('doroto_VERSION')) {
-	define('doroto_VERSION', '1.6.0');
+	define('doroto_VERSION', '1.6.1');
 }
 if (!defined('doroto_PLUGIN_NAME')) {
 	define('doroto_PLUGIN_NAME', 'doubles-rotation-tournament');

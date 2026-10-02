@@ -3,7 +3,7 @@ Contributors: globus2008
 Tags: tournament, game, ranking, sport, tennis
 Requires at least: 6.5
 Tested up to: 7.0
-Stable tag: 1.6.0
+Stable tag: 1.6.1
 License: GPLv3 or later
 License URI: [GNU GPL v3.0](https://www.gnu.org/licenses/gpl-3.0.html)
 
@@ -132,6 +132,10 @@ You can use this plugin for tennis, table tennis, squash, padel, badminton, beac
 
 
 == Changelog ==
+= 1.6.1 - 2026/10/02 =
+* Fix - removing a payment no longer turns the payment list into a JSON object (the Android app could crash on the statistics page)
+* Fix - a deleted account leaves its open tournaments: removed when it has not played yet, otherwise suspended; it also leaves the organizers, special group and payments (it was drawn into matches as "Unknown player")
+* Fix - saving the tournament settings rejects an unknown tournament type
 = 1.6.0 - 2026/10/02 =
 * Security - front-end forms check tournament admin rights, not only the nonce (any logged-in user could change players, payments or delete a tournament)
 * Security - admin actions sent as links are protected by a nonce (CSRF)
