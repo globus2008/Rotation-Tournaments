@@ -3572,3 +3572,92 @@ function doroto_redirect_tournament_links()
 	wp_safe_redirect(add_query_arg('tournament_id', $tournament_id, get_permalink($main_page_id)), 302);
 	exit;
 }
+
+/**
+ * Host, port and path of a site URL, for comparing addresses written with or
+ * without "www", a trailing slash or a different scheme.
+ * @since 1.6.1
+ */
+function doroto_site_key(string $url)
+{
+	$parts = wp_parse_url(trim($url));
+	if (!$parts || empty($parts['host'])) {
+		return '';
+	}
+	$host = strtolower(preg_replace('/^www\./i', '', $parts['host']));
+	$port = isset($parts['port']) ? ':' . intval($parts['port']) : '';
+	$path = isset($parts['path']) ? rtrim($parts['path'], '/') : '';
+	return $host . $port . $path;
+}
+
+/**
+ * Tournament links of the Android app point to the central site
+ * (doroto.ltcchrast.cz/?tournament_id=5&doroto_site=<club>): Android opens
+ * only that verified domain in the app, the club sites would open in the
+ * browser. Without the app, the browser lands here and is sent on to the
+ * club. Before, the central site showed its own tournament with the same
+ * number.
+ * Only sites from the site directory (doroto-websites plugin) are redirected
+ * automatically; any other address gets a page with a link, so the site
+ * can't be used as an open redirect.
+ * @since 1.6.1
+ */
+function doroto_forward_foreign_tournament_links()
+{
+	global $wpdb;
+	// phpcs:disable WordPress.Security.NonceVerification.Recommended -- read-only redirect
+	if (is_admin() || wp_doing_ajax() || empty($_GET['doroto_site']) || empty($_GET['tournament_id'])) {
+		return;
+	}
+	$site = esc_url_raw(trim(wp_unslash($_GET['doroto_site'])));
+	$tournament_id = absint(wp_unslash($_GET['tournament_id']));
+	// phpcs:enable WordPress.Security.NonceVerification.Recommended
+	$scheme = wp_parse_url($site, PHP_URL_SCHEME);
+	if ($tournament_id <= 0 || !in_array($scheme, ['http', 'https'], true)) {
+		return;
+	}
+	$key = doroto_site_key($site);
+	if ($key === '' || $key === doroto_site_key(home_url('/'))) {
+		return; // our own tournament: the normal handling applies
+	}
+
+	$target_base = '';
+	$directory = $wpdb->prefix . 'doroto_websites';
+	// phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
+	if ($wpdb->get_var($wpdb->prepare('SHOW TABLES LIKE %s', $directory)) === $directory) {
+		// phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching, WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+		$rows = $wpdb->get_results("SELECT website, doroto_url FROM `$directory`");
+		foreach ((array) $rows as $row) {
+			if (doroto_site_key($row->website) === $key) {
+				// The tournament page of the club when known, else its home page
+				// (plugin 1.6.0+ forwards "/?tournament_id=" to the tournament page).
+				$target_base = !empty($row->doroto_url) ? $row->doroto_url : $row->website;
+				break;
+			}
+		}
+	}
+	$target = add_query_arg('tournament_id', $tournament_id, $target_base !== '' ? $target_base : trailingslashit($site));
+
+	if ($target_base !== '') {
+		// phpcs:ignore WordPress.Security.SafeRedirect.wp_redirect_wp_redirect -- target comes from the site directory
+		wp_redirect($target, 302);
+		exit;
+	}
+
+	status_header(200);
+	nocache_headers();
+	$host = wp_parse_url($site, PHP_URL_HOST);
+	echo '<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex">';
+	echo '<title>' . esc_html__('Rotation tournament', 'doubles-rotation-tournament') . '</title></head>';
+	echo '<body style="font-family:sans-serif;max-width:32em;margin:3em auto;padding:0 1em;">';
+	echo '<p>' . esc_html(sprintf(
+		/* translators: 1: tournament number, 2: website address */
+		__('Tournament no. %1$d is run on the website %2$s.', 'doubles-rotation-tournament'),
+		$tournament_id,
+		$host
+	)) . '</p>';
+	echo '<p><a href="' . esc_url($target) . '" rel="nofollow noopener">' . esc_html__('Continue to the tournament', 'doubles-rotation-tournament') . '</a></p>';
+	echo '</body></html>';
+	exit;
+}
+add_action('template_redirect', 'doroto_forward_foreign_tournament_links', 0);

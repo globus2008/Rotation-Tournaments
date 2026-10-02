@@ -3534,7 +3534,7 @@ function doroto_add_link_to_tournament($atts = [], $content = null, $tag = '')
 	if (!$open_registration && !doroto_check_if_presentation_on()) {
 		$output .= '</div></div>';
 	}
-	$output .= doroto_app_link_box();
+	$output .= doroto_app_link_box(intval($tournament_id));
 	return $output;
 }
 add_shortcode('doroto_tournament_log_link', 'doroto_add_link_to_tournament');
@@ -3547,7 +3547,7 @@ add_shortcode('doroto_tournament_log_link', 'doroto_add_link_to_tournament');
  * (Mobile app -> show_app_link).
  * @since 1.6.0
  */
-function doroto_app_link_box()
+function doroto_app_link_box(int $tournament_id = 0)
 {
 	if (intval(doroto_read_settings('show_app_link', 1)) !== 1) {
 		return '';
@@ -3557,6 +3557,18 @@ function doroto_app_link_box()
 	$output .= '&#128241; ' . esc_html__('Follow the tournament and enter results on your phone:', 'doubles-rotation-tournament') . ' ';
 	$output .= '<a href="' . esc_url($store_url) . '" target="_blank" rel="noopener">';
 	$output .= esc_html__('Rotation Tournaments app for Android', 'doubles-rotation-tournament') . '</a>';
+	if ($tournament_id > 0) {
+		// Android opens only links of the verified central domain in the app, so
+		// a link to this club site always stayed in the browser. An intent link
+		// opens this tournament in the app, or Google Play when it is missing.
+		// @since 1.6.1
+		$app_link = add_query_arg(
+			['tournament_id' => $tournament_id, 'doroto_site' => rawurlencode(untrailingslashit(home_url()))],
+			'doroto.ltcchrast.cz/'
+		);
+		$intent = 'intent://' . $app_link . '#Intent;scheme=https;package=cz.doroto.app;S.browser_fallback_url=' . rawurlencode($store_url) . ';end';
+		$output .= ' &middot; <a href="' . esc_attr($intent) . '" rel="nofollow"><b>' . esc_html__('Open in the app', 'doubles-rotation-tournament') . '</b></a>';
+	}
 	$output .= '</div>';
 	return $output;
 }

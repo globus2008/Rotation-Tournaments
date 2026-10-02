@@ -136,6 +136,8 @@ You can use this plugin for tennis, table tennis, squash, padel, badminton, beac
 * Fix - removing a payment no longer turns the payment list into a JSON object (the Android app could crash on the statistics page)
 * Fix - a deleted account leaves its open tournaments: removed when it has not played yet, otherwise suspended; it also leaves the organizers, special group and payments (it was drawn into matches as "Unknown player")
 * Fix - saving the tournament settings rejects an unknown tournament type
+* Add - the tournament page has an "Open in the app" link: Android opens the tournament in the app, or Google Play when it is missing
+* Add - app tournament links on the central site (?tournament_id=5&doroto_site=<club>) are forwarded to the club's tournament page when the app is not installed (sites from the site directory; other sites get a page with a link)
 = 1.6.0 - 2026/10/02 =
 * Security - front-end forms check tournament admin rights, not only the nonce (any logged-in user could change players, payments or delete a tournament)
 * Security - admin actions sent as links are protected by a nonce (CSRF)

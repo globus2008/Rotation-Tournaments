@@ -87,3 +87,13 @@
 - `website_visible` defaults to 0.
 - The app notice option `doroto_show_app_notice` is never set to `'true'`.
 - See `c:\scr\doroto-websites\CLAUDE.md`.
+
+### Links into the Android app (1.6.1)
+- Android App Links work only for the verified domain doroto.ltcchrast.cz (`/.well-known/assetlinks.json` there).
+  A club website can't be verified for the app, so its links always opened in the browser.
+- The app shares `https://doroto.ltcchrast.cz/?tournament_id=5&doroto_site=<club>`.
+  With the app installed, Android opens it in the app.
+  Without it, `doroto_forward_foreign_tournament_links()` on the central site forwards the browser to the club.
+  It forwards only to sites in the `doroto_websites` table; any other site gets a page with a link (no open redirect).
+- The tournament page shows "Open in the app" (`doroto_app_link_box()`), an Android `intent://` link with a Google Play fallback.
+- The central site must run 1.6.1, otherwise shared links show the central site's own tournament with that number.
