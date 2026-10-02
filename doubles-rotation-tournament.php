@@ -10,7 +10,6 @@
  * License: GPL-3.0-or-later
  * License URI: http://www.gnu.org/licenses/gpl-3.0.txt
  * Text Domain: doubles-rotation-tournament
- * Domain Path: /languages
  * Requires at least: 6.5
  * Tested up to: 7.0
  * Requires PHP: 8.0
@@ -171,12 +170,6 @@ register_activation_hook(__FILE__, 'doroto_plugin_activation');
 register_activation_hook(__FILE__, 'doroto_create_privacy_policy_page');
 register_activation_hook(__FILE__, 'doroto_create_terms_of_service_page');
 
-
-function doroto_load_textdomain()
-{
-	load_plugin_textdomain('doubles-rotation-tournament', false, dirname(plugin_basename(__FILE__)) . '/languages/');
-}
-add_action('init', 'doroto_load_textdomain');
 
 // Global variable declaration
 global $doroto_output_form;
