@@ -207,3 +207,43 @@
 #doroto-floating-help-icon.active #doroto-help-dropdown {
   display: block;
 }
+
+/* "Edit result" button next to the match ID in the table of played matches
+   (organizers only) */
+.doroto-edit-result {
+  display: inline-block;
+  margin-left: 4px;
+  padding: 0 6px;
+  border-radius: 4px;
+  background: #f5a623;
+  color: #fff !important;
+  text-decoration: none !important;
+  line-height: 1.6;
+}
+
+.doroto-edit-result:hover,
+.doroto-edit-result:focus {
+  background: #d4881a;
+}
+
+/* The change form flashes after an "Edit result" link was used */
+#doroto-change-match-result {
+  transition: box-shadow 0.4s ease;
+}
+
+#doroto-change-match-result.doroto-highlight {
+  box-shadow: 0 0 0 3px #f5a623;
+}
+
+/* Phones: the cells of the change form go under each other, otherwise the
+   result and the button were off screen */
+@media (max-width: 600px) {
+  #doroto-change-match-result td {
+    display: block;
+  }
+
+  #doroto-change-match-result .doroto-select-width {
+    width: 100%;
+    max-width: 100%;
+  }
+}

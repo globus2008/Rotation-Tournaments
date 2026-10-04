@@ -89,6 +89,16 @@
 - `skip-matches` (organizer): hides several open matches, then draws once (one by one, each draw had only
   the players of one match free).
 
+## Changing results on the web
+- Every tournament organizer (`doroto_is_admin() > 0`: `admin_users` or a web role) may change results;
+  only the founder (`admin_users[0]`) manages the organizers. When results may change:
+  `doroto_match_results_editable()`.
+- The change form `[doroto_change_game]` sits in the "Played Matches ..." panel above the table. Since 1.6.2
+  organizers get a ✎ button next to every match ID (`doroto_display_games`), which fills the form
+  (`doroto-frontend-scripts.js`). The form is printed inside a `<table>`, so browsers move the `<form>` out:
+  reach its fields through `form.elements`, not `querySelector`.
+- Front-end script and style use `doroto_VERSION` as their version (cache busting).
+
 ## Directory / reach (deferred by the owner)
 - `website-info` feeds the directory plugin `doroto-websites`.
 - The site never registers itself.

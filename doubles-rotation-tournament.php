@@ -62,7 +62,8 @@ add_action('send_headers', 'doroto_no_cache_headers');
 
 function doroto_frontend_styles()
 {
-	wp_register_style('doroto-frontend-styles', plugins_url('includes/doroto-frontend-styles.css', __FILE__));
+	// The plugin version busts the browser cache after an update.
+	wp_register_style('doroto-frontend-styles', plugins_url('includes/doroto-frontend-styles.css', __FILE__), [], doroto_VERSION);
 	wp_enqueue_style('doroto-frontend-styles');
 }
 add_action('wp_enqueue_scripts', 'doroto_frontend_styles');
@@ -97,7 +98,7 @@ function doroto_enqueue_frontend_scripts()
 		'doroto-frontend-scripts',
 		plugins_url('includes/doroto-frontend-scripts.js', __FILE__),
 		['leaflet-js'],
-		'1.0.0',
+		doroto_VERSION,
 		true
 	);
 }

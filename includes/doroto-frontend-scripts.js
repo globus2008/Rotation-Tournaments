@@ -75,6 +75,43 @@ jQuery(document).ready(function () {
   });
 });
 
+// 4. "Edit result" links in the table of played matches (organizers only):
+//    select the match and its current result in the change form and scroll to it.
+//    The form is printed inside a <table>, so the browser moves the <form>
+//    element out of it; the fields are reached through form.elements.
+document.addEventListener("DOMContentLoaded", function () {
+  const links = document.querySelectorAll(".doroto-edit-result");
+  if (!links.length) return;
+  const form = document.getElementById("doroto_change_game_result_form");
+  if (!form || !form.elements["match_to_change"]) {
+    // No change form on this page: the links would lead nowhere.
+    links.forEach(function (link) {
+      link.style.display = "none";
+    });
+    return;
+  }
+  const target = document.getElementById("doroto-change-match-result") || form;
+
+  links.forEach(function (link) {
+    link.addEventListener("click", function (event) {
+      event.preventDefault();
+      const match = form.elements["match_to_change"];
+      const result1 = form.elements["game_result_1"];
+      const result2 = form.elements["game_result_2"];
+      // getAttribute: dataset keeps "result-1" (a dash before a digit is not camel-cased).
+      match.value = link.getAttribute("data-match");
+      if (result1) result1.value = link.getAttribute("data-result-1");
+      if (result2) result2.value = link.getAttribute("data-result-2");
+      target.scrollIntoView({ behavior: "smooth", block: "center" });
+      target.classList.add("doroto-highlight");
+      setTimeout(function () {
+        target.classList.remove("doroto-highlight");
+      }, 2000);
+      if (result1) result1.focus({ preventScroll: true });
+    });
+  });
+});
+
 window.dorotoCopyCoordinates = function () {
   const input = document.getElementById("doroto-coordinates-input");
   if (!input) return;

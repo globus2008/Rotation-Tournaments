@@ -306,17 +306,7 @@ function doroto_change_game_shortcode()
 		return $output;
 	}
 
-	if ($tournament->close_date === '9999-09-09 09:09:09') {
-		$timestamp = PHP_INT_MAX;
-	} else {
-		$closeDate = DateTime::createFromFormat('Y-m-d H:i:s', $tournament->close_date);
-		$timestamp = $closeDate ? $closeDate->getTimestamp() : 0;
-	}
-
-	if (
-		$tournament->open_registration == '1' || ($tournament->close_tournament == '1' && $tournament->play_final_match == '0') ||
-		($tournament->close_tournament == '1' && $tournament->play_final_match == '1' && ($tournament->final_result == '' || $timestamp + 24 * 3600 < time()))
-	) {
+	if (!doroto_match_results_editable($tournament)) {
 		$output = "<div id='doroto-change-match-result'>" . esc_html__("The option to modify the match results is closed.", "doubles-rotation-tournament") . "</div>";
 		return $output;
 	}
@@ -2240,9 +2230,31 @@ function doroto_remove_player_from_tournament(int $tournament_id, int $player_id
 
 
 /**
+ * Whether the results of finished matches may still be changed: not while the
+ * registration is open, not after a tournament without a final was closed and,
+ * with a final, only after the final result and at most 24 hours after closing.
+ * @since 1.6.2
+ */
+function doroto_match_results_editable(stdClass $tournament)
+{
+	if ($tournament->close_date === '9999-09-09 09:09:09') {
+		$timestamp = PHP_INT_MAX;
+	} else {
+		$closeDate = DateTime::createFromFormat('Y-m-d H:i:s', (string) $tournament->close_date);
+		$timestamp = $closeDate ? $closeDate->getTimestamp() : 0;
+	}
+
+	return !(
+		$tournament->open_registration == '1' || ($tournament->close_tournament == '1' && $tournament->play_final_match == '0') ||
+		($tournament->close_tournament == '1' && $tournament->play_final_match == '1' && ($tournament->final_result == '' || $timestamp + 24 * 3600 < time()))
+	);
+}
+
+
+/**
  * display matches of the tournament
  * @since 1.0.0
- * @version 1.2.0
+ * @version 1.6.2 (organizers get an "Edit result" link in every row)
  */
 function doroto_display_games_func($atts = [])
 {
@@ -2313,13 +2325,21 @@ function doroto_display_games_func($atts = [])
 
 				$output .= "</b></div></p><div class='doroto-table-responsive' id='doroto-played-matches-table'>";
 
+				// Organizers get an "Edit result" button in every row. The change form
+				// ([doroto_change_game]) was easy to miss above the table; the link
+				// selects the match in it (doroto-frontend-scripts.js).
+				$edit_links = doroto_is_admin($tournament_id) > 0
+					&& doroto_match_results_editable($tournament)
+					&& !doroto_check_if_presentation_on();
+
 				$output .= "<table class='doroto-table'>";
 				$output .= "<tr class='doroto-left-aligned'><th>" . esc_html__("ID", "doubles-rotation-tournament") . "</th><th>" . esc_html__("L1", "doubles-rotation-tournament") . "</th><th>" . esc_html__("R1", "doubles-rotation-tournament") . "</th>";
 				if (doroto_check_if_doubles($tournament)) {
-					$output .= "<th>" . esc_html__("L2", "doubles-rotation-tournament") . "</th><th>" . esc_html__("R2", "doubles-rotation-tournament") . "</th><th>" . esc_html__("L1+R1", "doubles-rotation-tournament") . "</th><th>" . esc_html__("L2+R2", "doubles-rotation-tournament") . "</th></tr>";
+					$output .= "<th>" . esc_html__("L2", "doubles-rotation-tournament") . "</th><th>" . esc_html__("R2", "doubles-rotation-tournament") . "</th><th>" . esc_html__("L1+R1", "doubles-rotation-tournament") . "</th><th>" . esc_html__("L2+R2", "doubles-rotation-tournament") . "</th>";
 				} else {
-					$output .= "<th>" . esc_html__("Result", "doubles-rotation-tournament") . "</th></tr>";
+					$output .= "<th>" . esc_html__("Result", "doubles-rotation-tournament") . "</th>";
 				}
+				$output .= "</tr>";
 
 				$special_group = maybe_unserialize($tournament->special_group);
 				if (!is_array($special_group)) {
@@ -2350,7 +2370,17 @@ function doroto_display_games_func($atts = [])
 						continue;
 					}
 					$output .= "<tr>";
-					$output .= "<td>" . esc_html($game['match_number']) . "</td>";
+					$output .= "<td class='doroto-no-wrap'>" . esc_html($game['match_number']);
+					// In the first column: a last column was off screen in the wide table.
+					if ($edit_links) {
+						$output .= " <a href='#doroto-change-match-result' class='doroto-edit-result'"
+							. " data-match='" . esc_attr(intval($game['match_number'])) . "'"
+							. " data-result-1='" . esc_attr(intval($game['result_1'])) . "'"
+							. " data-result-2='" . esc_attr(intval($game['result_2'])) . "'"
+							. " title='" . esc_attr__("Edit result", "doubles-rotation-tournament") . "'"
+							. " aria-label='" . esc_attr__("Edit result", "doubles-rotation-tournament") . "'>&#9998;</a>";
+					}
+					$output .= "</td>";
 
 					doroto_output_player_data($output, $game, 'player_1', $special_group, $whole_names, $doroto_filter_results); //save variables (sanitized and escaped)
 					doroto_output_player_data($output, $game, 'player_2', $special_group, $whole_names, $doroto_filter_results);
