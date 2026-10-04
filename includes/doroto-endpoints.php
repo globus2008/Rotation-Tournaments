@@ -138,7 +138,7 @@ function doroto_handle_player_registration(WP_REST_Request $request)
 		'user' => [
 			'ID' => $user_id,
 			'email' => $email,
-			'username' => $name . ' ' . $surname, // Můžeme použít display_name
+			'username' => $name . ' ' . $surname, // display_name could be used too
 			'name' => $name,
 			'surname' => $surname
 		]
@@ -174,15 +174,15 @@ function doroto_handle_login(WP_REST_Request $request)
 		return new WP_REST_Response(['error_code' => 'login_invalid_credentials'], 401);
 	}
 
-	// 1. Přístupový token (krátká platnost)
+	// 1. Access token (short lifetime)
 	$accessToken = bin2hex(random_bytes(32));
-	$accessTokenExpiration = time() + 86400; // Stále 24 hodin
+	$accessTokenExpiration = time() + 86400; // 24 hours
 
-	// 2. Obnovovací token (dlouhá platnost)
+	// 2. Refresh token (long lifetime)
 	$refreshToken = bin2hex(random_bytes(64));
-	$refreshTokenExpiration = time() + (90 * 24 * 3600); // 90 dní
+	$refreshTokenExpiration = time() + (90 * 24 * 3600); // 90 days
 
-	// Uložení obou tokenů do databáze
+	// Store both tokens in the database
 	doroto_store_session($user->ID, $accessToken, $accessTokenExpiration, $refreshToken, $refreshTokenExpiration);
 
 	return new WP_REST_Response([
@@ -202,18 +202,18 @@ function doroto_handle_login(WP_REST_Request $request)
 }
 
 /**
- * Registruje REST API endpoint pro obnovení tokenu.
+ * Registers the REST endpoint that refreshes the token.
  */
 add_action('rest_api_init', function () {
 	register_rest_route('doroto/v1', '/refresh-token', [
 		'methods' => 'POST',
 		'callback' => 'doroto_handle_refresh_token',
-		'permission_callback' => '__return_true', // Oprávnění se kontroluje uvnitř funkce
+		'permission_callback' => '__return_true', // Permission is checked inside the callback
 	]);
 });
 
 /**
- * Zpracovává požadavek na obnovení tokenu.
+ * Handles a token refresh request.
  *
  * @param WP_REST_Request $request
  * @return WP_REST_Response
@@ -223,12 +223,12 @@ function doroto_handle_refresh_token($request)
 	$params = $request->get_json_params();
 	$refreshToken = sanitize_text_field($params['refresh_token'] ?? '');
 
-	// 1. Ověření, zda byl token poslán
+	// 1. Was a token sent?
 	if (empty($refreshToken)) {
 		return new WP_REST_Response(['error_code' => 'refresh_token_missing'], 400);
 	}
 
-	// 2. Nalezení uživatele podle refresh tokenu
+	// 2. Find the user by the refresh token
 	$users = get_users([
 		'meta_key' => 'doroto_refresh_token',
 		'meta_value' => $refreshToken,
@@ -256,10 +256,10 @@ function doroto_handle_refresh_token($request)
 
 	$newRefreshToken = $refreshToken;
 
-	// 5. Aktualizace databáze s novými tokeny
+	// 5. Store the new tokens
 	doroto_store_session($user_id, $newAccessToken, $newAccessTokenExpiration, $refreshToken, intval($expiration));
 
-	// 6. Vrácení nových tokenů klientské aplikaci
+	// 6. Return the new tokens to the app
 	return new WP_REST_Response([
 		'success' => true,
 		'action' => 'tokens_refreshed',
@@ -577,7 +577,7 @@ function doroto_get_all_tournaments_optimized(WP_REST_Request $request)
 {
 	global $wpdb;
 
-	// Načtení parametrů - beze změny
+	// Read the parameters
 	$filter_option = intval($request->get_param('filter') ?? 0);
 	$limit = intval($request->get_param('limit') ?? 10);
 	$offset = intval($request->get_param('offset') ?? 0);
@@ -592,7 +592,7 @@ function doroto_get_all_tournaments_optimized(WP_REST_Request $request)
 	$where_clauses = [];
 	$params = [];
 
-	// Krok 1: Základní podmínka viditelnosti (vždy se aplikuje) - beze změny
+	// Step 1: basic visibility condition (always applied)
 	if ($current_user_id > 0) {
 		$serialized_user_id_like = '%' . $wpdb->esc_like('i:' . $current_user_id . ';') . '%';
 		$where_clauses[] = "(visibility = 1 OR (visibility = 0 AND (players LIKE %s OR admin_users LIKE %s)))";
@@ -602,15 +602,15 @@ function doroto_get_all_tournaments_optimized(WP_REST_Request $request)
 		$where_clauses[] = "visibility = 1";
 	}
 
-	// --- Krok 2: Aplikace dalších filtrů (OPRAVENÁ ČÁST) ---
+	// --- Step 2: further filters ---
 
-	// --- ZMĚNA: Spojení filtrů podle typu a stavu do jedné if-else struktury ---
+	// Filters by game type and by state in one if-else
 	if ($filter_option >= 20 && $filter_option <= 29) {
-		// Filtr podle typu hry
+		// Filter by game type
 		$where_clauses[] = "tournament_type = %d";
 		$params[] = $filter_option;
 	} else {
-		// Filtr podle stavu (aplikuje se jen pokud to není filtr typu hry)
+		// Filter by state (only when it is not a game type filter)
 		switch ($filter_option) {
 			case 1:
 				$where_clauses[] = "open_registration = 1";
@@ -623,9 +623,8 @@ function doroto_get_all_tournaments_optimized(WP_REST_Request $request)
 				break;
 		}
 	}
-	// --- KONEC ZMĚNY ---
 
-	// Filtr podle role uživatele (4-7) - beze změny
+	// Filter by the user's role (4-7)
 	if ($current_user_id > 0 && in_array($filter_option, [4, 5, 6, 7])) {
 		$serialized_user_id_like = '%' . $wpdb->esc_like('i:' . $current_user_id . ';') . '%';
 		switch ($filter_option) {
@@ -648,13 +647,13 @@ function doroto_get_all_tournaments_optimized(WP_REST_Request $request)
 		}
 	}
 
-	// Filtr podle vyhledávacího textu - beze změny
+	// Filter by the search text
 	if (!empty($search_term)) {
 		$where_clauses[] = "name LIKE %s";
 		$params[] = '%' . $wpdb->esc_like($search_term) . '%';
 	}
 
-	// Zbytek funkce pro sestavení a vykonání dotazu - beze změny
+	// Build and run the query
 	$where_sql = implode(' AND ', $where_clauses);
 
 	$total_query = $wpdb->prepare("$count_clause $from_clause WHERE $where_sql", $params);
@@ -899,7 +898,7 @@ function doroto_get_tournament_detail(WP_REST_Request $data)
 		? (int) $tournament['admin_users'][0]
 		: 0;
 
-	// Upravená podmínka:
+	// Condition:
 	$tournament['is_super_admin'] = ($current_user_id === $super_admin_id || $tournament['is_admin'] == 2) ? 1 : 0;
 
 	$admin_names = [];
@@ -1334,7 +1333,7 @@ function doroto_rest_register_player(WP_REST_Request $request)
 				'players' => maybe_serialize($players),
 				'statistics' => serialize($statistics_new),
 				'special_group' => maybe_serialize($special_group),
-				'last_update' => $new_last_update // Použijeme novou hodnotu
+				'last_update' => $new_last_update // the new value
 			],
 			['id' => $tournament_id]
 		);
@@ -1345,7 +1344,7 @@ function doroto_rest_register_player(WP_REST_Request $request)
 			'success' => true,
 			'action' => 'unregistered',
 			'message' => 'You have been removed from the tournament.',
-			'last_update' => $new_last_update, // Použijeme novou hodnotu
+			'last_update' => $new_last_update, // the new value
 			'player_id' => $current_user_id,
 			'tournament_id' => $tournament_id,
 		]);
@@ -2621,16 +2620,16 @@ function doroto_handle_google_login(WP_REST_Request $request)
 		$logs[] = "Found existing user ID {$user->ID}";
 	}
 
-	// 1. Generování obou tokenů (Access a Refresh)
+	// 1. Generate both tokens (access and refresh)
 	$accessToken = bin2hex(random_bytes(32));
 	// Same lifetime as e-mail login. 1 hour logged Google users out quickly,
 	// because older app versions never use the refresh token.
 	$accessTokenExpiration = time() + 86400;
 
 	$refreshToken = bin2hex(random_bytes(64));
-	$refreshTokenExpiration = time() + (90 * 24 * 3600); // Platnost 90 dní
+	$refreshTokenExpiration = time() + (90 * 24 * 3600); // Valid for 90 days
 
-	// 2. Uložení obou tokenů a jejich expirací do databáze
+	// 2. Store both tokens and their expiry times
 	doroto_store_session($user->ID, $accessToken, $accessTokenExpiration, $refreshToken, $refreshTokenExpiration);
 
 	$logs[] = "Generated new access and refresh tokens for user ID {$user->ID}";
@@ -2639,7 +2638,7 @@ function doroto_handle_google_login(WP_REST_Request $request)
 	return new WP_REST_Response([
 		'success' => true,
 		'action' => 'google_login_successful',
-		'access_token' => $accessToken,   // Nově se vrací access_token
+		'access_token' => $accessToken,   // access_token is returned too
 		'refresh_token' => $refreshToken,
 		'user' => [
 			'ID' => $user->ID,
@@ -2907,7 +2906,7 @@ function doroto_rest_post_tournament_disable_player(\WP_REST_Request $request)
 			'action' => 'all_players_suspended'
 		]);
 	} else {
-		// Stav 2: Pozastavuje se jeden hráč
+		// Case 2: one player is suspended
 		$name = doroto_find_player_name($player_id, intval($tournament->whole_names));
 		return new WP_REST_Response([
 			'success' => true,
@@ -3049,15 +3048,15 @@ function doroto_rest_post_tournament_restore_player(\WP_REST_Request $request)
 	if ($player_id === 0) {
 		return rest_ensure_response([
 			'success' => true,
-			'action' => 'all_players_restored', // Nový klíč
+			'action' => 'all_players_restored', // action code
 			'last_update' => $new_last_update,
 		]);
 	} else {
 		$name = doroto_find_player_name($player_id, intval($tournament->whole_names));
 		return rest_ensure_response([
 			'success' => true,
-			'action' => 'single_player_restored', // Nový klíč
-			'player_name' => $name, // Potřebná data
+			'action' => 'single_player_restored', // action code
+			'player_name' => $name, // shown in the message
 			'last_update' => $new_last_update,
 		]);
 	}
@@ -3550,7 +3549,7 @@ function doroto_rest_setup_example_tournament(WP_REST_Request $request)
 	return new WP_REST_Response([
 		'success' => true,
 		'action' => 'example_organizer_added',
-		'tournament_id' => $tournament_id // Vrátíme ID, aby aplikace věděla, kam přejít
+		'tournament_id' => $tournament_id // The app opens this tournament
 	], 200);
 }
 
@@ -3858,7 +3857,7 @@ function doroto_delete_profile_permissions_check(WP_REST_Request $request)
 }
 
 /**
- * Zpracovává logiku smazání uživatelského profilu s použitím Vaší vlastní funkce.
+ * Deletes the user's profile with the plugin's own function.
  *
  * @param WP_REST_Request $request
  * @return WP_REST_Response|WP_Error
@@ -3912,14 +3911,14 @@ function doroto_get_main_url()
 
 
 add_action('rest_api_init', function () {
-	// Endpoint pro získání aktuálních adminů
+	// Endpoint: current organizers
 	register_rest_route('doroto/v1', '/tournament-admins', [
 		'methods' => ['GET', 'OPTIONS'],
 		'callback' => 'doroto_rest_get_tournament_admins',
 		'permission_callback' => 'doroto_super_admin_check',
 	]);
 
-	// Endpoint pro odebrání admina
+	// Endpoint: remove an organizer
 	register_rest_route('doroto/v1', '/tournament-remove-admin', [
 		'methods' => ['POST', 'OPTIONS'],
 		'callback' => doroto_rest_locked('doroto_rest_remove_admin'),
@@ -3928,7 +3927,7 @@ add_action('rest_api_init', function () {
 });
 
 /**
- * Pomocná funkce pro kontrolu, zda je uživatel Super Admin (zakladatel)
+ * Whether the user is the super admin (the founder of the tournament)
  */
 function doroto_super_admin_check(WP_REST_Request $request)
 {
@@ -3970,7 +3969,7 @@ function doroto_rest_get_tournament_admins(WP_REST_Request $request)
 		$placeholders = implode(',', array_fill(0, count($admin_ids), '%d'));
 		$users = $wpdb->get_results($wpdb->prepare("SELECT ID as id, display_name FROM {$wpdb->users} WHERE ID IN ($placeholders)", ...$admin_ids), ARRAY_A);
 
-		// Super admin (index 0) nebude v seznamu pro smazání
+		// The super admin (index 0) is not offered for removal
 		$super_admin_id = $admin_ids[0];
 		foreach ($users as $u) {
 			if ((int)$u['id'] !== $super_admin_id) {
@@ -4004,7 +4003,7 @@ function doroto_rest_remove_admin(WP_REST_Request $request)
 	$admin_users = maybe_unserialize($admin_users_raw);
 
 	if (($key = array_search($admin_to_remove, $admin_users)) !== false) {
-		// Nikdy nesmíme odebrat Super Admina (index 0)
+		// The super admin (index 0) may never be removed
 		if ($key === 0) {
 			return new WP_REST_Response(['success' => false, 'message' => 'Cannot remove super admin'], 403);
 		}

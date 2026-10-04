@@ -76,7 +76,7 @@ add_action('admin_enqueue_scripts', 'doroto_backend_styles');
 
 function doroto_enqueue_frontend_scripts()
 {
-	// Načtení lokálního CSS pro Leaflet
+	// Local Leaflet CSS
 	wp_enqueue_style(
 		'leaflet-css',
 		plugins_url('assets/css/leaflet.css', __FILE__),
@@ -84,7 +84,7 @@ function doroto_enqueue_frontend_scripts()
 		'1.9.4'
 	);
 
-	// Načtení lokálního JS pro Leaflet
+	// Local Leaflet JS
 	wp_enqueue_script(
 		'leaflet-js',
 		plugins_url('assets/js/leaflet.js', __FILE__),
@@ -93,7 +93,7 @@ function doroto_enqueue_frontend_scripts()
 		true
 	);
 
-	// Váš vlastní skript závislý na Leafletu
+	// Plugin script that needs Leaflet
 	wp_enqueue_script(
 		'doroto-frontend-scripts',
 		plugins_url('includes/doroto-frontend-scripts.js', __FILE__),
@@ -111,7 +111,7 @@ add_action('wp_enqueue_scripts', 'doroto_enqueue_frontend_scripts');
  */
 function doroto_enqueue_admin_map_scripts($hook)
 {
-	// Načtení lokálního CSS pro Leaflet
+	// Local Leaflet CSS
 	wp_enqueue_style(
 		'leaflet-css',
 		plugins_url('assets/css/leaflet.css', __FILE__),
@@ -119,7 +119,7 @@ function doroto_enqueue_admin_map_scripts($hook)
 		'1.9.4'
 	);
 
-	// Načtení lokálního JS pro Leaflet
+	// Local Leaflet JS
 	wp_enqueue_script(
 		'leaflet-js',
 		plugins_url('assets/js/leaflet.js', __FILE__),
@@ -128,7 +128,7 @@ function doroto_enqueue_admin_map_scripts($hook)
 		true
 	);
 
-	// Váš vlastní administrační skript závislý na Leafletu
+	// Admin script that needs Leaflet
 	wp_enqueue_script(
 		'doroto-map-js',
 		plugins_url('includes/doroto-backend-scripts.js', __FILE__),

@@ -1,6 +1,6 @@
 // --- doroto-frontend-scripts.js ---
 
-// 1. Automatické obnovení stránky podle atributu data-seconds
+// 1. Reload the page after the number of seconds in data-seconds
 document.addEventListener("DOMContentLoaded", function () {
   const refreshContainer = document.getElementById("doroto-refresh-container");
   if (refreshContainer) {
@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-// 2. Rozbalování hlavních panelů (klikací titulky)
+// 2. Expanding the main panels (clickable titles)
 jQuery(document).ready(function ($) {
   $(".doroto-clickable-title").click(function () {
     const containerId = $(this).next(".doroto-content-container").attr("id");
@@ -28,7 +28,7 @@ jQuery(document).ready(function ($) {
   }
 });
 
-// 3. Rozbalování submenu a zobrazení mapy
+// 3. Expanding submenus and showing the map
 let dorotoMapInitialized = false;
 
 jQuery(document).ready(function () {
@@ -116,7 +116,7 @@ window.dorotoCopyCoordinates = function () {
   const input = document.getElementById("doroto-coordinates-input");
   if (!input) return;
   input.select();
-  input.setSelectionRange(0, 99999); // pro mobily
+  input.setSelectionRange(0, 99999); // for phones
   document.execCommand("copy");
   alert("Coordinates copied: " + input.value);
 };

@@ -997,7 +997,7 @@ function doroto_add_player_shortcode($atts = [], $content = null, $tag = '')
 	if ($only_web_admin == 3 || $only_web_admin == 0 || doroto_is_admin($tournament_id) == 2) {
 		if (!empty($players)) {
 			$placeholders = implode(',', array_fill(0, count($players), '%d'));
-			// Oprava: Spojení prepare a get_results do jednoho kroku s využitím moderního předání pole
+			// prepare() and get_results() in one step, with the arguments passed as an array
 			$users = $wpdb->get_results(
 				$wpdb->prepare("SELECT * FROM {$wpdb->users} WHERE ID NOT IN ($placeholders)", $players)
 			);
@@ -4454,7 +4454,7 @@ add_shortcode('doroto_floating_help', 'doroto_floating_help_icon');
 
 
 /**
- * AJAX handler pro načtení tournament_id
+ * AJAX handler that reads tournament_id
  * @since 1.3.7
  */
 function doroto_get_tournament_id()
