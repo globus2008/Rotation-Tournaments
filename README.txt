@@ -3,7 +3,7 @@ Contributors: globus2008
 Tags: tournament, game, ranking, sport, tennis
 Requires at least: 6.5
 Tested up to: 7.0
-Stable tag: 1.6.1
+Stable tag: 1.6.2
 License: GPLv3 or later
 License URI: [GNU GPL v3.0](https://www.gnu.org/licenses/gpl-3.0.html)
 
@@ -132,6 +132,10 @@ You can use this plugin for tennis, table tennis, squash, padel, badminton, beac
 
 
 == Changelog ==
+= 1.6.2 - 2026/10/04 =
+* Improvement - the draw chooses the opposing team (and the teammate) by previous meetings too: players meet more different opponents and the same players meet less often (with 14 players on 2 courts, pairs that met 3 or more times dropped from about 5 to 1 per evening)
+* Improvement - among players with the same number of new teammates left, the one who played fewer games is drawn first; sides (left/right) alternate for both players of a team
+* Add - REST route skip-matches: the organizer skips several ongoing matches at once and new matches are drawn from all free players
 = 1.6.1 - 2026/10/02 =
 * Fix - removing a payment no longer turns the payment list into a JSON object (the Android app could crash on the statistics page)
 * Fix - a deleted account leaves its open tournaments: removed when it has not played yet, otherwise suspended; it also leaves the organizers, special group and payments (it was drawn into matches as "Unknown player")

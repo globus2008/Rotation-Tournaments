@@ -124,7 +124,7 @@ function doroto_tournament_progress_locked(int $tournament_id)
 
 /**
  * offer new games to play
- * @version 1.4.7 (correction undefined array key on player['count'])
+ * @version 1.6.2 (teammate and opposing team chosen by a score that includes previous meetings)
  * @since 1.0.0
  */
 function doroto_offer_games(int $tournament_id, int $matches_to_select)
@@ -243,10 +243,18 @@ function doroto_offer_games_locked(int $tournament_id, int $matches_to_select)
 
 		$choosen_player_games = $firstItem['rest'];
 
-		// Step 8: Select other players with the same number of matches played and randomly select someone from them
+		// Step 8: Select other players with the same number of rest combinations and randomly select
+		// one of those who played the fewest games (a player who just finished a match used to be
+		// picked as often as one who had been waiting)
+		$fewest_games = null;
+		foreach ($statistics_temp as $player) {
+			if ($player['rest'] == $choosen_player_games && ($fewest_games === null || $player['games'] < $fewest_games)) {
+				$fewest_games = $player['games'];
+			}
+		}
 		$possible_player_array = [];
 		foreach ($statistics_temp as $player) {
-			if ($player['rest'] == $choosen_player_games) {
+			if ($player['rest'] == $choosen_player_games && $player['games'] == $fewest_games) {
 				$possible_player_array[] = $player['player_id'];
 			}
 		}
@@ -422,6 +430,54 @@ function doroto_offer_games_locked(int $tournament_id, int $matches_to_select)
 			}
 		}
 
+		// Step 18.1: in doubles, choose the teammate together with the opposing team
+		// (see doroto_choose_opposing_team()), so a teammate is preferred whose match
+		// brings together players who have not met yet.
+		$opposing_team = null;
+		if ($players_on_court == 4) {
+			$co_candidates = !empty($intersection) ? $intersection : $possible_playmates_together;
+			$best_key = null;
+			foreach ($co_candidates as $co_candidate) {
+				$co_row = null;
+				foreach ($statistics_temp as $player) {
+					if ($player['player_id'] == $co_candidate) {
+						$co_row = $player;
+						break;
+					}
+				}
+				if ($co_row === null) {
+					continue;
+				}
+				$others = array_filter($statistics_temp, function ($player) use ($choosen_player, $co_candidate) {
+					return $player['player_id'] != $choosen_player && $player['player_id'] != $co_candidate;
+				});
+				$result = doroto_choose_opposing_team(
+					array_values($others),
+					intval($choosen_player),
+					intval($co_candidate),
+					$special_group,
+					$two_special_group,
+					$two_out_group,
+					$announce_round_end
+				);
+				if ($result === null) {
+					continue;
+				}
+				// Add the teammate's own share to the opposing team's score.
+				$key = $result['key'];
+				if ($announce_round_end > 0 && intval($co_row['rest']) == 0 && intval($co_row['games']) != 0) {
+					$key[1]++;
+				}
+				$key[2] += intval($co_row['games']);
+				$key[4] -= intval($co_row['rest']);
+				if ($best_key === null || $key < $best_key) {
+					$best_key = $key;
+					$choosen_co_player = $co_candidate;
+					$opposing_team = $result['team'];
+				}
+			}
+		}
+
 		//Step 19: define first_possible_players_L and first_possible_players_P
 		foreach ($possible_players_L1 as $player) {
 			if ($player['player_id'] == $choosen_co_player) {
@@ -481,346 +537,32 @@ function doroto_offer_games_locked(int $tournament_id, int $matches_to_select)
 		}
 
 		if ($players_on_court == 4) {
-
-			//Step 21: creating a list of teammate opponents
-			$possible_players_L2 = array();
-			$possible_players_P2 = array();
-			$possible_opponents_playmate2 = array();
-
+			// Doubles: the same side rule as for the opposing team, which compares
+			// both players instead of only the chosen one.
+			$choosen_row = null;
+			$co_row = null;
 			foreach ($statistics_temp as $player) {
-				if ($player['player_id'] == $choosen_co_player) {
-					$possible_opponents_playmate2 = $player['opponents'];
-					break;
+				if ($player['player_id'] == $choosen_player) {
+					$choosen_row = $player;
+				} elseif ($player['player_id'] == $choosen_co_player) {
+					$co_row = $player;
 				}
 			}
-
-			//Step 22: merge both fields
-			$possible_opponents_main_player = array();
-
-			foreach ($possible_opponents_list1 as $data) {
-				$player_id = $data['player_id'];
-				foreach ($possible_opponents_playmate2 as $opponent) {
-					if ($opponent['player_id'] == $player_id) {
-						$data['count'] += $opponent['count'];
-						break;
-					}
-				}
-				$possible_opponents_main_player[$player_id] = $data;
+			if ($choosen_row !== null && $co_row !== null) {
+				[$player_1, $player_2] = doroto_team_sides($choosen_row, $co_row);
 			}
 
-			// Step 23: Remove players from $statistics_temp
-			$statistics_temp = array_filter($statistics_temp, function ($player) use ($player_1, $player_2) {
-				return $player['player_id'] != $player_1 && $player['player_id'] != $player_2;
-			});
-
-			// Step 24: Sort players by number of games played
-			usort($statistics_temp, function ($a, $b) {
-				return $a['games'] - $b['games'];
-			});
-
-			// Step 25: Shuffle the order, but only at the beginning of the tournament
-			$tournament_start = true;
-			foreach ($statistics_temp as $player) {
-				if ($player['games'] > 0) {
-					$tournament_start = false;
-				}
-			}
-			if ($tournament_start) {
-				shuffle($statistics_temp);
-			}
-
-			// Step 25: Sort players by number of rest combinations
-			usort($statistics_temp, function ($a, $b) {
-				return $b['rest'] - $a['rest'];
-			});
-
-			// Step 26: Begin Opponent Selection
-			$avoid_players = array_merge($playing, array($player_1, $player_2));
-			$possible_opponents_main_player = array_filter($possible_opponents_main_player, function ($player) use ($avoid_players) {
-				return !in_array($player['player_id'], $avoid_players);
-			});
-			usort($possible_opponents_main_player, function ($a, $b) {
-				return $a['count'] - $b['count'];
-			});
-			$best_player_opponent = reset($possible_opponents_main_player);
-			$best_player_opponent_count = $best_player_opponent['count'];
-
-			// Step 27: Choose the next player with the highest number of rest combinations as the first opponent
-			$firstItem = reset($statistics_temp);
-			$choosen_opponent = $firstItem['player_id'];
-			$choosen_opponent_games = $firstItem['rest'];
-
-			// Step 28: Select other players with the same or rest matches and randomly select someone from them
-			$possible_opponents_array = [];
-			foreach ($statistics_temp as $player) {
-				if ($player['rest'] >= $choosen_opponent_games) {
-					$possible_opponents_array[] = $player['player_id'];
-				}
-			}
-
-			$choosen_opponent_array = [];
-			if (!empty($possible_opponents_array)) {
-				foreach ($possible_opponents_main_player as $player) {
-					if (in_array($player['player_id'], $possible_opponents_array) && $best_player_opponent_count == $player['count']) {
-						$choosen_opponent_array[] = $player['player_id'];
-					}
-				}
-			} else {
-				$choosen_opponent_array[] = $choosen_opponent;
-			}
-
-			// Step 28.1: Choose the first opponent player 
-			if (!empty($choosen_opponent_array)) {
-				$choosen_player_key = array_rand($choosen_opponent_array);
-				$choosen_opponent = $choosen_opponent_array[$choosen_player_key];
-			}
-
-			// Step 29: Create a field for the 'left' and 'right' position for the other player
-			$possible_players_L3 = array();
-			$possible_players_P3 = array();
-			$possible_players_LP3 = array();
-
-			foreach ($statistics_temp as $player) {
-				if ($player['player_id'] == $choosen_opponent) {
-					$possible_players_L3 = $player['playmates_L'];
-					$possible_players_P3 = $player['playmates_P'];
-					$possible_players_LP3 = $player['playmates'];
-					break;
-				}
-			}
-			// Step 30: Filter the players who are occupied
-			$possible_players_L3 = array_filter($possible_players_L3, function ($player) use ($playing) {
-				return !in_array($player['player_id'], $playing);
-			});
-			$possible_players_P3 = array_filter($possible_players_P3, function ($player) use ($playing) {
-				return !in_array($player['player_id'], $playing);
-			});
-			$possible_players_LP3 = array_filter($possible_players_LP3, function ($player) use ($playing) {
-				return !in_array($player['player_id'], $playing);
-			});
-
-			// Step 31: Line up the players for the 'left' and 'right' position for the other player
-			usort($possible_players_L3, function ($a, $b) {
-				return $a['count'] - $b['count'];
-			});
-
-			usort($possible_players_P3, function ($a, $b) {
-				return $a['count'] - $b['count'];
-			});
-			usort($possible_players_LP3, function ($a, $b) {
-				return $a['count'] - $b['count'];
-			});
-
-
-			// Step 32: If two_special_group is on and the player is in the special_group field, remove him
-			if ($two_special_group == 1 && in_array($choosen_opponent, $special_group)) {
-				$possible_players_L3 = array_filter($possible_players_L3, function ($player) use ($special_group) {
-					return !in_array($player['player_id'], $special_group);
-				});
-
-				$possible_players_P3 = array_filter($possible_players_P3, function ($player) use ($special_group) {
-					return !in_array($player['player_id'], $special_group);
-				});
-				$possible_players_LP3 = array_filter($possible_players_LP3, function ($player) use ($special_group) {
-					return !in_array($player['player_id'], $special_group);
-				});
-			}
-
-			// Step 33: If two_out_group is on and both players are out of special_group, then remove that player
-			if ($two_out_group == 1 && !in_array($choosen_opponent, $special_group)) {
-				$possible_players_L3 = array_filter($possible_players_L3, function ($player) use ($special_group) {
-					return in_array($player['player_id'], $special_group);
-				});
-
-				$possible_players_P3 = array_filter($possible_players_P3, function ($player) use ($special_group) {
-					return in_array($player['player_id'], $special_group);
-				});
-				$possible_players_LP3 = array_filter($possible_players_LP3, function ($player) use ($special_group) {
-					return in_array($player['player_id'], $special_group);
-				});
-			}
-
-			// Step 34: Filter out inactive players
-			$possible_players_L3 = array_filter($possible_players_L3, function ($player) use ($activePlayers) {
-				return in_array($player['player_id'], $activePlayers);
-			});
-
-			$possible_players_P3 = array_filter($possible_players_P3, function ($player) use ($activePlayers) {
-				return in_array($player['player_id'], $activePlayers);
-			});
-			$possible_players_LP3 = array_filter($possible_players_LP3, function ($player) use ($activePlayers) {
-				return in_array($player['player_id'], $activePlayers);
-			});
-
-			//Step 35: removes opponents from fields
-			foreach ($possible_players_L3 as $key => $player) {
-				if ($player['player_id'] == $player_1 || $player['player_id'] == $player_2) {
-					unset($possible_players_L3[$key]);
-				}
-			}
-			foreach ($possible_players_P3 as $key => $player) {
-				if ($player['player_id'] == $player_1 || $player['player_id'] == $player_2) {
-					unset($possible_players_P3[$key]);
-				}
-			}
-			foreach ($possible_players_LP3 as $key => $player) {
-				if ($player['player_id'] == $player_1 || $player['player_id'] == $player_2) {
-					unset($possible_players_LP3[$key]);
-				}
-			}
-
-			$possible_players_L3 = array_values($possible_players_L3);
-			$possible_players_P3 = array_values($possible_players_P3);
-			$possible_players_LP3 = array_values($possible_players_LP3);
-
-			// Step 36: Evaluate the number of available opponents and Line up the players for the 'left' and 'right' position
-			if (count($possible_players_LP3) == 0) {
+			// Steps 21-48: the opposing team was chosen in step 18.1. The old
+			// step-by-step choice ignored previous meetings in most cases, so with
+			// two courts the same players kept meeting each other.
+			if ($opposing_team === null) {
 				$output = "<p><b><div class = 'doroto-warning-text'>" . esc_html__('The tournament settings do not allow the next match to be drawn.', 'doubles-rotation-tournament') . "</b></div> ";
 				$output .= doroto_empty_special_group_notice($tournament);
 				$output .= "</p>";
 				return $output;
 			}
-			usort($possible_players_LP3, function ($a, $b) {
-				return $a['count'] - $b['count'];
-			});
-
-			// Step 37: Determine the player with the fewest matches
-			$firstItem_playmate = reset($possible_players_LP3);
-			$firstItem_playmate_count = $firstItem_playmate['count'];
-			$firstItem_playmate_player_id = $firstItem_playmate['player_id'];
-
-			// Step 38: Select another player with the same number of co-matches played
-			$possible_playmates_together = [];
-			foreach ($possible_players_LP3 as $player) {
-				if ($player['count'] == $firstItem_playmate_count) {
-					$possible_playmates_together[] = $player['player_id'];
-				}
-			}
-
-			// Step 39: Select another player with the same number of matches played, but filter the selected player from the base set
-			$statistics_short = array_filter($statistics_temp, function ($player) use ($firstItem_playmate_player_id) {
-				return $player['player_id'] != $firstItem_playmate_player_id;
-			});
-
-			// Step 40: Sort players by number of rest combinations
-			usort($statistics_short, function ($a, $b) {
-				return $b['rest'] - $a['rest'];
-			});
-
-			// Step 41: Select other players with the same or higher number of rest combinations and randomly select someone from them
-			$possible_co_player_array = [];
-			foreach ($statistics_short as $player) {
-				if ($player['rest'] >= $choosen_player_games && $choosen_opponent != $player['player_id']) {
-					$possible_co_player_array[] = $player['player_id'];
-				}
-			}
-
-			// Step 42: merging the two different fields
-			$intersection = array_intersect($possible_playmates_together, $possible_co_player_array);
-
-			//Step 43: instead of randomly selecting a teammate from the other team, the player with the least number of counters is determined
-			$possible_opp_players_together = array();
-			foreach ($possible_opponents_list1 as $data) {
-				$player_id = $data['player_id'];
-				foreach ($possible_opponents_playmate2 as $opponent) {
-					if ($opponent['player_id'] == $player_id) {
-						$data['count'] += $opponent['count'];
-						break;
-					}
-				}
-				$possible_opp_players_together[$player_id] = $data;
-			}
-
-
-			// Step 44: Sort opponents by number of games played
-			usort($possible_opp_players_together, function ($a, $b) {
-				return $a['count'] - $b['count'];
-			});
-			$possible_opp_players_together_first = reset($possible_opp_players_together);
-
-			//Step 45: the next selection will be according to the number of rest combinations
-			$statistics_temp_first = reset($statistics_short);
-			$statistics_temp_first_games = $statistics_temp_first['rest'];
-
-			$statistics_short = array_filter($statistics_short, function ($player) use ($statistics_temp_first_games) {
-				return $player['rest'] >= $statistics_temp_first_games;
-			});
-			shuffle($statistics_short);
-
-			$choosen_co_opp_player = $firstItem_playmate_player_id;
-
-			if (!empty($intersection)) {
-				$co_opp_player_ids = $intersection;
-			} else {
-				$co_opp_player_ids = $possible_playmates_together;
-			}
-
-			$choosen_co_opp_player_last = array();
-			if (!empty($co_opp_player_ids)) {
-				foreach ($possible_opp_players_together as $player) {
-					if (in_array($player['player_id'], $co_opp_player_ids)) {
-						$choosen_co_opp_player_last[] = $player['player_id'];
-					}
-				}
-			}
-			if (!empty($choosen_co_opp_player_last)) {
-				$random_key = array_rand($choosen_co_opp_player_last);
-				$choosen_co_opp_player = $choosen_co_opp_player_last[$random_key];
-			}
-
-			//Step 46: defines first_possible_players_L and first_possible_players_P
-			foreach ($possible_players_L3 as $player) {
-				if ($player['player_id'] == $choosen_co_opp_player) {
-					$first_possible_players_L = $player['count'];
-					break;
-				}
-			}
-			foreach ($possible_players_P3 as $player) {
-				if ($player['player_id'] == $choosen_co_opp_player) {
-					$first_possible_players_P = $player['count'];
-					break;
-				}
-			}
-
-			//Step 47: the left or right position will be random if the teammate has the same number of positions
-			if ($first_possible_players_L == $first_possible_players_P) {
-
-				foreach ($statistics_temp as $player) {
-					if ($player['player_id'] == $choosen_opponent) {
-						break;
-					}
-				}
-
-				$position_co_player_cnt_L = 0;
-				foreach ($player['playmates_L'] as $co_players_on_L) {
-					$position_co_player_cnt_L += $co_players_on_L['count'];
-				}
-				$position_co_player_cnt_P = 0;
-				foreach ($player['playmates_P'] as $co_players_on_P) {
-					$position_co_player_cnt_P += $co_players_on_P['count'];
-				}
-
-				if ($position_co_player_cnt_L ==  $position_co_player_cnt_P) {
-					$randomNumber = wp_rand(0, 1) % 2;
-					if ($randomNumber) {
-						$first_possible_players_L++;
-					} else {
-						$first_possible_players_P++;
-					}
-				} else {
-					$first_possible_players_L = $position_co_player_cnt_L;
-					$first_possible_players_P = $position_co_player_cnt_P;
-				}
-			}
-
-			// Step 48: Designate players for the 'left' and 'right' positions for the other team	
-			if ($first_possible_players_L > $first_possible_players_P) {
-				$player_3 = $choosen_opponent;
-				$player_4 = $choosen_co_opp_player;
-			} else {
-				$player_4 = $choosen_opponent;
-				$player_3 = $choosen_co_opp_player;
-			}
+			$player_3 = $opposing_team[0];
+			$player_4 = $opposing_team[1];
 		}
 
 		// Step 49: Find who will serve on P1 position
@@ -926,6 +668,140 @@ function doroto_offer_games_locked(int $tournament_id, int $matches_to_select)
 		}
 	}
 	return '';
+}
+
+/**
+ * Choose the opposing team for a drawn first team ($player_1 on the left, $player_2 on the right).
+ * Every pair of free players that the special group settings allow is scored; lower is better:
+ *   1. how often the two played together (new teammates first),
+ *   2. with a round-end announcement: how many of them have no rest combinations left,
+ *   3. games played by both (players who waited longer first),
+ *   4. previous meetings with the first team (sum of squares, so meeting the same
+ *      player a third time weighs more than two different repeats),
+ *   5. rest combinations (more first), then random.
+ * The player who played more often on the right side goes to the left and vice versa.
+ * @since 1.6.2
+ * @return array|null ['team' => [left id, right id], 'key' => score], or null when no pair is allowed
+ */
+function doroto_choose_opposing_team(array $candidates, int $player_1, int $player_2, array $special_group, int $two_special_group, int $two_out_group, int $announce_round_end)
+{
+	$special = array_map('intval', $special_group);
+
+	// player_id => [list => [other_id => count]] for quick lookups
+	$counts = [];
+	foreach ($candidates as $player) {
+		$id = intval($player['player_id']);
+		foreach (['playmates', 'opponents'] as $list) {
+			$counts[$id][$list] = [];
+			if (!empty($player[$list]) && is_array($player[$list])) {
+				foreach ($player[$list] as $entry) {
+					$counts[$id][$list][intval($entry['player_id'])] = intval($entry['count'] ?? 0);
+				}
+			}
+		}
+	}
+	$count = function (int $id, string $list, int $other) use ($counts) {
+		return $counts[$id][$list][$other] ?? 0;
+	};
+
+	$best = null;
+	$best_key = null;
+	$total = count($candidates);
+	for ($i = 0; $i < $total; $i++) {
+		for ($j = $i + 1; $j < $total; $j++) {
+			$a = $candidates[$i];
+			$b = $candidates[$j];
+			$id_a = intval($a['player_id']);
+			$id_b = intval($b['player_id']);
+			$a_special = in_array($id_a, $special, true);
+			$b_special = in_array($id_b, $special, true);
+			if ($two_special_group == 1 && $a_special && $b_special) {
+				continue;
+			}
+			if ($two_out_group == 1 && !$a_special && !$b_special) {
+				continue;
+			}
+
+			$no_rest = 0;
+			if ($announce_round_end > 0) {
+				foreach ([$a, $b] as $player) {
+					if (intval($player['rest']) == 0 && intval($player['games']) != 0) {
+						$no_rest++;
+					}
+				}
+			}
+
+			$meetings = 0;
+			foreach ([$id_a, $id_b] as $id) {
+				foreach ([$player_1, $player_2] as $opponent) {
+					$meetings += $count($id, 'opponents', $opponent) ** 2;
+				}
+			}
+
+			$key = [
+				$count($id_a, 'playmates', $id_b),
+				$no_rest,
+				intval($a['games']) + intval($b['games']),
+				$meetings,
+				-(intval($a['rest']) + intval($b['rest'])),
+				wp_rand(0, 1000000),
+			];
+			if ($best_key === null || $key < $best_key) {
+				$best_key = $key;
+				$best = [$a, $b];
+			}
+		}
+	}
+
+	if ($best === null) {
+		return null;
+	}
+	return ['team' => doroto_team_sides($best[0], $best[1]), 'key' => $best_key];
+}
+
+/**
+ * Put the two players of a team on the left and right side, alternating the sides.
+ * @since 1.6.2
+ * @return array [left player id, right player id]
+ */
+function doroto_team_sides(array $a, array $b)
+{
+	$id_a = intval($a['player_id']);
+	$id_b = intval($b['player_id']);
+	$count = function (array $player, string $list, int $other) {
+		foreach ((array) ($player[$list] ?? []) as $entry) {
+			if (intval($entry['player_id']) == $other) {
+				return intval($entry['count'] ?? 0);
+			}
+		}
+		return 0;
+	};
+
+	// Alternate sides within this pair first: playmates_L counts how often the
+	// teammate stood on the left, so the one who was on the left goes right now.
+	$b_was_left = $count($a, 'playmates_L', $id_b);
+	$b_was_right = $count($a, 'playmates_P', $id_b);
+	if ($b_was_left != $b_was_right) {
+		return $b_was_left > $b_was_right ? [$id_a, $id_b] : [$id_b, $id_a];
+	}
+
+	// Then overall: right minus left appearances (teammate on the left = I was on the right).
+	$side_balance = function (array $player) {
+		$balance = 0;
+		foreach ((array) ($player['playmates_L'] ?? []) as $entry) {
+			$balance += intval($entry['count'] ?? 0);
+		}
+		foreach ((array) ($player['playmates_P'] ?? []) as $entry) {
+			$balance -= intval($entry['count'] ?? 0);
+		}
+		return $balance;
+	};
+	$balance_a = $side_balance($a);
+	$balance_b = $side_balance($b);
+	if ($balance_a == $balance_b) {
+		return wp_rand(0, 1) ? [$id_a, $id_b] : [$id_b, $id_a];
+	}
+	return $balance_a > $balance_b ? [$id_a, $id_b] : [$id_b, $id_a];
 }
 
 

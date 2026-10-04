@@ -81,6 +81,14 @@
 - `delete_database` defaults to 1.
 - Activation creates 13 demo users.
 
+## Draw (1.6.2)
+- `doroto_offer_games_locked()`: steps 1-18 pick the first player and the candidate teammates as before
+  (step 8 now prefers fewer games among equal rest). Step 18.1 scores every teammate candidate together with
+  every opposing pair (`doroto_choose_opposing_team()`), key: teammate repeats, players without rest
+  (round end), games, previous meetings (sum of squares), rest, random. Sides: `doroto_team_sides()`.
+- `skip-matches` (organizer): hides several open matches, then draws once (one by one, each draw had only
+  the players of one match free).
+
 ## Directory / reach (deferred by the owner)
 - `website-info` feeds the directory plugin `doroto-websites`.
 - The site never registers itself.
