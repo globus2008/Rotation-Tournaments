@@ -1,0 +1,9 @@
+// Styles of the tournament block. Colours, spacing and fonts come from the theme
+// (theme.json presets), so the block follows the look of the site.
+.doroto-block {
+	--doroto-gap: var(--wp--preset--spacing--30, 1rem);
+}
+
+.doroto-block__title {
+	margin-block: 0 var(--doroto-gap);
+}

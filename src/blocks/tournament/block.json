@@ -1,0 +1,39 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "doroto/tournament",
+	"version": "2.0.0",
+	"title": "Rotation tournament",
+	"category": "widgets",
+	"icon": "awards",
+	"description": "Matches, players, results and settings of one rotation tournament.",
+	"keywords": [ "tournament", "doubles", "rotation", "tennis" ],
+	"textdomain": "doubles-rotation-tournament",
+	"attributes": {
+		"tournamentId": {
+			"type": "integer",
+			"default": 0
+		}
+	},
+	"supports": {
+		"html": false,
+		"align": [ "wide", "full" ],
+		"color": {
+			"background": true,
+			"text": true,
+			"link": true
+		},
+		"spacing": {
+			"margin": true,
+			"padding": true
+		},
+		"typography": {
+			"fontSize": true
+		},
+		"interactivity": true
+	},
+	"editorScript": "file:./index.js",
+	"style": "file:./style-index.css",
+	"viewScriptModule": "file:./view.js",
+	"render": "file:./render.php"
+}

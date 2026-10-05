@@ -1,0 +1,1 @@
+import{store as t}from"@wordpress/interactivity";t("doroto",{state:{},actions:{}});

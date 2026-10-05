@@ -155,10 +155,10 @@ require_once plugin_dir_path(__FILE__) . 'includes/doroto-players-management.php
 require_once plugin_dir_path(__FILE__) . 'includes/doroto-tournament-management.php';
 require_once plugin_dir_path(__FILE__) . 'includes/doroto-services.php';
 require_once plugin_dir_path(__FILE__) . 'includes/doroto-view-model.php';
+require_once plugin_dir_path(__FILE__) . 'includes/doroto-blocks.php';
 require_once plugin_dir_path(__FILE__) . 'includes/doroto-frontend-pages.php';
 require_once plugin_dir_path(__FILE__) . 'includes/doroto-backend-pages.php';
 require_once plugin_dir_path(__FILE__) . 'includes/doroto-endpoints.php';
-require_once plugin_dir_path(__FILE__) . 'blocks/log-link/log-link.php';
 
 // Registering action hooks for page creation and deletion
 register_activation_hook(__FILE__, 'doroto_check_version');

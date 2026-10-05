@@ -1,0 +1,37 @@
+{
+	"name": "doubles-rotation-tournament",
+	"version": "2.0.0",
+	"private": true,
+	"description": "Rotation Tournaments: blocks of the WordPress plugin",
+	"license": "GPL-3.0-or-later",
+	"scripts": {
+		"build": "wp-scripts build --experimental-modules --webpack-src-dir=src/blocks --output-path=build/blocks --webpack-copy-php",
+		"start": "wp-scripts start --experimental-modules --webpack-src-dir=src/blocks --output-path=build/blocks --webpack-copy-php",
+		"lint:js": "wp-scripts lint-js src",
+		"lint:css": "wp-scripts lint-style \"src/**/*.scss\"",
+		"format": "wp-scripts format src",
+		"plugin-zip": "wp-scripts plugin-zip"
+	},
+	"files": [
+		"doubles-rotation-tournament.php",
+		"uninstall.php",
+		"README.txt",
+		"LICENSE.txt",
+		"includes",
+		"assets",
+		"build",
+		"src",
+		"lib/shepherd",
+		"languages",
+		"package.json"
+	],
+	"devDependencies": {
+		"@wordpress/block-editor": "^18.0.0",
+		"@wordpress/blocks": "^16.1.0",
+		"@wordpress/components": "^41.0.0",
+		"@wordpress/i18n": "^6.29.0",
+		"@wordpress/interactivity": "^6.56.0",
+		"@wordpress/scripts": "^36.0.0",
+		"@wordpress/server-side-render": "^6.32.0"
+	}
+}
