@@ -68,6 +68,8 @@ function doroto_service_message($result, int $tournament_id = 0): string
 		case 'auth_unauthorized':
 		case 'auth_not_authorized':
 		case 'auth_forbidden':
+		case 'not_admin_permission':
+		case 'auth_not_logged_in':
 		case 'auth_insufficient_permissions':
 			return __('You do not have permission to perform this action.', 'doubles-rotation-tournament');
 		case 'toggle_reg_when_tournament_closed':
@@ -159,6 +161,26 @@ function doroto_service_message($result, int $tournament_id = 0): string
 			return __('Player', 'doubles-rotation-tournament') . ' ' . $result['player_name'] . ' ' . __('has been added to the admins.', 'doubles-rotation-tournament');
 		case 'organizer_removed':
 			return __('Player', 'doubles-rotation-tournament') . ' ' . $result['player_name'] . ' ' . __('is no longer an organizer.', 'doubles-rotation-tournament');
+		case 'invalid_tournament_id':
+			return __('The tournament was not found.', 'doubles-rotation-tournament');
+		case 'invalid_tournament_type':
+			return __('Unknown tournament type.', 'doubles-rotation-tournament');
+		case 'tournament_closed_for_changes':
+			return __('The tournament was closed more than 24 hours ago and can no longer be changed.', 'doubles-rotation-tournament');
+		case 'tournament_updated':
+			$text = __('Tournament parameters no.', 'doubles-rotation-tournament') . ' ' . $tournament_id . ' ' . __('were saved.', 'doubles-rotation-tournament');
+			if (!empty($result['post_not_allowed'])) {
+				$text = __('You do not have the necessary rights to create a post.', 'doubles-rotation-tournament') . ' ' . $text;
+			}
+			return $text;
+		case 'tournament_deleted':
+			return $no . __('was deleted.', 'doubles-rotation-tournament');
+		case 'final_players_not_different':
+			return __('Please choose different names for L1, R1, L2 and R2!', 'doubles-rotation-tournament');
+		case 'final_four_saved':
+			return __('Final group composition saved.', 'doubles-rotation-tournament') . ' ' . __('You can start playing the final match.', 'doubles-rotation-tournament');
+		case 'final_result_saved':
+			return __('The final match is over!', 'doubles-rotation-tournament');
 		case 'matches_skipped':
 			/* translators: %d: number of skipped matches */
 			return sprintf(_n('%d match was skipped.', '%d matches were skipped.', intval($result['skipped']), 'doubles-rotation-tournament'), intval($result['skipped']));
@@ -932,5 +954,262 @@ function doroto_service_remove_admin(int $tournament_id, int $user_id)
 			'player_name' => doroto_find_player_name($user_id, intval($tournament->whole_names)),
 			'last_update' => $last_update,
 		]);
+	});
+}
+
+/**
+ * Tournament settings a client may change, with their sanitizers (REST field names).
+ * @since 2.0.0 (from doroto_tournament_save_via_api)
+ */
+function doroto_service_settings_fields(): array
+{
+	return [
+		'name' => function ($val) {
+			return substr(sanitize_text_field($val), 0, 100);
+		},
+		'courts_available' => 'intval',
+		'tournament_type' => 'intval',
+		'max_players' => 'intval',
+		'whole_names' => 'intval',
+		'minimum_matches' => 'intval',
+		'allow_input_results' => 'intval',
+		'two_special_group' => 'intval',
+		'two_out_group' => 'intval',
+		'special_group_can_win' => 'intval',
+		'temp_suspend_winner' => 'intval',
+		'play_final_match' => 'intval',
+		'min_not_playing' => 'intval',
+		'payment_display' => 'intval',
+		'announce_round_end' => 'intval',
+		'games_hour' => 'intval',
+		'average_result' => 'intval',
+		'visibility' => 'intval',
+		'invitation' => function ($val) {
+			return substr(wp_kses((string) $val, doroto_allowed_html()), 0, 5000);
+		},
+		'latitude' => 'floatval',
+		'longitude' => 'floatval',
+	];
+}
+
+/**
+ * Was the tournament closed more than 24 hours ago? Then its settings stay as they are.
+ * @since 2.0.0 (rule of doroto_tournament_save_via_api)
+ */
+function doroto_service_closed_for_changes(stdClass $tournament): bool
+{
+	if (intval($tournament->close_tournament) !== 1 || empty($tournament->close_date)) {
+		return false;
+	}
+	$closed = strtotime($tournament->close_date . ' UTC');
+	return $closed !== false && (time() - $closed) >= 24 * 3600;
+}
+
+/**
+ * Save tournament settings (organizer only). Missing fields keep their value.
+ * Flags in $params: delete_tournament, empty_tournament (start again with the same players),
+ * new_post (create a WordPress post for the tournament).
+ * The tournament type changes only before the first match was drawn; the sport name
+ * in the tournament name and invitation follows it.
+ * @return array|WP_Error tournament_updated (last_update, post_not_allowed) or tournament_deleted
+ * @since 2.0.0 (merged from doroto_tournament_parameters_results and doroto_tournament_save_via_api)
+ */
+function doroto_service_save_settings(int $tournament_id, array $params)
+{
+	global $wpdb;
+
+	if (get_current_user_id() === 0) {
+		return doroto_service_error('auth_not_logged_in', 401);
+	}
+	if ($tournament_id <= 0) {
+		return doroto_service_error('invalid_tournament_id');
+	}
+	$types = doroto_tournament_types();
+	if (isset($params['tournament_type']) && !array_key_exists(intval($params['tournament_type']), $types)) {
+		// An unknown type was stored as is (e.g. 11) and the tournament then silently played as singles.
+		return doroto_service_error('invalid_tournament_type');
+	}
+
+	return doroto_with_tournament_lock($tournament_id, function () use ($wpdb, $tournament_id, $params, $types) {
+		$tournament = doroto_prepare_tournament($tournament_id);
+		if (!$tournament) {
+			return doroto_service_error('tournament_not_found', 404);
+		}
+		if (doroto_is_admin($tournament_id) == 0) {
+			return doroto_service_error('not_admin_permission', 403);
+		}
+
+		if (!empty($params['delete_tournament'])) {
+			$page_id = intval($tournament->page_id);
+			if ($page_id > 0) {
+				wp_delete_post($page_id, true);
+			}
+			$wpdb->delete($wpdb->prefix . 'doroto_tournaments', ['id' => $tournament_id]);
+			return doroto_service_ok('tournament_deleted');
+		}
+
+		if (doroto_service_closed_for_changes($tournament)) {
+			return doroto_service_error('tournament_closed_for_changes', 403);
+		}
+
+		$fields = [];
+		foreach (doroto_service_settings_fields() as $key => $sanitizer) {
+			if (isset($params[$key])) {
+				$fields[$key] = call_user_func($sanitizer, $params[$key]);
+			}
+		}
+		if (isset($fields['name']) && $fields['name'] === '') {
+			unset($fields['name']);
+		}
+
+		$old_type = intval($tournament->tournament_type);
+		if (isset($fields['tournament_type']) && $fields['tournament_type'] !== $old_type) {
+			$matches = maybe_unserialize($tournament->matches_list);
+			if (is_array($matches) && count($matches) > 1) {
+				unset($fields['tournament_type']);
+			} else {
+				$before = sanitize_text_field($types[$old_type] ?? '');
+				$after = sanitize_text_field($types[$fields['tournament_type']]);
+				if ($before !== '') {
+					foreach (['name', 'invitation'] as $text) {
+						$value = $fields[$text] ?? $tournament->$text;
+						$fields[$text] = str_replace($before, $after, (string) $value);
+					}
+				}
+			}
+		}
+
+		if (!empty($params['empty_tournament'])) {
+			$fields['statistics'] = '';
+			$fields['matches_list'] = '';
+			$fields['open_registration'] = 1;
+			$fields['close_tournament'] = 0;
+			$fields['final_result'] = '';
+			$fields['final_four'] = '';
+			$fields['playing'] = '';
+			$fields['close_date'] = '9999-09-09 09:09:09';
+		}
+
+		$last_update = doroto_now_ms();
+		if (!empty($fields)) {
+			$fields['last_update'] = $last_update;
+			$wpdb->update($wpdb->prefix . 'doroto_tournaments', $fields, ['id' => $tournament_id]);
+		}
+
+		// Names (whole_names) and the special group rules are part of the statistics table.
+		$tournament = doroto_prepare_tournament($tournament_id);
+		$players = maybe_unserialize($tournament->players);
+		$statistics = doroto_create_statistics_table($tournament, is_array($players) ? $players : [], intval($tournament->whole_names));
+		$updated = $wpdb->update(
+			$wpdb->prefix . 'doroto_tournaments',
+			['statistics' => serialize($statistics), 'last_update' => $last_update],
+			['id' => $tournament_id]
+		);
+		if ($updated === false) {
+			return doroto_service_error('db_update_failed', 500);
+		}
+		doroto_service_progress($tournament_id);
+
+		$post_not_allowed = false;
+		if (!empty($params['new_post'])) {
+			$only_admin_posts = intval(doroto_read_settings('only_admin_posts', 1));
+			$level = doroto_is_admin($tournament_id);
+			if (($only_admin_posts == 1 && $level == 2) || ($only_admin_posts == 0 && $level > 0)) {
+				doroto_create_new_tournament_post($tournament_id);
+			} else {
+				$post_not_allowed = true;
+			}
+		}
+
+		return doroto_service_ok('tournament_updated', [
+			'last_update' => max($last_update, doroto_service_stored_last_update($tournament_id)),
+			'post_not_allowed' => $post_not_allowed,
+		]);
+	});
+}
+
+/**
+ * Choose the two final pairs (L1+R1 against L2+R2). Organizer only; closes the tournament.
+ * @return array|WP_Error final_four_saved with last_update
+ * @since 2.0.0 (merged from doroto_save_final_doubles and tournament-save)
+ */
+function doroto_service_set_final_four(int $tournament_id, int $l1, int $p1, int $l2, int $p2)
+{
+	global $wpdb;
+
+	if (get_current_user_id() === 0) {
+		return doroto_service_error('auth_not_logged_in', 401);
+	}
+	$four = [$l1, $p1, $l2, $p2];
+	if (min($four) <= 0) {
+		return doroto_service_error('invalid_data');
+	}
+	if (count(array_unique($four)) !== 4) {
+		return doroto_service_error('final_players_not_different');
+	}
+
+	return doroto_with_tournament_lock($tournament_id, function () use ($wpdb, $tournament_id, $l1, $p1, $l2, $p2) {
+		$tournament = doroto_prepare_tournament($tournament_id);
+		if (!$tournament) {
+			return doroto_service_error('tournament_not_found', 404);
+		}
+		if (doroto_is_admin($tournament_id) == 0) {
+			return doroto_service_error('not_admin_permission', 403);
+		}
+		$last_update = doroto_now_ms();
+		$wpdb->update(
+			$wpdb->prefix . 'doroto_tournaments',
+			[
+				'final_four' => serialize(['l1' => $l1, 'p1' => $p1, 'l2' => $l2, 'p2' => $p2]),
+				'close_tournament' => 1,
+				'last_update' => $last_update,
+			],
+			['id' => $tournament_id]
+		);
+		return doroto_service_ok('final_four_saved', ['last_update' => $last_update]);
+	});
+}
+
+/**
+ * Enter the result of the final match. Organizers, or one of the four finalists when
+ * players may enter results. Closes the tournament.
+ * @return array|WP_Error final_result_saved with last_update
+ * @since 2.0.0 (merged from doroto_update_final_match_result and tournament-save)
+ */
+function doroto_service_set_final_result(int $tournament_id, int $result_1, int $result_2)
+{
+	global $wpdb;
+
+	$user_id = get_current_user_id();
+	if ($user_id === 0) {
+		return doroto_service_error('auth_not_logged_in', 401);
+	}
+	if ($result_1 < 0 || $result_2 < 0 || ($result_1 === 0 && $result_2 === 0)) {
+		return doroto_service_error('invalid_data');
+	}
+
+	return doroto_with_tournament_lock($tournament_id, function () use ($wpdb, $tournament_id, $result_1, $result_2, $user_id) {
+		$tournament = doroto_prepare_tournament($tournament_id);
+		if (!$tournament) {
+			return doroto_service_error('tournament_not_found', 404);
+		}
+		if (doroto_is_admin($tournament_id) == 0) {
+			$four = maybe_unserialize($tournament->final_four);
+			$finalists = is_array($four) ? array_map('intval', array_values($four)) : [];
+			if (intval($tournament->allow_input_results) !== 1 || !in_array($user_id, $finalists, true)) {
+				return doroto_service_error('not_admin_permission', 403);
+			}
+		}
+		$last_update = doroto_now_ms();
+		$wpdb->update(
+			$wpdb->prefix . 'doroto_tournaments',
+			[
+				'final_result' => serialize(['result_1' => $result_1, 'result_2' => $result_2]),
+				'close_tournament' => 1,
+				'last_update' => $last_update,
+			],
+			['id' => $tournament_id]
+		);
+		return doroto_service_ok('final_result_saved', ['last_update' => $last_update]);
 	});
 }

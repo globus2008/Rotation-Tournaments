@@ -971,15 +971,15 @@ add_action('rest_api_init', function () {
 	]);
 });
 
+/**
+ * tournament-save: settings, and also the final pairs (l1, p1, l2, p2) and the
+ * final result (result_1, result_2) as the app sends them.
+ * @version 2.0.0 (services)
+ */
 function doroto_tournament_save_via_api(WP_REST_Request $request)
 {
-	global $wpdb;
-
 	$current_user_id = doroto_get_current_user_id_from_token();
-
 	wp_set_current_user($current_user_id);
-	$fields = [];
-
 	if ($current_user_id === 0) {
 		return new WP_REST_Response(['error_code' => 'auth_not_logged_in'], 401);
 	}
@@ -989,200 +989,51 @@ function doroto_tournament_save_via_api(WP_REST_Request $request)
 		return new WP_REST_Response(['error_code' => 'invalid_tournament_id'], 400);
 	}
 
-	$offer_html = doroto_offer_games($tournament_id, 0);
+	$params = $request->get_params();
+	$last_update = 0;
+	$finals_only = true;
 
-	$tournament = doroto_prepare_tournament($tournament_id);
-	if (!$tournament) {
-		return new WP_REST_Response(['error_code' => 'tournament_not_found'], 404);
-	}
-
-	$is_admin = doroto_is_admin($tournament_id);
-	if ($is_admin == 0) {
-		return new WP_REST_Response(['error_code' => 'not_admin_permission'], 403);
-	}
-
-	$is_final_pair = $request->get_param('l1') !== null
-		&& $request->get_param('p1') !== null
-		&& $request->get_param('l2') !== null
-		&& $request->get_param('p2') !== null;
-
-	$is_final_result = $request->get_param('result_1') !== null
-		&& $request->get_param('result_2') !== null;
-
-	$close_flag = intval($tournament->close_tournament);
-	$close_date_str = $tournament->close_date; // format "YYYY-MM-DD HH:MM:SS"
-
-	$allow_within_24h = false;
-	if ($close_flag === 1 && !empty($close_date_str)) {
-		$closed_ts = strtotime($close_date_str);
-		if ($closed_ts !== false && (time() - $closed_ts) < 24 * 3600) {
-			$allow_within_24h = true;
+	$four = array_map('intval', [$params['l1'] ?? 0, $params['p1'] ?? 0, $params['l2'] ?? 0, $params['p2'] ?? 0]);
+	if (min($four) > 0) {
+		$result = doroto_service_set_final_four($tournament_id, ...$four);
+		if (is_wp_error($result)) {
+			return doroto_service_rest_response($result);
 		}
+		$last_update = $result['last_update'];
 	}
-
-	if (
-		$close_flag === 1
-		&& !$allow_within_24h
-		&& !$is_final_pair
-		&& !$is_final_result
-	) {
-		return new WP_REST_Response(['error_code' => 'tournament_closed_for_changes'], 403);
-	}
-
-
-	$res1 = $request->get_param('result_1');
-	$res2 = $request->get_param('result_2');
-	if ($res1 !== null && $res2 !== null) {
-		$fields['final_result'] = serialize([
-			'result_1' => intval($res1),
-			'result_2' => intval($res2),
-		]);
-		$fields['close_tournament'] = 1;
-	}
-
-	$delete_tournament = intval($request->get_param('delete_tournament'));
-	$empty_tournament = intval($request->get_param('empty_tournament'));
-	$new_post = intval($request->get_param('new_post'));
-
-	$allowed_fields = [
-		'name' => 'sanitize_text_field',
-		'courts_available' => 'intval',
-		'tournament_type' => 'intval',
-		'max_players' => 'intval',
-		'whole_names' => 'intval',
-		'minimum_matches' => 'intval',
-		'allow_input_results' => 'intval',
-		'two_special_group' => 'intval',
-		'two_out_group' => 'intval',
-		'special_group_can_win' => 'intval',
-
-		'temp_suspend_winner' => 'intval',
-		'play_final_match' => 'intval',
-		'min_not_playing' => 'intval',
-		'payment_display' => 'intval',
-		'announce_round_end' => 'intval',
-		'games_hour' => 'intval',
-		'average_result' => 'intval',
-		'visibility' => 'intval',
-		'invitation' => function ($val) {
-			$allowed_html = doroto_allowed_html();
-			return wp_kses($val, $allowed_html);
-		},
-		'latitude' => 'floatval',
-		'longitude' => 'floatval',
-	];
-
-	// An unknown type was stored as is (e.g. 11) and the tournament then
-	// silently played as singles.
-	$requested_type = $request->get_param('tournament_type');
-	if ($requested_type !== null && !array_key_exists(intval($requested_type), doroto_tournament_types())) {
-		return new WP_REST_Response(['error_code' => 'invalid_tournament_type'], 400);
-	}
-
-	foreach ($allowed_fields as $key => $sanitizer) {
-		if ($request->get_param($key) !== null) {
-			$fields[$key] = is_callable($sanitizer)
-				? $sanitizer($request->get_param($key))
-				: $request->get_param($key);
+	if (isset($params['result_1'], $params['result_2'])) {
+		$result = doroto_service_set_final_result($tournament_id, intval($params['result_1']), intval($params['result_2']));
+		if (is_wp_error($result)) {
+			return doroto_service_rest_response($result);
 		}
-	}
-	if ($request->get_param('result_1') !== null && $request->get_param('result_2') !== null) {
-		$fields['final_result'] = serialize([
-			'result_1' => intval($request->get_param('result_1')),
-			'result_2' => intval($request->get_param('result_2')),
-		]);
-	}
-
-	$l1 = intval($request->get_param('l1'));
-	$p1 = intval($request->get_param('p1'));
-	$l2 = intval($request->get_param('l2'));
-	$p2 = intval($request->get_param('p2'));
-
-	if ($l1 > 0 && $p1 > 0 && $l2 > 0 && $p2 > 0) {
-		$fields['final_four'] = serialize([
-			'l1' => $l1,
-			'p1' => $p1,
-			'l2' => $l2,
-			'p2' => $p2,
-		]);
-		$fields['close_tournament'] = 1;
-	}
-
-	$new_last_update = round(microtime(true) * 1000);
-	if ($delete_tournament) {
-		if ($tournament) {
-			$page_id = intval($tournament->page_id);
-			if ($page_id != null) {
-				wp_delete_post($page_id, true);
-			}
-		}
-
-		$wpdb->delete(
-			$wpdb->prefix . 'doroto_tournaments',
-			array('id' => $tournament_id)
-		);
-		return new WP_REST_Response([
-			'success' => true,
-			'action' => 'tournament_deleted'
-		]);
+		$last_update = $result['last_update'];
 	} else {
-		if ($empty_tournament) {
-			$fields['statistics'] = '';
-			$fields['matches_list'] = '';
-			$fields['open_registration'] = 1;
-			$fields['close_tournament'] = 0;
-			$fields['final_result'] = '';
-			$fields['final_four'] = '';
-			$fields['playing'] = '';
-			$fields['close_date'] = '9999-09-09 09:09:09';
-		}
-
-		if (!empty($fields)) {
-			$fields['last_update'] = $new_last_update;
-			$wpdb->update(
-				$wpdb->prefix . 'doroto_tournaments',
-				$fields,
-				['id' => $tournament_id]
-			);
-		}
-		if (!$is_final_result) {
-			$tournament = $wpdb->get_row($wpdb->prepare("SELECT * FROM {$wpdb->prefix}doroto_tournaments WHERE id = %d", $tournament_id));
-
-			$statistics = doroto_create_statistics_table($tournament, unserialize($tournament->players), intval($tournament->whole_names));
-			$result = $wpdb->update("{$wpdb->prefix}doroto_tournaments", [
-				'statistics' => serialize($statistics),
-				'last_update' => $new_last_update
-			], ['id' => $tournament_id]);
-			if ($result === false) {
-				return new WP_REST_Response(['error_code' => 'db_update_failed'], 500);
-			}
-			doroto_tournament_progress($tournament_id);
-		}
-
-		if ($new_post) {
-			$current_user = wp_get_current_user();
-			$only_admin_posts = intval(doroto_read_settings('only_admin_posts', 1));
-			if ((($only_admin_posts == 1) && (doroto_is_admin($tournament_id) == 2)) || (($only_admin_posts == 0) && (doroto_is_admin($tournament_id) > 0))) {
-				doroto_create_new_tournament_post($tournament_id);
-			} else {
-				return new WP_REST_Response(['error' => 'You do not have the necessary rights to create a post.'], 403);
-			}
-		}
+		$finals_only = min($four) > 0;
 	}
 
-	$saved = $wpdb->get_var(
-		$wpdb->prepare(
-			"SELECT final_result FROM {$wpdb->prefix}doroto_tournaments WHERE id = %d",
-			$tournament_id
-		)
-	);
-	$saved_un = maybe_unserialize($saved);
-	$wpdb->update($wpdb->prefix . 'doroto_tournaments', ['last_update' => $new_last_update], ['id' => $tournament_id]);
+	foreach (array_merge(array_keys(doroto_service_settings_fields()), ['delete_tournament', 'empty_tournament', 'new_post']) as $key) {
+		if (isset($params[$key])) {
+			$finals_only = false;
+		}
+	}
+	if (!$finals_only) {
+		$result = doroto_service_save_settings($tournament_id, $params);
+		if (is_wp_error($result)) {
+			return doroto_service_rest_response($result);
+		}
+		if ($result['action'] === 'tournament_deleted') {
+			return new WP_REST_Response(['success' => true, 'action' => 'tournament_deleted']);
+		}
+		if ($result['post_not_allowed']) {
+			return new WP_REST_Response(['error' => 'You do not have the necessary rights to create a post.'], 403);
+		}
+		$last_update = $result['last_update'];
+	}
 
 	return new WP_REST_Response([
 		'success' => true,
 		'action' => 'tournament_updated',
-		'last_update' => $new_last_update,
+		'last_update' => $last_update,
 	]);
 }
 

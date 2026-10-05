@@ -405,12 +405,11 @@ function doroto_change_game_form_submit()
 	$result_1 = isset($_POST['game_result_1']) ? intval($_POST['game_result_1']) : -1;
 	$result_2 = isset($_POST['game_result_2']) ? intval($_POST['game_result_2']) : -1;
 
-	if ($match_number === 0 && $result_1 >= 0 && $result_2 >= 0) {
-		$output = '';
-		if (doroto_save_final_result($tournament_id, $result_1 . ':' . $result_2)) {
-			$output = __('The result of the final match', 'doubles-rotation-tournament') . ' ' . __('was changed.', 'doubles-rotation-tournament');
-		}
-		doroto_tournament_progress($tournament_id);
+	if ($match_number === 0) {
+		$result = doroto_service_set_final_result($tournament_id, $result_1, $result_2);
+		$output = is_wp_error($result)
+			? doroto_service_message($result, $tournament_id)
+			: __('The result of the final match', 'doubles-rotation-tournament') . ' ' . __('was changed.', 'doubles-rotation-tournament');
 	} else {
 		$output = doroto_service_message(doroto_service_change_result($tournament_id, $match_number, $result_1, $result_2), $tournament_id);
 	}
@@ -2836,152 +2835,36 @@ function doroto_add_tournament_parameters()
 /**
  * edit tournament variables after submitting form
  * @since 1.0.0
- * @version 1.4.7 (last update info,empty_tournament with correct value)
+ * @version 2.0.0 (doroto_service_save_settings)
  */
 function doroto_tournament_parameters_results()
 {
-	global $wpdb;
-	global $doroto_output_form;
-	$output = '';
-
 	if (!isset($_POST['_wpnonce']) || !wp_verify_nonce(sanitize_text_field(wp_unslash($_POST['_wpnonce'])), 'doroto_tournament_parameters_form_nonce')) {
 		wp_die(esc_html__('Invalid request.', 'doubles-rotation-tournament'));
 	}
-
-	if (!is_user_logged_in()) {
-		$output = sanitize_text_field(__("You must log in to change tournament parameters!", "doubles-rotation-tournament"));
-		doroto_info_messsages_save($output);
-		$tournament_id = doroto_getTournamentId();
-		doroto_redirect_modify_url($tournament_id, "");
+	$tournament_id = isset($_POST['tournament_id']) ? intval($_POST['tournament_id']) : intval(doroto_getTournamentId());
+	if (!isset($_POST['doroto_tournament_parameters_save'])) {
+		doroto_redirect_modify_url($tournament_id, "doroto-tournament-editing");
 		exit;
 	}
-	if (isset($_POST['doroto_tournament_parameters_save'])) {
-		$tournament_id = intval($_POST['tournament_id']);
-		$tournament = doroto_prepare_tournament($tournament_id);
 
-		if (isset($_POST['doroto_tournament_parameters_delete_tournament'])) {
-			if ($tournament) {
-				$page_id = intval($tournament->page_id);
-				if ($page_id != null) {
-					wp_delete_post($page_id, true);
-				}
-			}
-
-			$wpdb->delete(
-				$wpdb->prefix . 'doroto_tournaments',
-				array('id' => $tournament_id)
-			);
-		} else {
-			$allowed_html = doroto_allowed_html();
-
-			$name = sanitize_text_field($_POST['doroto_tournament_parameters_name']);
-			$name = substr($name, 0, 100);
-			$invitation = wp_kses($_POST['doroto_tournament_parameters_invitation'], $allowed_html);
-			$invitation = substr($invitation, 0, 5000);
-			$average_result = intval($_POST['doroto_tournament_parameters_average_result']);
-			$max_players = intval($_POST['doroto_tournament_parameters_max_players']);
-			$whole_names = intval($_POST['doroto_tournament_parameters_whole_names']);
-			$minimum_matches = intval($_POST['doroto_tournament_parameters_minimum_matches']);
-			$temp_suspend_winner = intval($_POST['doroto_tournament_parameters_temp_suspend_winner']);
-			$special_group_can_win = intval($_POST['doroto_tournament_parameters_special_group_can_win']);
-			$two_special_group = intval($_POST['doroto_tournament_parameters_two_special_group']);
-			$two_out_group = intval($_POST['doroto_tournament_parameters_two_out_group']);
-			$allow_input_results = intval($_POST['doroto_tournament_parameters_allow_input_results']);
-			$play_final_match = intval($_POST['doroto_tournament_parameters_play_final_match']);
-			$courts_available = intval($_POST['doroto_tournament_parameters_courts_number']);
-			$min_not_playing = intval($_POST['doroto_tournament_parameters_min_not_playing']);
-			$table_name = $wpdb->prefix . 'doroto_tournaments';
-			$payment_display = intval($_POST['doroto_tournament_parameters_payment_display']);
-			$announce_round_end = intval($_POST['doroto_tournament_parameters_announce_round_end']);
-			$games_hour = intval($_POST['doroto_tournament_parameters_games_hour']);
-			$visibility = intval($_POST['doroto_tournament_parameters_visibility']);
-			$latitude = floatval($_POST['doroto_tournament_parameters_latitude']);
-			$longitude = floatval($_POST['doroto_tournament_parameters_longitude']);
-
-			$games = maybe_unserialize($tournament->matches_list);
-			$games = is_array($games) ? $games : $games = [];
-
-			if (count($games) > 1) {
-				$tournament_type = intval($tournament->tournament_type);
-			} else {
-				$options = doroto_tournament_types();
-				$tournament_type = intval($tournament->tournament_type);
-				$tournament_short_name_before = sanitize_text_field($options[$tournament_type]);
-				$tournament_type = intval($_POST['doroto_tournament_parameters_tournament_type']);
-				$tournament_short_name_after = sanitize_text_field($options[$tournament_type]);
-
-				$invitation = str_replace($tournament_short_name_before, $tournament_short_name_after, $invitation);
-				$name = str_replace($tournament_short_name_before, $tournament_short_name_after, $name);
-			}
-
-
-			$fields = array(
-				'average_result' => $average_result,
-				'max_players' => $max_players,
-				'whole_names' => $whole_names,
-				'minimum_matches' => $minimum_matches,
-				'temp_suspend_winner' => $temp_suspend_winner,
-				'special_group_can_win' => $special_group_can_win,
-				'two_special_group' => $two_special_group,
-				'two_out_group' => $two_out_group,
-				'allow_input_results' => $allow_input_results,
-				'play_final_match' => $play_final_match,
-				'courts_available' => $courts_available,
-				'min_not_playing' => $min_not_playing,
-				'invitation' => $invitation,
-				'payment_display' => $payment_display,
-				'tournament_type' => $tournament_type,
-				'announce_round_end' => $announce_round_end,
-				'games_hour' => $games_hour,
-				'visibility' => $visibility,
-				'longitude' => $longitude,
-				'latitude' => $latitude,
-			);
-
-			if (isset($_POST['doroto_tournament_parameters_empty_tournament'])) {
-				$fields['statistics'] = '';
-				$fields['matches_list'] = '';
-				$fields['open_registration'] = 1;
-				$fields['close_tournament'] = 0;
-				$fields['final_result'] = '';
-				$fields['final_four'] = '';
-				$fields['playing'] = '';
-				$fields['close_date'] = '9999-09-09 09:09:09';
-			}
-
-			if ($name != '') {
-				$fields['name'] = $name;
-			}
-			$wpdb->update(
-				$table_name,
-				$fields,
-				array('id' => $tournament_id)
-			);
-
-			$tournament = $wpdb->get_row($wpdb->prepare("SELECT * FROM {$wpdb->prefix}doroto_tournaments WHERE id = %d", $tournament_id));
-
-			$statistics = doroto_create_statistics_table($tournament, unserialize($tournament->players), intval($tournament->whole_names));
-			$wpdb->update("{$wpdb->prefix}doroto_tournaments", [
-				'statistics' => serialize($statistics),
-				'last_update'  => round(microtime(true) * 1000)
-			], ['id' => $tournament_id]);
-
-			if (isset($_POST['doroto_tournament_parameters_new_post'])) {
-				$current_user = wp_get_current_user();
-				$only_admin_posts = intval(doroto_read_settings('only_admin_posts', 1));
-				if ((($only_admin_posts == 1) && (doroto_is_admin($tournament_id) == 2)) || (($only_admin_posts == 0) && (doroto_is_admin($tournament_id) > 0))) {
-					doroto_create_new_tournament_post($tournament_id);
-				} else {
-					$output .= sanitize_text_field(__('You do not have the necessary rights to create a post.', 'doubles-rotation-tournament')) . '<br>';
-				}
-			}
+	// Form fields are named doroto_tournament_parameters_<REST field>; the courts field differs.
+	$params = [];
+	$prefix = 'doroto_tournament_parameters_';
+	foreach (array_keys(doroto_service_settings_fields()) as $key) {
+		$field = $prefix . ($key === 'courts_available' ? 'courts_number' : $key);
+		if (isset($_POST[$field])) {
+			$params[$key] = wp_unslash($_POST[$field]); // sanitized by the service
 		}
-		$output .= sanitize_text_field(__('Tournament parameters no.', 'doubles-rotation-tournament') . ' ' . $tournament_id . ' ' . __('were saved.', 'doubles-rotation-tournament'));
-		doroto_tournament_progress($tournament_id);
-		doroto_info_messsages_save($output);
-		doroto_redirect_modify_url($tournament_id, "tournament-editing");
-		exit;
 	}
+	foreach (['delete_tournament', 'empty_tournament', 'new_post'] as $flag) {
+		$params[$flag] = isset($_POST[$prefix . $flag]) ? 1 : 0;
+	}
+
+	$result = doroto_service_save_settings($tournament_id, $params);
+	doroto_info_messsages_save(sanitize_text_field(doroto_service_message($result, $tournament_id)));
+	doroto_redirect_modify_url($tournament_id, "doroto-tournament-editing");
+	exit;
 }
 
 add_shortcode('doroto_tournament_parameters', 'doroto_add_tournament_parameters');

@@ -1335,59 +1335,31 @@ function doroto_select_final_doubles(array $player_results, ?stdClass $tournamen
 
 
 /**
- * save 4 finalists
+ * save the final pairs after submitting the form (the form posts to the page itself)
  * @since 1.0.0
+ * @version 2.0.0 (doroto_service_set_final_four, redirect after saving)
  */
 function doroto_save_final_doubles()
 {
-	global $wpdb;
-	global $doroto_output_form;
-	$output = '';
-
-	if (isset($_POST['final_doubles']) && isset($_POST['tournament_id'])) {
-		$tournament_id_check = intval($_POST['tournament_id']);
-		$nonce = isset($_POST['doroto_final_doubles_nonce']) ? sanitize_text_field(wp_unslash($_POST['doroto_final_doubles_nonce'])) : '';
-		if (
-			!is_user_logged_in()
-			|| !wp_verify_nonce($nonce, 'doroto_final_doubles_' . $tournament_id_check)
-			|| doroto_prepare_tournament($tournament_id_check) === null
-			|| doroto_is_admin($tournament_id_check) == 0
-		) {
-			$doroto_output_form = esc_html__('You do not have permission to perform this action.', 'doubles-rotation-tournament');
-			return $doroto_output_form;
-		}
-		$l1 = intval($_POST['l1']);
-		$p1 = intval($_POST['p1']);
-		$l2 = intval($_POST['l2']);
-		$p2 = intval($_POST['p2']);
-
-		if (($l1 <= 0) || ($p1 <= 0) || ($l2 <= 0) || ($p2 <= 0)) {
-			$output = esc_html__('Invalid value entered.', 'doubles-rotation-tournament');
-			$doroto_output_form = $output;
-			return $output;
-		}
-
-		$tournament_id = isset($_POST['tournament_id']) ? intval($_POST['tournament_id']) : 0;
-		// Read and write the final four under the tournament lock.
-		doroto_lock_tournament($tournament_id);
-		register_shutdown_function('doroto_unlock_tournament', $tournament_id);
-		$tournament = doroto_prepare_tournament($tournament_id);
-
-		if ($tournament == null) {
-			$doroto_output_form = esc_html__('The tournament was not found.', 'doubles-rotation-tournament');
-			return $doroto_output_form;
-		}
-
-		if ($l1 != $p1 && $l1 != $l2 && $l1 != $p2 && $p1 != $l2 && $p1 != $p2 && $l2 != $p2) {
-			doroto_update_final_four($tournament, $l1, $p1, $l2, $p2);
-			$output .= esc_html__('Final group composition saved.', 'doubles-rotation-tournament') . '<br>';
-			$output .= esc_html__('You can start playing the final match.', 'doubles-rotation-tournament');
-		} else {
-			$output .= esc_html__('Please choose different names for L1, R1, L2 and R2!', 'doubles-rotation-tournament');
-		}
+	if (!isset($_POST['final_doubles']) || !isset($_POST['tournament_id'])) {
+		return '';
 	}
-	$doroto_output_form = $output;
-	return $output;
+	$tournament_id = intval($_POST['tournament_id']);
+	$nonce = isset($_POST['doroto_final_doubles_nonce']) ? sanitize_text_field(wp_unslash($_POST['doroto_final_doubles_nonce'])) : '';
+	if (!wp_verify_nonce($nonce, 'doroto_final_doubles_' . $tournament_id)) {
+		$result = doroto_service_error('not_admin_permission', 403);
+	} else {
+		$result = doroto_service_set_final_four(
+			$tournament_id,
+			isset($_POST['l1']) ? intval($_POST['l1']) : 0,
+			isset($_POST['p1']) ? intval($_POST['p1']) : 0,
+			isset($_POST['l2']) ? intval($_POST['l2']) : 0,
+			isset($_POST['p2']) ? intval($_POST['p2']) : 0
+		);
+	}
+	doroto_info_messsages_save(sanitize_text_field(doroto_service_message($result, $tournament_id)));
+	doroto_redirect_modify_url($tournament_id, "");
+	exit;
 }
 
 add_action('init', 'doroto_save_final_doubles'); //template_redirect
@@ -1511,34 +1483,24 @@ function doroto_result_final_doubles($player_results, ?stdClass $tournament, WP_
 
 
 /**
- * update final match result
+ * save the result of the final match after submitting the form
  * @since 1.0.0
+ * @version 2.0.0 (doroto_service_set_final_result)
  */
 function doroto_update_final_match_result()
 {
-	global $wpdb;
-	global $doroto_output_form;
-
 	if (! isset($_POST['_wpnonce']) || ! wp_verify_nonce(sanitize_text_field(wp_unslash($_POST['_wpnonce'])), 'doroto_submit_final_nonce')) {
 		wp_die(esc_html__('Invalid request.', 'doubles-rotation-tournament'));
 	}
-
-	if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['tournament_id'])) {
-
-		$tournament_id = isset($_POST['tournament_id']) ? intval($_POST['tournament_id']) : 0;
-		$tournament = doroto_prepare_tournament($tournament_id);
-
-		$result_1 = isset($_POST['final_result_1']) ? sanitize_text_field($_POST['final_result_1']) : 0;
-		$result_2 = isset($_POST['final_result_2']) ? sanitize_text_field($_POST['final_result_2']) : 0;
-		$final_result = $result_1 . ':' . $result_2;
-
-		if (doroto_save_final_result($tournament_id, $final_result)) {
-			$output = esc_html__('The final match is over!', 'doubles-rotation-tournament');
-			doroto_info_messsages_save($output);
-			doroto_redirect_modify_url($tournament_id, "");
-			exit;
-		}
-	}
+	$tournament_id = isset($_POST['tournament_id']) ? intval($_POST['tournament_id']) : 0;
+	$result = doroto_service_set_final_result(
+		$tournament_id,
+		isset($_POST['final_result_1']) ? intval($_POST['final_result_1']) : -1,
+		isset($_POST['final_result_2']) ? intval($_POST['final_result_2']) : -1
+	);
+	doroto_info_messsages_save(sanitize_text_field(doroto_service_message($result, $tournament_id)));
+	doroto_redirect_modify_url($tournament_id, "");
+	exit;
 }
 
 add_action('admin_post_doroto_submit_final_result', 'doroto_update_final_match_result');
