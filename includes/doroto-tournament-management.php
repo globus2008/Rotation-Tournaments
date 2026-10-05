@@ -1615,62 +1615,26 @@ function doroto_update_final_four(?stdClass $tournament, int $l1, int $p1, int $
 
 
 /**
- * update mach result after submitting form
+ * update match result after submitting the web form
  * @since 1.0.0
- * @version 1.0.0
+ * @version 2.0.0 (doroto_service_enter_result: the next match is drawn right away)
  */
 function doroto_update_match_result()
 {
-	global $wpdb;
-	global $doroto_output_form;
-	$output = "";
-
-	$match_number_post = isset($_POST['match_number']) ? intval($_POST['match_number']) : 0;
-
 	if (! isset($_POST['_wpnonce']) || ! wp_verify_nonce(sanitize_text_field(wp_unslash($_POST['_wpnonce'])), 'doroto_submit_match_result_nonce')) {
 		wp_die(esc_html__('Invalid request.', 'doubles-rotation-tournament'));
 	}
 
-	if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['tournament_id']) && isset($_POST['match_number']) && isset($_POST['hide_' . $match_number_post])) {
-		if ($match_number_post <= 0) {
-			$output = esc_html__('Invalid value entered.', 'doubles-rotation-tournament');
-			doroto_info_messsages_save($output);
-			$tournament_id = doroto_getTournamentId();
-			doroto_redirect_modify_url($tournament_id, "");
-			exit;
-		}
+	$tournament_id = isset($_POST['tournament_id']) ? intval($_POST['tournament_id']) : intval(doroto_getTournamentId());
+	$match_number = isset($_POST['match_number']) ? intval($_POST['match_number']) : 0;
+	$hide = isset($_POST['hide_' . $match_number]) && intval($_POST['hide_' . $match_number]) === 1;
+	$result_1 = isset($_POST['result_1']) ? intval($_POST['result_1']) : 0;
+	$result_2 = isset($_POST['result_2']) ? intval($_POST['result_2']) : 0;
 
-		$tournament_id = intval($_POST['tournament_id']);
-		$tournament = doroto_prepare_tournament($tournament_id);
-
-		if ($tournament) {
-			$hide = isset($_POST['hide_' . $match_number_post]) ? intval($_POST['hide_' . $match_number_post]) : 0;
-			if ($hide != 1 && $hide != 0) {
-				$hide = 0;
-			}
-
-			$result_1 = isset($_POST['result_1']) ? sanitize_text_field($_POST['result_1']) : 0;
-			$result_2 = isset($_POST['result_2']) ? sanitize_text_field($_POST['result_2']) : 0;
-
-			$result_1 = intval($result_1);
-			$result_1 = is_numeric($result_1) ? $result_1 : 0;
-			$result_2 = intval($result_2);
-			$result_2 = is_numeric($result_2) ? $result_2 : 0;
-			if (($result_1 < 0 || $result_2 < 0) ||  ($result_1 == 0 && $result_2 == 0 && $hide != 1)) {
-				$output = esc_html__('Invalid value entered.', 'doubles-rotation-tournament');
-				doroto_info_messsages_save($output);
-				doroto_redirect_modify_url($tournament_id, "");
-				exit;
-			}
-			$endpoint_request = false;
-			doroto_save_match_result($match_number_post, $tournament_id, $tournament, $result_1, $result_2, $hide, $output, 0, $endpoint_request);
-
-			doroto_tournament_progress($tournament_id);
-			doroto_info_messsages_save($output);
-			doroto_redirect_modify_url($tournament_id, "");
-			exit;
-		}
-	}
+	$result = doroto_service_enter_result($tournament_id, $match_number, $result_1, $result_2, $hide);
+	doroto_info_messsages_save(sanitize_text_field(doroto_service_message($result, $tournament_id)));
+	doroto_redirect_modify_url($tournament_id, "");
+	exit;
 }
 
 
@@ -1697,103 +1661,116 @@ function doroto_save_match_result(int $match_number_post, int $tournament_id, ?s
 
 /**
  * Body of doroto_save_match_result(); caller must hold the tournament lock.
+ * Kept for the old callers (web form, demo data); it turns the result of
+ * doroto_store_match_result_locked() into the old $output text / redirect / WP_Error.
  * @since 1.6.0
+ * @version 2.0.0 (doroto_store_match_result_locked)
  */
 function doroto_save_match_result_locked(int $match_number_post, int $tournament_id, ?stdClass $tournament, int $result_1, int $result_2, bool $hide, string &$output, int $last_update, bool $endpoint_request)
 {
+	if (!$tournament) {
+		return;
+	}
+	$result = doroto_store_match_result_locked($tournament, $match_number_post, $result_1, $result_2, $hide, $last_update);
+	$output = doroto_service_message($result, $tournament_id);
+	if (is_wp_error($result) && $result->get_error_code() === 'match_already_entered') {
+		if (!$endpoint_request) {
+			doroto_info_messsages_save($output);
+			doroto_redirect_modify_url($tournament_id, "");
+			exit;
+		}
+		// The app shows this message; it expects code "forbidden" with HTTP 200.
+		return new WP_Error('forbidden', esc_html($output), ['status' => 200]);
+	}
+}
+
+/**
+ * Store the result of an open match, or skip it ($hide). Caller must hold the tournament lock
+ * and pass a fresh tournament row. Does not draw new matches.
+ * @return array|WP_Error doroto_service_ok('match_result_updated', [match_number, result_1, result_2, hidden, last_update])
+ *                        or match_already_entered (data: result_1, result_2), match_not_found, tournament_not_scheduled
+ * @since 2.0.0 (from doroto_save_match_result_locked)
+ */
+function doroto_store_match_result_locked(stdClass $tournament, int $match_number, int $result_1, int $result_2, bool $hide, int $last_update = 0)
+{
 	global $wpdb;
-	global $doroto_output_form;
 
-	if ($tournament) {
-		$announce_round_end = intval($tournament->announce_round_end);
-		$matches = maybe_unserialize($tournament->matches_list);
-		$statistics = maybe_unserialize($tournament->statistics);
+	$tournament_id = intval($tournament->id);
+	$announce_round_end = intval($tournament->announce_round_end);
+	$matches = maybe_unserialize($tournament->matches_list);
+	if (!is_array($matches)) {
+		return doroto_service_error('tournament_not_scheduled');
+	}
 
-		if (is_array($matches)) {
-
-			$found = false;
-			$found_key = null;
-			foreach ($matches as $match_key => &$match) {
-				if ($match['match_number'] == $match_number_post) {
-					$found = true;
-					$found_key = $match_key;
-					if ($match['result_1'] == 0 && $match['result_2'] == 0 && $match['hide'] == 0) {
-						$match['result_1'] = $result_1;
-						$match['result_2'] = $result_2;
-						$match['played'] = 1;
-						$match['hide'] = $hide;
-
-						$correct = false;
-						if ($match['hide'] != 1) {
-							if ($announce_round_end > 2) {
-								$announce_round_end -= 2;
-							}
-
-							$remove_players = true;
-							doroto_update_statistics_by_result($tournament_id, $tournament, $match, $correct, $remove_players);
-							$output = esc_html__('The result of match no.', 'doubles-rotation-tournament') . ' ' . esc_html($match['match_number']) . ' ' . esc_html__('was saved with a score', 'doubles-rotation-tournament') . ' ' . esc_html($match['result_1']) . ':' . esc_html($match['result_2']) . '.';
-						} else {
-							$output = esc_html__('Match no.', 'doubles-rotation-tournament') . ' ' . esc_html($match['match_number']) . ' ' . esc_html__('was skipped.', 'doubles-rotation-tournament');
-							$match['result_1'] = 0;
-							$match['result_2'] = 0;
-							$match['hide'] = 1;
-						}
-					} else {
-						$output = esc_html__('The result of match no.', 'doubles-rotation-tournament') . ' ' . esc_html($match['match_number']) . ' ' . esc_html__('was previously entered with a score', 'doubles-rotation-tournament') . ' ' . esc_html($match['result_1']) . ':' . esc_html($match['result_2']) . '.';
-						if (!$endpoint_request) {
-							doroto_info_messsages_save($output);
-							doroto_redirect_modify_url($tournament_id, "");
-							exit;
-						} else {
-							return new WP_Error('forbidden', $output, ['status' => 200]);
-						}
-					}
-					break;
-				}
-			}
-			unset($match);
-			if (!$found) {
-				$output = esc_html__('The match was not found.', 'doubles-rotation-tournament');
-				return;
-			}
-			$match = $matches[$found_key];
-			// The Doroto app reloads only when last_update grows, so it must never be 0.
-			if ($last_update == 0) {
-				$last_update = doroto_now_ms();
-			}
-			if ($match['hide'] != 1) {
-				$wpdb->update("{$wpdb->prefix}doroto_tournaments", [
-					'matches_list' => serialize($matches),
-					'announce_round_end' => intval($announce_round_end),
-					'last_update'  => $last_update
-				], ['id' => $tournament_id]);
-			} else {
-				$playersInMatch = [$match['player_1'], $match['player_2'], $match['player_3'], $match['player_4']];
-				$playing = maybe_unserialize($tournament->playing);
-
-				foreach ($playersInMatch as $playerToRemove) {
-					$key = array_search($playerToRemove, $playing);
-					if ($key !== false) {
-						unset($playing[$key]);
-					}
-				}
-
-				$playing = array_values($playing);
-				$wpdb->update(
-					"{$wpdb->prefix}doroto_tournaments",
-					array(
-						'matches_list' => serialize($matches),
-						'playing' => serialize($playing),
-						'announce_round_end' => intval($announce_round_end),
-						'last_update'  => $last_update
-					),
-					array('id' => $tournament_id)
-				);
-			}
-		} else {
-			$output = esc_html__('Tournament no.', 'doubles-rotation-tournament') . ' ' . esc_html($tournament_id) . ' ' . esc_html__('has not been scheduled yet.', 'doubles-rotation-tournament');
+	$found_key = null;
+	foreach ($matches as $match_key => $match) {
+		if ($match['match_number'] == $match_number) {
+			$found_key = $match_key;
+			break;
 		}
 	}
+	if ($found_key === null) {
+		return doroto_service_error('match_not_found', 404);
+	}
+
+	$match = $matches[$found_key];
+	if (!($match['result_1'] == 0 && $match['result_2'] == 0 && $match['hide'] == 0)) {
+		return new WP_Error('match_already_entered', 'match_already_entered', [
+			'status' => 409,
+			'match_number' => intval($match['match_number']),
+			'result_1' => intval($match['result_1']),
+			'result_2' => intval($match['result_2']),
+		]);
+	}
+
+	$match['played'] = 1;
+	if ($hide) {
+		$match['result_1'] = 0;
+		$match['result_2'] = 0;
+		$match['hide'] = 1;
+	} else {
+		$match['result_1'] = $result_1;
+		$match['result_2'] = $result_2;
+		$match['hide'] = 0;
+		if ($announce_round_end > 2) {
+			$announce_round_end -= 2;
+		}
+		doroto_update_statistics_by_result($tournament_id, $tournament, $match, false, true);
+	}
+	$matches[$found_key] = $match;
+
+	// The Doroto app reloads only when last_update grows, so it must never be 0.
+	if ($last_update == 0) {
+		$last_update = doroto_now_ms();
+	}
+	$data = [
+		'matches_list' => serialize($matches),
+		'announce_round_end' => $announce_round_end,
+		'last_update' => $last_update,
+	];
+	if ($hide) {
+		// A finished match frees its players in doroto_update_statistics_by_result();
+		// a skipped one frees them here.
+		$players_in_match = [$match['player_1'], $match['player_2'], $match['player_3'], $match['player_4']];
+		$playing = maybe_unserialize($tournament->playing);
+		$playing = is_array($playing) ? $playing : [];
+		foreach ($players_in_match as $player) {
+			$key = array_search($player, $playing);
+			if ($key !== false) {
+				unset($playing[$key]);
+			}
+		}
+		$data['playing'] = serialize(array_values($playing));
+	}
+	$wpdb->update("{$wpdb->prefix}doroto_tournaments", $data, ['id' => $tournament_id]);
+
+	return doroto_service_ok('match_result_updated', [
+		'match_number' => intval($match['match_number']),
+		'result_1' => intval($match['result_1']),
+		'result_2' => intval($match['result_2']),
+		'hidden' => $hide ? 1 : 0,
+		'last_update' => $last_update,
+	]);
 }
 
 

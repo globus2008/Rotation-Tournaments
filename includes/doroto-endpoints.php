@@ -1868,7 +1868,6 @@ add_action('rest_api_init', function () {
 
 function doroto_rest_update_match_result(WP_REST_Request $request)
 {
-	global $wpdb;
 	$current_user_id = intval(doroto_get_current_user_id_from_token());
 	if ($current_user_id <= 0) {
 		return new WP_REST_Response(['error_code' => 'auth_unauthorized'], 401);
@@ -1876,86 +1875,26 @@ function doroto_rest_update_match_result(WP_REST_Request $request)
 	wp_set_current_user($current_user_id);
 
 	$tournament_id = intval($request->get_param('tournament_id'));
-	$match_number = intval($request->get_param('match_number'));
-	$result_1 = intval($request->get_param('result_1'));
-	$result_2 = intval($request->get_param('result_2'));
-	$hide = intval($request->get_param('hide'));
+	$result = doroto_service_enter_result(
+		$tournament_id,
+		intval($request->get_param('match_number')),
+		intval($request->get_param('result_1')),
+		intval($request->get_param('result_2')),
+		intval($request->get_param('hide')) === 1
+	);
 
-	if ($match_number <= 0 || $result_1 < 0 || $result_2 < 0) {
-		return new WP_REST_Response(['error_code' => 'invalid_data'], 400);
+	if (is_wp_error($result) && $result->get_error_code() === 'match_already_entered') {
+		// Answer of 1.4.7-1.6.x that the app shows as a message: code "forbidden", HTTP 200.
+		return new WP_Error('forbidden', esc_html(doroto_service_message($result, $tournament_id)), ['status' => 200]);
 	}
-
-	$tournament = doroto_prepare_tournament($tournament_id);
-	if (!$tournament) {
-		return new WP_REST_Response(['error_code' => 'tournament_not_found'], 404);
+	if (is_wp_error($result)) {
+		return doroto_service_rest_response($result);
 	}
-	$is_admin = doroto_is_admin($tournament_id) > 0;
-	$allow_input_results = intval($tournament->allow_input_results);
-
-	if (!$is_admin) {
-		$matches = maybe_unserialize($tournament->matches_list);
-		if (!is_array($matches)) {
-			$matches = [];
-		}
-		// IDs may be stored as strings or ints in the serialized data, so compare as ints.
-		$allowed = array_filter($matches, function ($m) use ($match_number, $current_user_id) {
-			return $m['match_number'] == $match_number
-				&& in_array($current_user_id, array_map('intval', [
-					$m['player_1'],
-					$m['player_2'],
-					$m['player_3'],
-					$m['player_4']
-				]), true);
-		});
-		if (empty($allowed) || $allow_input_results == 0) {
-			return new WP_REST_Response(['error_code' => 'edit_match_forbidden'], 403);
-		}
-	}
-
-	$output_message = '';
-	$new_last_update = doroto_now_ms();
-	$endpoint_request = true;
-
-	// Save, recompute progress and draw the next match as one atomic step,
-	// so results entered on several courts at once cannot overwrite each other.
-	doroto_lock_tournament($tournament_id);
-	try {
-		ob_start();
-		$save_result = doroto_save_match_result(
-			$match_number,
-			$tournament_id,
-			$tournament,
-			$result_1,
-			$result_2,
-			$hide,
-			$output_message,
-			$new_last_update,
-			$endpoint_request
-		);
-		ob_end_clean();
-		if (is_wp_error($save_result)) {
-			return $save_result;
-		}
-		doroto_tournament_progress($tournament_id);
-
-		$offer_html = doroto_offer_games($tournament_id, 0);
-		$no_new_match = ($offer_html !== '');
-	} finally {
-		doroto_unlock_tournament($tournament_id);
-	}
-
-	// Return the real stored value (progress and the draw bump it again),
-	// otherwise the app's next check-update would report a "newer" version.
-	$stored_last_update = intval($wpdb->get_var($wpdb->prepare(
-		"SELECT last_update FROM {$wpdb->prefix}doroto_tournaments WHERE id = %d",
-		$tournament_id
-	)));
-
 	return rest_ensure_response([
 		'success' => true,
 		'action' => 'match_result_updated',
-		'no_new_match' => $no_new_match,
-		'last_update' => max($stored_last_update, $new_last_update),
+		'no_new_match' => $result['no_new_match'],
+		'last_update' => $result['last_update'],
 	]);
 }
 
@@ -1991,78 +1930,16 @@ add_action('rest_api_init', function () {
 
 function doroto_rest_skip_matches(WP_REST_Request $request)
 {
-	global $wpdb;
 	$current_user_id = intval(doroto_get_current_user_id_from_token());
 	if ($current_user_id <= 0) {
 		return new WP_REST_Response(['error_code' => 'auth_unauthorized'], 401);
 	}
 	wp_set_current_user($current_user_id);
 
-	$tournament_id = intval($request->get_param('tournament_id'));
-	$match_numbers = array_values(array_unique(array_filter(
-		array_map('intval', (array) $request->get_param('match_numbers')),
-		function ($n) {
-			return $n > 0;
-		}
-	)));
-	if (empty($match_numbers)) {
-		return new WP_REST_Response(['error_code' => 'invalid_data'], 400);
-	}
-
-	$tournament = doroto_prepare_tournament($tournament_id);
-	if (!$tournament) {
-		return new WP_REST_Response(['error_code' => 'tournament_not_found'], 404);
-	}
-	if (doroto_is_admin($tournament_id) <= 0) {
-		return new WP_REST_Response(['error_code' => 'auth_forbidden'], 403);
-	}
-
-	// Only matches still being played can be skipped; a match whose result
-	// arrived in the meantime is left alone.
-	$open = [];
-	$matches = maybe_unserialize($tournament->matches_list);
-	foreach (is_array($matches) ? $matches : [] as $match) {
-		if (
-			intval($match['match_number']) > 0 && intval($match['hide']) == 0
-			&& intval($match['result_1']) == 0 && intval($match['result_2']) == 0
-		) {
-			$open[] = intval($match['match_number']);
-		}
-	}
-
-	$skipped = 0;
-	ob_start();
-	foreach ($match_numbers as $match_number) {
-		if (!in_array($match_number, $open, true)) {
-			continue;
-		}
-		$output_message = '';
-		$result = doroto_save_match_result($match_number, $tournament_id, $tournament, 0, 0, true, $output_message, doroto_now_ms(), true);
-		if (!is_wp_error($result)) {
-			$skipped++;
-		}
-	}
-	ob_end_clean();
-
-	$no_new_match = false;
-	if ($skipped > 0) {
-		doroto_tournament_progress($tournament_id);
-		$offer_html = doroto_offer_games($tournament_id, 0);
-		$no_new_match = ($offer_html !== '');
-	}
-
-	$stored_last_update = intval($wpdb->get_var($wpdb->prepare(
-		"SELECT last_update FROM {$wpdb->prefix}doroto_tournaments WHERE id = %d",
-		$tournament_id
-	)));
-
-	return rest_ensure_response([
-		'success' => true,
-		'action' => 'matches_skipped',
-		'skipped' => $skipped,
-		'no_new_match' => $no_new_match,
-		'last_update' => $stored_last_update,
-	]);
+	return doroto_service_rest_response(doroto_service_skip_matches(
+		intval($request->get_param('tournament_id')),
+		(array) $request->get_param('match_numbers')
+	));
 }
 
 
