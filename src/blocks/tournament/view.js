@@ -110,6 +110,23 @@ function applyView( ctx, view ) {
 }
 
 /**
+ * This page showing the given tournament (0 = without tournament_id).
+ *
+ * @param {number} tournamentId Tournament ID.
+ * @return {string} URL.
+ */
+function pageUrl( tournamentId ) {
+	const url = new URL( window.location.href );
+	url.hash = '';
+	if ( tournamentId ) {
+		url.searchParams.set( 'tournament_id', tournamentId );
+	} else {
+		url.searchParams.delete( 'tournament_id' );
+	}
+	return url.toString();
+}
+
+/**
  * Element of the block (the root with data-wp-interactive).
  *
  * @param {HTMLElement} el Any element inside the block.
@@ -207,26 +224,29 @@ const { state, actions } = store( 'doroto', {
 				return false;
 			}
 			ctx.ui.busy = true;
+			const currentId = ctx.data.view.id;
 			try {
 				const { data } = yield api( 'doroto/v1/block-action', {
-					tournament_id: ctx.data.view.id,
+					tournament_id: currentId,
 					action,
 					args,
 				} );
-				if ( data.view ) {
-					applyView( ctx, data.view );
-				}
 				if (
 					data.success &&
 					data.tournament_id &&
-					data.tournament_id !== ctx.data.view.id
+					data.tournament_id !== currentId
 				) {
-					// A new tournament: open its page.
-					window.location.href =
-						data.view?.links?.page || window.location.href;
-				} else if ( data.success && ! data.view ) {
+					// A new tournament: show it on this page.
+					window.location.href = pageUrl( data.tournament_id );
+					return true;
+				}
+				if ( data.view ) {
+					applyView( ctx, data.view );
+				}
+				if ( data.success && ! data.view ) {
+					// The tournament was deleted: show the default one.
 					notify( ctx, data.message || t( 'deleted' ) );
-					window.location.href = window.location.pathname;
+					window.location.href = pageUrl( 0 );
 				} else {
 					notify(
 						ctx,

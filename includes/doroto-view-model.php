@@ -243,6 +243,9 @@ function doroto_view_model(int $tournament_id): ?array
 		$teams = doroto_view_match_teams($match, $doubles, $whole_names);
 		$row = ['number' => $number, 'teams' => $teams, 'sides' => doroto_view_sides($teams)];
 		if (!$skipped && $r1 === 0 && $r2 === 0) {
+			if ($closed) {
+				continue; // a match drawn before closing is not played any more (as in [doroto_games_to_play])
+			}
 			$row['can_enter'] = doroto_service_may_enter_result($tournament, $number);
 			$ongoing[] = $row;
 		} else {
