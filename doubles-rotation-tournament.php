@@ -52,13 +52,45 @@ function doroto_load_textdomain_strings()
 	esc_html__('Rotation Tournaments', 'doubles-rotation-tournament');
 }
 
+/**
+ * Does the current page show the plugin (a [doroto_*] shortcode or a doroto block)?
+ * Used to load the shortcode assets and send no-cache headers only where needed;
+ * before 2.0 both happened on every page of the site.
+ * @since 2.0.0
+ */
+function doroto_page_uses_plugin(): bool
+{
+	static $uses = null;
+	if ($uses !== null) {
+		return $uses;
+	}
+	$uses = false;
+	if (is_singular()) {
+		$post = get_queried_object();
+		if ($post instanceof WP_Post) {
+			$uses = strpos($post->post_content, '[doroto_') !== false || strpos($post->post_content, '<!-- wp:doroto/') !== false;
+		}
+	}
+	/**
+	 * Filters whether the current page shows the plugin (e.g. a shortcode in a widget or template).
+	 * @since 2.0.0
+	 */
+	$uses = (bool) apply_filters('doroto_page_uses_plugin', $uses);
+	return $uses;
+}
+
+/**
+ * Tournament pages show live, personal data (results, nonces of the forms): never cache them.
+ * @since 1.0.0
+ * @version 2.0.0 (only pages of the plugin)
+ */
 function doroto_no_cache_headers()
 {
-	header('Cache-Control: no-cache, no-store, must-revalidate');
-	header('Pragma: no-cache');
-	header('Expires: 0');
+	if (doroto_page_uses_plugin()) {
+		nocache_headers();
+	}
 }
-add_action('send_headers', 'doroto_no_cache_headers');
+add_action('template_redirect', 'doroto_no_cache_headers');
 
 function doroto_frontend_styles()
 {
@@ -66,11 +98,60 @@ function doroto_frontend_styles()
 	wp_register_style('doroto-frontend-styles', plugins_url('includes/doroto-frontend-styles.css', __FILE__), [], doroto_VERSION);
 	wp_enqueue_style('doroto-frontend-styles');
 }
-add_action('wp_enqueue_scripts', 'doroto_frontend_styles');
 
-function doroto_backend_styles()
+/**
+ * Styles and scripts of the shortcodes (the blocks load their own through block.json).
+ * @since 2.0.0
+ */
+function doroto_enqueue_shortcode_assets()
 {
-	wp_enqueue_style('doroto-backend-styles', plugins_url('includes/doroto-backend-styles.css', __FILE__));
+	if (did_action('doroto_shortcode_assets')) {
+		return;
+	}
+	do_action('doroto_shortcode_assets');
+	doroto_frontend_styles();
+	doroto_enqueue_frontend_scripts();
+	doroto_enqueue_shepherd_assets();
+	wp_enqueue_style('dashicons');
+}
+
+function doroto_maybe_enqueue_shortcode_assets()
+{
+	if (doroto_page_uses_plugin()) {
+		doroto_enqueue_shortcode_assets();
+	}
+}
+add_action('wp_enqueue_scripts', 'doroto_maybe_enqueue_shortcode_assets');
+
+/**
+ * A shortcode rendered outside the post content (widget, template) still gets its assets;
+ * they are printed in the footer.
+ * @since 2.0.0
+ */
+function doroto_shortcode_tag_assets($output, $tag)
+{
+	if (strpos((string) $tag, 'doroto_') === 0) {
+		doroto_enqueue_shortcode_assets();
+	}
+	return $output;
+}
+add_filter('do_shortcode_tag', 'doroto_shortcode_tag_assets', 10, 2);
+
+/**
+ * Is this the admin page of the plugin? Its styles and the map load only there.
+ * @since 2.0.0
+ */
+function doroto_is_plugin_admin_page($hook)
+{
+	return $hook === 'toplevel_page_doubles-rotation-tournament';
+}
+
+function doroto_backend_styles($hook)
+{
+	if (!doroto_is_plugin_admin_page($hook)) {
+		return;
+	}
+	wp_enqueue_style('doroto-backend-styles', plugins_url('includes/doroto-backend-styles.css', __FILE__), [], doroto_VERSION);
 }
 add_action('admin_enqueue_scripts', 'doroto_backend_styles');
 
@@ -93,16 +174,15 @@ function doroto_enqueue_frontend_scripts()
 		true
 	);
 
-	// Plugin script that needs Leaflet
+	// Plugin script that needs Leaflet and jQuery
 	wp_enqueue_script(
 		'doroto-frontend-scripts',
 		plugins_url('includes/doroto-frontend-scripts.js', __FILE__),
-		['leaflet-js'],
+		['leaflet-js', 'jquery'],
 		doroto_VERSION,
 		true
 	);
 }
-add_action('wp_enqueue_scripts', 'doroto_enqueue_frontend_scripts');
 
 
 /**
@@ -111,6 +191,9 @@ add_action('wp_enqueue_scripts', 'doroto_enqueue_frontend_scripts');
  */
 function doroto_enqueue_admin_map_scripts($hook)
 {
+	if (!doroto_is_plugin_admin_page($hook)) {
+		return;
+	}
 	// Local Leaflet CSS
 	wp_enqueue_style(
 		'leaflet-css',
@@ -236,30 +319,6 @@ function doroto_check_version()
 add_action('init', 'doroto_check_version', 5);
 
 /**
- * used for hiding labels
- * @since 1.0.0
- */
-function doroto_enqueue_libraries_scripts()
-{
-	if (is_admin()) {
-		return;
-	}
-
-	$tiptip_version = '1.3';
-	$registered_tiptip = wp_scripts()->query('jquery-tiptip', 'registered');
-	$registered_tiptip_version = $registered_tiptip && !empty($registered_tiptip->ver) ? $registered_tiptip->ver : '';
-	if (!$registered_tiptip || ($registered_tiptip_version && version_compare($registered_tiptip_version, $tiptip_version, '<'))) {
-		wp_register_script('jquery-tiptip', plugins_url('lib/jquery-tiptip/jquery.tipTip.min.js', __FILE__), array('jquery'), $tiptip_version, true);
-	}
-	if (!wp_script_is('jquery-tiptip', 'enqueued')) {
-		wp_enqueue_script('jquery-tiptip');
-	}
-}
-add_action('admin_enqueue_scripts', 'doroto_enqueue_libraries_scripts', 9);
-add_action('wp_enqueue_scripts', 'doroto_enqueue_libraries_scripts', 9);
-
-
-/**
  * guide tour library
  * @since 1.3.7
  * @version 1.3.7
@@ -267,9 +326,9 @@ add_action('wp_enqueue_scripts', 'doroto_enqueue_libraries_scripts', 9);
 function doroto_enqueue_shepherd_assets()
 {
 	wp_enqueue_script('shepherd-js', plugins_url('lib/shepherd/shepherd.min.js', __FILE__), array(), '1.0.0', true);
-	wp_enqueue_style('shepherd-css', plugins_url('lib/shepherd/shepherd.min.css', __FILE__));
+	wp_enqueue_style('shepherd-css', plugins_url('lib/shepherd/shepherd.min.css', __FILE__), array(), '1.0.0');
 
-	wp_enqueue_script('doroto-custom-help-script', plugins_url('includes/doroto-help-icon.js', __FILE__), array('shepherd-js', 'jquery'), '1.0.0', true);
+	wp_enqueue_script('doroto-custom-help-script', plugins_url('includes/doroto-help-icon.js', __FILE__), array('shepherd-js', 'jquery'), doroto_VERSION, true);
 	wp_localize_script('doroto-custom-help-script', 'dorotoAjax', [
 		'ajaxurl' => admin_url('admin-ajax.php'),
 		'nonce' => wp_create_nonce('doroto_help_tour'),
@@ -402,20 +461,7 @@ function doroto_enqueue_shepherd_assets()
 
 	));
 }
-add_action('wp_enqueue_scripts', 'doroto_enqueue_shepherd_assets');
-add_action('admin_enqueue_scripts', 'doroto_enqueue_shepherd_assets', 9);
 
-
-
-/**
- * allow dash icon visibility on frontend
- * @since 1.2.1
- */
-function doroto_load_dashicons()
-{
-	wp_enqueue_style('dashicons');
-}
-add_action('wp_enqueue_scripts', 'doroto_load_dashicons', 999);
 
 
 /**

@@ -91,8 +91,9 @@
 - Accounts created by an organizer get a random password that is never sent.
 
 ### Other
-- Assets (Leaflet, Shepherd, the tour) load on every page.
-- Site-wide no-cache header.
+- Fixed in 2.0: assets of the shortcodes and the no-cache headers only on pages that use the plugin
+  (`doroto_page_uses_plugin()`, plus `do_shortcode_tag` for shortcodes outside the content); admin assets only on the
+  plugin page; unused tipTip removed.
 - `ip-api.com` is called over HTTP on table render.
 - `delete_database` defaults to 1.
 - Activation creates 13 demo users.

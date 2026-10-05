@@ -553,19 +553,6 @@ function doroto_create_new_tournament_post(int $tournament_id)
 
 
 /**
- * prevent cashing for logged users
- * @since 1.3.7
- */
-function doroto_prevent_cache_for_logged_in_users()
-{
-	if (is_user_logged_in()) {
-		header('Cache-Control: no-store, no-cache, must-revalidate, max-age=0');
-		header('Pragma: no-cache');
-	}
-}
-add_action('send_headers', 'doroto_prevent_cache_for_logged_in_users');
-
-/**
  * Privacy Policy
  * @since 1.4.7
  */
