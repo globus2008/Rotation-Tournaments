@@ -1933,60 +1933,21 @@ add_action('rest_api_init', function () {
 
 function doroto_rest_add_admin(WP_REST_Request $req)
 {
-	global $wpdb;
-
 	if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
 		return new WP_REST_Response(null, 200);
 	}
 
 	$body = json_decode($req->get_body(), true);
-	$tid = intval($body['tournament_id'] ?? 0);
-	$pid = intval($body['player_id'] ?? 0);
-
 	$current = (int) doroto_get_current_user_id_from_token();
 	if ($current === 0) {
 		return new WP_REST_Response(['error_code' => 'auth_unauthorized_or_expired'], 401);
 	}
 	wp_set_current_user($current);
 
-	if (doroto_is_admin($tid) < 1) {
-		return new WP_REST_Response(['error_code' => 'auth_insufficient_permissions'], 403);
-	}
-
-	$table = $wpdb->prefix . 'doroto_tournaments';
-	$t = doroto_prepare_tournament($tid);
-	if (!$t) {
-		return new WP_REST_Response(['error_code' => 'tournament_not_found'], 404);
-	}
-
-	if (intval($t->close_tournament) === 1) {
-		return new WP_REST_Response(['error_code' => 'add_admin_tournament_closed'], 400);
-	}
-
-	$admins = maybe_unserialize($t->admin_users);
-	if (!is_array($admins)) {
-		$admins = [];
-	}
-	$last_update_to_return = $t->last_update;
-
-	if (!in_array($pid, $admins, true)) {
-		$admins[] = $pid;
-		$last_update_to_return = round(microtime(true) * 1000);
-		$wpdb->update(
-			$table,
-			[
-				'admin_users' => serialize($admins),
-				'last_update' => $last_update_to_return
-			],
-			['id' => $tid]
-		);
-	}
-
-	return new WP_REST_Response([
-		'success' => true,
-		'action' => 'organizer_added',
-		'last_update' => (int) $last_update_to_return,
-	], 200);
+	return doroto_service_rest_response(doroto_service_add_admin(
+		intval($body['tournament_id'] ?? 0),
+		intval($body['player_id'] ?? 0)
+	));
 }
 
 
@@ -3238,32 +3199,22 @@ function doroto_rest_get_tournament_admins(WP_REST_Request $request)
 
 function doroto_rest_remove_admin(WP_REST_Request $request)
 {
-	$params = $request->get_json_params();
+	$params = (array) $request->get_json_params();
 	$tournament_id = isset($params['tournament_id']) ? intval($params['tournament_id']) : intval($request->get_param('tournament_id'));
-	$admin_to_remove = intval($params['user_id'] ?? 0);
+	$result = doroto_service_remove_admin($tournament_id, intval($params['user_id'] ?? 0));
 
-	global $wpdb;
-	$admin_users_raw = $wpdb->get_var($wpdb->prepare("SELECT admin_users FROM {$wpdb->prefix}doroto_tournaments WHERE id = %d", $tournament_id));
-	$admin_users = maybe_unserialize($admin_users_raw);
-
-	if (($key = array_search($admin_to_remove, $admin_users)) !== false) {
-		// The super admin (index 0) may never be removed
-		if ($key === 0) {
+	// Response format of 1.4.7: {success} or {success: false, message}.
+	if (is_wp_error($result)) {
+		$code = $result->get_error_code();
+		if ($code === 'cannot_remove_founder') {
 			return new WP_REST_Response(['success' => false, 'message' => 'Cannot remove super admin'], 403);
 		}
-		unset($admin_users[$key]);
-		$updated_admins = serialize(array_values($admin_users));
-
-		$wpdb->update(
-			"{$wpdb->prefix}doroto_tournaments",
-			['admin_users' => $updated_admins, 'last_update' => doroto_now_ms()],
-			['id' => $tournament_id]
-		);
-
-		return new WP_REST_Response(['success' => true], 200);
+		if ($code === 'admin_not_found') {
+			return new WP_REST_Response(['success' => false, 'message' => 'Admin not found'], 404);
+		}
+		return doroto_service_rest_response($result);
 	}
-
-	return new WP_REST_Response(['success' => false, 'message' => 'Admin not found'], 404);
+	return new WP_REST_Response(['success' => true, 'action' => 'organizer_removed', 'last_update' => $result['last_update']], 200);
 }
 
 

@@ -1368,59 +1368,20 @@ add_action('admin_post_nopriv_doroto_add_admin_to_tournament', 'doroto_add_admin
 /**
  * add a player to admin group after submitting form
  * @since 1.0.0
- * @version 1.4.7 (last update info) 
+ * @version 2.0.0 (doroto_service_add_admin)
  */
 function doroto_add_admin_form_submit()
 {
-	global $wpdb;
-	global $doroto_output_form;
-
 	if (!isset($_POST['_wpnonce']) || !wp_verify_nonce(sanitize_text_field(wp_unslash($_POST['_wpnonce'])), 'doroto_add_admin_form_nonce')) {
 		wp_die(esc_html__('Invalid request.', 'doubles-rotation-tournament'));
 	}
 
-	if (!isset($_POST['tournament_id']) || !isset($_POST['player_to_add'])) {
-		$output = esc_html__('Tournament or user not found.', 'doubles-rotation-tournament');
-		doroto_info_messsages_save($output);
-		return null;
-	}
+	$tournament_id = isset($_POST['tournament_id']) ? intval($_POST['tournament_id']) : intval(doroto_getTournamentId());
+	$player_id = isset($_POST['player_to_add']) ? intval($_POST['player_to_add']) : -1;
 
-	$tournament_id = intval($_POST['tournament_id']);
-	$player_id = intval($_POST['player_to_add']);
-
-	$table_name = $wpdb->prefix . 'doroto_tournaments';
-	$tournament = doroto_prepare_tournament($tournament_id);
-
-	if (!isset($tournament)) {
-		$output = sanitize_text_field(__('The tournament was not found.', 'doubles-rotation-tournament'));
-		doroto_info_messsages_save($output);
-		doroto_redirect_modify_url($tournament_id, "");
-		exit;
-	}
-
-	if (!is_user_logged_in()) {
-		$output = sanitize_text_field(__('To add organizer rights, please log in!', 'doubles-rotation-tournament'));
-		doroto_info_messsages_save($output);
-		doroto_redirect_modify_url($tournament_id, "");
-		exit;
-	}
-
-	$admin_users = maybe_unserialize($tournament->admin_users);
-	if (!in_array($player_id, $admin_users)) {
-		$admin_users[] = $player_id;
-	}
-
-	$wpdb->update(
-		$table_name,
-		array(
-			'admin_users' => serialize($admin_users),
-			'last_update'  => round(microtime(true) * 1000)
-		),
-		array('id' => $tournament_id)
-	);
-	$output = sanitize_text_field(__('Player', 'doubles-rotation-tournament') . ' ' . doroto_find_player_name($player_id, intval($tournament->whole_names)) . ' ' . __('has been added to the admins.', 'doubles-rotation-tournament'));
-	doroto_info_messsages_save($output);
-	doroto_redirect_modify_url($tournament_id, "tournament-editing");
+	$result = doroto_service_add_admin($tournament_id, $player_id);
+	doroto_info_messsages_save(sanitize_text_field(doroto_service_message($result, $tournament_id)));
+	doroto_redirect_modify_url($tournament_id, "doroto-tournament-editing");
 	exit;
 }
 

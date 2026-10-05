@@ -149,6 +149,16 @@ function doroto_service_message($result, int $tournament_id = 0): string
 			return __('The payment of the player', 'doubles-rotation-tournament') . ' ' . $result['player_name'] . ' ' . __('has been removed from the list.', 'doubles-rotation-tournament');
 		case 'payment_not_found':
 			return __('The player has no recorded payment.', 'doubles-rotation-tournament');
+		case 'add_admin_tournament_closed':
+			return __('Organizers cannot be added to a closed tournament.', 'doubles-rotation-tournament');
+		case 'admin_not_found':
+			return __('The user is not an organizer of this tournament.', 'doubles-rotation-tournament');
+		case 'cannot_remove_founder':
+			return __('The founder of the tournament cannot be removed.', 'doubles-rotation-tournament');
+		case 'organizer_added':
+			return __('Player', 'doubles-rotation-tournament') . ' ' . $result['player_name'] . ' ' . __('has been added to the admins.', 'doubles-rotation-tournament');
+		case 'organizer_removed':
+			return __('Player', 'doubles-rotation-tournament') . ' ' . $result['player_name'] . ' ' . __('is no longer an organizer.', 'doubles-rotation-tournament');
 		case 'matches_skipped':
 			/* translators: %d: number of skipped matches */
 			return sprintf(_n('%d match was skipped.', '%d matches were skipped.', intval($result['skipped']), 'doubles-rotation-tournament'), intval($result['skipped']));
@@ -820,4 +830,107 @@ function doroto_service_set_payment(int $tournament_id, int $player_id, bool $pa
 		'player_name' => doroto_find_player_name($player_id, intval($result['tournament']->whole_names)),
 		'last_update' => $result['last_update'],
 	]);
+}
+
+/**
+ * Is the current user the founder of the tournament (admin_users[0]) or a web administrator
+ * (doroto_is_admin() == 2)? Only they manage the organizers.
+ * @since 2.0.0 (from doroto_super_admin_check)
+ */
+function doroto_service_is_founder(stdClass $tournament): bool
+{
+	$user_id = get_current_user_id();
+	$admins = maybe_unserialize($tournament->admin_users);
+	$founder = (is_array($admins) && !empty($admins)) ? intval(reset($admins)) : 0;
+	return $user_id > 0 && ($user_id === $founder || doroto_is_admin(intval($tournament->id)) == 2);
+}
+
+/**
+ * Make a user an organizer of the tournament. Any organizer may do it.
+ * @return array|WP_Error organizer_added with player_name, last_update
+ * @since 2.0.0 (merged from doroto_add_admin_form_submit and doroto_rest_add_admin)
+ */
+function doroto_service_add_admin(int $tournament_id, int $user_id)
+{
+	global $wpdb;
+
+	if (get_current_user_id() === 0) {
+		return doroto_service_error('auth_unauthorized_or_expired', 401);
+	}
+	if ($user_id <= 0 || get_userdata($user_id) === false) {
+		return doroto_service_error('missing_tournament_or_player_id');
+	}
+
+	return doroto_with_tournament_lock($tournament_id, function () use ($wpdb, $tournament_id, $user_id) {
+		$tournament = doroto_service_admin_tournament($tournament_id);
+		if (is_wp_error($tournament)) {
+			return $tournament;
+		}
+		if (intval($tournament->close_tournament) === 1) {
+			return doroto_service_error('add_admin_tournament_closed');
+		}
+
+		$admins = maybe_unserialize($tournament->admin_users);
+		$admins = is_array($admins) ? array_map('intval', array_values($admins)) : [];
+		$last_update = intval($tournament->last_update);
+		if (!in_array($user_id, $admins, true)) {
+			$admins[] = $user_id;
+			$last_update = doroto_now_ms();
+			$wpdb->update(
+				$wpdb->prefix . 'doroto_tournaments',
+				['admin_users' => serialize($admins), 'last_update' => $last_update],
+				['id' => $tournament_id]
+			);
+		}
+		return doroto_service_ok('organizer_added', [
+			'player_name' => doroto_find_player_name($user_id, intval($tournament->whole_names)),
+			'last_update' => $last_update,
+		]);
+	});
+}
+
+/**
+ * Take the organizer rights from a user. Founder only; the founder himself stays.
+ * @return array|WP_Error organizer_removed with player_name, last_update;
+ *                        errors cannot_remove_founder, admin_not_found
+ * @since 2.0.0 (from doroto_rest_remove_admin)
+ */
+function doroto_service_remove_admin(int $tournament_id, int $user_id)
+{
+	global $wpdb;
+
+	if (get_current_user_id() === 0) {
+		return doroto_service_error('auth_unauthorized_or_expired', 401);
+	}
+
+	return doroto_with_tournament_lock($tournament_id, function () use ($wpdb, $tournament_id, $user_id) {
+		$tournament = doroto_prepare_tournament($tournament_id);
+		if (!$tournament) {
+			return doroto_service_error('tournament_not_found', 404);
+		}
+		if (!doroto_service_is_founder($tournament)) {
+			return doroto_service_error('auth_insufficient_permissions', 403);
+		}
+
+		$admins = maybe_unserialize($tournament->admin_users);
+		$admins = is_array($admins) ? array_map('intval', array_values($admins)) : [];
+		$key = array_search($user_id, $admins, true);
+		if ($key === false) {
+			return doroto_service_error('admin_not_found', 404);
+		}
+		if ($key === 0) {
+			return doroto_service_error('cannot_remove_founder', 403);
+		}
+		unset($admins[$key]);
+		$last_update = doroto_now_ms();
+		$wpdb->update(
+			$wpdb->prefix . 'doroto_tournaments',
+			['admin_users' => serialize(array_values($admins)), 'last_update' => $last_update],
+			['id' => $tournament_id]
+		);
+		return doroto_service_ok('organizer_removed', [
+			'player_name' => doroto_find_player_name($user_id, intval($tournament->whole_names)),
+			'last_update' => $last_update,
+		]);
+	});
 }
