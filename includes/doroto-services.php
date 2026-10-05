@@ -66,6 +66,7 @@ function doroto_service_message($result, int $tournament_id = 0): string
 			return __('The tournament was not found.', 'doubles-rotation-tournament');
 		case 'auth_unauthorized_or_expired':
 		case 'auth_unauthorized':
+		case 'auth_not_authorized':
 		case 'auth_forbidden':
 		case 'auth_insufficient_permissions':
 			return __('You do not have permission to perform this action.', 'doubles-rotation-tournament');
@@ -104,6 +105,12 @@ function doroto_service_message($result, int $tournament_id = 0): string
 			return __('The result of match no.', 'doubles-rotation-tournament') . ' ' . intval($result['match_number']) . ' '
 				. __('was saved with a score', 'doubles-rotation-tournament') . ' '
 				. intval($result['result_1']) . ':' . intval($result['result_2']) . '.';
+		case 'edit_match_results_closed':
+			return __('Results of this tournament can no longer be changed.', 'doubles-rotation-tournament');
+		case 'match_not_finished':
+			return __('This match has not been played yet.', 'doubles-rotation-tournament');
+		case 'match_result_changed':
+			return __('The result of match no.', 'doubles-rotation-tournament') . ' ' . intval($result['match_number']) . ' ' . __('was changed.', 'doubles-rotation-tournament');
 		case 'matches_skipped':
 			/* translators: %d: number of skipped matches */
 			return sprintf(_n('%d match was skipped.', '%d matches were skipped.', intval($result['skipped']), 'doubles-rotation-tournament'), intval($result['skipped']));
@@ -351,6 +358,90 @@ function doroto_service_skip_matches(int $tournament_id, array $match_numbers)
 			'skipped' => $skipped,
 			'no_new_match' => $no_new_match,
 			'last_update' => doroto_service_stored_last_update($tournament_id),
+		]);
+	});
+}
+
+/**
+ * Correct the result of a finished or skipped match. Organizer only, and only while
+ * doroto_match_results_editable() allows it. 0:0 turns the match into a skipped one,
+ * a score for a skipped match counts it as played.
+ * @return array|WP_Error match_result_changed with match_number and last_update
+ * @since 2.0.0 (from doroto_change_game_form_submit; the REST route counted a formerly
+ *               skipped match as removed instead of added)
+ */
+function doroto_service_change_result(int $tournament_id, int $match_number, int $result_1, int $result_2)
+{
+	global $wpdb;
+
+	if ($tournament_id <= 0 || $match_number <= 0 || $result_1 < 0 || $result_2 < 0) {
+		return doroto_service_error('invalid_data');
+	}
+	if (get_current_user_id() === 0) {
+		return doroto_service_error('auth_not_authorized', 401);
+	}
+
+	return doroto_with_tournament_lock($tournament_id, function () use ($wpdb, $tournament_id, $match_number, $result_1, $result_2) {
+		$tournament = doroto_service_admin_tournament($tournament_id);
+		if (is_wp_error($tournament)) {
+			return $tournament;
+		}
+		if (!doroto_match_results_editable($tournament)) {
+			return doroto_service_error('edit_match_results_closed', 403);
+		}
+
+		$matches = maybe_unserialize($tournament->matches_list);
+		$matches = is_array($matches) ? $matches : [];
+		$key = null;
+		foreach ($matches as $k => $match) {
+			if ($match['match_number'] == $match_number) {
+				$key = $k;
+				break;
+			}
+		}
+		if ($key === null) {
+			return doroto_service_error('match_not_found', 404);
+		}
+
+		$original = $matches[$key];
+		$was_skipped = intval($original['hide']) === 1;
+		$becomes_skipped = $result_1 === 0 && $result_2 === 0;
+		if (!$was_skipped && intval($original['result_1']) === 0 && intval($original['result_2']) === 0) {
+			return doroto_service_error('match_not_finished');
+		}
+		if ($was_skipped && $becomes_skipped) {
+			return doroto_service_error('invalid_data');
+		}
+
+		// Statistics get the difference. A skipped match that gets a score is a new game
+		// ($correct = false); a played match that becomes 0:0 is taken back (hide = 1).
+		$change = $original;
+		$change['result_1'] = $result_1 - intval($original['result_1']);
+		$change['result_2'] = $result_2 - intval($original['result_2']);
+		$change['hide'] = $becomes_skipped ? 1 : 0;
+		doroto_update_statistics_by_result($tournament_id, $tournament, $change, !$was_skipped, false);
+
+		$matches[$key]['result_1'] = $result_1;
+		$matches[$key]['result_2'] = $result_2;
+		$matches[$key]['hide'] = $becomes_skipped ? 1 : 0;
+		$matches[$key]['played'] = 1;
+
+		$last_update = doroto_now_ms();
+		$updated = $wpdb->update(
+			$wpdb->prefix . 'doroto_tournaments',
+			['matches_list' => serialize($matches), 'last_update' => $last_update],
+			['id' => $tournament_id]
+		);
+		if ($updated === false) {
+			return doroto_service_error('db_save_result_failed', 500);
+		}
+		ob_start();
+		doroto_tournament_progress($tournament_id);
+		ob_end_clean();
+
+		return doroto_service_ok('match_result_changed', [
+			'match_number' => $match_number,
+			'last_update' => max($last_update, doroto_service_stored_last_update($tournament_id)),
 		]);
 	});
 }

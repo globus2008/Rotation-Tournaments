@@ -390,133 +390,32 @@ add_shortcode('doroto_change_game', 'doroto_change_game_shortcode');
 
 /**
  * change wrong written results of matches after submitting form
+ * match_to_change = 0 changes the result of the final match
  * @since 1.0.0
- * @version 1.4.7 (count tournament progress, last update)
+ * @version 2.0.0 (doroto_service_change_result)
  */
 function doroto_change_game_form_submit()
 {
-	global $wpdb;
-	global $doroto_output_form;
-
 	if (!isset($_POST['_wpnonce']) || !wp_verify_nonce(sanitize_text_field(wp_unslash($_POST['_wpnonce'])), 'doroto_change_game_form_nonce')) {
 		wp_die(esc_html__('Invalid request.', 'doubles-rotation-tournament'));
 	}
 
-	if (!isset($_POST['tournament_id']) || !isset($_POST['match_to_change'])) {
-		$output = esc_html__('Invalid request.', 'doubles-rotation-tournament');
-		doroto_info_messsages_save($output);
-		return null;
-	}
+	$tournament_id = isset($_POST['tournament_id']) ? intval($_POST['tournament_id']) : intval(doroto_getTournamentId());
+	$match_number = isset($_POST['match_to_change']) ? intval($_POST['match_to_change']) : -1;
+	$result_1 = isset($_POST['game_result_1']) ? intval($_POST['game_result_1']) : -1;
+	$result_2 = isset($_POST['game_result_2']) ? intval($_POST['game_result_2']) : -1;
 
-	$tournament_id = intval($_POST['tournament_id']);
-	$match_number = intval($_POST['match_to_change']);
-
-	$table_name = $wpdb->prefix . 'doroto_tournaments';
-	$tournament = doroto_prepare_tournament($tournament_id);
-	$output = "";
-
-	if (!isset($tournament)) {
-		$output = "<div>" . sanitize_text_field(__('The tournament was not found.', 'doubles-rotation-tournament')) . "</div>";
-		doroto_info_messsages_save($output);
-		doroto_redirect_modify_url($tournament_id, "");
-		exit;
-	}
-
-	if (!is_user_logged_in()) {
-		$output = "<div>" . sanitize_text_field(__("You must be logged in to change the result!", "doubles-rotation-tournament")) . "</div>";
-		doroto_info_messsages_save($output);
-		doroto_redirect_modify_url($tournament_id, "");
-		exit;
-	}
-
-	$correct = true;
-	$remove_players = false;
-
-	$result_1 = isset($_POST['game_result_1']) ? sanitize_text_field($_POST['game_result_1']) : 0;
-	$result_2 = isset($_POST['game_result_2']) ? sanitize_text_field($_POST['game_result_2']) : 0;
-
-	$result_1 = intval($result_1);
-	$result_1 = is_numeric($result_1) ? $result_1 : 0;
-	$result_2 = intval($result_2);
-	$result_2 = is_numeric($result_2) ? $result_2 : 0;
-	if (($result_1 < 0 || $result_2 < 0)) {
-		$doroto_output_form = sanitize_text_field(__('Invalid value entered.', 'doubles-rotation-tournament'));
-		doroto_info_messsages_save($doroto_output_form);
-		doroto_redirect_modify_url($tournament_id, "");
-		exit;
-	}
-
-	$game_result = $result_1 . ':' . $result_2;
-
-
-	if ($match_number > 0) {
-		$matches_list = maybe_unserialize($tournament->matches_list);
-
-		if (!is_array($matches_list)) {
-			$matches_list = [];
+	if ($match_number === 0 && $result_1 >= 0 && $result_2 >= 0) {
+		$output = '';
+		if (doroto_save_final_result($tournament_id, $result_1 . ':' . $result_2)) {
+			$output = __('The result of the final match', 'doubles-rotation-tournament') . ' ' . __('was changed.', 'doubles-rotation-tournament');
 		}
-
-		foreach ($matches_list as $game_id => &$game) {
-			if ($game['match_number'] == $match_number) {
-				$match = $game;
-
-				if ($game['hide'] == 1 && $result_1 == 0 && $result_2 == 0) {
-					$doroto_output_form = sanitize_text_field(__('Invalid value entered.', 'doubles-rotation-tournament'));
-					doroto_info_messsages_save($doroto_output_form);
-					doroto_redirect_modify_url($tournament_id, "");
-					exit;
-				}
-
-				$game['result_1'] = $result_1;
-				$game['result_2'] = $result_2;
-				$correct = true;
-				$remove_players = false;
-
-				if ($game['hide'] == 1 && ($result_1 != 0 || $result_2 != 0)) {
-					$game['hide'] = 0;
-					$game['result_1'] = $result_1;
-					$game['result_2'] = $result_2;
-					$correct = false;
-				}
-				if ($game['hide'] == 0 && $result_1 == 0 && $result_2 == 0) {
-					$game['hide'] = 1;
-					$game['result_1'] = 0;
-					$game['result_2'] = 0;
-				}
-				break;
-			}
-		}
-
-		$match['result_1'] = $result_1 - $match['result_1'];
-		$match['result_2'] = $result_2 - $match['result_2'];
-
-		if ($match['hide'] == 1 && ($result_1 != 0 || $result_2 != 0)) {
-			$match['hide'] = 0;
-		}
-
-		if ($result_1 == 0 && $result_2 == 0) {
-			$match['hide'] = 1;
-		}
-
-		doroto_update_statistics_by_result($tournament_id, $tournament, $match, $correct, $remove_players);
-
-		$wpdb->update(
-			$table_name,
-			array(
-				'matches_list' => maybe_serialize($matches_list),
-				'last_update'  => round(microtime(true) * 1000)
-			),
-			array('id' => $tournament_id)
-		);
-		$output = sanitize_text_field(__('The result of match no.', 'doubles-rotation-tournament') . ' ' . $match_number . ' ' . __('was changed.', 'doubles-rotation-tournament'));
+		doroto_tournament_progress($tournament_id);
 	} else {
-		if (doroto_save_final_result($tournament_id, $game_result)) {
-			$output = sanitize_text_field(__('The result of the final match', 'doubles-rotation-tournament') . ' ' . __('was changed.', 'doubles-rotation-tournament'));
-		}
+		$output = doroto_service_message(doroto_service_change_result($tournament_id, $match_number, $result_1, $result_2), $tournament_id);
 	}
-	doroto_tournament_progress($tournament_id);
-	doroto_info_messsages_save($output);
-	doroto_redirect_modify_url($tournament_id, "played-matches");
+	doroto_info_messsages_save(sanitize_text_field($output));
+	doroto_redirect_modify_url($tournament_id, "doroto-played-matches");
 	exit;
 }
 add_action('admin_post_doroto_change_game_result', 'doroto_change_game_form_submit');

@@ -3150,108 +3150,23 @@ add_action('rest_api_init', function () {
  *
  * @param WP_REST_Request $request The incoming request.
  * @return WP_REST_Response
+ * @version 2.0.0 (doroto_service_change_result)
  */
 function doroto_api_change_match_result(WP_REST_Request $request)
 {
-	global $wpdb;
-
 	$current_user_id = (int) doroto_get_current_user_id_from_token();
 	if ($current_user_id === 0) {
 		return new WP_REST_Response(['error_code' => 'auth_not_authorized'], 401);
 	}
 	wp_set_current_user($current_user_id);
-	$params = $request->get_json_params();
-	$tournament_id = isset($params['tournament_id']) ? intval($params['tournament_id']) : 0;
-	$match_number = isset($params['match_number']) ? intval($params['match_number']) : 0;
-	$result_1 = isset($params['result_1']) ? intval($params['result_1']) : -1;
-	$result_2 = isset($params['result_2']) ? intval($params['result_2']) : -1;
+	$params = (array) $request->get_json_params();
 
-	if ($tournament_id <= 0 || $match_number <= 0 || $result_1 < 0 || $result_2 < 0) {
-		return new WP_REST_Response(['error_code' => 'invalid_data'], 400);
-	}
-
-	if (!doroto_is_admin($tournament_id)) {
-		return new WP_REST_Response(['error_code' => 'auth_insufficient_permissions'], 403);
-	}
-
-	$tournament = doroto_prepare_tournament($tournament_id);
-	if (!$tournament) {
-		return new WP_REST_Response(['error_code' => 'tournament_not_found'], 404);
-	}
-
-	if ($tournament->close_date === '9999-09-09 09:09:09') {
-		$timestamp = PHP_INT_MAX;
-	} else {
-		$closeDate = DateTime::createFromFormat('Y-m-d H:i:s', $tournament->close_date);
-		$timestamp = $closeDate ? $closeDate->getTimestamp() : 0;
-	}
-
-	if (
-		$tournament->open_registration == '1' ||
-		($tournament->close_tournament == '1' && $tournament->play_final_match == '0') ||
-		($tournament->close_tournament == '1' && $tournament->play_final_match == '1' && ($tournament->final_result == '' || $timestamp + 24 * 3600 < time()))
-	) {
-		return new WP_REST_Response(['error_code' => 'edit_match_results_closed'], 403);
-	}
-
-	$matches_list = maybe_unserialize($tournament->matches_list);
-	if (!is_array($matches_list)) {
-		$matches_list = [];
-	}
-
-	$original_match = null;
-	$match_key = null;
-	foreach ($matches_list as $key => $game) {
-		if ($game['match_number'] == $match_number) {
-			$original_match = $game;
-			$match_key = $key;
-			break;
-		}
-	}
-
-	if ($original_match === null) {
-		return new WP_REST_Response(['error_code' => 'match_not_found'], 404);
-	}
-
-
-	$original_result_1 = intval($original_match['result_1']);
-	$original_result_2 = intval($original_match['result_2']);
-
-
-	$change_match = $original_match;
-	$change_match['result_1'] = $result_1 - $original_result_1;
-	$change_match['result_2'] = $result_2 - $original_result_2;
-
-
-	doroto_update_statistics_by_result($tournament_id, $tournament, $change_match, true, false);
-
-	$matches_list[$match_key]['result_1'] = $result_1;
-	$matches_list[$match_key]['result_2'] = $result_2;
-	$matches_list[$match_key]['hide'] = ($result_1 == 0 && $result_2 == 0) ? 1 : 0;
-
-	$table_name = $wpdb->prefix . 'doroto_tournaments';
-	$new_last_update = round(microtime(true) * 1000);
-	$updated = $wpdb->update(
-		$table_name,
-		[
-			'matches_list' => maybe_serialize($matches_list),
-			'last_update' => $new_last_update
-		],
-		['id' => $tournament_id]
-	);
-
-	if ($updated === false) {
-		return new WP_REST_Response(['error_code' => 'db_save_result_failed'], 500);
-	}
-
-	doroto_tournament_progress($tournament_id);
-
-	return new WP_REST_Response([
-		'success' => true,
-		'action' => 'match_result_changed',
-		'match_number' => $match_number,
-		'last_update' => $new_last_update
-	], 200);
+	return doroto_service_rest_response(doroto_service_change_result(
+		isset($params['tournament_id']) ? intval($params['tournament_id']) : 0,
+		isset($params['match_number']) ? intval($params['match_number']) : 0,
+		isset($params['result_1']) ? intval($params['result_1']) : -1,
+		isset($params['result_2']) ? intval($params['result_2']) : -1
+	));
 }
 
 
