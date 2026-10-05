@@ -708,7 +708,25 @@ const { state, actions } = store( 'doroto', {
 				}
 			} );
 			const timer = setInterval( tick, seconds * 1000 );
-			return () => clearInterval( timer );
+
+			// Presentation: show the sections one after another.
+			let rotation = null;
+			if ( ctx.ui.presentation > 0 && ctx.ui.sections.length > 1 ) {
+				rotation = setInterval(
+					withScope( () => {
+						const index = ctx.ui.sections.indexOf( ctx.ui.tab );
+						ctx.ui.tab =
+							ctx.ui.sections[
+								( index + 1 ) % ctx.ui.sections.length
+							];
+					} ),
+					ctx.ui.presentation * 1000
+				);
+			}
+			return () => {
+				clearInterval( timer );
+				clearInterval( rotation );
+			};
 		},
 	},
 } );

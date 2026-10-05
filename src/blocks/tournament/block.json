@@ -7,17 +7,46 @@
 	"category": "widgets",
 	"icon": "awards",
 	"description": "Matches, players, results and settings of one rotation tournament.",
-	"keywords": [ "tournament", "doubles", "rotation", "tennis" ],
+	"keywords": [
+		"tournament",
+		"doubles",
+		"rotation",
+		"tennis"
+	],
 	"textdomain": "doubles-rotation-tournament",
 	"attributes": {
 		"tournamentId": {
 			"type": "integer",
 			"default": 0
+		},
+		"sections": {
+			"type": "array",
+			"items": {
+				"type": "string"
+			},
+			"default": [
+				"matches",
+				"results",
+				"players",
+				"stats",
+				"settings"
+			]
+		},
+		"presentation": {
+			"type": "boolean",
+			"default": false
+		},
+		"presentationSeconds": {
+			"type": "integer",
+			"default": 15
 		}
 	},
 	"supports": {
 		"html": false,
-		"align": [ "wide", "full" ],
+		"align": [
+			"wide",
+			"full"
+		],
 		"color": {
 			"background": true,
 			"text": true,
@@ -35,5 +64,65 @@
 	"editorScript": "file:./index.js",
 	"style": "file:./style-index.css",
 	"viewScriptModule": "file:./view.js",
-	"render": "file:./render.php"
+	"render": "file:./render.php",
+	"variations": [
+		{
+			"name": "standings",
+			"title": "Tournament standings",
+			"description": "Players of a rotation tournament ordered by their results.",
+			"icon": "editor-ol",
+			"scope": [
+				"inserter",
+				"transform"
+			],
+			"attributes": {
+				"sections": [
+					"players"
+				]
+			},
+			"isActive": [
+				"sections"
+			]
+		},
+		{
+			"name": "matches",
+			"title": "Tournament matches",
+			"description": "Ongoing and played matches of a rotation tournament.",
+			"icon": "list-view",
+			"scope": [
+				"inserter",
+				"transform"
+			],
+			"attributes": {
+				"sections": [
+					"matches",
+					"results"
+				]
+			},
+			"isActive": [
+				"sections"
+			]
+		},
+		{
+			"name": "presentation",
+			"title": "Tournament presentation",
+			"description": "Rotates matches, standings and results, e.g. on a screen at the club.",
+			"icon": "slides",
+			"scope": [
+				"inserter",
+				"transform"
+			],
+			"attributes": {
+				"sections": [
+					"matches",
+					"players",
+					"results"
+				],
+				"presentation": true
+			},
+			"isActive": [
+				"presentation"
+			]
+		}
+	]
 }

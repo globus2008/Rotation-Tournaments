@@ -496,3 +496,19 @@
 		background: rgb(0 0 0 / 40%);
 	}
 }
+
+// Presentation (e.g. a screen at the club): read only, bigger text, no controls.
+.doroto-block.is-presentation {
+	font-size: 1.25em;
+
+	.doroto-actions,
+	.doroto-score,
+	.doroto-menu,
+	.doroto-box,
+	.doroto-field,
+	.doroto-icon-button,
+	.doroto-check,
+	.doroto-tabs {
+		display: none !important;
+	}
+}

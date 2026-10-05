@@ -77,8 +77,21 @@ $doroto_tabs = [
 if ($doroto_flags['admin']) {
 	$doroto_tabs['settings'] = __('Settings', 'doubles-rotation-tournament');
 }
+// Sections chosen in the block (variations: standings, matches, presentation); settings only for organizers.
+$doroto_sections = array_values(array_intersect(
+	array_map('strval', (array) ($attributes['sections'] ?? array_keys($doroto_tabs))),
+	array_keys($doroto_tabs)
+));
+if (empty($doroto_sections)) {
+	$doroto_sections = ['matches'];
+}
+$doroto_tabs = array_intersect_key($doroto_tabs, array_flip($doroto_sections));
+$doroto_presentation = !empty($attributes['presentation']) ? max(5, intval($attributes['presentationSeconds'] ?? 15)) : 0;
+$doroto_context['ui']['tab'] = $doroto_sections[0];
+$doroto_context['ui']['sections'] = array_values(array_diff($doroto_sections, ['settings']));
+$doroto_context['ui']['presentation'] = $doroto_presentation;
 ?>
-<div <?php echo get_block_wrapper_attributes(['class' => 'doroto-block']); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+<div <?php echo get_block_wrapper_attributes(['class' => 'doroto-block' . (count($doroto_tabs) > 1 ? ' has-tabs' : '') . ($doroto_presentation ? ' is-presentation' : '')]); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 	data-wp-interactive="doroto"
 	<?php echo wp_interactivity_data_wp_context($doroto_context); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 	data-wp-init="callbacks.init"
@@ -126,6 +139,7 @@ if ($doroto_flags['admin']) {
 		data-wp-class--is-error="context.ui.error"
 		data-wp-bind--hidden="!context.ui.message" hidden></p>
 
+	<?php if (count($doroto_tabs) > 1) : ?>
 	<div class="doroto-tabs" role="tablist" aria-label="<?php esc_attr_e('Tournament', 'doubles-rotation-tournament'); ?>" data-wp-on--keydown="actions.tabKeys">
 		<?php foreach ($doroto_tabs as $doroto_key => $doroto_label) : ?>
 			<button type="button" role="tab" class="doroto-tab"
@@ -138,8 +152,9 @@ if ($doroto_flags['admin']) {
 				data-wp-class--is-active="state.isTabSelected"><?php echo esc_html($doroto_label); ?></button>
 		<?php endforeach; ?>
 	</div>
+	<?php endif; ?>
 
-	<?php /* ---------------------------------------------------------------- Matches */ ?>
+	<?php if (in_array('matches', $doroto_sections, true)) : ?>
 	<section class="doroto-panel" role="tabpanel" data-tab="matches"
 		id="<?php echo esc_attr($doroto_uid . '-panel-matches'); ?>"
 		aria-labelledby="<?php echo esc_attr($doroto_uid . '-tab-matches'); ?>"
@@ -243,7 +258,9 @@ if ($doroto_flags['admin']) {
 		</div>
 	</section>
 
-	<?php /* ---------------------------------------------------------------- Results */ ?>
+	<?php endif; ?>
+
+	<?php if (in_array('results', $doroto_sections, true)) : ?>
 	<section class="doroto-panel" role="tabpanel" data-tab="results"
 		id="<?php echo esc_attr($doroto_uid . '-panel-results'); ?>"
 		aria-labelledby="<?php echo esc_attr($doroto_uid . '-tab-results'); ?>"
@@ -274,7 +291,9 @@ if ($doroto_flags['admin']) {
 		</ul>
 	</section>
 
-	<?php /* ---------------------------------------------------------------- Players */ ?>
+	<?php endif; ?>
+
+	<?php if (in_array('players', $doroto_sections, true)) : ?>
 	<section class="doroto-panel" role="tabpanel" data-tab="players"
 		id="<?php echo esc_attr($doroto_uid . '-panel-players'); ?>"
 		aria-labelledby="<?php echo esc_attr($doroto_uid . '-tab-players'); ?>"
@@ -370,7 +389,9 @@ if ($doroto_flags['admin']) {
 		<?php endif; ?>
 	</section>
 
-	<?php /* ---------------------------------------------------------------- Statistics */ ?>
+	<?php endif; ?>
+
+	<?php if (in_array('stats', $doroto_sections, true)) : ?>
 	<section class="doroto-panel" role="tabpanel" data-tab="stats"
 		id="<?php echo esc_attr($doroto_uid . '-panel-stats'); ?>"
 		aria-labelledby="<?php echo esc_attr($doroto_uid . '-tab-stats'); ?>"
@@ -410,8 +431,9 @@ if ($doroto_flags['admin']) {
 		</div>
 	</section>
 
-	<?php /* ---------------------------------------------------------------- Settings (organizers) */ ?>
-	<?php if ($doroto_flags['admin']) : ?>
+	<?php endif; ?>
+
+	<?php if (in_array('settings', $doroto_sections, true)) : ?>
 		<section class="doroto-panel" role="tabpanel" data-tab="settings"
 			id="<?php echo esc_attr($doroto_uid . '-panel-settings'); ?>"
 			aria-labelledby="<?php echo esc_attr($doroto_uid . '-tab-settings'); ?>"
