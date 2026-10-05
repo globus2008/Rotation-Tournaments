@@ -14,6 +14,7 @@
 |---|---|
 | `doubles-rotation-tournament.php` | Bootstrap, assets, activation hooks, version check, admin notices |
 | `includes/doroto-endpoints.php` | All REST routes (namespaces `doroto/v1`, `player`) and token auth |
+| `includes/doroto-services.php` | Services (2.0): every tournament change shared by web forms, REST and blocks |
 | `includes/doroto-tournament-management.php` | Drawing algorithm `doroto_offer_games`, table creation, scoring, toggles, demo data |
 | `includes/doroto-shortcodes.php` | About 30 shortcodes and their admin-post form handlers |
 | `includes/doroto-players-management.php` | Invitation link `doroto_register_player`, winner logic, AJAX helpers |
@@ -22,6 +23,21 @@
 | `includes/doroto-frontend-pages.php` | Pages created on activation |
 | `blocks/log-link` | "Log link" block |
 | `languages/` | cs_CZ only |
+
+## Services layer (2.0, branch `v2-blocks`)
+- Plan: blocks + Interactivity API front end. Stage A (foundations) first; see the owner's approved plan.
+- `includes/doroto-services.php`: `doroto_service_*()` never read `$_POST`, redirect or print. They return
+  `doroto_service_ok($action, $extra)` or `doroto_service_error($error_code, $status)` (a `WP_Error`); the codes are
+  the REST `action` / `error_code` the app knows. They check permissions, take the tournament lock and bump `last_update`.
+- Callers:
+  - web handlers: verify the nonce, call the service, save `doroto_service_message()` as the flash message, then redirect;
+  - REST callbacks: resolve the user, call the service, return `doroto_service_rest_response()`.
+  Where an old answer had another shape (already entered result: `forbidden` + HTTP 200; remove-admin;
+  tournament-save; tournament-register) the REST callback maps it, so old app versions see no change.
+- REST also accepts the website login: without an `Authorization` header `doroto_get_current_user_id_from_token()`
+  returns the cookie user, which core sets only with a valid `X-WP-Nonce` (the blocks send it).
+- Tests of the web forms: scratch scripts log in with cookies and post the forms; the app routes are covered by
+  `c:\scr\doroto\tools\api-tests` (all pass after stage A2).
 
 ## Data model
 - One table, `{prefix}doroto_tournaments`. Lists are serialized PHP arrays in text columns: `players`, `playing`, `statistics`, `matches_list`, `admin_users`, `special_group`, `payment_done`, `final_four`, `final_result`.
