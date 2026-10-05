@@ -979,63 +979,19 @@ add_shortcode('doroto_add_player', 'doroto_add_player_shortcode');
 /**
  * add player to the tournament after submitting form
  * @since 1.0.0
- * @version 1.4.7 (last update info)
+ * @version 2.0.0 (services)
  */
 function doroto_add_player_form_submit()
 {
-	global $wpdb;
-	global $doroto_output_form;
-
 	if (!isset($_POST['_wpnonce']) || !wp_verify_nonce(sanitize_text_field(wp_unslash($_POST['_wpnonce'])), 'doroto_add_player_form_nonce')) {
 		wp_die(esc_html__('Invalid request.', 'doubles-rotation-tournament'));
 	}
 
-	if (!isset($_POST['tournament_id']) || !isset($_POST['player_to_add'])) {
-		$output = esc_html__('Tournament or user not found.', 'doubles-rotation-tournament');
-		doroto_info_messsages_save($output);
-		return null;
-	}
-	$tournament_id = intval($_POST['tournament_id']);
-	$player_id = intval($_POST['player_to_add']);
+	$tournament_id = isset($_POST['tournament_id']) ? intval($_POST['tournament_id']) : intval(doroto_getTournamentId());
+	$player_id = isset($_POST['player_to_add']) ? intval($_POST['player_to_add']) : -1;
 
-	$table_name = $wpdb->prefix . 'doroto_tournaments';
-	$tournament = doroto_prepare_tournament($tournament_id);
-	if (!isset($tournament)) {
-		$output = sanitize_text_field(__('The tournament was not found.', 'doubles-rotation-tournament'));
-		doroto_info_messsages_save($output);
-		doroto_redirect_modify_url($tournament_id, "");
-		exit;
-	}
-
-	if (!is_user_logged_in()) {
-		$output = sanitize_text_field(__("You need to log in to add a player!", "doubles-rotation-tournament"));
-		doroto_info_messsages_save($output);
-		doroto_redirect_modify_url($tournament_id, "");
-		exit;
-	}
-
-	$players = maybe_unserialize($tournament->players);
-	if (!is_array($players)) {
-		$players = [];
-	}
-
-	if (!in_array($player_id, $players)) {
-		$players[] = $player_id;
-	}
-	$statistics = doroto_create_statistics_table($tournament, $players, intval($tournament->whole_names));
-	$wpdb->update(
-		$table_name,
-		array(
-			'players' => serialize($players),
-			'statistics' => serialize($statistics),
-			'last_update'  => round(microtime(true) * 1000)
-		),
-		array('id' => $tournament_id)
-	);
-
-	$output = sanitize_text_field(__('Player', 'doubles-rotation-tournament') . ' ' . doroto_find_player_name($player_id, intval($tournament->whole_names)) . ' ' . __('was added to the tournament.', 'doubles-rotation-tournament'));
-	doroto_tournament_progress($tournament_id);
-	doroto_info_messsages_save($output);
+	$result = doroto_service_add_player($tournament_id, $player_id);
+	doroto_info_messsages_save(sanitize_text_field(doroto_service_message($result, $tournament_id)));
 	doroto_redirect_modify_url($tournament_id, "");
 	exit;
 }
@@ -1655,74 +1611,21 @@ add_shortcode('doroto_temporary_disable_player', 'doroto_temporary_disable_playe
 
 
 /**
- * temporary disable a player after submitting form
+ * temporary disable a player (0 = all) after submitting form
  * @since 1.0.0
- * @version 1.4.7 (last update info)
+ * @version 2.0.0 (services)
  */
 function doroto_temporary_disable_player_form_submit()
 {
-	global $wpdb;
-	global $doroto_output_form;
-
 	if (!isset($_POST['_wpnonce']) || !wp_verify_nonce(sanitize_text_field(wp_unslash($_POST['_wpnonce'])), 'doroto_temporary_disable_player_nonce')) {
 		wp_die(esc_html__('Invalid request.', 'doubles-rotation-tournament'));
 	}
 
-	if (!isset($_POST['tournament_id']) || !isset($_POST['disable_player'])) {
-		$output = esc_html__('Tournament or user not found.', 'doubles-rotation-tournament');
-		doroto_info_messsages_save($output);
-		return null;
-	}
-	$tournament_id = intval($_POST['tournament_id']);
-	$player_id = intval($_POST['disable_player']);
+	$tournament_id = isset($_POST['tournament_id']) ? intval($_POST['tournament_id']) : intval(doroto_getTournamentId());
+	$player_id = isset($_POST['disable_player']) ? intval($_POST['disable_player']) : -1;
 
-	$table_name = $wpdb->prefix . 'doroto_tournaments';
-	$tournament = doroto_prepare_tournament($tournament_id);
-	if (!isset($tournament)) {
-		$output = sanitize_text_field(__('The tournament was not found.', 'doubles-rotation-tournament'));
-		doroto_info_messsages_save($output);
-		doroto_redirect_modify_url($tournament_id, "");
-		exit;
-	}
-
-	if (!is_user_logged_in()) {
-		$output = sanitize_text_field(__('You must log in to temporarily suspend a player!', 'doubles-rotation-tournament'));
-		doroto_info_messsages_save($output);
-		doroto_redirect_modify_url($tournament_id, "");
-		exit;
-	}
-
-	$statistics = maybe_unserialize($tournament->statistics);
-	if (!is_array($statistics)) {
-		return null;
-	}
-
-	foreach ($statistics as &$player) {
-		if ($player_id == 0)
-			$player['active'] = 0;
-		elseif ($player['player_id'] == $player_id) {
-			$player['active'] = 0;
-			break;
-		}
-	}
-	unset($player);
-
-	$wpdb->update(
-		$table_name,
-		array(
-			'statistics' => serialize($statistics),
-			'last_update'  => round(microtime(true) * 1000)
-		),
-		array('id' => $tournament_id)
-	);
-
-	if ($player_id == 0) {
-		$output = sanitize_text_field(__('All players have temporarily suspended participation.', 'doubles-rotation-tournament'));
-	} else {
-		$output = sanitize_text_field(doroto_find_player_name($player_id, intval($tournament->whole_names)) . ' ' . __('has temporarily suspended participation.', 'doubles-rotation-tournament'));
-	}
-	doroto_tournament_progress($tournament_id);
-	doroto_info_messsages_save($output);
+	$result = doroto_service_set_player_active($tournament_id, $player_id, false);
+	doroto_info_messsages_save(sanitize_text_field(doroto_service_message($result, $tournament_id)));
 	doroto_redirect_modify_url($tournament_id, "");
 	exit;
 }
@@ -1827,74 +1730,21 @@ add_shortcode('doroto_temporary_enable_player', 'doroto_temporary_enable_player_
 
 
 /**
- * temporary enable a player after submitting form
+ * temporary enable a player (0 = all) after submitting form
  * @since 1.0.0
- * @version 1.4.7 (last update info)
+ * @version 2.0.0 (services)
  */
 function doroto_temporary_enable_player_form_submit()
 {
-	global $wpdb;
-	global $doroto_output_form;
-
 	if (!isset($_POST['_wpnonce']) || !wp_verify_nonce(sanitize_text_field(wp_unslash($_POST['_wpnonce'])), 'doroto_temporary_enable_player_nonce')) {
 		wp_die(esc_html__('Invalid request.', 'doubles-rotation-tournament'));
 	}
 
-	if (!isset($_POST['tournament_id']) || !isset($_POST['enable_player'])) {
-		$output = sanitize_text_field(__('Tournament or user not found.', 'doubles-rotation-tournament'));
-		doroto_info_messsages_save($output);
-		return null;
-	}
-	$tournament_id = intval($_POST['tournament_id']);
-	$player_id = intval($_POST['enable_player']);
+	$tournament_id = isset($_POST['tournament_id']) ? intval($_POST['tournament_id']) : intval(doroto_getTournamentId());
+	$player_id = isset($_POST['enable_player']) ? intval($_POST['enable_player']) : -1;
 
-	$table_name = $wpdb->prefix . 'doroto_tournaments';
-	$tournament = doroto_prepare_tournament($tournament_id);
-	if (!isset($tournament)) {
-		$output = sanitize_text_field(__('The tournament was not found.', 'doubles-rotation-tournament'));
-		doroto_info_messsages_save($output);
-		doroto_redirect_modify_url($tournament_id, "");
-		exit;
-	}
-
-	if (!is_user_logged_in()) {
-		$output = sanitize_text_field(__('You must log in to restore the game!', 'doubles-rotation-tournament'));
-		doroto_info_messsages_save($output);
-		doroto_redirect_modify_url($tournament_id, "");
-		exit;
-	}
-
-	$statistics = maybe_unserialize($tournament->statistics);
-	if (!is_array($statistics)) {
-		return null;
-	}
-
-	foreach ($statistics as &$player) {
-		if ($player_id == 0) {
-			$player['active'] = 1;
-		} elseif ($player['player_id'] == $player_id) {
-			$player['active'] = 1;
-			break;
-		}
-	}
-	unset($player);
-
-	$wpdb->update(
-		$table_name,
-		array(
-			'statistics' => serialize($statistics),
-			'last_update'  => round(microtime(true) * 1000)
-		),
-		array('id' => $tournament_id)
-	);
-
-	if ($player_id == 0) {
-		$output = sanitize_text_field(__('All players have renewed participation.', 'doubles-rotation-tournament'));
-	} else {
-		$output = sanitize_text_field(doroto_find_player_name($player_id, intval($tournament->whole_names)) . ' ' . __('has renewed participation.', 'doubles-rotation-tournament'));
-	}
-	doroto_tournament_progress($tournament_id);
-	doroto_info_messsages_save($output);
+	$result = doroto_service_set_player_active($tournament_id, $player_id, true);
+	doroto_info_messsages_save(sanitize_text_field(doroto_service_message($result, $tournament_id)));
 	doroto_redirect_modify_url($tournament_id, "");
 	exit;
 }
@@ -2006,40 +1856,22 @@ add_shortcode('doroto_remove_player', 'doroto_remove_player_shortcode');
 
 /**
  * remove a player from the tournament after submitting form
- * @version 1.1.8
  * @since 1.0.0
+ * @version 2.0.0 (services)
  */
 function doroto_remove_player_form_submit()
 {
-	global $wpdb;
-	global $doroto_output_form;
-
 	if (!isset($_POST['_wpnonce']) || !wp_verify_nonce(sanitize_text_field(wp_unslash($_POST['_wpnonce'])), 'doroto_remove_player_form_nonce')) {
 		wp_die(esc_html__('Invalid request.', 'doubles-rotation-tournament'));
 	}
 
-	if (!is_user_logged_in()) {
-		$output = sanitize_text_field(__("To remove a player, you need to log in first!", "doubles-rotation-tournament"));
-		$doroto_output_form = $output;
-		doroto_info_messsages_save($output);
-		$tournament_id = doroto_getTournamentId();
-		doroto_redirect_modify_url($tournament_id, "");
-		exit;
-	}
+	$tournament_id = isset($_POST['tournament_id']) ? intval($_POST['tournament_id']) : intval(doroto_getTournamentId());
+	$player_id = isset($_POST['player_to_remove']) ? intval($_POST['player_to_remove']) : -1;
 
-	if (!isset($_POST['tournament_id']) || !isset($_POST['player_to_remove'])) {
-		$output = sanitize_text_field(__('Tournament or user not found.', 'doubles-rotation-tournament'));
-		$doroto_output_form = $output;
-		doroto_info_messsages_save($output);
-		$tournament_id = doroto_getTournamentId();
-		doroto_redirect_modify_url($tournament_id, "");
-		exit;
-	}
-
-	$tournament_id = intval($_POST['tournament_id']);
-	$player_id = intval($_POST['player_to_remove']);
-
-	doroto_remove_player_from_tournament($tournament_id, $player_id);
+	$result = doroto_service_remove_player($tournament_id, $player_id);
+	doroto_info_messsages_save(sanitize_text_field(doroto_service_message($result, $tournament_id)));
+	doroto_redirect_modify_url($tournament_id, "");
+	exit;
 }
 
 add_action('admin_post_doroto_remove_player_from_tournament', 'doroto_remove_player_form_submit');
@@ -2047,82 +1879,14 @@ add_action('admin_post_nopriv_doroto_remove_player_from_tournament', 'doroto_rem
 
 
 /**
- * remove a player from the tournament function
+ * remove a player from the tournament function (web: message and redirect)
  * @since 1.1.8
- * @version 1.5.5 (PHP 8.0+)
+ * @version 2.0.0 (doroto_service_remove_player)
  */
 function doroto_remove_player_from_tournament(int $tournament_id, int $player_id)
 {
-	global $wpdb;
-	global $doroto_output_form;
-
-	$table_name = $wpdb->prefix . 'doroto_tournaments';
-	$tournament = doroto_prepare_tournament($tournament_id);
-	if ($tournament == null) {
-		$output = sanitize_text_field(__('The tournament was not found.', 'doubles-rotation-tournament'));
-		doroto_info_messsages_save($output);
-		doroto_redirect_modify_url($tournament_id, "");
-		exit;
-	}
-
-	if (is_serialized($tournament->players)) {
-		$players = maybe_unserialize($tournament->players);
-	} else {
-		$players = [];
-	}
-
-	$special_group = maybe_unserialize($tournament->special_group);
-
-	if (!is_array($players)) {
-		$players = [];
-	}
-
-	if (!is_array($special_group)) {
-		$special_group = [];
-	}
-
-	$statistics = maybe_unserialize($tournament->statistics);
-	$statistics_new = doroto_remove_player_from_statistics_table($tournament, $statistics, $player_id);
-
-	if ($statistics === $statistics_new) {
-		$output = sanitize_text_field(__("The player cannot be removed because he has already played at least one match in the tournament.", "doubles-rotation-tournament"));
-		doroto_info_messsages_save($output);
-		doroto_redirect_modify_url($tournament_id, "");
-		exit;
-	}
-
-	$table_name = $wpdb->prefix . 'doroto_tournaments';
-
-	$wpdb->update(
-		$table_name,
-		array(
-			'statistics' => serialize($statistics_new),
-			'last_update'  => round(microtime(true) * 1000)
-		),
-		array('id' => $tournament_id)
-	);
-
-	$tournament = doroto_prepare_tournament($tournament_id);
-
-	$players = array_diff($players, array($player_id));
-	$players = array_values($players);
-	$special_group = array_diff($special_group, array($player_id));
-	$special_group = array_values($special_group);
-
-	$wpdb->update(
-		$table_name,
-		array(
-			'players' => maybe_serialize(array_values($players)), // Reset array keys before serialize
-			'statistics' => serialize($statistics_new),
-			'special_group' => maybe_serialize(array_values($special_group)),
-			'last_update'  => round(microtime(true) * 1000) // Reset array keys before serialize
-		),
-		array('id' => $tournament_id)
-	);
-
-	$output = sanitize_text_field(__('Player', 'doubles-rotation-tournament') . ' ' . doroto_find_player_name($player_id, $tournament->whole_names) . ' ' . __('was removed from the tournament.', 'doubles-rotation-tournament'));
-	doroto_tournament_progress($tournament_id);
-	doroto_info_messsages_save($output);
+	$result = doroto_service_remove_player($tournament_id, $player_id);
+	doroto_info_messsages_save(sanitize_text_field(doroto_service_message($result, $tournament_id)));
 	doroto_redirect_modify_url($tournament_id, "");
 	exit;
 }

@@ -111,6 +111,30 @@ function doroto_service_message($result, int $tournament_id = 0): string
 			return __('This match has not been played yet.', 'doubles-rotation-tournament');
 		case 'match_result_changed':
 			return __('The result of match no.', 'doubles-rotation-tournament') . ' ' . intval($result['match_number']) . ' ' . __('was changed.', 'doubles-rotation-tournament');
+		case 'missing_tournament_or_player_id':
+			return __('Tournament or user not found.', 'doubles-rotation-tournament');
+		case 'add_player_forbidden':
+			return __('You do not have permission to perform this action.', 'doubles-rotation-tournament');
+		case 'add_player_tournament_closed':
+			return __('Players cannot be added to a closed tournament.', 'doubles-rotation-tournament');
+		case 'remove_player_not_in_tournament':
+			return __('The player is not in this tournament.', 'doubles-rotation-tournament');
+		case 'remove_player_has_played':
+			return __("The player cannot be removed because he has already played at least one match in the tournament.", "doubles-rotation-tournament");
+		case 'suspend_player_tournament_closed':
+			return __('Players cannot be suspended in a closed tournament.', 'doubles-rotation-tournament');
+		case 'player_added_to_tournament':
+			return __('Player', 'doubles-rotation-tournament') . ' ' . $result['player_name'] . ' ' . __('was added to the tournament.', 'doubles-rotation-tournament');
+		case 'player_removed_from_tournament':
+			return __('Player', 'doubles-rotation-tournament') . ' ' . $result['player_name'] . ' ' . __('was removed from the tournament.', 'doubles-rotation-tournament');
+		case 'all_players_suspended':
+			return __('All players have temporarily suspended participation.', 'doubles-rotation-tournament');
+		case 'single_player_suspended':
+			return $result['player_name'] . ' ' . __('has temporarily suspended participation.', 'doubles-rotation-tournament');
+		case 'all_players_restored':
+			return __('All players have renewed participation.', 'doubles-rotation-tournament');
+		case 'single_player_restored':
+			return $result['player_name'] . ' ' . __('has renewed participation.', 'doubles-rotation-tournament');
 		case 'matches_skipped':
 			/* translators: %d: number of skipped matches */
 			return sprintf(_n('%d match was skipped.', '%d matches were skipped.', intval($result['skipped']), 'doubles-rotation-tournament'), intval($result['skipped']));
@@ -442,6 +466,247 @@ function doroto_service_change_result(int $tournament_id, int $match_number, int
 		return doroto_service_ok('match_result_changed', [
 			'match_number' => $match_number,
 			'last_update' => max($last_update, doroto_service_stored_last_update($tournament_id)),
+		]);
+	});
+}
+
+/**
+ * Recompute the progress after a change of players (prints nothing).
+ * @since 2.0.0
+ */
+function doroto_service_progress(int $tournament_id)
+{
+	ob_start();
+	doroto_tournament_progress($tournament_id);
+	ob_end_clean();
+}
+
+/**
+ * Tell a player that an organizer added him to a tournament.
+ * @since 2.0.0 (moved from doroto_add_player_via_api)
+ */
+function doroto_send_added_to_tournament_email(int $player_id, stdClass $tournament)
+{
+	$player_data = get_userdata($player_id);
+	if (!$player_data) {
+		return;
+	}
+	$player_name = doroto_find_player_name($player_id, intval($tournament->whole_names));
+	$tournament_name = $tournament->name;
+
+	$subject = sprintf(
+		/* translators: %s: Tournament name. */
+		__('You have been added to the tournament: %s', 'doubles-rotation-tournament'),
+		$tournament_name
+	);
+	$body = wp_sprintf(
+		'<p>%s</p>',
+		sprintf(
+			/* translators: %s: Player name. */
+			esc_html__('Hello %s,', 'doubles-rotation-tournament'),
+			$player_name
+		)
+	);
+	$body .= wp_sprintf(
+		'<p>%s</p>',
+		sprintf(
+			wp_kses(
+				/* translators: %s: Tournament name. */
+				__('You have also been added to the \'<strong>%s</strong>\' tournament.', 'doubles-rotation-tournament'),
+				['strong' => []]
+			),
+			esc_html($tournament_name)
+		)
+	);
+	$body .= wp_sprintf(
+		'<p>%s<br>%s</p>',
+		esc_html__('Best regards,', 'doubles-rotation-tournament'),
+		esc_html__('The Doroto Team', 'doubles-rotation-tournament')
+	);
+
+	// A mail transport warning printed before the JSON broke the app's parser,
+	// so the app reported an error although the player had been added.
+	ob_start();
+	wp_mail($player_data->user_email, $subject, $body, ['Content-Type: text/html; charset=UTF-8']);
+	ob_end_clean();
+}
+
+/**
+ * Add an existing user to a tournament (organizer only) and e-mail him.
+ * @return array|WP_Error player_added_to_tournament with player_name, already_added, last_update
+ * @since 2.0.0 (merged from doroto_add_player_form_submit and doroto_add_player_via_api)
+ */
+function doroto_service_add_player(int $tournament_id, int $player_id)
+{
+	global $wpdb;
+
+	if (get_current_user_id() === 0) {
+		return doroto_service_error('auth_unauthorized', 401);
+	}
+	if ($tournament_id <= 0 || $player_id <= 0 || get_userdata($player_id) === false) {
+		return doroto_service_error('missing_tournament_or_player_id');
+	}
+
+	return doroto_with_tournament_lock($tournament_id, function () use ($wpdb, $tournament_id, $player_id) {
+		// Fresh read under the lock, so a concurrent change is not overwritten.
+		$tournament = doroto_prepare_tournament($tournament_id);
+		if (!$tournament) {
+			return doroto_service_error('tournament_not_found', 404);
+		}
+		if (doroto_is_admin($tournament_id) < 1) {
+			return doroto_service_error('add_player_forbidden', 403);
+		}
+		if (intval($tournament->close_tournament) === 1) {
+			return doroto_service_error('add_player_tournament_closed', 403);
+		}
+
+		$players = maybe_unserialize($tournament->players);
+		$players = is_array($players) ? array_map('intval', $players) : [];
+		$already_added = in_array($player_id, $players, true);
+		$last_update = doroto_now_ms();
+
+		if (!$already_added) {
+			$players[] = $player_id;
+			$statistics = doroto_create_statistics_table($tournament, $players, intval($tournament->whole_names));
+			$updated = $wpdb->update(
+				$wpdb->prefix . 'doroto_tournaments',
+				[
+					'players' => serialize($players),
+					'statistics' => serialize($statistics),
+					'last_update' => $last_update,
+				],
+				['id' => $tournament_id]
+			);
+			if ($updated === false) {
+				return doroto_service_error('db_update_failed', 500);
+			}
+			doroto_send_added_to_tournament_email($player_id, $tournament);
+			doroto_service_progress($tournament_id);
+		}
+
+		return doroto_service_ok('player_added_to_tournament', [
+			'player_name' => doroto_find_player_name($player_id, intval($tournament->whole_names)),
+			'already_added' => $already_added,
+			'last_update' => $last_update,
+		]);
+	});
+}
+
+/**
+ * Remove a player who has not played yet. An organizer may remove anybody, a player himself.
+ * @return array|WP_Error player_removed_from_tournament with player_name, last_update
+ * @since 2.0.0 (merged from doroto_remove_player_from_tournament and doroto_remove_player_via_api)
+ */
+function doroto_service_remove_player(int $tournament_id, int $player_id)
+{
+	global $wpdb;
+
+	$current_user_id = get_current_user_id();
+	if ($current_user_id === 0) {
+		return doroto_service_error('auth_unauthorized', 401);
+	}
+	if ($tournament_id <= 0 || $player_id <= 0) {
+		return doroto_service_error('missing_tournament_or_player_id');
+	}
+
+	return doroto_with_tournament_lock($tournament_id, function () use ($wpdb, $tournament_id, $player_id, $current_user_id) {
+		$tournament = doroto_prepare_tournament($tournament_id);
+		if (!$tournament) {
+			return doroto_service_error('tournament_not_found', 404);
+		}
+		if (doroto_is_admin($tournament_id) < 1 && $player_id !== $current_user_id) {
+			return doroto_service_error('auth_insufficient_permissions', 403);
+		}
+
+		$players = maybe_unserialize($tournament->players);
+		$players = is_array($players) ? array_map('intval', $players) : [];
+		if (!in_array($player_id, $players, true)) {
+			return doroto_service_error('remove_player_not_in_tournament');
+		}
+
+		$statistics = maybe_unserialize($tournament->statistics);
+		$statistics = is_array($statistics) ? $statistics : [];
+		$statistics_new = doroto_remove_player_from_statistics_table($tournament, $statistics, $player_id);
+		if ($statistics === $statistics_new) {
+			return doroto_service_error('remove_player_has_played');
+		}
+
+		$special_group = maybe_unserialize($tournament->special_group);
+		$special_group = is_array($special_group) ? $special_group : [];
+		$last_update = doroto_now_ms();
+		$wpdb->update(
+			$wpdb->prefix . 'doroto_tournaments',
+			[
+				'players' => serialize(array_values(array_diff($players, [$player_id]))),
+				'statistics' => serialize($statistics_new),
+				'special_group' => serialize(array_values(array_diff($special_group, [$player_id]))),
+				'last_update' => $last_update,
+			],
+			['id' => $tournament_id]
+		);
+		doroto_service_progress($tournament_id);
+
+		return doroto_service_ok('player_removed_from_tournament', [
+			'player_name' => doroto_find_player_name($player_id, intval($tournament->whole_names)),
+			'last_update' => $last_update,
+		]);
+	});
+}
+
+/**
+ * Suspend ($active = false) or restore a player; player 0 = all players (organizer only).
+ * An organizer may change anybody, a player only himself.
+ * @return array|WP_Error all_players_suspended / single_player_suspended /
+ *                        all_players_restored / single_player_restored (player_name, last_update)
+ * @since 2.0.0 (merged from the suspend/restore forms and REST routes)
+ */
+function doroto_service_set_player_active(int $tournament_id, int $player_id, bool $active)
+{
+	global $wpdb;
+
+	$current_user_id = get_current_user_id();
+	if ($current_user_id === 0) {
+		return doroto_service_error('auth_not_authorized', 401);
+	}
+
+	return doroto_with_tournament_lock($tournament_id, function () use ($wpdb, $tournament_id, $player_id, $active, $current_user_id) {
+		$tournament = doroto_prepare_tournament($tournament_id);
+		if (!$tournament) {
+			return doroto_service_error('tournament_not_found', 404);
+		}
+		if (!$active && intval($tournament->close_tournament) === 1) {
+			return doroto_service_error('suspend_player_tournament_closed', 403);
+		}
+		if (doroto_is_admin($tournament_id) < 1 && $player_id !== $current_user_id) {
+			// Codes of 1.4.7 kept for the app.
+			return doroto_service_error($active ? 'auth_forbidden' : 'suspend_player_tournament_closed', 403);
+		}
+
+		$statistics = maybe_unserialize($tournament->statistics);
+		if (!is_array($statistics)) {
+			return doroto_service_error('invalid_tournament_statistics', 500);
+		}
+		foreach ($statistics as &$player) {
+			if ($player_id === 0 || intval($player['player_id']) === $player_id) {
+				$player['active'] = $active ? 1 : 0;
+			}
+		}
+		unset($player);
+
+		$last_update = doroto_now_ms();
+		$wpdb->update(
+			$wpdb->prefix . 'doroto_tournaments',
+			['statistics' => serialize($statistics), 'last_update' => $last_update],
+			['id' => $tournament_id]
+		);
+		doroto_service_progress($tournament_id);
+
+		if ($player_id === 0) {
+			return doroto_service_ok($active ? 'all_players_restored' : 'all_players_suspended', ['last_update' => $last_update]);
+		}
+		return doroto_service_ok($active ? 'single_player_restored' : 'single_player_suspended', [
+			'player_name' => doroto_find_player_name($player_id, intval($tournament->whole_names)),
+			'last_update' => $last_update,
 		]);
 	});
 }
