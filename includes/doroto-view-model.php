@@ -33,6 +33,32 @@ function doroto_view_match_teams(array $match, bool $doubles, int $whole_names):
 }
 
 /**
+ * The two sides of a match as text, e.g. "Anna Nová & Petr Malý".
+ * @since 2.0.0
+ */
+function doroto_view_sides(array $teams): array
+{
+	return array_map(function ($team) {
+		return implode(' & ', array_column($team, 'name'));
+	}, $teams);
+}
+
+/**
+ * Trend of a player as text: arrow and the number of places.
+ * @since 2.0.0
+ */
+function doroto_view_trend_text(int $trend): string
+{
+	if ($trend > 0) {
+		return '↑ ' . $trend;
+	}
+	if ($trend < 0) {
+		return '↓ ' . abs($trend);
+	}
+	return '';
+}
+
+/**
  * Progress of the tournament in percent and the estimated minutes to its end
  * (same formula as [doroto_display_tournament_progress]). Null values when unknown.
  * @since 2.0.0
@@ -127,6 +153,8 @@ function doroto_view_standings(stdClass $tournament, int $current_user_id): arra
 			'ratio' => round($ratio, 2),
 			'rest' => intval($stat['rest'] ?? 0),
 			'trend' => intval($trend[$id]['trend'] ?? 0),
+			'trend_text' => doroto_view_trend_text(intval($trend[$id]['trend'] ?? 0)),
+			'paid_text' => in_array($id, $paid, true) ? '✓' : '',
 			'special' => $is_special,
 			'paid' => in_array($id, $paid, true),
 			'winner' => $winner,
@@ -212,12 +240,19 @@ function doroto_view_model(int $tournament_id): ?array
 		$skipped = intval($match['hide']) === 1;
 		$r1 = intval($match['result_1']);
 		$r2 = intval($match['result_2']);
-		$row = ['number' => $number, 'teams' => doroto_view_match_teams($match, $doubles, $whole_names)];
+		$teams = doroto_view_match_teams($match, $doubles, $whole_names);
+		$row = ['number' => $number, 'teams' => $teams, 'sides' => doroto_view_sides($teams)];
 		if (!$skipped && $r1 === 0 && $r2 === 0) {
 			$row['can_enter'] = doroto_service_may_enter_result($tournament, $number);
 			$ongoing[] = $row;
 		} else {
-			$played[] = $row + ['result_1' => $r1, 'result_2' => $r2, 'skipped' => $skipped];
+			$played[] = $row + [
+				'result_1' => $r1,
+				'result_2' => $r2,
+				'skipped' => $skipped,
+				'score' => $skipped ? __('skipped', 'doubles-rotation-tournament') : $r1 . ':' . $r2,
+				'players' => array_merge(array_column($teams[0], 'id'), array_column($teams[1], 'id')),
+			];
 		}
 	}
 	usort($played, function ($a, $b) {
@@ -230,15 +265,19 @@ function doroto_view_model(int $tournament_id): ?array
 	if ($closed && intval($tournament->play_final_match) === 1) {
 		$finalists = is_array($four) ? array_map('intval', array_values($four)) : [];
 		$has_result = is_array($final_result) && isset($final_result['result_1']);
+		$final_teams = count($finalists) === 4 ? doroto_view_match_teams([
+			'player_1' => $finalists[0], 'player_2' => $finalists[1],
+			'player_3' => $finalists[2], 'player_4' => $finalists[3],
+		], true, $whole_names) : null;
 		$final = [
-			'teams' => count($finalists) === 4 ? doroto_view_match_teams([
-				'player_1' => $finalists[0], 'player_2' => $finalists[1],
-				'player_3' => $finalists[2], 'player_4' => $finalists[3],
-			], true, $whole_names) : null,
+			'teams' => $final_teams,
+			'sides' => $final_teams ? doroto_view_sides($final_teams) : ['', ''],
+			'chosen' => $final_teams !== null,
+			'has_result' => $has_result,
 			'result_1' => $has_result ? intval($final_result['result_1']) : null,
 			'result_2' => $has_result ? intval($final_result['result_2']) : null,
-			'can_choose' => $is_admin,
-			'can_enter' => count($finalists) === 4 && ($is_admin
+			'can_choose' => $is_admin && !$has_result,
+			'can_enter' => count($finalists) === 4 && !$has_result && ($is_admin
 				|| (intval($tournament->allow_input_results) === 1 && in_array($user_id, $finalists, true))),
 		];
 	}
@@ -252,6 +291,12 @@ function doroto_view_model(int $tournament_id): ?array
 				: (in_array($key, ['latitude', 'longitude'], true) ? floatval($tournament->$key) : intval($tournament->$key));
 		}
 	}
+
+	$standings = doroto_view_standings($tournament, $user_id);
+	$winners = array_values(array_filter($standings, function ($row) {
+		return $row['winner'] !== null;
+	}));
+	$notice = trim(preg_replace('/\s+/', ' ', wp_strip_all_tags(str_replace(['<br>', '</div>', '</p>', '</li>'], ' ', $draw_notice))));
 
 	return [
 		'id' => $tournament_id,
@@ -278,11 +323,29 @@ function doroto_view_model(int $tournament_id): ?array
 			'is_founder' => $user_id > 0 && doroto_service_is_founder($tournament),
 			'can_create' => doroto_service_may_create_tournament(),
 		],
-		'standings' => doroto_view_standings($tournament, $user_id),
+		'standings' => $standings,
+		'winners' => $winners,
 		'ongoing' => $ongoing,
 		'played' => $played,
 		'results_editable' => $is_admin && doroto_match_results_editable($tournament),
-		'draw_notice' => $draw_notice !== '' ? wp_kses_post($draw_notice) : '',
+		'draw_notice' => $notice,
+		'round_end' => $is_admin && $notice !== '' && intval($tournament->announce_round_end) > 0,
+		'flags' => [
+			'registration' => $open,
+			'running' => !$open && !$closed,
+			'closed' => $closed,
+			'admin' => $is_admin,
+			'guest' => $user_id === 0,
+			'can_join' => $open && !$is_player,
+			'can_leave' => $open && $is_player,
+			'has_players' => !empty($players),
+			'has_ongoing' => !empty($ongoing),
+			'no_ongoing' => !$open && !$closed && empty($ongoing),
+			'has_played' => !empty($played),
+			'has_winners' => !empty($winners),
+			'final' => $final !== null,
+			'notice' => $notice !== '',
+		],
 		'final' => $final,
 		'settings' => $settings,
 		'links' => [
