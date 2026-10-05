@@ -1,0 +1,54 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "doroto/tournament-list",
+  "version": "2.0.0",
+  "title": "Rotation tournaments list",
+  "category": "widgets",
+  "icon": "list-view",
+  "description": "List of rotation tournaments with filters, search and paging.",
+  "keywords": [
+    "tournament",
+    "list",
+    "rotation"
+  ],
+  "textdomain": "doubles-rotation-tournament",
+  "attributes": {
+    "targetPage": {
+      "type": "integer",
+      "default": 0
+    },
+    "perPage": {
+      "type": "integer",
+      "default": 10
+    },
+    "showCreate": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "supports": {
+    "html": false,
+    "align": [
+      "wide",
+      "full"
+    ],
+    "color": {
+      "background": true,
+      "text": true,
+      "link": true
+    },
+    "spacing": {
+      "margin": true,
+      "padding": true
+    },
+    "typography": {
+      "fontSize": true
+    },
+    "interactivity": true
+  },
+  "editorScript": "file:./index.js",
+  "style": "file:./style-index.css",
+  "viewScriptModule": "file:./view.js",
+  "render": "file:./render.php"
+}

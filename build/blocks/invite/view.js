@@ -1,0 +1,1 @@
+import{getConfig as o,getContext as i,store as t,withScope as e}from"@wordpress/interactivity";t("doroto/invite",{actions:{copy(){const t=i(),n=e(o=>{t.message=o});navigator.clipboard?navigator.clipboard.writeText(t.link).then(()=>n(o("doroto").i18n.linkCopied),()=>n(t.link)):n(t.link)}}});

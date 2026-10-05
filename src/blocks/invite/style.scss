@@ -1,0 +1,34 @@
+// Invitation block; colours, border and fonts can be set in the editor (block supports).
+
+.doroto-invite {
+	padding: var(--wp--preset--spacing--30, 1rem);
+
+	[hidden] {
+		display: none !important;
+	}
+
+	&__name {
+		margin-top: 0;
+	}
+
+	&__count {
+		color: color-mix(in srgb, currentColor 65%, transparent);
+	}
+
+	&__actions {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5em;
+		align-items: center;
+	}
+
+	&__copy {
+		padding: 0.5em 1em;
+		border: 1px solid color-mix(in srgb, currentColor 25%, transparent);
+		border-radius: 8px;
+		background: transparent;
+		color: inherit;
+		font: inherit;
+		cursor: pointer;
+	}
+}
