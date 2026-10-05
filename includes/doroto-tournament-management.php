@@ -3129,104 +3129,38 @@ function doroto_notice_round_end(int $tournament_id, ?stdClass $tournament, int 
 
 
 /**
- * hide notification about round end
+ * hide the round end notices (web link)
  * @since 1.1.6
- * @version 1.4.7(last update info)
+ * @version 2.0.0 (doroto_service_round_end_action)
  */
 function doroto_hide_notice_round_end()
 {
-	global $wpdb;
-
-	$current_user = wp_get_current_user();
-	$output = '';
-
-	if (!isset($_REQUEST['tournament_id'])) {
-		$output = sanitize_text_field(__("Tournament ID was not provided.", "doubles-rotation-tournament"));
-		doroto_info_messsages_save($output);
-		doroto_redirect_modify_url(0, "");
-		exit;
-	}
-
-	$tournament_id = intval($_REQUEST['tournament_id']);
+	$tournament_id = isset($_REQUEST['tournament_id']) ? intval($_REQUEST['tournament_id']) : 0;
 	doroto_require_admin_action('doroto_hide_notice_round_end', $tournament_id);
-	$tournament = doroto_prepare_tournament($tournament_id);
 
-	if ($tournament == null) {
-		$output = sanitize_text_field(__('The tournament was not found.', 'doubles-rotation-tournament'));
-		doroto_info_messsages_save($output);
-		doroto_redirect_modify_url(0, "");
-		exit;
-	}
-
-	if (doroto_is_admin($tournament_id) > 0) {
-		$table_name = $wpdb->prefix . 'doroto_tournaments';
-		$wpdb->update(
-			$table_name,
-			array(
-				'announce_round_end' => '0',
-				'last_update'  => round(microtime(true) * 1000)
-			),
-			array('id' => $tournament_id)
-		);
-
-		$output = sanitize_text_field(__("Other notifications will be hidden.", "doubles-rotation-tournament"));
-		doroto_tournament_progress($tournament_id);
-		doroto_info_messsages_save($output);
-		doroto_redirect_modify_url($tournament_id, "");
-		exit;
-	}
+	$result = doroto_service_round_end_action($tournament_id, 'hide');
+	doroto_info_messsages_save(sanitize_text_field(doroto_service_message($result, $tournament_id)));
+	doroto_redirect_modify_url($tournament_id, "");
+	exit;
 }
 
 add_action('wp_ajax_doroto_hide_notice_round_end', 'doroto_hide_notice_round_end');
 
 
 /**
- * show next notification about round end
+ * announce the end of the next round again (web link)
  * @since 1.1.6
- * @version 1.4.7(last update info)
+ * @version 2.0.0 (doroto_service_round_end_action)
  */
 function doroto_next_notice_round_end()
 {
-	global $wpdb;
-
-	$current_user = wp_get_current_user();
-	$output = '';
-
-	if (!isset($_REQUEST['tournament_id'])) {
-		$output = sanitize_text_field(__("Tournament ID was not provided.", "doubles-rotation-tournament"));
-		doroto_info_messsages_save($output);
-		doroto_redirect_modify_url(0, "");
-		exit;
-	}
-
-	$tournament_id = intval($_REQUEST['tournament_id']);
+	$tournament_id = isset($_REQUEST['tournament_id']) ? intval($_REQUEST['tournament_id']) : 0;
 	doroto_require_admin_action('doroto_next_notice_round_end', $tournament_id);
-	$tournament = doroto_prepare_tournament($tournament_id);
 
-	if ($tournament == null) {
-		$output = sanitize_text_field(__('The tournament was not found.', 'doubles-rotation-tournament'));
-		doroto_info_messsages_save($output);
-		doroto_redirect_modify_url(0, "");
-		exit;
-	}
-
-	if (doroto_is_admin($tournament_id) > 0) {
-		$table_name = $wpdb->prefix . 'doroto_tournaments';
-		$wpdb->update(
-			$table_name,
-			array(
-				'announce_round_end' => '2',
-				'last_update'  => round(microtime(true) * 1000)
-			),
-			array('id' => $tournament_id)
-		);
-
-		doroto_tournament_progress($tournament_id);
-		$output = sanitize_text_field(__("The end of the round will be announced again.", "doubles-rotation-tournament"));
-		doroto_info_messsages_save($output);
-		doroto_redirect_modify_url($tournament_id, "");
-		exit;
-	}
+	$result = doroto_service_round_end_action($tournament_id, 'next');
+	doroto_info_messsages_save(sanitize_text_field(doroto_service_message($result, $tournament_id)));
+	doroto_redirect_modify_url($tournament_id, "");
+	exit;
 }
 
 add_action('wp_ajax_doroto_next_notice_round_end', 'doroto_next_notice_round_end');

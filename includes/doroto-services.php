@@ -181,6 +181,14 @@ function doroto_service_message($result, int $tournament_id = 0): string
 			return __('Final group composition saved.', 'doubles-rotation-tournament') . ' ' . __('You can start playing the final match.', 'doubles-rotation-tournament');
 		case 'final_result_saved':
 			return __('The final match is over!', 'doubles-rotation-tournament');
+		case 'invalid_action':
+			return __('Invalid request.', 'doubles-rotation-tournament');
+		case 'round_continued':
+			return __("The end of the round will be announced again.", "doubles-rotation-tournament");
+		case 'notification_hidden':
+			return __("Other notifications will be hidden.", "doubles-rotation-tournament");
+		case 'tournament_ended':
+			return __('The tournament was closed.', 'doubles-rotation-tournament');
 		case 'matches_skipped':
 			/* translators: %d: number of skipped matches */
 			return sprintf(_n('%d match was skipped.', '%d matches were skipped.', intval($result['skipped']), 'doubles-rotation-tournament'), intval($result['skipped']));
@@ -1211,5 +1219,54 @@ function doroto_service_set_final_result(int $tournament_id, int $result_1, int 
 			['id' => $tournament_id]
 		);
 		return doroto_service_ok('final_result_saved', ['last_update' => $last_update]);
+	});
+}
+
+/**
+ * Answer the "end of the round" notice (organizer only):
+ * 'next' = announce the end of the next round again, 'hide' = no more notices,
+ * 'end' = close the tournament (like the toggle, the final pairs are cleared).
+ * @return array|WP_Error round_continued / notification_hidden / tournament_ended with last_update
+ * @since 2.0.0 (merged from the notice links and doroto_rest_round_end_action)
+ */
+function doroto_service_round_end_action(int $tournament_id, string $action)
+{
+	global $wpdb;
+
+	if (get_current_user_id() === 0) {
+		return doroto_service_error('auth_unauthorized', 401);
+	}
+	$codes = ['next' => 'round_continued', 'hide' => 'notification_hidden', 'end' => 'tournament_ended'];
+	if (!isset($codes[$action])) {
+		return doroto_service_error('invalid_action');
+	}
+
+	return doroto_with_tournament_lock($tournament_id, function () use ($wpdb, $tournament_id, $action, $codes) {
+		$tournament = doroto_prepare_tournament($tournament_id);
+		if (!$tournament) {
+			return doroto_service_error('tournament_not_found', 404);
+		}
+		if (doroto_is_admin($tournament_id) <= 0) {
+			return doroto_service_error('auth_forbidden', 403);
+		}
+
+		$last_update = doroto_now_ms();
+		if ($action === 'end') {
+			$fields = intval($tournament->close_tournament) === 1 ? [] : [
+				'close_tournament' => 1,
+				'final_four' => '',
+				'final_result' => '',
+				'close_date' => gmdate('Y-m-d H:i:s'),
+			];
+		} else {
+			$fields = ['announce_round_end' => $action === 'next' ? 2 : 0];
+		}
+		$fields['last_update'] = $last_update;
+		$wpdb->update($wpdb->prefix . 'doroto_tournaments', $fields, ['id' => $tournament_id]);
+
+		doroto_service_progress_and_draw($tournament_id);
+		return doroto_service_ok($codes[$action], [
+			'last_update' => max($last_update, doroto_service_stored_last_update($tournament_id)),
+		]);
 	});
 }

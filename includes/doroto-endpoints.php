@@ -1641,54 +1641,16 @@ add_action('rest_api_init', function () {
 
 function doroto_rest_round_end_action(WP_REST_Request $req)
 {
-	global $wpdb;
-
 	$user_id = intval(doroto_get_current_user_id_from_token());
 	if ($user_id <= 0) {
 		return new WP_REST_Response(['error_code' => 'auth_unauthorized'], 401);
 	}
 	wp_set_current_user($user_id);
 
-	$tournament_id = intval($req->get_param('tournament_id'));
-	$action = $req->get_param('action');
-
-	if (doroto_is_admin($tournament_id) <= 0) {
-		return new WP_REST_Response(['error_code' => 'auth_forbidden'], 403);
-	}
-
-	$tournament = doroto_prepare_tournament($tournament_id);
-	if (!$tournament) {
-		return new WP_REST_Response(['error_code' => 'tournament_not_found'], 404);
-	}
-
-	$table = $wpdb->prefix . 'doroto_tournaments';
-	$new_last_update = round(microtime(true) * 1000);
-	$action_code = '';
-	switch ($action) {
-		case 'next':
-			$wpdb->update($table, ['announce_round_end' => '2', 'last_update' => $new_last_update], ['id' => $tournament_id]);
-			$action_code = 'round_continued';
-			break;
-		case 'end':
-			$wpdb->update($table, ['close_tournament' => '1', 'last_update' => $new_last_update], ['id' => $tournament_id]);
-			$action_code = 'tournament_ended';
-			break;
-		case 'hide':
-			$wpdb->update($table, ['announce_round_end' => '0', 'last_update' => $new_last_update], ['id' => $tournament_id]);
-			$action_code = 'notification_hidden';
-			break;
-		default:
-			return new WP_REST_Response(['error_code' => 'invalid_action'], 400);
-	}
-
-	$offer_html = doroto_offer_games($tournament_id, 0);
-	doroto_tournament_progress($tournament_id);
-
-	return rest_ensure_response([
-		'success' => true,
-		'action' => $action_code,
-		'last_update' => $new_last_update,
-	]);
+	return doroto_service_rest_response(doroto_service_round_end_action(
+		intval($req->get_param('tournament_id')),
+		sanitize_key((string) $req->get_param('action'))
+	));
 }
 
 
