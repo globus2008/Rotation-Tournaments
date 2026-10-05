@@ -238,6 +238,7 @@ require_once plugin_dir_path(__FILE__) . 'includes/doroto-players-management.php
 require_once plugin_dir_path(__FILE__) . 'includes/doroto-tournament-management.php';
 require_once plugin_dir_path(__FILE__) . 'includes/doroto-services.php';
 require_once plugin_dir_path(__FILE__) . 'includes/doroto-view-model.php';
+require_once plugin_dir_path(__FILE__) . 'includes/doroto-block-actions.php';
 require_once plugin_dir_path(__FILE__) . 'includes/doroto-blocks.php';
 require_once plugin_dir_path(__FILE__) . 'includes/doroto-frontend-pages.php';
 require_once plugin_dir_path(__FILE__) . 'includes/doroto-backend-pages.php';
