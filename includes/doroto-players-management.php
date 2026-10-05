@@ -243,7 +243,7 @@ function doroto_add_user_to_tournament(int $tournament_id, int $user_id, bool $i
  * link preview opened by a messenger) silently unregistered the player.
  * Now it only joins; leaving needs the nonce-protected doroto_leave_url().
  * @since 1.0.0
- * @version 1.6.0 (join only, login redirect, stable redirect target)
+ * @version 2.0.0 (doroto_service_join / doroto_service_leave)
  */
 function doroto_register_player()
 {
@@ -262,35 +262,15 @@ function doroto_register_player()
 		exit;
 	}
 
-	$tournament = doroto_prepare_tournament($tournament_id);
-	if ($tournament === null) {
-		$output = sanitize_text_field(__("The tournament was not found.", "doubles-rotation-tournament"));
-	} elseif (!empty($_GET['doroto_leave'])) {
+	if (!empty($_GET['doroto_leave'])) {
 		$nonce = isset($_GET['_wpnonce']) ? sanitize_text_field(wp_unslash($_GET['_wpnonce'])) : '';
-		if (wp_verify_nonce($nonce, 'doroto_leave_' . $tournament_id) && $tournament->open_registration == '1') {
-			doroto_remove_player_from_tournament($tournament_id, $current_user_id);
-			exit; // doroto_remove_player_from_tournament() saves the message and redirects
-		}
-		$output = sanitize_text_field(__("The registration for the tournament has already been closed.", "doubles-rotation-tournament"));
+		$result = wp_verify_nonce($nonce, 'doroto_leave_' . $tournament_id)
+			? doroto_service_leave($tournament_id)
+			: doroto_service_error('auth_insufficient_permissions', 403);
 	} else {
-		switch (doroto_add_user_to_tournament($tournament_id, $current_user_id)) {
-			case 'added':
-				$output = sanitize_text_field(__("You signed up for tournament no.", "doubles-rotation-tournament") . ' ' . $tournament_id . '.');
-				break;
-			case 'already':
-				$output = sanitize_text_field(__("You are already registered in tournament no.", "doubles-rotation-tournament") . ' ' . $tournament_id . '.');
-				break;
-			case 'full':
-				$output = sanitize_text_field(__("We are sorry, but the maximum number of registered participants has been reached in tournament no.", "doubles-rotation-tournament") . ' ' . $tournament_id . '.');
-				break;
-			case 'closed':
-				$output = sanitize_text_field(__("The registration for the tournament has already been closed.", "doubles-rotation-tournament"));
-				break;
-			default:
-				$output = sanitize_text_field(__("The tournament was not found.", "doubles-rotation-tournament"));
-		}
+		$result = doroto_service_join($tournament_id);
 	}
-	doroto_info_messsages_save($output);
+	doroto_info_messsages_save(sanitize_text_field(doroto_service_message($result, $tournament_id)));
 	wp_safe_redirect(doroto_tournament_page_url($tournament_id));
 	exit;
 }

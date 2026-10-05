@@ -70,6 +70,7 @@ function doroto_service_message($result, int $tournament_id = 0): string
 		case 'auth_forbidden':
 		case 'not_admin_permission':
 		case 'auth_not_logged_in':
+		case 'auth_not_authenticated':
 		case 'auth_insufficient_permissions':
 			return __('You do not have permission to perform this action.', 'doubles-rotation-tournament');
 		case 'toggle_reg_when_tournament_closed':
@@ -189,6 +190,22 @@ function doroto_service_message($result, int $tournament_id = 0): string
 			return __("Other notifications will be hidden.", "doubles-rotation-tournament");
 		case 'tournament_ended':
 			return __('The tournament was closed.', 'doubles-rotation-tournament');
+		case 'registered':
+			return __("You signed up for tournament no.", "doubles-rotation-tournament") . ' ' . $tournament_id . '.';
+		case 'already_registered':
+			return __("You are already registered in tournament no.", "doubles-rotation-tournament") . ' ' . $tournament_id . '.';
+		case 'registration_is_closed':
+			return __("The registration for the tournament has already been closed.", "doubles-rotation-tournament");
+		case 'registration_max_players':
+			return __("We are sorry, but the maximum number of registered participants has been reached in tournament no.", "doubles-rotation-tournament") . ' ' . $tournament_id . '.';
+		case 'unregistered':
+			return __('You have left the tournament.', 'doubles-rotation-tournament');
+		case 'unregister_player_has_played':
+			return __("The player cannot be removed because he has already played at least one match in the tournament.", "doubles-rotation-tournament");
+		case 'create_failed':
+			return __('The tournament could not be created.', 'doubles-rotation-tournament');
+		case 'tournament_created':
+			return __('A new tournament has just been created.', 'doubles-rotation-tournament');
 		case 'matches_skipped':
 			/* translators: %d: number of skipped matches */
 			return sprintf(_n('%d match was skipped.', '%d matches were skipped.', intval($result['skipped']), 'doubles-rotation-tournament'), intval($result['skipped']));
@@ -1269,4 +1286,103 @@ function doroto_service_round_end_action(int $tournament_id, string $action)
 			'last_update' => max($last_update, doroto_service_stored_last_update($tournament_id)),
 		]);
 	});
+}
+
+/**
+ * The current user joins a tournament with open registration.
+ * @return array|WP_Error registered / already_registered (last_update);
+ *                        errors registration_is_closed, registration_max_players
+ * @since 2.0.0 (merged from doroto_register_player and doroto_rest_register_player)
+ */
+function doroto_service_join(int $tournament_id)
+{
+	$user_id = get_current_user_id();
+	if ($user_id === 0) {
+		return doroto_service_error('auth_not_logged_in', 401);
+	}
+	$status = doroto_add_user_to_tournament($tournament_id, $user_id);
+	switch ($status) {
+		case 'added':
+			return doroto_service_ok('registered', ['last_update' => doroto_service_stored_last_update($tournament_id)]);
+		case 'already':
+			return doroto_service_ok('already_registered', ['last_update' => doroto_service_stored_last_update($tournament_id)]);
+		case 'closed':
+			return doroto_service_error('registration_is_closed', 403);
+		case 'full':
+			return doroto_service_error('registration_max_players');
+	}
+	return doroto_service_error('tournament_not_found', 404);
+}
+
+/**
+ * The current user leaves a tournament while its registration is open and he has not played.
+ * @return array|WP_Error unregistered (last_update); errors registration_is_closed, unregister_player_has_played
+ * @since 2.0.0 (merged from the leave link and doroto_rest_register_player)
+ */
+function doroto_service_leave(int $tournament_id)
+{
+	$user_id = get_current_user_id();
+	if ($user_id === 0) {
+		return doroto_service_error('auth_not_logged_in', 401);
+	}
+	$tournament = doroto_prepare_tournament($tournament_id);
+	if (!$tournament) {
+		return doroto_service_error('tournament_not_found', 404);
+	}
+	$players = maybe_unserialize($tournament->players);
+	if (!is_array($players) || !in_array($user_id, array_map('intval', $players), true)) {
+		return doroto_service_ok('unregistered', ['last_update' => intval($tournament->last_update)]);
+	}
+	if ($tournament->open_registration != '1') {
+		return doroto_service_error('registration_is_closed', 403);
+	}
+	$result = doroto_service_remove_player($tournament_id, $user_id);
+	if (is_wp_error($result)) {
+		switch ($result->get_error_code()) {
+			case 'remove_player_has_played':
+				return doroto_service_error('unregister_player_has_played');
+		}
+		return $result;
+	}
+	return doroto_service_ok('unregistered', ['last_update' => $result['last_update']]);
+}
+
+/**
+ * May the current user create tournaments? With "only_admin_creates" only web
+ * administrators, editors and authors may.
+ * @since 2.0.0
+ */
+function doroto_service_may_create_tournament(): bool
+{
+	if (get_current_user_id() === 0) {
+		return false;
+	}
+	if (doroto_read_settings('only_admin_creates', 0) != 1) {
+		return true;
+	}
+	$roles = (array) wp_get_current_user()->roles;
+	return (bool) array_intersect(['administrator', 'editor', 'author'], $roles);
+}
+
+/**
+ * Create a tournament of the given type; the current user becomes its founder.
+ * @return array|WP_Error tournament_created with tournament_id
+ * @since 2.0.0 (merged from doroto_add_tournament_result and doroto_rest_add_tournament)
+ */
+function doroto_service_add_tournament(int $tournament_type)
+{
+	if (get_current_user_id() === 0) {
+		return doroto_service_error('auth_not_authenticated', 401);
+	}
+	if (!doroto_service_may_create_tournament()) {
+		return doroto_service_error('auth_insufficient_permissions', 403);
+	}
+	if (!array_key_exists($tournament_type, doroto_tournament_types())) {
+		return doroto_service_error('invalid_tournament_type');
+	}
+	$tournament_id = intval(doroto_insert_tournament($tournament_type));
+	if ($tournament_id <= 0) {
+		return doroto_service_error('create_failed', 500);
+	}
+	return doroto_service_ok('tournament_created', ['tournament_id' => $tournament_id]);
 }

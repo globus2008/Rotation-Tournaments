@@ -1055,49 +1055,17 @@ add_action('rest_api_init', function () {
 
 function doroto_rest_add_tournament(WP_REST_Request $request)
 {
-	global $wpdb;
-	$result = doroto_get_current_user_id_from_token();
-	if ($result instanceof WP_REST_Response) {
-		return $result;
-	}
-	$current_user_id = $result;
-
-
+	$current_user_id = doroto_get_current_user_id_from_token();
 	if ($current_user_id <= 0) {
 		return new WP_REST_Response(['error_code' => 'auth_not_authenticated'], 401);
 	}
-
 	wp_set_current_user($current_user_id);
 
-	$params = $request->get_json_params();
-
+	$params = (array) $request->get_json_params();
 	if (!isset($params['tournament_type'])) {
 		return new WP_REST_Response(['error_code' => 'create_missing_type'], 400);
 	}
-
-	if (doroto_read_settings('only_admin_creates', 0) == 1) {
-		$current_user = wp_get_current_user();
-		if (
-			!in_array('administrator', $current_user->roles) &&
-			!in_array('editor', $current_user->roles) &&
-			!in_array('author', $current_user->roles)
-		) {
-			return new WP_REST_Response(['error_code' => 'auth_insufficient_permissions'], 403);
-		}
-	}
-
-	$tournament_type = intval($params['tournament_type']);
-	$tournament_id = doroto_insert_tournament($tournament_type);
-
-	if ($tournament_id > 0) {
-		return new WP_REST_Response([
-			'success' => true,
-			'action' => 'tournament_created',
-			'tournament_id' => $tournament_id
-		], 200);
-	} else {
-		return new WP_REST_Response(['error_code' => 'create_failed'], 500);
-	}
+	return doroto_service_rest_response(doroto_service_add_tournament(intval($params['tournament_type'])));
 }
 
 /**
@@ -1117,124 +1085,43 @@ add_action('rest_api_init', function () {
 
 function doroto_rest_register_player(WP_REST_Request $request)
 {
-	global $wpdb;
-
-	$result = doroto_get_current_user_id_from_token();
-	if ($result instanceof WP_REST_Response) {
-		return $result;
-	}
-	$current_user_id = $result;
+	$current_user_id = doroto_get_current_user_id_from_token();
 	wp_set_current_user($current_user_id);
-
-	$tournament_id = intval($request['id']);
 	if ($current_user_id <= 0) {
 		return new WP_REST_Response(['error_code' => 'auth_not_logged_in'], 401);
 	}
-
-	$tournament = doroto_prepare_tournament($tournament_id);
-	if (!$tournament) {
-		return new WP_REST_Response(['error_code' => 'tournament_not_found'], 404);
-	}
-
-	if ($tournament->open_registration != '1') {
-		return new WP_REST_Response(['error_code' => 'registration_is_closed'], 403);
-	}
-
-	$players = maybe_unserialize($tournament->players);
-	if (!is_array($players))
-		$players = [];
-
-	$special_group = maybe_unserialize($tournament->special_group);
-	if (!is_array($special_group))
-		$special_group = [];
-
-	$already_registered = in_array($current_user_id, array_map('intval', $players), true);
-	$new_last_update = doroto_now_ms();
+	$tournament_id = intval($request['id']);
 
 	// Optional 'mode' (since 1.6.0): 'join' or 'leave' makes the call idempotent,
 	// so a repeated request can no longer flip the registration back.
 	// Without 'mode' the endpoint keeps the old toggle behaviour for old app versions.
 	$mode = sanitize_key((string) $request->get_param('mode'));
-	if ($mode === 'join' && $already_registered) {
-		return new WP_REST_Response([
-			'success' => true,
-			'action' => 'already_registered',
-			'last_update' => intval($tournament->last_update),
-			'player_id' => $current_user_id,
-			'tournament_id' => $tournament_id,
-		]);
-	}
-	if ($mode === 'leave' && !$already_registered) {
-		return new WP_REST_Response([
-			'success' => true,
-			'action' => 'unregistered',
-			'last_update' => intval($tournament->last_update),
-			'player_id' => $current_user_id,
-			'tournament_id' => $tournament_id,
-		]);
-	}
-
-	if ($already_registered) {
-		$statistics = maybe_unserialize($tournament->statistics);
-		$statistics_new = doroto_remove_player_from_statistics_table($tournament, $statistics, $current_user_id);
-
-		if ($statistics === $statistics_new) {
-			return new WP_REST_Response(['error_code' => 'unregister_player_has_played'], 400);
+	if ($mode !== 'join' && $mode !== 'leave') {
+		$tournament = doroto_prepare_tournament($tournament_id);
+		if (!$tournament) {
+			return new WP_REST_Response(['error_code' => 'tournament_not_found'], 404);
 		}
-
-		$players = array_values(array_diff($players, [$current_user_id]));
-		$special_group = array_values(array_diff($special_group, [$current_user_id]));
-
-		$wpdb->update(
-			$wpdb->prefix . 'doroto_tournaments',
-			[
-				'players' => maybe_serialize($players),
-				'statistics' => serialize($statistics_new),
-				'special_group' => maybe_serialize($special_group),
-				'last_update' => $new_last_update // the new value
-			],
-			['id' => $tournament_id]
-		);
-
-		doroto_tournament_progress($tournament_id);
-
-		return new WP_REST_Response([
-			'success' => true,
-			'action' => 'unregistered',
-			'message' => 'You have been removed from the tournament.',
-			'last_update' => $new_last_update, // the new value
-			'player_id' => $current_user_id,
-			'tournament_id' => $tournament_id,
-		]);
-	} else {
-		$max_players = intval($tournament->max_players);
-		if ($max_players > 0 && count($players) >= $max_players) {
-			return new WP_REST_Response(['error_code' => 'registration_max_players'], 400);
+		if ($tournament->open_registration != '1') {
+			return new WP_REST_Response(['error_code' => 'registration_is_closed'], 403);
 		}
-
-		$players[] = $current_user_id;
-		$statistics = doroto_create_statistics_table($tournament, $players, intval($tournament->whole_names));
-
-		$wpdb->update(
-			$wpdb->prefix . 'doroto_tournaments',
-			[
-				'players' => serialize($players),
-				'statistics' => serialize($statistics),
-				'last_update' => $new_last_update
-			],
-			['id' => $tournament_id]
-		);
-
-		doroto_tournament_progress($tournament_id);
-
-		return new WP_REST_Response([
-			'success' => true,
-			'action' => 'registered',
-			'message' => 'You have successfully logged into the tournament.',
-			'player_id' => $current_user_id,
-			'tournament_id' => $tournament_id,
-		]);
+		$players = maybe_unserialize($tournament->players);
+		$registered = is_array($players) && in_array($current_user_id, array_map('intval', $players), true);
+		$mode = $registered ? 'leave' : 'join';
 	}
+
+	$result = $mode === 'join' ? doroto_service_join($tournament_id) : doroto_service_leave($tournament_id);
+	if (is_wp_error($result)) {
+		return doroto_service_rest_response($result);
+	}
+	$messages = [
+		'registered' => 'You have successfully logged into the tournament.',
+		'unregistered' => 'You have been removed from the tournament.',
+	];
+	return new WP_REST_Response(array_merge($result, [
+		'message' => $messages[$result['action']] ?? '',
+		'player_id' => $current_user_id,
+		'tournament_id' => $tournament_id,
+	]));
 }
 
 /**

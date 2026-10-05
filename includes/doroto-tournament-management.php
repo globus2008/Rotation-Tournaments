@@ -1210,61 +1210,19 @@ add_action('wp_loaded', 'doroto_define_permanent_tournament_id');
 /**
  * create a new tournament after submitting form
  * @since 1.0.0
+ * @version 2.0.0 (doroto_service_add_tournament; works when no tournament exists yet)
  */
 function doroto_add_tournament_result()
 {
-	global $wpdb;
-	$tournament_id = doroto_getTournamentId();
-	$output = "";
-	if ($tournament_id == 0) {
-		$output = sanitize_text_field(__('Invalid value entered.', 'doubles-rotation-tournament'));
-		doroto_info_messsages_save($output);
-		doroto_redirect_modify_url($tournament_id, "");
-		exit;
-	};
-
-	if (!is_user_logged_in()) {
-		$output = sanitize_text_field(__('You must log in to add a tournament!', 'doubles-rotation-tournament'));
-		doroto_info_messsages_save($output);
-		doroto_redirect_modify_url($tournament_id, "");
-		exit;
+	if (! isset($_POST['_wpnonce']) || ! wp_verify_nonce(sanitize_text_field(wp_unslash($_POST['_wpnonce'])), 'doroto_add_tournament_nonce')) {
+		wp_die(esc_html__('Invalid request.', 'doubles-rotation-tournament'));
 	}
-
-	if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-		if (isset($_POST['action']) && $_POST['action'] == 'doroto_add_tournament_save') {
-
-			if (! isset($_POST['_wpnonce']) || ! wp_verify_nonce(sanitize_text_field(wp_unslash($_POST['_wpnonce'])), 'doroto_add_tournament_nonce')) {
-				wp_die(esc_html__('Invalid request.', 'doubles-rotation-tournament'));
-			}
-
-			if (doroto_read_settings('only_admin_creates', 0) == 1) {
-				$current_user = wp_get_current_user();
-				if (!in_array('administrator', (array) $current_user->roles) && !in_array('editor', (array) $current_user->roles) && !in_array('author', (array) $current_user->roles)) {
-					$output = sanitize_text_field(__('You do not have site administrator privileges to create a new tournament.', 'doubles-rotation-tournament'));
-					doroto_info_messsages_save($output);
-					doroto_redirect_modify_url(0, "");
-					exit;
-				}
-			}
-
-			$tournament_type = intval($_POST['doroto_add_tournament_tournament_type']);
-			$tournament_id = doroto_insert_tournament($tournament_type);
-			$output = sanitize_text_field(__('A new tournament has just been created.', 'doubles-rotation-tournament'));
-			doroto_info_messsages_save($output);
-			doroto_redirect_modify_url($tournament_id, "");
-			exit;
-		}
-	} else {
-		if (isset($_GET['tournament_id'])) {
-			$tournament_id = intval($_GET['tournament_id']);
-			if ($tournament_id <= 0) {
-				$output = esc_html__('Invalid value entered.', 'doubles-rotation-tournament');
-			} else {
-				$output = esc_html__('Tournament no.', 'doubles-rotation-tournament') . ' ' . esc_html($tournament_id) . ' ' . esc_html__('was created.', 'doubles-rotation-tournament');
-			}
-		}
-	}
-	return $output;
+	$type = isset($_POST['doroto_add_tournament_tournament_type']) ? intval($_POST['doroto_add_tournament_tournament_type']) : -1;
+	$result = doroto_service_add_tournament($type);
+	$tournament_id = is_wp_error($result) ? intval(doroto_getTournamentId()) : intval($result['tournament_id']);
+	doroto_info_messsages_save(sanitize_text_field(doroto_service_message($result, $tournament_id)));
+	doroto_redirect_modify_url($tournament_id, "");
+	exit;
 }
 
 add_action('admin_post_doroto_add_tournament_save', 'doroto_add_tournament_result');
