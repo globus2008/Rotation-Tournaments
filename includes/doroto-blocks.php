@@ -176,3 +176,112 @@ function doroto_block_settings_field(string $key, array $field, $value, string $
 	}
 	echo '</div>';
 }
+
+/**
+ * Content of the main page built from the 2.0 blocks.
+ * @since 2.0.0
+ */
+function doroto_main_page_blocks(): string
+{
+	return "<!-- wp:doroto/tournament /-->\n\n"
+		. "<!-- wp:heading -->\n<h2 class=\"wp-block-heading\">" . esc_html__('Tournament Selection', 'doubles-rotation-tournament') . "</h2>\n<!-- /wp:heading -->\n\n"
+		. "<!-- wp:doroto/tournament-list /-->\n";
+}
+
+/**
+ * Does the main page already use the blocks (converted, or created by 2.0)?
+ * @since 2.0.0
+ */
+function doroto_main_page_uses_blocks(): bool
+{
+	$page = get_post(intval(get_option('doroto_main_page_id')));
+	return $page instanceof WP_Post && strpos($page->post_content, '<!-- wp:doroto/') !== false;
+}
+
+/**
+ * Admin: replace the content of the main page with the blocks. The old content stays
+ * in the page revisions, so it can be restored in the editor.
+ * @since 2.0.0
+ */
+function doroto_convert_main_page_to_blocks()
+{
+	if (!current_user_can('manage_options')) {
+		wp_die(esc_html__('You do not have permission to perform this action.', 'doubles-rotation-tournament'));
+	}
+	check_admin_referer('doroto_convert_main_page');
+	$page_id = intval(get_option('doroto_main_page_id'));
+	if ($page_id && get_post($page_id)) {
+		wp_save_post_revision($page_id);
+		wp_update_post(['ID' => $page_id, 'post_content' => doroto_main_page_blocks()]);
+	}
+	wp_safe_redirect(add_query_arg(['page' => 'doubles-rotation-tournament', 'doroto_converted' => 1], admin_url('admin.php')));
+	exit;
+}
+add_action('admin_post_doroto_convert_main_page', 'doroto_convert_main_page_to_blocks');
+
+/**
+ * Admin home: offer the conversion while the main page still uses the shortcodes.
+ * @since 2.0.0
+ */
+function doroto_convert_main_page_box(): string
+{
+	$page_id = intval(get_option('doroto_main_page_id'));
+	if (!$page_id || !get_post($page_id) || !current_user_can('manage_options')) {
+		return '';
+	}
+	$output = '<div class="card"><h2>' . esc_html__('Blocks', 'doubles-rotation-tournament') . '</h2>';
+	if (!empty($_GET['doroto_converted'])) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- only a notice
+		$output .= '<p><strong>' . esc_html__('The main page now uses the blocks. The previous content is kept in the page revisions.', 'doubles-rotation-tournament') . '</strong></p>';
+	}
+	if (doroto_main_page_uses_blocks()) {
+		$output .= '<p>' . esc_html__('The main page uses the tournament blocks.', 'doubles-rotation-tournament') . '</p>';
+	} else {
+		$output .= '<p>' . esc_html__('The main page still uses the shortcodes. The tournament blocks show the same tournament on one page with tabs and save every change without reloading the page.', 'doubles-rotation-tournament') . '</p>';
+		$output .= '<form method="post" action="' . esc_url(admin_url('admin-post.php')) . '">';
+		$output .= '<input type="hidden" name="action" value="doroto_convert_main_page">';
+		$output .= wp_nonce_field('doroto_convert_main_page', '_wpnonce', true, false);
+		$output .= '<p><button type="submit" class="button button-primary">' . esc_html__('Convert the main page to blocks', 'doubles-rotation-tournament') . '</button></p>';
+		$output .= '</form>';
+	}
+	$output .= '<p>' . esc_html__('Blocks: Rotation tournament (with the variations standings, matches and presentation), Rotation tournaments list, Rotation tournament invitation. In the classic editor use [doroto_tournament] and [doroto_tournament_list].', 'doubles-rotation-tournament') . '</p>';
+	return $output . '</div>';
+}
+
+/**
+ * Shortcodes for the classic editor that render the 2.0 blocks.
+ * [doroto_tournament tournament_id="5" sections="players,results" presentation="1" seconds="20"]
+ * [doroto_tournament_list per_page="10" target_page="12"]
+ * @since 2.0.0
+ */
+function doroto_tournament_block_shortcode($atts = [])
+{
+	$atts = shortcode_atts([
+		'tournament_id' => 0,
+		'sections' => '',
+		'presentation' => 0,
+		'seconds' => 15,
+	], (array) $atts);
+	$attributes = [
+		'tournamentId' => intval($atts['tournament_id']),
+		'presentation' => !empty($atts['presentation']),
+		'presentationSeconds' => intval($atts['seconds']),
+	];
+	if (trim((string) $atts['sections']) !== '') {
+		$attributes['sections'] = array_map('sanitize_key', array_map('trim', explode(',', (string) $atts['sections'])));
+	}
+	return render_block(['blockName' => 'doroto/tournament', 'attrs' => $attributes, 'innerBlocks' => [], 'innerHTML' => '', 'innerContent' => []]);
+}
+add_shortcode('doroto_tournament', 'doroto_tournament_block_shortcode');
+
+function doroto_tournament_list_block_shortcode($atts = [])
+{
+	$atts = shortcode_atts(['per_page' => 10, 'target_page' => 0], (array) $atts);
+	return render_block([
+		'blockName' => 'doroto/tournament-list',
+		'attrs' => ['perPage' => intval($atts['per_page']), 'targetPage' => intval($atts['target_page'])],
+		'innerBlocks' => [],
+		'innerHTML' => '',
+		'innerContent' => [],
+	]);
+}
+add_shortcode('doroto_tournament_list', 'doroto_tournament_list_block_shortcode');

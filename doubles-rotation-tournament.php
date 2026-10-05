@@ -53,30 +53,55 @@ function doroto_load_textdomain_strings()
 }
 
 /**
- * Does the current page show the plugin (a [doroto_*] shortcode or a doroto block)?
+ * What of the plugin does the current page show?
+ * 'shortcodes': shortcodes of 1.x (they need the old styles and scripts);
+ * 'any': also the 2.0 blocks and [doroto_tournament] / [doroto_tournament_list],
+ * which load their own assets.
  * Used to load the shortcode assets and send no-cache headers only where needed;
  * before 2.0 both happened on every page of the site.
  * @since 2.0.0
  */
-function doroto_page_uses_plugin(): bool
+function doroto_page_content_uses(string $what): bool
 {
-	static $uses = null;
-	if ($uses !== null) {
-		return $uses;
-	}
-	$uses = false;
-	if (is_singular()) {
-		$post = get_queried_object();
-		if ($post instanceof WP_Post) {
-			$uses = strpos($post->post_content, '[doroto_') !== false || strpos($post->post_content, '<!-- wp:doroto/') !== false;
+	static $found = null;
+	if ($found === null) {
+		$found = ['shortcodes' => false, 'any' => false];
+		if (is_singular()) {
+			$post = get_queried_object();
+			if ($post instanceof WP_Post) {
+				$content = $post->post_content;
+				$found['shortcodes'] = preg_match('/\[doroto_(?!tournament(?:_list)?[\s\]])/', $content) === 1;
+				$found['any'] = $found['shortcodes'] || strpos($content, '[doroto_') !== false || strpos($content, '<!-- wp:doroto/') !== false;
+			}
 		}
 	}
+	return !empty($found[$what]);
+}
+
+/**
+ * Does the current page show the plugin (blocks or shortcodes)?
+ * @since 2.0.0
+ */
+function doroto_page_uses_plugin(): bool
+{
 	/**
 	 * Filters whether the current page shows the plugin (e.g. a shortcode in a widget or template).
 	 * @since 2.0.0
 	 */
-	$uses = (bool) apply_filters('doroto_page_uses_plugin', $uses);
-	return $uses;
+	return (bool) apply_filters('doroto_page_uses_plugin', doroto_page_content_uses('any'));
+}
+
+/**
+ * Does the current page show shortcodes of 1.x (which need the old assets)?
+ * @since 2.0.0
+ */
+function doroto_page_uses_shortcodes(): bool
+{
+	/**
+	 * Filters whether the current page shows shortcodes of 1.x.
+	 * @since 2.0.0
+	 */
+	return (bool) apply_filters('doroto_page_uses_shortcodes', doroto_page_content_uses('shortcodes'));
 }
 
 /**
@@ -117,7 +142,7 @@ function doroto_enqueue_shortcode_assets()
 
 function doroto_maybe_enqueue_shortcode_assets()
 {
-	if (doroto_page_uses_plugin()) {
+	if (doroto_page_uses_shortcodes()) {
 		doroto_enqueue_shortcode_assets();
 	}
 }
@@ -130,7 +155,7 @@ add_action('wp_enqueue_scripts', 'doroto_maybe_enqueue_shortcode_assets');
  */
 function doroto_shortcode_tag_assets($output, $tag)
 {
-	if (strpos((string) $tag, 'doroto_') === 0) {
+	if (strpos((string) $tag, 'doroto_') === 0 && !in_array($tag, ['doroto_tournament', 'doroto_tournament_list'], true)) {
 		doroto_enqueue_shortcode_assets();
 	}
 	return $output;

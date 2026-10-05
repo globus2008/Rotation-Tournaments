@@ -44,7 +44,7 @@ function doroto_create_main_page()
 		}
 	}
 	$page_title = sanitize_text_field(__('Rotation Tournaments', 'doubles-rotation-tournament'));
-	$page_content = doroto_main_page();
+	$page_content = doroto_main_page_blocks(); // 2.0: blocks instead of the shortcodes
 
 	$page = array(
 		'post_title'    => $page_title,
@@ -250,7 +250,8 @@ function doroto_update_main_page_content_on_activation()
 	$doroto_main_page_id = intval(get_option('doroto_main_page_id'));
 
 	if ($doroto_main_page_id) {
-		$page_content = doroto_main_page();
+		// A page converted to the blocks (or created by 2.0) stays with the blocks.
+		$page_content = doroto_main_page_uses_blocks() ? doroto_main_page_blocks() : doroto_main_page();
 		$page_title = sanitize_text_field(__('Rotation Tournaments', 'doubles-rotation-tournament'));
 
 		$page_data = array(

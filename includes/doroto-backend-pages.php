@@ -172,6 +172,7 @@ function doroto_home_menu_page_callback()
 	$allowed_html = doroto_allowed_html();
 	echo '<div class="wrap">';
 	echo wp_kses(doroto_home_page(), $allowed_html);
+	echo doroto_convert_main_page_box(); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- escaped when built (contains a form)
 	echo '</div>';
 }
 
