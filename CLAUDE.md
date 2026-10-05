@@ -50,9 +50,10 @@
   server HTML (hidden flags, scores, trend) is a plain value of the view model (`flags`, `score`, `trend_text`, ...).
 - Every change: `actions.run()` -> `block-action` -> service -> `{message, view}`. The 30 s poll compares
   `check-update` (answers a plain number) with `view.last_update`; typed scores live in `ui.drafts`.
-- `courts_note` explains why the number of ongoing matches differs from the courts: during play another match is
-  drawn only while at least 6 (doubles) / 3 (singles) players stay free (`doroto_matches_to_select_count()`), and
-  matches being played are never cancelled when courts are reduced. The owner took this for a bug once.
+- `courts_note` explains why fewer matches than courts are ongoing: during play another match is drawn only while
+  at least 6 (doubles) / 3 (singles) players stay free (`doroto_matches_to_select_count()`).
+- Reducing the courts during play never cancels ongoing matches and shows no note: the organizer decides whether
+  to finish or skip them (owner decision 2026-10-05). The draw itself never exceeds the number of courts.
 - Tests (local): Playwright scripts log in, drive the blocks and check the console (no errors expected).
 - Translations of the plugin are made on translate.wordpress.org, do not edit `languages/`.
 

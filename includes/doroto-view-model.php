@@ -66,11 +66,10 @@ function doroto_view_trend_text(int $trend): string
 function doroto_view_courts_note(stdClass $tournament, int $ongoing, bool $not_running): string
 {
 	$courts = intval($tournament->courts_available);
-	if ($not_running || $ongoing === $courts) {
+	// More ongoing matches than courts (courts reduced during play): the organizer decides
+	// whether they are finished or skipped, no note.
+	if ($not_running || $ongoing >= $courts) {
 		return '';
-	}
-	if ($ongoing > $courts) {
-		return __('More matches are being played than there are courts. They are not cancelled; new matches follow the number of courts.', 'doubles-rotation-tournament');
 	}
 	$on_court = doroto_check_if_doubles($tournament) ? 4 : 2;
 	$players = count((array) (maybe_unserialize($tournament->players) ?: []));
