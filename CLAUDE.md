@@ -21,7 +21,10 @@
 | `includes/doroto-repeated-functions.php` | `doroto_is_admin`, `doroto_getTournamentId`, flash messages, redirects |
 | `includes/doroto-backend-pages.php` | Admin menu (9 tabs), settings defaults `doroto_settings` |
 | `includes/doroto-frontend-pages.php` | Pages created on activation |
-| `blocks/log-link` | "Log link" block |
+| `includes/doroto-view-model.php`, `doroto-view-list.php` | View models of the blocks; GET `view/<id>`, `view/<id>/player/<pid>`, `view-list` |
+| `includes/doroto-block-actions.php` | POST `block-action` (runs a service, returns message + fresh view), GET `block-candidates/<id>` |
+| `includes/doroto-blocks.php` | Block registration, store config, settings schema, migration (convert main page, `[doroto_tournament]`, `[doroto_tournament_list]`) |
+| `src/blocks/*` -> `build/blocks/*` | Blocks `doroto/tournament` (+ variations standings/matches/presentation), `doroto/tournament-list`, `doroto/invite`; `npm run build` |
 | `languages/` | cs_CZ only |
 
 ## Services layer (2.0, branch `v2-blocks`)
@@ -38,6 +41,20 @@
   returns the cookie user, which core sets only with a valid `X-WP-Nonce` (the blocks send it).
 - Tests of the web forms: scratch scripts log in with cookies and post the forms; the app routes are covered by
   `c:\scr\doroto\tools\api-tests` (all pass after stage A2).
+
+## Blocks (2.0)
+- Dynamic blocks + Interactivity API. render.php prints the view model with directives (readable without JS);
+  the view model sits in the block context (`context.data.view`). No JS in PHP; JS texts come from
+  `wp_interactivity_config('doroto')` (`doroto_block_config()`).
+- Server-side directive processing cannot evaluate derived `state.*` getters: anything that must be right in the
+  server HTML (hidden flags, scores, trend) is a plain value of the view model (`flags`, `score`, `trend_text`, ...).
+- Every change: `actions.run()` -> `block-action` -> service -> `{message, view}`. The 30 s poll compares
+  `check-update` (answers a plain number) with `view.last_update`; typed scores live in `ui.drafts`.
+- `courts_note` explains why the number of ongoing matches differs from the courts: during play another match is
+  drawn only while at least 6 (doubles) / 3 (singles) players stay free (`doroto_matches_to_select_count()`), and
+  matches being played are never cancelled when courts are reduced. The owner took this for a bug once.
+- Tests (local): Playwright scripts log in, drive the blocks and check the console (no errors expected).
+- Translations of the plugin are made on translate.wordpress.org, do not edit `languages/`.
 
 ## Data model
 - One table, `{prefix}doroto_tournaments`. Lists are serialized PHP arrays in text columns: `players`, `playing`, `statistics`, `matches_list`, `admin_users`, `special_group`, `payment_done`, `final_four`, `final_result`.

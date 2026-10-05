@@ -170,6 +170,8 @@ $doroto_context['ui']['presentation'] = $doroto_presentation;
 			</p>
 		</div>
 
+		<p class="doroto-notice doroto-notice--info" data-wp-text="context.data.view.courts_note" data-wp-bind--hidden="!context.data.view.courts_note" <?php echo $doroto_view['courts_note'] ? '' : 'hidden'; ?>><?php echo esc_html($doroto_view['courts_note']); ?></p>
+
 		<p class="doroto-empty" data-wp-bind--hidden="!context.data.view.flags.registration" <?php echo $doroto_flags['registration'] ? '' : 'hidden'; ?>>
 			<?php esc_html_e('Matches are drawn after the organizer closes the registration.', 'doubles-rotation-tournament'); ?>
 		</p>

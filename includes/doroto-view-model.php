@@ -59,6 +59,36 @@ function doroto_view_trend_text(int $trend): string
 }
 
 /**
+ * Why the number of matches being played differs from the number of courts, so that a
+ * changed number of courts does not look like an error (rules of doroto_matches_to_select_count()).
+ * @since 2.0.0
+ */
+function doroto_view_courts_note(stdClass $tournament, int $ongoing, bool $not_running): string
+{
+	$courts = intval($tournament->courts_available);
+	if ($not_running || $ongoing === $courts) {
+		return '';
+	}
+	if ($ongoing > $courts) {
+		return __('More matches are being played than there are courts. They are not cancelled; new matches follow the number of courts.', 'doubles-rotation-tournament');
+	}
+	$on_court = doroto_check_if_doubles($tournament) ? 4 : 2;
+	$players = count((array) (maybe_unserialize($tournament->players) ?: []));
+	if ($players < $courts * $on_court) {
+		/* translators: %d: number of courts that can be used */
+		return sprintf(__('There are not enough players for all courts; at most %d matches can be played at once.', 'doubles-rotation-tournament'), intdiv($players, $on_court));
+	}
+	if ($ongoing === 0 || doroto_matches_to_select_count($tournament, $ongoing) > 0) {
+		return '';
+	}
+	if (intval($tournament->min_not_playing) === 0) {
+		return __('The next matches are drawn when all matches being played are finished (setting "When enough players are available").', 'doubles-rotation-tournament');
+	}
+	/* translators: %d: number of players who must stay free */
+	return sprintf(__('While matches are being played, another match is drawn only when at least %d players stay free, so that the teams keep changing. It will be drawn when a match finishes.', 'doubles-rotation-tournament'), $on_court === 4 ? 6 : 3);
+}
+
+/**
  * Progress of the tournament in percent and the estimated minutes to its end
  * (same formula as [doroto_display_tournament_progress]). Null values when unknown.
  * @since 2.0.0
@@ -299,6 +329,7 @@ function doroto_view_model(int $tournament_id): ?array
 	$winners = array_values(array_filter($standings, function ($row) {
 		return $row['winner'] !== null;
 	}));
+	$courts_note = doroto_view_courts_note($tournament, count($ongoing), $open || $closed);
 	$notice = trim(preg_replace('/\s+/', ' ', wp_strip_all_tags(str_replace(['<br>', '</div>', '</p>', '</li>'], ' ', $draw_notice))));
 
 	return [
@@ -332,6 +363,7 @@ function doroto_view_model(int $tournament_id): ?array
 		'played' => $played,
 		'results_editable' => $is_admin && doroto_match_results_editable($tournament),
 		'draw_notice' => $notice,
+		'courts_note' => $courts_note,
 		'round_end' => $is_admin && $notice !== '' && intval($tournament->announce_round_end) > 0,
 		'flags' => [
 			'registration' => $open,
