@@ -2647,57 +2647,12 @@ function doroto_rest_get_payment_candidates(\WP_REST_Request $request)
 function doroto_rest_post_enter_payment(\WP_REST_Request $request)
 {
 	$uid = doroto_get_current_user_id_from_token();
-	if ($uid instanceof WP_Error || $uid <= 0) {
+	if ($uid <= 0) {
 		return new WP_REST_Response(['error_code' => 'auth_unauthorized'], 401);
 	}
 	wp_set_current_user($uid);
 
-	$tid = intval($request->get_param('tournament_id'));
-	$pid = intval($request->get_param('confirm_payment'));
-
-	$t = doroto_prepare_tournament($tid);
-	if (!$t) {
-		return new WP_REST_Response(['error_code' => 'tournament_not_found'], 404);
-	}
-	// Only tournament admins may change payments (was open to any logged-in user).
-	if (doroto_is_admin($tid) == 0) {
-		return new WP_REST_Response(['error_code' => 'auth_insufficient_permissions'], 403);
-	}
-
-	$paid = maybe_unserialize($t->payment_done);
-	if (!is_array($paid))
-		$paid = [];
-
-	$last_update_to_return = $t->last_update;
-
-	if (!in_array($pid, $paid, true)) {
-		$paid[] = $pid;
-		global $wpdb;
-		$last_update_to_return = round(microtime(true) * 1000);
-		$wpdb->update(
-			$wpdb->prefix . 'doroto_tournaments',
-			[
-				'payment_done' => serialize($paid),
-				'last_update' => $last_update_to_return
-			],
-			['id' => $tid]
-		);
-		doroto_info_messsages_save(
-			sprintf(
-				/* translators: %s: Players name. */
-				__('Payment for %s recorded.', 'doubles-rotation-tournament'),
-				doroto_find_player_name($pid, intval($t->whole_names))
-			)
-		);
-		doroto_tournament_progress($tid);
-	}
-
-	return rest_ensure_response([
-		'success' => true,
-		'message' => __('Payment(s) recorded.', 'doubles-rotation-tournament'),
-		'action' => 'payment_recorded',
-		'last_update' => (int) $last_update_to_return,
-	]);
+	return doroto_service_rest_response(doroto_service_set_payment(intval($request->get_param('tournament_id')), intval($request->get_param('confirm_payment')), true));
 }
 
 
@@ -2768,51 +2723,12 @@ function doroto_rest_get_remove_payment_candidates(\WP_REST_Request $request)
 function doroto_rest_post_remove_payment(\WP_REST_Request $request)
 {
 	$uid = doroto_get_current_user_id_from_token();
-	if ($uid instanceof WP_Error || $uid <= 0) {
+	if ($uid <= 0) {
 		return new WP_REST_Response(['error_code' => 'auth_not_authorized'], 401);
 	}
 	wp_set_current_user($uid);
 
-	$tid = intval($request->get_param('tournament_id'));
-	$pid = intval($request->get_param('remove_payment'));
-
-	$t = doroto_prepare_tournament($tid);
-	if (!$t) {
-		return new WP_REST_Response(['error_code' => 'tournament_not_found'], 404);
-	}
-	// Only tournament admins may change payments (was open to any logged-in user).
-	if (doroto_is_admin($tid) == 0) {
-		return new WP_REST_Response(['error_code' => 'auth_insufficient_permissions'], 403);
-	}
-
-	$paid = maybe_unserialize($t->payment_done);
-	if (!is_array($paid))
-		$paid = [];
-
-	if (in_array($pid, $paid, true)) {
-		// array_values: a gap in the keys made json_encode send an object, not a list.
-		$paid = array_values(array_diff($paid, [$pid]));
-		global $wpdb;
-		$new_last_update = round(microtime(true) * 1000);
-
-		$wpdb->update(
-			$wpdb->prefix . 'doroto_tournaments',
-			[
-				'payment_done' => serialize($paid),
-				'last_update' => $new_last_update
-			],
-			['id' => $tid]
-		);
-		doroto_tournament_progress($tid);
-		return rest_ensure_response([
-			'success' => true,
-			'action' => 'payment_removed',
-			'player_name' => doroto_find_player_name($pid, intval($t->whole_names)),
-			'last_update' => $new_last_update,
-		]);
-	}
-
-	return new WP_REST_Response(['error_code' => 'payment_not_found'], 400);
+	return doroto_service_rest_response(doroto_service_set_payment(intval($request->get_param('tournament_id')), intval($request->get_param('remove_payment')), false));
 }
 
 
@@ -3064,69 +2980,18 @@ function doroto_rest_get_special_group_candidates(WP_REST_Request $request)
 /**
  * REST API: add a player in special group
  * @since 1.4.7
- * @version 1.4.7 
+ * @version 2.0.0 (services)
  */
-function doroto_rest_post_add_to_special_group(WP_REST_Request $request)
+function doroto_rest_post_add_to_special_group(\WP_REST_Request $request)
 {
-	global $wpdb;
-
-	$user_id = doroto_get_current_user_id_from_token();
-	wp_set_current_user($user_id);
-
-	$params = $request->get_json_params();
-	$tournament_id = isset($params['tournament_id']) ? intval($params['tournament_id']) : 0;
-	$player_id = isset($params['player_id']) ? intval($params['player_id']) : 0;
-
-	if ($tournament_id <= 0 || $player_id <= 0) {
-		return new WP_REST_Response(['error_code' => 'invalid_data'], 400);
+	$uid = doroto_get_current_user_id_from_token();
+	if ($uid <= 0) {
+		return new WP_REST_Response(['error_code' => 'auth_unauthorized'], 401);
 	}
+	wp_set_current_user($uid);
+	$params = (array) $request->get_json_params();
 
-	if (doroto_is_admin($tournament_id) < 1) {
-		return new WP_REST_Response(['error_code' => 'auth_insufficient_permissions'], 403);
-	}
-
-	$tournament = doroto_prepare_tournament($tournament_id);
-	if (!$tournament) {
-		return new WP_REST_Response(['error_code' => 'tournament_not_found'], 404);
-	}
-
-	$special_group = maybe_unserialize($tournament->special_group);
-	if (!is_array($special_group)) {
-		$special_group = [];
-	}
-
-	if (!in_array($player_id, $special_group)) {
-		$special_group[] = $player_id;
-	} else {
-		return new WP_REST_Response([
-			'success' => true,
-			'action' => 'player_already_in_special_group',
-			'last_update' => intval($tournament->last_update),
-		], 200);
-	}
-
-	$table_name = $wpdb->prefix . 'doroto_tournaments';
-	$new_last_update = round(microtime(true) * 1000);
-
-	$wpdb->update(
-		$table_name,
-		[
-			'special_group' => serialize($special_group),
-			'last_update' => $new_last_update,
-		],
-		['id' => $tournament_id]
-	);
-
-	doroto_tournament_progress($tournament_id);
-
-	$player_name = doroto_find_player_name($player_id, intval($tournament->whole_names));
-
-	return new WP_REST_Response([
-		'success' => true,
-		'action' => 'player_added_to_special_group',
-		'player_name' => $player_name,
-		'last_update' => $new_last_update,
-	], 200);
+	return doroto_service_rest_response(doroto_service_set_special_group(intval($params['tournament_id'] ?? 0), intval($params['player_id'] ?? 0), true));
 }
 
 /**
@@ -3197,67 +3062,16 @@ function doroto_rest_get_remove_special_group_candidates(WP_REST_Request $reques
 	]);
 }
 
-function doroto_rest_post_remove_from_special_group(WP_REST_Request $request)
+function doroto_rest_post_remove_from_special_group(\WP_REST_Request $request)
 {
-	global $wpdb;
-
-	$user_id = doroto_get_current_user_id_from_token();
-	wp_set_current_user($user_id);
-
-	$params = $request->get_json_params();
-	$tournament_id = isset($params['tournament_id']) ? intval($params['tournament_id']) : 0;
-	$player_id = isset($params['player_id']) ? intval($params['player_id']) : 0;
-
-	if ($tournament_id <= 0 || $player_id <= 0) {
-		return new WP_REST_Response(['error_code' => 'invalid_data'], 400);
+	$uid = doroto_get_current_user_id_from_token();
+	if ($uid <= 0) {
+		return new WP_REST_Response(['error_code' => 'auth_unauthorized'], 401);
 	}
+	wp_set_current_user($uid);
+	$params = (array) $request->get_json_params();
 
-	if (doroto_is_admin($tournament_id) < 1) {
-		return new WP_REST_Response(['error_code' => 'auth_insufficient_permissions'], 403);
-	}
-
-	$tournament = doroto_prepare_tournament($tournament_id);
-	if (!$tournament) {
-		return new WP_REST_Response(['error_code' => 'tournament_not_found'], 404);
-	}
-
-	$special_group = maybe_unserialize($tournament->special_group);
-	if (!is_array($special_group)) {
-		$special_group = [];
-	}
-
-	if (in_array($player_id, $special_group)) {
-		$special_group = array_values(array_diff($special_group, [$player_id]));
-	} else {
-		return new WP_REST_Response([
-			'success' => true,
-			'action' => 'player_not_in_special_group',
-			'last_update' => intval($tournament->last_update),
-		], 200);
-	}
-
-	$table_name = $wpdb->prefix . 'doroto_tournaments';
-	$new_last_update = round(microtime(true) * 1000);
-
-	$wpdb->update(
-		$table_name,
-		[
-			'special_group' => serialize($special_group),
-			'last_update' => $new_last_update,
-		],
-		['id' => $tournament_id]
-	);
-
-	doroto_tournament_progress($tournament_id);
-
-	$player_name = doroto_find_player_name($player_id, intval($tournament->whole_names));
-
-	return new WP_REST_Response([
-		'success' => true,
-		'action' => 'player_removed_from_special_group',
-		'player_name' => $player_name,
-		'last_update' => $new_last_update,
-	], 200);
+	return doroto_service_rest_response(doroto_service_set_special_group(intval($params['tournament_id'] ?? 0), intval($params['player_id'] ?? 0), false));
 }
 
 /**

@@ -135,6 +135,20 @@ function doroto_service_message($result, int $tournament_id = 0): string
 			return __('All players have renewed participation.', 'doubles-rotation-tournament');
 		case 'single_player_restored':
 			return $result['player_name'] . ' ' . __('has renewed participation.', 'doubles-rotation-tournament');
+		case 'player_added_to_special_group':
+			return __('Player', 'doubles-rotation-tournament') . ' ' . $result['player_name'] . ' ' . __('has been added to a special group.', 'doubles-rotation-tournament');
+		case 'player_removed_from_special_group':
+			return __('Player', 'doubles-rotation-tournament') . ' ' . $result['player_name'] . ' ' . __('was taken from a special group.', 'doubles-rotation-tournament');
+		case 'player_already_in_special_group':
+			return __('The player is already in the special group.', 'doubles-rotation-tournament');
+		case 'player_not_in_special_group':
+			return __('The player is not in the special group.', 'doubles-rotation-tournament');
+		case 'payment_recorded':
+			return __('The payment of the player', 'doubles-rotation-tournament') . ' ' . $result['player_name'] . ' ' . __('has been added to the list.', 'doubles-rotation-tournament');
+		case 'payment_removed':
+			return __('The payment of the player', 'doubles-rotation-tournament') . ' ' . $result['player_name'] . ' ' . __('has been removed from the list.', 'doubles-rotation-tournament');
+		case 'payment_not_found':
+			return __('The player has no recorded payment.', 'doubles-rotation-tournament');
 		case 'matches_skipped':
 			/* translators: %d: number of skipped matches */
 			return sprintf(_n('%d match was skipped.', '%d matches were skipped.', intval($result['skipped']), 'doubles-rotation-tournament'), intval($result['skipped']));
@@ -709,4 +723,101 @@ function doroto_service_set_player_active(int $tournament_id, int $player_id, bo
 			'last_update' => $last_update,
 		]);
 	});
+}
+
+/**
+ * Add a player to, or take him from, a player list of a tournament (organizer only).
+ * Used for the special group (`special_group`) and the payments (`payment_done`).
+ * @param string $column 'special_group' or 'payment_done'
+ * @return array|WP_Error see doroto_service_set_special_group() and doroto_service_set_payment()
+ * @since 2.0.0
+ */
+function doroto_service_set_list_member(int $tournament_id, string $column, int $player_id, bool $add)
+{
+	global $wpdb;
+
+	if (!in_array($column, ['special_group', 'payment_done'], true)) {
+		return doroto_service_error('invalid_data');
+	}
+	if (get_current_user_id() === 0) {
+		return doroto_service_error('auth_unauthorized', 401);
+	}
+	if ($tournament_id <= 0 || $player_id <= 0) {
+		return doroto_service_error('invalid_data');
+	}
+
+	return doroto_with_tournament_lock($tournament_id, function () use ($wpdb, $tournament_id, $column, $player_id, $add) {
+		$tournament = doroto_service_admin_tournament($tournament_id);
+		if (is_wp_error($tournament)) {
+			return $tournament;
+		}
+		$players = maybe_unserialize($tournament->players);
+		$players = is_array($players) ? array_map('intval', $players) : [];
+		if ($add && !in_array($player_id, $players, true)) {
+			return doroto_service_error('remove_player_not_in_tournament');
+		}
+
+		// IDs may be stored as strings or ints in the serialized data.
+		$list = maybe_unserialize($tournament->$column);
+		$list = is_array($list) ? array_map('intval', array_values($list)) : [];
+		$member = in_array($player_id, $list, true);
+		if ($member === $add) {
+			return ['changed' => false, 'tournament' => $tournament, 'last_update' => intval($tournament->last_update)];
+		}
+
+		// array_values: a gap in the keys made json_encode send an object, not a list.
+		$list = $add ? array_merge($list, [$player_id]) : array_values(array_diff($list, [$player_id]));
+		$last_update = doroto_now_ms();
+		$wpdb->update(
+			$wpdb->prefix . 'doroto_tournaments',
+			[$column => serialize($list), 'last_update' => $last_update],
+			['id' => $tournament_id]
+		);
+		doroto_service_progress($tournament_id);
+		return ['changed' => true, 'tournament' => $tournament, 'last_update' => $last_update];
+	});
+}
+
+/**
+ * Add a player to the special group or take him from it.
+ * @return array|WP_Error player_added_to_special_group / player_already_in_special_group /
+ *                        player_removed_from_special_group / player_not_in_special_group
+ * @since 2.0.0 (merged from the special group forms and REST routes)
+ */
+function doroto_service_set_special_group(int $tournament_id, int $player_id, bool $add)
+{
+	$result = doroto_service_set_list_member($tournament_id, 'special_group', $player_id, $add);
+	if (is_wp_error($result)) {
+		return $result;
+	}
+	if (!$result['changed']) {
+		return doroto_service_ok($add ? 'player_already_in_special_group' : 'player_not_in_special_group', [
+			'last_update' => $result['last_update'],
+		]);
+	}
+	return doroto_service_ok($add ? 'player_added_to_special_group' : 'player_removed_from_special_group', [
+		'player_name' => doroto_find_player_name($player_id, intval($result['tournament']->whole_names)),
+		'last_update' => $result['last_update'],
+	]);
+}
+
+/**
+ * Record a payment of a player or remove it.
+ * @return array|WP_Error payment_recorded / payment_removed, or payment_not_found
+ * @since 2.0.0 (merged from the payment forms and REST routes)
+ */
+function doroto_service_set_payment(int $tournament_id, int $player_id, bool $paid)
+{
+	$result = doroto_service_set_list_member($tournament_id, 'payment_done', $player_id, $paid);
+	if (is_wp_error($result)) {
+		return $result;
+	}
+	if (!$paid && !$result['changed']) {
+		return doroto_service_error('payment_not_found');
+	}
+	$extra = $paid ? ['message' => __('Payment(s) recorded.', 'doubles-rotation-tournament')] : []; // REST field of 1.4.7
+	return doroto_service_ok($paid ? 'payment_recorded' : 'payment_removed', $extra + [
+		'player_name' => doroto_find_player_name($player_id, intval($result['tournament']->whole_names)),
+		'last_update' => $result['last_update'],
+	]);
 }
