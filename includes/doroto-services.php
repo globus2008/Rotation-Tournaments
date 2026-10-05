@@ -206,6 +206,10 @@ function doroto_service_message($result, int $tournament_id = 0): string
 			return __('The tournament could not be created.', 'doubles-rotation-tournament');
 		case 'tournament_created':
 			return __('A new tournament has just been created.', 'doubles-rotation-tournament');
+		case 'registration_incomplete_data':
+			return __('Invalid value entered.', 'doubles-rotation-tournament');
+		case 'registration_creation_failed':
+			return __('Could not create user.', 'doubles-rotation-tournament');
 		case 'matches_skipped':
 			/* translators: %d: number of skipped matches */
 			return sprintf(_n('%d match was skipped.', '%d matches were skipped.', intval($result['skipped']), 'doubles-rotation-tournament'), intval($result['skipped']));
@@ -1385,4 +1389,76 @@ function doroto_service_add_tournament(int $tournament_type)
 		return doroto_service_error('create_failed', 500);
 	}
 	return doroto_service_ok('tournament_created', ['tournament_id' => $tournament_id]);
+}
+
+/**
+ * Organizer creates a player account and adds it to the tournament in one step.
+ * When the e-mail already exists the existing user is added. A new account gets the
+ * subscriber role, `doroto_creator` (so it shows up in the organizer's list) and an
+ * e-mail with a link to set the password.
+ * @return array|WP_Error player_added_to_tournament with created, already_in_tournament,
+ *                        email_sent, player_id, player_name, last_update
+ * @since 2.0.0 (merged from doroto_register_add_player_form_submit and doroto_rest_create_player)
+ */
+function doroto_service_create_player(int $tournament_id, string $email, string $name, string $surname)
+{
+	$current_user_id = get_current_user_id();
+	if ($current_user_id === 0) {
+		return doroto_service_error('auth_unauthorized', 401);
+	}
+	$email = sanitize_email($email);
+	$name = sanitize_text_field($name);
+	$surname = sanitize_text_field($surname);
+
+	if ($tournament_id <= 0 || !doroto_prepare_tournament($tournament_id)) {
+		return doroto_service_error('tournament_not_found', 404);
+	}
+	if (doroto_is_admin($tournament_id) < 1) {
+		return doroto_service_error('add_player_forbidden', 403);
+	}
+	if (empty($email) || !is_email($email) || $name === '' || $surname === '') {
+		return doroto_service_error('registration_incomplete_data');
+	}
+
+	$created = false;
+	$email_sent = false;
+	$existing = get_user_by('email', $email);
+	if ($existing) {
+		$user_id = intval($existing->ID);
+	} else {
+		$username = sanitize_user(explode('@', $email)[0] . '_' . wp_generate_password(4, false));
+		$user_id = wp_create_user($username, wp_generate_password(16, true), $email);
+		if (is_wp_error($user_id)) {
+			return doroto_service_error('registration_creation_failed', 500);
+		}
+		$user_id = intval($user_id);
+		wp_update_user([
+			'ID' => $user_id,
+			'first_name' => $name,
+			'last_name' => $surname,
+			'display_name' => trim($name . ' ' . $surname),
+		]);
+		(new WP_User($user_id))->set_role('subscriber');
+		update_user_meta($user_id, 'doroto_creator', $current_user_id);
+		$created = true;
+		$email_sent = doroto_send_account_created_email($user_id);
+	}
+
+	$status = doroto_add_user_to_tournament($tournament_id, $user_id, true);
+	if ($status === 'full') {
+		return new WP_Error('registration_max_players', 'registration_max_players', ['status' => 400, 'created' => $created]);
+	}
+	if ($status === 'not_found') {
+		return doroto_service_error('tournament_not_found', 404);
+	}
+
+	$tournament = doroto_prepare_tournament($tournament_id);
+	return doroto_service_ok('player_added_to_tournament', [
+		'created' => $created,
+		'already_in_tournament' => $status === 'already',
+		'email_sent' => $email_sent,
+		'player_id' => $user_id,
+		'player_name' => doroto_find_player_name($user_id, intval($tournament->whole_names)),
+		'last_update' => intval($tournament->last_update),
+	]);
 }

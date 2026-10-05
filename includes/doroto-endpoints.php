@@ -2949,64 +2949,17 @@ function doroto_rest_create_player(WP_REST_Request $request)
 	if (!is_array($params)) {
 		$params = $request->get_params();
 	}
-	$tournament_id = intval($params['tournament_id'] ?? 0);
-	$email = sanitize_email($params['email'] ?? '');
-	$name = sanitize_text_field($params['name'] ?? '');
-	$surname = sanitize_text_field($params['surname'] ?? '');
-
-	if ($tournament_id <= 0 || !doroto_prepare_tournament($tournament_id)) {
-		return new WP_REST_Response(['error_code' => 'tournament_not_found'], 404);
+	$result = doroto_service_create_player(
+		intval($params['tournament_id'] ?? 0),
+		(string) ($params['email'] ?? ''),
+		(string) ($params['name'] ?? ''),
+		(string) ($params['surname'] ?? '')
+	);
+	if (is_wp_error($result) && $result->get_error_code() === 'registration_max_players') {
+		$data = $result->get_error_data();
+		return new WP_REST_Response(['error_code' => 'registration_max_players', 'created' => !empty($data['created'])], 400);
 	}
-	if (doroto_is_admin($tournament_id) < 1) {
-		return new WP_REST_Response(['error_code' => 'add_player_forbidden'], 403);
-	}
-	if (empty($email) || !is_email($email) || empty($name) || empty($surname)) {
-		return new WP_REST_Response(['error_code' => 'registration_incomplete_data'], 400);
-	}
-
-	$created = false;
-	$email_sent = false;
-	$existing = get_user_by('email', $email);
-	if ($existing) {
-		$user_id = intval($existing->ID);
-	} else {
-		$username = sanitize_user(explode('@', $email)[0] . '_' . wp_generate_password(4, false));
-		$user_id = wp_create_user($username, wp_generate_password(16, true), $email);
-		if (is_wp_error($user_id)) {
-			return new WP_REST_Response(['error_code' => 'registration_creation_failed'], 500);
-		}
-		$user_id = intval($user_id);
-		wp_update_user([
-			'ID' => $user_id,
-			'first_name' => $name,
-			'last_name' => $surname,
-			'display_name' => trim($name . ' ' . $surname),
-		]);
-		(new WP_User($user_id))->set_role('subscriber');
-		update_user_meta($user_id, 'doroto_creator', $current_user_id);
-		$created = true;
-		$email_sent = doroto_send_account_created_email($user_id);
-	}
-
-	$status = doroto_add_user_to_tournament($tournament_id, $user_id, true);
-	if ($status === 'full') {
-		return new WP_REST_Response(['error_code' => 'registration_max_players', 'created' => $created], 400);
-	}
-	if ($status === 'not_found') {
-		return new WP_REST_Response(['error_code' => 'tournament_not_found'], 404);
-	}
-
-	$tournament = doroto_prepare_tournament($tournament_id);
-	return new WP_REST_Response([
-		'success' => true,
-		'action' => 'player_added_to_tournament',
-		'created' => $created,
-		'already_in_tournament' => $status === 'already',
-		'email_sent' => $email_sent,
-		'player_id' => $user_id,
-		'player_name' => doroto_find_player_name($user_id, intval($tournament->whole_names)),
-		'last_update' => intval($tournament->last_update),
-	], 200);
+	return doroto_service_rest_response($result);
 }
 
 
