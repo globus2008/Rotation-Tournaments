@@ -153,6 +153,7 @@ require_once plugin_dir_path(__FILE__) . 'includes/doroto-repeated-functions.php
 require_once plugin_dir_path(__FILE__) . 'includes/doroto-security.php';
 require_once plugin_dir_path(__FILE__) . 'includes/doroto-players-management.php';
 require_once plugin_dir_path(__FILE__) . 'includes/doroto-tournament-management.php';
+require_once plugin_dir_path(__FILE__) . 'includes/doroto-services.php';
 require_once plugin_dir_path(__FILE__) . 'includes/doroto-frontend-pages.php';
 require_once plugin_dir_path(__FILE__) . 'includes/doroto-backend-pages.php';
 require_once plugin_dir_path(__FILE__) . 'includes/doroto-endpoints.php';

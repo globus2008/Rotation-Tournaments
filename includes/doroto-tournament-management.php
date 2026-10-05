@@ -2039,69 +2039,17 @@ function doroto_matches_to_select_count(?stdClass $tournament, int $currently_pl
 
 
 /**
- * close or reopen a tournament
+ * close or reopen a tournament (web link)
  * @since 1.0.0
- * @version 1.4.7 (last update info)
+ * @version 2.0.0 (doroto_service_toggle_tournament)
  */
 function doroto_toggle_tournament()
 {
-	global $wpdb;
-
-	$current_user = wp_get_current_user();
-	$output = '';
-
-	if (!isset($_REQUEST['tournament_id'])) {
-		$output = sanitize_text_field(__("Tournament ID was not provided.", "doubles-rotation-tournament"));
-		doroto_info_messsages_save($output);
-		doroto_redirect_modify_url(0, "");
-		exit;
-	}
-
-	$tournament_id = intval($_REQUEST['tournament_id']);
+	$tournament_id = isset($_REQUEST['tournament_id']) ? intval($_REQUEST['tournament_id']) : 0;
 	doroto_require_admin_action('doroto_toggle_tournament', $tournament_id);
 
-	$tournament = doroto_prepare_tournament($tournament_id);
-
-	if ($tournament == null) {
-		$output = sanitize_text_field(__('The tournament was not found.', 'doubles-rotation-tournament'));
-		doroto_info_messsages_save($output);
-		doroto_redirect_modify_url(0, "");
-		exit;
-	}
-
-	$open_registration = intval($tournament->open_registration);
-	if ($open_registration) {
-		$output = sanitize_text_field(__("A tournament cannot be closed while player registration is open.", "doubles-rotation-tournament"));
-	}
-
-	if (doroto_is_admin($tournament_id) > 0) {
-		$final_four = $tournament->final_four;
-		$final_result = $tournament->final_result;
-
-		if ($open_registration == 0) {
-			$new_value = $tournament->close_tournament == '1' ? '0' : '1';
-			$close_date = gmdate('Y-m-d H:i:s');
-			$final_four = '';
-			$final_result = '';
-		} else {
-			$new_value = $tournament->close_tournament;
-			$close_date = '9999-09-09 09:09:09';
-		}
-		$table_name = $wpdb->prefix . 'doroto_tournaments';
-		$wpdb->update(
-			$table_name,
-			array(
-				'close_tournament' => $new_value,
-				'final_four' => $final_four,
-				'final_result' => $final_result,
-				'close_date' => $close_date,
-				'last_update'  => round(microtime(true) * 1000)
-			),
-
-			array('id' => $tournament_id)
-		);
-	}
-	doroto_info_messsages_save($output);
+	$result = doroto_service_toggle_tournament($tournament_id);
+	doroto_info_messsages_save(sanitize_text_field(doroto_service_message($result, $tournament_id)));
 	doroto_redirect_modify_url($tournament_id, "");
 	exit;
 }
@@ -2110,58 +2058,17 @@ add_action('wp_ajax_doroto_toggle_tournament', 'doroto_toggle_tournament');
 
 
 /**
- * close or reopen a registration
+ * close or reopen a registration (web link)
  * @since 1.0.0
- * @version 1.4.7 (last update info)
+ * @version 2.0.0 (doroto_service_toggle_registration)
  */
 function doroto_toggle_registration()
 {
-	global $wpdb;
-	$table_name = $wpdb->prefix . 'doroto_tournaments';
 	$tournament_id = isset($_GET['tournament_id']) ? intval($_GET['tournament_id']) : 0;
 	doroto_require_admin_action('doroto_toggle_registration', $tournament_id);
-	$output = '';
-	$tournament = doroto_prepare_tournament($tournament_id);
 
-	if ($tournament) {
-		if ($tournament->open_registration == '1') {
-			$players_count = count(maybe_unserialize($tournament->players));
-			if ($players_count < 4) {
-				$output .= sanitize_text_field(__("Tournament no.", "doubles-rotation-tournament") . ' ' . $tournament_id . ' ' . __("does not have sufficient occupancy to close registration.", "doubles-rotation-tournament"));
-			} else {
-				$output .= sanitize_text_field(__("Registration of tournament players no.", "doubles-rotation-tournament") . ' ' . $tournament_id . ' ' . __("was closed.", "doubles-rotation-tournament"));
-				$matches_list = maybe_unserialize($tournament->matches_list);
-				if (empty($matches_list)) {
-					$matches_list = doroto_generate_fake_match($tournament->players);
-				}
-
-				$statistics = doroto_create_statistics_table($tournament, maybe_unserialize($tournament->players), intval($tournament->whole_names));
-
-				$wpdb->update(
-					$table_name,
-					array(
-						'open_registration' => 0,
-						'matches_list' => serialize($matches_list),
-						'statistics' => serialize($statistics),
-						'last_update'  => round(microtime(true) * 1000)
-					),
-					array(
-						'id' => $tournament_id
-					)
-				);
-			}
-		} else {
-			$wpdb->update($table_name, array(
-				'open_registration' => 1,
-				'last_update'  => round(microtime(true) * 1000)
-			), array('id' => $tournament_id));
-			$output .= sanitize_text_field(__("Tournament no.", "doubles-rotation-tournament") . ' ' . $tournament_id . ' ' . __("was open for registration.", "doubles-rotation-tournament"));
-		}
-	} else {
-		$output .= sanitize_text_field(__("The tournament was not found.", "doubles-rotation-tournament"));
-	}
-
-	doroto_info_messsages_save($output);
+	$result = doroto_service_toggle_registration($tournament_id);
+	doroto_info_messsages_save(sanitize_text_field(doroto_service_message($result, $tournament_id)));
 	doroto_redirect_modify_url($tournament_id, "");
 	exit;
 }

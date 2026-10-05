@@ -2144,11 +2144,6 @@ function doroto_rest_round_end_action(WP_REST_Request $req)
 }
 
 
-/**
- * REST API: change tournament state
- * @since 1.4.7
- * @version 1.4.7 
- */
 add_action('rest_api_init', function () {
 	register_rest_route('doroto/v1', '/tournament-toggle', [
 		'methods' => ['POST', 'OPTIONS'],
@@ -2157,10 +2152,14 @@ add_action('rest_api_init', function () {
 	]);
 });
 
+/**
+ * REST API: change tournament state
+ * body: tournament_id, action_type = registration | tournament
+ * @since 1.4.7
+ * @version 2.0.0 (services)
+ */
 function doroto_rest_toggle(WP_REST_Request $req)
 {
-	global $wpdb;
-
 	if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
 		return new WP_REST_Response(null, 200);
 	}
@@ -2175,90 +2174,12 @@ function doroto_rest_toggle(WP_REST_Request $req)
 	}
 	wp_set_current_user($current_user);
 
-	$tournament = doroto_prepare_tournament($tid);
-	if (!$tournament) {
-		return new WP_REST_Response(['error_code' => 'tournament_not_found'], 404);
-	}
-	if (doroto_is_admin($tid) < 1) {
-		return new WP_REST_Response(['error_code' => 'auth_insufficient_permissions'], 403);
-	}
-
-	$table = $wpdb->prefix . 'doroto_tournaments';
-	$new_last_update = round(microtime(true) * 1000);
-
 	if ($atype === 'registration') {
-		$open = intval($tournament->open_registration);
-
-		if (intval($tournament->close_tournament) === 1) {
-			return new WP_REST_Response(['error_code' => 'toggle_reg_when_tournament_closed'], 400);
-		} else {
-			if ($open === 1) {
-				$players = maybe_unserialize($tournament->players);
-				if (count($players) < 4) {
-					return new WP_REST_Response(['error_code' => 'toggle_reg_not_enough_players'], 400);
-				}
-
-				$matches = maybe_unserialize($tournament->matches_list);
-				if (empty($matches)) {
-					$matches = doroto_generate_fake_match($players);
-				}
-				$stats = doroto_create_statistics_table($tournament, $players, intval($tournament->whole_names));
-
-				$wpdb->update(
-					$table,
-					[
-						'open_registration' => 0,
-						'matches_list' => serialize($matches),
-						'statistics' => serialize($stats),
-						'last_update' => $new_last_update,
-					],
-					['id' => $tid]
-				);
-				wp_cache_delete('tournament_' . $tid, 'doroto_tournaments');
-			} else {
-				$wpdb->update($table, ['open_registration' => 1, 'last_update' => $new_last_update], ['id' => $tid]);
-			}
-		}
-
-		return new WP_REST_Response([
-			'success' => true,
-			'action' => 'registration_toggled',
-			'last_update' => $new_last_update,
-		], 200);
+		return doroto_service_rest_response(doroto_service_toggle_registration($tid));
 	}
-
 	if ($atype === 'tournament') {
-		$open_reg = intval($tournament->open_registration);
-
-		if ($open_reg === 1) {
-			return new WP_REST_Response(['error_code' => 'toggle_tournament_when_reg_open'], 400);
-		}
-
-		$current_close = intval($tournament->close_tournament);
-		$new_close = $current_close === 1 ? 0 : 1;
-		$close_date = $new_close === 1
-			? gmdate('Y-m-d H:i:s')
-			: '9999-09-09 09:09:09';
-
-		$wpdb->update(
-			$table,
-			[
-				'close_tournament' => $new_close,
-				'final_four' => '',
-				'final_result' => '',
-				'close_date' => $close_date,
-				'last_update' => $new_last_update,
-			],
-			['id' => $tid]
-		);
-
-		return new WP_REST_Response([
-			'success' => true,
-			'action' => 'tournament_state_toggled',
-			'last_update' => $new_last_update,
-		], 200);
+		return doroto_service_rest_response(doroto_service_toggle_tournament($tid));
 	}
-
 	return new WP_REST_Response(['error_code' => 'toggle_unknown_action'], 400);
 }
 
