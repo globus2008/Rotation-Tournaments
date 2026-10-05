@@ -499,13 +499,20 @@ function doroto_get_authorization_header()
 
 /**
  * REST API: provide user token
+ * Without an Authorization header the user signed in to the website is used (browser
+ * requests from the blocks). WordPress core accepts the login cookie in REST only with
+ * a valid X-WP-Nonce, otherwise it has already reset the current user to 0.
+ * A sent but unknown token still gives 0, the app relies on that.
  * @since 1.4.7
- * @version 1.6.0 (header lookup via doroto_get_authorization_header)
+ * @version 2.0.0 (cookie + nonce fallback)
  */
 function doroto_get_current_user_id_from_token()
 {
-	$token = doroto_get_authorization_header();
-	$token = sanitize_text_field(trim(preg_replace('/^Bearer\s+/i', '', $token)));
+	$header = doroto_get_authorization_header();
+	if ($header === '') {
+		return (int) get_current_user_id();
+	}
+	$token = sanitize_text_field(trim(preg_replace('/^Bearer\s+/i', '', $header)));
 
 	if (empty($token)) {
 		return 0;
