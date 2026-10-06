@@ -3,7 +3,7 @@ Contributors: globus2008
 Tags: tournament, game, ranking, sport, tennis
 Requires at least: 6.5
 Tested up to: 7.1.2
-Stable tag: 1.7.0
+Stable tag: 2.0.0
 License: GPLv3 or later
 License URI: [GNU GPL v3.0](https://www.gnu.org/licenses/gpl-3.0.html)
 
@@ -132,7 +132,7 @@ You can use this plugin for tennis, table tennis, squash, padel, badminton, beac
 
 
 == Changelog ==
-= 1.7.0 - 2026/10/06 =
+= 2.0.0 - 2026/10/06 =
 * Add - blocks for the block editor: "Rotation tournament" (matches, results, players, statistics and settings on tabs, updated live without reloading the page), its variations "Tournament standings", "Tournament matches" and "Tournament presentation", "Tournament list" and "Tournament invitation"
 * Add - the plugin admin can convert the main page to the blocks with one button; the old content stays in the page revisions. New installs create the main page from the blocks. The shortcodes [doroto_tournament] and [doroto_tournament_list] show the blocks in the classic editor; the 1.x shortcodes keep working
 * Add - the tournament block: Share dialog with a QR code, "Open in the app" line, full-screen presentation that rotates the sections, map of the tournament place in the settings, and guided tours of the page and of four example tournaments
