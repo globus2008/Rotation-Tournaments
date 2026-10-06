@@ -3,7 +3,7 @@ Contributors: globus2008
 Tags: tournament, game, ranking, sport, tennis
 Requires at least: 6.5
 Tested up to: 7.1.2
-Stable tag: 1.6.2
+Stable tag: 1.7.0
 License: GPLv3 or later
 License URI: [GNU GPL v3.0](https://www.gnu.org/licenses/gpl-3.0.html)
 
@@ -132,6 +132,18 @@ You can use this plugin for tennis, table tennis, squash, padel, badminton, beac
 
 
 == Changelog ==
+= 1.7.0 - 2026/10/06 =
+* Add - blocks for the block editor: "Rotation tournament" (matches, results, players, statistics and settings on tabs, updated live without reloading the page), its variations "Tournament standings", "Tournament matches" and "Tournament presentation", "Tournament list" and "Tournament invitation"
+* Add - the plugin admin can convert the main page to the blocks with one button; the old content stays in the page revisions. New installs create the main page from the blocks. The shortcodes [doroto_tournament] and [doroto_tournament_list] show the blocks in the classic editor; the 1.x shortcodes keep working
+* Add - the tournament block: Share dialog with a QR code, "Open in the app" line, full-screen presentation that rotates the sections, map of the tournament place in the settings, and guided tours of the page and of four example tournaments
+* Add - the tournament block takes its colours from the theme (button and palette colours); the block's Styles panel can change the accent, the tab bar and table headers, their text and the colour of the special group
+* Add - the serving player is marked on the match cards; the special group is highlighted in matches, results, players, statistics and winners; the tournament details (invitation text) can be shown at any time
+* Improvement - new admin page with Overview, Settings and Help instead of nine settings tabs; every setting is checked on the server and errors are shown next to the field
+* Improvement - every change of a tournament (web forms, blocks and the Android app) goes through one shared layer with the same permissions, locking and change detection
+* Improvement - styles, scripts and no-cache headers are sent only on pages that show the plugin; the unused tipTip library was removed and the admin no longer calls ip-api.com
+* Improvement - REST requests from the website use the WordPress login (cookie and nonce) when no app token is sent
+* Fix - tournament settings keep the ranges of 1.x and of the app (a larger value made the app's dropdowns fail)
+* Fix - the plugin restores read permissions of its files after an FTP upload (the web server answered 403 and the admin page stayed empty); the admin page shows a notice when its script cannot be loaded
 = 1.6.2 - 2026/10/04 =
 * Improvement - the draw chooses the opposing team (and the teammate) by previous meetings too: players meet more different opponents and the same players meet less often (with 14 players on 2 courts, pairs that met 3 or more times dropped from about 5 to 1 per evening)
 * Improvement - among players with the same number of new teammates left, the one who played fewer games is drawn first; sides (left/right) alternate for both players of a team
