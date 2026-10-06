@@ -235,7 +235,8 @@ add_shortcode('doroto_tournament', 'doroto_tournament_block_shortcode');
 
 function doroto_tournament_list_block_shortcode($atts = [])
 {
-	$atts = shortcode_atts(['per_page' => 10, 'target_page' => 0], (array) $atts);
+	// per_page 0 = the plugin setting display_rows
+	$atts = shortcode_atts(['per_page' => 0, 'target_page' => 0], (array) $atts);
 	return render_block([
 		'blockName' => 'doroto/tournament-list',
 		'attrs' => ['perPage' => intval($atts['per_page']), 'targetPage' => intval($atts['target_page'])],

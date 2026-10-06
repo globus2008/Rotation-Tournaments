@@ -37,6 +37,23 @@ function doroto_view_list_filters(): array
 }
 
 /**
+ * Tournaments on one page of the list. 0 (the block default) takes the site setting
+ * "Maximum number of displayed tournaments" (display_rows, where 0 = no limit, so the
+ * largest page). Pages hold 1 to 100 tournaments.
+ * @since 2.0.0
+ */
+function doroto_view_list_page_size(int $per_page): int
+{
+	if ($per_page <= 0) {
+		$per_page = intval(doroto_read_settings('display_rows', 20));
+		if ($per_page <= 0) {
+			$per_page = 100;
+		}
+	}
+	return max(1, min(100, $per_page));
+}
+
+/**
  * One page of the tournament list.
  * @param string $page_url page that shows a tournament (tournament_id is added)
  * @return array {total, offset, limit, rows: [{id, name, type_name, state, players, date, url, is_player, is_admin}]}
@@ -44,7 +61,7 @@ function doroto_view_list_filters(): array
  */
 function doroto_view_list(int $filter, string $search, int $offset, int $limit, string $page_url): array
 {
-	$limit = max(1, min(50, $limit));
+	$limit = doroto_view_list_page_size($limit);
 	$offset = max(0, $offset);
 	$request = new WP_REST_Request('GET', '/doroto/v1/tournaments');
 	$request->set_param('filter', $filter);

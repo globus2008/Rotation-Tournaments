@@ -16,7 +16,7 @@
 		},
 		"perPage": {
 			"type": "integer",
-			"default": 10
+			"default": 0
 		},
 		"showCreate": {
 			"type": "boolean",

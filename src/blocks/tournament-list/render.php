@@ -22,7 +22,7 @@ if ($doroto_target > 0 && get_post_status($doroto_target) === 'publish') {
 } else {
 	$doroto_page_url = doroto_tournament_page_url(0);
 }
-$doroto_per_page = max(1, min(50, intval($attributes['perPage'] ?? 10)));
+$doroto_per_page = doroto_view_list_page_size(intval($attributes['perPage'] ?? 0));
 $doroto_list = doroto_view_list(0, '', 0, $doroto_per_page, $doroto_page_url);
 $doroto_can_create = !empty($attributes['showCreate']) && doroto_service_may_create_tournament();
 $doroto_uid = wp_unique_id('doroto-list-');

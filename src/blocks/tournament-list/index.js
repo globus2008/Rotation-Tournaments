@@ -49,11 +49,17 @@ function Edit( { attributes, setAttributes } ) {
 							'Tournaments per page',
 							'doubles-rotation-tournament'
 						) }
-						min={ 1 }
-						max={ 50 }
+						help={ __(
+							'0 = the plugin setting "Maximum number of displayed tournaments in the table".',
+							'doubles-rotation-tournament'
+						) }
+						min={ 0 }
+						max={ 100 }
+						allowReset
+						resetFallbackValue={ 0 }
 						value={ attributes.perPage }
 						onChange={ ( value ) =>
-							setAttributes( { perPage: value || 10 } )
+							setAttributes( { perPage: value || 0 } )
 						}
 					/>
 					<ToggleControl
