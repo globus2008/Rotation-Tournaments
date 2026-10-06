@@ -96,6 +96,8 @@
 - POST `help-example {example}` creates missing examples (throttled 1/min for non-admins), makes a logged-in user
   organizer of the example (as the app route `setup-example-tournament` does) and answers the page address;
   the block opens it with `doroto_tour=example` and the tour starts automatically.
+- First visit of the site in a browser starts "Tour of this page" by itself (like the 1.x `tour_seen`), once per
+  page, not in presentation mode; remembered in `localStorage.doroto_tour_seen` (no storage = never automatic).
 - Shepherd (`lib/shepherd`, `includes/doroto-help-icon.js`, `[doroto_floating_help]`) stays only for old shortcode pages.
   Shepherd 12+ is AGPL, so the new tours use driver.js (MIT).
 

@@ -143,6 +143,23 @@ let tourRunning = false;
 let tourFromAddressDone = false;
 
 /**
+ * First visit of the website in this browser (like the 1.x help icon): true once, then
+ * remembered in localStorage. Without storage (private mode, blocked) never true, so the
+ * tour does not start on every page load.
+ */
+function firstVisit() {
+	try {
+		if ( window.localStorage.getItem( 'doroto_tour_seen' ) ) {
+			return false;
+		}
+		window.localStorage.setItem( 'doroto_tour_seen', '1' );
+		return window.localStorage.getItem( 'doroto_tour_seen' ) === '1';
+	} catch {
+		return false;
+	}
+}
+
+/**
  * Load the steps of a tour and run it (help.js is loaded on demand).
  *
  * @param {Object}      ctx   Block context.
@@ -1004,6 +1021,19 @@ const { state, actions } = store( 'doroto', {
 						)
 					),
 					300
+				);
+			} else if (
+				! tourFromAddressDone &&
+				ctx.data.view?.id &&
+				ctx.ui.presentation <= 0 &&
+				ref.offsetParent !== null &&
+				firstVisit()
+			) {
+				// First visit: the tour of this page starts by itself (once per page and browser).
+				tourFromAddressDone = true;
+				setTimeout(
+					withScope( () => startTourIn( ctx, ref, 'page' ) ),
+					600
 				);
 			}
 
