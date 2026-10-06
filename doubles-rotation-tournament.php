@@ -163,7 +163,7 @@ function doroto_shortcode_tag_assets($output, $tag)
 add_filter('do_shortcode_tag', 'doroto_shortcode_tag_assets', 10, 2);
 
 /**
- * Is this the admin page of the plugin? Its styles and the map load only there.
+ * Is this the admin page of the plugin? Its scripts load only there (doroto_admin_enqueue()).
  * @since 2.0.0
  */
 function doroto_is_plugin_admin_page($hook)
@@ -171,14 +171,6 @@ function doroto_is_plugin_admin_page($hook)
 	return $hook === 'toplevel_page_doubles-rotation-tournament';
 }
 
-function doroto_backend_styles($hook)
-{
-	if (!doroto_is_plugin_admin_page($hook)) {
-		return;
-	}
-	wp_enqueue_style('doroto-backend-styles', plugins_url('includes/doroto-backend-styles.css', __FILE__), [], doroto_VERSION);
-}
-add_action('admin_enqueue_scripts', 'doroto_backend_styles');
 
 function doroto_enqueue_frontend_scripts()
 {
@@ -210,51 +202,6 @@ function doroto_enqueue_frontend_scripts()
 }
 
 
-/**
- * transfer php to js for locality
- * @since 1.4.7
- */
-function doroto_enqueue_admin_map_scripts($hook)
-{
-	if (!doroto_is_plugin_admin_page($hook)) {
-		return;
-	}
-	// Local Leaflet CSS
-	wp_enqueue_style(
-		'leaflet-css',
-		plugins_url('assets/css/leaflet.css', __FILE__),
-		[],
-		'1.9.4'
-	);
-
-	// Local Leaflet JS
-	wp_enqueue_script(
-		'leaflet-js',
-		plugins_url('assets/js/leaflet.js', __FILE__),
-		[],
-		'1.9.4',
-		true
-	);
-
-	// Admin script that needs Leaflet
-	wp_enqueue_script(
-		'doroto-map-js',
-		plugins_url('includes/doroto-backend-scripts.js', __FILE__),
-		['leaflet-js'],
-		'1.0.0',
-		true
-	);
-
-	$settings = get_option('doroto_settings', []);
-	$latitude = isset($settings['latitude']) ? (float) $settings['latitude'] : 50.0;
-	$longitude = isset($settings['longitude']) ? (float) $settings['longitude'] : 14.0;
-
-	wp_localize_script('doroto-map-js', 'dorotoMapData', [
-		'lat' => $latitude,
-		'lng' => $longitude,
-	]);
-}
-add_action('admin_enqueue_scripts', 'doroto_enqueue_admin_map_scripts');
 
 require_once plugin_dir_path(__FILE__) . 'includes/doroto-shortcodes.php';
 require_once plugin_dir_path(__FILE__) . 'includes/doroto-repeated-functions.php';
@@ -266,8 +213,10 @@ require_once plugin_dir_path(__FILE__) . 'includes/doroto-view-model.php';
 require_once plugin_dir_path(__FILE__) . 'includes/doroto-view-list.php';
 require_once plugin_dir_path(__FILE__) . 'includes/doroto-block-actions.php';
 require_once plugin_dir_path(__FILE__) . 'includes/doroto-blocks.php';
+require_once plugin_dir_path(__FILE__) . 'includes/doroto-help.php';
 require_once plugin_dir_path(__FILE__) . 'includes/doroto-frontend-pages.php';
 require_once plugin_dir_path(__FILE__) . 'includes/doroto-backend-pages.php';
+require_once plugin_dir_path(__FILE__) . 'includes/doroto-admin.php';
 require_once plugin_dir_path(__FILE__) . 'includes/doroto-endpoints.php';
 
 // Registering action hooks for page creation and deletion

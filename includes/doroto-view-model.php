@@ -382,12 +382,64 @@ function doroto_view_model(int $tournament_id): ?array
 		],
 		'final' => $final,
 		'settings' => $settings,
+		'organizers' => doroto_view_organizers($tournament),
+		'example' => doroto_help_example_number($tournament_id),
+		'show_rest' => !$open && intval($tournament->announce_round_end) > 0,
 		'links' => [
 			'page' => doroto_tournament_page_url($tournament_id),
 			'join' => doroto_join_url($tournament_id),
 			'leave' => ($is_player && $open) ? doroto_leave_url($tournament_id) : '',
 			'login' => wp_login_url(doroto_tournament_page_url($tournament_id)),
-		],
+			'share' => doroto_view_share_url($tournament_id),
+		] + doroto_view_app_links($tournament_id),
+	];
+}
+
+/**
+ * Names of the tournament organizers (founder first), shown in the block header.
+ * @since 2.0.0
+ */
+function doroto_view_organizers(stdClass $tournament): array
+{
+	$whole_names = intval($tournament->whole_names);
+	$ids = array_map('intval', (array) (maybe_unserialize($tournament->admin_users) ?: []));
+	return array_values(array_map(function ($id) use ($whole_names) {
+		return doroto_find_player_name($id, $whole_names);
+	}, array_filter($ids)));
+}
+
+/**
+ * Link to the tournament for sharing and the QR code. It points to the verified central
+ * domain, so Android opens it in the app; without the app the central site forwards the
+ * browser to this club (doroto_forward_foreign_tournament_links(), plugin 1.6.1).
+ * @since 2.0.0
+ */
+function doroto_view_share_url(int $tournament_id): string
+{
+	return add_query_arg(
+		['tournament_id' => $tournament_id, 'doroto_site' => rawurlencode(untrailingslashit(home_url()))],
+		'https://doroto.ltcchrast.cz/'
+	);
+}
+
+/**
+ * Links to the Android app: Google Play and an intent link that opens this tournament in
+ * the app (Google Play when the app is missing). Empty when the site hides the app link.
+ * @since 2.0.0 (the links of doroto_app_link_box())
+ */
+function doroto_view_app_links(int $tournament_id): array
+{
+	if (intval(doroto_read_settings('show_app_link', 1)) !== 1) {
+		return ['store' => '', 'app' => ''];
+	}
+	$store = 'https://play.google.com/store/apps/details?id=cz.doroto.app&referrer=utm_source%3Dplugin%26utm_medium%3Dtournament_block';
+	$target = add_query_arg(
+		['tournament_id' => $tournament_id, 'doroto_site' => rawurlencode(untrailingslashit(home_url()))],
+		'doroto.ltcchrast.cz/'
+	);
+	return [
+		'store' => $store,
+		'app' => 'intent://' . $target . '#Intent;scheme=https;package=cz.doroto.app;S.browser_fallback_url=' . rawurlencode($store) . ';end',
 	];
 }
 

@@ -1,6 +1,9 @@
 // Styles of the tournament block. Colours, spacing and fonts come from the theme
 // (theme.json presets and currentColor), so the block follows the look of the site.
 
+// Popover of the guided tours (driver.js, MIT); the tour script itself loads on demand.
+@use "../../../node_modules/driver.js/dist/driver";
+
 .doroto-block {
 	--doroto-gap: var(--wp--preset--spacing--30, 1rem);
 	--doroto-radius: 8px;
@@ -32,6 +35,12 @@
 
 .doroto-head {
 	margin-bottom: var(--doroto-gap);
+
+	&__organizers {
+		margin: 0 0 calc(var(--doroto-gap) / 2);
+		color: var(--doroto-muted);
+		font-size: 0.875em;
+	}
 
 	&__meta {
 		display: flex;
@@ -510,5 +519,114 @@
 	.doroto-check,
 	.doroto-tabs {
 		display: none !important;
+	}
+}
+
+// Presentation started by the button: the block fills the screen; only its End button stays.
+.doroto-block.is-presenting {
+	font-size: 1.25em;
+
+	.doroto-score,
+	.doroto-menu,
+	.doroto-box,
+	.doroto-field,
+	.doroto-icon-button,
+	.doroto-check,
+	.doroto-app,
+	.doroto-head__actions > :not([data-help="present"]),
+	.doroto-panel .doroto-actions {
+		display: none !important;
+	}
+}
+
+.doroto-block:fullscreen {
+	overflow: auto;
+	padding: calc(var(--doroto-gap) * 2);
+	background: var(--wp--preset--color--base, #fff);
+	color: var(--wp--preset--color--contrast, #111);
+}
+
+// Android app line under the header.
+.doroto-app {
+	margin: 0 0 var(--doroto-gap);
+	padding: 0.5em 0.75em;
+	border-left: 4px solid var(--doroto-accent);
+	border-radius: var(--doroto-radius);
+	background: var(--doroto-soft);
+	font-size: 0.875em;
+}
+
+.doroto-help-button {
+	min-width: 2.5em;
+	font-weight: 700;
+}
+
+// Share dialog: QR code of the tournament link.
+.doroto-qr {
+	width: min(16rem, 70vw);
+	margin: 0 auto var(--doroto-gap);
+	background: #fff;
+
+	svg {
+		display: block;
+		width: 100%;
+		height: auto;
+	}
+}
+
+// Help dialog: the list of tours.
+.doroto-help-menu {
+	margin: 0 0 var(--doroto-gap);
+	padding: 0;
+	list-style: none;
+
+	li + li {
+		margin-top: 0.25em;
+	}
+}
+
+.doroto-link-button {
+	padding: 0.25em 0;
+	border: 0;
+	background: none;
+	color: var(--doroto-accent);
+	font: inherit;
+	text-align: start;
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+// Map of the tournament place in the settings tab.
+.doroto-map {
+	// Own stacking context: the Leaflet panes (z-index 400+) stay under the dialogs and the toast.
+	position: relative;
+	z-index: 0;
+	height: 18rem;
+	margin-block: 0.5em;
+	border: 1px solid var(--doroto-border);
+	border-radius: var(--doroto-radius);
+
+	&__pin {
+		width: 22px;
+		height: 22px;
+		border: 3px solid #fff;
+		border-radius: 50% 50% 50% 0;
+		background: var(--doroto-accent, #1e5aa8);
+		box-shadow: 0 1px 4px rgb(0 0 0 / 40%);
+		transform: rotate(-45deg);
+	}
+}
+
+// Tour popover in the colours of the block.
+.driver-popover.doroto-tour {
+	max-width: min(22rem, calc(100vw - 2rem));
+
+	.driver-popover-title {
+		font-size: 1rem;
+	}
+
+	.driver-popover-description {
+		font-size: 0.95rem;
+		line-height: 1.45;
 	}
 }

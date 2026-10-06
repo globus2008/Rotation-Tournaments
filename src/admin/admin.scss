@@ -1,0 +1,159 @@
+// Admin page of Rotation Tournaments. Built on @wordpress/components; these rules only
+// arrange the cards and fields.
+
+.doroto-admin {
+	max-width: 70rem;
+
+	h2 {
+		margin: 0;
+		font-size: 1.1em;
+	}
+}
+
+.doroto-admin-tabs .components-tab-panel__tabs {
+	margin-bottom: 1rem;
+	border-bottom: 1px solid #dcdcde;
+}
+
+.doroto-admin-tab > * + *,
+.doroto-admin-overview > * + *,
+.doroto-admin-help > * + * {
+	margin-top: 1rem;
+}
+
+.doroto-admin-stats {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+	gap: 1rem;
+
+	.components-card__body {
+		display: flex;
+		flex-direction: column;
+		gap: 0.25rem;
+	}
+
+	&__value {
+		font-size: 2em;
+		font-weight: 600;
+		line-height: 1.1;
+	}
+
+	&__label {
+		color: #50575e;
+	}
+}
+
+.doroto-admin-cards {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+	gap: 1rem;
+	align-items: start;
+}
+
+.doroto-admin-overview .components-notice {
+	margin: 0 0 1rem;
+}
+
+.doroto-admin-section-text {
+	margin-top: 0;
+	color: #50575e;
+}
+
+.doroto-admin-fields {
+	display: grid;
+	gap: 1.5rem;
+	max-width: 48rem;
+}
+
+.doroto-admin-info {
+	p {
+		margin: 0 0 0.25rem;
+	}
+
+	&__label {
+		font-weight: 500;
+		text-transform: uppercase;
+		font-size: 11px;
+	}
+}
+
+.doroto-admin-error {
+	color: #cc1818;
+}
+
+.has-error input {
+	border-color: #cc1818 !important;
+}
+
+.doroto-admin-types {
+	overflow-x: auto;
+
+	input[type="number"] {
+		width: 6em;
+	}
+
+	input[aria-invalid="true"] {
+		border-color: #cc1818;
+	}
+
+	td,
+	th {
+		vertical-align: middle;
+	}
+
+	.doroto-admin-error {
+		display: block;
+		font-size: 12px;
+	}
+}
+
+.doroto-admin-map {
+	// Own stacking context: the Leaflet panes (z-index 400+) stay under the save bar.
+	position: relative;
+	z-index: 0;
+	height: 22rem;
+	border: 1px solid #dcdcde;
+
+	&__pin {
+		width: 22px;
+		height: 22px;
+		border: 3px solid #fff;
+		border-radius: 50% 50% 50% 0;
+		background: var(--wp-admin-theme-color, #2271b1);
+		box-shadow: 0 1px 4px rgb(0 0 0 / 40%);
+		transform: rotate(-45deg);
+	}
+}
+
+// The save bar stays at the bottom of the screen while the panels scroll.
+.doroto-admin-savebar {
+	position: sticky;
+	bottom: 0;
+	z-index: 10;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+	align-items: center;
+	padding: 0.75rem 1rem;
+	border-top: 1px solid #dcdcde;
+	background: #fff;
+
+	.components-notice {
+		flex: 1 1 100%;
+		margin: 0;
+	}
+}
+
+.doroto-admin-help {
+	dt {
+		font-weight: 600;
+	}
+
+	dd {
+		margin: 0 0 0.75rem;
+	}
+
+	code {
+		word-break: break-word;
+	}
+}

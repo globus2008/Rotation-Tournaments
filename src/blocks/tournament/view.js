@@ -6,6 +6,9 @@
  * which answers with a message and the fresh view model. A poll of check-update
  * reloads the view model when somebody else (another device, the app) changed the
  * tournament; typed scores live in context.ui.drafts and survive the reload.
+ *
+ * The QR code, the map of the settings tab and the guided tours load their libraries
+ * with dynamic imports, only when they are used.
  */
 import {
 	store,
@@ -23,7 +26,7 @@ import {
  * @return {string} URL.
  */
 function restUrl( route, params = {} ) {
-	const base = getConfig().restUrl;
+	const base = getConfig( 'doroto' ).restUrl;
 	const url = base.includes( '?' )
 		? base + route
 		: base.replace( /\/?$/, '/' ) + route;
@@ -37,22 +40,23 @@ function restUrl( route, params = {} ) {
 /**
  * Call the REST API with the website login (cookie + nonce).
  *
- * @param {string} route  Route.
- * @param {Object} [body] JSON body; without it the request is a GET.
+ * @param {string} route    Route.
+ * @param {Object} [body]   JSON body; without it the request is a GET.
+ * @param {Object} [params] Query parameters of a GET.
  * @return {Promise<{ok: boolean, data: Object}>} Parsed answer.
  */
-async function api( route, body ) {
+async function api( route, body, params = {} ) {
 	const options = {
 		method: body ? 'POST' : 'GET',
 		credentials: 'same-origin',
-		headers: { 'X-WP-Nonce': getConfig().nonce },
+		headers: { 'X-WP-Nonce': getConfig( 'doroto' ).nonce },
 	};
 	if ( body ) {
 		options.headers[ 'Content-Type' ] = 'application/json';
 		options.body = JSON.stringify( body );
 	}
 	const response = await fetch(
-		restUrl( route, body ? {} : { ts: Date.now() } ),
+		restUrl( route, body ? {} : { ...params, ts: Date.now() } ),
 		options
 	);
 	let data = {};
@@ -65,7 +69,7 @@ async function api( route, body ) {
 }
 
 /** @param {string} key Key of a text from doroto_block_config(). */
-const t = ( key ) => getConfig().i18n?.[ key ] || '';
+const t = ( key ) => getConfig( 'doroto' ).i18n?.[ key ] || '';
 
 /**
  * Show a message in the live region of the block.
@@ -134,8 +138,97 @@ function pageUrl( tournamentId ) {
  */
 const blockOf = ( el ) => el.closest( '.doroto-block' );
 
+// Only one tour runs at a time, and a tour asked for in the address starts only once.
+let tourRunning = false;
+let tourFromAddressDone = false;
+
+/**
+ * Load the steps of a tour and run it (help.js is loaded on demand).
+ *
+ * @param {Object}      ctx   Block context.
+ * @param {HTMLElement} block Block root.
+ * @param {string}      tour  "page" or "example".
+ */
+async function startTourIn( ctx, block, tour ) {
+	if ( tourRunning ) {
+		return;
+	}
+	tourRunning = true;
+	try {
+		const [ { runTour }, { ok, data } ] = await Promise.all( [
+			import( /* webpackChunkName: "help" */ './help.js' ),
+			api( 'doroto/v1/help/' + ctx.data.view.id, null, { tour } ),
+		] );
+		if ( ok && data.steps ) {
+			await runTour( block, data.steps, {
+				next: t( 'tourNext' ),
+				prev: t( 'tourPrev' ),
+				done: t( 'tourDone' ),
+			} );
+		} else {
+			notify( ctx, t( 'networkError' ), true );
+		}
+	} catch {
+		notify( ctx, t( 'networkError' ), true );
+	} finally {
+		tourRunning = false;
+	}
+}
+
+/**
+ * Map of the tournament place in the settings tab (Leaflet, loaded on demand).
+ * A click or a dragged marker writes the coordinates into the settings form.
+ *
+ * @param {Object}      ctx       Block context.
+ * @param {HTMLElement} container Map element.
+ * @return {Promise<Object>} Leaflet map and marker.
+ */
+async function createMap( ctx, container ) {
+	const css = getConfig( 'doroto' ).leafletCss;
+	if ( css && ! document.querySelector( 'link[data-doroto-leaflet]' ) ) {
+		const link = document.createElement( 'link' );
+		link.rel = 'stylesheet';
+		link.href = css;
+		link.dataset.dorotoLeaflet = '1';
+		document.head.appendChild( link );
+	}
+	const L = await import( /* webpackChunkName: "leaflet" */ 'leaflet' );
+	const lat = parseFloat( ctx.ui.settings.latitude ) || 0;
+	const lng = parseFloat( ctx.ui.settings.longitude ) || 0;
+	const known = lat !== 0 || lng !== 0;
+	const center = known
+		? [ lat, lng ]
+		: getConfig( 'doroto' ).mapCenter || [ 50, 15 ];
+	const map = L.map( container ).setView( center, known ? 15 : 6 );
+	L.tileLayer( 'https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+		maxZoom: 19,
+		attribution: '&copy; OpenStreetMap contributors',
+	} ).addTo( map );
+	// A CSS marker: the default marker needs images that the plugin does not ship.
+	const icon = L.divIcon( {
+		className: 'doroto-map__pin',
+		iconSize: [ 22, 22 ],
+		iconAnchor: [ 11, 22 ],
+	} );
+	const marker = L.marker( center, { draggable: true, icon } ).addTo( map );
+	const save = withScope( ( latlng ) => {
+		ctx.ui.settings.latitude = Math.round( latlng.lat * 1e6 ) / 1e6;
+		ctx.ui.settings.longitude = Math.round( latlng.lng * 1e6 ) / 1e6;
+		ctx.ui.settingsDirty = true;
+	} );
+	map.on( 'click', ( event ) => {
+		marker.setLatLng( event.latlng );
+		save( event.latlng );
+	} );
+	marker.on( 'dragend', () => save( marker.getLatLng() ) );
+	return { map, marker };
+}
+
 const { state, actions } = store( 'doroto', {
 	state: {
+		get organizerNames() {
+			return ( getContext().data.view.organizers || [] ).join( ', ' );
+		},
 		get etaText() {
 			const minutes = getContext().data.view.progress.minutes_left;
 			if ( ! minutes ) {
@@ -290,6 +383,83 @@ const { state, actions } = store( 'doroto', {
 			event.target.closest( 'dialog' ).close();
 		},
 
+		// Presentation started by the button: full screen, the sections one after another.
+		togglePresentation( event ) {
+			const ctx = getContext();
+			if ( ctx.ui.presenting ) {
+				if ( document.fullscreenElement ) {
+					document.exitFullscreen();
+				}
+				actions.stopPresentation();
+				return;
+			}
+			const block = blockOf( event.target );
+			ctx.ui.presenting = true;
+			ctx.ui.presentationBase = ctx.ui.presentation;
+			ctx.ui.presentation =
+				getConfig( 'doroto' ).presentationSeconds || 15;
+			if ( ! ctx.ui.sections.includes( ctx.ui.tab ) ) {
+				ctx.ui.tab = ctx.ui.sections[ 0 ];
+			}
+			block.requestFullscreen?.().catch( () => {} );
+		},
+		stopPresentation() {
+			const ctx = getContext();
+			if ( ! ctx.ui.presenting ) {
+				return;
+			}
+			ctx.ui.presenting = false;
+			ctx.ui.presentation = ctx.ui.presentationBase || 0;
+		},
+
+		// Help
+		openHelp( event ) {
+			blockOf( event.target )
+				.querySelector( '.doroto-dialog--help' )
+				.showModal();
+		},
+		*startTour( event ) {
+			const ctx = getContext();
+			const block = blockOf( event.target );
+			const tour = event.target.dataset.tour;
+			event.target.closest( 'dialog' ).close();
+			if ( tour === 'page' ) {
+				yield startTourIn( ctx, block, 'page' );
+				return;
+			}
+			const example = parseInt( tour, 10 );
+			if ( example === ctx.data.view.example ) {
+				yield startTourIn( ctx, block, 'example' );
+				return;
+			}
+			// Prepare the example (and organizer rights), then open it on this page.
+			ctx.ui.busy = true;
+			try {
+				const { data } = yield api( 'doroto/v1/help-example', {
+					example,
+				} );
+				if ( ! data.success ) {
+					notify(
+						ctx,
+						data.error_code === 'help_example_busy'
+							? t( 'helpBusy' )
+							: t( 'networkError' ),
+						true
+					);
+					return;
+				}
+				const url = new URL(
+					ctx.ui.fixed ? data.url : pageUrl( data.tournament_id )
+				);
+				url.searchParams.set( 'doroto_tour', 'example' );
+				window.location.href = url.toString();
+			} catch {
+				notify( ctx, t( 'networkError' ), true );
+			} finally {
+				ctx.ui.busy = false;
+			}
+		},
+
 		// Tabs
 		selectTab( event ) {
 			getContext().ui.tab = event.target.dataset.tab;
@@ -336,6 +506,34 @@ const { state, actions } = store( 'doroto', {
 		*leave( event ) {
 			event.preventDefault();
 			yield actions.run( 'leave' );
+		},
+		*openShare( event ) {
+			const ctx = getContext();
+			const dialog = blockOf( event.target ).querySelector(
+				'.doroto-dialog--share'
+			);
+			dialog.showModal();
+			if ( ctx.ui.share.qr ) {
+				return;
+			}
+			try {
+				const { default: qrcode } = yield import(
+					/* webpackChunkName: "qrcode" */ 'qrcode-generator'
+				);
+				const qr = qrcode( 0, 'M' );
+				qr.addData( ctx.data.view.links.share );
+				qr.make();
+				// The library writes the SVG markup itself; no user text goes into it.
+				dialog.querySelector( '.doroto-qr' ).innerHTML =
+					qr.createSvgTag( {
+						cellSize: 6,
+						margin: 2,
+						scalable: true,
+					} );
+				ctx.ui.share.qr = true;
+			} catch {
+				notify( ctx, t( 'networkError' ), true );
+			}
 		},
 		copyLink( event ) {
 			const ctx = getContext();
@@ -688,10 +886,37 @@ const { state, actions } = store( 'doroto', {
 	},
 
 	callbacks: {
+		/**
+		 * Map of the settings tab: created the first time the tab is shown, then the
+		 * marker follows the coordinates typed into the fields.
+		 */
+		watchMap() {
+			const ctx = getContext();
+			if ( ! ctx.ui.ready || ctx.ui.tab !== 'settings' ) {
+				return;
+			}
+			const { ref } = getElement();
+			const lat = parseFloat( ctx.ui.settings.latitude ) || 0;
+			const lng = parseFloat( ctx.ui.settings.longitude ) || 0;
+			if ( ref.dorotoMap ) {
+				ref.dorotoMap.then( ( { map, marker } ) => {
+					map.invalidateSize();
+					if ( lat !== 0 || lng !== 0 ) {
+						marker.setLatLng( [ lat, lng ] );
+					}
+				} );
+				return;
+			}
+			ref.dorotoMap = createMap( ctx, ref );
+			ref.dorotoMap.catch( () => {
+				ref.hidden = true;
+			} );
+		},
+
 		init() {
 			const ctx = getContext();
 			ctx.ui.ready = true;
-			const seconds = getConfig().pollSeconds || 30;
+			const seconds = getConfig( 'doroto' ).pollSeconds || 30;
 			let running = false;
 			// The poll must not overlap itself on a slow connection.
 			const tick = withScope( async () => {
@@ -709,23 +934,66 @@ const { state, actions } = store( 'doroto', {
 			} );
 			const timer = setInterval( tick, seconds * 1000 );
 
-			// Presentation: show the sections one after another.
-			let rotation = null;
-			if ( ctx.ui.presentation > 0 && ctx.ui.sections.length > 1 ) {
-				rotation = setInterval(
-					withScope( () => {
-						const index = ctx.ui.sections.indexOf( ctx.ui.tab );
-						ctx.ui.tab =
-							ctx.ui.sections[
-								( index + 1 ) % ctx.ui.sections.length
-							];
-					} ),
-					ctx.ui.presentation * 1000
+			// Presentation (block attribute or the button): show the sections one after another.
+			let shown = 0;
+			const rotation = setInterval(
+				withScope( () => {
+					if (
+						ctx.ui.presentation <= 0 ||
+						ctx.ui.sections.length < 2
+					) {
+						shown = 0;
+						return;
+					}
+					shown++;
+					if ( shown < ctx.ui.presentation ) {
+						return;
+					}
+					shown = 0;
+					const index = ctx.ui.sections.indexOf( ctx.ui.tab );
+					ctx.ui.tab =
+						ctx.ui.sections[
+							( index + 1 ) % ctx.ui.sections.length
+						];
+				} ),
+				1000
+			);
+			const { ref } = getElement();
+			const onFullscreen = withScope( () => {
+				if ( document.fullscreenElement !== ref ) {
+					actions.stopPresentation();
+				}
+			} );
+			document.addEventListener( 'fullscreenchange', onFullscreen );
+
+			// A tour asked for in the address (the help menu opened an example tournament).
+			const params = new URLSearchParams( window.location.search );
+			const tour = params.get( 'doroto_tour' );
+			if ( tour && ! tourFromAddressDone ) {
+				tourFromAddressDone = true;
+				params.delete( 'doroto_tour' );
+				const url = new URL( window.location.href );
+				url.search = params.toString();
+				window.history.replaceState( null, '', url.toString() );
+				setTimeout(
+					withScope( () =>
+						startTourIn(
+							ctx,
+							ref,
+							tour === 'example' ? 'example' : 'page'
+						)
+					),
+					300
 				);
 			}
+
 			return () => {
 				clearInterval( timer );
 				clearInterval( rotation );
+				document.removeEventListener(
+					'fullscreenchange',
+					onFullscreen
+				);
 			};
 		},
 	},

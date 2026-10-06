@@ -19,12 +19,15 @@
 | `includes/doroto-shortcodes.php` | About 30 shortcodes and their admin-post form handlers |
 | `includes/doroto-players-management.php` | Invitation link `doroto_register_player`, winner logic, AJAX helpers |
 | `includes/doroto-repeated-functions.php` | `doroto_is_admin`, `doroto_getTournamentId`, flash messages, redirects |
-| `includes/doroto-backend-pages.php` | Admin menu (9 tabs), settings defaults `doroto_settings` |
+| `includes/doroto-backend-pages.php` | Admin menu, settings defaults `doroto_settings`, review notice, dashboard widget |
+| `includes/doroto-admin.php` | Admin page (2.0, React): settings schema + validation, REST `admin-settings`, overview, help texts |
+| `includes/doroto-help.php` | Guided tours of the tournament block (2.0): example tournaments, REST `help/<id>`, `help-example` |
 | `includes/doroto-frontend-pages.php` | Pages created on activation |
 | `includes/doroto-view-model.php`, `doroto-view-list.php` | View models of the blocks; GET `view/<id>`, `view/<id>/player/<pid>`, `view-list` |
 | `includes/doroto-block-actions.php` | POST `block-action` (runs a service, returns message + fresh view), GET `block-candidates/<id>` |
 | `includes/doroto-blocks.php` | Block registration, store config, settings schema, migration (convert main page, `[doroto_tournament]`, `[doroto_tournament_list]`) |
 | `src/blocks/*` -> `build/blocks/*` | Blocks `doroto/tournament` (+ variations standings/matches/presentation), `doroto/tournament-list`, `doroto/invite`; `npm run build` |
+| `src/admin` -> `build/admin` | React admin page (`npm run build` builds both; `build:blocks`, `build:admin` separately) |
 | `languages/` | cs_CZ only |
 
 ## Services layer (2.0, branch `v2-blocks`)
@@ -55,6 +58,36 @@
 - Reducing the courts during play never cancels ongoing matches and shows no note: the organizer decides whether
   to finish or skip them (owner decision 2026-10-05). The draw itself never exceeds the number of courts.
 - Tests (local): Playwright scripts log in, drive the blocks and check the console (no errors expected).
+- Header of the tournament block: organizers, Share (dialog with a QR code of the central app link
+  `doroto_view_share_url()` + copy links), Presentation (full screen, sections rotate every `show_next_seconds`),
+  Help (?), and the Android app line (`links.store` / `links.app`, hidden by the setting `show_app_link`).
+- Libraries load on demand with dynamic imports (chunks in `build/blocks/*.js`): `qrcode-generator` (Share),
+  `leaflet` (map of the settings tab; CSS is the plugin's `assets/css/leaflet.css`, CSS marker instead of images),
+  `driver.js` + `help.js` (tours). driver.css is compiled into the block style.
+- After an `await` the Interactivity scope is gone: always call `getConfig( 'doroto' )` with the namespace.
+
+## Guided tours (2.0)
+- The Help menu of the block: "Tour of this page" and Examples 1-4 (the example tournaments of
+  `doroto_create_tournament_record()`: open registration / during the tournament / singles completed / doubles completed).
+- Steps are data from GET `doroto/v1/help/<id>?tour=page|example` (`includes/doroto-help.php`): element by its
+  `data-help` anchor in render.php, the tab to open, an optional select to set (filter / statistics player).
+  `help.js` skips steps whose element is missing or hidden and restores the tab and selects at the end.
+  Organizer-only steps have `admin => true`. Texts of the old Shepherd tours are reused (their translations stay).
+- POST `help-example {example}` creates missing examples (throttled 1/min for non-admins), makes a logged-in user
+  organizer of the example (as the app route `setup-example-tournament` does) and answers the page address;
+  the block opens it with `doroto_tour=example` and the tour starts automatically.
+- Shepherd (`lib/shepherd`, `includes/doroto-help-icon.js`, `[doroto_floating_help]`) stays only for old shortcode pages.
+  Shepherd 12+ is AGPL, so the new tours use driver.js (MIT).
+
+## Admin page (2.0, stage C)
+- One React page (`src/admin`, `@wordpress/components`): tabs Overview (numbers, pages, convert main page to blocks,
+  recreate examples, app), Settings (panels: types table, environment, rights, presentation, mobile app with map,
+  uninstall; sticky save bar), Help (blocks, classic editor shortcodes, legacy shortcodes).
+- Everything comes from GET `doroto/v1/admin-settings` (manage_options). `doroto_admin_schema()` describes the fields
+  once; `doroto_admin_validate()` checks ranges/options/URLs and POST answers 400 `{fields: {key: message}}`.
+  The old `options.php` forms and `doroto_sanitize_settings()` (accepted anything) are gone.
+- Old links `admin.php?page=doubles-rotation-tournament&tab=<old tab>` open the matching panel.
+- No more `ip-api.com` call and no inline `<script>`; the page config is a `data-config` attribute.
 - Translations of the plugin are made on translate.wordpress.org, do not edit `languages/`.
 
 ## Data model
@@ -69,6 +102,8 @@
   `doroto_sessions` (sha256(refresh) => access, access_exp, refresh_exp, created). Max 10 devices per user.
   Single tokens issued by 1.5.x are migrated on first use.
 - Success: `{success:true, action:"...", last_update?}`. Error: `{error_code:"..."}` plus an HTTP status.
+- Route args: `rest_validate_request_arg` needs a `type`; without it core prints PHP warnings on every request
+  (removed in 2.0 from `match-result`, `skip-matches`, `round-end`, where it never validated anything).
 - **Keep the existing endpoints backward compatible.** Old app versions stay in use. Add new endpoints or optional params instead of changing the old ones.
 
 ## Known issues (analysis from 2026-10-01)
@@ -112,7 +147,7 @@
 - Fixed in 2.0: assets of the shortcodes and the no-cache headers only on pages that use the plugin
   (`doroto_page_uses_plugin()`, plus `do_shortcode_tag` for shortcodes outside the content); admin assets only on the
   plugin page; unused tipTip removed.
-- `ip-api.com` is called over HTTP on table render.
+- Fixed in 2.0: the admin page no longer calls `ip-api.com`.
 - `delete_database` defaults to 1.
 - Activation creates 13 demo users.
 

@@ -5,8 +5,11 @@
 	"description": "Rotation Tournaments: blocks of the WordPress plugin",
 	"license": "GPL-3.0-or-later",
 	"scripts": {
-		"build": "wp-scripts build --experimental-modules --webpack-src-dir=src/blocks --output-path=build/blocks --webpack-copy-php",
+		"build": "npm run build:blocks && npm run build:admin",
+		"build:blocks": "wp-scripts build --experimental-modules --webpack-src-dir=src/blocks --output-path=build/blocks --webpack-copy-php",
+		"build:admin": "wp-scripts build index.js --webpack-src-dir=src/admin --output-path=build/admin",
 		"start": "wp-scripts start --experimental-modules --webpack-src-dir=src/blocks --output-path=build/blocks --webpack-copy-php",
+		"start:admin": "wp-scripts start index.js --webpack-src-dir=src/admin --output-path=build/admin",
 		"lint:js": "wp-scripts lint-js src",
 		"lint:css": "wp-scripts lint-style \"src/**/*.scss\"",
 		"format": "wp-scripts format src",
@@ -21,17 +24,25 @@
 		"assets",
 		"build",
 		"src",
-		"lib/shepherd",
 		"languages",
-		"package.json"
+		"package.json",
+		"lib/shepherd"
 	],
 	"devDependencies": {
+		"@wordpress/api-fetch": "^7.56.0",
 		"@wordpress/block-editor": "^18.0.0",
 		"@wordpress/blocks": "^16.1.0",
 		"@wordpress/components": "^41.0.0",
+		"@wordpress/dom-ready": "^4.56.0",
+		"@wordpress/element": "^8.8.0",
 		"@wordpress/i18n": "^6.29.0",
 		"@wordpress/interactivity": "^6.56.0",
 		"@wordpress/scripts": "^36.0.0",
 		"@wordpress/server-side-render": "^6.32.0"
+	},
+	"dependencies": {
+		"driver.js": "^1.9.0",
+		"leaflet": "^1.9.4",
+		"qrcode-generator": "^2.0.4"
 	}
 }
