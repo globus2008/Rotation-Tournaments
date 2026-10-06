@@ -17,17 +17,24 @@ if (!defined('ABSPATH')) {
 /**
  * Player IDs of a match as two teams.
  * Doubles: player_1 + player_2 against player_3 + player_4; singles: player_1 against player_2.
+ * Every player is marked as the current user (me) and as a special group member (special),
+ * so the results show those names highlighted.
  * @since 2.0.0
  */
-function doroto_view_match_teams(array $match, bool $doubles, int $whole_names): array
+function doroto_view_match_teams(array $match, bool $doubles, int $whole_names, array $special = [], int $user_id = 0): array
 {
 	$ids = $doubles
 		? [[$match['player_1'], $match['player_2']], [$match['player_3'], $match['player_4']]]
 		: [[$match['player_1']], [$match['player_2']]];
-	return array_map(function ($team) use ($whole_names) {
-		return array_map(function ($id) use ($whole_names) {
+	return array_map(function ($team) use ($whole_names, $special, $user_id) {
+		return array_map(function ($id) use ($whole_names, $special, $user_id) {
 			$id = intval($id);
-			return ['id' => $id, 'name' => doroto_find_player_name($id, $whole_names)];
+			return [
+				'id' => $id,
+				'name' => doroto_find_player_name($id, $whole_names),
+				'me' => $user_id > 0 && $id === $user_id,
+				'special' => in_array($id, $special, true),
+			];
 		}, $team);
 	}, $ids);
 }
@@ -202,6 +209,8 @@ function doroto_view_player_statistics(stdClass $tournament, int $player_id): ?a
 {
 	$statistics = maybe_unserialize($tournament->statistics);
 	$whole_names = intval($tournament->whole_names);
+	$special = array_map('intval', (array) (maybe_unserialize($tournament->special_group) ?: []));
+	$user_id = get_current_user_id();
 	foreach (is_array($statistics) ? $statistics : [] as $stat) {
 		if (intval($stat['player_id']) !== $player_id) {
 			continue;
@@ -214,7 +223,15 @@ function doroto_view_player_statistics(stdClass $tournament, int $player_id): ?a
 					continue;
 				}
 				if (!isset($counts[$other])) {
-					$counts[$other] = ['id' => $other, 'name' => doroto_find_player_name($other, $whole_names), 'left' => 0, 'right' => 0, 'opponent' => 0];
+					$counts[$other] = [
+						'id' => $other,
+						'name' => doroto_find_player_name($other, $whole_names),
+						'special' => in_array($other, $special, true),
+						'is_me' => $user_id > 0 && $other === $user_id,
+						'left' => 0,
+						'right' => 0,
+						'opponent' => 0,
+					];
 				}
 				$counts[$other][$label] += intval($row['count']);
 			}
@@ -259,6 +276,7 @@ function doroto_view_model(int $tournament_id): ?array
 	$whole_names = intval($tournament->whole_names);
 	$doubles = doroto_check_if_doubles($tournament);
 	$players = array_map('intval', (array) (maybe_unserialize($tournament->players) ?: []));
+	$special = array_map('intval', (array) (maybe_unserialize($tournament->special_group) ?: []));
 	$is_player = $user_id > 0 && in_array($user_id, $players, true);
 	$open = intval($tournament->open_registration) === 1;
 	$closed = intval($tournament->close_tournament) === 1;
@@ -275,7 +293,7 @@ function doroto_view_model(int $tournament_id): ?array
 		$skipped = intval($match['hide']) === 1;
 		$r1 = intval($match['result_1']);
 		$r2 = intval($match['result_2']);
-		$teams = doroto_view_match_teams($match, $doubles, $whole_names);
+		$teams = doroto_view_match_teams($match, $doubles, $whole_names, $special, $user_id);
 		$row = ['number' => $number, 'teams' => $teams, 'sides' => doroto_view_sides($teams)];
 		if (!$skipped && $r1 === 0 && $r2 === 0) {
 			if ($closed) {
@@ -306,7 +324,7 @@ function doroto_view_model(int $tournament_id): ?array
 		$final_teams = count($finalists) === 4 ? doroto_view_match_teams([
 			'player_1' => $finalists[0], 'player_2' => $finalists[1],
 			'player_3' => $finalists[2], 'player_4' => $finalists[3],
-		], true, $whole_names) : null;
+		], true, $whole_names, $special, $user_id) : null;
 		$final = [
 			'teams' => $final_teams,
 			'sides' => $final_teams ? doroto_view_sides($final_teams) : ['', ''],
@@ -386,6 +404,8 @@ function doroto_view_model(int $tournament_id): ?array
 			'has_ongoing' => !empty($ongoing),
 			'no_ongoing' => !$open && !$closed && empty($ongoing),
 			'has_played' => !empty($played),
+			// The results explain the highlighted names only when a special group player played.
+			'special_in_results' => !empty(array_intersect($special, array_merge(...array_column($played, 'players')))),
 			'has_winners' => !empty($winners),
 			'final' => $final !== null,
 			'notice' => $notice !== '',

@@ -344,6 +344,21 @@
 	}
 }
 
+// Player names in the results: the current user in bold, the special
+// group highlighted (same background as the "special group" tag).
+.doroto-name {
+	&.is-me {
+		font-weight: 700;
+	}
+
+	&.is-special {
+		padding: 0 0.25em;
+		border-radius: 4px;
+		background: var(--doroto-soft);
+		box-decoration-break: clone;
+	}
+}
+
 // Standings
 .doroto-table-wrap {
 	overflow-x: auto;

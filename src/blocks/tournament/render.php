@@ -305,13 +305,16 @@ $doroto_youtube = (string) doroto_read_settings('youtube_link', '');
 				</template>
 			</select>
 		</div>
+		<p class="doroto-help" data-wp-bind--hidden="!context.data.view.flags.special_in_results" <?php echo $doroto_flags['special_in_results'] ? '' : 'hidden'; ?>>
+			<?php esc_html_e('Highlighted names:', 'doubles-rotation-tournament'); ?> <span class="doroto-name is-special"><?php esc_html_e('special group', 'doubles-rotation-tournament'); ?></span>
+		</p>
 		<ul class="doroto-list" data-help="results">
 			<template data-wp-each--match="context.data.view.played" data-wp-each-key="context.match.number">
 				<li class="doroto-result" data-wp-bind--hidden="state.isFilteredOut" data-wp-class--is-skipped="context.match.skipped">
 					<span class="doroto-result__number" data-wp-text="context.match.number"></span>
-					<span class="doroto-result__side" data-wp-text="context.match.sides.0"></span>
+					<span class="doroto-result__side"><span class="doroto-name" data-wp-class--is-me="context.match.teams.0.0.me" data-wp-class--is-special="context.match.teams.0.0.special" data-wp-text="context.match.teams.0.0.name"></span><span data-wp-bind--hidden="!context.data.view.doubles"> &amp; <span class="doroto-name" data-wp-class--is-me="context.match.teams.0.1.me" data-wp-class--is-special="context.match.teams.0.1.special" data-wp-text="context.match.teams.0.1.name"></span></span></span>
 					<span class="doroto-result__score" data-wp-text="context.match.score"></span>
-					<span class="doroto-result__side" data-wp-text="context.match.sides.1"></span>
+					<span class="doroto-result__side"><span class="doroto-name" data-wp-class--is-me="context.match.teams.1.0.me" data-wp-class--is-special="context.match.teams.1.0.special" data-wp-text="context.match.teams.1.0.name"></span><span data-wp-bind--hidden="!context.data.view.doubles"> &amp; <span class="doroto-name" data-wp-class--is-me="context.match.teams.1.1.me" data-wp-class--is-special="context.match.teams.1.1.special" data-wp-text="context.match.teams.1.1.name"></span></span></span>
 					<button type="button" class="doroto-icon-button" data-wp-on--click="actions.openEdit"
 						data-wp-bind--hidden="!context.data.view.results_editable"
 						aria-label="<?php esc_attr_e('Edit result', 'doubles-rotation-tournament'); ?>">✎</button>
@@ -457,8 +460,11 @@ $doroto_youtube = (string) doroto_read_settings('youtube_link', '');
 				</thead>
 				<tbody>
 					<template data-wp-each--row="context.ui.stats.rows" data-wp-each-key="context.row.id">
-						<tr>
-							<th scope="row" data-wp-text="context.row.name"></th>
+						<tr data-wp-class--is-me="context.row.is_me">
+							<th scope="row">
+								<span data-wp-text="context.row.name"></span>
+								<span class="doroto-tag doroto-tag--special" data-wp-bind--hidden="!context.row.special"><?php esc_html_e('special group', 'doubles-rotation-tournament'); ?></span>
+							</th>
 							<td data-wp-text="context.row.left"></td>
 							<td data-wp-text="context.row.right"></td>
 							<td data-wp-bind--hidden="!context.data.view.doubles" data-wp-text="context.row.opponent"></td>
