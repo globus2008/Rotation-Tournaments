@@ -39,6 +39,8 @@ function doroto_block_config()
 		'restUrl' => esc_url_raw(rest_url()),
 		'nonce' => wp_create_nonce('wp_rest'),
 		'pollSeconds' => 30,
+		// Block themes style buttons through .wp-element-button (theme.json); classic themes style every button.
+		'blockTheme' => function_exists('wp_is_block_theme') && wp_is_block_theme(),
 		// Presentation started by the button: seconds per section (admin setting of the old presentation).
 		'presentationSeconds' => max(5, intval(doroto_read_settings('show_next_seconds', 15))),
 		// The map of the settings tab loads Leaflet on demand; its stylesheet is the plugin's copy.

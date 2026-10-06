@@ -134,6 +134,15 @@ export async function runTour( block, steps, texts ) {
 		stagePadding: 6,
 		stageRadius: 6,
 		popoverClass: 'doroto-tour',
+		// Back / Next look like the buttons of the theme: driver.css sits in a cascade layer, so
+		// a classic theme's button styles win; a block theme styles .wp-element-button (theme.json).
+		onPopoverRender: ( popover ) => {
+			if ( texts.themeButtons ) {
+				[ popover.previousButton, popover.nextButton ].forEach(
+					( button ) => button?.classList.add( 'wp-element-button' )
+				);
+			}
+		},
 		showProgress: kept.length > 1,
 		progressText: '{{current}} / {{total}}',
 		nextBtnText: texts.next,

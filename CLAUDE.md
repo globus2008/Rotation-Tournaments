@@ -96,6 +96,11 @@
 - POST `help-example {example}` creates missing examples (throttled 1/min for non-admins), makes a logged-in user
   organizer of the example (as the app route `setup-example-tournament` does) and answers the page address;
   the block opens it with `doroto_tour=example` and the tour starts automatically.
+- Tour buttons follow the theme (owner 2026-10-06: no hard-coded button colours): driver.css is compiled into
+  `@layer doroto-driver`, so unlayered theme styles win (Astra styles every `button`; unlayered driver.css gave
+  white text on #f7f7f7 on hover). Block themes: Back/Next get `.wp-element-button` (config `blockTheme`); not in
+  classic themes, where core's `:root :where(.wp-element-button)` default would beat the theme's `button`.
+  Only layout (gap, wrap) and the close cross (transparent, `color: inherit`) are set by the plugin.
 - First visit of the site in a browser starts "Tour of this page" by itself (like the 1.x `tour_seen`), once per
   page, not in presentation mode; remembered in `localStorage.tour_seen` = "true", the key of 1.x (owner 2026-10-06; no storage = never automatic).
 - Shepherd (`lib/shepherd`, `includes/doroto-help-icon.js`, `[doroto_floating_help]`) stays only for old shortcode pages.

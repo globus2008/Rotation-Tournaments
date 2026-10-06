@@ -182,6 +182,7 @@ async function startTourIn( ctx, block, tour ) {
 				next: t( 'tourNext' ),
 				prev: t( 'tourPrev' ),
 				done: t( 'tourDone' ),
+				themeButtons: !! getConfig( 'doroto' ).blockTheme,
 			} );
 		} else {
 			notify( ctx, t( 'networkError' ), true );

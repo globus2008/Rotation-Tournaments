@@ -2,8 +2,14 @@
 // (theme.json presets and currentColor), so the block follows the look of the site.
 
 // Popover of the guided tours (driver.js, MIT); the tour script itself loads on demand.
-@use "../../../node_modules/driver.js/dist/driver";
+// In a cascade layer: the theme's own styles (unlayered) win, so the popover buttons
+// look like the buttons of the theme in every state instead of a mix of both.
+@use "sass:meta";
 @use "../colors";
+
+@layer doroto-driver {
+	@include meta.load-css("../../../node_modules/driver.js/dist/driver");
+}
 
 .doroto-block {
 	@include colors.doroto-colors;
@@ -888,5 +894,39 @@
 	.driver-popover-description {
 		font-size: 0.95rem;
 		line-height: 1.45;
+	}
+
+	// Theme buttons can be large: keep a gap and let them wrap under the progress.
+	.driver-popover-footer {
+		flex-wrap: wrap;
+		gap: 0.5em;
+	}
+
+	.driver-popover-navigation-btns {
+		flex-wrap: wrap;
+		gap: 0.4em;
+		margin-inline-start: auto;
+	}
+
+	.driver-popover-footer button {
+		margin: 0;
+	}
+
+	// The close cross is an icon, not a theme button: no box, the colour of the popover text.
+	.driver-popover-close-btn,
+	.driver-popover-close-btn:hover,
+	.driver-popover-close-btn:focus {
+		min-height: 0;
+		padding: 0;
+		border: 0;
+		background: transparent;
+		box-shadow: none;
+		color: inherit;
+		opacity: 0.6;
+	}
+
+	.driver-popover-close-btn:hover,
+	.driver-popover-close-btn:focus-visible {
+		opacity: 1;
 	}
 }
