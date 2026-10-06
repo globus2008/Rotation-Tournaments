@@ -52,6 +52,24 @@
 	}
 }
 
+.doroto-details {
+	margin: 0 0 calc(var(--doroto-gap) / 2);
+
+	> summary {
+		cursor: pointer;
+		color: var(--doroto-muted);
+		font-size: 0.875em;
+	}
+
+	&__text {
+		margin-top: 0.5em;
+
+		> :last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
 .doroto-badge {
 	display: inline-block;
 	padding: 0.1em 0.6em;

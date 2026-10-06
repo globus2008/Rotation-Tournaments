@@ -116,6 +116,11 @@ $doroto_youtube = (string) doroto_read_settings('youtube_link', '');
 		<p class="doroto-head__organizers" data-help="organizers" data-wp-bind--hidden="!state.organizerNames" <?php echo $doroto_view['organizers'] ? '' : 'hidden'; ?>>
 			<?php esc_html_e('Organizer', 'doubles-rotation-tournament'); ?>: <span data-wp-text="state.organizerNames"><?php echo esc_html(implode(', ', $doroto_view['organizers'])); ?></span>
 		</p>
+		<?php // Invitation text: open while registration is open, folded once the tournament runs (like the old shortcode). ?>
+		<details class="doroto-details" data-help="details" data-wp-bind--hidden="!context.data.view.invitation"<?php echo $doroto_view['invitation'] === '' ? ' hidden' : ''; ?><?php echo $doroto_flags['registration'] ? ' open' : ''; ?>>
+			<summary><?php esc_html_e('Details about tournament no.', 'doubles-rotation-tournament'); ?> <span data-wp-text="context.data.view.id"><?php echo esc_html((string) $doroto_view['id']); ?></span></summary>
+			<div class="doroto-details__text" data-wp-watch="callbacks.syncInvitation"><?php echo $doroto_view['invitation']; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- wp_kses in doroto_view_model() ?></div>
+		</details>
 		<div class="doroto-progress" data-help="progress" data-wp-bind--hidden="!context.data.view.progress.percent" <?php echo $doroto_view['progress']['percent'] ? '' : 'hidden'; ?>>
 			<progress max="100" data-wp-bind--value="context.data.view.progress.percent" value="<?php echo esc_attr((string) intval($doroto_view['progress']['percent'])); ?>"></progress>
 			<span><span data-wp-text="context.data.view.progress.percent"><?php echo esc_html((string) intval($doroto_view['progress']['percent'])); ?></span> %</span>

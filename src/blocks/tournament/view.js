@@ -917,6 +917,18 @@ const { state, actions } = store( 'doroto', {
 			} );
 		},
 
+		/**
+		 * The invitation is HTML (wp_kses on the server), which data-wp-text cannot
+		 * show; keep it in sync after the organizer edits it in the settings.
+		 */
+		syncInvitation() {
+			const html = getContext().data.view.invitation || '';
+			const { ref } = getElement();
+			if ( ref.innerHTML !== html ) {
+				ref.innerHTML = html;
+			}
+		},
+
 		init() {
 			const ctx = getContext();
 			ctx.ui.ready = true;
