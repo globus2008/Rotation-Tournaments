@@ -94,6 +94,11 @@
   The old `options.php` forms and `doroto_sanitize_settings()` (accepted anything) are gone.
 - Old links `admin.php?page=doubles-rotation-tournament&tab=<old tab>` open the matching panel.
 - No more `ip-api.com` call and no inline `<script>`; the page config is a `data-config` attribute.
+- FTP upload (owner uploads by FTP) can create folders without read rights for others: Apache answered 403
+  "Server unable to read htaccess file" for all of `build/` on ltcchrast.cz (WEDOS) and the admin page stayed empty.
+  `doroto_fix_file_permissions()` adds missing 0755/0644 bits (skips `src`, `node_modules`) on a version change and
+  whenever the admin page opens. If `index.js` still does not load, the page shows `#doroto-admin-missing`
+  (handle `doroto-admin-fallback`; the app sets `data-mounted` on the root).
 - Translations of the plugin are made on translate.wordpress.org, do not edit `languages/`.
 
 ## Data model

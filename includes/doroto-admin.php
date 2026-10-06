@@ -501,7 +501,54 @@ function doroto_admin_page_html()
 	echo '<h1>' . esc_html(get_admin_page_title()) . '</h1>';
 	echo '<div id="doroto-admin-root" data-config="' . esc_attr(wp_json_encode($config)) . '">';
 	echo '<noscript><p>' . esc_html__('The settings of the plugin need JavaScript.', 'doubles-rotation-tournament') . '</p></noscript>';
+	// Replaced by the React app; shown only when build/admin/index.js did not load
+	// (e.g. 403 after an FTP upload with wrong permissions).
+	echo '<div id="doroto-admin-missing" class="notice notice-error inline" style="display:none"><p>'
+		. esc_html__('The settings page could not be loaded. Check that the web server can read the folder build/ of the plugin (folders 755, files 644) and reload the page.', 'doubles-rotation-tournament')
+		. '</p></div>';
 	echo '</div></div>';
+}
+
+/**
+ * Makes the files of the plugin readable for the web server. An FTP upload may create
+ * folders without the read/execute bits for others (e.g. 700); Apache then answers 403
+ * for build/ and the admin page and the blocks stay empty. Only adds missing bits
+ * (FS_CHMOD_DIR / FS_CHMOD_FILE, default 0755 / 0644), never removes any; a chmod that
+ * PHP is not allowed to do is skipped.
+ * @since 2.0.0
+ */
+function doroto_fix_file_permissions()
+{
+	$dir_mode = defined('FS_CHMOD_DIR') ? FS_CHMOD_DIR : 0755;
+	$file_mode = defined('FS_CHMOD_FILE') ? FS_CHMOD_FILE : 0644;
+	$skip = ['node_modules', 'src', '.git'];
+	$stack = [rtrim(plugin_dir_path(dirname(__FILE__)), '/\\')];
+	while ($stack) {
+		$dir = array_pop($stack);
+		$entries = @scandir($dir);
+		if ($entries === false) {
+			continue;
+		}
+		foreach ($entries as $entry) {
+			if ($entry === '.' || $entry === '..' || in_array($entry, $skip, true)) {
+				continue;
+			}
+			$path = $dir . '/' . $entry;
+			if (is_link($path)) {
+				continue;
+			}
+			$is_dir = is_dir($path);
+			$mode = $is_dir ? $dir_mode : $file_mode;
+			$perms = @fileperms($path);
+			if ($perms !== false && ($perms & $mode) !== $mode) {
+				// phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_operations_chmod -- runs outside WP_Filesystem on purpose
+				@chmod($path, ($perms & 0777) | $mode);
+			}
+			if ($is_dir) {
+				$stack[] = $path;
+			}
+		}
+	}
 }
 
 /**
@@ -513,6 +560,14 @@ function doroto_admin_enqueue($hook)
 	if (!doroto_is_plugin_admin_page($hook)) {
 		return;
 	}
+	// Files uploaded by FTP keep the version, so check them whenever the page opens.
+	doroto_fix_file_permissions();
+	// Its own handle, so it runs even when build/admin/index.js does not load.
+	wp_register_script('doroto-admin-fallback', false, [], doroto_VERSION, true);
+	wp_enqueue_script('doroto-admin-fallback');
+	wp_add_inline_script('doroto-admin-fallback', "window.addEventListener('load',function(){"
+		. "var r=document.getElementById('doroto-admin-root'),m=document.getElementById('doroto-admin-missing');"
+		. "if(r&&m&&!r.dataset.mounted){m.style.display='block';}});");
 	$dir = plugin_dir_path(dirname(__FILE__)) . 'build/admin/';
 	if (!file_exists($dir . 'index.asset.php')) {
 		return;

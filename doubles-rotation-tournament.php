@@ -282,6 +282,7 @@ function doroto_check_version()
 	if ($old_version !== doroto_VERSION) {
 		update_option('doroto_version', doroto_VERSION);
 		doroto_settings_check_existence();
+		doroto_fix_file_permissions();
 	}
 
 	// Schema migration. Sites upgraded from old versions never received columns

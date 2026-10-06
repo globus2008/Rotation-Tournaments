@@ -962,5 +962,7 @@ domReady( () => {
 	} catch {
 		config = {};
 	}
+	// Tells the fallback notice of the admin page that the app started.
+	root.dataset.mounted = '1';
 	createRoot( root ).render( <App config={ config } /> );
 } );
