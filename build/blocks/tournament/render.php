@@ -254,14 +254,17 @@ $doroto_style = doroto_block_color_style($attributes);
 
 		<div class="doroto-final" data-help="final" data-wp-bind--hidden="!context.data.view.flags.final" <?php echo $doroto_flags['final'] ? '' : 'hidden'; ?>>
 			<h4><?php esc_html_e('Final match', 'doubles-rotation-tournament'); ?></h4>
-			<p class="doroto-match__sides" data-wp-bind--hidden="!context.data.view.final.chosen">
-				<span data-wp-text="context.data.view.final.sides.0"></span>
-				<span aria-hidden="true">&times;</span>
-				<span data-wp-text="context.data.view.final.sides.1"></span>
-				<strong data-wp-bind--hidden="!context.data.view.final.has_result">
+			<p class="doroto-help" data-wp-bind--hidden="!context.data.view.final.has_special" <?php echo !empty($doroto_view['final']['has_special']) ? '' : 'hidden'; ?>>
+				<?php esc_html_e('Highlighted names:', 'doubles-rotation-tournament'); ?> <span class="doroto-name is-special"><?php esc_html_e('special group', 'doubles-rotation-tournament'); ?></span>
+			</p>
+			<div class="doroto-match__sides doroto-final__sides" data-wp-class--has-result="context.data.view.final.has_result" data-wp-bind--hidden="!context.data.view.final.chosen">
+				<span class="doroto-match__side" data-wp-class--is-won="context.data.view.final.won_1"><span class="doroto-final__cup" aria-hidden="true">🏆</span><span class="doroto-name" data-wp-class--is-me="context.data.view.final.teams.0.0.me" data-wp-class--is-special="context.data.view.final.teams.0.0.special" data-wp-text="context.data.view.final.teams.0.0.name"></span><span class="doroto-serve" data-wp-bind--hidden="!context.data.view.final.teams.0.0.serve" title="<?php esc_attr_e('Starts the game by serving', 'doubles-rotation-tournament'); ?>"><?php esc_html_e('serves', 'doubles-rotation-tournament'); ?></span> &amp; <span class="doroto-name" data-wp-class--is-me="context.data.view.final.teams.0.1.me" data-wp-class--is-special="context.data.view.final.teams.0.1.special" data-wp-text="context.data.view.final.teams.0.1.name"></span><span class="doroto-serve" data-wp-bind--hidden="!context.data.view.final.teams.0.1.serve" title="<?php esc_attr_e('Starts the game by serving', 'doubles-rotation-tournament'); ?>"><?php esc_html_e('serves', 'doubles-rotation-tournament'); ?></span></span>
+				<span class="doroto-match__vs" aria-hidden="true">&times;</span>
+				<span class="doroto-match__side" data-wp-class--is-won="context.data.view.final.won_2"><span class="doroto-final__cup" aria-hidden="true">🏆</span><span class="doroto-name" data-wp-class--is-me="context.data.view.final.teams.1.0.me" data-wp-class--is-special="context.data.view.final.teams.1.0.special" data-wp-text="context.data.view.final.teams.1.0.name"></span><span class="doroto-serve" data-wp-bind--hidden="!context.data.view.final.teams.1.0.serve" title="<?php esc_attr_e('Starts the game by serving', 'doubles-rotation-tournament'); ?>"><?php esc_html_e('serves', 'doubles-rotation-tournament'); ?></span> &amp; <span class="doroto-name" data-wp-class--is-me="context.data.view.final.teams.1.1.me" data-wp-class--is-special="context.data.view.final.teams.1.1.special" data-wp-text="context.data.view.final.teams.1.1.name"></span><span class="doroto-serve" data-wp-bind--hidden="!context.data.view.final.teams.1.1.serve" title="<?php esc_attr_e('Starts the game by serving', 'doubles-rotation-tournament'); ?>"><?php esc_html_e('serves', 'doubles-rotation-tournament'); ?></span></span>
+				<strong class="doroto-final__result" data-wp-bind--hidden="!context.data.view.final.has_result">
 					<span data-wp-text="context.data.view.final.result_1"></span>:<span data-wp-text="context.data.view.final.result_2"></span>
 				</strong>
-			</p>
+			</div>
 			<?php if ($doroto_flags['admin']) : ?>
 				<fieldset class="doroto-final__choose" data-wp-bind--hidden="!context.data.view.final.can_choose">
 					<legend><?php esc_html_e('Save the composition of the final group', 'doubles-rotation-tournament'); ?></legend>
@@ -271,7 +274,7 @@ $doroto_style = doroto_block_color_style($attributes);
 							<select data-key="<?php echo esc_attr($doroto_key); ?>" data-wp-on--change="actions.setFinalPick">
 								<option value="0">&mdash;</option>
 								<template data-wp-each--player="context.data.view.standings" data-wp-each-key="context.player.id">
-									<option data-wp-bind--value="context.player.id" data-wp-text="context.player.name"></option>
+									<option data-wp-bind--value="context.player.id" data-wp-class--is-special="context.player.special" data-wp-text="context.player.option_name"></option>
 								</template>
 							</select>
 						</label>

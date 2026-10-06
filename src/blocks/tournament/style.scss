@@ -378,9 +378,46 @@
 	white-space: nowrap;
 }
 
-// Final match outside the cards keeps the plain "×".
-.doroto-final .doroto-match__sides {
-	display: block;
+// Final match: the teams like a match card; the winning pair gets the cup.
+.doroto-final {
+	box-shadow: 0 1px 3px rgb(0 0 0 / 6%);
+
+	> h4 {
+		@include colors.doroto-strip;
+	}
+
+	&__sides {
+		max-width: 30rem;
+
+		.doroto-match__side.is-won {
+			padding: 0.25em 0.5em;
+			border-radius: calc(var(--doroto-radius) - 2px);
+			background: var(--doroto-soft);
+		}
+
+		&.has-result .doroto-serve {
+			display: none;
+		}
+	}
+
+	&__cup {
+		display: none;
+		margin-inline-end: 0.35em;
+
+		.is-won > & {
+			display: inline;
+		}
+	}
+
+	&__result {
+		font-size: 1.25em;
+		font-variant-numeric: tabular-nums;
+	}
+
+	// Options cannot be styled on every device (their text names the special group); desktop browsers show this.
+	option.is-special {
+		background: var(--doroto-special);
+	}
 }
 
 .doroto-score {

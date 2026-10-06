@@ -181,9 +181,12 @@ function doroto_view_standings(stdClass $tournament, int $current_user_id): arra
 			$winner = $category;
 		}
 
+		$name = doroto_find_player_name($id, $whole_names);
 		$rows[] = [
 			'id' => $id,
-			'name' => doroto_find_player_name($id, $whole_names),
+			'name' => $name,
+			// <option> cannot be highlighted on every device: the special group is named in the text.
+			'option_name' => $is_special ? $name . ' (' . __('special group', 'doubles-rotation-tournament') . ')' : $name,
 			'rank' => $rank,
 			'active' => $active,
 			'games' => $games,
@@ -333,9 +336,13 @@ function doroto_view_model(int $tournament_id): ?array
 			'teams' => $final_teams,
 			'sides' => $final_teams ? doroto_view_sides($final_teams) : ['', ''],
 			'chosen' => $final_teams !== null,
+			'has_special' => $final_teams !== null && !empty(array_filter(array_column(array_merge(...$final_teams), 'special'))),
 			'has_result' => $has_result,
 			'result_1' => $has_result ? intval($final_result['result_1']) : null,
 			'result_2' => $has_result ? intval($final_result['result_2']) : null,
+			// Winners of the final (the most ideal pair); a draw marks nobody.
+			'won_1' => $has_result && intval($final_result['result_1']) > intval($final_result['result_2']),
+			'won_2' => $has_result && intval($final_result['result_2']) > intval($final_result['result_1']),
 			'can_choose' => $is_admin && !$has_result,
 			'can_enter' => count($finalists) === 4 && !$has_result && ($is_admin
 				|| (intval($tournament->allow_input_results) === 1 && in_array($user_id, $finalists, true))),

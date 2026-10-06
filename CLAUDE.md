@@ -71,6 +71,9 @@
   (1.x state) is shown as 1/2.
 - Server of a match = `player_2` (column R1* of the 1.x table: right player of team 1 in doubles, the second
   player in singles). The view model marks it `serve`; the match card shows a "serves" pill.
+- Final match: names per player like the match cards (special group, own name, serves until the result), the
+  winning pair (`final.won_1/won_2`) gets the cup. `<option>` cannot be highlighted on phones, so the final
+  selects show `standings[].option_name` = "Name (special group)".
 - Colours of the tournament block always start from the theme: `doroto_block_theme_colors()` reads the theme's
   button colours (accent + its text) and a second palette colour (`secondary`/`accent-2`/...) for the special
   group, as `var(--wp--preset--color--*)` (owner 2026-10-06). The Styles panel of the block can override accent,
