@@ -281,7 +281,7 @@ $doroto_youtube = (string) doroto_read_settings('youtube_link', '');
 			<h4><?php esc_html_e('Winners', 'doubles-rotation-tournament'); ?></h4>
 			<ul>
 				<template data-wp-each--player="context.data.view.winners" data-wp-each-key="context.player.id">
-					<li><span aria-hidden="true">🏆</span> <span data-wp-text="context.player.name"></span> (<span data-wp-text="context.player.won"></span>:<span data-wp-text="context.player.lost"></span>)</li>
+					<li><span aria-hidden="true">🏆</span> <span class="doroto-name" data-wp-class--is-me="context.player.is_me" data-wp-class--is-special="context.player.special" data-wp-text="context.player.name"></span> (<span data-wp-text="context.player.won"></span>:<span data-wp-text="context.player.lost"></span>) <span class="doroto-tag doroto-tag--special" data-wp-bind--hidden="!context.player.special"><?php esc_html_e('special group', 'doubles-rotation-tournament'); ?></span></li>
 				</template>
 			</ul>
 		</div>
