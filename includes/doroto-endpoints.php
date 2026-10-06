@@ -1400,24 +1400,19 @@ add_action('rest_api_init', function () {
 		'args' => [
 			'tournament_id' => [
 				'required' => true,
-				'validate_callback' => 'rest_validate_request_arg',
 			],
 			'match_number' => [
 				'required' => true,
-				'validate_callback' => 'rest_validate_request_arg',
 			],
 			'result_1' => [
 				'required' => true,
-				'validate_callback' => 'rest_validate_request_arg',
 			],
 			'result_2' => [
 				'required' => true,
-				'validate_callback' => 'rest_validate_request_arg',
 			],
 			'hide' => [
 				'required' => false,
 				'default' => 0,
-				'validate_callback' => 'rest_validate_request_arg',
 			],
 		],
 	]);
@@ -1474,7 +1469,6 @@ add_action('rest_api_init', function () {
 		'args' => [
 			'tournament_id' => [
 				'required' => true,
-				'validate_callback' => 'rest_validate_request_arg',
 			],
 			'match_numbers' => [
 				'required' => true,
@@ -1514,7 +1508,6 @@ add_action('rest_api_init', function () {
 		'args' => [
 			'tournament_id' => [
 				'required' => true,
-				'validate_callback' => 'rest_validate_request_arg',
 			],
 			'action' => [
 				'required' => true,
