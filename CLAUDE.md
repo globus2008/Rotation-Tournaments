@@ -69,6 +69,11 @@
   points per hour 1-1000, max players 0-99, minimum matches 1-10). `doroto_service_settings_fields()` clamps them
   (no new error codes for old apps): a larger value made the app's dropdowns throw. `announce_round_end` 3/4
   (1.x state) is shown as 1/2.
+- Colours of the tournament block always start from the theme: `doroto_block_theme_colors()` reads the theme's
+  button colours (accent + its text) and a second palette colour (`secondary`/`accent-2`/...) for the special
+  group, as `var(--wp--preset--color--*)` (owner 2026-10-06). The Styles panel of the block can override accent,
+  tab bar/table headers, their text and the special group (`--doroto-*-custom`); text on a chosen hex colour is
+  black or white by contrast (`doroto_block_text_on()`). The active tab is a light card, readable on any bar.
 - Type lists of the blocks (settings, create, list filter) follow the admin settings like 1.x:
   `doroto_visible_tournament_types()` and `doroto_default_tournament_type()`.
 

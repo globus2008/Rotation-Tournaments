@@ -65,6 +65,83 @@ function doroto_block_config()
 }
 
 /**
+ * A colour picked in the block editor, safe for an inline style: a hex value, rgb()/hsl()
+ * or a theme preset variable. Anything else gives '' (the default of the stylesheet).
+ * @since 2.0.0
+ */
+function doroto_block_color($value): string
+{
+	$value = trim((string) $value);
+	if (preg_match('/^#[0-9a-f]{3,8}$/i', $value)
+		|| preg_match('/^(rgb|rgba|hsl|hsla)\([0-9.,%\s\/]+\)$/i', $value)
+		|| preg_match('/^var\(--wp--preset--color--[a-z0-9-]+\)$/i', $value)) {
+		return $value;
+	}
+	return '';
+}
+
+/**
+ * Readable text colour (black or white) on a hex background, '' for other values.
+ * @since 2.0.0
+ */
+function doroto_block_text_on(string $color): string
+{
+	if (!preg_match('/^#([0-9a-f]{3}|[0-9a-f]{6})([0-9a-f]{2})?$/i', $color, $m)) {
+		return '';
+	}
+	$hex = strlen($m[1]) === 3 ? preg_replace('/(.)/', '$1$1', $m[1]) : $m[1];
+	$channels = array_map(function ($part) {
+		$c = hexdec($part) / 255;
+		return $c <= 0.03928 ? $c / 12.92 : pow(($c + 0.055) / 1.055, 2.4);
+	}, str_split($hex, 2));
+	$luminance = 0.2126 * $channels[0] + 0.7152 * $channels[1] + 0.0722 * $channels[2];
+	// Contrast against white vs. black; pick the larger one.
+	return (1.05 / ($luminance + 0.05)) >= (($luminance + 0.05) / 0.05) ? '#ffffff' : '#000000';
+}
+
+/**
+ * Highlight colours of the active theme as custom properties for the tournament block:
+ * the theme's button colours (accent and its text) and a second palette colour for the
+ * special group. Kept as preset variables, so a style variation of the theme applies too.
+ * Classic themes without theme.json give nothing and the stylesheet falls back to presets.
+ * @since 2.0.0
+ */
+function doroto_block_theme_colors(): string
+{
+	static $style = null;
+	if ($style !== null) {
+		return $style;
+	}
+	$style = '';
+	if (!function_exists('wp_get_global_styles') || !wp_theme_has_theme_json()) {
+		return $style;
+	}
+	$button = (array) wp_get_global_styles(['elements', 'button', 'color']);
+	$vars = [
+		'--doroto-theme-accent' => $button['background'] ?? '',
+		'--doroto-theme-on-accent' => $button['text'] ?? '',
+	];
+	// Second highlight colour of the palette (names used by the default themes).
+	$slugs = [];
+	foreach ((array) wp_get_global_settings(['color', 'palette', 'theme']) as $color) {
+		$slugs[] = (string) ($color['slug'] ?? '');
+	}
+	foreach (['secondary', 'accent-2', 'accent', 'tertiary'] as $slug) {
+		if (in_array($slug, $slugs, true) && strpos((string) $vars['--doroto-theme-accent'], '--' . $slug . ')') === false) {
+			$vars['--doroto-theme-special'] = 'var(--wp--preset--color--' . $slug . ')';
+			break;
+		}
+	}
+	foreach ($vars as $var => $value) {
+		$value = doroto_block_color($value);
+		if ($value !== '') {
+			$style .= $var . ':' . $value . ';';
+		}
+	}
+	return $style;
+}
+
+/**
  * Fields of the settings tab, grouped as in the old settings form (its texts are translated).
  * type: text | number | select | textarea; options: value => label.
  * @since 2.0.0

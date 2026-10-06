@@ -39,6 +39,22 @@
 		"presentationSeconds": {
 			"type": "integer",
 			"default": 15
+		},
+		"accentColor": {
+			"type": "string",
+			"default": ""
+		},
+		"tabsBackground": {
+			"type": "string",
+			"default": ""
+		},
+		"tabsTextColor": {
+			"type": "string",
+			"default": ""
+		},
+		"specialColor": {
+			"type": "string",
+			"default": ""
 		}
 	},
 	"supports": {

@@ -5,7 +5,11 @@
  * and lets the author pick the tournament, the sections and the presentation mode.
  */
 import { registerBlockType } from '@wordpress/blocks';
-import { useBlockProps, InspectorControls } from '@wordpress/block-editor';
+import {
+	useBlockProps,
+	InspectorControls,
+	PanelColorSettings,
+} from '@wordpress/block-editor';
 import {
 	PanelBody,
 	TextControl,
@@ -30,8 +34,16 @@ const SECTIONS = [
 
 function Edit( { attributes, setAttributes } ) {
 	const blockProps = useBlockProps();
-	const { tournamentId, sections, presentation, presentationSeconds } =
-		attributes;
+	const {
+		tournamentId,
+		sections,
+		presentation,
+		presentationSeconds,
+		accentColor,
+		tabsBackground,
+		tabsTextColor,
+		specialColor,
+	} = attributes;
 
 	const toggleSection = ( key, checked ) => {
 		const next = checked
@@ -121,6 +133,63 @@ function Edit( { attributes, setAttributes } ) {
 						/>
 					) }
 				</PanelBody>
+			</InspectorControls>
+			<InspectorControls group="styles">
+				<PanelColorSettings
+					title={ __(
+						'Colours of the tournament',
+						'doubles-rotation-tournament'
+					) }
+					colorSettings={ [
+						{
+							value: accentColor,
+							onChange: ( value ) =>
+								setAttributes( { accentColor: value || '' } ),
+							label: __(
+								'Accent (buttons, active tab, progress)',
+								'doubles-rotation-tournament'
+							),
+						},
+						{
+							value: tabsBackground,
+							onChange: ( value ) =>
+								setAttributes( {
+									tabsBackground: value || '',
+								} ),
+							label: __(
+								'Tab bar and table headers',
+								'doubles-rotation-tournament'
+							),
+						},
+						{
+							value: tabsTextColor,
+							onChange: ( value ) =>
+								setAttributes( {
+									tabsTextColor: value || '',
+								} ),
+							label: __(
+								'Text of the tab bar and table headers',
+								'doubles-rotation-tournament'
+							),
+						},
+						{
+							value: specialColor,
+							onChange: ( value ) =>
+								setAttributes( { specialColor: value || '' } ),
+							label: __(
+								'Special group',
+								'doubles-rotation-tournament'
+							),
+						},
+					] }
+				>
+					<p className="components-base-control__help">
+						{ __(
+							'Without a choice the block uses the highlight colours of the theme (its buttons and palette).',
+							'doubles-rotation-tournament'
+						) }
+					</p>
+				</PanelColorSettings>
 			</InspectorControls>
 			<Disabled>
 				<ServerSideRender

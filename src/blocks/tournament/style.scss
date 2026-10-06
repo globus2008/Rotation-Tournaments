@@ -9,9 +9,18 @@
 	--doroto-radius: 8px;
 	--doroto-border: color-mix(in srgb, currentColor 18%, transparent);
 	--doroto-muted: color-mix(in srgb, currentColor 60%, transparent);
-	--doroto-accent: var(--wp--preset--color--primary, var(--wp--preset--color--contrast, #1e5aa8));
+	// render.php sets --doroto-theme-* (button and palette colours of the theme) and
+	// --doroto-*-custom (colours chosen in the block, which win).
+	--doroto-accent: var(--doroto-accent-custom, var(--doroto-theme-accent, var(--wp--preset--color--primary, var(--wp--preset--color--contrast, #1e5aa8))));
+	--doroto-on-accent: var(--doroto-on-accent-custom, var(--doroto-theme-on-accent, var(--wp--preset--color--base, #fff)));
 	--doroto-soft: color-mix(in srgb, var(--doroto-accent) 10%, transparent);
 	--doroto-danger: #b32d2e;
+	--doroto-surface: var(--wp--preset--color--base, #fff);
+	--doroto-surface-text: var(--wp--preset--color--contrast, #111);
+	--doroto-tabs-bg: var(--doroto-tabs-bg-custom, color-mix(in srgb, var(--doroto-accent) 16%, var(--doroto-surface)));
+	--doroto-tabs-fg: var(--doroto-tabs-fg-custom, inherit);
+	--doroto-stripe: color-mix(in srgb, currentColor 4%, transparent);
+	--doroto-special: var(--doroto-special-custom, color-mix(in srgb, var(--doroto-theme-special, var(--doroto-accent)) 18%, transparent));
 
 	h2,
 	h3,
@@ -35,6 +44,19 @@
 
 .doroto-head {
 	margin-bottom: var(--doroto-gap);
+	padding: var(--doroto-gap);
+	border-inline-start: 4px solid var(--doroto-accent);
+	border-radius: var(--doroto-radius);
+	background: var(--doroto-stripe);
+
+	&__title {
+		font-size: clamp(1.35em, 4vw, 1.9em);
+		line-height: 1.2;
+	}
+
+	> :last-child {
+		margin-bottom: 0;
+	}
 
 	&__organizers {
 		margin: 0 0 calc(var(--doroto-gap) / 2);
@@ -126,7 +148,7 @@
 
 .doroto-button:not(.wp-element-button):not(.doroto-button--secondary) {
 	background: var(--doroto-accent);
-	color: var(--wp--preset--color--base, #fff);
+	color: var(--doroto-on-accent);
 	border: 0;
 	border-radius: var(--doroto-radius);
 	padding: 0.5em 1em;
@@ -180,7 +202,10 @@
 		gap: 0.25em;
 		overflow-x: auto;
 		margin-bottom: var(--doroto-gap);
-		border-bottom: 1px solid var(--doroto-border);
+		padding: 0.3em;
+		border-radius: var(--doroto-radius);
+		background: var(--doroto-tabs-bg);
+		color: var(--doroto-tabs-fg);
 	}
 
 	.doroto-panel:not(.is-active) {
@@ -199,18 +224,27 @@
 }
 
 .doroto-tab {
-	flex: 0 0 auto;
-	padding: 0.6em 1em;
+	flex: 1 0 auto;
+	padding: 0.55em 1em;
 	border: 0;
 	border-bottom: 3px solid transparent;
+	border-radius: calc(var(--doroto-radius) - 2px);
 	background: none;
 	color: inherit;
 	font: inherit;
 	cursor: pointer;
 
+	&:hover {
+		background: color-mix(in srgb, var(--doroto-surface) 45%, transparent);
+	}
+
+	// The active tab is a light "card" on the bar: readable with any accent colour.
 	&.is-active {
 		border-bottom-color: var(--doroto-accent);
+		background: var(--doroto-surface);
+		color: var(--doroto-surface-text);
 		font-weight: 600;
+		box-shadow: 0 1px 3px rgb(0 0 0 / 12%);
 	}
 
 	&:focus-visible {
@@ -221,6 +255,10 @@
 
 .doroto-panel {
 	margin-bottom: calc(var(--doroto-gap) * 2);
+
+	> .doroto-actions {
+		margin-bottom: var(--doroto-gap);
+	}
 }
 
 .doroto-empty,
@@ -270,26 +308,59 @@
 	padding: var(--doroto-gap);
 	border: 1px solid var(--doroto-border);
 	border-radius: var(--doroto-radius);
+	box-shadow: 0 1px 3px rgb(0 0 0 / 6%);
 }
 
+// Match card: coloured header strip with the number, the teams split by a line.
 .doroto-match {
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	padding: 0 var(--doroto-gap) var(--doroto-gap);
+
 	&__number {
-		margin: 0 0 0.5em;
-		color: var(--doroto-muted);
-		font-size: 0.875em;
+		margin: 0 calc(var(--doroto-gap) * -1) 0.75em;
+		padding: 0.4em var(--doroto-gap);
+		background: var(--doroto-tabs-bg);
+		color: var(--doroto-tabs-fg);
+		font-size: 0.8em;
+		font-weight: 600;
+		letter-spacing: 0.03em;
+		text-transform: uppercase;
 	}
 
 	&__sides {
 		display: grid;
-		gap: 0.25em;
+		gap: 0.35em;
 		margin: 0 0 0.75em;
 		font-weight: 600;
+		font-size: 1.05em;
 	}
 
 	&__vs {
+		display: flex;
+		gap: 0.5em;
+		align-items: center;
 		color: var(--doroto-muted);
 		font-weight: 400;
+		font-size: 0.85em;
+
+		&::before,
+		&::after {
+			content: "";
+			flex: 1;
+			border-top: 1px solid var(--doroto-border);
+		}
 	}
+
+	.doroto-score {
+		margin-top: auto;
+	}
+}
+
+// Final match outside the cards keeps the plain "×".
+.doroto-final .doroto-match__sides {
+	display: block;
 }
 
 .doroto-score {
@@ -327,8 +398,12 @@
 	grid-template-columns: 2.5em 1fr auto 1fr auto;
 	gap: 0.5em;
 	align-items: center;
-	padding: 0.5em 0;
+	padding: 0.5em;
 	border-bottom: 1px solid var(--doroto-border);
+
+	&:nth-child(even) {
+		background: var(--doroto-stripe);
+	}
 
 	&__number {
 		color: var(--doroto-muted);
@@ -372,7 +447,7 @@
 	&.is-special {
 		padding: 0 0.25em;
 		border-radius: 4px;
-		background: var(--doroto-soft);
+		background: var(--doroto-special);
 		box-decoration-break: clone;
 	}
 }
@@ -397,8 +472,28 @@
 	}
 
 	thead th {
+		background: var(--doroto-tabs-bg);
+		color: var(--doroto-tabs-fg);
 		font-size: 0.875em;
-		color: var(--doroto-muted);
+		font-weight: 600;
+		white-space: nowrap;
+		border-bottom: 0;
+	}
+
+	thead th:first-child {
+		border-start-start-radius: var(--doroto-radius);
+	}
+
+	thead th:last-child {
+		border-start-end-radius: var(--doroto-radius);
+	}
+
+	tbody tr:nth-child(even) {
+		background: var(--doroto-stripe);
+	}
+
+	td {
+		white-space: nowrap;
 	}
 
 	tbody th {
@@ -409,7 +504,7 @@
 		font-weight: 700;
 	}
 
-	tr.is-winner {
+	tbody tr.is-winner {
 		background: var(--doroto-soft);
 	}
 
@@ -420,6 +515,7 @@
 
 .doroto-tag {
 	display: inline-block;
+	white-space: nowrap;
 	margin-inline-start: 0.4em;
 	padding: 0 0.4em;
 	border-radius: 4px;
@@ -432,6 +528,10 @@
 
 	&--winner {
 		font-weight: 700;
+	}
+
+	&--special {
+		background: var(--doroto-special);
 	}
 }
 

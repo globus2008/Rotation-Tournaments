@@ -94,8 +94,31 @@ $doroto_context['ui']['fixed'] = intval($attributes['tournamentId'] ?? 0) > 0;
 $doroto_context['ui']['presenting'] = false;
 $doroto_context['ui']['share'] = ['qr' => false];
 $doroto_youtube = (string) doroto_read_settings('youtube_link', '');
+// Highlight colours of the theme, then the colours chosen in the block (Styles panel)
+// that override them; the stylesheet reads both as custom properties.
+$doroto_style = doroto_block_theme_colors();
+$doroto_colors = [];
+foreach (['accentColor', 'tabsBackground', 'tabsTextColor', 'specialColor'] as $doroto_attr) {
+	$doroto_colors[$doroto_attr] = doroto_block_color($attributes[$doroto_attr] ?? '');
+}
+// Text on a chosen accent / tab bar colour: black or white, unless chosen too.
+$doroto_on_accent = doroto_block_text_on($doroto_colors['accentColor']);
+if ($doroto_colors['tabsTextColor'] === '') {
+	$doroto_colors['tabsTextColor'] = doroto_block_text_on($doroto_colors['tabsBackground']);
+}
+foreach ([
+	'--doroto-accent-custom' => $doroto_colors['accentColor'],
+	'--doroto-on-accent-custom' => $doroto_on_accent,
+	'--doroto-tabs-bg-custom' => $doroto_colors['tabsBackground'],
+	'--doroto-tabs-fg-custom' => $doroto_colors['tabsTextColor'],
+	'--doroto-special-custom' => $doroto_colors['specialColor'],
+] as $doroto_var => $doroto_color) {
+	if ($doroto_color !== '') {
+		$doroto_style .= $doroto_var . ':' . $doroto_color . ';';
+	}
+}
 ?>
-<div <?php echo get_block_wrapper_attributes(['class' => 'doroto-block' . (count($doroto_tabs) > 1 ? ' has-tabs' : '') . ($doroto_presentation ? ' is-presentation' : '')]); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+<div <?php echo get_block_wrapper_attributes(['class' => 'doroto-block' . (count($doroto_tabs) > 1 ? ' has-tabs' : '') . ($doroto_presentation ? ' is-presentation' : ''), 'style' => $doroto_style]); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 	data-wp-interactive="doroto"
 	<?php echo wp_interactivity_data_wp_context($doroto_context); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 	data-wp-init="callbacks.init"
