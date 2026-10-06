@@ -30,7 +30,7 @@ function doroto_view_list_filters(): array
 			7 => __('Where I Am Not Admin', 'doubles-rotation-tournament'),
 		];
 	}
-	foreach (doroto_tournament_types() as $type => $name) {
+	foreach (doroto_visible_tournament_types() as $type => $name) {
 		$filters[intval($type)] = $name;
 	}
 	return $filters;

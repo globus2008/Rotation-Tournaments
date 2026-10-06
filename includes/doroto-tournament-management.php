@@ -2928,6 +2928,34 @@ function doroto_types_variables()
 }
 
 /**
+ * Tournament types the website administrator allows (type => name), as the forms before 2.0 offered them.
+ * @param int $keep type always listed (the current type of a tournament)
+ * @since 2.0.0
+ */
+function doroto_visible_tournament_types(int $keep = 0): array
+{
+	$types = doroto_tournament_types();
+	$visible = [];
+	foreach (doroto_types_variables() as $type => $key) {
+		if ($type === $keep || doroto_read_settings($key, 1)) {
+			$visible[$type] = $types[$type];
+		}
+	}
+	return $visible ?: $types;
+}
+
+/**
+ * Type preselected by the create buttons: the default of the settings when it is allowed.
+ * @since 2.0.0
+ */
+function doroto_default_tournament_type(): int
+{
+	$visible = doroto_visible_tournament_types();
+	$default = intval(doroto_read_settings('tournament_type', 21));
+	return isset($visible[$default]) ? $default : intval(array_key_first($visible));
+}
+
+/**
  * create array with type of tournaments
  * @since 1.1.0
  * @version 1.3.6

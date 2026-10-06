@@ -36,7 +36,7 @@ $doroto_context = [
 	'perPage' => $doroto_per_page,
 	'busy' => false,
 	'message' => '',
-	'newType' => intval(array_key_first(doroto_tournament_types()) ?? 21),
+	'newType' => doroto_default_tournament_type(),
 ];
 ?>
 <div <?php echo get_block_wrapper_attributes(['class' => 'doroto-list-block']); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
@@ -90,8 +90,8 @@ $doroto_context = [
 		<div class="doroto-list-block__create">
 			<label for="<?php echo esc_attr($doroto_uid . '-type'); ?>"><?php esc_html_e('Create a new tournament', 'doubles-rotation-tournament'); ?></label>
 			<select id="<?php echo esc_attr($doroto_uid . '-type'); ?>" data-wp-on--change="actions.setType">
-				<?php foreach (doroto_tournament_types() as $doroto_type => $doroto_type_name) : ?>
-					<option value="<?php echo esc_attr((string) $doroto_type); ?>"><?php echo esc_html($doroto_type_name); ?></option>
+				<?php foreach (doroto_visible_tournament_types() as $doroto_type => $doroto_type_name) : ?>
+					<option value="<?php echo esc_attr((string) $doroto_type); ?>"<?php selected($doroto_type, doroto_default_tournament_type()); ?>><?php echo esc_html($doroto_type_name); ?></option>
 				<?php endforeach; ?>
 			</select>
 			<button type="button" class="doroto-list-block__button" data-wp-on--click="actions.create"><?php esc_html_e('Create', 'doubles-rotation-tournament'); ?></button>

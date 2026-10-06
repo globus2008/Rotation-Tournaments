@@ -65,6 +65,12 @@
   `leaflet` (map of the settings tab; CSS is the plugin's `assets/css/leaflet.css`, CSS marker instead of images),
   `driver.js` + `help.js` (tours). driver.css is compiled into the block style.
 - After an `await` the Interactivity scope is gone: always call `getConfig( 'doroto' )` with the namespace.
+- Tournament settings keep the ranges of 1.x and of the app dropdowns (courts 1-10, average result 1-100,
+  points per hour 1-1000, max players 0-99, minimum matches 1-10). `doroto_service_settings_fields()` clamps them
+  (no new error codes for old apps): a larger value made the app's dropdowns throw. `announce_round_end` 3/4
+  (1.x state) is shown as 1/2.
+- Type lists of the blocks (settings, create, list filter) follow the admin settings like 1.x:
+  `doroto_visible_tournament_types()` and `doroto_default_tournament_type()`.
 
 ## Guided tours (2.0)
 - The Help menu of the block: "Tour of this page" and Examples 1-4 (the example tournaments of

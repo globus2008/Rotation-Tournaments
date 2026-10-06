@@ -322,6 +322,10 @@ function doroto_view_model(int $tournament_id): ?array
 				? (string) $tournament->$key
 				: (in_array($key, ['latitude', 'longitude'], true) ? floatval($tournament->$key) : intval($tournament->$key));
 		}
+		// Plugins before 2.0 stored 3/4 for 1/2 with the round end announced; the form offers 0-2.
+		if ($settings['announce_round_end'] > 2) {
+			$settings['announce_round_end'] -= 2;
+		}
 	}
 
 	$standings = doroto_view_standings($tournament, $user_id);
@@ -337,7 +341,7 @@ function doroto_view_model(int $tournament_id): ?array
 		'invitation' => wp_kses((string) $tournament->invitation, doroto_allowed_html()),
 		'type' => intval($tournament->tournament_type),
 		'type_name' => $types[intval($tournament->tournament_type)] ?? '',
-		'types' => $types,
+		'types' => doroto_visible_tournament_types(intval($tournament->tournament_type)),
 		'doubles' => $doubles,
 		'score_unit' => doroto_games_points($tournament),
 		'state' => $open ? 'registration' : ($closed ? 'closed' : 'running'),

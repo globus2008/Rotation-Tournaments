@@ -64,7 +64,7 @@ $doroto_context = [
 		'settings' => $doroto_settings ?: new stdClass(),
 		'settingsDirty' => false,
 		'newPost' => false,
-		'newType' => intval(array_key_first($doroto_view['types']) ?? 21),
+		'newType' => doroto_default_tournament_type(),
 	],
 ];
 
@@ -544,8 +544,8 @@ $doroto_youtube = (string) doroto_read_settings('youtube_link', '');
 					<div class="doroto-row">
 						<label class="screen-reader-text" for="<?php echo esc_attr($doroto_uid . '-type'); ?>"><?php esc_html_e('Tournament type', 'doubles-rotation-tournament'); ?></label>
 						<select id="<?php echo esc_attr($doroto_uid . '-type'); ?>" data-key="newType" data-wp-on--change="actions.setUi">
-							<?php foreach ($doroto_view['types'] as $doroto_type => $doroto_type_name) : ?>
-								<option value="<?php echo esc_attr((string) $doroto_type); ?>"><?php echo esc_html($doroto_type_name); ?></option>
+							<?php foreach (doroto_visible_tournament_types() as $doroto_type => $doroto_type_name) : ?>
+								<option value="<?php echo esc_attr((string) $doroto_type); ?>"<?php selected($doroto_type, doroto_default_tournament_type()); ?>><?php echo esc_html($doroto_type_name); ?></option>
 							<?php endforeach; ?>
 						</select>
 						<button type="button" class="doroto-button" data-wp-on--click="actions.addTournament"><?php esc_html_e('Create', 'doubles-rotation-tournament'); ?></button>

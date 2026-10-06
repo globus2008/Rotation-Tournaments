@@ -78,19 +78,19 @@ function doroto_block_settings_schema(array $types): array
 			'fields' => [
 				'name' => ['type' => 'text', 'label' => __('The name of the tournament can be edited here.', 'doubles-rotation-tournament')],
 				'tournament_type' => ['type' => 'select', 'options' => $types, 'label' => __("You can change the tournament type here, if the tournament hasn't started yet.", 'doubles-rotation-tournament')],
-				'courts_available' => ['type' => 'number', 'min' => 1, 'max' => 99, 'label' => __('Number of courts available for the tournament', 'doubles-rotation-tournament')],
+				'courts_available' => ['type' => 'number', 'min' => 1, 'max' => 10, 'label' => __('Number of courts available for the tournament', 'doubles-rotation-tournament')],
 			],
 		],
 		[
 			'title' => __('Match result options', 'doubles-rotation-tournament'),
 			'fields' => [
-				'average_result' => ['type' => 'number', 'min' => 1, 'max' => 999, 'label' => __('Average match result.', 'doubles-rotation-tournament'), 'help' => __('If you play tennis and your matches end with an average score of 6:4, then enter a value of 10.', 'doubles-rotation-tournament')],
+				'average_result' => ['type' => 'number', 'min' => 1, 'max' => 100, 'label' => __('Average match result.', 'doubles-rotation-tournament'), 'help' => __('If you play tennis and your matches end with an average score of 6:4, then enter a value of 10.', 'doubles-rotation-tournament')],
 				'announce_round_end' => ['type' => 'select', 'label' => __('After the end of the entire tournament round, show the offer, what to do next?', 'doubles-rotation-tournament'), 'options' => [
 					'0' => __('No, do not announce the end of the round.', 'doubles-rotation-tournament'),
 					'1' => __("Yes, but don't consider service rotation.", 'doubles-rotation-tournament'),
 					'2' => __('Yes, and ensure service rotation.', 'doubles-rotation-tournament'),
 				]],
-				'games_hour' => ['type' => 'number', 'min' => 1, 'max' => 9999, 'label' => __('How many games (points) are played per hour on one court (table)?', 'doubles-rotation-tournament')],
+				'games_hour' => ['type' => 'number', 'min' => 1, 'max' => 1000, 'label' => __('How many games (points) are played per hour on one court (table)?', 'doubles-rotation-tournament')],
 			],
 		],
 		[
@@ -100,7 +100,7 @@ function doroto_block_settings_schema(array $types): array
 					'0' => __('Abbreviated names', 'doubles-rotation-tournament'),
 					'1' => __('Full names', 'doubles-rotation-tournament'),
 				]],
-				'max_players' => ['type' => 'number', 'min' => 0, 'max' => 999, 'label' => __('Maximum number of registered players.', 'doubles-rotation-tournament'), 'help' => '0 = ' . __('No limit', 'doubles-rotation-tournament')],
+				'max_players' => ['type' => 'number', 'min' => 0, 'max' => 99, 'label' => __('Maximum number of registered players.', 'doubles-rotation-tournament'), 'help' => '0 = ' . __('No limit', 'doubles-rotation-tournament')],
 				'allow_input_results' => ['type' => 'select', 'options' => $no_yes, 'label' => __('Can players independently enter game results?', 'doubles-rotation-tournament')],
 				'visibility' => ['type' => 'select', 'options' => $no_yes, 'label' => __('Can other players see your tournament?', 'doubles-rotation-tournament')],
 			],
@@ -120,7 +120,7 @@ function doroto_block_settings_schema(array $types): array
 					'1' => __('1 of all players', 'doubles-rotation-tournament'),
 					'2' => __('2 separately (1 from the special group and 1 outside the special group)', 'doubles-rotation-tournament'),
 				]],
-				'minimum_matches' => ['type' => 'number', 'min' => 0, 'max' => 999, 'label' => __('The minimum number of matches a player must play to be declared the winner.', 'doubles-rotation-tournament')],
+				'minimum_matches' => ['type' => 'number', 'min' => 1, 'max' => 10, 'label' => __('The minimum number of matches a player must play to be declared the winner.', 'doubles-rotation-tournament')],
 				'temp_suspend_winner' => ['type' => 'select', 'options' => $no_yes, 'label' => __('Can a player who is currently suspended be declared the winner?', 'doubles-rotation-tournament')],
 			],
 		],

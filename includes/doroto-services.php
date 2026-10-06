@@ -992,32 +992,47 @@ function doroto_service_remove_admin(int $tournament_id, int $user_id)
  */
 function doroto_service_settings_fields(): array
 {
+	// Out-of-range values are clamped, not refused: old app versions get no new error codes.
+	// The ranges are those of the settings forms before 2.0 and of the app (its dropdowns
+	// offer only these values), also used by the block (doroto_block_settings_schema).
+	$int = function (int $min, int $max) {
+		return function ($val) use ($min, $max) {
+			return max($min, min($max, intval($val)));
+		};
+	};
+	$float = function (float $min, float $max) {
+		return function ($val) use ($min, $max) {
+			return max($min, min($max, floatval($val)));
+		};
+	};
+	$flag = $int(0, 1);
 	return [
 		'name' => function ($val) {
 			return substr(sanitize_text_field($val), 0, 100);
 		},
-		'courts_available' => 'intval',
+		'courts_available' => $int(1, 10),
 		'tournament_type' => 'intval',
-		'max_players' => 'intval',
-		'whole_names' => 'intval',
-		'minimum_matches' => 'intval',
-		'allow_input_results' => 'intval',
-		'two_special_group' => 'intval',
-		'two_out_group' => 'intval',
-		'special_group_can_win' => 'intval',
-		'temp_suspend_winner' => 'intval',
-		'play_final_match' => 'intval',
-		'min_not_playing' => 'intval',
-		'payment_display' => 'intval',
-		'announce_round_end' => 'intval',
-		'games_hour' => 'intval',
-		'average_result' => 'intval',
-		'visibility' => 'intval',
+		'max_players' => $int(0, 99),
+		'whole_names' => $flag,
+		'minimum_matches' => $int(1, 10),
+		'allow_input_results' => $flag,
+		'two_special_group' => $flag,
+		'two_out_group' => $flag,
+		'special_group_can_win' => $int(0, 2),
+		'temp_suspend_winner' => $flag,
+		'play_final_match' => $flag,
+		'min_not_playing' => $flag,
+		'payment_display' => $flag,
+		// 3 and 4 are stored by plugins before 2.0 (1 and 2 with the round end announced).
+		'announce_round_end' => $int(0, 4),
+		'games_hour' => $int(1, 1000),
+		'average_result' => $int(1, 100),
+		'visibility' => $flag,
 		'invitation' => function ($val) {
 			return substr(wp_kses((string) $val, doroto_allowed_html()), 0, 5000);
 		},
-		'latitude' => 'floatval',
-		'longitude' => 'floatval',
+		'latitude' => $float(-90, 90),
+		'longitude' => $float(-180, 180),
 	];
 }
 
