@@ -21,6 +21,22 @@
 		"showCreate": {
 			"type": "boolean",
 			"default": true
+		},
+		"accentColor": {
+			"type": "string",
+			"default": ""
+		},
+		"tabsBackground": {
+			"type": "string",
+			"default": ""
+		},
+		"tabsTextColor": {
+			"type": "string",
+			"default": ""
+		},
+		"specialColor": {
+			"type": "string",
+			"default": ""
 		}
 	},
 	"supports": {

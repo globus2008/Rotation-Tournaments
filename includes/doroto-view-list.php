@@ -82,6 +82,10 @@ function doroto_view_list(int $filter, string $search, int $offset, int $limit, 
 			'name' => (string) $row->name,
 			'type_name' => $types[intval($row->tournament_type)] ?? '',
 			'state' => $state,
+			// Plain flags for the classes of the server render (it cannot evaluate state getters).
+			'is_registration' => $state === 'registration',
+			'is_running' => $state === 'running',
+			'is_closed' => $state === 'closed',
 			'state_text' => [
 				'registration' => __('Registration open', 'doubles-rotation-tournament'),
 				'running' => __('In progress', 'doubles-rotation-tournament'),

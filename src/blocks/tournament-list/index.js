@@ -13,6 +13,7 @@ import {
 import { __ } from '@wordpress/i18n';
 import ServerSideRender from '@wordpress/server-side-render';
 
+import ColorPanel from '../color-panel';
 import metadata from './block.json';
 import './style.scss';
 
@@ -75,6 +76,10 @@ function Edit( { attributes, setAttributes } ) {
 					/>
 				</PanelBody>
 			</InspectorControls>
+			<ColorPanel
+				attributes={ attributes }
+				setAttributes={ setAttributes }
+			/>
 			<Disabled>
 				<ServerSideRender
 					block={ metadata.name }

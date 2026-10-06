@@ -76,6 +76,10 @@
   group, as `var(--wp--preset--color--*)` (owner 2026-10-06). The Styles panel of the block can override accent,
   tab bar/table headers, their text and the special group (`--doroto-*-custom`); text on a chosen hex colour is
   black or white by contrast (`doroto_block_text_on()`). The active tab is a light card, readable on any bar.
+  The tournament and list blocks share it: `doroto_block_color_style()`, `src/blocks/_colors.scss` (mixins
+  `doroto-colors`, `doroto-strip` = header strip of a card) and `src/blocks/color-panel.js` (Styles panel).
+  Settings tab: groups as cards in a grid, sticky save bar with "Unsaved changes". List: state stripe per card
+  (registration = accent, running = second theme colour, closed = grey) from the plain flags `is_*` of the rows.
 - Type lists of the blocks (settings, create, list filter) follow the admin settings like 1.x:
   `doroto_visible_tournament_types()` and `doroto_default_tournament_type()`.
 

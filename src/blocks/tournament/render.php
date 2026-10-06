@@ -94,29 +94,8 @@ $doroto_context['ui']['fixed'] = intval($attributes['tournamentId'] ?? 0) > 0;
 $doroto_context['ui']['presenting'] = false;
 $doroto_context['ui']['share'] = ['qr' => false];
 $doroto_youtube = (string) doroto_read_settings('youtube_link', '');
-// Highlight colours of the theme, then the colours chosen in the block (Styles panel)
-// that override them; the stylesheet reads both as custom properties.
-$doroto_style = doroto_block_theme_colors();
-$doroto_colors = [];
-foreach (['accentColor', 'tabsBackground', 'tabsTextColor', 'specialColor'] as $doroto_attr) {
-	$doroto_colors[$doroto_attr] = doroto_block_color($attributes[$doroto_attr] ?? '');
-}
-// Text on a chosen accent / tab bar colour: black or white, unless chosen too.
-$doroto_on_accent = doroto_block_text_on($doroto_colors['accentColor']);
-if ($doroto_colors['tabsTextColor'] === '') {
-	$doroto_colors['tabsTextColor'] = doroto_block_text_on($doroto_colors['tabsBackground']);
-}
-foreach ([
-	'--doroto-accent-custom' => $doroto_colors['accentColor'],
-	'--doroto-on-accent-custom' => $doroto_on_accent,
-	'--doroto-tabs-bg-custom' => $doroto_colors['tabsBackground'],
-	'--doroto-tabs-fg-custom' => $doroto_colors['tabsTextColor'],
-	'--doroto-special-custom' => $doroto_colors['specialColor'],
-] as $doroto_var => $doroto_color) {
-	if ($doroto_color !== '') {
-		$doroto_style .= $doroto_var . ':' . $doroto_color . ';';
-	}
-}
+// Colours of the theme and of the Styles panel as custom properties (doroto_block_color_style()).
+$doroto_style = doroto_block_color_style($attributes);
 ?>
 <div <?php echo get_block_wrapper_attributes(['class' => 'doroto-block' . (count($doroto_tabs) > 1 ? ' has-tabs' : '') . ($doroto_presentation ? ' is-presentation' : ''), 'style' => $doroto_style]); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 	data-wp-interactive="doroto"
@@ -532,9 +511,12 @@ foreach ([
 			</div>
 
 			<form class="doroto-settings" data-wp-on--submit="actions.saveSettings">
+				<div class="doroto-settings__groups">
 				<?php
 				foreach (doroto_block_settings_schema($doroto_view['types']) as $doroto_group) {
-					echo '<fieldset class="doroto-fieldset"><legend>' . esc_html($doroto_group['title']) . '</legend>';
+					// The map and the long text take the whole width of the grid.
+					$doroto_wide = isset($doroto_group['fields']['latitude']) || isset($doroto_group['fields']['invitation']);
+					echo '<fieldset class="doroto-fieldset' . ($doroto_wide ? ' doroto-fieldset--wide' : '') . '"><legend>' . esc_html($doroto_group['title']) . '</legend>';
 					foreach ($doroto_group['fields'] as $doroto_key => $doroto_field) {
 						doroto_block_settings_field($doroto_key, $doroto_field, $doroto_settings[$doroto_key] ?? '', $doroto_uid);
 					}
@@ -543,16 +525,19 @@ foreach ([
 						echo '<div class="doroto-map" data-help="field-map" data-wp-watch="callbacks.watchMap" hidden data-wp-bind--hidden="!context.ui.ready"></div>';
 						echo '<p class="doroto-help">' . esc_html__('Click on the map to set the place of the tournament.', 'doubles-rotation-tournament') . '</p>';
 					}
+					if (isset($doroto_group['fields']['invitation']) && $doroto_view['user']['level'] === 2) {
+						echo '<label class="doroto-check"><input type="checkbox" data-wp-bind--checked="context.ui.newPost" data-wp-on--change="actions.toggleNewPost"> '
+							. esc_html__('When you check the box, a new post dedicated only to this tournament will be created.', 'doubles-rotation-tournament') . '</label>';
+					}
 					echo '</fieldset>';
 				}
 				?>
-				<?php if ($doroto_view['user']['level'] === 2) : ?>
-					<label class="doroto-check">
-						<input type="checkbox" data-wp-bind--checked="context.ui.newPost" data-wp-on--change="actions.toggleNewPost">
-						<?php esc_html_e('When you check the box, a new post dedicated only to this tournament will be created.', 'doubles-rotation-tournament'); ?>
-					</label>
-				<?php endif; ?>
-				<button type="submit" class="doroto-button" data-help="settings-save"><?php esc_html_e('Save', 'doubles-rotation-tournament'); ?></button>
+				</div>
+				<?php // Stays at the bottom of the screen while the form is in view. ?>
+				<div class="doroto-savebar" data-wp-class--is-dirty="context.ui.settingsDirty">
+					<span class="doroto-savebar__note" data-wp-bind--hidden="!context.ui.settingsDirty" hidden><?php esc_html_e('Unsaved changes', 'doubles-rotation-tournament'); ?></span>
+					<button type="submit" class="doroto-button" data-help="settings-save"><?php esc_html_e('Save', 'doubles-rotation-tournament'); ?></button>
+				</div>
 			</form>
 
 			<details class="doroto-box" data-help="settings-organizers" data-wp-on--toggle="actions.loadCandidates">

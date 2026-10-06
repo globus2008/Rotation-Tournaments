@@ -3,24 +3,10 @@
 
 // Popover of the guided tours (driver.js, MIT); the tour script itself loads on demand.
 @use "../../../node_modules/driver.js/dist/driver";
+@use "../colors";
 
 .doroto-block {
-	--doroto-gap: var(--wp--preset--spacing--30, 1rem);
-	--doroto-radius: 8px;
-	--doroto-border: color-mix(in srgb, currentColor 18%, transparent);
-	--doroto-muted: color-mix(in srgb, currentColor 60%, transparent);
-	// render.php sets --doroto-theme-* (button and palette colours of the theme) and
-	// --doroto-*-custom (colours chosen in the block, which win).
-	--doroto-accent: var(--doroto-accent-custom, var(--doroto-theme-accent, var(--wp--preset--color--primary, var(--wp--preset--color--contrast, #1e5aa8))));
-	--doroto-on-accent: var(--doroto-on-accent-custom, var(--doroto-theme-on-accent, var(--wp--preset--color--base, #fff)));
-	--doroto-soft: color-mix(in srgb, var(--doroto-accent) 10%, transparent);
-	--doroto-danger: #b32d2e;
-	--doroto-surface: var(--wp--preset--color--base, #fff);
-	--doroto-surface-text: var(--wp--preset--color--contrast, #111);
-	--doroto-tabs-bg: var(--doroto-tabs-bg-custom, color-mix(in srgb, var(--doroto-accent) 16%, var(--doroto-surface)));
-	--doroto-tabs-fg: var(--doroto-tabs-fg-custom, inherit);
-	--doroto-stripe: color-mix(in srgb, currentColor 4%, transparent);
-	--doroto-special: var(--doroto-special-custom, color-mix(in srgb, var(--doroto-theme-special, var(--doroto-accent)) 18%, transparent));
+	@include colors.doroto-colors;
 
 	h2,
 	h3,
@@ -285,13 +271,32 @@
 	background: var(--doroto-soft);
 }
 
-.doroto-box > summary {
-	cursor: pointer;
-	font-weight: 600;
+.doroto-box {
+	box-shadow: 0 1px 3px rgb(0 0 0 / 6%);
+
+	> h4,
+	> summary {
+		@include colors.doroto-strip;
+	}
+
+	> summary {
+		cursor: pointer;
+	}
+
+	// A folded box is only its strip.
+	@at-root details#{&}:not([open]) > summary {
+		margin-bottom: calc(var(--doroto-gap) * -1);
+		border-radius: var(--doroto-radius);
+	}
 }
 
 .doroto-danger {
 	border-color: color-mix(in srgb, var(--doroto-danger) 40%, transparent);
+
+	> h4 {
+		background: color-mix(in srgb, var(--doroto-danger) 12%, var(--doroto-surface));
+		color: var(--doroto-danger);
+	}
 }
 
 // Match cards
@@ -602,15 +607,80 @@
 	}
 }
 
-// Forms
+// Forms: groups of the settings as cards with a coloured strip, two columns when there is room.
+.doroto-settings__groups {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(min(100%, 20rem), 1fr));
+	gap: var(--doroto-gap);
+	align-items: start;
+	margin-bottom: var(--doroto-gap);
+}
+
 .doroto-fieldset {
-	margin: 0 0 var(--doroto-gap);
+	min-width: 0;
+	margin: 0;
 	padding: var(--doroto-gap);
 	border: 1px solid var(--doroto-border);
 	border-radius: var(--doroto-radius);
+	box-shadow: 0 1px 3px rgb(0 0 0 / 6%);
 
-	legend {
-		padding: 0 0.25em;
+	// A floated legend can take the full width like a heading.
+	> legend {
+		@include colors.doroto-strip;
+		float: left;
+		box-sizing: border-box;
+		width: calc(100% + var(--doroto-gap) * 2);
+	}
+
+	> legend + * {
+		clear: both;
+	}
+
+	&--wide {
+		grid-column: 1 / -1;
+	}
+
+	// Fields fill the column; a long option must not push the select out of the card.
+	.doroto-field {
+		grid-template-columns: minmax(0, 1fr);
+
+		input:not([type="checkbox"]),
+		select,
+		textarea {
+			box-sizing: border-box;
+			width: 100%;
+		}
+	}
+
+	.doroto-field:last-child {
+		margin-bottom: 0;
+	}
+}
+
+// Save bar of the settings: sticks to the bottom of the screen while the form is in view.
+.doroto-savebar {
+	position: sticky;
+	bottom: 0;
+	z-index: 4;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.75em;
+	align-items: center;
+	justify-content: flex-end;
+	margin-bottom: var(--doroto-gap);
+	padding: 0.6em var(--doroto-gap);
+	border: 1px solid var(--doroto-border);
+	border-radius: var(--doroto-radius);
+	background: var(--doroto-surface);
+	color: var(--doroto-surface-text);
+	box-shadow: 0 -2px 10px rgb(0 0 0 / 8%);
+
+	&.is-dirty {
+		border-color: var(--doroto-accent);
+	}
+
+	&__note {
+		margin-inline-end: auto;
 		font-weight: 600;
 	}
 }

@@ -1,0 +1,33 @@
+// Colour custom properties shared by the blocks. render.php sets --doroto-theme-*
+// (button and palette colours of the theme, doroto_block_theme_colors()) and
+// --doroto-*-custom (colours chosen in the Styles panel of the block, which win).
+@mixin doroto-colors {
+	--doroto-gap: var(--wp--preset--spacing--30, 1rem);
+	--doroto-radius: 8px;
+	--doroto-border: color-mix(in srgb, currentColor 18%, transparent);
+	--doroto-muted: color-mix(in srgb, currentColor 60%, transparent);
+	--doroto-accent: var(--doroto-accent-custom, var(--doroto-theme-accent, var(--wp--preset--color--primary, var(--wp--preset--color--contrast, #1e5aa8))));
+	--doroto-on-accent: var(--doroto-on-accent-custom, var(--doroto-theme-on-accent, var(--wp--preset--color--base, #fff)));
+	--doroto-soft: color-mix(in srgb, var(--doroto-accent) 10%, transparent);
+	--doroto-danger: #b32d2e;
+	--doroto-surface: var(--wp--preset--color--base, #fff);
+	--doroto-surface-text: var(--wp--preset--color--contrast, #111);
+	--doroto-tabs-bg: var(--doroto-tabs-bg-custom, color-mix(in srgb, var(--doroto-accent) 16%, var(--doroto-surface)));
+	--doroto-tabs-fg: var(--doroto-tabs-fg-custom, inherit);
+	--doroto-stripe: color-mix(in srgb, currentColor 4%, transparent);
+	// Second highlight colour of the theme (special group, running tournaments).
+	--doroto-second: var(--doroto-special-custom, var(--doroto-theme-special, var(--doroto-accent)));
+	--doroto-special: var(--doroto-special-custom, color-mix(in srgb, var(--doroto-theme-special, var(--doroto-accent)) 18%, transparent));
+}
+
+// Header strip of a box (legend, h4, summary): the colours of the tab bar.
+@mixin doroto-strip {
+	margin: calc(var(--doroto-gap) * -1) calc(var(--doroto-gap) * -1) var(--doroto-gap);
+	padding: 0.55em var(--doroto-gap);
+	border-radius: var(--doroto-radius) var(--doroto-radius) 0 0;
+	background: var(--doroto-tabs-bg);
+	color: var(--doroto-tabs-fg);
+	font-size: 1rem;
+	font-weight: 600;
+	line-height: 1.4;
+}

@@ -39,7 +39,7 @@ $doroto_context = [
 	'newType' => doroto_default_tournament_type(),
 ];
 ?>
-<div <?php echo get_block_wrapper_attributes(['class' => 'doroto-list-block']); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+<div <?php echo get_block_wrapper_attributes(['class' => 'doroto-list-block', 'style' => doroto_block_color_style($attributes)]); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 	data-wp-interactive="doroto/list"
 	<?php echo wp_interactivity_data_wp_context($doroto_context); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 	data-wp-class--is-busy="context.busy">
@@ -57,16 +57,16 @@ $doroto_context = [
 			<label for="<?php echo esc_attr($doroto_uid . '-search'); ?>"><?php esc_html_e('Search', 'doubles-rotation-tournament'); ?></label>
 			<input type="search" id="<?php echo esc_attr($doroto_uid . '-search'); ?>" data-wp-on--input="actions.setSearch">
 		</div>
-		<button type="submit" class="doroto-list-block__button"><?php esc_html_e('Filter Tournaments', 'doubles-rotation-tournament'); ?></button>
+		<button type="submit" class="doroto-list-block__button is-primary"><?php esc_html_e('Filter Tournaments', 'doubles-rotation-tournament'); ?></button>
 	</form>
 
 	<p class="doroto-list-block__empty" data-wp-bind--hidden="context.list.total" <?php echo $doroto_list['total'] ? 'hidden' : ''; ?>><?php esc_html_e('No tournament matches the filter.', 'doubles-rotation-tournament'); ?></p>
 
 	<ul class="doroto-list-block__items" aria-live="polite">
 		<template data-wp-each--item="context.list.rows" data-wp-each-key="context.item.id">
-			<li class="doroto-list-block__item">
+			<li class="doroto-list-block__item" data-wp-class--is-registration="context.item.is_registration" data-wp-class--is-running="context.item.is_running" data-wp-class--is-closed="context.item.is_closed">
 				<a class="doroto-list-block__name" data-wp-bind--href="context.item.url" data-wp-text="context.item.name"></a>
-				<span class="doroto-list-block__state" data-wp-class--is-closed="state.isClosed" data-wp-text="context.item.state_text"></span>
+				<span class="doroto-list-block__state" data-wp-text="context.item.state_text"></span>
 				<span class="doroto-list-block__meta">
 					<span data-wp-text="context.item.type_name"></span>
 					&middot; <?php esc_html_e('Players', 'doubles-rotation-tournament'); ?>: <span data-wp-text="context.item.players"></span>
@@ -94,7 +94,7 @@ $doroto_context = [
 					<option value="<?php echo esc_attr((string) $doroto_type); ?>"<?php selected($doroto_type, doroto_default_tournament_type()); ?>><?php echo esc_html($doroto_type_name); ?></option>
 				<?php endforeach; ?>
 			</select>
-			<button type="button" class="doroto-list-block__button" data-wp-on--click="actions.create"><?php esc_html_e('Create', 'doubles-rotation-tournament'); ?></button>
+			<button type="button" class="doroto-list-block__button is-primary" data-wp-on--click="actions.create"><?php esc_html_e('Create', 'doubles-rotation-tournament'); ?></button>
 		</div>
 	<?php endif; ?>
 

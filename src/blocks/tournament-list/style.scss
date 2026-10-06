@@ -1,11 +1,9 @@
-// Styles of the tournament list block; colours and fonts come from the theme.
+// Styles of the tournament list block. Colours come from the theme (doroto_block_theme_colors())
+// unless chosen in the Styles panel of the block; fonts and spacing from the theme too.
+@use "../colors";
 
 .doroto-list-block {
-	--doroto-gap: var(--wp--preset--spacing--30, 1rem);
-	--doroto-border: color-mix(in srgb, currentColor 18%, transparent);
-	--doroto-muted: color-mix(in srgb, currentColor 60%, transparent);
-	--doroto-accent: var(--wp--preset--color--primary, var(--wp--preset--color--contrast, #1e5aa8));
-	--doroto-soft: color-mix(in srgb, var(--doroto-accent) 10%, transparent);
+	@include colors.doroto-colors;
 
 	[hidden] {
 		display: none !important;
@@ -16,28 +14,45 @@
 		opacity: 0.7;
 	}
 
-	&__filters,
-	&__create,
-	&__paging {
+	// Filter panel in the colours of the tab bar of the tournament block.
+	&__filters {
 		display: flex;
 		flex-wrap: wrap;
-		gap: 0.5em;
+		gap: 0.75em;
 		align-items: end;
 		margin-bottom: var(--doroto-gap);
-	}
+		padding: var(--doroto-gap);
+		border-radius: var(--doroto-radius);
+		background: var(--doroto-tabs-bg);
+		color: var(--doroto-tabs-fg);
 
-	&__paging {
-		align-items: center;
-		justify-content: space-between;
+		.doroto-list-block__field {
+			flex: 1 1 12em;
+		}
+
+		select,
+		input {
+			box-sizing: border-box;
+			width: 100%;
+			border: 1px solid var(--doroto-border);
+			border-radius: calc(var(--doroto-radius) - 2px);
+			background: var(--doroto-surface);
+			color: var(--doroto-surface-text);
+		}
 	}
 
 	&__field {
 		display: grid;
 		gap: 0.25em;
 
+		label {
+			font-size: 0.875em;
+			font-weight: 600;
+		}
+
 		select,
 		input {
-			padding: 0.4em;
+			padding: 0.45em 0.5em;
 			font: inherit;
 		}
 	}
@@ -45,11 +60,18 @@
 	&__button {
 		padding: 0.5em 1em;
 		border: 1px solid var(--doroto-border);
-		border-radius: 8px;
-		background: transparent;
-		color: inherit;
+		border-radius: var(--doroto-radius);
+		background: var(--doroto-surface);
+		color: var(--doroto-surface-text);
 		font: inherit;
 		cursor: pointer;
+
+		&.is-primary {
+			border-color: transparent;
+			background: var(--doroto-accent);
+			color: var(--doroto-on-accent);
+			font-weight: 600;
+		}
 
 		&:disabled {
 			opacity: 0.4;
@@ -57,34 +79,67 @@
 		}
 	}
 
+	// Tournaments as cards; the stripe on the side shows the state.
 	&__items {
+		display: grid;
+		gap: 0.6em;
 		margin: 0 0 var(--doroto-gap);
 		padding: 0;
 		list-style: none;
 	}
 
 	&__item {
+		--doroto-state: var(--doroto-border);
+		--doroto-state-bg: color-mix(in srgb, currentColor 10%, transparent);
 		display: grid;
 		grid-template-columns: 1fr auto;
 		gap: 0.25em 0.75em;
-		padding: 0.75em 0;
-		border-bottom: 1px solid var(--doroto-border);
+		padding: 0.75em var(--doroto-gap);
+		border: 1px solid var(--doroto-border);
+		border-inline-start: 5px solid var(--doroto-state);
+		border-radius: var(--doroto-radius);
+		box-shadow: 0 1px 3px rgb(0 0 0 / 6%);
+		transition: background-color 0.15s;
+
+		&:hover {
+			background: var(--doroto-stripe);
+		}
+
+		&.is-registration {
+			--doroto-state: var(--doroto-accent);
+			--doroto-state-bg: var(--doroto-soft);
+		}
+
+		&.is-running {
+			--doroto-state: var(--doroto-second);
+			--doroto-state-bg: color-mix(in srgb, var(--doroto-second) 18%, transparent);
+		}
+
+		&.is-closed {
+			--doroto-state: color-mix(in srgb, currentColor 30%, transparent);
+		}
 	}
 
 	&__name {
 		font-weight: 600;
+		font-size: 1.05em;
+		text-decoration: none;
+
+		&:hover,
+		&:focus-visible {
+			text-decoration: underline;
+		}
 	}
 
 	&__state {
+		align-self: start;
 		justify-self: end;
-		padding: 0.1em 0.6em;
+		padding: 0.1em 0.7em;
 		border-radius: 999px;
-		background: var(--doroto-soft);
-		font-size: 0.875em;
-
-		&.is-closed {
-			background: color-mix(in srgb, currentColor 10%, transparent);
-		}
+		background: var(--doroto-state-bg);
+		font-size: 0.8em;
+		font-weight: 600;
+		white-space: nowrap;
 	}
 
 	&__meta {
@@ -95,15 +150,54 @@
 
 	&__tags {
 		grid-column: 1 / -1;
+
+		&:not(:has(> :not([hidden]))) {
+			display: none;
+		}
 	}
 
 	&__tag {
 		display: inline-block;
 		margin-inline-end: 0.4em;
-		padding: 0 0.4em;
-		border-radius: 4px;
-		background: var(--doroto-soft);
+		padding: 0 0.5em;
+		border: 1px solid var(--doroto-border);
+		border-radius: 999px;
 		font-size: 0.75em;
+	}
+
+	&__paging {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5em;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: var(--doroto-gap);
+		color: var(--doroto-muted);
+	}
+
+	// "Create a new tournament": a box with the strip of the tab bar.
+	&__create {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5em;
+		align-items: center;
+		margin-bottom: var(--doroto-gap);
+		padding: var(--doroto-gap);
+		border: 1px solid var(--doroto-border);
+		border-radius: var(--doroto-radius);
+		box-shadow: 0 1px 3px rgb(0 0 0 / 6%);
+
+		> label {
+			@include colors.doroto-strip;
+			flex: 0 0 calc(100% + var(--doroto-gap) * 2);
+			box-sizing: border-box;
+			margin-bottom: 0.25em;
+		}
+
+		select {
+			padding: 0.45em 0.5em;
+			font: inherit;
+		}
 	}
 
 	&__empty,

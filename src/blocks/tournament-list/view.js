@@ -22,11 +22,6 @@ function restUrl( route, params = {} ) {
 }
 
 const { actions } = store( 'doroto/list', {
-	state: {
-		get isClosed() {
-			return getContext().item.state === 'closed';
-		},
-	},
 	actions: {
 		*load( offset = 0 ) {
 			const ctx = getContext();

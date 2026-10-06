@@ -142,6 +142,36 @@ function doroto_block_theme_colors(): string
 }
 
 /**
+ * Inline style of a block wrapper: highlight colours of the theme, then the colours chosen
+ * in the Styles panel of the block (accentColor, tabsBackground, tabsTextColor, specialColor),
+ * which override them. Text on a chosen accent / bar colour is black or white unless chosen too.
+ * @since 2.0.0
+ */
+function doroto_block_color_style(array $attributes): string
+{
+	$style = doroto_block_theme_colors();
+	$colors = [];
+	foreach (['accentColor', 'tabsBackground', 'tabsTextColor', 'specialColor'] as $attr) {
+		$colors[$attr] = doroto_block_color($attributes[$attr] ?? '');
+	}
+	if ($colors['tabsTextColor'] === '') {
+		$colors['tabsTextColor'] = doroto_block_text_on($colors['tabsBackground']);
+	}
+	foreach ([
+		'--doroto-accent-custom' => $colors['accentColor'],
+		'--doroto-on-accent-custom' => doroto_block_text_on($colors['accentColor']),
+		'--doroto-tabs-bg-custom' => $colors['tabsBackground'],
+		'--doroto-tabs-fg-custom' => $colors['tabsTextColor'],
+		'--doroto-special-custom' => $colors['specialColor'],
+	] as $var => $color) {
+		if ($color !== '') {
+			$style .= $var . ':' . $color . ';';
+		}
+	}
+	return $style;
+}
+
+/**
  * Fields of the settings tab, grouped as in the old settings form (its texts are translated).
  * type: text | number | select | textarea; options: value => label.
  * @since 2.0.0
