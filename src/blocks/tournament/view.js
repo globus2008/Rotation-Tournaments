@@ -149,11 +149,12 @@ let tourFromAddressDone = false;
  */
 function firstVisit() {
 	try {
-		if ( window.localStorage.getItem( 'doroto_tour_seen' ) ) {
+		// The key and value of the 1.x help icon, so a visitor sees one or the other.
+		if ( window.localStorage.getItem( 'tour_seen' ) ) {
 			return false;
 		}
-		window.localStorage.setItem( 'doroto_tour_seen', '1' );
-		return window.localStorage.getItem( 'doroto_tour_seen' ) === '1';
+		window.localStorage.setItem( 'tour_seen', 'true' );
+		return window.localStorage.getItem( 'tour_seen' ) === 'true';
 	} catch {
 		return false;
 	}
