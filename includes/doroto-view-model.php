@@ -219,6 +219,12 @@ function doroto_view_player_statistics(stdClass $tournament, int $player_id): ?a
 				$counts[$other][$label] += intval($row['count']);
 			}
 		}
+		// Singles keep the opponents in playmates_L/P (left/right), doubles add the opponents.
+		$doubles = doroto_check_if_doubles($tournament);
+		foreach ($counts as &$count) {
+			$count['total'] = $count['left'] + $count['right'] + ($doubles ? $count['opponent'] : 0);
+		}
+		unset($count);
 		$rows = array_values($counts);
 		usort($rows, function ($a, $b) {
 			return strcoll($a['name'], $b['name']);

@@ -81,7 +81,7 @@ async function prepare( block, step ) {
 		}
 	}
 	await nextFrame();
-	if ( step.el && /stats-(table|left|right|opponent)/.test( step.el ) ) {
+	if ( step.el && /stats-(table|left|right|opponent|total)/.test( step.el ) ) {
 		// The statistics of the chosen player come from the server.
 		await waitFor( () => {
 			const table = block.querySelector( '[data-help="stats-table"]' );

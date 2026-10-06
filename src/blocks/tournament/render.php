@@ -443,18 +443,26 @@ $doroto_youtube = (string) doroto_read_settings('youtube_link', '');
 				<thead>
 					<tr>
 						<th scope="col"><?php esc_html_e('Player', 'doubles-rotation-tournament'); ?></th>
-						<th scope="col" data-help="stats-left" data-wp-bind--hidden="!context.data.view.doubles"><?php esc_html_e('Teammate left', 'doubles-rotation-tournament'); ?></th>
-						<th scope="col" data-help="stats-right" data-wp-bind--hidden="!context.data.view.doubles"><?php esc_html_e('Teammate right', 'doubles-rotation-tournament'); ?></th>
-						<th scope="col" data-help="stats-opponent"><?php esc_html_e('Opponent', 'doubles-rotation-tournament'); ?></th>
+						<th scope="col" data-help="stats-left">
+							<span data-wp-bind--hidden="!context.data.view.doubles"><?php esc_html_e('Teammate left', 'doubles-rotation-tournament'); ?></span>
+							<span data-wp-bind--hidden="context.data.view.doubles"><?php esc_html_e('Opponent L', 'doubles-rotation-tournament'); ?></span>
+						</th>
+						<th scope="col" data-help="stats-right">
+							<span data-wp-bind--hidden="!context.data.view.doubles"><?php esc_html_e('Teammate right', 'doubles-rotation-tournament'); ?></span>
+							<span data-wp-bind--hidden="context.data.view.doubles"><?php esc_html_e('Opponent R', 'doubles-rotation-tournament'); ?></span>
+						</th>
+						<th scope="col" data-help="stats-opponent" data-wp-bind--hidden="!context.data.view.doubles"><?php esc_html_e('Opponent', 'doubles-rotation-tournament'); ?></th>
+						<th scope="col" data-help="stats-total"><?php esc_html_e('Total', 'doubles-rotation-tournament'); ?></th>
 					</tr>
 				</thead>
 				<tbody>
 					<template data-wp-each--row="context.ui.stats.rows" data-wp-each-key="context.row.id">
 						<tr>
 							<th scope="row" data-wp-text="context.row.name"></th>
-							<td data-wp-bind--hidden="!context.data.view.doubles" data-wp-text="context.row.left"></td>
-							<td data-wp-bind--hidden="!context.data.view.doubles" data-wp-text="context.row.right"></td>
-							<td data-wp-text="context.row.opponent"></td>
+							<td data-wp-text="context.row.left"></td>
+							<td data-wp-text="context.row.right"></td>
+							<td data-wp-bind--hidden="!context.data.view.doubles" data-wp-text="context.row.opponent"></td>
+							<td data-wp-text="context.row.total"></td>
 						</tr>
 					</template>
 				</tbody>
