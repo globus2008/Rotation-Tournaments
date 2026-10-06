@@ -336,6 +336,18 @@ const { state, actions } = store( 'doroto', {
 				if ( data.view ) {
 					applyView( ctx, data.view );
 				}
+				if ( data.success && data.view && ctx.ui.candidates ) {
+					// The "Add a player" box is loaded: players or organizers may
+					// have changed, so refresh it now. It stays open, so its
+					// toggle event would not reload it.
+					const fresh = yield api(
+						'doroto/v1/block-candidates/' + currentId
+					);
+					if ( fresh.ok ) {
+						ctx.ui.candidates = fresh.data.users;
+						ctx.ui.organizers = fresh.data.organizers;
+					}
+				}
 				if ( data.success && ! data.view ) {
 					// The tournament was deleted: show the default one.
 					notify( ctx, data.message || t( 'deleted' ) );
@@ -707,10 +719,10 @@ const { state, actions } = store( 'doroto', {
 			);
 		},
 		*loadCandidates( event ) {
-			const ctx = getContext();
-			if ( ! event.target.open || ctx.ui.candidates ) {
+			if ( ! event.target.open ) {
 				return;
 			}
+			const ctx = getContext();
 			const { ok, data } = yield api(
 				'doroto/v1/block-candidates/' + ctx.data.view.id
 			);
@@ -732,7 +744,6 @@ const { state, actions } = store( 'doroto', {
 				player: ctx.ui.addPlayer,
 			} );
 			if ( ok ) {
-				ctx.ui.candidates = null; // reload on the next opening
 				ctx.ui.addPlayer = 0;
 			}
 		},
@@ -829,13 +840,7 @@ const { state, actions } = store( 'doroto', {
 				player: ctx.ui.addAdmin,
 			} );
 			if ( ok ) {
-				ctx.ui.candidates = null;
 				ctx.ui.addAdmin = 0;
-				const { data } = yield api(
-					'doroto/v1/block-candidates/' + ctx.data.view.id
-				);
-				ctx.ui.candidates = data.users || null;
-				ctx.ui.organizers = data.organizers || [];
 			}
 		},
 		removeAdmin( event ) {
@@ -846,7 +851,6 @@ const { state, actions } = store( 'doroto', {
 				{ player: ctx.user.id },
 				event.target
 			);
-			ctx.ui.candidates = null;
 		},
 		*addTournament() {
 			yield actions.run( 'add_tournament', {
