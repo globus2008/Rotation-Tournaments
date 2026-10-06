@@ -226,6 +226,10 @@ async function createMap( ctx, container ) {
 
 const { state, actions } = store( 'doroto', {
 	state: {
+		get statsHasSpecial() {
+			const rows = getContext().ui.stats?.rows || [];
+			return rows.some( ( row ) => row.special );
+		},
 		get organizerNames() {
 			return ( getContext().data.view.organizers || [] ).join( ', ' );
 		},

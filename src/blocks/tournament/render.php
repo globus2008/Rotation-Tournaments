@@ -360,6 +360,9 @@ foreach ([
 		data-wp-class--is-active="state.isPanelActive">
 		<h3 class="doroto-panel__title"><?php esc_html_e('Players', 'doubles-rotation-tournament'); ?></h3>
 		<p class="doroto-empty" data-wp-bind--hidden="context.data.view.flags.has_players" <?php echo $doroto_flags['has_players'] ? 'hidden' : ''; ?>><?php esc_html_e('No one has registered for the tournament yet.', 'doubles-rotation-tournament'); ?></p>
+		<p class="doroto-help" data-wp-bind--hidden="!context.data.view.flags.has_special" <?php echo $doroto_flags['has_special'] ? '' : 'hidden'; ?>>
+			<?php esc_html_e('Highlighted names:', 'doubles-rotation-tournament'); ?> <span class="doroto-name is-special"><?php esc_html_e('special group', 'doubles-rotation-tournament'); ?></span>
+		</p>
 		<div class="doroto-table-wrap" data-help="standings" data-wp-bind--hidden="!context.data.view.flags.has_players" <?php echo $doroto_flags['has_players'] ? '' : 'hidden'; ?>>
 			<table class="doroto-standings">
 				<thead>
@@ -383,8 +386,7 @@ foreach ([
 						<tr data-wp-class--is-me="context.player.is_me" data-wp-class--is-special="context.player.special" data-wp-class--is-winner="context.player.winner" data-wp-class--is-suspended="!context.player.active">
 							<td data-wp-text="context.player.rank"></td>
 							<th scope="row">
-								<span data-wp-text="context.player.name"></span>
-								<span class="doroto-tag doroto-tag--special" data-wp-bind--hidden="!context.player.special"><?php esc_html_e('special group', 'doubles-rotation-tournament'); ?></span>
+								<span class="doroto-name" data-wp-class--is-special="context.player.special" data-wp-text="context.player.name"></span>
 								<span class="doroto-tag doroto-tag--muted doroto-tag--suspended" data-wp-bind--hidden="context.player.active"><?php esc_html_e('suspended', 'doubles-rotation-tournament'); ?></span>
 								<span class="doroto-tag doroto-tag--winner" data-wp-bind--hidden="!context.player.winner"><?php esc_html_e('winner', 'doubles-rotation-tournament'); ?></span>
 							</th>
@@ -469,6 +471,9 @@ foreach ([
 			</select>
 		</div>
 		<p class="doroto-help"><?php esc_html_e('How many times the player played with each player as the left or right teammate and against them.', 'doubles-rotation-tournament'); ?></p>
+		<p class="doroto-help" data-wp-bind--hidden="!state.statsHasSpecial" hidden>
+			<?php esc_html_e('Highlighted names:', 'doubles-rotation-tournament'); ?> <span class="doroto-name is-special"><?php esc_html_e('special group', 'doubles-rotation-tournament'); ?></span>
+		</p>
 		<div class="doroto-table-wrap" data-help="stats-table" data-wp-bind--hidden="!context.ui.stats" hidden>
 			<table class="doroto-standings">
 				<thead>
@@ -490,8 +495,7 @@ foreach ([
 					<template data-wp-each--row="context.ui.stats.rows" data-wp-each-key="context.row.id">
 						<tr data-wp-class--is-me="context.row.is_me">
 							<th scope="row">
-								<span data-wp-text="context.row.name"></span>
-								<span class="doroto-tag doroto-tag--special" data-wp-bind--hidden="!context.row.special"><?php esc_html_e('special group', 'doubles-rotation-tournament'); ?></span>
+								<span class="doroto-name" data-wp-class--is-me="context.row.is_me" data-wp-class--is-special="context.row.special" data-wp-text="context.row.name"></span>
 							</th>
 							<td data-wp-text="context.row.left"></td>
 							<td data-wp-text="context.row.right"></td>

@@ -458,6 +458,11 @@
 	margin-bottom: var(--doroto-gap);
 }
 
+.doroto-help + .doroto-table-wrap,
+.doroto-help + .doroto-list {
+	margin-top: 0.5em;
+}
+
 .doroto-standings {
 	width: 100%;
 	border-collapse: collapse;

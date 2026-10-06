@@ -405,6 +405,7 @@ function doroto_view_model(int $tournament_id): ?array
 			'no_ongoing' => !$open && !$closed && empty($ongoing),
 			'has_played' => !empty($played),
 			// The results explain the highlighted names only when a special group player played.
+			'has_special' => !empty(array_filter(array_column($standings, 'special'))),
 			'special_in_results' => !empty(array_intersect($special, array_merge(...array_column($played, 'players')))),
 			'has_winners' => !empty($winners),
 			'final' => $final !== null,
