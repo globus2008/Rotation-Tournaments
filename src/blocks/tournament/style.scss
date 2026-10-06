@@ -358,6 +358,21 @@
 	}
 }
 
+// Server of the match (column R1 of the 1.x table).
+.doroto-serve {
+	display: inline-block;
+	margin-inline-start: 0.35em;
+	padding: 0 0.45em;
+	border-radius: 999px;
+	background: var(--doroto-accent);
+	color: var(--doroto-on-accent);
+	font-size: 0.7em;
+	font-weight: 600;
+	line-height: 1.6;
+	vertical-align: 0.15em;
+	white-space: nowrap;
+}
+
 // Final match outside the cards keeps the plain "×".
 .doroto-final .doroto-match__sides {
 	display: block;

@@ -241,14 +241,17 @@ foreach ([
 			</div>
 		<?php endif; ?>
 
+		<p class="doroto-help" data-wp-bind--hidden="!context.data.view.flags.special_ongoing" <?php echo $doroto_flags['special_ongoing'] ? '' : 'hidden'; ?>>
+			<?php esc_html_e('Highlighted names:', 'doubles-rotation-tournament'); ?> <span class="doroto-name is-special"><?php esc_html_e('special group', 'doubles-rotation-tournament'); ?></span>
+		</p>
 		<ul class="doroto-cards">
 			<template data-wp-each--match="context.data.view.ongoing" data-wp-each-key="context.match.number">
 				<li class="doroto-card doroto-match" data-help="match">
 					<p class="doroto-match__number"><?php esc_html_e('Match no.', 'doubles-rotation-tournament'); ?> <span data-wp-text="context.match.number"></span></p>
 					<div class="doroto-match__sides">
-						<span class="doroto-match__side" data-wp-text="context.match.sides.0"></span>
+						<span class="doroto-match__side"><span class="doroto-name" data-wp-class--is-me="context.match.teams.0.0.me" data-wp-class--is-special="context.match.teams.0.0.special" data-wp-text="context.match.teams.0.0.name"></span><span class="doroto-serve" data-wp-bind--hidden="!context.match.teams.0.0.serve" title="<?php esc_attr_e('Starts the game by serving', 'doubles-rotation-tournament'); ?>"><?php esc_html_e('serves', 'doubles-rotation-tournament'); ?></span><span data-wp-bind--hidden="!context.data.view.doubles"> &amp; <span class="doroto-name" data-wp-class--is-me="context.match.teams.0.1.me" data-wp-class--is-special="context.match.teams.0.1.special" data-wp-text="context.match.teams.0.1.name"></span><span class="doroto-serve" data-wp-bind--hidden="!context.match.teams.0.1.serve" title="<?php esc_attr_e('Starts the game by serving', 'doubles-rotation-tournament'); ?>"><?php esc_html_e('serves', 'doubles-rotation-tournament'); ?></span></span></span>
 						<span class="doroto-match__vs" aria-hidden="true">&times;</span>
-						<span class="doroto-match__side" data-wp-text="context.match.sides.1"></span>
+						<span class="doroto-match__side"><span class="doroto-name" data-wp-class--is-me="context.match.teams.1.0.me" data-wp-class--is-special="context.match.teams.1.0.special" data-wp-text="context.match.teams.1.0.name"></span><span class="doroto-serve" data-wp-bind--hidden="!context.match.teams.1.0.serve" title="<?php esc_attr_e('Starts the game by serving', 'doubles-rotation-tournament'); ?>"><?php esc_html_e('serves', 'doubles-rotation-tournament'); ?></span><span data-wp-bind--hidden="!context.data.view.doubles"> &amp; <span class="doroto-name" data-wp-class--is-me="context.match.teams.1.1.me" data-wp-class--is-special="context.match.teams.1.1.special" data-wp-text="context.match.teams.1.1.name"></span><span class="doroto-serve" data-wp-bind--hidden="!context.match.teams.1.1.serve" title="<?php esc_attr_e('Starts the game by serving', 'doubles-rotation-tournament'); ?>"><?php esc_html_e('serves', 'doubles-rotation-tournament'); ?></span></span></span>
 					</div>
 					<div class="doroto-score" data-wp-bind--hidden="!context.match.can_enter">
 						<label class="screen-reader-text" data-wp-bind--for="state.scoreId1"><?php esc_html_e('Score of the first team', 'doubles-rotation-tournament'); ?></label>

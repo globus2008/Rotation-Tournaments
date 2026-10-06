@@ -26,14 +26,18 @@ function doroto_view_match_teams(array $match, bool $doubles, int $whole_names, 
 	$ids = $doubles
 		? [[$match['player_1'], $match['player_2']], [$match['player_3'], $match['player_4']]]
 		: [[$match['player_1']], [$match['player_2']]];
-	return array_map(function ($team) use ($whole_names, $special, $user_id) {
-		return array_map(function ($id) use ($whole_names, $special, $user_id) {
+	// The server is player_2 of the match (column R1 of the 1.x table): the right player
+	// of team 1 in doubles, the second player in singles.
+	$server = intval($match['player_2'] ?? 0);
+	return array_map(function ($team) use ($whole_names, $special, $user_id, $server) {
+		return array_map(function ($id) use ($whole_names, $special, $user_id, $server) {
 			$id = intval($id);
 			return [
 				'id' => $id,
 				'name' => doroto_find_player_name($id, $whole_names),
 				'me' => $user_id > 0 && $id === $user_id,
 				'special' => in_array($id, $special, true),
+				'serve' => $id > 0 && $id === $server,
 			];
 		}, $team);
 	}, $ids);
@@ -404,8 +408,11 @@ function doroto_view_model(int $tournament_id): ?array
 			'has_ongoing' => !empty($ongoing),
 			'no_ongoing' => !$open && !$closed && empty($ongoing),
 			'has_played' => !empty($played),
-			// The results explain the highlighted names only when a special group player played.
 			'has_special' => !empty(array_filter(array_column($standings, 'special'))),
+			// Matches and results explain the highlighted names only when a special group player is there.
+			'special_ongoing' => !empty(array_filter($ongoing, function ($row) {
+				return !empty(array_filter(array_column(array_merge(...$row['teams']), 'special')));
+			})),
 			'special_in_results' => !empty(array_intersect($special, array_merge(...array_column($played, 'players')))),
 			'has_winners' => !empty($winners),
 			'final' => $final !== null,

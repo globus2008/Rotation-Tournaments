@@ -69,6 +69,8 @@
   points per hour 1-1000, max players 0-99, minimum matches 1-10). `doroto_service_settings_fields()` clamps them
   (no new error codes for old apps): a larger value made the app's dropdowns throw. `announce_round_end` 3/4
   (1.x state) is shown as 1/2.
+- Server of a match = `player_2` (column R1* of the 1.x table: right player of team 1 in doubles, the second
+  player in singles). The view model marks it `serve`; the match card shows a "serves" pill.
 - Colours of the tournament block always start from the theme: `doroto_block_theme_colors()` reads the theme's
   button colours (accent + its text) and a second palette colour (`secondary`/`accent-2`/...) for the special
   group, as `var(--wp--preset--color--*)` (owner 2026-10-06). The Styles panel of the block can override accent,
