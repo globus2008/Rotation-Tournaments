@@ -1,0 +1,1289 @@
+# Translation of Plugins - Rotation Tournaments - Development Readme (trunk) in Japanese
+# This file is distributed under the same license as the Plugins - Rotation Tournaments - Development Readme (trunk) package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Plugins - Rotation Tournaments - Development Readme (trunk)\n"
+"PO-Revision-Date: 2026-10-07 16:52:10+0000\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: GlotPress/4.1.0\n"
+
+#. Short description.
+#, gp-priority: high
+msgid "Do you play Singles or Doubles Tournaments? This plugin manages Rotation Tournaments where players have a different partner in each game."
+msgstr "シングルスやダブルスの大会を開催していますか? このプラグインは、選手が毎試合新しいパートナーと組むローテーション大会を管理します。"
+
+#. Plugin name.
+#, gp-priority: high
+msgid "Rotation Tournaments"
+msgstr "ローテーション大会"
+
+#. Found in installation paragraph.
+msgid "After installation, go to the app's settings and enter the address of your website where this plugin is installed."
+msgstr "インストール後、アプリの設定を開き、このプラグインがインストールされているサイトのアドレスを入力してください。"
+
+#. Found in installation paragraph.
+msgid "Or download it directly from this link: https://play.google.com/store/apps/details?id=cz.doroto.app"
+msgstr "または次のリンクから直接ダウンロードしてください: https://play.google.com/store/apps/details?id=cz.doroto.app"
+
+#. Found in installation paragraph.
+msgid "Search for \"Rotation Tournaments\" on the Google Play Store."
+msgstr "Google Play で「Rotation Tournaments」を検索してください。"
+
+#. Found in description paragraph.
+msgid "To get the full experience of managing tournaments on the go, download our mobile app, now available on Google Play!"
+msgstr "外出先でも大会を十分に管理できるよう、Google Play で公開中のモバイルアプリをダウンロードしてください!"
+
+#. Found in description paragraph.
+msgid "<strong>YouTube quick intro:</strong>"
+msgstr "<strong>YouTube での簡単な紹介:</strong>"
+
+#. Found in description list item.
+msgid "Video for a quick introduction to the Rotation Tournament:"
+msgstr "ローテーション大会の簡単な紹介動画:"
+
+#. Found in faq paragraph.
+msgid "Yes. If you install the Rotation Tournaments plugin, allow player registration, and enable visibility in the website list, your site can appear in the Android app. Initially, someone must manually enter your website address into the app. After that, it becomes visible in the list for all users."
+msgstr "はい。Rotation Tournaments プラグインをインストールし、選手の登録を許可し、サイトリストでの表示を有効にすると、サイトが Android アプリに表示されることがあります。まず誰かがアプリにサイトのアドレスを手動で入力する必要があります。その後、サイトはすべてのユーザーのリストに表示されます。"
+
+#. Found in faq paragraph.
+msgid "Yes. An iOS version of the Rotation Tournaments app is planned and will be released in the near future."
+msgstr "はい。Rotation Tournaments アプリの iOS 版を計画しており、近日公開予定です。"
+
+#. Found in faq header.
+msgid "Will my website be visible in the Rotation Tournaments Android app?"
+msgstr "私のサイトは Android 用 Rotation Tournaments アプリに表示されますか?"
+
+#. Found in faq header.
+msgid "Will there be an iPhone or iPad version of the app?"
+msgstr "iPhone や iPad 用のアプリは出ますか?"
+
+#. Found in installation paragraph.
+msgid "<strong>How to install Wordpress plugin:</strong>"
+msgstr "<strong>WordPress プラグインのインストール方法:</strong>"
+
+#. Found in installation list item.
+msgid "After activating the plugin, 4 pages will be created: one for managing tournaments (main page), one with tournament rules, and additional pages for Privacy Policy and Terms of Service. A sample post announcing a newly created tournament will also be added."
+msgstr "プラグインを有効化すると、大会管理用 (メインページ)、大会ルール用、プライバシーポリシー用、利用規約用の 4 つのページが作成されます。新しい大会を告知するサンプル投稿も追加されます。"
+
+#. Found in installation paragraph.
+msgid "<strong>How to install the Android app:</strong>"
+msgstr "<strong>Android アプリのインストール方法:</strong>"
+
+#. Found in description paragraph.
+msgid "<strong>This plugin is the server-side for the \"Rotation Tournaments\" Android app.</strong>"
+msgstr "<strong>このプラグインは、Android アプリ「Rotation Tournaments」のサーバー側です。</strong>"
+
+#. Screenshot description.
+msgid "Individual tournament participants enter their results into the WordPress server and share the data with each other."
+msgstr "大会の参加者は WordPress サーバーに結果を入力し、データを互いに共有します。"
+
+#. Screenshot description.
+msgid "Matches played. (Android app)"
+msgstr "終了した試合。(Android アプリ)"
+
+#. Screenshot description.
+msgid "Tournament table. (Wordpress)"
+msgstr "大会の表。(WordPress)"
+
+#. Screenshot description.
+msgid "Matches drawn. (Android app)"
+msgstr "抽選された試合。(Android アプリ)"
+
+#. Screenshot description.
+msgid "Editing tournament parameters. (Wordpress)"
+msgstr "大会パラメーターの編集。(WordPress)"
+
+#. Screenshot description.
+msgid "Table of players with rankings. (Android app)"
+msgstr "順位付きの選手表。(Android アプリ)"
+
+#. Screenshot description.
+msgid "Matches played. (Wordpress)"
+msgstr "終了した試合。(WordPress)"
+
+#. Screenshot description.
+msgid "Basic overview of the tournament. (Android app)"
+msgstr "大会の概要。(Android アプリ)"
+
+#. Screenshot description.
+msgid "Matches drawn. (Wordpress)"
+msgstr "抽選された試合。(WordPress)"
+
+#. Found in description paragraph.
+msgid "<strong>Rotation Tournaments</strong> provides a platform for organizing all kinds of sports Singles and Doubles Tournaments, e.g."
+msgstr "<strong>ローテーション大会</strong>は、あらゆるシングルス・ダブルスのスポーツ大会を開催するためのプラットフォームです。例:"
+
+#. Found in description list item.
+msgid "Squash"
+msgstr "スカッシュ"
+
+#. Found in description list item.
+msgid "Beach Volleyball"
+msgstr "ビーチバレー"
+
+#. Found in description list item.
+msgid "Badminton"
+msgstr "バドミントン"
+
+#. Found in description list item.
+msgid "Padel"
+msgstr "パデル"
+
+#. Found in description list item.
+msgid "Table Tennis"
+msgstr "卓球"
+
+#. Found in description list item.
+msgid "Tennis"
+msgstr "テニス"
+
+#. Found in faq paragraph.
+msgid ""
+"This plugin can be used for all types of sports where 2 or 4 players compete in singles or doubles.\n"
+"You can use this plugin for tennis, table tennis, squash, padel, badminton, beach volleyball and probably for more."
+msgstr ""
+"このプラグインは、2 人または 4 人がシングルスまたはダブルスで競うすべてのスポーツに適しています。\n"
+"テニス、卓球、スカッシュ、パデル、バドミントン、ビーチバレー、そしておそらく他のスポーツにも使えます。"
+
+#. Found in faq paragraph.
+msgid "Yes. When creating a tournament, you can choose whether to create a singles or a doubles tournament."
+msgstr "はい。大会の作成時にシングルスまたはダブルスの大会を選べます。"
+
+#. Found in faq header.
+msgid "What sports tournaments is this plugin for?"
+msgstr "このプラグインはどのようなスポーツ大会向けですか?"
+
+#. Found in description paragraph.
+msgid "<strong>General Features:</strong>"
+msgstr "<strong>一般的な機能:</strong>"
+
+#. Found in description paragraph.
+msgid "<strong>Doubles Rotation Tournament:</strong>"
+msgstr "<strong>ダブルスローテーション大会:</strong>"
+
+#. Found in description paragraph.
+msgid "<strong>Singles Rotation Tournament:</strong>"
+msgstr "<strong>シングルスローテーション大会:</strong>"
+
+#. Found in description paragraph.
+msgid "The participants of a tournament change partners several times during the tournament by a random selection and play against different players. The ratio of games won to games lost is calculated for each participant. The winner of the tournament is the player with this highest ratio. While a Singles Rotation Tournament can be organized without the aid of technology, in the case of a Doubles Rotation Tournament, this is not possible."
+msgstr "大会の参加者は大会中に何度かランダムにパートナーを替え、異なる選手と対戦します。各参加者について、獲得ゲームと失ったゲームの比率が計算されます。最も比率の良い選手が優勝者です。シングルスのローテーション大会は技術の助けなしでも開催できますが、ダブルスはできません。"
+
+#. Found in description paragraph.
+msgid "The <strong>Rotation Tournaments</strong> have a strong social aspect because its goal is to keep players in the tournament until the very end. The situation where weaker players would leave the tournament due to elimination rounds is eliminated. It allows grouping players into a special category with special conditions. This special setting can be utilized, for example, in mixed tournaments."
+msgstr "<strong>ローテーション大会</strong>は、選手を最後まで大会に残すことを目的としているため、交流の要素が強い大会です。弱い選手が敗退によって大会を去ることはありません。選手を特別な条件付きの特別カテゴリーにまとめることもできます。この特別設定は、たとえばミックス大会で使えます。"
+
+#. Found in description paragraph.
+msgid "In <strong>Rotation Tournaments</strong>, each participant plays against every other participant and there are no eliminations in individual rounds. To maximize the variety of match combinations, the matches are typically played in a single set."
+msgstr "<strong>ローテーション大会</strong>では、各参加者が全員と対戦し、各ラウンドで脱落する人はいません。できるだけ多くの組み合わせを作るため、通常は 1 セットマッチで行います。"
+
+#. Found in description list item.
+msgid "Suitable for various sports: tennis, table tennis, squash, padel, badminton, beach volleyball, and more."
+msgstr "さまざまなスポーツに対応: テニス、卓球、スカッシュ、パデル、バドミントン、ビーチバレーなど。"
+
+#. Found in description list item.
+msgid "Integration with website user accounts."
+msgstr "サイトのユーザーアカウントとの連携。"
+
+#. Found in description list item.
+msgid "No downtime during the tournament."
+msgstr "大会中の待ち時間なし。"
+
+#. Found in description list item.
+msgid "Comprehensive overview of player quality."
+msgstr "選手の実力を完全に把握。"
+
+#. Found in description list item.
+msgid "User-friendly interface for administrators and participants."
+msgstr "管理者と参加者に使いやすい画面。"
+
+#. Found in description list item.
+msgid "Customizable settings for each tournament."
+msgstr "大会ごとの柔軟な設定。"
+
+#. Found in description list item.
+msgid "Real-time score tracking."
+msgstr "リアルタイムのスコア管理。"
+
+#. Found in description list item.
+msgid "Seamless scheduling of matches."
+msgstr "便利な試合スケジュール作成。"
+
+#. Found in description list item.
+msgid "Announcement of the Best Player and Most Ideal Pair at the end of the tournament."
+msgstr "大会の最後に最優秀選手と理想のペアを発表。"
+
+#. Found in description list item.
+msgid "Ranking based on the ratio of games won to games lost."
+msgstr "順位は獲得ゲームと失ったゲームの比率で決まります。"
+
+#. Found in description list item.
+msgid "Individual players can join or leave the tournament at any time."
+msgstr "選手はいつでも大会に参加・退出できます。"
+
+#. Found in description list item.
+msgid "Tournament can be interrupted or extended without disruption."
+msgstr "進行を乱さずに大会を中断・延長できます。"
+
+#. Found in description list item.
+msgid "Shorter matches for more participation."
+msgstr "短い試合で参加しやすく。"
+
+#. Found in description list item.
+msgid "No eliminations, ensuring all players stay in the game."
+msgstr "脱落なし – 全選手がプレーを続けます。"
+
+#. Found in description list item.
+msgid "Define special groups of players with unique conditions."
+msgstr "特別な条件付きの選手の特別グループを定義。"
+
+#. Found in description list item.
+msgid "Suitable for odd numbers of players and minimum lineups of 4 players."
+msgstr "奇数の選手数や最低 4 人の構成に対応。"
+
+#. Found in description list item.
+msgid "Individuals can enter the tournament without a permanent teammate."
+msgstr "固定パートナーなしで大会に参加可能。"
+
+#. Found in description list item.
+msgid "Rotation of teammates, ensuring variety in partnerships."
+msgstr "パートナーのローテーションで多様なペアを実現。"
+
+#. Found in description list item.
+msgid "Alternative form of a Doubles Tournament where players enter each match with a different partner and in different positions (alternating left and right sides)."
+msgstr "選手が毎試合新しいパートナーと異なるポジション (左右を交互) でプレーするダブルス大会の別形式。"
+
+#. Found in description list item.
+msgid "Depending on the time options, everyone plays against everyone."
+msgstr "時間に応じて全員が全員と対戦。"
+
+#. Found in description list item.
+msgid "Alternative form of a Singles Tournament where players face each other without elimination rounds."
+msgstr "選手が脱落なしで対戦するシングルス大会の別形式。"
+
+#. Found in description header.
+msgid "Features"
+msgstr "機能"
+
+#. Found in faq header.
+msgid "Is this plugin suitable for singles tournaments?"
+msgstr "このプラグインはシングルス大会に使えますか?"
+
+#. Found in faq paragraph.
+msgid "Yes, each tournament participant must have their own account. If a website has disabled user registration, this account must be created by the website administrator."
+msgstr "はい。大会の参加者はそれぞれ自分のユーザーアカウントを持つ必要があります。サイトでユーザー登録が無効の場合は、サイト管理者がアカウントを作成する必要があります。"
+
+#. Found in faq header.
+msgid "Does each player have to have an account created on my website?"
+msgstr "すべての選手が私のサイトのアカウントを持つ必要がありますか?"
+
+#. Found in installation list item.
+msgid "At the end close the tournament and look who was announced as the winner."
+msgstr "最後に大会を終了し、誰が優勝者になったかを確認します。"
+
+#. Found in installation list item.
+msgid "You can change tournament settings on the main page or you can look at 2 new admin pages that are dedicated for overall environmental settings and for description of all possible shortcodes."
+msgstr "大会の設定はメインページで変更できます。また、環境の一般設定と利用可能なすべてのショートコードの説明を扱う 2 つの新しい管理ページもご覧いただけます。"
+
+#. Found in installation list item.
+msgid "If you have a sufficient amount of players then you can close a registration and start playing matches."
+msgstr "十分な選手が集まったら、登録を締め切って試合を始められます。"
+
+#. Found in installation list item.
+msgid "Then you can log in your created tournament and as a tournament´s administrator you can add manually also other players sourced from WP database."
+msgstr "その後、作成した大会に登録し、大会管理者として WordPress データベースから他の選手を手動で追加できます。"
+
+#. Found in installation list item.
+msgid "Start by clicking on \"Create a new tournament\" under \"Tournament Selection …\" on the main page."
+msgstr "メインページの「大会の選択…」セクションで「新しい大会を作成」をクリックして始めます。"
+
+#. Found in installation list item.
+msgid "Install the plugin as usual."
+msgstr "通常どおりプラグインをインストールします。"
+
+#. Found in description paragraph.
+msgid "Visit <a href=\"https://doroto.ltcchrast.cz/\">test page</a> for more information, try to create your own tournament and take a look at <a href=\"https://doroto.ltcchrast.cz/rules-of-the-doubles-rotation-tournament/\">Rules of the Doubles Rotation Tournament</a>."
+msgstr "詳しくは<a href=\"https://doroto.ltcchrast.cz/\">テストページ</a>をご覧ください。自分の大会を作成してみたり、<a href=\"https://doroto.ltcchrast.cz/rules-of-the-doubles-rotation-tournament/\">ダブルスローテーション大会のルール</a>を確認したりできます。"
+
+#. Found in description paragraph.
+msgid "[youtube https://www.youtube.com/watch?v=NoL9aPTv8u8]"
+msgstr "[youtube https://www.youtube.com/watch?v=NoL9aPTv8u8]"
+
+#. Found in description header.
+msgid "More information"
+msgstr "詳細情報"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - the plugin restores read permissions of its files after an FTP upload (the web server answered 403 and the admin page stayed empty); the admin page shows a notice when its script cannot be loaded"
+msgstr "修正 – FTP でアップロードした後、プラグインがファイルの読み取り権限を復元します (Web サーバーが 403 を返し、管理ページが空のままでした)。管理ページはスクリプトを読み込めない場合に通知を表示します"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - tournament settings keep the ranges of 1.x and of the app (a larger value made the app's dropdowns fail)"
+msgstr "修正 – 大会の設定がバージョン 1.x とアプリの範囲内に保たれます (大きすぎる値でアプリのドロップダウンがクラッシュしていました)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - REST requests from the website use the WordPress login (cookie and nonce) when no app token is sent"
+msgstr "改善 – アプリのトークンが送信されない場合、サイトからの REST リクエストは WordPress のログイン (Cookie と nonce) を使用します"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - styles, scripts and no-cache headers are sent only on pages that show the plugin; the unused tipTip library was removed and the admin no longer calls ip-api.com"
+msgstr "改善 – スタイル、スクリプト、no-cache ヘッダーはプラグインが表示されるページでのみ送信されます。未使用の tipTip ライブラリを削除し、管理画面は ip-api.com に接続しなくなりました"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - every change of a tournament (web forms, blocks and the Android app) goes through one shared layer with the same permissions, locking and change detection"
+msgstr "改善 – 大会のすべての変更 (Web フォーム、ブロック、Android アプリ) は、同じ権限・ロック・変更追跡を持つ共通レイヤーを通ります"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - new admin page with Overview, Settings and Help instead of nine settings tabs; every setting is checked on the server and errors are shown next to the field"
+msgstr "改善 – 9 つの設定タブに代わり、概要・設定・ヘルプのセクションを持つ新しい管理ページ。各設定はサーバーで検証され、エラーは項目の横に表示されます"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - the serving player is marked on the match cards; the special group is highlighted in matches, results, players, statistics and winners; the tournament details (invitation text) can be shown at any time"
+msgstr "追加 – サーブする選手が試合カードに表示されます。特別グループは試合、結果、選手、統計、優勝者で強調表示されます。大会の詳細 (招待文) をいつでも表示できます"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - the tournament block takes its colours from the theme (button and palette colours); the block's Styles panel can change the accent, the tab bar and table headers, their text and the colour of the special group"
+msgstr "追加 – 大会ブロックはテーマから色 (ボタンとパレットの色) を取得します。ブロックのスタイルパネルで、アクセント、タブバーと表見出し、その文字、特別グループの色を変更できます"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - the tournament block: Share dialog with a QR code, \"Open in the app\" line, full-screen presentation that rotates the sections, map of the tournament place in the settings, and guided tours of the page and of four example tournaments"
+msgstr "追加 – 大会ブロックに: QR コード付きの共有ダイアログ、「アプリで開く」行、セクションが切り替わる全画面プレゼンテーション、設定内の大会会場の地図、ページと 4 つのサンプル大会のガイドツアー"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - the plugin admin can convert the main page to the blocks with one button; the old content stays in the page revisions. New installs create the main page from the blocks. The shortcodes [doroto_tournament] and [doroto_tournament_list] show the blocks in the classic editor; the 1.x shortcodes keep working"
+msgstr "追加 – プラグイン管理者はボタン 1 つでメインページをブロックに変換できます。古い内容はページのリビジョンに残ります。新規インストールではメインページをブロックで作成します。ショートコード [doroto_tournament] と [doroto_tournament_list] はクラシックエディターでブロックを表示します。バージョン 1.x のショートコードも引き続き動作します"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - blocks for the block editor: \"Rotation tournament\" (matches, results, players, statistics and settings on tabs, updated live without reloading the page), its variations \"Tournament standings\", \"Tournament matches\" and \"Tournament presentation\", \"Tournament list\" and \"Tournament invitation\""
+msgstr "追加 – ブロックエディター用のブロック: 「ローテーション大会」(試合、結果、選手、統計、設定をタブで表示し、ページを再読み込みせずにリアルタイム更新)、そのバリエーション「大会の順位」「大会の試合」「大会プレゼンテーション」、さらに「ローテーション大会リスト」と「ローテーション大会への招待」"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "2.0.0 - 2026/10/06"
+msgstr "2.0.0 - 2026/10/06"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Change - the review request is shown only to administrators, 14 days after activation once the site has its own tournament, and comes back 7 days after \"Remind me\" until the plugin is rated"
+msgstr "変更 – 評価のお願いは管理者にのみ、有効化から 14 日後、サイトにすでに独自の大会がある場合に表示され、プラグインが評価されるまで「再通知」の 7 日後に再表示されます"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - the tournament page shows a short link to the Android app (can be turned off in Settings -&gt; Mobile app)"
+msgstr "追加 – 大会ページに Android アプリへの短いリンクを表示します (設定 -&gt; モバイルアプリで無効化できます)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - optional mode join/leave for the app join endpoint"
+msgstr "追加 – アプリの参加用エンドポイントに任意の参加/退出モード"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - REST endpoint create-player: the organizer creates a player and adds them to the tournament in one step; the player gets an e-mail to set the password"
+msgstr "追加 – REST エンドポイント create-player: 主催者が 1 ステップで選手を作成して大会に追加します。選手にはパスワード設定用のメールが届きます"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Change - tournament links to the home page (\"?tournament_id=5\") and the old app QR codes (\"/tournament?id=5\") open the tournament page"
+msgstr "変更 – メインページの大会リンク (「?tournament_id=5」) とアプリの古い QR コード (「/tournament?id=5」) で大会ページが開きます"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Change - the default name of a new tournament uses the site time zone, not UTC"
+msgstr "変更 – 新しい大会の既定の名前は UTC ではなくサイトのタイムゾーンを使用します"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Change - the app can be signed in on several devices at once (up to 10 per user)"
+msgstr "変更 – 複数の端末で同時にアプリにログインできます (1 ユーザーあたり最大 10 台)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Change - invitation link only joins the tournament (a second click no longer unregisters the player), redirects to the login page and back, and then to the tournament page"
+msgstr "変更 – 招待リンクは大会への登録のみを行い (2 回目のクリックで登録が取り消されることはなくなりました)、ログインページへ移動して戻り、その後大会ページを開きます"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - REST responses are never served from page caches or CDNs"
+msgstr "修正 – REST の応答がページキャッシュや CDN から返されることはなくなりました"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Authorization header is read also on FPM/CGI hosts"
+msgstr "修正 – FPM/CGI ホスティングでも Authorization ヘッダーを読み取ります"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - database upgrade adds new columns also on already installed sites"
+msgstr "修正 – データベースの更新で、インストール済みのサイトにも新しい列が追加されます"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - several devices signing in or refreshing their session at the same moment no longer sign each other out"
+msgstr "修正 – 複数の端末が同時にログインやセッション更新をしても、互いにログアウトされなくなりました"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - every change of a running tournament (correcting a result, suspending or removing a player, settings, payments, special group, web forms) runs under the tournament lock; correcting a result while another court saved its result could stall the whole tournament"
+msgstr "修正 – 進行中の大会のすべての変更 (結果の修正、選手の一時停止や削除、設定、支払い、特別グループ、Web フォーム) は大会ロックのもとで行われます。別のコートで結果を保存している最中に結果を修正すると、大会全体が止まることがありました"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - tournament lock: results entered at the same time on several courts are no longer lost"
+msgstr "修正 – 大会ロック: 複数のコートで同時に入力された結果が失われなくなりました"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - every write to a tournament updates last_update"
+msgstr "修正 – 大会への書き込みのたびに last_update を更新します"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - results entered on the web no longer store last_update = 0, so the Android app refreshes again"
+msgstr "修正 – サイトで入力した結果が last_update = 0 を保存しなくなったため、Android アプリが再び更新されます"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Security - with registration disabled only tournament organizers can create player accounts from the app (before, any signed-in player could)"
+msgstr "セキュリティ – 登録が無効の場合、アプリから選手アカウントを作成できるのは大会主催者のみです (以前はログインしている選手なら誰でも作成できました)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Security - an account created by an organizer no longer returns a login session of the new player to the organizer"
+msgstr "セキュリティ – 主催者が作成したアカウントで、新しい選手のログインセッションが主催者に返されなくなりました"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Security - registration from the app (incl. a new Google account) respects \"Anyone can register\""
+msgstr "セキュリティ – アプリからの登録 (新しい Google アカウントを含む) は「だれでもユーザー登録ができるようにする」設定に従います"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Security - final doubles and registration toggle check tournament admin rights"
+msgstr "セキュリティ – ダブルス決勝戦と登録の切り替えで大会管理者の権限を確認します"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Security - guided tour actions need a nonce; regenerating the example tournaments is throttled"
+msgstr "セキュリティ – ガイドツアーの操作には nonce が必要です。サンプル大会の再作成は制限されます"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Security - admin actions sent as links are protected by a nonce (CSRF)"
+msgstr "セキュリティ – リンクで送信される管理操作は nonce (CSRF) で保護されます"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Security - front-end forms check tournament admin rights, not only the nonce (any logged-in user could change players, payments or delete a tournament)"
+msgstr "セキュリティ – サイトのフォームは nonce だけでなく大会管理者の権限も確認します (以前はログインしているユーザーなら誰でも選手や支払いを変更したり、大会を削除したりできました)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - app tournament links on the central site (?tournament_id=5&amp;doroto_site=) are forwarded to the club's tournament page when the app is not installed (sites from the site directory; other sites get a page with a link)"
+msgstr "追加 – 中央サイトにある大会へのアプリリンク (?tournament_id=5&amp;doroto_site=) は、アプリがインストールされていない場合にクラブの大会ページへ転送します (サイトディレクトリのサイト。その他のサイトにはリンク付きのページを表示します)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - the tournament page has an \"Open in the app\" link: Android opens the tournament in the app, or Google Play when it is missing"
+msgstr "追加 – 大会ページに「アプリで開く」リンクがあります: Android はアプリで大会を開き、アプリがない場合は Google Play を開きます"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - saving the tournament settings rejects an unknown tournament type"
+msgstr "修正 – 大会の設定を保存するとき、不明な大会タイプを拒否します"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - a deleted account leaves its open tournaments: removed when it has not played yet, otherwise suspended; it also leaves the organizers, special group and payments (it was drawn into matches as \"Unknown player\")"
+msgstr "修正 – 削除されたアカウントは開催中の大会から外れます: まだプレーしていなければ削除、そうでなければ一時停止されます。主催者、特別グループ、支払いからも削除されます (以前は「不明な選手」として抽選に入っていました)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - removing a payment no longer turns the payment list into a JSON object (the Android app could crash on the statistics page)"
+msgstr "修正 – 支払いを削除しても支払いリストが JSON オブジェクトにならなくなりました (Android アプリが統計ページでクラッシュすることがありました)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - the change form fits on a phone screen (the result and the button were off screen)"
+msgstr "修正 – 変更フォームがスマートフォンの画面に収まります (結果とボタンが画面外にありました)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - organizers see an \"Edit result\" button next to every played match; it selects the match and its result in the change form (the form above the table was easy to miss)"
+msgstr "追加 – 主催者には、終了した各試合の横に「結果を編集」ボタンが表示されます。変更フォームでその試合と結果を選択します (表の上のフォームは見落としやすいものでした)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - REST route skip-matches: the organizer skips several ongoing matches at once and new matches are drawn from all free players"
+msgstr "追加 – REST ルート skip-matches: 主催者が進行中の複数の試合を一度にスキップし、新しい試合は空いているすべての選手から抽選されます"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - among players with the same number of new teammates left, the one who played fewer games is drawn first; sides (left/right) alternate for both players of a team"
+msgstr "改善 – 残りの新しいパートナー数が同じ選手の中では、試合数の少ない選手が先に抽選されます。左右のサイドはチームの両選手で交互になります"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - the draw chooses the opposing team (and the teammate) by previous meetings too: players meet more different opponents and the same players meet less often (with 14 players on 2 courts, pairs that met 3 or more times dropped from about 5 to 1 per evening)"
+msgstr "改善 – 抽選では過去の対戦を考慮して対戦チーム (とパートナー) を選びます: 選手はより多くの異なる相手と対戦し、同じ選手同士の対戦は少なくなります (2 面で 14 人の場合、3 回以上対戦したペアの数は一晩で約 5 から 1 に減りました)"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.6.0 - 2026/10/02"
+msgstr "1.6.0 - 2026/10/02"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.6.1 - 2026/10/02"
+msgstr "1.6.1 - 2026/10/02"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.6.2 - 2026/10/04"
+msgstr "1.6.2 - 2026/10/04"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - fixed some errors found in Plugin Check"
+msgstr "修正 – Plugin Check で見つかったいくつかのエラーを修正しました"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.5.8 - 2026/06/12"
+msgstr "1.5.8 - 2026/06/12"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - some translations"
+msgstr "修正 – 一部の翻訳"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.5.7 - 2026/06/06"
+msgstr "1.5.7 - 2026/06/06"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - register and sign in for android app"
+msgstr "修正 – Android アプリでの登録とログイン"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.5.6 - 2026/05/13"
+msgstr "1.5.6 - 2026/05/13"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - remove admin for android app"
+msgstr "追加 – Android アプリ向けの管理者の削除"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.5.5 - 2026/05/12"
+msgstr "1.5.5 - 2026/05/12"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - rest value is safe now"
+msgstr "修正 – rest の値が安全になりました"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.0.0 - 2024/01/01"
+msgstr "1.0.0 - 2024/01/01"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.0.1 - 2024/01/03"
+msgstr "1.0.1 - 2024/01/03"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.0.2 - 2024/01/21"
+msgstr "1.0.2 - 2024/01/21"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.0.3 - 2024/01/26"
+msgstr "1.0.3 - 2024/01/26"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.0.4 - 2024/02/02"
+msgstr "1.0.4 - 2024/02/02"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.1.0 - 2024/02/04"
+msgstr "1.1.0 - 2024/02/04"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.1.1 - 2024/02/09"
+msgstr "1.1.1 - 2024/02/09"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.1.2 - 2024/02/13"
+msgstr "1.1.2 - 2024/02/13"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.1.3 - 2024/02/17"
+msgstr "1.1.3 - 2024/02/17"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.1.4 - 2024/02/18"
+msgstr "1.1.4 - 2024/02/18"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.1.5 - 2024/02/20"
+msgstr "1.1.5 - 2024/02/20"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.1.6 - 2024/02/25"
+msgstr "1.1.6 - 2024/02/25"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.1.7 - 2024/03/01"
+msgstr "1.1.7 - 2024/03/01"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.1.8 - 2024/03/07"
+msgstr "1.1.8 - 2024/03/07"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.1.9 - 2024/03/09"
+msgstr "1.1.9 - 2024/03/09"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.2.0 - 2024/03/20"
+msgstr "1.2.0 - 2024/03/20"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.2.1 - 2024/03/21"
+msgstr "1.2.1 - 2024/03/21"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.2.2 - 2024/04/17"
+msgstr "1.2.2 - 2024/04/17"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.2.3 - 2024/04/19"
+msgstr "1.2.3 - 2024/04/19"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.2.4 - 2024/05/08"
+msgstr "1.2.4 - 2024/05/08"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.2.5 - 2024/05/15"
+msgstr "1.2.5 - 2024/05/15"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.2.6 - 2024/05/29"
+msgstr "1.2.6 - 2024/05/29"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.2.7 - 2024/06/07"
+msgstr "1.2.7 - 2024/06/07"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.2.8 - 2024/06/21"
+msgstr "1.2.8 - 2024/06/21"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.2.9 - 2024/06/23"
+msgstr "1.2.9 - 2024/06/23"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.3.0 - 2024/07/06"
+msgstr "1.3.0 - 2024/07/06"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.3.1 - 2024/07/12"
+msgstr "1.3.1 - 2024/07/12"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.3.2 - 2024/07/18"
+msgstr "1.3.2 - 2024/07/18"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.3.3 - 2024/09/13"
+msgstr "1.3.3 - 2024/09/13"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.3.4 - 2024/09/26"
+msgstr "1.3.4 - 2024/09/26"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.3.5 - 2024/09/28"
+msgstr "1.3.5 - 2024/09/28"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.3.6 - 2024/11/02"
+msgstr "1.3.6 - 2024/11/02"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.3.7 - 2024/12/13"
+msgstr "1.3.7 - 2024/12/13"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.3.8 - 2024/12/15"
+msgstr "1.3.8 - 2024/12/15"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.3.9 - 2024/12/21"
+msgstr "1.3.9 - 2024/12/21"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.4.0 - 2024/12/27"
+msgstr "1.4.0 - 2024/12/27"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.4.1 - 2024/12/31"
+msgstr "1.4.1 - 2024/12/31"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.4.2 - 2025/04/16"
+msgstr "1.4.2 - 2025/04/16"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.4.3 - 2025/05/04"
+msgstr "1.4.3 - 2025/05/04"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.4.4 - 2025/05/25"
+msgstr "1.4.4 - 2025/05/25"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.4.5 - 2025/06/09"
+msgstr "1.4.5 - 2025/06/09"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.4.6 - 2025/06/14"
+msgstr "1.4.6 - 2025/06/14"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.4.7 - 2025/07/27"
+msgstr "1.4.7 - 2025/07/27"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.4.8 - 2025/08/07"
+msgstr "1.4.8 - 2025/08/07"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.4.9 - 2025/08/07"
+msgstr "1.4.9 - 2025/08/07"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.5.0 - 2025/08/08"
+msgstr "1.5.0 - 2025/08/08"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.5.1 - 2025/08/17"
+msgstr "1.5.1 - 2025/08/17"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.5.2 - 2025/08/26"
+msgstr "1.5.2 - 2025/08/26"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.5.3 - 2025/12/05"
+msgstr "1.5.3 - 2025/12/05"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.5.4 - 2026/04/22"
+msgstr "1.5.4 - 2026/04/22"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - stable login to android application"
+msgstr "修正 – Android アプリへの安定したログイン"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - existing players are not repeated in the menu Add players"
+msgstr "修正 – 選手追加メニューで既存の選手が重複しなくなりました"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Change - Public release of Android app"
+msgstr "変更 – Android アプリの一般公開"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Add 'last update' to the database also for already installed plugings"
+msgstr "修正 – インストール済みのプラグインにもデータベースへ「last update」を追加"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Uninstall also 2 new pages (privacy policy and terms of service)"
+msgstr "修正 – 2 つの新しいページ (プライバシーポリシーと利用規約) も削除"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Add 'last update' to the database"
+msgstr "修正 – データベースへ「last update」を追加"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Improved some functions for Android app"
+msgstr "修正 – Android アプリ向けにいくつかの機能を改善"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Announcement about the opportunity to become an application tester"
+msgstr "追加 – アプリのテスターになれるお知らせ"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Privacy Policy page"
+msgstr "追加 – プライバシーポリシーのページ"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Terms of Service page"
+msgstr "追加 – 利用規約のページ"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Info about last update speed up loading"
+msgstr "追加 – 最終更新の情報で読み込みを高速化"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Correct an error message Undefined array key player['count']"
+msgstr "修正 – エラーメッセージ Undefined array key player['count'] を修正しました"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Tournaments filtering by distance and visibility"
+msgstr "追加 – 距離と表示設定による大会の絞り込み"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Support for a Android app"
+msgstr "追加 – Android アプリへの対応"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Controls the visibility of the tournament in the public list."
+msgstr "追加 – 公開リストでの大会の表示管理。"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Location of the tournament."
+msgstr "追加 – 大会の場所。"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Log in/out block had a problem"
+msgstr "修正 – 参加登録/退出ブロックに問題がありました"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Parameter When enough players are available had sometimes a wrong value."
+msgstr "修正 – パラメーター「十分な選手がいる場合」の値が誤っていることがありました。"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Match hiding correction"
+msgstr "修正 – 試合の非表示を修正しました"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Register and log in a new user only if anyone can register (system settings)."
+msgstr "修正 – 新規ユーザーの登録とログインは、誰でも登録できる場合 (システム設定) のみ。"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Register and log in a new user."
+msgstr "追加 – 新規ユーザーの登録とログイン。"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Translation loading too early warning."
+msgstr "修正 – 翻訳の読み込みが早すぎることへの警告。"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Dashboard overview widget."
+msgstr "追加 – ダッシュボードの概要ウィジェット。"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Log-link block."
+msgstr "追加 – Log-link ブロック。"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Sometimes tournament_id was unknown."
+msgstr "修正 – tournament_id が不明になることがありました。"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Preserving stored values on the backend."
+msgstr "修正 – 記録した値のサーバーへの保存。"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Guaranteed visibility of the selected tournament in the tournament table."
+msgstr "修正 – 大会の表で選択した大会が必ず表示されるようにしました。"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Error with hide parameter."
+msgstr "修正 – hide パラメーターのエラー。"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Permalink structure also works with the floating help icon."
+msgstr "修正 – パーマリンク構造が浮遊ヘルプアイコンでも動作します。"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Tournament name is not copied from previous one."
+msgstr "修正 – 大会名が前の大会からコピーされなくなりました。"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - More tournament examples for demonstration."
+msgstr "追加 – デモ用のサンプル大会を追加。"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Floating help icon."
+msgstr "追加 – 浮遊ヘルプアイコン。"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Prevent cashing for logged users."
+msgstr "追加 – ログインユーザーのキャッシュを無効化。"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Doubles Badminton table also for co-players"
+msgstr "修正 – バドミントンダブルスの表をパートナーにも対応"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Tournament progress info."
+msgstr "追加 – 大会の進行状況の情報。"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Change game results availability."
+msgstr "修正 – 試合結果の公開範囲の変更。"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Special group count."
+msgstr "追加 – 特別グループのメンバー数。"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Change of information about the end of the tournament round."
+msgstr "大会ラウンド終了の情報を変更。"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Opponent selection."
+msgstr "修正 – 対戦相手の選択。"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Pair selection mechanism explanation on the help page."
+msgstr "追加 – ヘルプページにペア選択の仕組みの説明。"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Pair selection didn´t take into account number of played games in total."
+msgstr "修正 – ペア選択でプレーした試合の合計数が考慮されていませんでした。"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Rights to Suspension and Resumption."
+msgstr "修正 – 一時停止と再開の権限。"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Rights to add a special group."
+msgstr "修正 – 特別グループへの追加の権限。"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Rights to add a tournament admin."
+msgstr "修正 – 大会管理者の追加の権限。"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Rights to add other players into tournaments."
+msgstr "修正 – 他の選手を大会に追加する権限。"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Do not show instructions during the tournament presentation."
+msgstr "修正 – 大会プレゼンテーション中は説明を表示しません。"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Admin can change a default value for minimum number of games played before a player can be declared a winner."
+msgstr "追加 – 管理者は、選手が優勝者になるための最低試合数の既定値を変更できます。"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - The ability to specify a minimum number of games played before a player can be declared a winner."
+msgstr "追加 – 選手が優勝者になるための最低試合数を設定できます。"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Removing a player from a tournament."
+msgstr "修正 – 大会からの選手の削除。"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Ready for testing in WP Playground."
+msgstr "修正 – WP Playground でテストできるようになりました。"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Solving some database errors with empty values."
+msgstr "修正 – 空の値に関する一部のデータベースエラーを解消。"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Update for WP Playground."
+msgstr "修正 – WP Playground 向けの更新。"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Improved playmate choose."
+msgstr "修正 – パートナー選択を改善。"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Problems with removing players during a game."
+msgstr "修正 – 試合中の選手の削除に関する問題。"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - A currently playing player can´t be removed."
+msgstr "修正 – 現在プレー中の選手は削除できません。"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Fix real count of players after their removing."
+msgstr "修正 – 選手削除後の正しい選手数。"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Fix an error during removing a player from the tournament."
+msgstr "修正 – 大会から選手を削除する際のエラー。"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Redirection to a tournament in case of a user entry."
+msgstr "修正 – ユーザーがデータを入力したときの大会へのリダイレクト。"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - icon format."
+msgstr "修正 – アイコンの形式。"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Modification for WP Playground."
+msgstr "WP Playground 向けの仕上げ。"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Fixed a bug in the database that prevented a tournament record from being created on some servers."
+msgstr "修正 – 一部のサーバーで大会の記録が作成されなかったデータベースエラーを修正しました。"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Unregistered users can no longer enter results in the singles tournament."
+msgstr "修正 – 未登録のユーザーはシングルス大会で結果を入力できなくなりました。"
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid "Possibility to remove players from an already ongoing tournament."
+msgstr "進行中の大会から選手を削除できるようになりました。"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "New - Expanded the ability for tournament administrators to browse through players they have already met at the tournament."
+msgstr "新機能 – 大会管理者は、大会で会ったことのある選手をより多く表示できます。"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "New - If the player has not yet registered for any tournament, it is possible to choose whether to show him a quick help."
+msgstr "新機能 – まだどの大会にも登録していない選手に、短いヘルプを表示するかどうかを選べます。"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "New - Optional login prompt."
+msgstr "新機能 – 任意のログイン案内。"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - If all tournaments were deleted, a new tournament could not be created."
+msgstr "修正 – すべての大会を削除すると、新しい大会を作成できませんでした。"
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid ""
+"Trial tournament improvements.\n"
+"Added the option to announce the end of the tournament round."
+msgstr ""
+"練習大会を改善。\n"
+"大会ラウンドの終了を通知する機能を追加。"
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid ""
+"Improved the visual appearance of the main page.\n"
+"Badminton added to the list of available tournaments."
+msgstr ""
+"メインページの外観を改善。\n"
+"利用可能な大会のリストにバドミントンを追加。"
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid "Option to announce separate winners from the special group and outside the special group."
+msgstr "特別グループとグループ外で別々の優勝者を発表できるようにしました。"
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid ""
+"Notices after a plugin activation.\n"
+"Added player trend."
+msgstr ""
+"プラグイン有効化後の通知。\n"
+"選手のトレンドを追加。"
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid ""
+"Modified tournament editing tab.\n"
+"Added option to change tournament type."
+msgstr ""
+"大会の編集タブを変更。\n"
+"大会タイプを変更する機能を追加。"
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid ""
+"Reactivating the plugin doesn´t affect the already deleted tournament example. \n"
+"Unblock offering maximum games count.\n"
+"Fix tournament change when entering results.\n"
+"Added quick help for newcomers.\n"
+"Allow the final match also for singles."
+msgstr ""
+"プラグインを再有効化しても、削除済みのサンプル大会には影響しません。\n"
+"最大ゲーム数を選べるようにしました。\n"
+"結果入力中の大会の変更を修正。\n"
+"初心者向けの短いヘルプを追加。\n"
+"シングルスでも決勝戦を可能にしました。"
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid ""
+"Added the option for single tournaments. \n"
+"Created an environment for additional sports."
+msgstr ""
+"シングルス大会に対応。\n"
+"他のスポーツ向けの環境を作成。"
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid ""
+"The administrator can now use 'hide' option when editing the match result.\n"
+"Free score input is allowed. This opens using not only for tennis but for example for table tennis or beach volleyball."
+msgstr ""
+"管理者は試合結果を変更するときに「非表示」オプションを使えるようになりました。\n"
+"スコアを自由に入力できるようにしました。これにより、テニスだけでなく卓球やビーチバレーなどにもプラグインを使えます。"
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid ""
+"Minor changes in code:\n"
+"* Allow to transfer organizer rights to a non-playing user.\n"
+"* Ensuring an even rotation of serves at the start of the tournament."
+msgstr ""
+"コードの小さな変更:\n"
+"* プレーしないユーザーへの主催者権限の譲渡を許可。\n"
+"* 大会の初めにサーブが均等に交代するようにしました。"
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid "Fixed choosing between left and right side in first matches."
+msgstr "最初の試合での左右の選択を修正しました。"
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid "A small modification of admin screen."
+msgstr "管理画面の小さな変更。"
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid "First release to public."
+msgstr "最初の一般公開版。"
+

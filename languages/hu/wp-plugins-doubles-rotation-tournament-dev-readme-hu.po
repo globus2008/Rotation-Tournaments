@@ -1,0 +1,1289 @@
+# Translation of Plugins - Rotation Tournaments - Development Readme (trunk) in Hungarian
+# This file is distributed under the same license as the Plugins - Rotation Tournaments - Development Readme (trunk) package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Plugins - Rotation Tournaments - Development Readme (trunk)\n"
+"PO-Revision-Date: 2026-10-07 16:12:23+0000\n"
+"Language: hu_HU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/4.1.0\n"
+
+#. Short description.
+#, gp-priority: high
+msgid "Do you play Singles or Doubles Tournaments? This plugin manages Rotation Tournaments where players have a different partner in each game."
+msgstr "Egyéni vagy páros versenyeket játszik? Ez a bővítmény körversenyeket kezel, amelyekben a játékosoknak minden játékban új partnerük van."
+
+#. Plugin name.
+#, gp-priority: high
+msgid "Rotation Tournaments"
+msgstr "Körversenyek"
+
+#. Found in installation paragraph.
+msgid "After installation, go to the app's settings and enter the address of your website where this plugin is installed."
+msgstr "Telepítés után nyissa meg az alkalmazás beállításait, és adja meg annak a webhelynek a címét, amelyre ez a bővítmény telepítve van."
+
+#. Found in installation paragraph.
+msgid "Or download it directly from this link: https://play.google.com/store/apps/details?id=cz.doroto.app"
+msgstr "Vagy töltse le közvetlenül innen: https://play.google.com/store/apps/details?id=cz.doroto.app"
+
+#. Found in installation paragraph.
+msgid "Search for \"Rotation Tournaments\" on the Google Play Store."
+msgstr "Keressen rá a Google Playen: „Rotation Tournaments”."
+
+#. Found in description paragraph.
+msgid "To get the full experience of managing tournaments on the go, download our mobile app, now available on Google Play!"
+msgstr "A versenyek útközbeni teljes körű kezeléséhez töltse le mobilalkalmazásunkat, amely már elérhető a Google Playen!"
+
+#. Found in description paragraph.
+msgid "<strong>YouTube quick intro:</strong>"
+msgstr "<strong>Rövid bemutató a YouTube-on:</strong>"
+
+#. Found in description list item.
+msgid "Video for a quick introduction to the Rotation Tournament:"
+msgstr "Videó a körverseny rövid bemutatójával:"
+
+#. Found in faq paragraph.
+msgid "Yes. If you install the Rotation Tournaments plugin, allow player registration, and enable visibility in the website list, your site can appear in the Android app. Initially, someone must manually enter your website address into the app. After that, it becomes visible in the list for all users."
+msgstr "Igen. Ha telepíti a Rotation Tournaments bővítményt, engedélyezi a játékosok regisztrációját, és bekapcsolja a webhelylistában való láthatóságot, webhelye megjelenhet az Android-alkalmazásban. Először valakinek kézzel kell megadnia webhelye címét az alkalmazásban. Ezután a webhely minden felhasználó számára látható lesz a listában."
+
+#. Found in faq paragraph.
+msgid "Yes. An iOS version of the Rotation Tournaments app is planned and will be released in the near future."
+msgstr "Igen. A Rotation Tournaments alkalmazás iOS-változata tervben van, és hamarosan megjelenik."
+
+#. Found in faq header.
+msgid "Will my website be visible in the Rotation Tournaments Android app?"
+msgstr "Látható lesz a webhelyem a Rotation Tournaments Android-alkalmazásban?"
+
+#. Found in faq header.
+msgid "Will there be an iPhone or iPad version of the app?"
+msgstr "Lesz az alkalmazásnak iPhone- vagy iPad-változata?"
+
+#. Found in installation paragraph.
+msgid "<strong>How to install Wordpress plugin:</strong>"
+msgstr "<strong>A WordPress-bővítmény telepítése:</strong>"
+
+#. Found in installation list item.
+msgid "After activating the plugin, 4 pages will be created: one for managing tournaments (main page), one with tournament rules, and additional pages for Privacy Policy and Terms of Service. A sample post announcing a newly created tournament will also be added."
+msgstr "A bővítmény aktiválása után 4 oldal jön létre: egy a versenyek kezelésére (főoldal), egy a versenyszabályoknak, valamint az adatvédelmi irányelvek és a felhasználási feltételek oldala. Egy új versenyt kihirdető mintabejegyzés is létrejön."
+
+#. Found in installation paragraph.
+msgid "<strong>How to install the Android app:</strong>"
+msgstr "<strong>Az Android-alkalmazás telepítése:</strong>"
+
+#. Found in description paragraph.
+msgid "<strong>This plugin is the server-side for the \"Rotation Tournaments\" Android app.</strong>"
+msgstr "<strong>Ez a bővítmény a „Rotation Tournaments” Android-alkalmazás szerveroldala.</strong>"
+
+#. Screenshot description.
+msgid "Individual tournament participants enter their results into the WordPress server and share the data with each other."
+msgstr "A verseny résztvevői a WordPress-szerverre viszik fel eredményeiket, és megosztják egymással az adatokat."
+
+#. Screenshot description.
+msgid "Matches played. (Android app)"
+msgstr "Lejátszott mérkőzések. (Android-alkalmazás)"
+
+#. Screenshot description.
+msgid "Tournament table. (Wordpress)"
+msgstr "Versenytáblázat. (WordPress)"
+
+#. Screenshot description.
+msgid "Matches drawn. (Android app)"
+msgstr "Kisorsolt mérkőzések. (Android-alkalmazás)"
+
+#. Screenshot description.
+msgid "Editing tournament parameters. (Wordpress)"
+msgstr "A verseny paramétereinek szerkesztése. (WordPress)"
+
+#. Screenshot description.
+msgid "Table of players with rankings. (Android app)"
+msgstr "Játékostáblázat helyezésekkel. (Android-alkalmazás)"
+
+#. Screenshot description.
+msgid "Matches played. (Wordpress)"
+msgstr "Lejátszott mérkőzések. (WordPress)"
+
+#. Screenshot description.
+msgid "Basic overview of the tournament. (Android app)"
+msgstr "A verseny fő áttekintése. (Android-alkalmazás)"
+
+#. Screenshot description.
+msgid "Matches drawn. (Wordpress)"
+msgstr "Kisorsolt mérkőzések. (WordPress)"
+
+#. Found in description paragraph.
+msgid "<strong>Rotation Tournaments</strong> provides a platform for organizing all kinds of sports Singles and Doubles Tournaments, e.g."
+msgstr "A <strong>Körversenyek</strong> platform bármilyen egyéni és páros sportverseny szervezéséhez, például:"
+
+#. Found in description list item.
+msgid "Squash"
+msgstr "Fallabda"
+
+#. Found in description list item.
+msgid "Beach Volleyball"
+msgstr "Strandröplabda"
+
+#. Found in description list item.
+msgid "Badminton"
+msgstr "Tollaslabda"
+
+#. Found in description list item.
+msgid "Padel"
+msgstr "Padel"
+
+#. Found in description list item.
+msgid "Table Tennis"
+msgstr "Asztalitenisz"
+
+#. Found in description list item.
+msgid "Tennis"
+msgstr "Tenisz"
+
+#. Found in faq paragraph.
+msgid ""
+"This plugin can be used for all types of sports where 2 or 4 players compete in singles or doubles.\n"
+"You can use this plugin for tennis, table tennis, squash, padel, badminton, beach volleyball and probably for more."
+msgstr ""
+"Ez a bővítmény minden olyan sportághoz alkalmas, amelyben 2 vagy 4 játékos versenyez egyéniben vagy párosban.\n"
+"Használható teniszhez, asztaliteniszhez, fallabdához, padelhez, tollaslabdához, strandröplabdához és valószínűleg más sportágakhoz is."
+
+#. Found in faq paragraph.
+msgid "Yes. When creating a tournament, you can choose whether to create a singles or a doubles tournament."
+msgstr "Igen. Verseny létrehozásakor egyéni vagy páros versenyt választhat."
+
+#. Found in faq header.
+msgid "What sports tournaments is this plugin for?"
+msgstr "Milyen sportversenyekhez készült ez a bővítmény?"
+
+#. Found in description paragraph.
+msgid "<strong>General Features:</strong>"
+msgstr "<strong>Általános funkciók:</strong>"
+
+#. Found in description paragraph.
+msgid "<strong>Doubles Rotation Tournament:</strong>"
+msgstr "<strong>Páros körverseny:</strong>"
+
+#. Found in description paragraph.
+msgid "<strong>Singles Rotation Tournament:</strong>"
+msgstr "<strong>Egyéni körverseny:</strong>"
+
+#. Found in description paragraph.
+msgid "The participants of a tournament change partners several times during the tournament by a random selection and play against different players. The ratio of games won to games lost is calculated for each participant. The winner of the tournament is the player with this highest ratio. While a Singles Rotation Tournament can be organized without the aid of technology, in the case of a Doubles Rotation Tournament, this is not possible."
+msgstr "A verseny résztvevői a verseny során többször véletlenszerűen partnert cserélnek, és különböző játékosok ellen játszanak. Minden résztvevőnél kiszámítják a nyert és elvesztett játékok arányát. A győztes a legjobb arányú játékos. Egyéni körverseny technika nélkül is lebonyolítható, páros nem."
+
+#. Found in description paragraph.
+msgid "The <strong>Rotation Tournaments</strong> have a strong social aspect because its goal is to keep players in the tournament until the very end. The situation where weaker players would leave the tournament due to elimination rounds is eliminated. It allows grouping players into a special category with special conditions. This special setting can be utilized, for example, in mixed tournaments."
+msgstr "A <strong>körversenyeknek</strong> erős társasági jellegük van, mert céljuk, hogy a játékosokat a végéig a versenyben tartsák. Kizárt, hogy a gyengébb játékosok kiesés miatt elhagyják a versenyt. A játékosok különleges feltételekkel különleges kategóriába sorolhatók. Ez a különleges beállítás használható például vegyes versenyeken."
+
+#. Found in description paragraph.
+msgid "In <strong>Rotation Tournaments</strong>, each participant plays against every other participant and there are no eliminations in individual rounds. To maximize the variety of match combinations, the matches are typically played in a single set."
+msgstr "A <strong>körversenyeken</strong> minden résztvevő mindenki ellen játszik, és az egyes körökben senki sem esik ki. A minél több kombináció érdekében a mérkőzéseket általában egy szettben játsszák."
+
+#. Found in description list item.
+msgid "Suitable for various sports: tennis, table tennis, squash, padel, badminton, beach volleyball, and more."
+msgstr "Alkalmas különböző sportágakhoz: tenisz, asztalitenisz, fallabda, padel, tollaslabda, strandröplabda és mások."
+
+#. Found in description list item.
+msgid "Integration with website user accounts."
+msgstr "Integráció a webhely felhasználói fiókjaival."
+
+#. Found in description list item.
+msgid "No downtime during the tournament."
+msgstr "Nincs holtidő a verseny alatt."
+
+#. Found in description list item.
+msgid "Comprehensive overview of player quality."
+msgstr "Teljes áttekintés a játékosok tudásáról."
+
+#. Found in description list item.
+msgid "User-friendly interface for administrators and participants."
+msgstr "Felhasználóbarát felület adminisztrátoroknak és résztvevőknek."
+
+#. Found in description list item.
+msgid "Customizable settings for each tournament."
+msgstr "Rugalmas beállítások minden versenyhez."
+
+#. Found in description list item.
+msgid "Real-time score tracking."
+msgstr "Valós idejű eredménykövetés."
+
+#. Found in description list item.
+msgid "Seamless scheduling of matches."
+msgstr "Kényelmes mérkőzésbeosztás."
+
+#. Found in description list item.
+msgid "Announcement of the Best Player and Most Ideal Pair at the end of the tournament."
+msgstr "A legjobb játékos és az ideális pár kihirdetése a verseny végén."
+
+#. Found in description list item.
+msgid "Ranking based on the ratio of games won to games lost."
+msgstr "A helyezést a nyert és elvesztett játékok aránya határozza meg."
+
+#. Found in description list item.
+msgid "Individual players can join or leave the tournament at any time."
+msgstr "A játékosok bármikor csatlakozhatnak a versenyhez vagy kiléphetnek belőle."
+
+#. Found in description list item.
+msgid "Tournament can be interrupted or extended without disruption."
+msgstr "A verseny megszakítható vagy meghosszabbítható a menet megzavarása nélkül."
+
+#. Found in description list item.
+msgid "Shorter matches for more participation."
+msgstr "Rövidebb mérkőzések a nagyobb részvételért."
+
+#. Found in description list item.
+msgid "No eliminations, ensuring all players stay in the game."
+msgstr "Nincs kiesés – minden játékos játékban marad."
+
+#. Found in description list item.
+msgid "Define special groups of players with unique conditions."
+msgstr "Különleges feltételekkel rendelkező játékoscsoportok meghatározása."
+
+#. Found in description list item.
+msgid "Suitable for odd numbers of players and minimum lineups of 4 players."
+msgstr "Páratlan játékosszámhoz és minimum 4 fős létszámhoz is alkalmas."
+
+#. Found in description list item.
+msgid "Individuals can enter the tournament without a permanent teammate."
+msgstr "Állandó partner nélkül is részt lehet venni a versenyen."
+
+#. Found in description list item.
+msgid "Rotation of teammates, ensuring variety in partnerships."
+msgstr "A partnerrotáció változatos párokat biztosít."
+
+#. Found in description list item.
+msgid "Alternative form of a Doubles Tournament where players enter each match with a different partner and in different positions (alternating left and right sides)."
+msgstr "A páros verseny alternatív formája, amelyben a játékosok minden mérkőzést új partnerrel és más pozícióban játszanak (váltakozva a bal és jobb oldalon)."
+
+#. Found in description list item.
+msgid "Depending on the time options, everyone plays against everyone."
+msgstr "Az időtől függően mindenki mindenki ellen játszik."
+
+#. Found in description list item.
+msgid "Alternative form of a Singles Tournament where players face each other without elimination rounds."
+msgstr "Az egyéni verseny alternatív formája, amelyben a játékosok kiesés nélkül mérkőznek egymással."
+
+#. Found in description header.
+msgid "Features"
+msgstr "Funkciók"
+
+#. Found in faq header.
+msgid "Is this plugin suitable for singles tournaments?"
+msgstr "Alkalmas ez a bővítmény egyéni versenyekhez?"
+
+#. Found in faq paragraph.
+msgid "Yes, each tournament participant must have their own account. If a website has disabled user registration, this account must be created by the website administrator."
+msgstr "Igen, a verseny minden résztvevőjének saját felhasználói fiókkal kell rendelkeznie. Ha a webhelyen ki van kapcsolva a felhasználói regisztráció, ezt a fiókot a webhely adminisztrátorának kell létrehoznia."
+
+#. Found in faq header.
+msgid "Does each player have to have an account created on my website?"
+msgstr "Minden játékosnak fiókkal kell rendelkeznie a webhelyemen?"
+
+#. Found in installation list item.
+msgid "At the end close the tournament and look who was announced as the winner."
+msgstr "A végén zárja le a versenyt, és nézze meg, kit hirdettek ki győztesnek."
+
+#. Found in installation list item.
+msgid "You can change tournament settings on the main page or you can look at 2 new admin pages that are dedicated for overall environmental settings and for description of all possible shortcodes."
+msgstr "A verseny beállításait a főoldalon módosíthatja, vagy megtekintheti a 2 új adminisztrációs oldalt, amelyek a környezet általános beállításaival és az összes elérhető rövidkód leírásával foglalkoznak."
+
+#. Found in installation list item.
+msgid "If you have a sufficient amount of players then you can close a registration and start playing matches."
+msgstr "Ha elég játékos van, lezárhatja a regisztrációt, és megkezdődhetnek a mérkőzések."
+
+#. Found in installation list item.
+msgid "Then you can log in your created tournament and as a tournament´s administrator you can add manually also other players sourced from WP database."
+msgstr "Ezután jelentkezhet a létrehozott versenyre, és a verseny adminisztrátoraként kézzel hozzáadhat más játékosokat a WordPress-adatbázisból."
+
+#. Found in installation list item.
+msgid "Start by clicking on \"Create a new tournament\" under \"Tournament Selection …\" on the main page."
+msgstr "Kezdje a főoldal „Versenyválasztás…” szakaszában az „Új verseny létrehozása” gombra kattintva."
+
+#. Found in installation list item.
+msgid "Install the plugin as usual."
+msgstr "Telepítse a bővítményt a szokásos módon."
+
+#. Found in description paragraph.
+msgid "Visit <a href=\"https://doroto.ltcchrast.cz/\">test page</a> for more information, try to create your own tournament and take a look at <a href=\"https://doroto.ltcchrast.cz/rules-of-the-doubles-rotation-tournament/\">Rules of the Doubles Rotation Tournament</a>."
+msgstr "További információkért látogasson el a <a href=\"https://doroto.ltcchrast.cz/\">tesztoldalra</a>, próbáljon meg saját versenyt létrehozni, és nézze meg a <a href=\"https://doroto.ltcchrast.cz/rules-of-the-doubles-rotation-tournament/\">páros körverseny szabályait</a>."
+
+#. Found in description paragraph.
+msgid "[youtube https://www.youtube.com/watch?v=NoL9aPTv8u8]"
+msgstr "[youtube https://www.youtube.com/watch?v=NoL9aPTv8u8]"
+
+#. Found in description header.
+msgid "More information"
+msgstr "További információ"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - the plugin restores read permissions of its files after an FTP upload (the web server answered 403 and the admin page stayed empty); the admin page shows a notice when its script cannot be loaded"
+msgstr "Javítás – a bővítmény FTP-feltöltés után visszaállítja fájljai olvasási jogát (a webszerver 403-mal válaszolt, és az adminisztrációs oldal üres maradt); az adminisztrációs oldal értesítést jelenít meg, ha a szkriptje nem tölthető be"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - tournament settings keep the ranges of 1.x and of the app (a larger value made the app's dropdowns fail)"
+msgstr "Javítás – a verseny beállításai az 1.x verzió és az alkalmazás tartományán belül maradnak (nagyobb érték összeomlasztotta az alkalmazás legördülő listáit)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - REST requests from the website use the WordPress login (cookie and nonce) when no app token is sent"
+msgstr "Fejlesztés – a webhely REST-kérései a WordPress-bejelentkezést (süti és nonce) használják, ha nem küldenek alkalmazástokent"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - styles, scripts and no-cache headers are sent only on pages that show the plugin; the unused tipTip library was removed and the admin no longer calls ip-api.com"
+msgstr "Fejlesztés – a stílusok, szkriptek és no-cache fejlécek csak azokon az oldalakon kerülnek kiküldésre, ahol a bővítmény megjelenik; a nem használt tipTip könyvtár eltávolítva, és az adminisztráció már nem kapcsolódik az ip-api.com-hoz"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - every change of a tournament (web forms, blocks and the Android app) goes through one shared layer with the same permissions, locking and change detection"
+msgstr "Fejlesztés – a verseny minden módosítása (webes űrlapok, blokkok és Android-alkalmazás) egy közös rétegen halad át azonos jogokkal, zárolással és változáskövetéssel"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - new admin page with Overview, Settings and Help instead of nine settings tabs; every setting is checked on the server and errors are shown next to the field"
+msgstr "Fejlesztés – új adminisztrációs oldal Áttekintés, Beállítások és Súgó szakaszokkal a kilenc beállítási fül helyett; minden beállítást a szerver ellenőriz, a hibák a mező mellett jelennek meg"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - the serving player is marked on the match cards; the special group is highlighted in matches, results, players, statistics and winners; the tournament details (invitation text) can be shown at any time"
+msgstr "Új – az adogató játékos jelölve van a mérkőzéskártyákon; a különleges csoport kiemelve a mérkőzésekben, eredményekben, játékosoknál, statisztikában és győzteseknél; a verseny részletei (meghívó szövege) bármikor megjeleníthetők"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - the tournament block takes its colours from the theme (button and palette colours); the block's Styles panel can change the accent, the tab bar and table headers, their text and the colour of the special group"
+msgstr "Új – a verseny blokk a témából veszi színeit (gomb- és palettaszínek); a blokk Stílusok paneljén módosítható a kiemelőszín, a fülsáv és a táblázatfejlécek, azok szövege és a különleges csoport színe"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - the tournament block: Share dialog with a QR code, \"Open in the app\" line, full-screen presentation that rotates the sections, map of the tournament place in the settings, and guided tours of the page and of four example tournaments"
+msgstr "Új – a verseny blokkban: Megosztás párbeszédablak QR-kóddal, „Megnyitás az alkalmazásban” sor, teljes képernyős bemutató váltakozó szakaszokkal, a versenyhelyszín térképe a beállításokban, valamint interaktív bemutatók az oldalon és a négy példaversenyen"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - the plugin admin can convert the main page to the blocks with one button; the old content stays in the page revisions. New installs create the main page from the blocks. The shortcodes [doroto_tournament] and [doroto_tournament_list] show the blocks in the classic editor; the 1.x shortcodes keep working"
+msgstr "Új – a bővítmény adminisztrátora egyetlen gombbal blokkokká alakíthatja a főoldalt; a régi tartalom megmarad az oldal változataiban. Az új telepítések blokkokból hozzák létre a főoldalt. A [doroto_tournament] és [doroto_tournament_list] rövidkódok a klasszikus szerkesztőben jelenítik meg a blokkokat; az 1.x verzió rövidkódjai továbbra is működnek"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - blocks for the block editor: \"Rotation tournament\" (matches, results, players, statistics and settings on tabs, updated live without reloading the page), its variations \"Tournament standings\", \"Tournament matches\" and \"Tournament presentation\", \"Tournament list\" and \"Tournament invitation\""
+msgstr "Új – blokkok a blokkszerkesztőhöz: „Körverseny” (mérkőzések, eredmények, játékosok, statisztika és beállítások füleken, valós időben frissül az oldal újratöltése nélkül), annak „A verseny állása”, „A verseny mérkőzései” és „Verseny bemutatása” változatai, valamint „Körversenyek listája” és „Meghívó körversenyre”"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "2.0.0 - 2026/10/06"
+msgstr "2.0.0 - 2026/10/06"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Change - the review request is shown only to administrators, 14 days after activation once the site has its own tournament, and comes back 7 days after \"Remind me\" until the plugin is rated"
+msgstr "Változás – az értékelési kérés csak adminisztrátoroknak jelenik meg, 14 nappal az aktiválás után, amikor a webhelyen már van saját verseny, és az „Emlékeztessen” után 7 nappal ismét megjelenik, amíg a bővítményt nem értékelik"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - the tournament page shows a short link to the Android app (can be turned off in Settings -&gt; Mobile app)"
+msgstr "Új – a verseny oldalán rövid hivatkozás jelenik meg az Android-alkalmazásra (kikapcsolható: Beállítások -&gt; Mobilalkalmazás)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - optional mode join/leave for the app join endpoint"
+msgstr "Új – opcionális csatlakozás/kilépés mód az alkalmazás csatlakozási végpontjához"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - REST endpoint create-player: the organizer creates a player and adds them to the tournament in one step; the player gets an e-mail to set the password"
+msgstr "Új – create-player REST-végpont: a szervező egy lépésben létrehoz egy játékost és hozzáadja a versenyhez; a játékos e-mailt kap a jelszó beállításához"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Change - tournament links to the home page (\"?tournament_id=5\") and the old app QR codes (\"/tournament?id=5\") open the tournament page"
+msgstr "Változás – a főoldal versenyhivatkozásai („?tournament_id=5”) és az alkalmazás régi QR-kódjai („/tournament?id=5”) a verseny oldalát nyitják meg"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Change - the default name of a new tournament uses the site time zone, not UTC"
+msgstr "Változás – az új verseny alapértelmezett neve a webhely időzónáját használja UTC helyett"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Change - the app can be signed in on several devices at once (up to 10 per user)"
+msgstr "Változás – az alkalmazásba egyszerre több eszközön is be lehet jelentkezni (felhasználónként legfeljebb 10)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Change - invitation link only joins the tournament (a second click no longer unregisters the player), redirects to the login page and back, and then to the tournament page"
+msgstr "Változás – a meghívó hivatkozás csak regisztrál a versenyre (a második kattintás már nem törli a játékos regisztrációját), a bejelentkezési oldalra és vissza irányít, majd a verseny oldalára"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - REST responses are never served from page caches or CDNs"
+msgstr "Javítás – a REST-válaszokat soha többé nem szolgálja ki oldalgyorsítótár vagy CDN"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Authorization header is read also on FPM/CGI hosts"
+msgstr "Javítás – az Authorization fejléc FPM/CGI-tárhelyeken is kiolvasásra kerül"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - database upgrade adds new columns also on already installed sites"
+msgstr "Javítás – az adatbázis-frissítés a már telepített webhelyeken is hozzáadja az új oszlopokat"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - several devices signing in or refreshing their session at the same moment no longer sign each other out"
+msgstr "Javítás – az egyszerre bejelentkező vagy munkamenetet megújító eszközök már nem jelentkeztetik ki egymást"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - every change of a running tournament (correcting a result, suspending or removing a player, settings, payments, special group, web forms) runs under the tournament lock; correcting a result while another court saved its result could stall the whole tournament"
+msgstr "Javítás – a folyamatban lévő verseny minden módosítása (eredményjavítás, játékos felfüggesztése vagy eltávolítása, beállítások, befizetések, különleges csoport, webes űrlapok) a verseny zárolása alatt történik; egy eredményjavítás, miközben egy másik pályán eredményt mentettek, leállíthatta az egész versenyt"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - tournament lock: results entered at the same time on several courts are no longer lost"
+msgstr "Javítás – versenyzárolás: a több pályán egyszerre megadott eredmények már nem vesznek el"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - every write to a tournament updates last_update"
+msgstr "Javítás – minden versenybe írás frissíti a last_update értéket"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - results entered on the web no longer store last_update = 0, so the Android app refreshes again"
+msgstr "Javítás – a webhelyen megadott eredmények már nem mentenek last_update = 0 értéket, így az Android-alkalmazás ismét frissül"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Security - with registration disabled only tournament organizers can create player accounts from the app (before, any signed-in player could)"
+msgstr "Biztonság – ha a regisztráció ki van kapcsolva, csak a versenyszervezők hozhatnak létre játékosfiókot az alkalmazásból (korábban bármely bejelentkezett játékos megtehette)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Security - an account created by an organizer no longer returns a login session of the new player to the organizer"
+msgstr "Biztonság – a szervező által létrehozott fiók már nem adja vissza a szervezőnek az új játékos bejelentkezési munkamenetét"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Security - registration from the app (incl. a new Google account) respects \"Anyone can register\""
+msgstr "Biztonság – az alkalmazásból történő regisztráció (beleértve az új Google-fiókot is) figyelembe veszi a „Bárki regisztrálhat” beállítást"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Security - final doubles and registration toggle check tournament admin rights"
+msgstr "Biztonság – a páros döntő mérkőzés és a regisztráció átkapcsolása ellenőrzi a verseny adminisztrátorának jogait"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Security - guided tour actions need a nonce; regenerating the example tournaments is throttled"
+msgstr "Biztonság – az interaktív bemutató műveleteihez nonce szükséges; a példaversenyek újbóli létrehozása korlátozva"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Security - admin actions sent as links are protected by a nonce (CSRF)"
+msgstr "Biztonság – a hivatkozásokkal küldött adminisztrációs műveletek nonce-szal védettek (CSRF)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Security - front-end forms check tournament admin rights, not only the nonce (any logged-in user could change players, payments or delete a tournament)"
+msgstr "Biztonság – a webhely űrlapjai a verseny adminisztrátorának jogait ellenőrzik, nem csak a nonce-ot (korábban bármely bejelentkezett felhasználó módosíthatta a játékosokat, befizetéseket vagy törölhette a versenyt)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - app tournament links on the central site (?tournament_id=5&amp;doroto_site=) are forwarded to the club's tournament page when the app is not installed (sites from the site directory; other sites get a page with a link)"
+msgstr "Új – a központi webhelyen lévő alkalmazás-versenyhivatkozások (?tournament_id=5&amp;doroto_site=) a klub verseny oldalára irányítanak, ha az alkalmazás nincs telepítve (a webhelykönyvtár webhelyei; más webhelyeknél hivatkozást tartalmazó oldal jelenik meg)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - the tournament page has an \"Open in the app\" link: Android opens the tournament in the app, or Google Play when it is missing"
+msgstr "Új – a verseny oldalán „Megnyitás az alkalmazásban” hivatkozás található: az Android megnyitja a versenyt az alkalmazásban, vagy a Google Playt, ha az alkalmazás nincs telepítve"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - saving the tournament settings rejects an unknown tournament type"
+msgstr "Javítás – a verseny beállításainak mentésekor az ismeretlen versenytípus elutasításra kerül"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - a deleted account leaves its open tournaments: removed when it has not played yet, otherwise suspended; it also leaves the organizers, special group and payments (it was drawn into matches as \"Unknown player\")"
+msgstr "Javítás – egy törölt fiók elhagyja nyitott versenyeit: eltávolításra kerül, ha még nem játszott, egyébként felfüggesztésre; a szervezők, a különleges csoport és a befizetések közül is eltávolításra kerül (korábban „Ismeretlen játékos”-ként került a sorsolásba)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - removing a payment no longer turns the payment list into a JSON object (the Android app could crash on the statistics page)"
+msgstr "Javítás – egy befizetés eltávolítása már nem alakítja JSON-objektummá a befizetések listáját (az Android-alkalmazás összeomolhatott a statisztika oldalon)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - the change form fits on a phone screen (the result and the button were off screen)"
+msgstr "Javítás – a módosító űrlap elfér a telefon képernyőjén (az eredmény és a gomb a képernyőn kívül volt)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - organizers see an \"Edit result\" button next to every played match; it selects the match and its result in the change form (the form above the table was easy to miss)"
+msgstr "Új – a szervezők minden lejátszott mérkőzés mellett látnak egy „Eredmény szerkesztése” gombot; ez kiválasztja a mérkőzést és eredményét a módosító űrlapon (a táblázat feletti űrlapot könnyű volt nem észrevenni)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - REST route skip-matches: the organizer skips several ongoing matches at once and new matches are drawn from all free players"
+msgstr "Új – skip-matches REST-útvonal: a szervező egyszerre több folyamatban lévő mérkőzést is kihagyhat, és az új mérkőzések az összes szabad játékos közül kerülnek kisorsolásra"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - among players with the same number of new teammates left, the one who played fewer games is drawn first; sides (left/right) alternate for both players of a team"
+msgstr "Fejlesztés – az azonos számú hátralévő új partnerrel rendelkező játékosok közül az kerül először sorsolásra, aki kevesebb mérkőzést játszott; az oldalak (bal/jobb) a csapat mindkét játékosánál váltakoznak"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - the draw chooses the opposing team (and the teammate) by previous meetings too: players meet more different opponents and the same players meet less often (with 14 players on 2 courts, pairs that met 3 or more times dropped from about 5 to 1 per evening)"
+msgstr "Fejlesztés – a sorsolás a korábbi találkozások alapján választja ki az ellenfél csapatát (és a partnert): a játékosok több különböző ellenféllel találkoznak, és ugyanazok a játékosok ritkábban kerülnek szembe (14 játékos és 2 pálya esetén a 3-szor vagy többször találkozó párok száma egy este alatt kb. 5-ről 1-re csökkent)"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.6.0 - 2026/10/02"
+msgstr "1.6.0 - 2026/10/02"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.6.1 - 2026/10/02"
+msgstr "1.6.1 - 2026/10/02"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.6.2 - 2026/10/04"
+msgstr "1.6.2 - 2026/10/04"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - fixed some errors found in Plugin Check"
+msgstr "Javítás – a Plugin Check által talált néhány hiba javítva"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.5.8 - 2026/06/12"
+msgstr "1.5.8 - 2026/06/12"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - some translations"
+msgstr "Javítás – néhány fordítás"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.5.7 - 2026/06/06"
+msgstr "1.5.7 - 2026/06/06"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - register and sign in for android app"
+msgstr "Javítás – regisztráció és bejelentkezés az Android-alkalmazásban"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.5.6 - 2026/05/13"
+msgstr "1.5.6 - 2026/05/13"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - remove admin for android app"
+msgstr "Új – adminisztrátor eltávolítása az Android-alkalmazáshoz"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.5.5 - 2026/05/12"
+msgstr "1.5.5 - 2026/05/12"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - rest value is safe now"
+msgstr "Javítás – a rest érték mostantól biztonságos"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.0.0 - 2024/01/01"
+msgstr "1.0.0 - 2024/01/01"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.0.1 - 2024/01/03"
+msgstr "1.0.1 - 2024/01/03"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.0.2 - 2024/01/21"
+msgstr "1.0.2 - 2024/01/21"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.0.3 - 2024/01/26"
+msgstr "1.0.3 - 2024/01/26"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.0.4 - 2024/02/02"
+msgstr "1.0.4 - 2024/02/02"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.1.0 - 2024/02/04"
+msgstr "1.1.0 - 2024/02/04"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.1.1 - 2024/02/09"
+msgstr "1.1.1 - 2024/02/09"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.1.2 - 2024/02/13"
+msgstr "1.1.2 - 2024/02/13"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.1.3 - 2024/02/17"
+msgstr "1.1.3 - 2024/02/17"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.1.4 - 2024/02/18"
+msgstr "1.1.4 - 2024/02/18"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.1.5 - 2024/02/20"
+msgstr "1.1.5 - 2024/02/20"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.1.6 - 2024/02/25"
+msgstr "1.1.6 - 2024/02/25"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.1.7 - 2024/03/01"
+msgstr "1.1.7 - 2024/03/01"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.1.8 - 2024/03/07"
+msgstr "1.1.8 - 2024/03/07"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.1.9 - 2024/03/09"
+msgstr "1.1.9 - 2024/03/09"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.2.0 - 2024/03/20"
+msgstr "1.2.0 - 2024/03/20"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.2.1 - 2024/03/21"
+msgstr "1.2.1 - 2024/03/21"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.2.2 - 2024/04/17"
+msgstr "1.2.2 - 2024/04/17"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.2.3 - 2024/04/19"
+msgstr "1.2.3 - 2024/04/19"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.2.4 - 2024/05/08"
+msgstr "1.2.4 - 2024/05/08"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.2.5 - 2024/05/15"
+msgstr "1.2.5 - 2024/05/15"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.2.6 - 2024/05/29"
+msgstr "1.2.6 - 2024/05/29"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.2.7 - 2024/06/07"
+msgstr "1.2.7 - 2024/06/07"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.2.8 - 2024/06/21"
+msgstr "1.2.8 - 2024/06/21"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.2.9 - 2024/06/23"
+msgstr "1.2.9 - 2024/06/23"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.3.0 - 2024/07/06"
+msgstr "1.3.0 - 2024/07/06"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.3.1 - 2024/07/12"
+msgstr "1.3.1 - 2024/07/12"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.3.2 - 2024/07/18"
+msgstr "1.3.2 - 2024/07/18"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.3.3 - 2024/09/13"
+msgstr "1.3.3 - 2024/09/13"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.3.4 - 2024/09/26"
+msgstr "1.3.4 - 2024/09/26"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.3.5 - 2024/09/28"
+msgstr "1.3.5 - 2024/09/28"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.3.6 - 2024/11/02"
+msgstr "1.3.6 - 2024/11/02"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.3.7 - 2024/12/13"
+msgstr "1.3.7 - 2024/12/13"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.3.8 - 2024/12/15"
+msgstr "1.3.8 - 2024/12/15"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.3.9 - 2024/12/21"
+msgstr "1.3.9 - 2024/12/21"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.4.0 - 2024/12/27"
+msgstr "1.4.0 - 2024/12/27"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.4.1 - 2024/12/31"
+msgstr "1.4.1 - 2024/12/31"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.4.2 - 2025/04/16"
+msgstr "1.4.2 - 2025/04/16"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.4.3 - 2025/05/04"
+msgstr "1.4.3 - 2025/05/04"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.4.4 - 2025/05/25"
+msgstr "1.4.4 - 2025/05/25"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.4.5 - 2025/06/09"
+msgstr "1.4.5 - 2025/06/09"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.4.6 - 2025/06/14"
+msgstr "1.4.6 - 2025/06/14"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.4.7 - 2025/07/27"
+msgstr "1.4.7 - 2025/07/27"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.4.8 - 2025/08/07"
+msgstr "1.4.8 - 2025/08/07"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.4.9 - 2025/08/07"
+msgstr "1.4.9 - 2025/08/07"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.5.0 - 2025/08/08"
+msgstr "1.5.0 - 2025/08/08"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.5.1 - 2025/08/17"
+msgstr "1.5.1 - 2025/08/17"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.5.2 - 2025/08/26"
+msgstr "1.5.2 - 2025/08/26"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.5.3 - 2025/12/05"
+msgstr "1.5.3 - 2025/12/05"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.5.4 - 2026/04/22"
+msgstr "1.5.4 - 2026/04/22"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - stable login to android application"
+msgstr "Javítás – stabil bejelentkezés az Android-alkalmazásba"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - existing players are not repeated in the menu Add players"
+msgstr "Javítás – a meglévő játékosok nem ismétlődnek a Játékosok hozzáadása menüben"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Change - Public release of Android app"
+msgstr "Változás – az Android-alkalmazás nyilvános kiadása"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Add 'last update' to the database also for already installed plugings"
+msgstr "Javítás – a „last update” hozzáadása az adatbázishoz a már telepített bővítményeknél is"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Uninstall also 2 new pages (privacy policy and terms of service)"
+msgstr "Javítás – a 2 új oldal (adatvédelmi irányelvek és felhasználási feltételek) törlése is"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Add 'last update' to the database"
+msgstr "Javítás – a „last update” hozzáadása az adatbázishoz"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Improved some functions for Android app"
+msgstr "Javítás – néhány funkció fejlesztése az Android-alkalmazáshoz"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Announcement about the opportunity to become an application tester"
+msgstr "Új – értesítés az alkalmazástesztelővé válás lehetőségéről"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Privacy Policy page"
+msgstr "Új – adatvédelmi irányelvek oldal"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Terms of Service page"
+msgstr "Új – felhasználási feltételek oldal"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Info about last update speed up loading"
+msgstr "Új – a legutóbbi frissítés információja gyorsítja a betöltést"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Correct an error message Undefined array key player['count']"
+msgstr "Javítás – az Undefined array key player['count'] hibaüzenet javítva"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Tournaments filtering by distance and visibility"
+msgstr "Új – versenyek szűrése távolság és láthatóság szerint"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Support for a Android app"
+msgstr "Új – az Android-alkalmazás támogatása"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Controls the visibility of the tournament in the public list."
+msgstr "Új – a verseny láthatóságának kezelése a nyilvános listában."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Location of the tournament."
+msgstr "Új – a verseny helyszíne."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Log in/out block had a problem"
+msgstr "Javítás – probléma volt a jelentkezés/kijelentkezés blokkban"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Parameter When enough players are available had sometimes a wrong value."
+msgstr "Javítás – a „Ha elég játékos áll rendelkezésre” paraméternek néha hibás értéke volt."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Match hiding correction"
+msgstr "Javítás – a mérkőzések elrejtése javítva"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Register and log in a new user only if anyone can register (system settings)."
+msgstr "Javítás – új felhasználó regisztrációja és bejelentkezése csak akkor, ha bárki regisztrálhat (rendszerbeállítás)."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Register and log in a new user."
+msgstr "Új – új felhasználó regisztrációja és bejelentkezése."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Translation loading too early warning."
+msgstr "Javítás – figyelmeztetés a túl korán betöltött fordításokról."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Dashboard overview widget."
+msgstr "Új – áttekintő widget a vezérlőpulton."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Log-link block."
+msgstr "Új – Log-link blokk."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Sometimes tournament_id was unknown."
+msgstr "Javítás – néha a tournament_id ismeretlen volt."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Preserving stored values on the backend."
+msgstr "Javítás – a rögzített értékek mentése a szerveren."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Guaranteed visibility of the selected tournament in the tournament table."
+msgstr "Javítás – a kiválasztott verseny garantált láthatósága a versenytáblázatban."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Error with hide parameter."
+msgstr "Javítás – hiba a hide paraméterrel."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Permalink structure also works with the floating help icon."
+msgstr "Javítás – az állandó hivatkozások szerkezete a lebegő súgóikonnal is működik."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Tournament name is not copied from previous one."
+msgstr "Javítás – a verseny neve nem másolódik az előzőből."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - More tournament examples for demonstration."
+msgstr "Új – további példaversenyek a bemutatáshoz."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Floating help icon."
+msgstr "Új – lebegő súgóikon."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Prevent cashing for logged users."
+msgstr "Új – a gyorsítótárazás kikapcsolása a bejelentkezett felhasználóknál."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Doubles Badminton table also for co-players"
+msgstr "Javítás – a páros tollaslabda táblázata a partnereknél is"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Tournament progress info."
+msgstr "Új – információ a verseny haladásáról."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Change game results availability."
+msgstr "Javítás – a játékeredmények elérhetőségének módosítása."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Special group count."
+msgstr "Új – a különleges csoport tagjainak száma."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Change of information about the end of the tournament round."
+msgstr "A versenykör végére vonatkozó információ módosítása."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Opponent selection."
+msgstr "Javítás – az ellenfél kiválasztása."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Pair selection mechanism explanation on the help page."
+msgstr "Új – a párválasztási mechanizmus magyarázata a súgóoldalon."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Pair selection didn´t take into account number of played games in total."
+msgstr "Javítás – a párválasztás nem vette figyelembe a lejátszott játékok összesített számát."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Rights to Suspension and Resumption."
+msgstr "Javítás – a felfüggesztési és folytatási jogok."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Rights to add a special group."
+msgstr "Javítás – a különleges csoporthoz adás jogai."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Rights to add a tournament admin."
+msgstr "Javítás – a verseny adminisztrátorának hozzáadására vonatkozó jogok."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Rights to add other players into tournaments."
+msgstr "Javítás – más játékosok versenyekhez adásának jogai."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Do not show instructions during the tournament presentation."
+msgstr "Javítás – a verseny bemutatója alatt nem jelennek meg útmutatások."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Admin can change a default value for minimum number of games played before a player can be declared a winner."
+msgstr "Új – az adminisztrátor módosíthatja a győztesnek kihirdetéshez szükséges minimális lejátszott játékszám alapértékét."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - The ability to specify a minimum number of games played before a player can be declared a winner."
+msgstr "Új – beállítható a lejátszott játékok minimális száma, amely után egy játékos győztesnek hirdethető ki."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Removing a player from a tournament."
+msgstr "Javítás – játékos eltávolítása a versenyből."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Ready for testing in WP Playground."
+msgstr "Javítás – készen áll a WP Playgroundban való tesztelésre."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Solving some database errors with empty values."
+msgstr "Javítás – néhány üres értékkel kapcsolatos adatbázishiba megszüntetése."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Update for WP Playground."
+msgstr "Javítás – frissítések a WP Playgroundhoz."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Improved playmate choose."
+msgstr "Javítás – a partnerválasztás fejlesztése."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Problems with removing players during a game."
+msgstr "Javítás – problémák a játékosok játék közbeni eltávolításával."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - A currently playing player can´t be removed."
+msgstr "Javítás – az éppen játszó játékos nem távolítható el."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Fix real count of players after their removing."
+msgstr "Javítás – helyes játékosszám a játékosok eltávolítása után."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Fix an error during removing a player from the tournament."
+msgstr "Javítás – hiba játékos versenyből való eltávolításakor."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Redirection to a tournament in case of a user entry."
+msgstr "Javítás – átirányítás a versenyre, amikor a felhasználó adatot ad meg."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - icon format."
+msgstr "Javítás – az ikonok formátuma."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Modification for WP Playground."
+msgstr "Finomhangolás a WP Playgroundhoz."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Fixed a bug in the database that prevented a tournament record from being created on some servers."
+msgstr "Javítás – javítva az az adatbázishiba, amely miatt egyes szervereken nem jött létre a versenyrekord."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Unregistered users can no longer enter results in the singles tournament."
+msgstr "Javítás – a nem regisztrált felhasználók már nem adhatnak meg eredményt egyéni versenyen."
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid "Possibility to remove players from an already ongoing tournament."
+msgstr "Lehetőség játékosok eltávolítására egy már folyamatban lévő versenyből."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "New - Expanded the ability for tournament administrators to browse through players they have already met at the tournament."
+msgstr "Új – a versenyadminisztrátorok több olyan játékost láthatnak, akikkel már találkoztak egy versenyen."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "New - If the player has not yet registered for any tournament, it is possible to choose whether to show him a quick help."
+msgstr "Új – ha egy játékos még egyetlen versenyre sem regisztrált, választható, hogy megjelenjen-e számára egy rövid súgó."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "New - Optional login prompt."
+msgstr "Új – opcionális felhívás a bejelentkezésre."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - If all tournaments were deleted, a new tournament could not be created."
+msgstr "Javítás – ha minden versenyt töröltek, nem lehetett új versenyt létrehozni."
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid ""
+"Trial tournament improvements.\n"
+"Added the option to announce the end of the tournament round."
+msgstr ""
+"A gyakorló verseny fejlesztése.\n"
+"Hozzáadva a versenykör végének kihirdetési lehetősége."
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid ""
+"Improved the visual appearance of the main page.\n"
+"Badminton added to the list of available tournaments."
+msgstr ""
+"A főoldal megjelenése javítva.\n"
+"A tollaslabda bekerült az elérhető versenyek listájába."
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid "Option to announce separate winners from the special group and outside the special group."
+msgstr "Külön győztesek kihirdetésének lehetősége a különleges csoportból és azon kívülről."
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid ""
+"Notices after a plugin activation.\n"
+"Added player trend."
+msgstr ""
+"Értesítés a bővítmény aktiválása után.\n"
+"Hozzáadva a játékos trendje."
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid ""
+"Modified tournament editing tab.\n"
+"Added option to change tournament type."
+msgstr ""
+"A verseny szerkesztési füle módosítva.\n"
+"Hozzáadva a versenytípus módosításának lehetősége."
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid ""
+"Reactivating the plugin doesn´t affect the already deleted tournament example. \n"
+"Unblock offering maximum games count.\n"
+"Fix tournament change when entering results.\n"
+"Added quick help for newcomers.\n"
+"Allow the final match also for singles."
+msgstr ""
+"A bővítmény újraaktiválása nem érinti a már törölt példaversenyt.\n"
+"A játékok maximális számának kiválasztása feloldva.\n"
+"Javítva a verseny módosítása eredménymegadás közben.\n"
+"Rövid súgó hozzáadva a kezdőknek.\n"
+"A döntő mérkőzés egyéniben is engedélyezve."
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid ""
+"Added the option for single tournaments. \n"
+"Created an environment for additional sports."
+msgstr ""
+"Hozzáadva az egyéni versenyek lehetősége.\n"
+"Környezet létrehozva más sportágakhoz."
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid ""
+"The administrator can now use 'hide' option when editing the match result.\n"
+"Free score input is allowed. This opens using not only for tennis but for example for table tennis or beach volleyball."
+msgstr ""
+"Az adminisztrátor mostantól a mérkőzéseredmény módosításakor használhatja az „elrejtés” lehetőséget.\n"
+"Engedélyezve az eredmény szabad megadása. Ez lehetővé teszi a bővítmény használatát nemcsak teniszhez, hanem például asztaliteniszhez vagy strandröplabdához is."
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid ""
+"Minor changes in code:\n"
+"* Allow to transfer organizer rights to a non-playing user.\n"
+"* Ensuring an even rotation of serves at the start of the tournament."
+msgstr ""
+"Kisebb kódmódosítások:\n"
+"* Engedélyezve a szervezői jogok átadása nem játszó felhasználónak.\n"
+"* Biztosítva az adogatás egyenletes váltakozása a verseny elején."
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid "Fixed choosing between left and right side in first matches."
+msgstr "Javítva a bal és jobb oldal kiválasztása az első mérkőzéseken."
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid "A small modification of admin screen."
+msgstr "Kisebb módosítás az adminisztrációs képernyőn."
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid "First release to public."
+msgstr "Első nyilvános kiadás."
+

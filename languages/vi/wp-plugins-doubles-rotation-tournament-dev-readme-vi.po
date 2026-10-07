@@ -1,0 +1,1289 @@
+# Translation of Plugins - Rotation Tournaments - Development Readme (trunk) in Vietnamese
+# This file is distributed under the same license as the Plugins - Rotation Tournaments - Development Readme (trunk) package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Plugins - Rotation Tournaments - Development Readme (trunk)\n"
+"PO-Revision-Date: 2026-10-07 16:34:22+0000\n"
+"Language: vi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: GlotPress/4.1.0\n"
+
+#. Short description.
+#, gp-priority: high
+msgid "Do you play Singles or Doubles Tournaments? This plugin manages Rotation Tournaments where players have a different partner in each game."
+msgstr "Bạn chơi giải đánh đơn hay đánh đôi? Plugin này quản lý các giải đấu xoay vòng, trong đó người chơi có đồng đội mới ở mỗi trận."
+
+#. Plugin name.
+#, gp-priority: high
+msgid "Rotation Tournaments"
+msgstr "Giải đấu xoay vòng"
+
+#. Found in installation paragraph.
+msgid "After installation, go to the app's settings and enter the address of your website where this plugin is installed."
+msgstr "Sau khi cài đặt, hãy mở cài đặt ứng dụng và nhập địa chỉ trang web đã cài plugin này."
+
+#. Found in installation paragraph.
+msgid "Or download it directly from this link: https://play.google.com/store/apps/details?id=cz.doroto.app"
+msgstr "Hoặc tải trực tiếp tại đây: https://play.google.com/store/apps/details?id=cz.doroto.app"
+
+#. Found in installation paragraph.
+msgid "Search for \"Rotation Tournaments\" on the Google Play Store."
+msgstr "Tìm “Rotation Tournaments” trên Google Play."
+
+#. Found in description paragraph.
+msgid "To get the full experience of managing tournaments on the go, download our mobile app, now available on Google Play!"
+msgstr "Để quản lý giải đấu đầy đủ khi đang di chuyển, hãy tải ứng dụng di động của chúng tôi, hiện đã có trên Google Play!"
+
+#. Found in description paragraph.
+msgid "<strong>YouTube quick intro:</strong>"
+msgstr "<strong>Giới thiệu ngắn trên YouTube:</strong>"
+
+#. Found in description list item.
+msgid "Video for a quick introduction to the Rotation Tournament:"
+msgstr "Video giới thiệu ngắn về giải đấu xoay vòng:"
+
+#. Found in faq paragraph.
+msgid "Yes. If you install the Rotation Tournaments plugin, allow player registration, and enable visibility in the website list, your site can appear in the Android app. Initially, someone must manually enter your website address into the app. After that, it becomes visible in the list for all users."
+msgstr "Có. Nếu bạn cài plugin Rotation Tournaments, cho phép người chơi đăng ký và bật hiển thị trong danh sách trang web, trang của bạn có thể xuất hiện trong ứng dụng Android. Trước tiên, ai đó phải nhập thủ công địa chỉ trang web của bạn vào ứng dụng. Sau đó, trang sẽ hiển thị trong danh sách cho mọi người dùng."
+
+#. Found in faq paragraph.
+msgid "Yes. An iOS version of the Rotation Tournaments app is planned and will be released in the near future."
+msgstr "Có. Phiên bản iOS của ứng dụng Rotation Tournaments đã được lên kế hoạch và sẽ sớm phát hành."
+
+#. Found in faq header.
+msgid "Will my website be visible in the Rotation Tournaments Android app?"
+msgstr "Trang web của tôi có hiển thị trong ứng dụng Rotation Tournaments cho Android không?"
+
+#. Found in faq header.
+msgid "Will there be an iPhone or iPad version of the app?"
+msgstr "Sẽ có phiên bản ứng dụng cho iPhone hoặc iPad không?"
+
+#. Found in installation paragraph.
+msgid "<strong>How to install Wordpress plugin:</strong>"
+msgstr "<strong>Cách cài đặt plugin WordPress:</strong>"
+
+#. Found in installation list item.
+msgid "After activating the plugin, 4 pages will be created: one for managing tournaments (main page), one with tournament rules, and additional pages for Privacy Policy and Terms of Service. A sample post announcing a newly created tournament will also be added."
+msgstr "Sau khi kích hoạt plugin, 4 trang sẽ được tạo: một trang quản lý giải đấu (trang chính), một trang luật giải đấu, cùng các trang chính sách quyền riêng tư và điều khoản dịch vụ. Một bài viết mẫu thông báo giải đấu mới cũng sẽ được thêm."
+
+#. Found in installation paragraph.
+msgid "<strong>How to install the Android app:</strong>"
+msgstr "<strong>Cách cài đặt ứng dụng Android:</strong>"
+
+#. Found in description paragraph.
+msgid "<strong>This plugin is the server-side for the \"Rotation Tournaments\" Android app.</strong>"
+msgstr "<strong>Plugin này là phần máy chủ của ứng dụng Android “Rotation Tournaments”.</strong>"
+
+#. Screenshot description.
+msgid "Individual tournament participants enter their results into the WordPress server and share the data with each other."
+msgstr "Người tham gia giải đấu nhập kết quả lên máy chủ WordPress và chia sẻ dữ liệu với nhau."
+
+#. Screenshot description.
+msgid "Matches played. (Android app)"
+msgstr "Các trận đã chơi. (Ứng dụng Android)"
+
+#. Screenshot description.
+msgid "Tournament table. (Wordpress)"
+msgstr "Bảng giải đấu. (WordPress)"
+
+#. Screenshot description.
+msgid "Matches drawn. (Android app)"
+msgstr "Các trận đã bốc thăm. (Ứng dụng Android)"
+
+#. Screenshot description.
+msgid "Editing tournament parameters. (Wordpress)"
+msgstr "Chỉnh sửa thông số giải đấu. (WordPress)"
+
+#. Screenshot description.
+msgid "Table of players with rankings. (Android app)"
+msgstr "Bảng người chơi kèm thứ hạng. (Ứng dụng Android)"
+
+#. Screenshot description.
+msgid "Matches played. (Wordpress)"
+msgstr "Các trận đã chơi. (WordPress)"
+
+#. Screenshot description.
+msgid "Basic overview of the tournament. (Android app)"
+msgstr "Tổng quan chính của giải đấu. (Ứng dụng Android)"
+
+#. Screenshot description.
+msgid "Matches drawn. (Wordpress)"
+msgstr "Các trận đã bốc thăm. (WordPress)"
+
+#. Found in description paragraph.
+msgid "<strong>Rotation Tournaments</strong> provides a platform for organizing all kinds of sports Singles and Doubles Tournaments, e.g."
+msgstr "<strong>Giải đấu xoay vòng</strong> là nền tảng tổ chức mọi giải đấu thể thao đánh đơn và đánh đôi, ví dụ:"
+
+#. Found in description list item.
+msgid "Squash"
+msgstr "Squash"
+
+#. Found in description list item.
+msgid "Beach Volleyball"
+msgstr "Bóng chuyền bãi biển"
+
+#. Found in description list item.
+msgid "Badminton"
+msgstr "Cầu lông"
+
+#. Found in description list item.
+msgid "Padel"
+msgstr "Padel"
+
+#. Found in description list item.
+msgid "Table Tennis"
+msgstr "Bóng bàn"
+
+#. Found in description list item.
+msgid "Tennis"
+msgstr "Quần vợt"
+
+#. Found in faq paragraph.
+msgid ""
+"This plugin can be used for all types of sports where 2 or 4 players compete in singles or doubles.\n"
+"You can use this plugin for tennis, table tennis, squash, padel, badminton, beach volleyball and probably for more."
+msgstr ""
+"Plugin này phù hợp với mọi môn thể thao có 2 hoặc 4 người chơi thi đấu đơn hoặc đôi.\n"
+"Có thể dùng cho quần vợt, bóng bàn, squash, padel, cầu lông, bóng chuyền bãi biển và có lẽ cả các môn khác."
+
+#. Found in faq paragraph.
+msgid "Yes. When creating a tournament, you can choose whether to create a singles or a doubles tournament."
+msgstr "Có. Khi tạo giải đấu, bạn có thể chọn giải đánh đơn hoặc đánh đôi."
+
+#. Found in faq header.
+msgid "What sports tournaments is this plugin for?"
+msgstr "Plugin này dành cho những giải đấu thể thao nào?"
+
+#. Found in description paragraph.
+msgid "<strong>General Features:</strong>"
+msgstr "<strong>Tính năng chung:</strong>"
+
+#. Found in description paragraph.
+msgid "<strong>Doubles Rotation Tournament:</strong>"
+msgstr "<strong>Giải đấu xoay vòng đánh đôi:</strong>"
+
+#. Found in description paragraph.
+msgid "<strong>Singles Rotation Tournament:</strong>"
+msgstr "<strong>Giải đấu xoay vòng đánh đơn:</strong>"
+
+#. Found in description paragraph.
+msgid "The participants of a tournament change partners several times during the tournament by a random selection and play against different players. The ratio of games won to games lost is calculated for each participant. The winner of the tournament is the player with this highest ratio. While a Singles Rotation Tournament can be organized without the aid of technology, in the case of a Doubles Rotation Tournament, this is not possible."
+msgstr "Người tham gia giải đấu đổi đồng đội ngẫu nhiên nhiều lần trong giải và đấu với những người chơi khác nhau. Với mỗi người tham gia, tỉ lệ game thắng trên game thua được tính. Người thắng là người có tỉ lệ tốt nhất. Giải xoay vòng đánh đơn có thể tổ chức mà không cần công nghệ, còn đánh đôi thì không."
+
+#. Found in description paragraph.
+msgid "The <strong>Rotation Tournaments</strong> have a strong social aspect because its goal is to keep players in the tournament until the very end. The situation where weaker players would leave the tournament due to elimination rounds is eliminated. It allows grouping players into a special category with special conditions. This special setting can be utilized, for example, in mixed tournaments."
+msgstr "<strong>Giải đấu xoay vòng</strong> có tính giao lưu cao, vì mục tiêu là giữ người chơi ở lại giải đến cuối cùng. Không có tình huống người chơi yếu hơn phải rời giải vì bị loại. Người chơi có thể được xếp vào hạng mục đặc biệt với điều kiện đặc biệt. Cài đặt đặc biệt này có thể dùng, chẳng hạn, trong các giải hỗn hợp."
+
+#. Found in description paragraph.
+msgid "In <strong>Rotation Tournaments</strong>, each participant plays against every other participant and there are no eliminations in individual rounds. To maximize the variety of match combinations, the matches are typically played in a single set."
+msgstr "Trong <strong>giải đấu xoay vòng</strong>, mỗi người tham gia đều đấu với mọi người khác và không ai bị loại ở từng vòng. Để có càng nhiều tổ hợp càng tốt, các trận thường chỉ đấu một set."
+
+#. Found in description list item.
+msgid "Suitable for various sports: tennis, table tennis, squash, padel, badminton, beach volleyball, and more."
+msgstr "Phù hợp với nhiều môn thể thao: quần vợt, bóng bàn, squash, padel, cầu lông, bóng chuyền bãi biển và các môn khác."
+
+#. Found in description list item.
+msgid "Integration with website user accounts."
+msgstr "Tích hợp với tài khoản người dùng của trang web."
+
+#. Found in description list item.
+msgid "No downtime during the tournament."
+msgstr "Không có thời gian chết trong giải đấu."
+
+#. Found in description list item.
+msgid "Comprehensive overview of player quality."
+msgstr "Cái nhìn toàn diện về trình độ người chơi."
+
+#. Found in description list item.
+msgid "User-friendly interface for administrators and participants."
+msgstr "Giao diện thân thiện cho quản trị viên và người tham gia."
+
+#. Found in description list item.
+msgid "Customizable settings for each tournament."
+msgstr "Cài đặt linh hoạt cho từng giải đấu."
+
+#. Found in description list item.
+msgid "Real-time score tracking."
+msgstr "Theo dõi tỉ số theo thời gian thực."
+
+#. Found in description list item.
+msgid "Seamless scheduling of matches."
+msgstr "Xếp lịch thi đấu tiện lợi."
+
+#. Found in description list item.
+msgid "Announcement of the Best Player and Most Ideal Pair at the end of the tournament."
+msgstr "Công bố người chơi xuất sắc nhất và cặp đôi lý tưởng vào cuối giải."
+
+#. Found in description list item.
+msgid "Ranking based on the ratio of games won to games lost."
+msgstr "Thứ hạng được xác định bởi tỉ lệ game thắng trên game thua."
+
+#. Found in description list item.
+msgid "Individual players can join or leave the tournament at any time."
+msgstr "Người chơi có thể tham gia hoặc rời giải bất cứ lúc nào."
+
+#. Found in description list item.
+msgid "Tournament can be interrupted or extended without disruption."
+msgstr "Giải đấu có thể tạm dừng hoặc kéo dài mà không ảnh hưởng diễn biến."
+
+#. Found in description list item.
+msgid "Shorter matches for more participation."
+msgstr "Trận ngắn hơn để nhiều người được tham gia hơn."
+
+#. Found in description list item.
+msgid "No eliminations, ensuring all players stay in the game."
+msgstr "Không loại trực tiếp – mọi người chơi đều ở lại thi đấu."
+
+#. Found in description list item.
+msgid "Define special groups of players with unique conditions."
+msgstr "Xác định nhóm người chơi đặc biệt với điều kiện đặc biệt."
+
+#. Found in description list item.
+msgid "Suitable for odd numbers of players and minimum lineups of 4 players."
+msgstr "Phù hợp với số người chơi lẻ và đội hình tối thiểu 4 người."
+
+#. Found in description list item.
+msgid "Individuals can enter the tournament without a permanent teammate."
+msgstr "Có thể tham gia giải mà không cần đồng đội cố định."
+
+#. Found in description list item.
+msgid "Rotation of teammates, ensuring variety in partnerships."
+msgstr "Xoay vòng đồng đội tạo nên các cặp đa dạng."
+
+#. Found in description list item.
+msgid "Alternative form of a Doubles Tournament where players enter each match with a different partner and in different positions (alternating left and right sides)."
+msgstr "Một hình thức thay thế của giải đánh đôi, trong đó người chơi chơi mỗi trận với đồng đội mới và ở vị trí khác (luân phiên bên trái và bên phải)."
+
+#. Found in description list item.
+msgid "Depending on the time options, everyone plays against everyone."
+msgstr "Tùy thời gian, mọi người đều đấu với nhau."
+
+#. Found in description list item.
+msgid "Alternative form of a Singles Tournament where players face each other without elimination rounds."
+msgstr "Một hình thức thay thế của giải đánh đơn, trong đó người chơi đối đầu nhau mà không bị loại."
+
+#. Found in description header.
+msgid "Features"
+msgstr "Tính năng"
+
+#. Found in faq header.
+msgid "Is this plugin suitable for singles tournaments?"
+msgstr "Plugin này có phù hợp với giải đánh đơn không?"
+
+#. Found in faq paragraph.
+msgid "Yes, each tournament participant must have their own account. If a website has disabled user registration, this account must be created by the website administrator."
+msgstr "Có, mỗi người tham gia giải đấu phải có tài khoản người dùng riêng. Nếu trang web tắt đăng ký người dùng, quản trị viên trang web phải tạo tài khoản này."
+
+#. Found in faq header.
+msgid "Does each player have to have an account created on my website?"
+msgstr "Mỗi người chơi có cần tài khoản trên trang web của tôi không?"
+
+#. Found in installation list item.
+msgid "At the end close the tournament and look who was announced as the winner."
+msgstr "Cuối cùng, hãy đóng giải đấu và xem ai được công bố là người thắng."
+
+#. Found in installation list item.
+msgid "You can change tournament settings on the main page or you can look at 2 new admin pages that are dedicated for overall environmental settings and for description of all possible shortcodes."
+msgstr "Có thể thay đổi cài đặt giải đấu trên trang chính, hoặc bạn có thể xem 2 trang quản trị mới dành cho cài đặt chung của môi trường và mô tả tất cả shortcode khả dụng."
+
+#. Found in installation list item.
+msgid "If you have a sufficient amount of players then you can close a registration and start playing matches."
+msgstr "Nếu đã đủ người chơi, bạn có thể đóng đăng ký và bắt đầu thi đấu."
+
+#. Found in installation list item.
+msgid "Then you can log in your created tournament and as a tournament´s administrator you can add manually also other players sourced from WP database."
+msgstr "Sau đó bạn có thể đăng ký vào giải đấu đã tạo và, với tư cách quản trị viên giải đấu, thêm thủ công người chơi khác từ cơ sở dữ liệu WordPress."
+
+#. Found in installation list item.
+msgid "Start by clicking on \"Create a new tournament\" under \"Tournament Selection …\" on the main page."
+msgstr "Bắt đầu bằng cách nhấp “Tạo giải đấu mới” trong phần “Chọn giải đấu…” trên trang chính."
+
+#. Found in installation list item.
+msgid "Install the plugin as usual."
+msgstr "Cài đặt plugin như bình thường."
+
+#. Found in description paragraph.
+msgid "Visit <a href=\"https://doroto.ltcchrast.cz/\">test page</a> for more information, try to create your own tournament and take a look at <a href=\"https://doroto.ltcchrast.cz/rules-of-the-doubles-rotation-tournament/\">Rules of the Doubles Rotation Tournament</a>."
+msgstr "Truy cập <a href=\"https://doroto.ltcchrast.cz/\">trang thử nghiệm</a> để tìm hiểu thêm, thử tạo giải đấu của riêng bạn và xem <a href=\"https://doroto.ltcchrast.cz/rules-of-the-doubles-rotation-tournament/\">luật giải đấu xoay vòng đánh đôi</a>."
+
+#. Found in description paragraph.
+msgid "[youtube https://www.youtube.com/watch?v=NoL9aPTv8u8]"
+msgstr "[youtube https://www.youtube.com/watch?v=NoL9aPTv8u8]"
+
+#. Found in description header.
+msgid "More information"
+msgstr "Thông tin thêm"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - the plugin restores read permissions of its files after an FTP upload (the web server answered 403 and the admin page stayed empty); the admin page shows a notice when its script cannot be loaded"
+msgstr "Sửa lỗi – plugin khôi phục quyền đọc tệp của mình sau khi tải lên qua FTP (máy chủ web trả về 403 và trang quản trị bị trống); trang quản trị hiển thị thông báo nếu không tải được tập lệnh của nó"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - tournament settings keep the ranges of 1.x and of the app (a larger value made the app's dropdowns fail)"
+msgstr "Sửa lỗi – cài đặt giải đấu giữ trong phạm vi của phiên bản 1.x và ứng dụng (giá trị lớn hơn làm danh sách thả xuống của ứng dụng bị lỗi)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - REST requests from the website use the WordPress login (cookie and nonce) when no app token is sent"
+msgstr "Cải tiến – các yêu cầu REST từ trang web dùng đăng nhập WordPress (cookie và nonce) khi không gửi token ứng dụng"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - styles, scripts and no-cache headers are sent only on pages that show the plugin; the unused tipTip library was removed and the admin no longer calls ip-api.com"
+msgstr "Cải tiến – kiểu, tập lệnh và header no-cache chỉ được gửi trên các trang hiển thị plugin; thư viện tipTip không dùng đã được gỡ bỏ và trang quản trị không còn liên hệ ip-api.com"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - every change of a tournament (web forms, blocks and the Android app) goes through one shared layer with the same permissions, locking and change detection"
+msgstr "Cải tiến – mọi thay đổi giải đấu (biểu mẫu web, khối và ứng dụng Android) đều đi qua một lớp chung với cùng quyền, khóa và theo dõi thay đổi"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - new admin page with Overview, Settings and Help instead of nine settings tabs; every setting is checked on the server and errors are shown next to the field"
+msgstr "Cải tiến – trang quản trị mới với các phần Tổng quan, Cài đặt và Trợ giúp thay cho chín tab cài đặt; mỗi cài đặt được kiểm tra trên máy chủ và lỗi được hiển thị cạnh trường"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - the serving player is marked on the match cards; the special group is highlighted in matches, results, players, statistics and winners; the tournament details (invitation text) can be shown at any time"
+msgstr "Thêm mới – người giao bóng được đánh dấu trên thẻ trận đấu; nhóm đặc biệt được làm nổi bật trong trận đấu, kết quả, người chơi, thống kê và người thắng; có thể hiển thị chi tiết giải đấu (nội dung lời mời) bất cứ lúc nào"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - the tournament block takes its colours from the theme (button and palette colours); the block's Styles panel can change the accent, the tab bar and table headers, their text and the colour of the special group"
+msgstr "Thêm mới – khối giải đấu lấy màu từ giao diện (màu nút và bảng màu); bảng Kiểu của khối cho phép thay đổi màu nhấn, thanh tab và tiêu đề bảng, chữ của chúng và màu nhóm đặc biệt"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - the tournament block: Share dialog with a QR code, \"Open in the app\" line, full-screen presentation that rotates the sections, map of the tournament place in the settings, and guided tours of the page and of four example tournaments"
+msgstr "Thêm mới – trong khối giải đấu: hộp thoại Chia sẻ có mã QR, dòng “Mở trong ứng dụng”, trình chiếu toàn màn hình với các phần luân phiên, bản đồ địa điểm giải đấu trong cài đặt và các hướng dẫn tham quan trang cũng như bốn giải đấu mẫu"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - the plugin admin can convert the main page to the blocks with one button; the old content stays in the page revisions. New installs create the main page from the blocks. The shortcodes [doroto_tournament] and [doroto_tournament_list] show the blocks in the classic editor; the 1.x shortcodes keep working"
+msgstr "Thêm mới – quản trị viên plugin có thể chuyển trang chính sang khối chỉ bằng một nút; nội dung cũ vẫn còn trong các bản sửa đổi của trang. Các bản cài mới tạo trang chính từ khối. Shortcode [doroto_tournament] và [doroto_tournament_list] hiển thị khối trong trình soạn thảo cổ điển; shortcode của phiên bản 1.x vẫn hoạt động"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - blocks for the block editor: \"Rotation tournament\" (matches, results, players, statistics and settings on tabs, updated live without reloading the page), its variations \"Tournament standings\", \"Tournament matches\" and \"Tournament presentation\", \"Tournament list\" and \"Tournament invitation\""
+msgstr "Thêm mới – các khối cho trình soạn thảo khối: “Giải đấu xoay vòng” (trận đấu, kết quả, người chơi, thống kê và cài đặt trong các tab, cập nhật theo thời gian thực mà không cần tải lại trang), các biến thể “Bảng xếp hạng giải đấu”, “Trận đấu của giải” và “Trình chiếu giải đấu”, cùng “Danh sách giải đấu xoay vòng” và “Lời mời giải đấu xoay vòng”"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "2.0.0 - 2026/10/06"
+msgstr "2.0.0 - 2026/10/06"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Change - the review request is shown only to administrators, 14 days after activation once the site has its own tournament, and comes back 7 days after \"Remind me\" until the plugin is rated"
+msgstr "Thay đổi – lời đề nghị đánh giá chỉ hiển thị cho quản trị viên, 14 ngày sau khi kích hoạt, khi trang đã có giải đấu riêng, và xuất hiện lại 7 ngày sau khi chọn “Nhắc tôi” cho đến khi plugin được đánh giá"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - the tournament page shows a short link to the Android app (can be turned off in Settings -&gt; Mobile app)"
+msgstr "Thêm mới – trang giải đấu hiển thị một liên kết ngắn đến ứng dụng Android (tắt trong Cài đặt -&gt; Ứng dụng di động)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - optional mode join/leave for the app join endpoint"
+msgstr "Thêm mới – chế độ tham gia/rời tùy chọn cho endpoint tham gia của ứng dụng"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - REST endpoint create-player: the organizer creates a player and adds them to the tournament in one step; the player gets an e-mail to set the password"
+msgstr "Thêm mới – endpoint REST create-player: nhà tổ chức tạo người chơi và thêm vào giải đấu chỉ trong một bước; người chơi nhận email để đặt mật khẩu"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Change - tournament links to the home page (\"?tournament_id=5\") and the old app QR codes (\"/tournament?id=5\") open the tournament page"
+msgstr "Thay đổi – liên kết giải đấu trên trang chính (“?tournament_id=5”) và mã QR cũ của ứng dụng (“/tournament?id=5”) mở trang giải đấu"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Change - the default name of a new tournament uses the site time zone, not UTC"
+msgstr "Thay đổi – tên mặc định của giải đấu mới dùng múi giờ của trang thay vì UTC"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Change - the app can be signed in on several devices at once (up to 10 per user)"
+msgstr "Thay đổi – có thể đăng nhập ứng dụng trên nhiều thiết bị cùng lúc (tối đa 10 thiết bị mỗi người dùng)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Change - invitation link only joins the tournament (a second click no longer unregisters the player), redirects to the login page and back, and then to the tournament page"
+msgstr "Thay đổi – liên kết mời chỉ đăng ký vào giải đấu (nhấp lần hai không còn hủy đăng ký người chơi), chuyển đến trang đăng nhập và quay lại, rồi đến trang giải đấu"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - REST responses are never served from page caches or CDNs"
+msgstr "Sửa lỗi – phản hồi REST không bao giờ còn được phục vụ từ bộ nhớ đệm trang hoặc CDN"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Authorization header is read also on FPM/CGI hosts"
+msgstr "Sửa lỗi – header Authorization cũng được đọc trên hosting dùng FPM/CGI"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - database upgrade adds new columns also on already installed sites"
+msgstr "Sửa lỗi – cập nhật cơ sở dữ liệu cũng thêm các cột mới trên những trang đã cài đặt"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - several devices signing in or refreshing their session at the same moment no longer sign each other out"
+msgstr "Sửa lỗi – nhiều thiết bị đăng nhập hoặc làm mới phiên cùng lúc không còn đăng xuất lẫn nhau"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - every change of a running tournament (correcting a result, suspending or removing a player, settings, payments, special group, web forms) runs under the tournament lock; correcting a result while another court saved its result could stall the whole tournament"
+msgstr "Sửa lỗi – mọi thay đổi của giải đấu đang diễn ra (sửa kết quả, tạm dừng hoặc xóa người chơi, cài đặt, thanh toán, nhóm đặc biệt, biểu mẫu web) đều được thực hiện dưới khóa giải đấu; việc sửa kết quả trong lúc sân khác đang lưu kết quả có thể làm dừng cả giải đấu"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - tournament lock: results entered at the same time on several courts are no longer lost"
+msgstr "Sửa lỗi – khóa giải đấu: kết quả nhập đồng thời trên nhiều sân không còn bị mất"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - every write to a tournament updates last_update"
+msgstr "Sửa lỗi – mỗi lần ghi vào giải đấu đều cập nhật last_update"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - results entered on the web no longer store last_update = 0, so the Android app refreshes again"
+msgstr "Sửa lỗi – kết quả nhập trên trang web không còn lưu last_update = 0, nên ứng dụng Android lại cập nhật được"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Security - with registration disabled only tournament organizers can create player accounts from the app (before, any signed-in player could)"
+msgstr "Bảo mật – khi đăng ký bị tắt, chỉ nhà tổ chức giải đấu mới có thể tạo tài khoản người chơi từ ứng dụng (trước đây bất kỳ người chơi đã đăng nhập nào cũng có thể)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Security - an account created by an organizer no longer returns a login session of the new player to the organizer"
+msgstr "Bảo mật – tài khoản do nhà tổ chức tạo không còn trả phiên đăng nhập của người chơi mới cho nhà tổ chức"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Security - registration from the app (incl. a new Google account) respects \"Anyone can register\""
+msgstr "Bảo mật – đăng ký từ ứng dụng (kể cả tài khoản Google mới) tuân theo cài đặt “Ai cũng có thể đăng ký”"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Security - final doubles and registration toggle check tournament admin rights"
+msgstr "Bảo mật – trận chung kết đánh đôi và việc bật/tắt đăng ký kiểm tra quyền quản trị viên giải đấu"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Security - guided tour actions need a nonce; regenerating the example tournaments is throttled"
+msgstr "Bảo mật – các thao tác hướng dẫn tham quan cần nonce; việc tạo lại giải đấu mẫu bị giới hạn"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Security - admin actions sent as links are protected by a nonce (CSRF)"
+msgstr "Bảo mật – các thao tác quản trị gửi qua liên kết được bảo vệ bằng nonce (CSRF)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Security - front-end forms check tournament admin rights, not only the nonce (any logged-in user could change players, payments or delete a tournament)"
+msgstr "Bảo mật – các biểu mẫu trên trang web kiểm tra quyền quản trị viên giải đấu chứ không chỉ nonce (trước đây bất kỳ người dùng đã đăng nhập nào cũng có thể thay đổi người chơi, thanh toán hoặc xóa giải đấu)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - app tournament links on the central site (?tournament_id=5&amp;doroto_site=) are forwarded to the club's tournament page when the app is not installed (sites from the site directory; other sites get a page with a link)"
+msgstr "Thêm mới – liên kết ứng dụng đến giải đấu trên trang trung tâm (?tournament_id=5&amp;doroto_site=) chuyển đến trang giải đấu của câu lạc bộ nếu chưa cài ứng dụng (các trang trong danh bạ trang web; với trang khác sẽ hiển thị trang có liên kết)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - the tournament page has an \"Open in the app\" link: Android opens the tournament in the app, or Google Play when it is missing"
+msgstr "Thêm mới – trang giải đấu có liên kết “Mở trong ứng dụng”: Android mở giải đấu trong ứng dụng, hoặc Google Play nếu chưa có ứng dụng"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - saving the tournament settings rejects an unknown tournament type"
+msgstr "Sửa lỗi – khi lưu cài đặt giải đấu, loại giải đấu không xác định sẽ bị từ chối"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - a deleted account leaves its open tournaments: removed when it has not played yet, otherwise suspended; it also leaves the organizers, special group and payments (it was drawn into matches as \"Unknown player\")"
+msgstr "Sửa lỗi – tài khoản bị xóa sẽ rời các giải đấu đang mở: bị xóa nếu chưa chơi, nếu không thì bị tạm dừng; đồng thời bị xóa khỏi nhà tổ chức, nhóm đặc biệt và thanh toán (trước đây bị đưa vào bốc thăm với tên “Người chơi không xác định”)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - removing a payment no longer turns the payment list into a JSON object (the Android app could crash on the statistics page)"
+msgstr "Sửa lỗi – xóa một khoản thanh toán không còn biến danh sách thanh toán thành đối tượng JSON (ứng dụng Android có thể bị lỗi ở trang thống kê)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - the change form fits on a phone screen (the result and the button were off screen)"
+msgstr "Sửa lỗi – biểu mẫu thay đổi vừa với màn hình điện thoại (kết quả và nút từng nằm ngoài màn hình)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - organizers see an \"Edit result\" button next to every played match; it selects the match and its result in the change form (the form above the table was easy to miss)"
+msgstr "Thêm mới – nhà tổ chức thấy nút “Sửa kết quả” cạnh mỗi trận đã chơi; nút này chọn trận và kết quả của nó trong biểu mẫu thay đổi (biểu mẫu phía trên bảng rất dễ bị bỏ sót)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - REST route skip-matches: the organizer skips several ongoing matches at once and new matches are drawn from all free players"
+msgstr "Thêm mới – route REST skip-matches: nhà tổ chức bỏ qua nhiều trận đang diễn ra cùng lúc, và các trận mới được bốc thăm từ tất cả người chơi đang rảnh"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - among players with the same number of new teammates left, the one who played fewer games is drawn first; sides (left/right) alternate for both players of a team"
+msgstr "Cải tiến – trong số người chơi có cùng số đồng đội mới còn lại, người đã chơi ít trận hơn được bốc thăm trước; các bên (trái/phải) luân phiên cho cả hai người chơi của đội"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - the draw chooses the opposing team (and the teammate) by previous meetings too: players meet more different opponents and the same players meet less often (with 14 players on 2 courts, pairs that met 3 or more times dropped from about 5 to 1 per evening)"
+msgstr "Cải tiến – bốc thăm chọn đội đối thủ (và đồng đội) có tính đến các lần gặp trước: người chơi gặp nhiều đối thủ khác nhau hơn và cùng những người chơi gặp nhau ít hơn (với 14 người chơi trên 2 sân, số cặp gặp nhau từ 3 lần trở lên trong một buổi tối giảm từ khoảng 5 xuống 1)"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.6.0 - 2026/10/02"
+msgstr "1.6.0 - 2026/10/02"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.6.1 - 2026/10/02"
+msgstr "1.6.1 - 2026/10/02"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.6.2 - 2026/10/04"
+msgstr "1.6.2 - 2026/10/04"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - fixed some errors found in Plugin Check"
+msgstr "Sửa lỗi – đã sửa một số lỗi do Plugin Check phát hiện"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.5.8 - 2026/06/12"
+msgstr "1.5.8 - 2026/06/12"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - some translations"
+msgstr "Sửa lỗi – một số bản dịch"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.5.7 - 2026/06/06"
+msgstr "1.5.7 - 2026/06/06"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - register and sign in for android app"
+msgstr "Sửa lỗi – đăng ký và đăng nhập trong ứng dụng Android"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.5.6 - 2026/05/13"
+msgstr "1.5.6 - 2026/05/13"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - remove admin for android app"
+msgstr "Thêm mới – xóa quản trị viên cho ứng dụng Android"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.5.5 - 2026/05/12"
+msgstr "1.5.5 - 2026/05/12"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - rest value is safe now"
+msgstr "Sửa lỗi – giá trị rest giờ đã an toàn"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.0.0 - 2024/01/01"
+msgstr "1.0.0 - 2024/01/01"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.0.1 - 2024/01/03"
+msgstr "1.0.1 - 2024/01/03"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.0.2 - 2024/01/21"
+msgstr "1.0.2 - 2024/01/21"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.0.3 - 2024/01/26"
+msgstr "1.0.3 - 2024/01/26"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.0.4 - 2024/02/02"
+msgstr "1.0.4 - 2024/02/02"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.1.0 - 2024/02/04"
+msgstr "1.1.0 - 2024/02/04"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.1.1 - 2024/02/09"
+msgstr "1.1.1 - 2024/02/09"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.1.2 - 2024/02/13"
+msgstr "1.1.2 - 2024/02/13"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.1.3 - 2024/02/17"
+msgstr "1.1.3 - 2024/02/17"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.1.4 - 2024/02/18"
+msgstr "1.1.4 - 2024/02/18"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.1.5 - 2024/02/20"
+msgstr "1.1.5 - 2024/02/20"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.1.6 - 2024/02/25"
+msgstr "1.1.6 - 2024/02/25"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.1.7 - 2024/03/01"
+msgstr "1.1.7 - 2024/03/01"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.1.8 - 2024/03/07"
+msgstr "1.1.8 - 2024/03/07"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.1.9 - 2024/03/09"
+msgstr "1.1.9 - 2024/03/09"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.2.0 - 2024/03/20"
+msgstr "1.2.0 - 2024/03/20"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.2.1 - 2024/03/21"
+msgstr "1.2.1 - 2024/03/21"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.2.2 - 2024/04/17"
+msgstr "1.2.2 - 2024/04/17"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.2.3 - 2024/04/19"
+msgstr "1.2.3 - 2024/04/19"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.2.4 - 2024/05/08"
+msgstr "1.2.4 - 2024/05/08"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.2.5 - 2024/05/15"
+msgstr "1.2.5 - 2024/05/15"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.2.6 - 2024/05/29"
+msgstr "1.2.6 - 2024/05/29"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.2.7 - 2024/06/07"
+msgstr "1.2.7 - 2024/06/07"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.2.8 - 2024/06/21"
+msgstr "1.2.8 - 2024/06/21"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.2.9 - 2024/06/23"
+msgstr "1.2.9 - 2024/06/23"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.3.0 - 2024/07/06"
+msgstr "1.3.0 - 2024/07/06"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.3.1 - 2024/07/12"
+msgstr "1.3.1 - 2024/07/12"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.3.2 - 2024/07/18"
+msgstr "1.3.2 - 2024/07/18"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.3.3 - 2024/09/13"
+msgstr "1.3.3 - 2024/09/13"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.3.4 - 2024/09/26"
+msgstr "1.3.4 - 2024/09/26"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.3.5 - 2024/09/28"
+msgstr "1.3.5 - 2024/09/28"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.3.6 - 2024/11/02"
+msgstr "1.3.6 - 2024/11/02"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.3.7 - 2024/12/13"
+msgstr "1.3.7 - 2024/12/13"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.3.8 - 2024/12/15"
+msgstr "1.3.8 - 2024/12/15"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.3.9 - 2024/12/21"
+msgstr "1.3.9 - 2024/12/21"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.4.0 - 2024/12/27"
+msgstr "1.4.0 - 2024/12/27"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.4.1 - 2024/12/31"
+msgstr "1.4.1 - 2024/12/31"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.4.2 - 2025/04/16"
+msgstr "1.4.2 - 2025/04/16"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.4.3 - 2025/05/04"
+msgstr "1.4.3 - 2025/05/04"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.4.4 - 2025/05/25"
+msgstr "1.4.4 - 2025/05/25"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.4.5 - 2025/06/09"
+msgstr "1.4.5 - 2025/06/09"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.4.6 - 2025/06/14"
+msgstr "1.4.6 - 2025/06/14"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.4.7 - 2025/07/27"
+msgstr "1.4.7 - 2025/07/27"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.4.8 - 2025/08/07"
+msgstr "1.4.8 - 2025/08/07"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.4.9 - 2025/08/07"
+msgstr "1.4.9 - 2025/08/07"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.5.0 - 2025/08/08"
+msgstr "1.5.0 - 2025/08/08"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.5.1 - 2025/08/17"
+msgstr "1.5.1 - 2025/08/17"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.5.2 - 2025/08/26"
+msgstr "1.5.2 - 2025/08/26"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.5.3 - 2025/12/05"
+msgstr "1.5.3 - 2025/12/05"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.5.4 - 2026/04/22"
+msgstr "1.5.4 - 2026/04/22"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - stable login to android application"
+msgstr "Sửa lỗi – đăng nhập ổn định vào ứng dụng Android"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - existing players are not repeated in the menu Add players"
+msgstr "Sửa lỗi – người chơi hiện có không bị lặp lại trong menu Thêm người chơi"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Change - Public release of Android app"
+msgstr "Thay đổi – phát hành công khai ứng dụng Android"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Add 'last update' to the database also for already installed plugings"
+msgstr "Sửa lỗi – thêm “last update” vào cơ sở dữ liệu cả cho các plugin đã cài"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Uninstall also 2 new pages (privacy policy and terms of service)"
+msgstr "Sửa lỗi – xóa cả 2 trang mới (chính sách quyền riêng tư và điều khoản dịch vụ)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Add 'last update' to the database"
+msgstr "Sửa lỗi – thêm “last update” vào cơ sở dữ liệu"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Improved some functions for Android app"
+msgstr "Sửa lỗi – cải thiện một số chức năng cho ứng dụng Android"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Announcement about the opportunity to become an application tester"
+msgstr "Thêm mới – thông báo về cơ hội trở thành người thử nghiệm ứng dụng"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Privacy Policy page"
+msgstr "Thêm mới – trang chính sách quyền riêng tư"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Terms of Service page"
+msgstr "Thêm mới – trang điều khoản dịch vụ"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Info about last update speed up loading"
+msgstr "Thêm mới – thông tin cập nhật gần nhất giúp tải nhanh hơn"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Correct an error message Undefined array key player['count']"
+msgstr "Sửa lỗi – đã sửa thông báo lỗi Undefined array key player['count']"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Tournaments filtering by distance and visibility"
+msgstr "Thêm mới – lọc giải đấu theo khoảng cách và trạng thái hiển thị"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Support for a Android app"
+msgstr "Thêm mới – hỗ trợ ứng dụng Android"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Controls the visibility of the tournament in the public list."
+msgstr "Thêm mới – quản lý hiển thị giải đấu trong danh sách công khai."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Location of the tournament."
+msgstr "Thêm mới – địa điểm giải đấu."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Log in/out block had a problem"
+msgstr "Sửa lỗi – có sự cố ở khối đăng ký/rời giải"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Parameter When enough players are available had sometimes a wrong value."
+msgstr "Sửa lỗi – tham số “Khi có đủ người chơi” đôi khi có giá trị sai."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Match hiding correction"
+msgstr "Sửa lỗi – đã sửa việc ẩn trận đấu"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Register and log in a new user only if anyone can register (system settings)."
+msgstr "Sửa lỗi – đăng ký và đăng nhập người dùng mới chỉ khi ai cũng có thể đăng ký (cài đặt hệ thống)."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Register and log in a new user."
+msgstr "Thêm mới – đăng ký và đăng nhập người dùng mới."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Translation loading too early warning."
+msgstr "Sửa lỗi – cảnh báo về bản dịch được tải quá sớm."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Dashboard overview widget."
+msgstr "Thêm mới – tiện ích tổng quan trên bảng tin."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Log-link block."
+msgstr "Thêm mới – khối Log-link."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Sometimes tournament_id was unknown."
+msgstr "Sửa lỗi – đôi khi tournament_id không xác định."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Preserving stored values on the backend."
+msgstr "Sửa lỗi – lưu các giá trị đã ghi lên máy chủ."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Guaranteed visibility of the selected tournament in the tournament table."
+msgstr "Sửa lỗi – bảo đảm giải đấu được chọn luôn hiển thị trong bảng giải đấu."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Error with hide parameter."
+msgstr "Sửa lỗi – lỗi với tham số hide."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Permalink structure also works with the floating help icon."
+msgstr "Sửa lỗi – cấu trúc đường dẫn tĩnh hoạt động cả với biểu tượng trợ giúp nổi."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Tournament name is not copied from previous one."
+msgstr "Sửa lỗi – tên giải đấu không bị sao chép từ giải trước."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - More tournament examples for demonstration."
+msgstr "Thêm mới – thêm giải đấu mẫu để minh họa."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Floating help icon."
+msgstr "Thêm mới – biểu tượng trợ giúp nổi."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Prevent cashing for logged users."
+msgstr "Thêm mới – tắt bộ nhớ đệm cho người dùng đã đăng nhập."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Doubles Badminton table also for co-players"
+msgstr "Sửa lỗi – bảng cầu lông đôi cả cho đồng đội"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Tournament progress info."
+msgstr "Thêm mới – thông tin về tiến độ giải đấu."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Change game results availability."
+msgstr "Sửa lỗi – thay đổi khả năng truy cập kết quả trận đấu."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Special group count."
+msgstr "Thêm mới – số thành viên nhóm đặc biệt."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Change of information about the end of the tournament round."
+msgstr "Thay đổi thông tin về kết thúc vòng đấu."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Opponent selection."
+msgstr "Sửa lỗi – chọn đối thủ."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Pair selection mechanism explanation on the help page."
+msgstr "Thêm mới – giải thích cơ chế chọn cặp trên trang trợ giúp."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Pair selection didn´t take into account number of played games in total."
+msgstr "Sửa lỗi – việc chọn cặp không tính đến tổng số trận đã chơi."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Rights to Suspension and Resumption."
+msgstr "Sửa lỗi – quyền tạm dừng và khôi phục."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Rights to add a special group."
+msgstr "Sửa lỗi – quyền thêm vào nhóm đặc biệt."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Rights to add a tournament admin."
+msgstr "Sửa lỗi – quyền thêm quản trị viên giải đấu."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Rights to add other players into tournaments."
+msgstr "Sửa lỗi – quyền thêm người chơi khác vào giải đấu."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Do not show instructions during the tournament presentation."
+msgstr "Sửa lỗi – không hiển thị hướng dẫn khi đang trình chiếu giải đấu."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Admin can change a default value for minimum number of games played before a player can be declared a winner."
+msgstr "Thêm mới – quản trị viên có thể thay đổi giá trị mặc định của số trận tối thiểu cần chơi để người chơi được công bố là người thắng."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - The ability to specify a minimum number of games played before a player can be declared a winner."
+msgstr "Thêm mới – có thể đặt số trận tối thiểu cần chơi để người chơi được công bố là người thắng."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Removing a player from a tournament."
+msgstr "Sửa lỗi – xóa người chơi khỏi giải đấu."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Ready for testing in WP Playground."
+msgstr "Sửa lỗi – sẵn sàng thử nghiệm trên WP Playground."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Solving some database errors with empty values."
+msgstr "Sửa lỗi – loại bỏ một số lỗi cơ sở dữ liệu với giá trị trống."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Update for WP Playground."
+msgstr "Sửa lỗi – cập nhật cho WP Playground."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Improved playmate choose."
+msgstr "Sửa lỗi – cải thiện việc chọn đồng đội."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Problems with removing players during a game."
+msgstr "Sửa lỗi – sự cố khi xóa người chơi trong lúc thi đấu."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - A currently playing player can´t be removed."
+msgstr "Sửa lỗi – không thể xóa người chơi đang thi đấu."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Fix real count of players after their removing."
+msgstr "Sửa lỗi – số người chơi chính xác sau khi xóa người chơi."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Fix an error during removing a player from the tournament."
+msgstr "Sửa lỗi – lỗi khi xóa người chơi khỏi giải đấu."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Redirection to a tournament in case of a user entry."
+msgstr "Sửa lỗi – chuyển hướng đến giải đấu khi người dùng nhập dữ liệu."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - icon format."
+msgstr "Sửa lỗi – định dạng biểu tượng."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Modification for WP Playground."
+msgstr "Hoàn thiện cho WP Playground."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Fixed a bug in the database that prevented a tournament record from being created on some servers."
+msgstr "Sửa lỗi – đã sửa lỗi cơ sở dữ liệu khiến bản ghi giải đấu không được tạo trên một số máy chủ."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Unregistered users can no longer enter results in the singles tournament."
+msgstr "Sửa lỗi – người dùng chưa đăng ký không còn nhập được kết quả trong giải đánh đơn."
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid "Possibility to remove players from an already ongoing tournament."
+msgstr "Có thể xóa người chơi khỏi giải đấu đang diễn ra."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "New - Expanded the ability for tournament administrators to browse through players they have already met at the tournament."
+msgstr "Mới – quản trị viên giải đấu có thể xem nhiều người chơi hơn mà họ đã gặp tại một giải đấu."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "New - If the player has not yet registered for any tournament, it is possible to choose whether to show him a quick help."
+msgstr "Mới – nếu người chơi chưa đăng ký giải đấu nào, bạn có thể chọn có hiển thị trợ giúp ngắn cho họ hay không."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "New - Optional login prompt."
+msgstr "Mới – lời mời đăng nhập tùy chọn."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - If all tournaments were deleted, a new tournament could not be created."
+msgstr "Sửa lỗi – nếu tất cả giải đấu đã bị xóa thì không thể tạo giải đấu mới."
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid ""
+"Trial tournament improvements.\n"
+"Added the option to announce the end of the tournament round."
+msgstr ""
+"Cải thiện giải đấu luyện tập.\n"
+"Thêm khả năng thông báo kết thúc vòng đấu."
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid ""
+"Improved the visual appearance of the main page.\n"
+"Badminton added to the list of available tournaments."
+msgstr ""
+"Cải thiện giao diện trang chính.\n"
+"Thêm cầu lông vào danh sách giải đấu khả dụng."
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid "Option to announce separate winners from the special group and outside the special group."
+msgstr "Có thể công bố người thắng riêng cho nhóm đặc biệt và ngoài nhóm."
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid ""
+"Notices after a plugin activation.\n"
+"Added player trend."
+msgstr ""
+"Thông báo sau khi kích hoạt plugin.\n"
+"Thêm xu hướng của người chơi."
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid ""
+"Modified tournament editing tab.\n"
+"Added option to change tournament type."
+msgstr ""
+"Thay đổi tab chỉnh sửa giải đấu.\n"
+"Thêm khả năng đổi loại giải đấu."
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid ""
+"Reactivating the plugin doesn´t affect the already deleted tournament example. \n"
+"Unblock offering maximum games count.\n"
+"Fix tournament change when entering results.\n"
+"Added quick help for newcomers.\n"
+"Allow the final match also for singles."
+msgstr ""
+"Kích hoạt lại plugin không ảnh hưởng đến giải đấu mẫu đã bị xóa.\n"
+"Mở khóa lựa chọn số game tối đa.\n"
+"Sửa việc thay đổi giải đấu trong khi nhập kết quả.\n"
+"Thêm trợ giúp ngắn cho người mới.\n"
+"Cho phép trận chung kết cả ở đánh đơn."
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid ""
+"Added the option for single tournaments. \n"
+"Created an environment for additional sports."
+msgstr ""
+"Thêm khả năng tổ chức giải đánh đơn.\n"
+"Tạo môi trường cho các môn thể thao khác."
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid ""
+"The administrator can now use 'hide' option when editing the match result.\n"
+"Free score input is allowed. This opens using not only for tennis but for example for table tennis or beach volleyball."
+msgstr ""
+"Quản trị viên giờ có thể dùng tùy chọn “ẩn” khi thay đổi kết quả trận đấu.\n"
+"Cho phép nhập tỉ số tự do. Nhờ đó plugin có thể dùng không chỉ cho quần vợt mà còn, ví dụ, cho bóng bàn hoặc bóng chuyền bãi biển."
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid ""
+"Minor changes in code:\n"
+"* Allow to transfer organizer rights to a non-playing user.\n"
+"* Ensuring an even rotation of serves at the start of the tournament."
+msgstr ""
+"Thay đổi nhỏ trong mã nguồn:\n"
+"* Cho phép chuyển quyền nhà tổ chức cho người dùng không thi đấu.\n"
+"* Bảo đảm luân phiên giao bóng đều đặn ở đầu giải đấu."
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid "Fixed choosing between left and right side in first matches."
+msgstr "Sửa việc chọn bên trái và bên phải ở những trận đầu tiên."
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid "A small modification of admin screen."
+msgstr "Thay đổi nhỏ trên màn hình quản trị."
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid "First release to public."
+msgstr "Bản phát hành công khai đầu tiên."
+

@@ -1,0 +1,1289 @@
+# Translation of Plugins - Rotation Tournaments - Development Readme (trunk) in Romanian
+# This file is distributed under the same license as the Plugins - Rotation Tournaments - Development Readme (trunk) package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Plugins - Rotation Tournaments - Development Readme (trunk)\n"
+"PO-Revision-Date: 2026-10-07 16:17:32+0000\n"
+"Language: ro_RO\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n == 1) ? 0 : ((n == 0 || n % 100 >= 2 && n % 100 <= 19) ? 1 : 2);\n"
+"X-Generator: GlotPress/4.1.0\n"
+
+#. Short description.
+#, gp-priority: high
+msgid "Do you play Singles or Doubles Tournaments? This plugin manages Rotation Tournaments where players have a different partner in each game."
+msgstr "Jucați turnee de simplu sau de dublu? Acest modul gestionează turnee rotative, în care jucătorii au un partener nou în fiecare joc."
+
+#. Plugin name.
+#, gp-priority: high
+msgid "Rotation Tournaments"
+msgstr "Turnee rotative"
+
+#. Found in installation paragraph.
+msgid "After installation, go to the app's settings and enter the address of your website where this plugin is installed."
+msgstr "După instalare, deschideți setările aplicației și introduceți adresa site-ului pe care este instalat acest modul."
+
+#. Found in installation paragraph.
+msgid "Or download it directly from this link: https://play.google.com/store/apps/details?id=cz.doroto.app"
+msgstr "Sau descărcați-o direct de aici: https://play.google.com/store/apps/details?id=cz.doroto.app"
+
+#. Found in installation paragraph.
+msgid "Search for \"Rotation Tournaments\" on the Google Play Store."
+msgstr "Căutați „Rotation Tournaments” în Google Play."
+
+#. Found in description paragraph.
+msgid "To get the full experience of managing tournaments on the go, download our mobile app, now available on Google Play!"
+msgstr "Pentru a gestiona complet turneele din mers, descărcați aplicația noastră mobilă, disponibilă acum pe Google Play!"
+
+#. Found in description paragraph.
+msgid "<strong>YouTube quick intro:</strong>"
+msgstr "<strong>Scurtă introducere pe YouTube:</strong>"
+
+#. Found in description list item.
+msgid "Video for a quick introduction to the Rotation Tournament:"
+msgstr "Videoclip cu o scurtă introducere în turneul rotativ:"
+
+#. Found in faq paragraph.
+msgid "Yes. If you install the Rotation Tournaments plugin, allow player registration, and enable visibility in the website list, your site can appear in the Android app. Initially, someone must manually enter your website address into the app. After that, it becomes visible in the list for all users."
+msgstr "Da. Dacă instalați modulul Rotation Tournaments, permiteți înregistrarea jucătorilor și activați vizibilitatea în lista de site-uri, site-ul dumneavoastră poate apărea în aplicația Android. Mai întâi, cineva trebuie să introducă manual adresa site-ului în aplicație. După aceea, site-ul devine vizibil în listă pentru toți utilizatorii."
+
+#. Found in faq paragraph.
+msgid "Yes. An iOS version of the Rotation Tournaments app is planned and will be released in the near future."
+msgstr "Da. O versiune iOS a aplicației Rotation Tournaments este planificată și va fi lansată în curând."
+
+#. Found in faq header.
+msgid "Will my website be visible in the Rotation Tournaments Android app?"
+msgstr "Va fi site-ul meu vizibil în aplicația Rotation Tournaments pentru Android?"
+
+#. Found in faq header.
+msgid "Will there be an iPhone or iPad version of the app?"
+msgstr "Va exista o versiune a aplicației pentru iPhone sau iPad?"
+
+#. Found in installation paragraph.
+msgid "<strong>How to install Wordpress plugin:</strong>"
+msgstr "<strong>Cum se instalează modulul WordPress:</strong>"
+
+#. Found in installation list item.
+msgid "After activating the plugin, 4 pages will be created: one for managing tournaments (main page), one with tournament rules, and additional pages for Privacy Policy and Terms of Service. A sample post announcing a newly created tournament will also be added."
+msgstr "După activarea modulului vor fi create 4 pagini: una pentru gestionarea turneelor (pagina principală), una cu regulile turneului și paginile de politică de confidențialitate și termeni și condiții. Va fi adăugat și un articol de exemplu care anunță un turneu nou."
+
+#. Found in installation paragraph.
+msgid "<strong>How to install the Android app:</strong>"
+msgstr "<strong>Cum se instalează aplicația Android:</strong>"
+
+#. Found in description paragraph.
+msgid "<strong>This plugin is the server-side for the \"Rotation Tournaments\" Android app.</strong>"
+msgstr "<strong>Acest modul este partea de server a aplicației Android „Rotation Tournaments”.</strong>"
+
+#. Screenshot description.
+msgid "Individual tournament participants enter their results into the WordPress server and share the data with each other."
+msgstr "Participanții la turneu își introduc rezultatele pe serverul WordPress și își partajează datele între ei."
+
+#. Screenshot description.
+msgid "Matches played. (Android app)"
+msgstr "Meciuri jucate. (Aplicația Android)"
+
+#. Screenshot description.
+msgid "Tournament table. (Wordpress)"
+msgstr "Tabelul turneului. (WordPress)"
+
+#. Screenshot description.
+msgid "Matches drawn. (Android app)"
+msgstr "Meciuri trase la sorți. (Aplicația Android)"
+
+#. Screenshot description.
+msgid "Editing tournament parameters. (Wordpress)"
+msgstr "Editarea parametrilor turneului. (WordPress)"
+
+#. Screenshot description.
+msgid "Table of players with rankings. (Android app)"
+msgstr "Tabelul jucătorilor cu clasament. (Aplicația Android)"
+
+#. Screenshot description.
+msgid "Matches played. (Wordpress)"
+msgstr "Meciuri jucate. (WordPress)"
+
+#. Screenshot description.
+msgid "Basic overview of the tournament. (Android app)"
+msgstr "Prezentarea generală a turneului. (Aplicația Android)"
+
+#. Screenshot description.
+msgid "Matches drawn. (Wordpress)"
+msgstr "Meciuri trase la sorți. (WordPress)"
+
+#. Found in description paragraph.
+msgid "<strong>Rotation Tournaments</strong> provides a platform for organizing all kinds of sports Singles and Doubles Tournaments, e.g."
+msgstr "<strong>Turneele rotative</strong> sunt o platformă pentru organizarea oricăror turnee sportive de simplu și de dublu, de exemplu:"
+
+#. Found in description list item.
+msgid "Squash"
+msgstr "Squash"
+
+#. Found in description list item.
+msgid "Beach Volleyball"
+msgstr "Volei pe plajă"
+
+#. Found in description list item.
+msgid "Badminton"
+msgstr "Badminton"
+
+#. Found in description list item.
+msgid "Padel"
+msgstr "Padel"
+
+#. Found in description list item.
+msgid "Table Tennis"
+msgstr "Tenis de masă"
+
+#. Found in description list item.
+msgid "Tennis"
+msgstr "Tenis"
+
+#. Found in faq paragraph.
+msgid ""
+"This plugin can be used for all types of sports where 2 or 4 players compete in singles or doubles.\n"
+"You can use this plugin for tennis, table tennis, squash, padel, badminton, beach volleyball and probably for more."
+msgstr ""
+"Acest modul este potrivit pentru toate sporturile în care concurează 2 sau 4 jucători, la simplu sau la dublu.\n"
+"Poate fi folosit pentru tenis, tenis de masă, squash, padel, badminton, volei pe plajă și probabil și alte sporturi."
+
+#. Found in faq paragraph.
+msgid "Yes. When creating a tournament, you can choose whether to create a singles or a doubles tournament."
+msgstr "Da. La crearea unui turneu puteți alege un turneu de simplu sau de dublu."
+
+#. Found in faq header.
+msgid "What sports tournaments is this plugin for?"
+msgstr "Pentru ce turnee sportive este destinat acest modul?"
+
+#. Found in description paragraph.
+msgid "<strong>General Features:</strong>"
+msgstr "<strong>Funcții generale:</strong>"
+
+#. Found in description paragraph.
+msgid "<strong>Doubles Rotation Tournament:</strong>"
+msgstr "<strong>Turneu rotativ de dublu:</strong>"
+
+#. Found in description paragraph.
+msgid "<strong>Singles Rotation Tournament:</strong>"
+msgstr "<strong>Turneu rotativ de simplu:</strong>"
+
+#. Found in description paragraph.
+msgid "The participants of a tournament change partners several times during the tournament by a random selection and play against different players. The ratio of games won to games lost is calculated for each participant. The winner of the tournament is the player with this highest ratio. While a Singles Rotation Tournament can be organized without the aid of technology, in the case of a Doubles Rotation Tournament, this is not possible."
+msgstr "Participanții la turneu își schimbă aleatoriu partenerii de mai multe ori în timpul turneului și joacă împotriva unor jucători diferiți. Pentru fiecare participant se calculează raportul dintre ghemurile câștigate și cele pierdute. Câștigătorul este jucătorul cu cel mai bun raport. Un turneu rotativ de simplu se poate desfășura fără ajutorul tehnicii, unul de dublu nu."
+
+#. Found in description paragraph.
+msgid "The <strong>Rotation Tournaments</strong> have a strong social aspect because its goal is to keep players in the tournament until the very end. The situation where weaker players would leave the tournament due to elimination rounds is eliminated. It allows grouping players into a special category with special conditions. This special setting can be utilized, for example, in mixed tournaments."
+msgstr "<strong>Turneele rotative</strong> au o puternică componentă socială, deoarece scopul lor este să păstreze jucătorii în turneu până la final. Este exclusă situația în care jucătorii mai slabi părăsesc turneul din cauza eliminării. Jucătorii pot fi grupați într-o categorie specială, cu condiții speciale. Această setare specială poate fi folosită, de exemplu, la turneele mixte."
+
+#. Found in description paragraph.
+msgid "In <strong>Rotation Tournaments</strong>, each participant plays against every other participant and there are no eliminations in individual rounds. To maximize the variety of match combinations, the matches are typically played in a single set."
+msgstr "În <strong>turneele rotative</strong>, fiecare participant joacă împotriva fiecăruia și nimeni nu este eliminat în rundele individuale. Pentru a obține cât mai multe combinații, meciurile se joacă de obicei într-un singur set."
+
+#. Found in description list item.
+msgid "Suitable for various sports: tennis, table tennis, squash, padel, badminton, beach volleyball, and more."
+msgstr "Potrivit pentru diverse sporturi: tenis, tenis de masă, squash, padel, badminton, volei pe plajă și altele."
+
+#. Found in description list item.
+msgid "Integration with website user accounts."
+msgstr "Integrare cu conturile de utilizator ale site-ului."
+
+#. Found in description list item.
+msgid "No downtime during the tournament."
+msgstr "Fără timpi morți în timpul turneului."
+
+#. Found in description list item.
+msgid "Comprehensive overview of player quality."
+msgstr "O imagine completă a nivelului jucătorilor."
+
+#. Found in description list item.
+msgid "User-friendly interface for administrators and participants."
+msgstr "Interfață ușor de folosit pentru administratori și participanți."
+
+#. Found in description list item.
+msgid "Customizable settings for each tournament."
+msgstr "Setări flexibile pentru fiecare turneu."
+
+#. Found in description list item.
+msgid "Real-time score tracking."
+msgstr "Urmărirea scorului în timp real."
+
+#. Found in description list item.
+msgid "Seamless scheduling of matches."
+msgstr "Programare comodă a meciurilor."
+
+#. Found in description list item.
+msgid "Announcement of the Best Player and Most Ideal Pair at the end of the tournament."
+msgstr "Anunțarea celui mai bun jucător și a perechii ideale la finalul turneului."
+
+#. Found in description list item.
+msgid "Ranking based on the ratio of games won to games lost."
+msgstr "Clasamentul este determinat de raportul dintre ghemurile câștigate și cele pierdute."
+
+#. Found in description list item.
+msgid "Individual players can join or leave the tournament at any time."
+msgstr "Jucătorii pot intra în turneu sau îl pot părăsi oricând."
+
+#. Found in description list item.
+msgid "Tournament can be interrupted or extended without disruption."
+msgstr "Turneul poate fi întrerupt sau prelungit fără a-i perturba desfășurarea."
+
+#. Found in description list item.
+msgid "Shorter matches for more participation."
+msgstr "Meciuri mai scurte pentru o participare mai mare."
+
+#. Found in description list item.
+msgid "No eliminations, ensuring all players stay in the game."
+msgstr "Fără eliminări – toți jucătorii rămân în joc."
+
+#. Found in description list item.
+msgid "Define special groups of players with unique conditions."
+msgstr "Definirea unor grupuri speciale de jucători cu condiții speciale."
+
+#. Found in description list item.
+msgid "Suitable for odd numbers of players and minimum lineups of 4 players."
+msgstr "Potrivit pentru un număr impar de jucători și o formație minimă de 4 jucători."
+
+#. Found in description list item.
+msgid "Individuals can enter the tournament without a permanent teammate."
+msgstr "Se poate participa la turneu fără un partener permanent."
+
+#. Found in description list item.
+msgid "Rotation of teammates, ensuring variety in partnerships."
+msgstr "Rotația partenerilor asigură perechi variate."
+
+#. Found in description list item.
+msgid "Alternative form of a Doubles Tournament where players enter each match with a different partner and in different positions (alternating left and right sides)."
+msgstr "O formă alternativă de turneu de dublu, în care jucătorii joacă fiecare meci cu un partener nou și pe poziții diferite (alternând partea stângă și dreaptă)."
+
+#. Found in description list item.
+msgid "Depending on the time options, everyone plays against everyone."
+msgstr "În funcție de timp, fiecare joacă împotriva fiecăruia."
+
+#. Found in description list item.
+msgid "Alternative form of a Singles Tournament where players face each other without elimination rounds."
+msgstr "O formă alternativă de turneu de simplu, în care jucătorii se înfruntă fără eliminări."
+
+#. Found in description header.
+msgid "Features"
+msgstr "Funcții"
+
+#. Found in faq header.
+msgid "Is this plugin suitable for singles tournaments?"
+msgstr "Este acest modul potrivit pentru turnee de simplu?"
+
+#. Found in faq paragraph.
+msgid "Yes, each tournament participant must have their own account. If a website has disabled user registration, this account must be created by the website administrator."
+msgstr "Da, fiecare participant la turneu trebuie să aibă propriul cont de utilizator. Dacă înregistrarea utilizatorilor este dezactivată pe site, acest cont trebuie creat de administratorul site-ului."
+
+#. Found in faq header.
+msgid "Does each player have to have an account created on my website?"
+msgstr "Trebuie ca fiecare jucător să aibă un cont pe site-ul meu?"
+
+#. Found in installation list item.
+msgid "At the end close the tournament and look who was announced as the winner."
+msgstr "La final, închideți turneul și vedeți cine a fost declarat câștigător."
+
+#. Found in installation list item.
+msgid "You can change tournament settings on the main page or you can look at 2 new admin pages that are dedicated for overall environmental settings and for description of all possible shortcodes."
+msgstr "Setările turneului pot fi modificate pe pagina principală sau puteți consulta cele 2 pagini noi de administrare, dedicate setărilor generale ale mediului și descrierii tuturor codurilor scurte disponibile."
+
+#. Found in installation list item.
+msgid "If you have a sufficient amount of players then you can close a registration and start playing matches."
+msgstr "Dacă sunt suficienți jucători, puteți închide înregistrarea și începe meciurile."
+
+#. Found in installation list item.
+msgid "Then you can log in your created tournament and as a tournament´s administrator you can add manually also other players sourced from WP database."
+msgstr "Apoi vă puteți înscrie la turneul creat și, ca administrator al turneului, puteți adăuga manual alți jucători din baza de date WordPress."
+
+#. Found in installation list item.
+msgid "Start by clicking on \"Create a new tournament\" under \"Tournament Selection …\" on the main page."
+msgstr "Începeți făcând clic pe „Creează un turneu nou” în secțiunea „Selectarea turneului…” de pe pagina principală."
+
+#. Found in installation list item.
+msgid "Install the plugin as usual."
+msgstr "Instalați modulul ca de obicei."
+
+#. Found in description paragraph.
+msgid "Visit <a href=\"https://doroto.ltcchrast.cz/\">test page</a> for more information, try to create your own tournament and take a look at <a href=\"https://doroto.ltcchrast.cz/rules-of-the-doubles-rotation-tournament/\">Rules of the Doubles Rotation Tournament</a>."
+msgstr "Vizitați <a href=\"https://doroto.ltcchrast.cz/\">pagina de test</a> pentru a afla mai multe, încercați să creați propriul turneu și consultați <a href=\"https://doroto.ltcchrast.cz/rules-of-the-doubles-rotation-tournament/\">regulile turneului rotativ de dublu</a>."
+
+#. Found in description paragraph.
+msgid "[youtube https://www.youtube.com/watch?v=NoL9aPTv8u8]"
+msgstr "[youtube https://www.youtube.com/watch?v=NoL9aPTv8u8]"
+
+#. Found in description header.
+msgid "More information"
+msgstr "Mai multe informații"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - the plugin restores read permissions of its files after an FTP upload (the web server answered 403 and the admin page stayed empty); the admin page shows a notice when its script cannot be loaded"
+msgstr "Corectare – modulul își restabilește drepturile de citire a fișierelor după o încărcare prin FTP (serverul web răspundea cu 403, iar pagina de administrare rămânea goală); pagina de administrare afișează o notificare dacă scriptul ei nu poate fi încărcat"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - tournament settings keep the ranges of 1.x and of the app (a larger value made the app's dropdowns fail)"
+msgstr "Corectare – setările turneului se păstrează în intervalele versiunii 1.x și ale aplicației (o valoare mai mare bloca listele derulante ale aplicației)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - REST requests from the website use the WordPress login (cookie and nonce) when no app token is sent"
+msgstr "Îmbunătățire – cererile REST de pe site folosesc autentificarea WordPress (cookie și nonce) când nu se trimite un token al aplicației"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - styles, scripts and no-cache headers are sent only on pages that show the plugin; the unused tipTip library was removed and the admin no longer calls ip-api.com"
+msgstr "Îmbunătățire – stilurile, scripturile și antetele no-cache sunt trimise doar pe paginile unde apare modulul; biblioteca tipTip nefolosită a fost eliminată, iar administrarea nu mai contactează ip-api.com"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - every change of a tournament (web forms, blocks and the Android app) goes through one shared layer with the same permissions, locking and change detection"
+msgstr "Îmbunătățire – fiecare modificare a turneului (formulare web, blocuri și aplicația Android) trece printr-un strat comun, cu aceleași drepturi, blocări și urmărire a modificărilor"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - new admin page with Overview, Settings and Help instead of nine settings tabs; every setting is checked on the server and errors are shown next to the field"
+msgstr "Îmbunătățire – o pagină de administrare nouă, cu secțiunile Prezentare generală, Setări și Ajutor, în locul celor nouă file de setări; fiecare setare este verificată pe server, iar erorile sunt afișate lângă câmp"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - the serving player is marked on the match cards; the special group is highlighted in matches, results, players, statistics and winners; the tournament details (invitation text) can be shown at any time"
+msgstr "Adăugat – jucătorul care servește este marcat pe cardurile meciurilor; grupul special este evidențiat în meciuri, rezultate, jucători, statistici și câștigători; detaliile turneului (textul invitației) pot fi afișate oricând"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - the tournament block takes its colours from the theme (button and palette colours); the block's Styles panel can change the accent, the tab bar and table headers, their text and the colour of the special group"
+msgstr "Adăugat – blocul turneului preia culorile din temă (culorile butoanelor și ale paletei); panoul Stiluri al blocului permite schimbarea accentului, a barei de file și a antetelor tabelului, a textului lor și a culorii grupului special"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - the tournament block: Share dialog with a QR code, \"Open in the app\" line, full-screen presentation that rotates the sections, map of the tournament place in the settings, and guided tours of the page and of four example tournaments"
+msgstr "Adăugat – în blocul turneului: dialogul Distribuie cu cod QR, rândul „Deschide în aplicație”, o prezentare pe tot ecranul cu secțiuni alternante, harta locului turneului în setări și tururi ghidate ale paginii și ale celor patru turnee de exemplu"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - the plugin admin can convert the main page to the blocks with one button; the old content stays in the page revisions. New installs create the main page from the blocks. The shortcodes [doroto_tournament] and [doroto_tournament_list] show the blocks in the classic editor; the 1.x shortcodes keep working"
+msgstr "Adăugat – administratorul modulului poate converti pagina principală în blocuri cu un singur buton; conținutul vechi rămâne în reviziile paginii. Instalările noi creează pagina principală din blocuri. Codurile scurte [doroto_tournament] și [doroto_tournament_list] afișează blocurile în editorul clasic; codurile scurte ale versiunii 1.x continuă să funcționeze"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - blocks for the block editor: \"Rotation tournament\" (matches, results, players, statistics and settings on tabs, updated live without reloading the page), its variations \"Tournament standings\", \"Tournament matches\" and \"Tournament presentation\", \"Tournament list\" and \"Tournament invitation\""
+msgstr "Adăugat – blocuri pentru editorul de blocuri: „Turneu rotativ” (meciuri, rezultate, jucători, statistici și setări în file, actualizate în timp real fără reîncărcarea paginii), variantele lui „Clasamentul turneului”, „Meciurile turneului” și „Prezentarea turneului”, precum și „Lista turneelor rotative” și „Invitație la turneu rotativ”"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "2.0.0 - 2026/10/06"
+msgstr "2.0.0 - 2026/10/06"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Change - the review request is shown only to administrators, 14 days after activation once the site has its own tournament, and comes back 7 days after \"Remind me\" until the plugin is rated"
+msgstr "Modificare – cererea de evaluare este afișată doar administratorilor, la 14 zile după activare, când site-ul are deja un turneu propriu, și revine la 7 zile după „Amintește-mi”, până când modulul este evaluat"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - the tournament page shows a short link to the Android app (can be turned off in Settings -&gt; Mobile app)"
+msgstr "Adăugat – pe pagina turneului este afișat un link scurt către aplicația Android (se dezactivează în Setări -&gt; Aplicație mobilă)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - optional mode join/leave for the app join endpoint"
+msgstr "Adăugat – mod opțional de înscriere/retragere pentru endpoint-ul de înscriere al aplicației"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - REST endpoint create-player: the organizer creates a player and adds them to the tournament in one step; the player gets an e-mail to set the password"
+msgstr "Adăugat – endpoint REST create-player: organizatorul creează un jucător și îl adaugă la turneu într-un singur pas; jucătorul primește un e-mail pentru setarea parolei"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Change - tournament links to the home page (\"?tournament_id=5\") and the old app QR codes (\"/tournament?id=5\") open the tournament page"
+msgstr "Modificare – linkurile turneelor de pe pagina principală („?tournament_id=5”) și vechile coduri QR ale aplicației („/tournament?id=5”) deschid pagina turneului"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Change - the default name of a new tournament uses the site time zone, not UTC"
+msgstr "Modificare – numele implicit al unui turneu nou folosește fusul orar al site-ului în locul UTC"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Change - the app can be signed in on several devices at once (up to 10 per user)"
+msgstr "Modificare – vă puteți autentifica în aplicație pe mai multe dispozitive simultan (până la 10 per utilizator)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Change - invitation link only joins the tournament (a second click no longer unregisters the player), redirects to the login page and back, and then to the tournament page"
+msgstr "Modificare – linkul de invitație doar înscrie la turneu (un al doilea clic nu mai retrage jucătorul), redirecționează la pagina de autentificare și înapoi, apoi la pagina turneului"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - REST responses are never served from page caches or CDNs"
+msgstr "Corectare – răspunsurile REST nu mai sunt servite niciodată din cache-ul paginilor sau dintr-un CDN"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Authorization header is read also on FPM/CGI hosts"
+msgstr "Corectare – antetul Authorization este citit și pe găzduirile cu FPM/CGI"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - database upgrade adds new columns also on already installed sites"
+msgstr "Corectare – actualizarea bazei de date adaugă coloanele noi și pe site-urile deja instalate"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - several devices signing in or refreshing their session at the same moment no longer sign each other out"
+msgstr "Corectare – mai multe dispozitive care se autentifică sau își reînnoiesc sesiunea simultan nu se mai deconectează reciproc"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - every change of a running tournament (correcting a result, suspending or removing a player, settings, payments, special group, web forms) runs under the tournament lock; correcting a result while another court saved its result could stall the whole tournament"
+msgstr "Corectare – fiecare modificare a unui turneu în desfășurare (corectarea unui rezultat, suspendarea sau eliminarea unui jucător, setări, plăți, grup special, formulare web) se face sub blocarea turneului; o corectare a rezultatului în timp ce pe alt teren se salva un rezultat putea opri întregul turneu"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - tournament lock: results entered at the same time on several courts are no longer lost"
+msgstr "Corectare – blocarea turneului: rezultatele introduse simultan pe mai multe terenuri nu se mai pierd"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - every write to a tournament updates last_update"
+msgstr "Corectare – fiecare scriere în turneu actualizează last_update"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - results entered on the web no longer store last_update = 0, so the Android app refreshes again"
+msgstr "Corectare – rezultatele introduse pe site nu mai salvează last_update = 0, așa că aplicația Android se actualizează din nou"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Security - with registration disabled only tournament organizers can create player accounts from the app (before, any signed-in player could)"
+msgstr "Securitate – când înregistrarea este dezactivată, doar organizatorii de turnee pot crea conturi de jucători din aplicație (înainte putea orice jucător autentificat)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Security - an account created by an organizer no longer returns a login session of the new player to the organizer"
+msgstr "Securitate – un cont creat de un organizator nu mai returnează organizatorului sesiunea de autentificare a noului jucător"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Security - registration from the app (incl. a new Google account) respects \"Anyone can register\""
+msgstr "Securitate – înregistrarea din aplicație (inclusiv un cont Google nou) respectă setarea „Oricine se poate înregistra”"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Security - final doubles and registration toggle check tournament admin rights"
+msgstr "Securitate – meciul final de dublu și comutarea înregistrării verifică drepturile administratorului turneului"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Security - guided tour actions need a nonce; regenerating the example tournaments is throttled"
+msgstr "Securitate – acțiunile turului ghidat necesită un nonce; recrearea turneelor de exemplu este limitată"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Security - admin actions sent as links are protected by a nonce (CSRF)"
+msgstr "Securitate – acțiunile de administrare trimise prin linkuri sunt protejate cu nonce (CSRF)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Security - front-end forms check tournament admin rights, not only the nonce (any logged-in user could change players, payments or delete a tournament)"
+msgstr "Securitate – formularele de pe site verifică drepturile administratorului turneului, nu doar nonce-ul (înainte orice utilizator autentificat putea modifica jucătorii, plățile sau putea șterge turneul)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - app tournament links on the central site (?tournament_id=5&amp;doroto_site=) are forwarded to the club's tournament page when the app is not installed (sites from the site directory; other sites get a page with a link)"
+msgstr "Adăugat – linkurile aplicației către turnee de pe site-ul central (?tournament_id=5&amp;doroto_site=) redirecționează la pagina turneului clubului, dacă aplicația nu este instalată (site-urile din directorul de site-uri; pentru alte site-uri se afișează o pagină cu un link)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - the tournament page has an \"Open in the app\" link: Android opens the tournament in the app, or Google Play when it is missing"
+msgstr "Adăugat – pagina turneului are un link „Deschide în aplicație”: Android deschide turneul în aplicație sau în Google Play, dacă aplicația lipsește"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - saving the tournament settings rejects an unknown tournament type"
+msgstr "Corectare – la salvarea setărilor turneului este respins un tip de turneu necunoscut"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - a deleted account leaves its open tournaments: removed when it has not played yet, otherwise suspended; it also leaves the organizers, special group and payments (it was drawn into matches as \"Unknown player\")"
+msgstr "Corectare – un cont șters își părăsește turneele deschise: este eliminat dacă nu a jucat încă, altfel este suspendat; este eliminat și dintre organizatori, din grupul special și din plăți (înainte ajungea la tragerea la sorți ca „Jucător necunoscut”)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - removing a payment no longer turns the payment list into a JSON object (the Android app could crash on the statistics page)"
+msgstr "Corectare – eliminarea unei plăți nu mai transformă lista plăților într-un obiect JSON (aplicația Android se putea bloca pe pagina de statistici)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - the change form fits on a phone screen (the result and the button were off screen)"
+msgstr "Corectare – formularul de modificări încape pe ecranul telefonului (rezultatul și butonul erau în afara ecranului)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - organizers see an \"Edit result\" button next to every played match; it selects the match and its result in the change form (the form above the table was easy to miss)"
+msgstr "Adăugat – organizatorii văd lângă fiecare meci jucat un buton „Editează rezultatul”; acesta selectează meciul și rezultatul lui în formularul de modificări (formularul de deasupra tabelului era ușor de ratat)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - REST route skip-matches: the organizer skips several ongoing matches at once and new matches are drawn from all free players"
+msgstr "Adăugat – ruta REST skip-matches: organizatorul omite mai multe meciuri în desfășurare deodată, iar meciurile noi sunt trase la sorți dintre toți jucătorii liberi"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - among players with the same number of new teammates left, the one who played fewer games is drawn first; sides (left/right) alternate for both players of a team"
+msgstr "Îmbunătățire – dintre jucătorii cu același număr de parteneri noi rămași este tras la sorți primul cel care a jucat mai puține meciuri; părțile (stânga/dreapta) alternează pentru ambii jucători ai echipei"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - the draw chooses the opposing team (and the teammate) by previous meetings too: players meet more different opponents and the same players meet less often (with 14 players on 2 courts, pairs that met 3 or more times dropped from about 5 to 1 per evening)"
+msgstr "Îmbunătățire – tragerea la sorți alege echipa adversă (și partenerul) ținând cont de întâlnirile anterioare: jucătorii întâlnesc mai mulți adversari diferiți, iar aceiași jucători se întâlnesc mai rar (la 14 jucători pe 2 terenuri, numărul perechilor care s-au întâlnit de 3 sau mai multe ori a scăzut într-o seară de la aproximativ 5 la 1)"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.6.0 - 2026/10/02"
+msgstr "1.6.0 - 2026/10/02"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.6.1 - 2026/10/02"
+msgstr "1.6.1 - 2026/10/02"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.6.2 - 2026/10/04"
+msgstr "1.6.2 - 2026/10/04"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - fixed some errors found in Plugin Check"
+msgstr "Corectare – au fost corectate unele erori găsite de Plugin Check"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.5.8 - 2026/06/12"
+msgstr "1.5.8 - 2026/06/12"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - some translations"
+msgstr "Corectare – unele traduceri"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.5.7 - 2026/06/06"
+msgstr "1.5.7 - 2026/06/06"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - register and sign in for android app"
+msgstr "Corectare – înregistrarea și autentificarea în aplicația Android"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.5.6 - 2026/05/13"
+msgstr "1.5.6 - 2026/05/13"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - remove admin for android app"
+msgstr "Adăugat – eliminarea administratorului pentru aplicația Android"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.5.5 - 2026/05/12"
+msgstr "1.5.5 - 2026/05/12"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - rest value is safe now"
+msgstr "Corectare – valoarea rest este acum sigură"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.0.0 - 2024/01/01"
+msgstr "1.0.0 - 2024/01/01"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.0.1 - 2024/01/03"
+msgstr "1.0.1 - 2024/01/03"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.0.2 - 2024/01/21"
+msgstr "1.0.2 - 2024/01/21"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.0.3 - 2024/01/26"
+msgstr "1.0.3 - 2024/01/26"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.0.4 - 2024/02/02"
+msgstr "1.0.4 - 2024/02/02"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.1.0 - 2024/02/04"
+msgstr "1.1.0 - 2024/02/04"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.1.1 - 2024/02/09"
+msgstr "1.1.1 - 2024/02/09"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.1.2 - 2024/02/13"
+msgstr "1.1.2 - 2024/02/13"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.1.3 - 2024/02/17"
+msgstr "1.1.3 - 2024/02/17"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.1.4 - 2024/02/18"
+msgstr "1.1.4 - 2024/02/18"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.1.5 - 2024/02/20"
+msgstr "1.1.5 - 2024/02/20"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.1.6 - 2024/02/25"
+msgstr "1.1.6 - 2024/02/25"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.1.7 - 2024/03/01"
+msgstr "1.1.7 - 2024/03/01"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.1.8 - 2024/03/07"
+msgstr "1.1.8 - 2024/03/07"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.1.9 - 2024/03/09"
+msgstr "1.1.9 - 2024/03/09"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.2.0 - 2024/03/20"
+msgstr "1.2.0 - 2024/03/20"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.2.1 - 2024/03/21"
+msgstr "1.2.1 - 2024/03/21"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.2.2 - 2024/04/17"
+msgstr "1.2.2 - 2024/04/17"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.2.3 - 2024/04/19"
+msgstr "1.2.3 - 2024/04/19"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.2.4 - 2024/05/08"
+msgstr "1.2.4 - 2024/05/08"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.2.5 - 2024/05/15"
+msgstr "1.2.5 - 2024/05/15"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.2.6 - 2024/05/29"
+msgstr "1.2.6 - 2024/05/29"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.2.7 - 2024/06/07"
+msgstr "1.2.7 - 2024/06/07"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.2.8 - 2024/06/21"
+msgstr "1.2.8 - 2024/06/21"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.2.9 - 2024/06/23"
+msgstr "1.2.9 - 2024/06/23"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.3.0 - 2024/07/06"
+msgstr "1.3.0 - 2024/07/06"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.3.1 - 2024/07/12"
+msgstr "1.3.1 - 2024/07/12"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.3.2 - 2024/07/18"
+msgstr "1.3.2 - 2024/07/18"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.3.3 - 2024/09/13"
+msgstr "1.3.3 - 2024/09/13"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.3.4 - 2024/09/26"
+msgstr "1.3.4 - 2024/09/26"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.3.5 - 2024/09/28"
+msgstr "1.3.5 - 2024/09/28"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.3.6 - 2024/11/02"
+msgstr "1.3.6 - 2024/11/02"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.3.7 - 2024/12/13"
+msgstr "1.3.7 - 2024/12/13"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.3.8 - 2024/12/15"
+msgstr "1.3.8 - 2024/12/15"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.3.9 - 2024/12/21"
+msgstr "1.3.9 - 2024/12/21"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.4.0 - 2024/12/27"
+msgstr "1.4.0 - 2024/12/27"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.4.1 - 2024/12/31"
+msgstr "1.4.1 - 2024/12/31"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.4.2 - 2025/04/16"
+msgstr "1.4.2 - 2025/04/16"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.4.3 - 2025/05/04"
+msgstr "1.4.3 - 2025/05/04"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.4.4 - 2025/05/25"
+msgstr "1.4.4 - 2025/05/25"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.4.5 - 2025/06/09"
+msgstr "1.4.5 - 2025/06/09"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.4.6 - 2025/06/14"
+msgstr "1.4.6 - 2025/06/14"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.4.7 - 2025/07/27"
+msgstr "1.4.7 - 2025/07/27"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.4.8 - 2025/08/07"
+msgstr "1.4.8 - 2025/08/07"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.4.9 - 2025/08/07"
+msgstr "1.4.9 - 2025/08/07"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.5.0 - 2025/08/08"
+msgstr "1.5.0 - 2025/08/08"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.5.1 - 2025/08/17"
+msgstr "1.5.1 - 2025/08/17"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.5.2 - 2025/08/26"
+msgstr "1.5.2 - 2025/08/26"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.5.3 - 2025/12/05"
+msgstr "1.5.3 - 2025/12/05"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.5.4 - 2026/04/22"
+msgstr "1.5.4 - 2026/04/22"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - stable login to android application"
+msgstr "Corectare – autentificare stabilă în aplicația Android"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - existing players are not repeated in the menu Add players"
+msgstr "Corectare – jucătorii existenți nu se repetă în meniul Adăugare jucători"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Change - Public release of Android app"
+msgstr "Modificare – lansarea publică a aplicației Android"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Add 'last update' to the database also for already installed plugings"
+msgstr "Corectare – adăugarea „last update” în baza de date și pentru modulele deja instalate"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Uninstall also 2 new pages (privacy policy and terms of service)"
+msgstr "Corectare – ștergerea și a celor 2 pagini noi (politica de confidențialitate și termeni și condiții)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Add 'last update' to the database"
+msgstr "Corectare – adăugarea „last update” în baza de date"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Improved some functions for Android app"
+msgstr "Corectare – au fost îmbunătățite unele funcții pentru aplicația Android"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Announcement about the opportunity to become an application tester"
+msgstr "Adăugat – anunț despre posibilitatea de a deveni tester al aplicației"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Privacy Policy page"
+msgstr "Adăugat – pagina de politică de confidențialitate"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Terms of Service page"
+msgstr "Adăugat – pagina de termeni și condiții"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Info about last update speed up loading"
+msgstr "Adăugat – informația despre ultima actualizare accelerează încărcarea"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Correct an error message Undefined array key player['count']"
+msgstr "Corectare – a fost corectat mesajul de eroare Undefined array key player['count']"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Tournaments filtering by distance and visibility"
+msgstr "Adăugat – filtrarea turneelor după distanță și vizibilitate"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Support for a Android app"
+msgstr "Adăugat – suport pentru aplicația Android"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Controls the visibility of the tournament in the public list."
+msgstr "Adăugat – gestionarea vizibilității turneului în lista publică."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Location of the tournament."
+msgstr "Adăugat – locul turneului."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Log in/out block had a problem"
+msgstr "Corectare – a existat o problemă în blocul de înscriere/retragere"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Parameter When enough players are available had sometimes a wrong value."
+msgstr "Corectare – parametrul „Când sunt disponibili suficienți jucători” avea uneori o valoare greșită."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Match hiding correction"
+msgstr "Corectare – ascunderea meciurilor a fost corectată"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Register and log in a new user only if anyone can register (system settings)."
+msgstr "Corectare – înregistrarea și autentificarea unui utilizator nou doar când oricine se poate înregistra (setare de sistem)."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Register and log in a new user."
+msgstr "Adăugat – înregistrarea și autentificarea unui utilizator nou."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Translation loading too early warning."
+msgstr "Corectare – avertisment despre traduceri încărcate prea devreme."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Dashboard overview widget."
+msgstr "Adăugat – widget de prezentare generală în panoul de control."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Log-link block."
+msgstr "Adăugat – blocul Log-link."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Sometimes tournament_id was unknown."
+msgstr "Corectare – uneori tournament_id era necunoscut."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Preserving stored values on the backend."
+msgstr "Corectare – salvarea valorilor înregistrate pe server."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Guaranteed visibility of the selected tournament in the tournament table."
+msgstr "Corectare – vizibilitate garantată a turneului selectat în tabelul turneelor."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Error with hide parameter."
+msgstr "Corectare – eroare la parametrul hide."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Permalink structure also works with the floating help icon."
+msgstr "Corectare – structura legăturilor permanente funcționează și cu pictograma plutitoare de ajutor."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Tournament name is not copied from previous one."
+msgstr "Corectare – numele turneului nu este copiat de la cel anterior."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - More tournament examples for demonstration."
+msgstr "Adăugat – mai multe turnee de exemplu pentru demonstrație."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Floating help icon."
+msgstr "Adăugat – pictogramă plutitoare de ajutor."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Prevent cashing for logged users."
+msgstr "Adăugat – dezactivarea memorării în cache pentru utilizatorii autentificați."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Doubles Badminton table also for co-players"
+msgstr "Corectare – tabelul de badminton dublu și pentru parteneri"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Tournament progress info."
+msgstr "Adăugat – informații despre progresul turneului."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Change game results availability."
+msgstr "Corectare – modificarea disponibilității rezultatelor jocurilor."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Special group count."
+msgstr "Adăugat – numărul membrilor grupului special."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Change of information about the end of the tournament round."
+msgstr "Modificarea informației despre sfârșitul rundei de turneu."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Opponent selection."
+msgstr "Corectare – alegerea adversarului."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Pair selection mechanism explanation on the help page."
+msgstr "Adăugat – explicarea mecanismului de alegere a perechilor pe pagina de ajutor."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Pair selection didn´t take into account number of played games in total."
+msgstr "Corectare – alegerea perechilor nu ținea cont de numărul total de jocuri jucate."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Rights to Suspension and Resumption."
+msgstr "Corectare – drepturile de suspendare și restabilire."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Rights to add a special group."
+msgstr "Corectare – drepturile de adăugare în grupul special."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Rights to add a tournament admin."
+msgstr "Corectare – drepturile de adăugare a unui administrator al turneului."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Rights to add other players into tournaments."
+msgstr "Corectare – drepturile de adăugare a altor jucători la turnee."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Do not show instructions during the tournament presentation."
+msgstr "Corectare – instrucțiunile nu sunt afișate în timpul prezentării turneului."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Admin can change a default value for minimum number of games played before a player can be declared a winner."
+msgstr "Adăugat – administratorul poate schimba valoarea implicită a numărului minim de jocuri jucate după care un jucător poate fi declarat câștigător."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - The ability to specify a minimum number of games played before a player can be declared a winner."
+msgstr "Adăugat – posibilitatea de a seta numărul minim de jocuri jucate după care un jucător poate fi declarat câștigător."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Removing a player from a tournament."
+msgstr "Corectare – eliminarea unui jucător din turneu."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Ready for testing in WP Playground."
+msgstr "Corectare – gata pentru testare în WP Playground."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Solving some database errors with empty values."
+msgstr "Corectare – eliminarea unor erori ale bazei de date cu valori goale."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Update for WP Playground."
+msgstr "Corectare – actualizări pentru WP Playground."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Improved playmate choose."
+msgstr "Corectare – îmbunătățirea alegerii partenerului."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Problems with removing players during a game."
+msgstr "Corectare – probleme la eliminarea jucătorilor în timpul jocului."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - A currently playing player can´t be removed."
+msgstr "Corectare – un jucător care joacă în acest moment nu poate fi eliminat."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Fix real count of players after their removing."
+msgstr "Corectare – numărul corect de jucători după eliminarea lor."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Fix an error during removing a player from the tournament."
+msgstr "Corectare – eroare la eliminarea unui jucător din turneu."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Redirection to a tournament in case of a user entry."
+msgstr "Corectare – redirecționare la turneu când utilizatorul introduce date."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - icon format."
+msgstr "Corectare – formatul pictogramelor."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Modification for WP Playground."
+msgstr "Finisare pentru WP Playground."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Fixed a bug in the database that prevented a tournament record from being created on some servers."
+msgstr "Corectare – a fost corectată o eroare a bazei de date care împiedica crearea înregistrării turneului pe unele servere."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Unregistered users can no longer enter results in the singles tournament."
+msgstr "Corectare – utilizatorii neînregistrați nu mai pot introduce rezultate într-un turneu de simplu."
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid "Possibility to remove players from an already ongoing tournament."
+msgstr "Posibilitatea de a elimina jucători dintr-un turneu aflat deja în desfășurare."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "New - Expanded the ability for tournament administrators to browse through players they have already met at the tournament."
+msgstr "Nou – administratorii turneelor pot vedea mai mulți jucători pe care i-au întâlnit deja la un turneu."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "New - If the player has not yet registered for any tournament, it is possible to choose whether to show him a quick help."
+msgstr "Nou – dacă un jucător nu s-a înscris încă la niciun turneu, puteți alege dacă îi afișați un scurt ajutor."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "New - Optional login prompt."
+msgstr "Nou – invitație opțională la autentificare."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - If all tournaments were deleted, a new tournament could not be created."
+msgstr "Corectare – dacă toate turneele au fost șterse, nu se putea crea un turneu nou."
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid ""
+"Trial tournament improvements.\n"
+"Added the option to announce the end of the tournament round."
+msgstr ""
+"Îmbunătățirea turneului de antrenament.\n"
+"A fost adăugată posibilitatea de a anunța sfârșitul rundei de turneu."
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid ""
+"Improved the visual appearance of the main page.\n"
+"Badminton added to the list of available tournaments."
+msgstr ""
+"Aspectul paginii principale a fost îmbunătățit.\n"
+"Badmintonul a fost adăugat în lista turneelor disponibile."
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid "Option to announce separate winners from the special group and outside the special group."
+msgstr "Posibilitatea de a anunța câștigători separați din grupul special și din afara lui."
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid ""
+"Notices after a plugin activation.\n"
+"Added player trend."
+msgstr ""
+"Notificare după activarea modulului.\n"
+"A fost adăugată tendința jucătorului."
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid ""
+"Modified tournament editing tab.\n"
+"Added option to change tournament type."
+msgstr ""
+"Fila de editare a turneului a fost modificată.\n"
+"A fost adăugată posibilitatea de a schimba tipul turneului."
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid ""
+"Reactivating the plugin doesn´t affect the already deleted tournament example. \n"
+"Unblock offering maximum games count.\n"
+"Fix tournament change when entering results.\n"
+"Added quick help for newcomers.\n"
+"Allow the final match also for singles."
+msgstr ""
+"Reactivarea modulului nu afectează un turneu de exemplu deja șters.\n"
+"A fost deblocată alegerea numărului maxim de ghemuri.\n"
+"A fost corectată modificarea turneului în timpul introducerii rezultatelor.\n"
+"A fost adăugat un scurt ajutor pentru începători.\n"
+"Meciul final a fost permis și la simplu."
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid ""
+"Added the option for single tournaments. \n"
+"Created an environment for additional sports."
+msgstr ""
+"A fost adăugată posibilitatea turneelor de simplu.\n"
+"A fost creat mediul pentru alte sporturi."
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid ""
+"The administrator can now use 'hide' option when editing the match result.\n"
+"Free score input is allowed. This opens using not only for tennis but for example for table tennis or beach volleyball."
+msgstr ""
+"Administratorul poate folosi acum opțiunea „ascunde” la modificarea rezultatului unui meci.\n"
+"A fost permisă introducerea liberă a scorului. Astfel modulul poate fi folosit nu doar pentru tenis, ci și, de exemplu, pentru tenis de masă sau volei pe plajă."
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid ""
+"Minor changes in code:\n"
+"* Allow to transfer organizer rights to a non-playing user.\n"
+"* Ensuring an even rotation of serves at the start of the tournament."
+msgstr ""
+"Mici modificări în cod:\n"
+"* A fost permis transferul drepturilor de organizator unui utilizator care nu joacă.\n"
+"* A fost asigurată alternarea uniformă a serviciului la începutul turneului."
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid "Fixed choosing between left and right side in first matches."
+msgstr "A fost corectată alegerea părții stângi și drepte în primele meciuri."
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid "A small modification of admin screen."
+msgstr "Mică modificare a ecranului de administrare."
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid "First release to public."
+msgstr "Prima versiune publică."
+

@@ -1,0 +1,1289 @@
+# Translation of Plugins - Rotation Tournaments - Development Readme (trunk) in Thai
+# This file is distributed under the same license as the Plugins - Rotation Tournaments - Development Readme (trunk) package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Plugins - Rotation Tournaments - Development Readme (trunk)\n"
+"PO-Revision-Date: 2026-10-07 11:07:42+0000\n"
+"Language: th\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: GlotPress/4.1.0\n"
+
+#. Short description.
+#, gp-priority: high
+msgid "Do you play Singles or Doubles Tournaments? This plugin manages Rotation Tournaments where players have a different partner in each game."
+msgstr "คุณเล่นทัวร์นาเมนต์ประเภทเดี่ยวหรือประเภทคู่หรือไม่ ปลั๊กอินนี้จัดการทัวร์นาเมนต์แบบหมุนเวียนที่ผู้เล่นจะได้คู่หูใหม่ในทุกเกม"
+
+#. Plugin name.
+#, gp-priority: high
+msgid "Rotation Tournaments"
+msgstr "ทัวร์นาเมนต์แบบหมุนเวียน"
+
+#. Found in installation paragraph.
+msgid "After installation, go to the app's settings and enter the address of your website where this plugin is installed."
+msgstr "หลังติดตั้งแล้ว ให้ไปที่การตั้งค่าของแอปและใส่ที่อยู่เว็บไซต์ที่ติดตั้งปลั๊กอินนี้"
+
+#. Found in installation paragraph.
+msgid "Or download it directly from this link: https://play.google.com/store/apps/details?id=cz.doroto.app"
+msgstr "หรือดาวน์โหลดได้โดยตรงจากลิงก์นี้: https://play.google.com/store/apps/details?id=cz.doroto.app"
+
+#. Found in installation paragraph.
+msgid "Search for \"Rotation Tournaments\" on the Google Play Store."
+msgstr "ค้นหา “Rotation Tournaments” ใน Google Play Store"
+
+#. Found in description paragraph.
+msgid "To get the full experience of managing tournaments on the go, download our mobile app, now available on Google Play!"
+msgstr "หากต้องการจัดการทัวร์นาเมนต์ได้อย่างเต็มที่ทุกที่ ดาวน์โหลดแอปมือถือของเรา ซึ่งมีให้ใช้แล้วบน Google Play!"
+
+#. Found in description paragraph.
+msgid "<strong>YouTube quick intro:</strong>"
+msgstr "<strong>แนะนำสั้นๆ บน YouTube:</strong>"
+
+#. Found in description list item.
+msgid "Video for a quick introduction to the Rotation Tournament:"
+msgstr "วิดีโอแนะนำทัวร์นาเมนต์แบบหมุนเวียนอย่างรวดเร็ว:"
+
+#. Found in faq paragraph.
+msgid "Yes. If you install the Rotation Tournaments plugin, allow player registration, and enable visibility in the website list, your site can appear in the Android app. Initially, someone must manually enter your website address into the app. After that, it becomes visible in the list for all users."
+msgstr "ได้ หากคุณติดตั้งปลั๊กอิน Rotation Tournaments อนุญาตให้ผู้เล่นลงทะเบียน และเปิดการแสดงในรายการเว็บไซต์ เว็บไซต์ของคุณจะปรากฏในแอป Android ได้ ในตอนแรกต้องมีคนใส่ที่อยู่เว็บไซต์ของคุณในแอปด้วยตนเอง หลังจากนั้นเว็บไซต์จะแสดงในรายการสำหรับผู้ใช้ทุกคน"
+
+#. Found in faq paragraph.
+msgid "Yes. An iOS version of the Rotation Tournaments app is planned and will be released in the near future."
+msgstr "ใช่ มีแผนจะออกแอป Rotation Tournaments เวอร์ชัน iOS ในอนาคตอันใกล้"
+
+#. Found in faq header.
+msgid "Will my website be visible in the Rotation Tournaments Android app?"
+msgstr "เว็บไซต์ของฉันจะแสดงในแอป Rotation Tournaments บน Android หรือไม่"
+
+#. Found in faq header.
+msgid "Will there be an iPhone or iPad version of the app?"
+msgstr "จะมีแอปเวอร์ชัน iPhone หรือ iPad หรือไม่"
+
+#. Found in installation paragraph.
+msgid "<strong>How to install Wordpress plugin:</strong>"
+msgstr "<strong>วิธีติดตั้งปลั๊กอิน WordPress:</strong>"
+
+#. Found in installation list item.
+msgid "After activating the plugin, 4 pages will be created: one for managing tournaments (main page), one with tournament rules, and additional pages for Privacy Policy and Terms of Service. A sample post announcing a newly created tournament will also be added."
+msgstr "หลังเปิดใช้งานปลั๊กอิน ระบบจะสร้าง 4 หน้า ได้แก่ หน้าสำหรับจัดการทัวร์นาเมนต์ (หน้าหลัก) หน้ากติกาทัวร์นาเมนต์ และหน้านโยบายความเป็นส่วนตัวและข้อกำหนดการให้บริการ นอกจากนี้จะเพิ่มเรื่องตัวอย่างที่ประกาศทัวร์นาเมนต์ที่สร้างใหม่ด้วย"
+
+#. Found in installation paragraph.
+msgid "<strong>How to install the Android app:</strong>"
+msgstr "<strong>วิธีติดตั้งแอป Android:</strong>"
+
+#. Found in description paragraph.
+msgid "<strong>This plugin is the server-side for the \"Rotation Tournaments\" Android app.</strong>"
+msgstr "<strong>ปลั๊กอินนี้เป็นฝั่งเซิร์ฟเวอร์ของแอป Android “Rotation Tournaments”</strong>"
+
+#. Screenshot description.
+msgid "Individual tournament participants enter their results into the WordPress server and share the data with each other."
+msgstr "ผู้เข้าร่วมทัวร์นาเมนต์แต่ละคนใส่ผลการแข่งขันของตนลงในเซิร์ฟเวอร์ WordPress และแบ่งปันข้อมูลกัน"
+
+#. Screenshot description.
+msgid "Matches played. (Android app)"
+msgstr "แมตช์ที่แข่งแล้ว (แอป Android)"
+
+#. Screenshot description.
+msgid "Tournament table. (Wordpress)"
+msgstr "ตารางทัวร์นาเมนต์ (WordPress)"
+
+#. Screenshot description.
+msgid "Matches drawn. (Android app)"
+msgstr "แมตช์ที่สุ่มแล้ว (แอป Android)"
+
+#. Screenshot description.
+msgid "Editing tournament parameters. (Wordpress)"
+msgstr "การแก้ไขพารามิเตอร์ของทัวร์นาเมนต์ (WordPress)"
+
+#. Screenshot description.
+msgid "Table of players with rankings. (Android app)"
+msgstr "ตารางผู้เล่นพร้อมอันดับ (แอป Android)"
+
+#. Screenshot description.
+msgid "Matches played. (Wordpress)"
+msgstr "แมตช์ที่แข่งแล้ว (WordPress)"
+
+#. Screenshot description.
+msgid "Basic overview of the tournament. (Android app)"
+msgstr "ภาพรวมพื้นฐานของทัวร์นาเมนต์ (แอป Android)"
+
+#. Screenshot description.
+msgid "Matches drawn. (Wordpress)"
+msgstr "แมตช์ที่สุ่มแล้ว (WordPress)"
+
+#. Found in description paragraph.
+msgid "<strong>Rotation Tournaments</strong> provides a platform for organizing all kinds of sports Singles and Doubles Tournaments, e.g."
+msgstr "<strong>ทัวร์นาเมนต์แบบหมุนเวียน</strong> เป็นแพลตฟอร์มสำหรับจัดทัวร์นาเมนต์กีฬาทุกประเภททั้งประเภทเดี่ยวและประเภทคู่ เช่น"
+
+#. Found in description list item.
+msgid "Squash"
+msgstr "สควอช"
+
+#. Found in description list item.
+msgid "Beach Volleyball"
+msgstr "วอลเลย์บอลชายหาด"
+
+#. Found in description list item.
+msgid "Badminton"
+msgstr "แบดมินตัน"
+
+#. Found in description list item.
+msgid "Padel"
+msgstr "พาเดล"
+
+#. Found in description list item.
+msgid "Table Tennis"
+msgstr "เทเบิลเทนนิส"
+
+#. Found in description list item.
+msgid "Tennis"
+msgstr "เทนนิส"
+
+#. Found in faq paragraph.
+msgid ""
+"This plugin can be used for all types of sports where 2 or 4 players compete in singles or doubles.\n"
+"You can use this plugin for tennis, table tennis, squash, padel, badminton, beach volleyball and probably for more."
+msgstr ""
+"ปลั๊กอินนี้ใช้ได้กับกีฬาทุกประเภทที่มีผู้เล่น 2 หรือ 4 คนแข่งกันในประเภทเดี่ยวหรือประเภทคู่\n"
+"คุณสามารถใช้ปลั๊กอินนี้กับเทนนิส เทเบิลเทนนิส สควอช พาเดล แบดมินตัน วอลเลย์บอลชายหาด และอาจรวมถึงกีฬาอื่นๆ"
+
+#. Found in faq paragraph.
+msgid "Yes. When creating a tournament, you can choose whether to create a singles or a doubles tournament."
+msgstr "ได้ เมื่อสร้างทัวร์นาเมนต์ คุณเลือกได้ว่าจะสร้างทัวร์นาเมนต์ประเภทเดี่ยวหรือประเภทคู่"
+
+#. Found in faq header.
+msgid "What sports tournaments is this plugin for?"
+msgstr "ปลั๊กอินนี้ใช้กับทัวร์นาเมนต์กีฬาประเภทใด"
+
+#. Found in description paragraph.
+msgid "<strong>General Features:</strong>"
+msgstr "<strong>คุณสมบัติทั่วไป:</strong>"
+
+#. Found in description paragraph.
+msgid "<strong>Doubles Rotation Tournament:</strong>"
+msgstr "<strong>ทัวร์นาเมนต์ประเภทคู่แบบหมุนเวียน:</strong>"
+
+#. Found in description paragraph.
+msgid "<strong>Singles Rotation Tournament:</strong>"
+msgstr "<strong>ทัวร์นาเมนต์ประเภทเดี่ยวแบบหมุนเวียน:</strong>"
+
+#. Found in description paragraph.
+msgid "The participants of a tournament change partners several times during the tournament by a random selection and play against different players. The ratio of games won to games lost is calculated for each participant. The winner of the tournament is the player with this highest ratio. While a Singles Rotation Tournament can be organized without the aid of technology, in the case of a Doubles Rotation Tournament, this is not possible."
+msgstr "ผู้เข้าร่วมทัวร์นาเมนต์จะเปลี่ยนคู่หูหลายครั้งระหว่างทัวร์นาเมนต์โดยการสุ่ม และแข่งกับผู้เล่นต่างๆ ผู้เข้าร่วมแต่ละคนจะถูกคำนวณอัตราส่วนเกมที่ชนะต่อเกมที่แพ้ ผู้ชนะทัวร์นาเมนต์คือผู้เล่นที่มีอัตราส่วนสูงสุด แม้ทัวร์นาเมนต์ประเภทเดี่ยวแบบหมุนเวียนจะจัดได้โดยไม่ต้องใช้เทคโนโลยี แต่ทัวร์นาเมนต์ประเภทคู่แบบหมุนเวียนทำเช่นนั้นไม่ได้"
+
+#. Found in description paragraph.
+msgid "The <strong>Rotation Tournaments</strong> have a strong social aspect because its goal is to keep players in the tournament until the very end. The situation where weaker players would leave the tournament due to elimination rounds is eliminated. It allows grouping players into a special category with special conditions. This special setting can be utilized, for example, in mixed tournaments."
+msgstr "<strong>ทัวร์นาเมนต์แบบหมุนเวียน</strong> มีมิติทางสังคมสูง เพราะมีเป้าหมายให้ผู้เล่นอยู่ในทัวร์นาเมนต์จนจบ ไม่มีสถานการณ์ที่ผู้เล่นที่อ่อนกว่าต้องออกจากทัวร์นาเมนต์เพราะรอบคัดออก สามารถจัดผู้เล่นไว้ในประเภทพิเศษที่มีเงื่อนไขพิเศษได้ การตั้งค่าพิเศษนี้ใช้ได้ เช่น ในทัวร์นาเมนต์คู่ผสม"
+
+#. Found in description paragraph.
+msgid "In <strong>Rotation Tournaments</strong>, each participant plays against every other participant and there are no eliminations in individual rounds. To maximize the variety of match combinations, the matches are typically played in a single set."
+msgstr "ใน <strong>ทัวร์นาเมนต์แบบหมุนเวียน</strong> ผู้เข้าร่วมแต่ละคนจะแข่งกับผู้เข้าร่วมคนอื่นทุกคน และไม่มีการคัดออกในแต่ละรอบ เพื่อให้ได้รูปแบบการจับคู่ที่หลากหลายที่สุด แมตช์มักแข่งกันเพียงเซตเดียว"
+
+#. Found in description list item.
+msgid "Suitable for various sports: tennis, table tennis, squash, padel, badminton, beach volleyball, and more."
+msgstr "เหมาะกับกีฬาหลายประเภท: เทนนิส เทเบิลเทนนิส สควอช พาเดล แบดมินตัน วอลเลย์บอลชายหาด และอื่นๆ"
+
+#. Found in description list item.
+msgid "Integration with website user accounts."
+msgstr "เชื่อมต่อกับบัญชีผู้ใช้ของเว็บไซต์"
+
+#. Found in description list item.
+msgid "No downtime during the tournament."
+msgstr "ไม่มีช่วงเวลารอระหว่างทัวร์นาเมนต์"
+
+#. Found in description list item.
+msgid "Comprehensive overview of player quality."
+msgstr "ภาพรวมฝีมือของผู้เล่นอย่างครบถ้วน"
+
+#. Found in description list item.
+msgid "User-friendly interface for administrators and participants."
+msgstr "หน้าจอใช้งานง่ายสำหรับผู้ดูแลและผู้เข้าร่วม"
+
+#. Found in description list item.
+msgid "Customizable settings for each tournament."
+msgstr "ปรับการตั้งค่าได้สำหรับแต่ละทัวร์นาเมนต์"
+
+#. Found in description list item.
+msgid "Real-time score tracking."
+msgstr "ติดตามคะแนนแบบเรียลไทม์"
+
+#. Found in description list item.
+msgid "Seamless scheduling of matches."
+msgstr "จัดตารางแมตช์ได้อย่างราบรื่น"
+
+#. Found in description list item.
+msgid "Announcement of the Best Player and Most Ideal Pair at the end of the tournament."
+msgstr "ประกาศผู้เล่นยอดเยี่ยมและคู่ในอุดมคติเมื่อจบทัวร์นาเมนต์"
+
+#. Found in description list item.
+msgid "Ranking based on the ratio of games won to games lost."
+msgstr "จัดอันดับตามอัตราส่วนเกมที่ชนะต่อเกมที่แพ้"
+
+#. Found in description list item.
+msgid "Individual players can join or leave the tournament at any time."
+msgstr "ผู้เล่นแต่ละคนเข้าร่วมหรือออกจากทัวร์นาเมนต์ได้ทุกเมื่อ"
+
+#. Found in description list item.
+msgid "Tournament can be interrupted or extended without disruption."
+msgstr "หยุดหรือขยายเวลาทัวร์นาเมนต์ได้โดยไม่กระทบการดำเนินทัวร์นาเมนต์"
+
+#. Found in description list item.
+msgid "Shorter matches for more participation."
+msgstr "แมตช์สั้นลงเพื่อให้เข้าร่วมได้มากขึ้น"
+
+#. Found in description list item.
+msgid "No eliminations, ensuring all players stay in the game."
+msgstr "ไม่มีการคัดออก ผู้เล่นทุกคนอยู่ในเกมตลอด"
+
+#. Found in description list item.
+msgid "Define special groups of players with unique conditions."
+msgstr "กำหนดกลุ่มพิเศษของผู้เล่นที่มีเงื่อนไขเฉพาะ"
+
+#. Found in description list item.
+msgid "Suitable for odd numbers of players and minimum lineups of 4 players."
+msgstr "เหมาะกับผู้เล่นจำนวนคี่และผู้เล่นขั้นต่ำ 4 คน"
+
+#. Found in description list item.
+msgid "Individuals can enter the tournament without a permanent teammate."
+msgstr "เข้าร่วมทัวร์นาเมนต์ได้โดยไม่ต้องมีคู่หูประจำ"
+
+#. Found in description list item.
+msgid "Rotation of teammates, ensuring variety in partnerships."
+msgstr "การหมุนเวียนคู่หูทำให้การจับคู่หลากหลาย"
+
+#. Found in description list item.
+msgid "Alternative form of a Doubles Tournament where players enter each match with a different partner and in different positions (alternating left and right sides)."
+msgstr "รูปแบบทางเลือกของทัวร์นาเมนต์ประเภทคู่ ที่ผู้เล่นจะเปลี่ยนคู่หูและตำแหน่งในทุกแมตช์ (สลับฝั่งซ้ายและขวา)"
+
+#. Found in description list item.
+msgid "Depending on the time options, everyone plays against everyone."
+msgstr "ตามเวลาที่มี ทุกคนจะได้แข่งกับทุกคน"
+
+#. Found in description list item.
+msgid "Alternative form of a Singles Tournament where players face each other without elimination rounds."
+msgstr "รูปแบบทางเลือกของทัวร์นาเมนต์ประเภทเดี่ยว ที่ผู้เล่นแข่งกันโดยไม่มีรอบคัดออก"
+
+#. Found in description header.
+msgid "Features"
+msgstr "คุณสมบัติ"
+
+#. Found in faq header.
+msgid "Is this plugin suitable for singles tournaments?"
+msgstr "ปลั๊กอินนี้เหมาะกับทัวร์นาเมนต์ประเภทเดี่ยวหรือไม่"
+
+#. Found in faq paragraph.
+msgid "Yes, each tournament participant must have their own account. If a website has disabled user registration, this account must be created by the website administrator."
+msgstr "ใช่ ผู้เข้าร่วมทัวร์นาเมนต์แต่ละคนต้องมีบัญชีของตนเอง หากเว็บไซต์ปิดการสมัครสมาชิก ผู้ดูแลเว็บไซต์จะต้องเป็นผู้สร้างบัญชีนี้"
+
+#. Found in faq header.
+msgid "Does each player have to have an account created on my website?"
+msgstr "ผู้เล่นทุกคนต้องมีบัญชีบนเว็บไซต์ของฉันหรือไม่"
+
+#. Found in installation list item.
+msgid "At the end close the tournament and look who was announced as the winner."
+msgstr "เมื่อจบ ให้ปิดทัวร์นาเมนต์แล้วดูว่าใครได้รับการประกาศเป็นผู้ชนะ"
+
+#. Found in installation list item.
+msgid "You can change tournament settings on the main page or you can look at 2 new admin pages that are dedicated for overall environmental settings and for description of all possible shortcodes."
+msgstr "คุณเปลี่ยนการตั้งค่าทัวร์นาเมนต์ได้ที่หน้าหลัก หรือดู 2 หน้าผู้ดูแลใหม่ที่ใช้สำหรับการตั้งค่าสภาพแวดล้อมโดยรวมและคำอธิบาย shortcode ทั้งหมดที่ใช้ได้"
+
+#. Found in installation list item.
+msgid "If you have a sufficient amount of players then you can close a registration and start playing matches."
+msgstr "หากมีผู้เล่นเพียงพอ คุณสามารถปิดรับสมัครและเริ่มแข่งแมตช์ได้"
+
+#. Found in installation list item.
+msgid "Then you can log in your created tournament and as a tournament´s administrator you can add manually also other players sourced from WP database."
+msgstr "จากนั้นคุณสามารถลงทะเบียนในทัวร์นาเมนต์ที่สร้างไว้ และในฐานะผู้ดูแลทัวร์นาเมนต์ คุณยังเพิ่มผู้เล่นคนอื่นจากฐานข้อมูล WordPress ได้ด้วยตนเอง"
+
+#. Found in installation list item.
+msgid "Start by clicking on \"Create a new tournament\" under \"Tournament Selection …\" on the main page."
+msgstr "เริ่มต้นด้วยการคลิก “สร้างทัวร์นาเมนต์ใหม่” ใต้ “เลือกทัวร์นาเมนต์…” ในหน้าหลัก"
+
+#. Found in installation list item.
+msgid "Install the plugin as usual."
+msgstr "ติดตั้งปลั๊กอินตามปกติ"
+
+#. Found in description paragraph.
+msgid "Visit <a href=\"https://doroto.ltcchrast.cz/\">test page</a> for more information, try to create your own tournament and take a look at <a href=\"https://doroto.ltcchrast.cz/rules-of-the-doubles-rotation-tournament/\">Rules of the Doubles Rotation Tournament</a>."
+msgstr "เยี่ยมชม <a href=\"https://doroto.ltcchrast.cz/\">หน้าทดสอบ</a> เพื่อดูข้อมูลเพิ่มเติม ลองสร้างทัวร์นาเมนต์ของคุณเอง และดู <a href=\"https://doroto.ltcchrast.cz/rules-of-the-doubles-rotation-tournament/\">กติกาทัวร์นาเมนต์ประเภทคู่แบบหมุนเวียน</a>"
+
+#. Found in description paragraph.
+msgid "[youtube https://www.youtube.com/watch?v=NoL9aPTv8u8]"
+msgstr "[youtube https://www.youtube.com/watch?v=NoL9aPTv8u8]"
+
+#. Found in description header.
+msgid "More information"
+msgstr "ข้อมูลเพิ่มเติม"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - the plugin restores read permissions of its files after an FTP upload (the web server answered 403 and the admin page stayed empty); the admin page shows a notice when its script cannot be loaded"
+msgstr "แก้ไข – ปลั๊กอินคืนสิทธิ์การอ่านไฟล์ของตนหลังอัปโหลดผ่าน FTP (เว็บเซิร์ฟเวอร์ตอบกลับ 403 และหน้าผู้ดูแลว่างเปล่า) หน้าผู้ดูแลจะแสดงการแจ้งเตือนเมื่อโหลดสคริปต์ไม่ได้"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - tournament settings keep the ranges of 1.x and of the app (a larger value made the app's dropdowns fail)"
+msgstr "แก้ไข – การตั้งค่าทัวร์นาเมนต์คงช่วงค่าตามเวอร์ชัน 1.x และแอป (ค่าที่มากกว่าทำให้ดรอปดาวน์ในแอปทำงานผิดพลาด)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - REST requests from the website use the WordPress login (cookie and nonce) when no app token is sent"
+msgstr "ปรับปรุง – คำขอ REST จากเว็บไซต์ใช้การเข้าสู่ระบบ WordPress (คุกกี้และ nonce) เมื่อไม่ได้ส่งโทเค็นของแอป"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - styles, scripts and no-cache headers are sent only on pages that show the plugin; the unused tipTip library was removed and the admin no longer calls ip-api.com"
+msgstr "ปรับปรุง – สไตล์ สคริปต์ และส่วนหัว no-cache จะส่งเฉพาะในหน้าที่แสดงปลั๊กอิน นำไลบรารี tipTip ที่ไม่ได้ใช้ออกแล้ว และหน้าผู้ดูแลไม่เรียก ip-api.com อีกต่อไป"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - every change of a tournament (web forms, blocks and the Android app) goes through one shared layer with the same permissions, locking and change detection"
+msgstr "ปรับปรุง – ทุกการเปลี่ยนแปลงของทัวร์นาเมนต์ (แบบฟอร์มบนเว็บ บล็อก และแอป Android) ผ่านชั้นกลางเดียวกันที่มีสิทธิ์ การล็อก และการตรวจจับการเปลี่ยนแปลงแบบเดียวกัน"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - new admin page with Overview, Settings and Help instead of nine settings tabs; every setting is checked on the server and errors are shown next to the field"
+msgstr "ปรับปรุง – หน้าผู้ดูแลใหม่ที่มีภาพรวม การตั้งค่า และวิธีใช้ แทนแท็บการตั้งค่าเก้าแท็บ ทุกการตั้งค่าจะถูกตรวจสอบบนเซิร์ฟเวอร์และแสดงข้อผิดพลาดข้างช่องนั้น"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - the serving player is marked on the match cards; the special group is highlighted in matches, results, players, statistics and winners; the tournament details (invitation text) can be shown at any time"
+msgstr "เพิ่ม – ผู้เล่นที่เสิร์ฟมีเครื่องหมายบนการ์ดแมตช์ กลุ่มพิเศษถูกไฮไลต์ในแมตช์ ผลการแข่งขัน ผู้เล่น สถิติ และผู้ชนะ แสดงรายละเอียดทัวร์นาเมนต์ (ข้อความเชิญ) ได้ทุกเมื่อ"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - the tournament block takes its colours from the theme (button and palette colours); the block's Styles panel can change the accent, the tab bar and table headers, their text and the colour of the special group"
+msgstr "เพิ่ม – บล็อกทัวร์นาเมนต์ใช้สีจากธีม (สีปุ่มและชุดสี) แผงสไตล์ของบล็อกเปลี่ยนสีเน้น แถบแท็บและหัวตาราง ข้อความ และสีของกลุ่มพิเศษได้"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - the tournament block: Share dialog with a QR code, \"Open in the app\" line, full-screen presentation that rotates the sections, map of the tournament place in the settings, and guided tours of the page and of four example tournaments"
+msgstr "เพิ่ม – บล็อกทัวร์นาเมนต์: กล่องแชร์พร้อม QR code บรรทัด “เปิดในแอป” การนำเสนอเต็มจอที่สลับส่วนต่างๆ แผนที่สถานที่จัดทัวร์นาเมนต์ในการตั้งค่า และทัวร์แนะนำหน้าและทัวร์นาเมนต์ตัวอย่างสี่รายการ"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - the plugin admin can convert the main page to the blocks with one button; the old content stays in the page revisions. New installs create the main page from the blocks. The shortcodes [doroto_tournament] and [doroto_tournament_list] show the blocks in the classic editor; the 1.x shortcodes keep working"
+msgstr "เพิ่ม – ผู้ดูแลปลั๊กอินแปลงหน้าหลักเป็นบล็อกได้ด้วยปุ่มเดียว เนื้อหาเดิมยังอยู่ในรุ่นแก้ไขของหน้า การติดตั้งใหม่จะสร้างหน้าหลักจากบล็อก shortcode [doroto_tournament] และ [doroto_tournament_list] แสดงบล็อกในตัวแก้ไขแบบคลาสสิก shortcode ของเวอร์ชัน 1.x ยังใช้งานได้"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - blocks for the block editor: \"Rotation tournament\" (matches, results, players, statistics and settings on tabs, updated live without reloading the page), its variations \"Tournament standings\", \"Tournament matches\" and \"Tournament presentation\", \"Tournament list\" and \"Tournament invitation\""
+msgstr "เพิ่ม – บล็อกสำหรับตัวแก้ไขบล็อก: “ทัวร์นาเมนต์แบบหมุนเวียน” (แมตช์ ผลการแข่งขัน ผู้เล่น สถิติ และการตั้งค่าในแท็บ อัปเดตสดโดยไม่ต้องโหลดหน้าใหม่) รูปแบบ “อันดับของทัวร์นาเมนต์” “แมตช์ของทัวร์นาเมนต์” และ “การนำเสนอทัวร์นาเมนต์” รวมถึง “รายการทัวร์นาเมนต์” และ “คำเชิญเข้าร่วมทัวร์นาเมนต์”"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "2.0.0 - 2026/10/06"
+msgstr "2.0.0 - 2026/10/06"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Change - the review request is shown only to administrators, 14 days after activation once the site has its own tournament, and comes back 7 days after \"Remind me\" until the plugin is rated"
+msgstr "เปลี่ยนแปลง – คำขอให้คะแนนแสดงเฉพาะผู้ดูแล 14 วันหลังเปิดใช้งานเมื่อเว็บไซต์มีทัวร์นาเมนต์ของตนเองแล้ว และจะแสดงอีกครั้ง 7 วันหลังกด “เตือนอีกครั้ง” จนกว่าจะให้คะแนนปลั๊กอิน"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - the tournament page shows a short link to the Android app (can be turned off in Settings -&gt; Mobile app)"
+msgstr "เพิ่ม – หน้าทัวร์นาเมนต์แสดงลิงก์สั้นไปยังแอป Android (ปิดได้ใน การตั้งค่า -&gt; แอปมือถือ)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - optional mode join/leave for the app join endpoint"
+msgstr "เพิ่ม – โหมดเข้าร่วม/ออก (ไม่บังคับ) สำหรับ endpoint การเข้าร่วมของแอป"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - REST endpoint create-player: the organizer creates a player and adds them to the tournament in one step; the player gets an e-mail to set the password"
+msgstr "เพิ่ม – REST endpoint create-player: ผู้จัดสร้างผู้เล่นและเพิ่มเข้าทัวร์นาเมนต์ได้ในขั้นตอนเดียว ผู้เล่นจะได้รับอีเมลสำหรับตั้งรหัสผ่าน"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Change - tournament links to the home page (\"?tournament_id=5\") and the old app QR codes (\"/tournament?id=5\") open the tournament page"
+msgstr "เปลี่ยนแปลง – ลิงก์ทัวร์นาเมนต์ไปยังหน้าแรก (“?tournament_id=5”) และ QR code แบบเก่าของแอป (“/tournament?id=5”) จะเปิดหน้าทัวร์นาเมนต์"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Change - the default name of a new tournament uses the site time zone, not UTC"
+msgstr "เปลี่ยนแปลง – ชื่อเริ่มต้นของทัวร์นาเมนต์ใหม่ใช้เขตเวลาของเว็บไซต์ ไม่ใช่ UTC"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Change - the app can be signed in on several devices at once (up to 10 per user)"
+msgstr "เปลี่ยนแปลง – เข้าสู่ระบบแอปได้หลายอุปกรณ์พร้อมกัน (สูงสุด 10 อุปกรณ์ต่อผู้ใช้)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Change - invitation link only joins the tournament (a second click no longer unregisters the player), redirects to the login page and back, and then to the tournament page"
+msgstr "เปลี่ยนแปลง – ลิงก์คำเชิญใช้สำหรับเข้าร่วมทัวร์นาเมนต์เท่านั้น (คลิกครั้งที่สองจะไม่ยกเลิกการลงทะเบียนอีกต่อไป) พาไปหน้าเข้าสู่ระบบแล้วกลับมา จากนั้นไปยังหน้าทัวร์นาเมนต์"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - REST responses are never served from page caches or CDNs"
+msgstr "แก้ไข – การตอบกลับ REST จะไม่ถูกให้บริการจากแคชหน้าเว็บหรือ CDN"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Authorization header is read also on FPM/CGI hosts"
+msgstr "แก้ไข – อ่านส่วนหัว Authorization ได้บนโฮสต์ที่ใช้ FPM/CGI ด้วย"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - database upgrade adds new columns also on already installed sites"
+msgstr "แก้ไข – การอัปเกรดฐานข้อมูลเพิ่มคอลัมน์ใหม่ในเว็บไซต์ที่ติดตั้งไว้แล้วด้วย"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - several devices signing in or refreshing their session at the same moment no longer sign each other out"
+msgstr "แก้ไข – อุปกรณ์หลายเครื่องที่เข้าสู่ระบบหรือต่ออายุเซสชันในเวลาเดียวกันจะไม่ทำให้กันและกันออกจากระบบอีก"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - every change of a running tournament (correcting a result, suspending or removing a player, settings, payments, special group, web forms) runs under the tournament lock; correcting a result while another court saved its result could stall the whole tournament"
+msgstr "แก้ไข – ทุกการเปลี่ยนแปลงของทัวร์นาเมนต์ที่กำลังแข่ง (แก้ไขผล พักหรือนำผู้เล่นออก การตั้งค่า การชำระเงิน กลุ่มพิเศษ แบบฟอร์มบนเว็บ) ทำงานภายใต้การล็อกทัวร์นาเมนต์ ก่อนหน้านี้การแก้ไขผลขณะที่อีกคอร์ตกำลังบันทึกผลอาจทำให้ทั้งทัวร์นาเมนต์ค้าง"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - tournament lock: results entered at the same time on several courts are no longer lost"
+msgstr "แก้ไข – การล็อกทัวร์นาเมนต์: ผลที่ใส่พร้อมกันจากหลายคอร์ตจะไม่สูญหายอีก"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - every write to a tournament updates last_update"
+msgstr "แก้ไข – ทุกการเขียนข้อมูลลงทัวร์นาเมนต์จะอัปเดต last_update"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - results entered on the web no longer store last_update = 0, so the Android app refreshes again"
+msgstr "แก้ไข – ผลที่ใส่บนเว็บไม่บันทึก last_update = 0 อีกต่อไป แอป Android จึงรีเฟรชได้อีกครั้ง"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Security - with registration disabled only tournament organizers can create player accounts from the app (before, any signed-in player could)"
+msgstr "ความปลอดภัย – เมื่อปิดการสมัครสมาชิก เฉพาะผู้จัดทัวร์นาเมนต์เท่านั้นที่สร้างบัญชีผู้เล่นจากแอปได้ (ก่อนหน้านี้ผู้เล่นที่เข้าสู่ระบบทุกคนทำได้)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Security - an account created by an organizer no longer returns a login session of the new player to the organizer"
+msgstr "ความปลอดภัย – บัญชีที่ผู้จัดสร้างจะไม่ส่งเซสชันการเข้าสู่ระบบของผู้เล่นใหม่กลับไปให้ผู้จัดอีก"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Security - registration from the app (incl. a new Google account) respects \"Anyone can register\""
+msgstr "ความปลอดภัย – การสมัครจากแอป (รวมถึงบัญชี Google ใหม่) เป็นไปตามการตั้งค่า “ใครก็สมัครสมาชิกได้”"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Security - final doubles and registration toggle check tournament admin rights"
+msgstr "ความปลอดภัย – ประเภทคู่รอบชิงชนะเลิศและการสลับการรับสมัครจะตรวจสอบสิทธิ์ผู้ดูแลทัวร์นาเมนต์"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Security - guided tour actions need a nonce; regenerating the example tournaments is throttled"
+msgstr "ความปลอดภัย – การดำเนินการของทัวร์แนะนำต้องใช้ nonce การสร้างทัวร์นาเมนต์ตัวอย่างใหม่ถูกจำกัดความถี่"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Security - admin actions sent as links are protected by a nonce (CSRF)"
+msgstr "ความปลอดภัย – การดำเนินการของผู้ดูแลที่ส่งเป็นลิงก์ได้รับการป้องกันด้วย nonce (CSRF)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Security - front-end forms check tournament admin rights, not only the nonce (any logged-in user could change players, payments or delete a tournament)"
+msgstr "ความปลอดภัย – แบบฟอร์มหน้าเว็บตรวจสอบสิทธิ์ผู้ดูแลทัวร์นาเมนต์ ไม่ใช่แค่ nonce (ก่อนหน้านี้ผู้ใช้ที่เข้าสู่ระบบทุกคนเปลี่ยนผู้เล่น การชำระเงิน หรือลบทัวร์นาเมนต์ได้)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - app tournament links on the central site (?tournament_id=5&amp;doroto_site=) are forwarded to the club's tournament page when the app is not installed (sites from the site directory; other sites get a page with a link)"
+msgstr "เพิ่ม – ลิงก์ทัวร์นาเมนต์ของแอปบนเว็บไซต์กลาง (?tournament_id=5&amp;doroto_site=) จะถูกส่งต่อไปยังหน้าทัวร์นาเมนต์ของสโมสรเมื่อไม่ได้ติดตั้งแอป (เว็บไซต์จากไดเรกทอรีเว็บไซต์ ส่วนเว็บไซต์อื่นจะได้หน้าที่มีลิงก์)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - the tournament page has an \"Open in the app\" link: Android opens the tournament in the app, or Google Play when it is missing"
+msgstr "เพิ่ม – หน้าทัวร์นาเมนต์มีลิงก์ “เปิดในแอป”: Android จะเปิดทัวร์นาเมนต์ในแอป หรือเปิด Google Play หากยังไม่มีแอป"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - saving the tournament settings rejects an unknown tournament type"
+msgstr "แก้ไข – การบันทึกการตั้งค่าทัวร์นาเมนต์จะปฏิเสธประเภททัวร์นาเมนต์ที่ไม่รู้จัก"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - a deleted account leaves its open tournaments: removed when it has not played yet, otherwise suspended; it also leaves the organizers, special group and payments (it was drawn into matches as \"Unknown player\")"
+msgstr "แก้ไข – บัญชีที่ถูกลบจะออกจากทัวร์นาเมนต์ที่เปิดอยู่: ถูกนำออกหากยังไม่ได้แข่ง มิฉะนั้นจะถูกพักการเล่น และยังออกจากรายชื่อผู้จัด กลุ่มพิเศษ และการชำระเงินด้วย (ก่อนหน้านี้ถูกสุ่มเข้าแมตช์เป็น “ผู้เล่นที่ไม่รู้จัก”)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - removing a payment no longer turns the payment list into a JSON object (the Android app could crash on the statistics page)"
+msgstr "แก้ไข – การนำการชำระเงินออกจะไม่เปลี่ยนรายการชำระเงินเป็นออบเจ็กต์ JSON อีก (แอป Android อาจปิดตัวในหน้าสถิติ)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - the change form fits on a phone screen (the result and the button were off screen)"
+msgstr "แก้ไข – แบบฟอร์มการเปลี่ยนแปลงพอดีกับหน้าจอโทรศัพท์ (ก่อนหน้านี้ผลและปุ่มอยู่นอกจอ)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - organizers see an \"Edit result\" button next to every played match; it selects the match and its result in the change form (the form above the table was easy to miss)"
+msgstr "เพิ่ม – ผู้จัดจะเห็นปุ่ม “แก้ไขผลการแข่งขัน” ข้างทุกแมตช์ที่แข่งแล้ว ปุ่มนี้จะเลือกแมตช์และผลในแบบฟอร์มการเปลี่ยนแปลง (แบบฟอร์มเหนือตารางมักถูกมองข้าม)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - REST route skip-matches: the organizer skips several ongoing matches at once and new matches are drawn from all free players"
+msgstr "เพิ่ม – REST route skip-matches: ผู้จัดข้ามแมตช์ที่กำลังแข่งหลายแมตช์ได้พร้อมกัน และแมตช์ใหม่จะถูกสุ่มจากผู้เล่นที่ว่างทั้งหมด"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - among players with the same number of new teammates left, the one who played fewer games is drawn first; sides (left/right) alternate for both players of a team"
+msgstr "ปรับปรุง – ในบรรดาผู้เล่นที่เหลือคู่หูใหม่จำนวนเท่ากัน ผู้ที่เล่นน้อยกว่าจะถูกสุ่มก่อน ฝั่ง (ซ้าย/ขวา) จะสลับกันสำหรับผู้เล่นทั้งสองคนในทีม"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - the draw chooses the opposing team (and the teammate) by previous meetings too: players meet more different opponents and the same players meet less often (with 14 players on 2 courts, pairs that met 3 or more times dropped from about 5 to 1 per evening)"
+msgstr "ปรับปรุง – การสุ่มจะเลือกทีมคู่แข่ง (และคู่หู) โดยคำนึงถึงการพบกันก่อนหน้านี้ด้วย ผู้เล่นจะได้พบคู่แข่งที่หลากหลายขึ้น และผู้เล่นคนเดิมจะพบกันน้อยลง (กับผู้เล่น 14 คนบน 2 คอร์ต จำนวนคู่ที่พบกัน 3 ครั้งขึ้นไปลดลงจากประมาณ 5 เหลือ 1 ต่อคืน)"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.6.0 - 2026/10/02"
+msgstr "1.6.0 - 2026/10/02"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.6.1 - 2026/10/02"
+msgstr "1.6.1 - 2026/10/02"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.6.2 - 2026/10/04"
+msgstr "1.6.2 - 2026/10/04"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - fixed some errors found in Plugin Check"
+msgstr "แก้ไข – แก้ไขข้อผิดพลาดบางอย่างที่พบโดย Plugin Check"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.5.8 - 2026/06/12"
+msgstr "1.5.8 - 2026/06/12"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - some translations"
+msgstr "แก้ไข – คำแปลบางส่วน"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.5.7 - 2026/06/06"
+msgstr "1.5.7 - 2026/06/06"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - register and sign in for android app"
+msgstr "แก้ไข – การสมัครและการเข้าสู่ระบบสำหรับแอป Android"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.5.6 - 2026/05/13"
+msgstr "1.5.6 - 2026/05/13"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - remove admin for android app"
+msgstr "เพิ่ม – นำผู้ดูแลออกสำหรับแอป Android"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.5.5 - 2026/05/12"
+msgstr "1.5.5 - 2026/05/12"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - rest value is safe now"
+msgstr "แก้ไข – ค่า rest ปลอดภัยแล้ว"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.0.0 - 2024/01/01"
+msgstr "1.0.0 - 2024/01/01"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.0.1 - 2024/01/03"
+msgstr "1.0.1 - 2024/01/03"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.0.2 - 2024/01/21"
+msgstr "1.0.2 - 2024/01/21"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.0.3 - 2024/01/26"
+msgstr "1.0.3 - 2024/01/26"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.0.4 - 2024/02/02"
+msgstr "1.0.4 - 2024/02/02"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.1.0 - 2024/02/04"
+msgstr "1.1.0 - 2024/02/04"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.1.1 - 2024/02/09"
+msgstr "1.1.1 - 2024/02/09"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.1.2 - 2024/02/13"
+msgstr "1.1.2 - 2024/02/13"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.1.3 - 2024/02/17"
+msgstr "1.1.3 - 2024/02/17"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.1.4 - 2024/02/18"
+msgstr "1.1.4 - 2024/02/18"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.1.5 - 2024/02/20"
+msgstr "1.1.5 - 2024/02/20"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.1.6 - 2024/02/25"
+msgstr "1.1.6 - 2024/02/25"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.1.7 - 2024/03/01"
+msgstr "1.1.7 - 2024/03/01"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.1.8 - 2024/03/07"
+msgstr "1.1.8 - 2024/03/07"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.1.9 - 2024/03/09"
+msgstr "1.1.9 - 2024/03/09"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.2.0 - 2024/03/20"
+msgstr "1.2.0 - 2024/03/20"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.2.1 - 2024/03/21"
+msgstr "1.2.1 - 2024/03/21"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.2.2 - 2024/04/17"
+msgstr "1.2.2 - 2024/04/17"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.2.3 - 2024/04/19"
+msgstr "1.2.3 - 2024/04/19"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.2.4 - 2024/05/08"
+msgstr "1.2.4 - 2024/05/08"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.2.5 - 2024/05/15"
+msgstr "1.2.5 - 2024/05/15"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.2.6 - 2024/05/29"
+msgstr "1.2.6 - 2024/05/29"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.2.7 - 2024/06/07"
+msgstr "1.2.7 - 2024/06/07"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.2.8 - 2024/06/21"
+msgstr "1.2.8 - 2024/06/21"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.2.9 - 2024/06/23"
+msgstr "1.2.9 - 2024/06/23"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.3.0 - 2024/07/06"
+msgstr "1.3.0 - 2024/07/06"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.3.1 - 2024/07/12"
+msgstr "1.3.1 - 2024/07/12"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.3.2 - 2024/07/18"
+msgstr "1.3.2 - 2024/07/18"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.3.3 - 2024/09/13"
+msgstr "1.3.3 - 2024/09/13"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.3.4 - 2024/09/26"
+msgstr "1.3.4 - 2024/09/26"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.3.5 - 2024/09/28"
+msgstr "1.3.5 - 2024/09/28"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.3.6 - 2024/11/02"
+msgstr "1.3.6 - 2024/11/02"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.3.7 - 2024/12/13"
+msgstr "1.3.7 - 2024/12/13"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.3.8 - 2024/12/15"
+msgstr "1.3.8 - 2024/12/15"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.3.9 - 2024/12/21"
+msgstr "1.3.9 - 2024/12/21"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.4.0 - 2024/12/27"
+msgstr "1.4.0 - 2024/12/27"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.4.1 - 2024/12/31"
+msgstr "1.4.1 - 2024/12/31"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.4.2 - 2025/04/16"
+msgstr "1.4.2 - 2025/04/16"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.4.3 - 2025/05/04"
+msgstr "1.4.3 - 2025/05/04"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.4.4 - 2025/05/25"
+msgstr "1.4.4 - 2025/05/25"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.4.5 - 2025/06/09"
+msgstr "1.4.5 - 2025/06/09"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.4.6 - 2025/06/14"
+msgstr "1.4.6 - 2025/06/14"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.4.7 - 2025/07/27"
+msgstr "1.4.7 - 2025/07/27"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.4.8 - 2025/08/07"
+msgstr "1.4.8 - 2025/08/07"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.4.9 - 2025/08/07"
+msgstr "1.4.9 - 2025/08/07"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.5.0 - 2025/08/08"
+msgstr "1.5.0 - 2025/08/08"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.5.1 - 2025/08/17"
+msgstr "1.5.1 - 2025/08/17"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.5.2 - 2025/08/26"
+msgstr "1.5.2 - 2025/08/26"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.5.3 - 2025/12/05"
+msgstr "1.5.3 - 2025/12/05"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.5.4 - 2026/04/22"
+msgstr "1.5.4 - 2026/04/22"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - stable login to android application"
+msgstr "แก้ไข – การเข้าสู่ระบบแอป Android ที่เสถียร"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - existing players are not repeated in the menu Add players"
+msgstr "แก้ไข – ผู้เล่นที่มีอยู่แล้วจะไม่ซ้ำในเมนูเพิ่มผู้เล่น"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Change - Public release of Android app"
+msgstr "เปลี่ยนแปลง – เปิดตัวแอป Android สู่สาธารณะ"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Add 'last update' to the database also for already installed plugings"
+msgstr "แก้ไข – เพิ่ม “last update” ในฐานข้อมูลสำหรับปลั๊กอินที่ติดตั้งไว้แล้วด้วย"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Uninstall also 2 new pages (privacy policy and terms of service)"
+msgstr "แก้ไข – ถอนการติดตั้ง 2 หน้าใหม่ด้วย (นโยบายความเป็นส่วนตัวและข้อกำหนดการให้บริการ)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Add 'last update' to the database"
+msgstr "แก้ไข – เพิ่ม “last update” ในฐานข้อมูล"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Improved some functions for Android app"
+msgstr "แก้ไข – ปรับปรุงฟังก์ชันบางอย่างสำหรับแอป Android"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Announcement about the opportunity to become an application tester"
+msgstr "เพิ่ม – ประกาศโอกาสในการเป็นผู้ทดสอบแอป"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Privacy Policy page"
+msgstr "เพิ่ม – หน้านโยบายความเป็นส่วนตัว"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Terms of Service page"
+msgstr "เพิ่ม – หน้าข้อกำหนดการให้บริการ"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Info about last update speed up loading"
+msgstr "เพิ่ม – ข้อมูลการอัปเดตล่าสุดช่วยให้โหลดเร็วขึ้น"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Correct an error message Undefined array key player['count']"
+msgstr "แก้ไข – แก้ไขข้อความผิดพลาด Undefined array key player['count']"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Tournaments filtering by distance and visibility"
+msgstr "เพิ่ม – กรองทัวร์นาเมนต์ตามระยะทางและการมองเห็น"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Support for a Android app"
+msgstr "เพิ่ม – รองรับแอป Android"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Controls the visibility of the tournament in the public list."
+msgstr "เพิ่ม – ควบคุมการแสดงทัวร์นาเมนต์ในรายการสาธารณะ"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Location of the tournament."
+msgstr "เพิ่ม – สถานที่จัดทัวร์นาเมนต์"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Log in/out block had a problem"
+msgstr "แก้ไข – บล็อกลงทะเบียน/ถอนตัวมีปัญหา"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Parameter When enough players are available had sometimes a wrong value."
+msgstr "แก้ไข – บางครั้งพารามิเตอร์ “เมื่อมีผู้เล่นเพียงพอ” มีค่าที่ไม่ถูกต้อง"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Match hiding correction"
+msgstr "แก้ไข – แก้ไขการซ่อนแมตช์"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Register and log in a new user only if anyone can register (system settings)."
+msgstr "แก้ไข – สมัครและเข้าสู่ระบบผู้ใช้ใหม่เฉพาะเมื่อใครก็สมัครสมาชิกได้ (การตั้งค่าระบบ)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Register and log in a new user."
+msgstr "เพิ่ม – สมัครและเข้าสู่ระบบผู้ใช้ใหม่"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Translation loading too early warning."
+msgstr "แก้ไข – คำเตือนการโหลดคำแปลเร็วเกินไป"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Dashboard overview widget."
+msgstr "เพิ่ม – วิดเจ็ตภาพรวมบนแผงควบคุม"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Log-link block."
+msgstr "เพิ่ม – บล็อก Log-link"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Sometimes tournament_id was unknown."
+msgstr "แก้ไข – บางครั้งไม่รู้จัก tournament_id"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Preserving stored values on the backend."
+msgstr "แก้ไข – คงค่าที่บันทึกไว้ในส่วนแบ็กเอนด์"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Guaranteed visibility of the selected tournament in the tournament table."
+msgstr "แก้ไข – รับประกันการแสดงทัวร์นาเมนต์ที่เลือกในตารางทัวร์นาเมนต์"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Error with hide parameter."
+msgstr "แก้ไข – ข้อผิดพลาดของพารามิเตอร์ hide"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Permalink structure also works with the floating help icon."
+msgstr "แก้ไข – โครงสร้างลิงก์ถาวรทำงานร่วมกับไอคอนวิธีใช้แบบลอยได้"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Tournament name is not copied from previous one."
+msgstr "แก้ไข – ชื่อทัวร์นาเมนต์ไม่ถูกคัดลอกจากรายการก่อนหน้า"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - More tournament examples for demonstration."
+msgstr "เพิ่ม – ทัวร์นาเมนต์ตัวอย่างเพิ่มเติมเพื่อการสาธิต"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Floating help icon."
+msgstr "เพิ่ม – ไอคอนวิธีใช้แบบลอย"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Prevent cashing for logged users."
+msgstr "เพิ่ม – ป้องกันการแคชสำหรับผู้ใช้ที่เข้าสู่ระบบ"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Doubles Badminton table also for co-players"
+msgstr "แก้ไข – ตารางแบดมินตันประเภทคู่สำหรับคู่หูด้วย"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Tournament progress info."
+msgstr "เพิ่ม – ข้อมูลความคืบหน้าของทัวร์นาเมนต์"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Change game results availability."
+msgstr "แก้ไข – เปลี่ยนการเข้าถึงผลการแข่งขัน"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Special group count."
+msgstr "เพิ่ม – จำนวนสมาชิกกลุ่มพิเศษ"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Change of information about the end of the tournament round."
+msgstr "เปลี่ยนข้อมูลเกี่ยวกับการจบรอบของทัวร์นาเมนต์"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Opponent selection."
+msgstr "แก้ไข – การเลือกคู่แข่ง"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Pair selection mechanism explanation on the help page."
+msgstr "เพิ่ม – คำอธิบายกลไกการเลือกคู่ในหน้าวิธีใช้"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Pair selection didn´t take into account number of played games in total."
+msgstr "แก้ไข – การเลือกคู่ไม่ได้คำนึงถึงจำนวนเกมรวมที่เล่น"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Rights to Suspension and Resumption."
+msgstr "แก้ไข – สิทธิ์ในการพักและกลับมาเล่น"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Rights to add a special group."
+msgstr "แก้ไข – สิทธิ์ในการเพิ่มในกลุ่มพิเศษ"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Rights to add a tournament admin."
+msgstr "แก้ไข – สิทธิ์ในการเพิ่มผู้ดูแลทัวร์นาเมนต์"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Rights to add other players into tournaments."
+msgstr "แก้ไข – สิทธิ์ในการเพิ่มผู้เล่นอื่นในทัวร์นาเมนต์"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Do not show instructions during the tournament presentation."
+msgstr "แก้ไข – ไม่แสดงคำแนะนำระหว่างการนำเสนอทัวร์นาเมนต์"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Admin can change a default value for minimum number of games played before a player can be declared a winner."
+msgstr "เพิ่ม – ผู้ดูแลเปลี่ยนค่าเริ่มต้นของจำนวนเกมขั้นต่ำที่ต้องเล่นก่อนประกาศผู้เล่นเป็นผู้ชนะได้"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - The ability to specify a minimum number of games played before a player can be declared a winner."
+msgstr "เพิ่ม – กำหนดจำนวนเกมขั้นต่ำที่ต้องเล่นก่อนประกาศผู้เล่นเป็นผู้ชนะได้"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Removing a player from a tournament."
+msgstr "แก้ไข – การนำผู้เล่นออกจากทัวร์นาเมนต์"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Ready for testing in WP Playground."
+msgstr "แก้ไข – พร้อมทดสอบใน WP Playground"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Solving some database errors with empty values."
+msgstr "แก้ไข – แก้ข้อผิดพลาดฐานข้อมูลบางอย่างที่เกิดกับค่าว่าง"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Update for WP Playground."
+msgstr "แก้ไข – อัปเดตสำหรับ WP Playground"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Improved playmate choose."
+msgstr "แก้ไข – ปรับปรุงการเลือกคู่หู"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Problems with removing players during a game."
+msgstr "แก้ไข – ปัญหาการนำผู้เล่นออกระหว่างเกม"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - A currently playing player can´t be removed."
+msgstr "แก้ไข – ไม่สามารถนำผู้เล่นที่กำลังเล่นอยู่ออกได้"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Fix real count of players after their removing."
+msgstr "แก้ไข – จำนวนผู้เล่นจริงหลังนำผู้เล่นออก"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Fix an error during removing a player from the tournament."
+msgstr "แก้ไข – ข้อผิดพลาดขณะนำผู้เล่นออกจากทัวร์นาเมนต์"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Redirection to a tournament in case of a user entry."
+msgstr "แก้ไข – การเปลี่ยนเส้นทางไปยังทัวร์นาเมนต์เมื่อผู้ใช้ป้อนข้อมูล"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - icon format."
+msgstr "แก้ไข – รูปแบบไอคอน"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Modification for WP Playground."
+msgstr "ปรับแต่งสำหรับ WP Playground"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Fixed a bug in the database that prevented a tournament record from being created on some servers."
+msgstr "แก้ไข – แก้ไขข้อผิดพลาดในฐานข้อมูลที่ทำให้สร้างข้อมูลทัวร์นาเมนต์ไม่ได้บนบางเซิร์ฟเวอร์"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Unregistered users can no longer enter results in the singles tournament."
+msgstr "แก้ไข – ผู้ใช้ที่ไม่ได้ลงทะเบียนไม่สามารถใส่ผลในทัวร์นาเมนต์ประเภทเดี่ยวได้อีก"
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid "Possibility to remove players from an already ongoing tournament."
+msgstr "นำผู้เล่นออกจากทัวร์นาเมนต์ที่กำลังแข่งอยู่ได้"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "New - Expanded the ability for tournament administrators to browse through players they have already met at the tournament."
+msgstr "ใหม่ – ผู้ดูแลทัวร์นาเมนต์ดูรายชื่อผู้เล่นที่เคยพบในทัวร์นาเมนต์ได้มากขึ้น"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "New - If the player has not yet registered for any tournament, it is possible to choose whether to show him a quick help."
+msgstr "ใหม่ – หากผู้เล่นยังไม่เคยลงทะเบียนทัวร์นาเมนต์ใด เลือกได้ว่าจะแสดงวิธีใช้แบบย่อหรือไม่"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "New - Optional login prompt."
+msgstr "ใหม่ – ข้อความชวนให้เข้าสู่ระบบ (ไม่บังคับ)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - If all tournaments were deleted, a new tournament could not be created."
+msgstr "แก้ไข – หากลบทัวร์นาเมนต์ทั้งหมดแล้ว จะไม่สามารถสร้างทัวร์นาเมนต์ใหม่ได้"
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid ""
+"Trial tournament improvements.\n"
+"Added the option to announce the end of the tournament round."
+msgstr ""
+"ปรับปรุงทัวร์นาเมนต์ทดลอง\n"
+"เพิ่มตัวเลือกประกาศการจบรอบของทัวร์นาเมนต์"
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid ""
+"Improved the visual appearance of the main page.\n"
+"Badminton added to the list of available tournaments."
+msgstr ""
+"ปรับปรุงหน้าตาของหน้าหลัก\n"
+"เพิ่มแบดมินตันในรายการทัวร์นาเมนต์ที่มี"
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid "Option to announce separate winners from the special group and outside the special group."
+msgstr "ตัวเลือกประกาศผู้ชนะแยกกันระหว่างกลุ่มพิเศษและนอกกลุ่มพิเศษ"
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid ""
+"Notices after a plugin activation.\n"
+"Added player trend."
+msgstr ""
+"การแจ้งเตือนหลังเปิดใช้งานปลั๊กอิน\n"
+"เพิ่มเทรนด์ของผู้เล่น"
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid ""
+"Modified tournament editing tab.\n"
+"Added option to change tournament type."
+msgstr ""
+"ปรับแท็บแก้ไขทัวร์นาเมนต์\n"
+"เพิ่มตัวเลือกเปลี่ยนประเภททัวร์นาเมนต์"
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid ""
+"Reactivating the plugin doesn´t affect the already deleted tournament example. \n"
+"Unblock offering maximum games count.\n"
+"Fix tournament change when entering results.\n"
+"Added quick help for newcomers.\n"
+"Allow the final match also for singles."
+msgstr ""
+"การเปิดใช้งานปลั๊กอินอีกครั้งไม่กระทบทัวร์นาเมนต์ตัวอย่างที่ลบไปแล้ว\n"
+"ปลดล็อกตัวเลือกจำนวนเกมสูงสุด\n"
+"แก้ไขการเปลี่ยนทัวร์นาเมนต์ขณะใส่ผล\n"
+"เพิ่มวิธีใช้แบบย่อสำหรับผู้ใช้ใหม่\n"
+"อนุญาตแมตช์ชิงชนะเลิศสำหรับประเภทเดี่ยวด้วย"
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid ""
+"Added the option for single tournaments. \n"
+"Created an environment for additional sports."
+msgstr ""
+"เพิ่มตัวเลือกทัวร์นาเมนต์ประเภทเดี่ยว\n"
+"สร้างสภาพแวดล้อมสำหรับกีฬาอื่นเพิ่มเติม"
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid ""
+"The administrator can now use 'hide' option when editing the match result.\n"
+"Free score input is allowed. This opens using not only for tennis but for example for table tennis or beach volleyball."
+msgstr ""
+"ตอนนี้ผู้ดูแลใช้ตัวเลือก “ซ่อน” ขณะแก้ไขผลแมตช์ได้\n"
+"อนุญาตให้ใส่คะแนนได้อิสระ ทำให้ใช้ได้ไม่เพียงกับเทนนิส แต่ยังใช้กับเทเบิลเทนนิสหรือวอลเลย์บอลชายหาดได้ด้วย"
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid ""
+"Minor changes in code:\n"
+"* Allow to transfer organizer rights to a non-playing user.\n"
+"* Ensuring an even rotation of serves at the start of the tournament."
+msgstr ""
+"การเปลี่ยนแปลงเล็กน้อยในโค้ด:\n"
+"* อนุญาตให้โอนสิทธิ์ผู้จัดให้ผู้ใช้ที่ไม่ได้เล่น\n"
+"* ทำให้การเสิร์ฟหมุนเวียนอย่างสม่ำเสมอเมื่อเริ่มทัวร์นาเมนต์"
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid "Fixed choosing between left and right side in first matches."
+msgstr "แก้ไขการเลือกฝั่งซ้ายและขวาในแมตช์แรกๆ"
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid "A small modification of admin screen."
+msgstr "ปรับหน้าจอผู้ดูแลเล็กน้อย"
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid "First release to public."
+msgstr "เผยแพร่สู่สาธารณะครั้งแรก"
+

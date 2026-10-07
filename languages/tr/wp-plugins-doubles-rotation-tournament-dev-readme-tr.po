@@ -1,0 +1,1289 @@
+# Translation of Plugins - Rotation Tournaments - Development Readme (trunk) in Turkish
+# This file is distributed under the same license as the Plugins - Rotation Tournaments - Development Readme (trunk) package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Plugins - Rotation Tournaments - Development Readme (trunk)\n"
+"PO-Revision-Date: 2026-10-07 16:23:22+0000\n"
+"Language: tr_TR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: GlotPress/4.1.0\n"
+
+#. Short description.
+#, gp-priority: high
+msgid "Do you play Singles or Doubles Tournaments? This plugin manages Rotation Tournaments where players have a different partner in each game."
+msgstr "Tekler veya çiftler turnuvaları mı oynuyorsunuz? Bu eklenti, oyuncuların her oyunda yeni bir partneri olduğu rotasyon turnuvalarını yönetir."
+
+#. Plugin name.
+#, gp-priority: high
+msgid "Rotation Tournaments"
+msgstr "Rotasyon Turnuvaları"
+
+#. Found in installation paragraph.
+msgid "After installation, go to the app's settings and enter the address of your website where this plugin is installed."
+msgstr "Kurulumdan sonra uygulama ayarlarını açın ve bu eklentinin yüklü olduğu web sitesinin adresini girin."
+
+#. Found in installation paragraph.
+msgid "Or download it directly from this link: https://play.google.com/store/apps/details?id=cz.doroto.app"
+msgstr "Veya doğrudan şu bağlantıdan indirin: https://play.google.com/store/apps/details?id=cz.doroto.app"
+
+#. Found in installation paragraph.
+msgid "Search for \"Rotation Tournaments\" on the Google Play Store."
+msgstr "Google Play'de “Rotation Tournaments” araması yapın."
+
+#. Found in description paragraph.
+msgid "To get the full experience of managing tournaments on the go, download our mobile app, now available on Google Play!"
+msgstr "Turnuvaları hareket halindeyken tam olarak yönetmek için artık Google Play'de bulunan mobil uygulamamızı indirin!"
+
+#. Found in description paragraph.
+msgid "<strong>YouTube quick intro:</strong>"
+msgstr "<strong>YouTube'da kısa tanıtım:</strong>"
+
+#. Found in description list item.
+msgid "Video for a quick introduction to the Rotation Tournament:"
+msgstr "Rotasyon turnuvasına kısa bir tanıtım içeren video:"
+
+#. Found in faq paragraph.
+msgid "Yes. If you install the Rotation Tournaments plugin, allow player registration, and enable visibility in the website list, your site can appear in the Android app. Initially, someone must manually enter your website address into the app. After that, it becomes visible in the list for all users."
+msgstr "Evet. Rotation Tournaments eklentisini yükler, oyuncu kaydına izin verir ve site listesinde görünürlüğü etkinleştirirseniz web siteniz Android uygulamasında görünebilir. Önce birinin web sitenizin adresini uygulamaya elle girmesi gerekir. Bundan sonra site tüm kullanıcılar için listede görünür olur."
+
+#. Found in faq paragraph.
+msgid "Yes. An iOS version of the Rotation Tournaments app is planned and will be released in the near future."
+msgstr "Evet. Rotation Tournaments uygulamasının iOS sürümü planlanıyor ve yakında yayımlanacak."
+
+#. Found in faq header.
+msgid "Will my website be visible in the Rotation Tournaments Android app?"
+msgstr "Web sitem Android için Rotation Tournaments uygulamasında görünecek mi?"
+
+#. Found in faq header.
+msgid "Will there be an iPhone or iPad version of the app?"
+msgstr "Uygulamanın iPhone veya iPad sürümü olacak mı?"
+
+#. Found in installation paragraph.
+msgid "<strong>How to install Wordpress plugin:</strong>"
+msgstr "<strong>WordPress eklentisi nasıl yüklenir:</strong>"
+
+#. Found in installation list item.
+msgid "After activating the plugin, 4 pages will be created: one for managing tournaments (main page), one with tournament rules, and additional pages for Privacy Policy and Terms of Service. A sample post announcing a newly created tournament will also be added."
+msgstr "Eklenti etkinleştirildikten sonra 4 sayfa oluşturulur: biri turnuva yönetimi için (ana sayfa), biri turnuva kuralları için ve gizlilik politikası ile hizmet şartları sayfaları. Ayrıca yeni bir turnuvayı duyuran örnek bir yazı eklenir."
+
+#. Found in installation paragraph.
+msgid "<strong>How to install the Android app:</strong>"
+msgstr "<strong>Android uygulaması nasıl yüklenir:</strong>"
+
+#. Found in description paragraph.
+msgid "<strong>This plugin is the server-side for the \"Rotation Tournaments\" Android app.</strong>"
+msgstr "<strong>Bu eklenti, “Rotation Tournaments” Android uygulamasının sunucu tarafıdır.</strong>"
+
+#. Screenshot description.
+msgid "Individual tournament participants enter their results into the WordPress server and share the data with each other."
+msgstr "Turnuva katılımcıları sonuçlarını WordPress sunucusuna girer ve verileri birbirleriyle paylaşır."
+
+#. Screenshot description.
+msgid "Matches played. (Android app)"
+msgstr "Oynanan maçlar. (Android uygulaması)"
+
+#. Screenshot description.
+msgid "Tournament table. (Wordpress)"
+msgstr "Turnuva tablosu. (WordPress)"
+
+#. Screenshot description.
+msgid "Matches drawn. (Android app)"
+msgstr "Kurayla belirlenen maçlar. (Android uygulaması)"
+
+#. Screenshot description.
+msgid "Editing tournament parameters. (Wordpress)"
+msgstr "Turnuva parametrelerinin düzenlenmesi. (WordPress)"
+
+#. Screenshot description.
+msgid "Table of players with rankings. (Android app)"
+msgstr "Sıralamalı oyuncu tablosu. (Android uygulaması)"
+
+#. Screenshot description.
+msgid "Matches played. (Wordpress)"
+msgstr "Oynanan maçlar. (WordPress)"
+
+#. Screenshot description.
+msgid "Basic overview of the tournament. (Android app)"
+msgstr "Turnuvanın ana görünümü. (Android uygulaması)"
+
+#. Screenshot description.
+msgid "Matches drawn. (Wordpress)"
+msgstr "Kurayla belirlenen maçlar. (WordPress)"
+
+#. Found in description paragraph.
+msgid "<strong>Rotation Tournaments</strong> provides a platform for organizing all kinds of sports Singles and Doubles Tournaments, e.g."
+msgstr "<strong>Rotasyon Turnuvaları</strong>, her türlü tekler ve çiftler spor turnuvasını düzenlemek için bir platformdur, örneğin:"
+
+#. Found in description list item.
+msgid "Squash"
+msgstr "Squash"
+
+#. Found in description list item.
+msgid "Beach Volleyball"
+msgstr "Plaj voleybolu"
+
+#. Found in description list item.
+msgid "Badminton"
+msgstr "Badminton"
+
+#. Found in description list item.
+msgid "Padel"
+msgstr "Padel"
+
+#. Found in description list item.
+msgid "Table Tennis"
+msgstr "Masa tenisi"
+
+#. Found in description list item.
+msgid "Tennis"
+msgstr "Tenis"
+
+#. Found in faq paragraph.
+msgid ""
+"This plugin can be used for all types of sports where 2 or 4 players compete in singles or doubles.\n"
+"You can use this plugin for tennis, table tennis, squash, padel, badminton, beach volleyball and probably for more."
+msgstr ""
+"Bu eklenti, 2 veya 4 oyuncunun tekler ya da çiftler olarak yarıştığı tüm sporlar için uygundur.\n"
+"Tenis, masa tenisi, squash, padel, badminton, plaj voleybolu ve muhtemelen başka sporlar için de kullanılabilir."
+
+#. Found in faq paragraph.
+msgid "Yes. When creating a tournament, you can choose whether to create a singles or a doubles tournament."
+msgstr "Evet. Turnuva oluştururken tekler veya çiftler turnuvası seçebilirsiniz."
+
+#. Found in faq header.
+msgid "What sports tournaments is this plugin for?"
+msgstr "Bu eklenti hangi spor turnuvaları için tasarlandı?"
+
+#. Found in description paragraph.
+msgid "<strong>General Features:</strong>"
+msgstr "<strong>Genel özellikler:</strong>"
+
+#. Found in description paragraph.
+msgid "<strong>Doubles Rotation Tournament:</strong>"
+msgstr "<strong>Çiftler rotasyon turnuvası:</strong>"
+
+#. Found in description paragraph.
+msgid "<strong>Singles Rotation Tournament:</strong>"
+msgstr "<strong>Tekler rotasyon turnuvası:</strong>"
+
+#. Found in description paragraph.
+msgid "The participants of a tournament change partners several times during the tournament by a random selection and play against different players. The ratio of games won to games lost is calculated for each participant. The winner of the tournament is the player with this highest ratio. While a Singles Rotation Tournament can be organized without the aid of technology, in the case of a Doubles Rotation Tournament, this is not possible."
+msgstr "Turnuva katılımcıları turnuva boyunca birkaç kez rastgele partner değiştirir ve farklı oyunculara karşı oynar. Her katılımcı için kazanılan oyunların kaybedilenlere oranı hesaplanır. Kazanan, en iyi orana sahip oyuncudur. Tekler rotasyon turnuvası teknoloji yardımı olmadan yapılabilir, çiftler ise yapılamaz."
+
+#. Found in description paragraph.
+msgid "The <strong>Rotation Tournaments</strong> have a strong social aspect because its goal is to keep players in the tournament until the very end. The situation where weaker players would leave the tournament due to elimination rounds is eliminated. It allows grouping players into a special category with special conditions. This special setting can be utilized, for example, in mixed tournaments."
+msgstr "<strong>Rotasyon turnuvalarının</strong> güçlü bir sosyal yönü vardır, çünkü amaçları oyuncuları sonuna kadar turnuvada tutmaktır. Daha zayıf oyuncuların eleme nedeniyle turnuvadan ayrılması söz konusu değildir. Oyuncular özel koşullarla özel bir kategoride toplanabilir. Bu özel ayar, örneğin karışık turnuvalarda kullanılabilir."
+
+#. Found in description paragraph.
+msgid "In <strong>Rotation Tournaments</strong>, each participant plays against every other participant and there are no eliminations in individual rounds. To maximize the variety of match combinations, the matches are typically played in a single set."
+msgstr "<strong>Rotasyon turnuvalarında</strong> her katılımcı herkese karşı oynar ve tek tek turlarda kimse elenmez. Mümkün olduğunca çok kombinasyon elde etmek için maçlar genellikle tek set oynanır."
+
+#. Found in description list item.
+msgid "Suitable for various sports: tennis, table tennis, squash, padel, badminton, beach volleyball, and more."
+msgstr "Çeşitli sporlar için uygundur: tenis, masa tenisi, squash, padel, badminton, plaj voleybolu ve diğerleri."
+
+#. Found in description list item.
+msgid "Integration with website user accounts."
+msgstr "Web sitesi kullanıcı hesaplarıyla entegrasyon."
+
+#. Found in description list item.
+msgid "No downtime during the tournament."
+msgstr "Turnuva sırasında ölü zaman yok."
+
+#. Found in description list item.
+msgid "Comprehensive overview of player quality."
+msgstr "Oyuncuların seviyesine dair eksiksiz bir genel bakış."
+
+#. Found in description list item.
+msgid "User-friendly interface for administrators and participants."
+msgstr "Yöneticiler ve katılımcılar için kullanıcı dostu arayüz."
+
+#. Found in description list item.
+msgid "Customizable settings for each tournament."
+msgstr "Her turnuva için esnek ayarlar."
+
+#. Found in description list item.
+msgid "Real-time score tracking."
+msgstr "Gerçek zamanlı skor takibi."
+
+#. Found in description list item.
+msgid "Seamless scheduling of matches."
+msgstr "Kolay maç programlama."
+
+#. Found in description list item.
+msgid "Announcement of the Best Player and Most Ideal Pair at the end of the tournament."
+msgstr "Turnuva sonunda en iyi oyuncunun ve ideal çiftin açıklanması."
+
+#. Found in description list item.
+msgid "Ranking based on the ratio of games won to games lost."
+msgstr "Sıralama, kazanılan ve kaybedilen oyunların oranıyla belirlenir."
+
+#. Found in description list item.
+msgid "Individual players can join or leave the tournament at any time."
+msgstr "Oyuncular turnuvaya istedikleri zaman katılabilir veya ayrılabilir."
+
+#. Found in description list item.
+msgid "Tournament can be interrupted or extended without disruption."
+msgstr "Turnuva akışı bozulmadan durdurulabilir veya uzatılabilir."
+
+#. Found in description list item.
+msgid "Shorter matches for more participation."
+msgstr "Daha fazla katılım için daha kısa maçlar."
+
+#. Found in description list item.
+msgid "No eliminations, ensuring all players stay in the game."
+msgstr "Eleme yok – tüm oyuncular oyunda kalır."
+
+#. Found in description list item.
+msgid "Define special groups of players with unique conditions."
+msgstr "Özel koşullara sahip özel oyuncu gruplarının tanımlanması."
+
+#. Found in description list item.
+msgid "Suitable for odd numbers of players and minimum lineups of 4 players."
+msgstr "Tek sayıda oyuncu ve en az 4 oyunculu kadro için uygundur."
+
+#. Found in description list item.
+msgid "Individuals can enter the tournament without a permanent teammate."
+msgstr "Turnuvaya sabit bir partner olmadan katılmak mümkündür."
+
+#. Found in description list item.
+msgid "Rotation of teammates, ensuring variety in partnerships."
+msgstr "Partner rotasyonu çift çeşitliliği sağlar."
+
+#. Found in description list item.
+msgid "Alternative form of a Doubles Tournament where players enter each match with a different partner and in different positions (alternating left and right sides)."
+msgstr "Oyuncuların her maçı yeni bir partnerle ve farklı pozisyonlarda (sol ve sağ tarafı değiştirerek) oynadığı alternatif bir çiftler turnuvası biçimi."
+
+#. Found in description list item.
+msgid "Depending on the time options, everyone plays against everyone."
+msgstr "Zamana bağlı olarak herkes herkese karşı oynar."
+
+#. Found in description list item.
+msgid "Alternative form of a Singles Tournament where players face each other without elimination rounds."
+msgstr "Oyuncuların eleme olmadan karşılaştığı alternatif bir tekler turnuvası biçimi."
+
+#. Found in description header.
+msgid "Features"
+msgstr "Özellikler"
+
+#. Found in faq header.
+msgid "Is this plugin suitable for singles tournaments?"
+msgstr "Bu eklenti tekler turnuvaları için uygun mu?"
+
+#. Found in faq paragraph.
+msgid "Yes, each tournament participant must have their own account. If a website has disabled user registration, this account must be created by the website administrator."
+msgstr "Evet, her turnuva katılımcısının kendi kullanıcı hesabı olmalıdır. Web sitesinde kullanıcı kaydı devre dışıysa bu hesap web sitesi yöneticisi tarafından oluşturulmalıdır."
+
+#. Found in faq header.
+msgid "Does each player have to have an account created on my website?"
+msgstr "Her oyuncunun web sitemde hesabı olmalı mı?"
+
+#. Found in installation list item.
+msgid "At the end close the tournament and look who was announced as the winner."
+msgstr "Sonunda turnuvayı kapatın ve kimin kazanan ilan edildiğini görün."
+
+#. Found in installation list item.
+msgid "You can change tournament settings on the main page or you can look at 2 new admin pages that are dedicated for overall environmental settings and for description of all possible shortcodes."
+msgstr "Turnuva ayarları ana sayfada değiştirilebilir veya ortamın genel ayarlarına ve tüm kullanılabilir kısa kodların açıklamasına ayrılmış 2 yeni yönetim sayfasına göz atabilirsiniz."
+
+#. Found in installation list item.
+msgid "If you have a sufficient amount of players then you can close a registration and start playing matches."
+msgstr "Yeterli oyuncu varsa kaydı kapatıp maçları oynamaya başlayabilirsiniz."
+
+#. Found in installation list item.
+msgid "Then you can log in your created tournament and as a tournament´s administrator you can add manually also other players sourced from WP database."
+msgstr "Ardından oluşturulan turnuvaya kayıt olabilir ve turnuva yöneticisi olarak WordPress veritabanından diğer oyuncuları elle ekleyebilirsiniz."
+
+#. Found in installation list item.
+msgid "Start by clicking on \"Create a new tournament\" under \"Tournament Selection …\" on the main page."
+msgstr "Ana sayfadaki “Turnuva seçimi…” bölümünde “Yeni turnuva oluştur”a tıklayarak başlayın."
+
+#. Found in installation list item.
+msgid "Install the plugin as usual."
+msgstr "Eklentiyi her zamanki gibi yükleyin."
+
+#. Found in description paragraph.
+msgid "Visit <a href=\"https://doroto.ltcchrast.cz/\">test page</a> for more information, try to create your own tournament and take a look at <a href=\"https://doroto.ltcchrast.cz/rules-of-the-doubles-rotation-tournament/\">Rules of the Doubles Rotation Tournament</a>."
+msgstr "Daha fazla bilgi edinmek için <a href=\"https://doroto.ltcchrast.cz/\">test sayfasını</a> ziyaret edin, kendi turnuvanızı oluşturmayı deneyin ve <a href=\"https://doroto.ltcchrast.cz/rules-of-the-doubles-rotation-tournament/\">çiftler rotasyon turnuvası kurallarına</a> göz atın."
+
+#. Found in description paragraph.
+msgid "[youtube https://www.youtube.com/watch?v=NoL9aPTv8u8]"
+msgstr "[youtube https://www.youtube.com/watch?v=NoL9aPTv8u8]"
+
+#. Found in description header.
+msgid "More information"
+msgstr "Daha fazla bilgi"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - the plugin restores read permissions of its files after an FTP upload (the web server answered 403 and the admin page stayed empty); the admin page shows a notice when its script cannot be loaded"
+msgstr "Düzeltme – eklenti, FTP yüklemesinden sonra dosyalarının okuma izinlerini geri yükler (web sunucusu 403 yanıtı veriyordu ve yönetim sayfası boş kalıyordu); betiği yüklenemezse yönetim sayfası bir bildirim gösterir"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - tournament settings keep the ranges of 1.x and of the app (a larger value made the app's dropdowns fail)"
+msgstr "Düzeltme – turnuva ayarları 1.x sürümünün ve uygulamanın aralıklarında kalır (daha büyük bir değer uygulamanın açılır listelerini çökertiyordu)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - REST requests from the website use the WordPress login (cookie and nonce) when no app token is sent"
+msgstr "İyileştirme – web sitesindeki REST istekleri, uygulama belirteci gönderilmediğinde WordPress oturumunu (çerez ve nonce) kullanır"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - styles, scripts and no-cache headers are sent only on pages that show the plugin; the unused tipTip library was removed and the admin no longer calls ip-api.com"
+msgstr "İyileştirme – stiller, betikler ve no-cache başlıkları yalnızca eklentinin gösterildiği sayfalarda gönderilir; kullanılmayan tipTip kitaplığı kaldırıldı ve yönetim artık ip-api.com'a bağlanmıyor"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - every change of a tournament (web forms, blocks and the Android app) goes through one shared layer with the same permissions, locking and change detection"
+msgstr "İyileştirme – her turnuva değişikliği (web formları, bloklar ve Android uygulaması) aynı haklar, kilitler ve değişiklik takibiyle ortak bir katmandan geçer"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - new admin page with Overview, Settings and Help instead of nine settings tabs; every setting is checked on the server and errors are shown next to the field"
+msgstr "İyileştirme – dokuz ayar sekmesi yerine Genel bakış, Ayarlar ve Yardım bölümleriyle yeni bir yönetim sayfası; her ayar sunucuda kontrol edilir ve hatalar alanın yanında gösterilir"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - the serving player is marked on the match cards; the special group is highlighted in matches, results, players, statistics and winners; the tournament details (invitation text) can be shown at any time"
+msgstr "Eklendi – servis atan oyuncu maç kartlarında işaretlenir; özel grup maçlarda, sonuçlarda, oyuncularda, istatistiklerde ve kazananlarda vurgulanır; turnuva ayrıntıları (davet metni) istenildiği zaman gösterilebilir"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - the tournament block takes its colours from the theme (button and palette colours); the block's Styles panel can change the accent, the tab bar and table headers, their text and the colour of the special group"
+msgstr "Eklendi – turnuva bloğu renklerini temadan alır (düğme ve palet renkleri); bloğun Stiller paneli vurguyu, sekme çubuğunu ve tablo başlıklarını, bunların metnini ve özel grup rengini değiştirmeye olanak tanır"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - the tournament block: Share dialog with a QR code, \"Open in the app\" line, full-screen presentation that rotates the sections, map of the tournament place in the settings, and guided tours of the page and of four example tournaments"
+msgstr "Eklendi – turnuva bloğunda: QR kodlu Paylaş penceresi, “Uygulamada aç” satırı, dönen bölümlerle tam ekran sunum, ayarlarda turnuva yerinin haritası ve sayfanın ve dört örnek turnuvanın rehberli turları"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - the plugin admin can convert the main page to the blocks with one button; the old content stays in the page revisions. New installs create the main page from the blocks. The shortcodes [doroto_tournament] and [doroto_tournament_list] show the blocks in the classic editor; the 1.x shortcodes keep working"
+msgstr "Eklendi – eklenti yöneticisi ana sayfayı tek bir düğmeyle bloklara dönüştürebilir; eski içerik sayfa revizyonlarında kalır. Yeni kurulumlar ana sayfayı bloklardan oluşturur. [doroto_tournament] ve [doroto_tournament_list] kısa kodları blokları klasik düzenleyicide gösterir; 1.x sürümünün kısa kodları çalışmaya devam eder"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - blocks for the block editor: \"Rotation tournament\" (matches, results, players, statistics and settings on tabs, updated live without reloading the page), its variations \"Tournament standings\", \"Tournament matches\" and \"Tournament presentation\", \"Tournament list\" and \"Tournament invitation\""
+msgstr "Eklendi – blok düzenleyici için bloklar: “Rotasyon turnuvası” (sekmelerde maçlar, sonuçlar, oyuncular, istatistikler ve ayarlar; sayfa yeniden yüklenmeden gerçek zamanlı güncellenir), bunun “Turnuva sıralaması”, “Turnuva maçları” ve “Turnuva sunumu” varyasyonları ile “Rotasyon turnuvaları listesi” ve “Rotasyon turnuvası daveti”"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "2.0.0 - 2026/10/06"
+msgstr "2.0.0 - 2026/10/06"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Change - the review request is shown only to administrators, 14 days after activation once the site has its own tournament, and comes back 7 days after \"Remind me\" until the plugin is rated"
+msgstr "Değişiklik – değerlendirme isteği yalnızca yöneticilere, etkinleştirmeden 14 gün sonra, site zaten kendi turnuvasına sahip olduğunda gösterilir ve eklenti değerlendirilene kadar “Hatırlat” seçiminden 7 gün sonra yeniden görünür"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - the tournament page shows a short link to the Android app (can be turned off in Settings -&gt; Mobile app)"
+msgstr "Eklendi – turnuva sayfasında Android uygulamasına kısa bir bağlantı gösterilir (Ayarlar -&gt; Mobil uygulama bölümünden kapatılabilir)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - optional mode join/leave for the app join endpoint"
+msgstr "Eklendi – uygulamanın katılma uç noktası için isteğe bağlı katıl/ayrıl modu"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - REST endpoint create-player: the organizer creates a player and adds them to the tournament in one step; the player gets an e-mail to set the password"
+msgstr "Eklendi – create-player REST uç noktası: organizatör tek adımda bir oyuncu oluşturur ve onu turnuvaya ekler; oyuncu parola belirlemek için bir e-posta alır"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Change - tournament links to the home page (\"?tournament_id=5\") and the old app QR codes (\"/tournament?id=5\") open the tournament page"
+msgstr "Değişiklik – ana sayfadaki turnuva bağlantıları (“?tournament_id=5”) ve uygulamanın eski QR kodları (“/tournament?id=5”) turnuva sayfasını açar"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Change - the default name of a new tournament uses the site time zone, not UTC"
+msgstr "Değişiklik – yeni bir turnuvanın varsayılan adı UTC yerine sitenin saat dilimini kullanır"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Change - the app can be signed in on several devices at once (up to 10 per user)"
+msgstr "Değişiklik – uygulamada aynı anda birkaç cihazda oturum açılabilir (kullanıcı başına en fazla 10)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Change - invitation link only joins the tournament (a second click no longer unregisters the player), redirects to the login page and back, and then to the tournament page"
+msgstr "Değişiklik – davet bağlantısı yalnızca turnuvaya kaydeder (ikinci tıklama artık oyuncunun kaydını silmez), giriş sayfasına ve geri, ardından turnuva sayfasına yönlendirir"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - REST responses are never served from page caches or CDNs"
+msgstr "Düzeltme – REST yanıtları artık hiçbir zaman sayfa önbelleğinden veya CDN'den sunulmaz"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Authorization header is read also on FPM/CGI hosts"
+msgstr "Düzeltme – Authorization başlığı FPM/CGI barındırmalarında da okunur"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - database upgrade adds new columns also on already installed sites"
+msgstr "Düzeltme – veritabanı güncellemesi yeni sütunları zaten kurulu sitelere de ekler"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - several devices signing in or refreshing their session at the same moment no longer sign each other out"
+msgstr "Düzeltme – aynı anda oturum açan veya oturumu yenileyen birkaç cihaz artık birbirinin oturumunu kapatmaz"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - every change of a running tournament (correcting a result, suspending or removing a player, settings, payments, special group, web forms) runs under the tournament lock; correcting a result while another court saved its result could stall the whole tournament"
+msgstr "Düzeltme – devam eden bir turnuvadaki her değişiklik (sonuç düzeltme, oyuncuyu askıya alma veya kaldırma, ayarlar, ödemeler, özel grup, web formları) turnuva kilidi altında yapılır; başka bir kortta sonuç kaydedilirken yapılan bir sonuç düzeltmesi tüm turnuvayı durdurabiliyordu"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - tournament lock: results entered at the same time on several courts are no longer lost"
+msgstr "Düzeltme – turnuva kilidi: birkaç kortta aynı anda girilen sonuçlar artık kaybolmaz"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - every write to a tournament updates last_update"
+msgstr "Düzeltme – turnuvaya yapılan her yazma last_update değerini günceller"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - results entered on the web no longer store last_update = 0, so the Android app refreshes again"
+msgstr "Düzeltme – web sitesinde girilen sonuçlar artık last_update = 0 kaydetmez, böylece Android uygulaması yeniden güncellenir"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Security - with registration disabled only tournament organizers can create player accounts from the app (before, any signed-in player could)"
+msgstr "Güvenlik – kayıt devre dışıyken uygulamadan oyuncu hesabını yalnızca turnuva organizatörleri oluşturabilir (önceden giriş yapmış herhangi bir oyuncu oluşturabiliyordu)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Security - an account created by an organizer no longer returns a login session of the new player to the organizer"
+msgstr "Güvenlik – bir organizatör tarafından oluşturulan hesap artık organizatöre yeni oyuncunun oturumunu döndürmez"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Security - registration from the app (incl. a new Google account) respects \"Anyone can register\""
+msgstr "Güvenlik – uygulamadan kayıt (yeni bir Google hesabı dahil) “Herkes kayıt olabilir” ayarına uyar"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Security - final doubles and registration toggle check tournament admin rights"
+msgstr "Güvenlik – çiftler final maçı ve kayıt geçişi turnuva yöneticisinin haklarını kontrol eder"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Security - guided tour actions need a nonce; regenerating the example tournaments is throttled"
+msgstr "Güvenlik – rehberli tur işlemleri bir nonce gerektirir; örnek turnuvaların yeniden oluşturulması sınırlandırıldı"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Security - admin actions sent as links are protected by a nonce (CSRF)"
+msgstr "Güvenlik – bağlantılarla gönderilen yönetim işlemleri nonce ile korunur (CSRF)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Security - front-end forms check tournament admin rights, not only the nonce (any logged-in user could change players, payments or delete a tournament)"
+msgstr "Güvenlik – web sitesindeki formlar yalnızca nonce'u değil, turnuva yöneticisinin haklarını da kontrol eder (önceden giriş yapmış herhangi bir kullanıcı oyuncuları, ödemeleri değiştirebilir veya turnuvayı silebilirdi)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - app tournament links on the central site (?tournament_id=5&amp;doroto_site=) are forwarded to the club's tournament page when the app is not installed (sites from the site directory; other sites get a page with a link)"
+msgstr "Eklendi – merkezi sitedeki uygulama turnuva bağlantıları (?tournament_id=5&amp;doroto_site=), uygulama yüklü değilse kulübün turnuva sayfasına yönlendirir (site dizinindeki siteler; diğer siteler için bağlantı içeren bir sayfa gösterilir)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - the tournament page has an \"Open in the app\" link: Android opens the tournament in the app, or Google Play when it is missing"
+msgstr "Eklendi – turnuva sayfasında “Uygulamada aç” bağlantısı bulunur: Android turnuvayı uygulamada veya uygulama yoksa Google Play'de açar"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - saving the tournament settings rejects an unknown tournament type"
+msgstr "Düzeltme – turnuva ayarları kaydedilirken bilinmeyen bir turnuva türü reddedilir"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - a deleted account leaves its open tournaments: removed when it has not played yet, otherwise suspended; it also leaves the organizers, special group and payments (it was drawn into matches as \"Unknown player\")"
+msgstr "Düzeltme – silinen bir hesap açık turnuvalarından ayrılır: henüz oynamadıysa kaldırılır, aksi halde askıya alınır; ayrıca organizatörlerden, özel gruptan ve ödemelerden kaldırılır (önceden kuraya “Bilinmeyen oyuncu” olarak giriyordu)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - removing a payment no longer turns the payment list into a JSON object (the Android app could crash on the statistics page)"
+msgstr "Düzeltme – bir ödemeyi kaldırmak artık ödemeler listesini bir JSON nesnesine dönüştürmez (Android uygulaması istatistik sayfasında çökebiliyordu)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - the change form fits on a phone screen (the result and the button were off screen)"
+msgstr "Düzeltme – değişiklik formu telefon ekranına sığar (sonuç ve düğme ekranın dışındaydı)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - organizers see an \"Edit result\" button next to every played match; it selects the match and its result in the change form (the form above the table was easy to miss)"
+msgstr "Eklendi – organizatörler oynanan her maçın yanında “Sonucu düzenle” düğmesini görür; bu düğme değişiklik formunda maçı ve sonucunu seçer (tablonun üstündeki form kolayca gözden kaçabiliyordu)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - REST route skip-matches: the organizer skips several ongoing matches at once and new matches are drawn from all free players"
+msgstr "Eklendi – skip-matches REST yolu: organizatör devam eden birkaç maçı aynı anda atlar ve yeni maçlar tüm boştaki oyuncular arasından kurayla belirlenir"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - among players with the same number of new teammates left, the one who played fewer games is drawn first; sides (left/right) alternate for both players of a team"
+msgstr "İyileştirme – kalan yeni partner sayısı aynı olan oyuncular arasında önce daha az maç oynamış olan kurayla belirlenir; taraflar (sol/sağ) takımın her iki oyuncusu için de değişir"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - the draw chooses the opposing team (and the teammate) by previous meetings too: players meet more different opponents and the same players meet less often (with 14 players on 2 courts, pairs that met 3 or more times dropped from about 5 to 1 per evening)"
+msgstr "İyileştirme – kura, rakip takımı (ve partneri) önceki karşılaşmaları dikkate alarak seçer: oyuncular daha fazla farklı rakiple karşılaşır ve aynı oyuncular daha seyrek karşılaşır (2 kortta 14 oyuncuyla, 3 veya daha fazla kez karşılaşan çiftlerin sayısı bir akşamda yaklaşık 5'ten 1'e düştü)"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.6.0 - 2026/10/02"
+msgstr "1.6.0 - 2026/10/02"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.6.1 - 2026/10/02"
+msgstr "1.6.1 - 2026/10/02"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.6.2 - 2026/10/04"
+msgstr "1.6.2 - 2026/10/04"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - fixed some errors found in Plugin Check"
+msgstr "Düzeltme – Plugin Check tarafından bulunan bazı hatalar düzeltildi"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.5.8 - 2026/06/12"
+msgstr "1.5.8 - 2026/06/12"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - some translations"
+msgstr "Düzeltme – bazı çeviriler"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.5.7 - 2026/06/06"
+msgstr "1.5.7 - 2026/06/06"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - register and sign in for android app"
+msgstr "Düzeltme – Android uygulamasında kayıt ve giriş"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.5.6 - 2026/05/13"
+msgstr "1.5.6 - 2026/05/13"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - remove admin for android app"
+msgstr "Eklendi – Android uygulaması için yöneticinin kaldırılması"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.5.5 - 2026/05/12"
+msgstr "1.5.5 - 2026/05/12"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - rest value is safe now"
+msgstr "Düzeltme – rest değeri artık güvenli"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.0.0 - 2024/01/01"
+msgstr "1.0.0 - 2024/01/01"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.0.1 - 2024/01/03"
+msgstr "1.0.1 - 2024/01/03"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.0.2 - 2024/01/21"
+msgstr "1.0.2 - 2024/01/21"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.0.3 - 2024/01/26"
+msgstr "1.0.3 - 2024/01/26"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.0.4 - 2024/02/02"
+msgstr "1.0.4 - 2024/02/02"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.1.0 - 2024/02/04"
+msgstr "1.1.0 - 2024/02/04"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.1.1 - 2024/02/09"
+msgstr "1.1.1 - 2024/02/09"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.1.2 - 2024/02/13"
+msgstr "1.1.2 - 2024/02/13"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.1.3 - 2024/02/17"
+msgstr "1.1.3 - 2024/02/17"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.1.4 - 2024/02/18"
+msgstr "1.1.4 - 2024/02/18"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.1.5 - 2024/02/20"
+msgstr "1.1.5 - 2024/02/20"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.1.6 - 2024/02/25"
+msgstr "1.1.6 - 2024/02/25"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.1.7 - 2024/03/01"
+msgstr "1.1.7 - 2024/03/01"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.1.8 - 2024/03/07"
+msgstr "1.1.8 - 2024/03/07"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.1.9 - 2024/03/09"
+msgstr "1.1.9 - 2024/03/09"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.2.0 - 2024/03/20"
+msgstr "1.2.0 - 2024/03/20"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.2.1 - 2024/03/21"
+msgstr "1.2.1 - 2024/03/21"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.2.2 - 2024/04/17"
+msgstr "1.2.2 - 2024/04/17"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.2.3 - 2024/04/19"
+msgstr "1.2.3 - 2024/04/19"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.2.4 - 2024/05/08"
+msgstr "1.2.4 - 2024/05/08"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.2.5 - 2024/05/15"
+msgstr "1.2.5 - 2024/05/15"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.2.6 - 2024/05/29"
+msgstr "1.2.6 - 2024/05/29"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.2.7 - 2024/06/07"
+msgstr "1.2.7 - 2024/06/07"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.2.8 - 2024/06/21"
+msgstr "1.2.8 - 2024/06/21"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.2.9 - 2024/06/23"
+msgstr "1.2.9 - 2024/06/23"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.3.0 - 2024/07/06"
+msgstr "1.3.0 - 2024/07/06"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.3.1 - 2024/07/12"
+msgstr "1.3.1 - 2024/07/12"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.3.2 - 2024/07/18"
+msgstr "1.3.2 - 2024/07/18"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.3.3 - 2024/09/13"
+msgstr "1.3.3 - 2024/09/13"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.3.4 - 2024/09/26"
+msgstr "1.3.4 - 2024/09/26"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.3.5 - 2024/09/28"
+msgstr "1.3.5 - 2024/09/28"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.3.6 - 2024/11/02"
+msgstr "1.3.6 - 2024/11/02"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.3.7 - 2024/12/13"
+msgstr "1.3.7 - 2024/12/13"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.3.8 - 2024/12/15"
+msgstr "1.3.8 - 2024/12/15"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.3.9 - 2024/12/21"
+msgstr "1.3.9 - 2024/12/21"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.4.0 - 2024/12/27"
+msgstr "1.4.0 - 2024/12/27"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.4.1 - 2024/12/31"
+msgstr "1.4.1 - 2024/12/31"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.4.2 - 2025/04/16"
+msgstr "1.4.2 - 2025/04/16"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.4.3 - 2025/05/04"
+msgstr "1.4.3 - 2025/05/04"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.4.4 - 2025/05/25"
+msgstr "1.4.4 - 2025/05/25"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.4.5 - 2025/06/09"
+msgstr "1.4.5 - 2025/06/09"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.4.6 - 2025/06/14"
+msgstr "1.4.6 - 2025/06/14"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.4.7 - 2025/07/27"
+msgstr "1.4.7 - 2025/07/27"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.4.8 - 2025/08/07"
+msgstr "1.4.8 - 2025/08/07"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.4.9 - 2025/08/07"
+msgstr "1.4.9 - 2025/08/07"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.5.0 - 2025/08/08"
+msgstr "1.5.0 - 2025/08/08"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.5.1 - 2025/08/17"
+msgstr "1.5.1 - 2025/08/17"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.5.2 - 2025/08/26"
+msgstr "1.5.2 - 2025/08/26"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.5.3 - 2025/12/05"
+msgstr "1.5.3 - 2025/12/05"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.5.4 - 2026/04/22"
+msgstr "1.5.4 - 2026/04/22"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - stable login to android application"
+msgstr "Düzeltme – Android uygulamasına kararlı giriş"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - existing players are not repeated in the menu Add players"
+msgstr "Düzeltme – mevcut oyuncular Oyuncu ekle menüsünde tekrarlanmaz"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Change - Public release of Android app"
+msgstr "Değişiklik – Android uygulamasının herkese açık sürümü"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Add 'last update' to the database also for already installed plugings"
+msgstr "Düzeltme – zaten yüklü eklentiler için de veritabanına “last update” eklenmesi"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Uninstall also 2 new pages (privacy policy and terms of service)"
+msgstr "Düzeltme – 2 yeni sayfanın (gizlilik politikası ve hizmet şartları) da silinmesi"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Add 'last update' to the database"
+msgstr "Düzeltme – veritabanına “last update” eklenmesi"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Improved some functions for Android app"
+msgstr "Düzeltme – Android uygulaması için bazı işlevler iyileştirildi"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Announcement about the opportunity to become an application tester"
+msgstr "Eklendi – uygulama test kullanıcısı olma olanağına ilişkin duyuru"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Privacy Policy page"
+msgstr "Eklendi – gizlilik politikası sayfası"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Terms of Service page"
+msgstr "Eklendi – hizmet şartları sayfası"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Info about last update speed up loading"
+msgstr "Eklendi – son güncelleme bilgisi yüklemeyi hızlandırır"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Correct an error message Undefined array key player['count']"
+msgstr "Düzeltme – Undefined array key player['count'] hata mesajı düzeltildi"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Tournaments filtering by distance and visibility"
+msgstr "Eklendi – turnuvaları mesafeye ve görünürlüğe göre filtreleme"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Support for a Android app"
+msgstr "Eklendi – Android uygulaması desteği"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Controls the visibility of the tournament in the public list."
+msgstr "Eklendi – turnuvanın herkese açık listedeki görünürlüğünün yönetimi."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Location of the tournament."
+msgstr "Eklendi – turnuva konumu."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Log in/out block had a problem"
+msgstr "Düzeltme – kayıt/ayrılma bloğunda bir sorun vardı"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Parameter When enough players are available had sometimes a wrong value."
+msgstr "Düzeltme – “Yeterli oyuncu olduğunda” parametresi bazen yanlış değere sahipti."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Match hiding correction"
+msgstr "Düzeltme – maçları gizleme düzeltildi"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Register and log in a new user only if anyone can register (system settings)."
+msgstr "Düzeltme – yeni kullanıcı kaydı ve girişi yalnızca herkes kayıt olabildiğinde (sistem ayarı)."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Register and log in a new user."
+msgstr "Eklendi – yeni kullanıcı kaydı ve girişi."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Translation loading too early warning."
+msgstr "Düzeltme – çevirilerin çok erken yüklenmesiyle ilgili uyarı."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Dashboard overview widget."
+msgstr "Eklendi – başlangıç panelinde genel bakış bileşeni."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Log-link block."
+msgstr "Eklendi – Log-link bloğu."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Sometimes tournament_id was unknown."
+msgstr "Düzeltme – bazen tournament_id bilinmiyordu."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Preserving stored values on the backend."
+msgstr "Düzeltme – kaydedilen değerlerin sunucuya kaydedilmesi."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Guaranteed visibility of the selected tournament in the tournament table."
+msgstr "Düzeltme – seçili turnuvanın turnuva tablosunda görünürlüğü garanti altına alındı."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Error with hide parameter."
+msgstr "Düzeltme – hide parametresindeki hata."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Permalink structure also works with the floating help icon."
+msgstr "Düzeltme – kalıcı bağlantı yapısı yüzen yardım simgesiyle de çalışır."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Tournament name is not copied from previous one."
+msgstr "Düzeltme – turnuva adı öncekinden kopyalanmaz."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - More tournament examples for demonstration."
+msgstr "Eklendi – tanıtım için daha fazla örnek turnuva."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Floating help icon."
+msgstr "Eklendi – yüzen yardım simgesi."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Prevent cashing for logged users."
+msgstr "Eklendi – giriş yapmış kullanıcılar için önbelleğe almayı devre dışı bırakma."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Doubles Badminton table also for co-players"
+msgstr "Düzeltme – çiftler badminton tablosu partnerler için de"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Tournament progress info."
+msgstr "Eklendi – turnuvanın ilerleyişi hakkında bilgi."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Change game results availability."
+msgstr "Düzeltme – oyun sonuçlarının erişilebilirliğinin değiştirilmesi."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Special group count."
+msgstr "Eklendi – özel grup üyelerinin sayısı."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Change of information about the end of the tournament round."
+msgstr "Turnuva turunun sonuna ilişkin bilginin değiştirilmesi."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Opponent selection."
+msgstr "Düzeltme – rakip seçimi."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Pair selection mechanism explanation on the help page."
+msgstr "Eklendi – yardım sayfasında çift seçim mekanizmasının açıklaması."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Pair selection didn´t take into account number of played games in total."
+msgstr "Düzeltme – çift seçimi oynanan toplam oyun sayısını dikkate almıyordu."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Rights to Suspension and Resumption."
+msgstr "Düzeltme – askıya alma ve geri yükleme hakları."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Rights to add a special group."
+msgstr "Düzeltme – özel gruba ekleme hakları."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Rights to add a tournament admin."
+msgstr "Düzeltme – turnuva yöneticisi ekleme hakları."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Rights to add other players into tournaments."
+msgstr "Düzeltme – turnuvalara başka oyuncu ekleme hakları."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Do not show instructions during the tournament presentation."
+msgstr "Düzeltme – turnuva sunumu sırasında talimatlar gösterilmez."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Admin can change a default value for minimum number of games played before a player can be declared a winner."
+msgstr "Eklendi – yönetici, bir oyuncunun kazanan ilan edilebilmesi için gereken en az oynanan oyun sayısının varsayılan değerini değiştirebilir."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - The ability to specify a minimum number of games played before a player can be declared a winner."
+msgstr "Eklendi – bir oyuncunun kazanan ilan edilebilmesi için en az oynanan oyun sayısını belirleme olanağı."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Removing a player from a tournament."
+msgstr "Düzeltme – bir oyuncunun turnuvadan kaldırılması."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Ready for testing in WP Playground."
+msgstr "Düzeltme – WP Playground'da teste hazır."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Solving some database errors with empty values."
+msgstr "Düzeltme – boş değerlerle ilgili bazı veritabanı hatalarının giderilmesi."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Update for WP Playground."
+msgstr "Düzeltme – WP Playground için güncellemeler."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Improved playmate choose."
+msgstr "Düzeltme – partner seçimi iyileştirildi."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Problems with removing players during a game."
+msgstr "Düzeltme – oyun sırasında oyuncuların kaldırılmasıyla ilgili sorunlar."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - A currently playing player can´t be removed."
+msgstr "Düzeltme – o anda oynayan bir oyuncu kaldırılamaz."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Fix real count of players after their removing."
+msgstr "Düzeltme – oyuncular kaldırıldıktan sonra doğru oyuncu sayısı."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Fix an error during removing a player from the tournament."
+msgstr "Düzeltme – bir oyuncuyu turnuvadan kaldırırken oluşan hata."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Redirection to a tournament in case of a user entry."
+msgstr "Düzeltme – kullanıcı veri girdiğinde turnuvaya yönlendirme."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - icon format."
+msgstr "Düzeltme – simgelerin biçimi."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Modification for WP Playground."
+msgstr "WP Playground için ince ayarlar."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Fixed a bug in the database that prevented a tournament record from being created on some servers."
+msgstr "Düzeltme – bazı sunucularda turnuva kaydının oluşturulmasını engelleyen veritabanı hatası düzeltildi."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Unregistered users can no longer enter results in the singles tournament."
+msgstr "Düzeltme – kayıtsız kullanıcılar artık tekler turnuvasında sonuç giremez."
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid "Possibility to remove players from an already ongoing tournament."
+msgstr "Halihazırda devam eden bir turnuvadan oyuncu kaldırma olanağı."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "New - Expanded the ability for tournament administrators to browse through players they have already met at the tournament."
+msgstr "Yeni – turnuva yöneticileri bir turnuvada zaten karşılaştıkları daha fazla oyuncuyu görebilir."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "New - If the player has not yet registered for any tournament, it is possible to choose whether to show him a quick help."
+msgstr "Yeni – bir oyuncu henüz hiçbir turnuvaya kaydolmadıysa ona kısa bir yardım gösterilip gösterilmeyeceğini seçebilirsiniz."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "New - Optional login prompt."
+msgstr "Yeni – isteğe bağlı giriş daveti."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - If all tournaments were deleted, a new tournament could not be created."
+msgstr "Düzeltme – tüm turnuvalar silindiyse yeni bir turnuva oluşturmak mümkün değildi."
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid ""
+"Trial tournament improvements.\n"
+"Added the option to announce the end of the tournament round."
+msgstr ""
+"Antrenman turnuvasının iyileştirilmesi.\n"
+"Turnuva turunun sonunu duyurma olanağı eklendi."
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid ""
+"Improved the visual appearance of the main page.\n"
+"Badminton added to the list of available tournaments."
+msgstr ""
+"Ana sayfanın görünümü iyileştirildi.\n"
+"Badminton mevcut turnuvalar listesine eklendi."
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid "Option to announce separate winners from the special group and outside the special group."
+msgstr "Özel gruptan ve grup dışından ayrı kazananlar açıklama olanağı."
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid ""
+"Notices after a plugin activation.\n"
+"Added player trend."
+msgstr ""
+"Eklenti etkinleştirildikten sonra bildirim.\n"
+"Oyuncu trendi eklendi."
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid ""
+"Modified tournament editing tab.\n"
+"Added option to change tournament type."
+msgstr ""
+"Turnuva düzenleme sekmesi değiştirildi.\n"
+"Turnuva türünü değiştirme olanağı eklendi."
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid ""
+"Reactivating the plugin doesn´t affect the already deleted tournament example. \n"
+"Unblock offering maximum games count.\n"
+"Fix tournament change when entering results.\n"
+"Added quick help for newcomers.\n"
+"Allow the final match also for singles."
+msgstr ""
+"Eklentinin yeniden etkinleştirilmesi zaten silinmiş bir örnek turnuvayı etkilemez.\n"
+"En fazla oyun sayısı seçimi açıldı.\n"
+"Sonuç girerken turnuvanın değişmesi düzeltildi.\n"
+"Yeni başlayanlar için kısa yardım eklendi.\n"
+"Final maçına teklerde de izin verildi."
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid ""
+"Added the option for single tournaments. \n"
+"Created an environment for additional sports."
+msgstr ""
+"Tekler turnuvaları olanağı eklendi.\n"
+"Diğer sporlar için ortam oluşturuldu."
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid ""
+"The administrator can now use 'hide' option when editing the match result.\n"
+"Free score input is allowed. This opens using not only for tennis but for example for table tennis or beach volleyball."
+msgstr ""
+"Yönetici artık bir maç sonucunu değiştirirken “gizle” seçeneğini kullanabilir.\n"
+"Skorun serbest girilmesine izin verildi. Bu, eklentinin yalnızca tenis için değil, örneğin masa tenisi veya plaj voleybolu için de kullanılmasını sağlar."
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid ""
+"Minor changes in code:\n"
+"* Allow to transfer organizer rights to a non-playing user.\n"
+"* Ensuring an even rotation of serves at the start of the tournament."
+msgstr ""
+"Kodda küçük değişiklikler:\n"
+"* Organizatör haklarının oynamayan bir kullanıcıya devredilmesine izin verildi.\n"
+"* Turnuvanın başında servisin eşit şekilde değişmesi sağlandı."
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid "Fixed choosing between left and right side in first matches."
+msgstr "İlk maçlarda sol ve sağ taraf seçimi düzeltildi."
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid "A small modification of admin screen."
+msgstr "Yönetim ekranında küçük değişiklik."
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid "First release to public."
+msgstr "İlk herkese açık sürüm."
+

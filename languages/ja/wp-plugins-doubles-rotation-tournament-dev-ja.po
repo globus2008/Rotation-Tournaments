@@ -1,0 +1,4081 @@
+# Translation of Plugins - Rotation Tournaments - Development (trunk) in Japanese
+# This file is distributed under the same license as the Plugins - Rotation Tournaments - Development (trunk) package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Plugins - Rotation Tournaments - Development (trunk)\n"
+"PO-Revision-Date: 2026-10-07 16:52:10+0000\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: GlotPress/4.1.0\n"
+
+#: build/blocks/tournament/block.json src/blocks/tournament/block.json
+msgctxt "block variation description"
+msgid "Rotates matches, standings and results, e.g. on a screen at the club."
+msgstr "試合、順位、結果を順番に表示します。クラブの画面などに。"
+
+#: build/blocks/tournament/block.json src/blocks/tournament/block.json
+msgctxt "block variation title"
+msgid "Tournament presentation"
+msgstr "大会プレゼンテーション"
+
+#: build/blocks/tournament/block.json src/blocks/tournament/block.json
+msgctxt "block variation description"
+msgid "Ongoing and played matches of a rotation tournament."
+msgstr "ローテーション大会の進行中の試合と終了した試合。"
+
+#: build/blocks/tournament/block.json src/blocks/tournament/block.json
+msgctxt "block variation title"
+msgid "Tournament matches"
+msgstr "大会の試合"
+
+#: build/blocks/tournament/block.json src/blocks/tournament/block.json
+msgctxt "block variation description"
+msgid "Players of a rotation tournament ordered by their results."
+msgstr "結果順に並べたローテーション大会の選手。"
+
+#: build/blocks/tournament/block.json src/blocks/tournament/block.json
+msgctxt "block variation title"
+msgid "Tournament standings"
+msgstr "大会の順位"
+
+#: build/blocks/tournament/block.json src/blocks/tournament/block.json
+msgctxt "block keyword"
+msgid "tennis"
+msgstr "テニス"
+
+#: build/blocks/tournament/block.json src/blocks/tournament/block.json
+msgctxt "block keyword"
+msgid "doubles"
+msgstr "ダブルス"
+
+#: build/blocks/tournament/block.json src/blocks/tournament/block.json
+msgctxt "block description"
+msgid "Matches, players, results and settings of one rotation tournament."
+msgstr "1 つのローテーション大会の試合、選手、結果、設定。"
+
+#: build/blocks/tournament/block.json src/blocks/tournament/block.json
+msgctxt "block title"
+msgid "Rotation tournament"
+msgstr "ローテーション大会"
+
+#: build/blocks/tournament-list/block.json src/blocks/tournament-list/block.json
+msgctxt "block keyword"
+msgid "list"
+msgstr "リスト"
+
+#: build/blocks/tournament-list/block.json src/blocks/tournament-list/block.json
+msgctxt "block description"
+msgid "List of rotation tournaments with filters, search and paging."
+msgstr "フィルター、検索、ページ送り付きのローテーション大会リスト。"
+
+#: build/blocks/tournament-list/block.json src/blocks/tournament-list/block.json
+msgctxt "block title"
+msgid "Rotation tournaments list"
+msgstr "ローテーション大会リスト"
+
+#: build/blocks/invite/block.json build/blocks/tournament-list/block.json build/blocks/tournament/block.json src/blocks/invite/block.json src/blocks/tournament-list/block.json src/blocks/tournament/block.json
+msgctxt "block keyword"
+msgid "rotation"
+msgstr "ローテーション"
+
+#: build/blocks/invite/block.json src/blocks/invite/block.json
+msgctxt "block keyword"
+msgid "sign up"
+msgstr "参加登録"
+
+#: build/blocks/invite/block.json src/blocks/invite/block.json
+msgctxt "block keyword"
+msgid "invitation"
+msgstr "招待"
+
+#: build/blocks/invite/block.json build/blocks/tournament-list/block.json build/blocks/tournament/block.json src/blocks/invite/block.json src/blocks/tournament-list/block.json src/blocks/tournament/block.json
+msgctxt "block keyword"
+msgid "tournament"
+msgstr "大会"
+
+#: build/blocks/invite/block.json src/blocks/invite/block.json
+msgctxt "block description"
+msgid "Invitation to a rotation tournament with a sign-up button and the link to share."
+msgstr "参加登録ボタンと共有用リンク付きのローテーション大会への招待。"
+
+#: build/blocks/invite/block.json src/blocks/invite/block.json
+msgctxt "block title"
+msgid "Rotation tournament invitation"
+msgstr "ローテーション大会への招待"
+
+#: build/blocks/tournament/index.js:1 src/blocks/tournament/index.js:114
+msgid "Seconds per section"
+msgstr "セクションごとの秒数"
+
+#: build/blocks/tournament/index.js:1 src/blocks/tournament/index.js:102
+msgid "Rotate the sections (read only)"
+msgstr "セクションを順番に表示 (閲覧のみ)"
+
+#: build/blocks/tournament/index.js:1 src/blocks/tournament/index.js:79
+msgid "Sections"
+msgstr "セクション"
+
+#: build/blocks/tournament-list/index.js:1 src/blocks/tournament-list/index.js:68
+msgid "Offer creating a tournament"
+msgstr "大会の作成を表示"
+
+#: build/blocks/tournament-list/index.js:1 src/blocks/tournament-list/index.js:53
+msgid "0 = the plugin setting \"Maximum number of displayed tournaments in the table\"."
+msgstr "0 = プラグイン設定「表に表示する大会の最大数」。"
+
+#: build/blocks/tournament-list/index.js:1 src/blocks/tournament-list/index.js:49
+msgid "Tournaments per page"
+msgstr "1 ページあたりの大会数"
+
+#: build/blocks/tournament-list/index.js:1 src/blocks/tournament-list/index.js:36
+msgid "0 = this page when it contains the tournament block, otherwise the main tournament page."
+msgstr "0 = 大会ブロックを含む場合はこのページ、それ以外は大会のメインページ。"
+
+#: build/blocks/tournament-list/index.js:1 src/blocks/tournament-list/index.js:32
+msgid "ID of the page that shows a tournament"
+msgstr "大会を表示するページの ID"
+
+#: build/blocks/tournament-list/index.js:1 src/blocks/tournament-list/index.js:26
+msgid "List"
+msgstr "リスト"
+
+#: build/blocks/tournament-list/index.js:1 build/blocks/tournament/index.js:1 src/blocks/color-panel.js:51
+msgid "Without a choice the block uses the highlight colours of the theme (its buttons and palette)."
+msgstr "選択しない場合、ブロックはテーマの強調色 (ボタンとパレット) を使用します。"
+
+#: build/blocks/tournament-list/index.js:1 build/blocks/tournament/index.js:1 src/blocks/color-panel.js:39
+msgid "Text of the tab bar and table headers"
+msgstr "タブバーと表見出しの文字"
+
+#: build/blocks/tournament-list/index.js:1 build/blocks/tournament/index.js:1 src/blocks/color-panel.js:32
+msgid "Tab bar and table headers"
+msgstr "タブバーと表見出し"
+
+#: build/blocks/tournament-list/index.js:1 build/blocks/tournament/index.js:1 src/blocks/color-panel.js:25
+msgid "Accent (buttons, active tab, progress)"
+msgstr "アクセント (ボタン、選択中のタブ、進行状況)"
+
+#: build/blocks/tournament-list/index.js:1 build/blocks/tournament/index.js:1 src/blocks/color-panel.js:18
+msgid "Colours of the tournament"
+msgstr "大会の色"
+
+#: build/blocks/invite/index.js:1 src/blocks/invite/index.js:58
+msgid "Show the number of players"
+msgstr "選手数を表示"
+
+#: build/blocks/invite/index.js:1 src/blocks/invite/index.js:47
+msgid "Show the invitation text"
+msgstr "招待文を表示"
+
+#: build/blocks/invite/index.js:1 build/blocks/tournament/index.js:1 src/blocks/invite/index.js:34 src/blocks/tournament/index.js:66
+msgid "0 = the tournament from the address (?tournament_id=) or the latest one."
+msgstr "0 = アドレスの大会 (?tournament_id=) または最新の大会。"
+
+#: build/blocks/invite/index.js:1 build/blocks/tournament/index.js:1 src/blocks/invite/index.js:30 src/blocks/tournament/index.js:62
+msgid "Tournament ID"
+msgstr "大会 ID"
+
+#: build/blocks/invite/index.js:1 src/blocks/invite/index.js:24
+msgid "Invitation"
+msgstr "招待"
+
+#: build/admin/index.js:1 src/admin/index.js:936
+msgid "Discard changes"
+msgstr "変更を破棄"
+
+#: build/admin/index.js:1 src/admin/index.js:871
+msgid "Overview"
+msgstr "概要"
+
+#: build/admin/index.js:1 src/admin/index.js:828
+msgid "Some values are not allowed. Correct the marked fields."
+msgstr "使用できない値があります。印の付いた項目を修正してください。"
+
+#: build/admin/index.js:1 src/admin/index.js:722
+msgid "They keep working, so older pages do not need any change."
+msgstr "引き続き動作するため、古いページを変更する必要はありません。"
+
+#: build/admin/index.js:1 src/admin/index.js:715
+msgid "Shortcodes of the pages made before version 2.0"
+msgstr "バージョン 2.0 より前に作成したページのショートコード"
+
+#: build/admin/index.js:1 src/admin/index.js:697
+msgid "Classic editor"
+msgstr "クラシックエディター"
+
+#: build/admin/index.js:1 src/admin/index.js:685
+msgid "How to start"
+msgstr "始め方"
+
+#: build/admin/index.js:1 src/admin/index.js:673
+msgid "Blocks"
+msgstr "ブロック"
+
+#: build/admin/index.js:1 src/admin/index.js:610
+msgid "Create the example tournaments again"
+msgstr "サンプル大会を作り直す"
+
+#: build/admin/index.js:1 src/admin/index.js:603
+msgid "The example tournaments were created again."
+msgstr "サンプル大会を作り直しました。"
+
+#: build/admin/index.js:1 src/admin/index.js:599
+msgid "Create the example tournaments again? Their results are drawn anew."
+msgstr "サンプル大会を作り直しますか? 結果は新たに抽選されます。"
+
+#: build/admin/index.js:1 src/admin/index.js:578
+msgid "The guided tours of the tournament block explain the plugin on these tournaments."
+msgstr "大会ブロックのガイドツアーでは、これらの大会を使ってプラグインを説明します。"
+
+#: build/admin/index.js:1 src/admin/index.js:570
+msgid "Example tournaments"
+msgstr "サンプル大会"
+
+#: build/admin/index.js:1 src/admin/index.js:557
+msgid "Convert the main page to blocks"
+msgstr "メインページをブロックに変換"
+
+#: build/admin/index.js:1 src/admin/index.js:550
+msgid "The main page now uses the blocks. The previous content is kept in the page revisions."
+msgstr "メインページはブロックを使用するようになりました。以前の内容はページのリビジョンに保存されています。"
+
+#: build/admin/index.js:1 src/admin/index.js:546
+msgid "Replace the content of the main page with the blocks? The previous content stays in the page revisions."
+msgstr "メインページの内容をブロックに置き換えますか? 以前の内容はページのリビジョンに残ります。"
+
+#: build/admin/index.js:1 src/admin/index.js:531
+msgid "The main page still uses the shortcodes. The tournament blocks show the same tournament on one page with tabs and save every change without reloading the page."
+msgstr "メインページはまだショートコードを使用しています。大会ブロックは同じ大会をタブ付きの 1 ページに表示し、ページを再読み込みせずにすべての変更を保存します。"
+
+#: build/admin/index.js:1 src/admin/index.js:523
+msgid "The main page uses the tournament blocks."
+msgstr "メインページは大会ブロックを使用しています。"
+
+#: build/admin/index.js:1 src/admin/index.js:510
+msgid "Edit"
+msgstr "編集"
+
+#: build/admin/index.js:1 src/admin/index.js:217
+msgid "WordPress settings"
+msgstr "WordPress の設定"
+
+#: includes/doroto-view-model.php:316
+msgid "skipped"
+msgstr "スキップ"
+
+#. translators: %d: number of players who must stay free
+#: includes/doroto-view-model.php:98
+msgid "While matches are being played, another match is drawn only when at least %d players stay free, so that the teams keep changing. It will be drawn when a match finishes."
+msgstr "試合の進行中は、チームが入れ替わり続けるよう、空いている選手が %d 人以上残る場合にのみ次の試合を抽選します。試合が終わると抽選されます。"
+
+#: includes/doroto-view-model.php:95
+msgid "The next matches are drawn when all matches being played are finished (setting \"When enough players are available\")."
+msgstr "次の試合は、進行中のすべての試合が終わってから抽選されます (設定「十分な選手がいる場合」)。"
+
+#. translators: %d: number of courts that can be used
+#: includes/doroto-view-model.php:89
+msgid "There are not enough players for all courts; at most %d matches can be played at once."
+msgstr "すべてのコートに十分な選手がいません。同時に行える試合は最大 %d 試合です。"
+
+#. translators: %d: number of skipped matches
+#: includes/doroto-services.php:215
+msgid "%d match was skipped."
+msgid_plural "%d matches were skipped."
+msgstr[0] "%d 試合をスキップしました。"
+
+#: includes/doroto-services.php:206
+msgid "The tournament could not be created."
+msgstr "大会を作成できませんでした。"
+
+#: includes/doroto-services.php:202
+msgid "You have left the tournament."
+msgstr "大会から退出しました。"
+
+#: includes/doroto-services.php:178
+msgid "was deleted."
+msgstr "が削除されました。"
+
+#: includes/doroto-services.php:170
+msgid "The tournament was closed more than 24 hours ago and can no longer be changed."
+msgstr "大会は 24 時間以上前に終了したため、変更できません。"
+
+#: includes/doroto-services.php:168
+msgid "Unknown tournament type."
+msgstr "不明な大会タイプです。"
+
+#: includes/doroto-services.php:164
+msgid "is no longer an organizer."
+msgstr "は主催者ではなくなりました。"
+
+#: includes/doroto-services.php:160
+msgid "The founder of the tournament cannot be removed."
+msgstr "大会の創設者は削除できません。"
+
+#: includes/doroto-services.php:158
+msgid "The user is not an organizer of this tournament."
+msgstr "このユーザーはこの大会の主催者ではありません。"
+
+#: includes/doroto-services.php:156
+msgid "Organizers cannot be added to a closed tournament."
+msgstr "終了した大会には主催者を追加できません。"
+
+#: includes/doroto-services.php:154
+msgid "The player has no recorded payment."
+msgstr "この選手には記録された支払いがありません。"
+
+#: includes/doroto-services.php:148
+msgid "The player is not in the special group."
+msgstr "この選手は特別グループに入っていません。"
+
+#: includes/doroto-services.php:146
+msgid "The player is already in the special group."
+msgstr "この選手はすでに特別グループに入っています。"
+
+#: includes/doroto-services.php:128
+msgid "Players cannot be suspended in a closed tournament."
+msgstr "終了した大会では選手を一時停止できません。"
+
+#: includes/doroto-services.php:124
+msgid "The player is not in this tournament."
+msgstr "この選手はこの大会に参加していません。"
+
+#: includes/doroto-services.php:122
+msgid "Players cannot be added to a closed tournament."
+msgstr "終了した大会には選手を追加できません。"
+
+#: includes/doroto-services.php:114
+msgid "This match has not been played yet."
+msgstr "この試合はまだ行われていません。"
+
+#: includes/doroto-services.php:112
+msgid "Results of this tournament can no longer be changed."
+msgstr "この大会の結果は変更できなくなりました。"
+
+#: includes/doroto-services.php:89
+msgid "The tournament was reopened."
+msgstr "大会を再開しました。"
+
+#: includes/doroto-services.php:88 includes/doroto-services.php:192
+msgid "The tournament was closed."
+msgstr "大会を終了しました。"
+
+#: includes/doroto-services.php:77
+msgid "Registration cannot be changed in a closed tournament."
+msgstr "終了した大会では登録を変更できません。"
+
+#: includes/doroto-help.php:255
+msgid "The players of the special group have their own winner in this tournament (setting \"The winner of the tournament will be\")."
+msgstr "この大会では特別グループの選手に独自の優勝者がいます (設定「大会の優勝者」)。"
+
+#: includes/doroto-help.php:245
+msgid "Results can be filtered by player."
+msgstr "結果は選手で絞り込めます。"
+
+#: includes/doroto-help.php:240
+msgid "The label \"suspended\" next to the names of Iga Swiatek and Novak Djokovic shows that their game is still suspended."
+msgstr "イガ・シフィオンテクとノバク・ジョコビッチの名前の横にある「一時停止中」の表示は、二人がまだ一時停止中であることを示します。"
+
+#: includes/doroto-help.php:221
+msgid "The organizer can skip several matches at once, for example when players have left. The next matches are drawn from all free players."
+msgstr "主催者は、選手が帰った場合などに複数の試合を一度にスキップできます。次の試合は空いているすべての選手から抽選されます。"
+
+#: includes/doroto-help.php:219
+msgid "Team 1 is at the top, team 2 at the bottom. In each team, the first player plays on the left side of the court and the second one on the right side. The player marked \"serves\" starts the game by serving."
+msgstr "チーム 1 が上、チーム 2 が下です。各チームの 1 人目はコートの左側、2 人目は右側でプレーします。「サーブ」と表示された選手がサーブでゲームを始めます。"
+
+#: includes/doroto-help.php:218
+msgid "Every match has its number. You will find it in the results and in the statistics."
+msgstr "各試合には番号があります。結果と統計で確認できます。"
+
+#: includes/doroto-help.php:216
+msgid "The estimate uses the average match result and the number of games played per hour from the settings."
+msgstr "見積もりには、設定にある平均試合結果と 1 時間あたりのゲーム数を使用します。"
+
+#: includes/doroto-help.php:165
+msgid "Click this icon to view help. It will guide you through the various options for how a rotation tournament works and how to set them up."
+msgstr "このアイコンをクリックするとヘルプが表示されます。ローテーション大会の仕組みのさまざまなオプションと、その設定方法を案内します。"
+
+#: includes/doroto-help.php:154
+msgid "Add a player from the player database, or create a new account for a player. The new player gets an e-mail with a link to set the password."
+msgstr "選手データベースから選手を追加するか、新しい選手のアカウントを作成します。新しい選手にはパスワード設定用リンク付きのメールが届きます。"
+
+#: includes/doroto-help.php:149 includes/doroto-help.php:247
+msgid "Choose a player to see how many times they played with each player as a teammate and against them."
+msgstr "選手を選ぶと、その選手が各選手とパートナーとして、また対戦相手として何回プレーしたかを確認できます。"
+
+#: includes/doroto-help.php:146
+msgid "Enter the score of both teams and press Save. The next match is drawn right away."
+msgstr "両チームのスコアを入力して「保存」を押してください。次の試合がすぐに抽選されます。"
+
+#: includes/doroto-help.php:144
+msgid "The tournament is divided into tabs. The page updates itself every 30 seconds, so you do not need to reload it."
+msgstr "大会はタブに分かれています。ページは 30 秒ごとに自動で更新されるため、再読み込みは不要です。"
+
+#: includes/doroto-help.php:142
+msgid "The presentation shows the matches, the standings and the results one after another on the whole screen. Especially suitable for displaying the running results of the tournament on a larger screen."
+msgstr "プレゼンテーションでは、試合、順位、結果を全画面で順番に表示します。大会の途中経過を大きな画面に表示するのに特に適しています。"
+
+#: includes/doroto-help.php:141 includes/doroto-help.php:201
+msgid "Share the tournament: a QR code and links for the players. The QR code opens the tournament in the Android app, or on this website when the app is not installed."
+msgstr "大会を共有: 選手向けの QR コードとリンク。QR コードは Android アプリで大会を開き、アプリがない場合はこのサイトで開きます。"
+
+#: includes/doroto-help.php:138
+msgid "The name of the tournament, its state, the type of the game and the number of players. While the tournament runs, the bar shows its progress and the estimated time to the end."
+msgstr "大会名、状態、競技の種類、選手数。大会中はバーに進行状況と終了までの予想時間が表示されます。"
+
+#: includes/doroto-help.php:108 includes/doroto-help.php:136
+msgid "Tour of this page"
+msgstr "このページのツアー"
+
+#: includes/doroto-blocks.php:305
+msgid "Tournament Selection"
+msgstr "大会の選択"
+
+#: includes/doroto-blocks.php:251
+msgid "Longitude"
+msgstr "経度"
+
+#: includes/doroto-blocks.php:250
+msgid "Latitude"
+msgstr "緯度"
+
+#: includes/doroto-blocks.php:64
+msgid "The example tournaments are being prepared. Please try again in a minute."
+msgstr "サンプル大会を準備しています。1 分後にもう一度お試しください。"
+
+#: includes/doroto-blocks.php:60
+msgid "The tournament was deleted."
+msgstr "大会を削除しました。"
+
+#: includes/doroto-blocks.php:59
+msgid "The tournament was updated."
+msgstr "大会を更新しました。"
+
+#: includes/doroto-blocks.php:58
+msgid "Enter the score of both teams."
+msgstr "両チームのスコアを入力してください。"
+
+#: includes/doroto-blocks.php:57
+msgid "The link was copied."
+msgstr "リンクをコピーしました。"
+
+#: includes/doroto-blocks.php:56
+msgid "Take the organizer rights from this user?"
+msgstr "このユーザーの主催者権限を取り消しますか?"
+
+#: includes/doroto-blocks.php:55
+msgid "Skip the selected matches?"
+msgstr "選択した試合をスキップしますか?"
+
+#: includes/doroto-blocks.php:54
+msgid "End the tournament?"
+msgstr "大会を終了しますか?"
+
+#: includes/doroto-blocks.php:53
+msgid "Delete all match results and open the registration again? This cannot be undone."
+msgstr "すべての試合結果を削除して登録を再開しますか? この操作は元に戻せません。"
+
+#: includes/doroto-blocks.php:52
+msgid "Delete the tournament? This cannot be undone."
+msgstr "大会を削除しますか? この操作は元に戻せません。"
+
+#: includes/doroto-blocks.php:51
+msgid "Remove this player from the tournament?"
+msgstr "この選手を大会から削除しますか?"
+
+#: includes/doroto-blocks.php:50 build/admin/index.js:1 src/admin/index.js:46
+msgid "The server could not be reached. Please try again."
+msgstr "サーバーに接続できませんでした。もう一度お試しください。"
+
+#: includes/doroto-block-actions.php:100
+msgid "The action failed."
+msgstr "操作に失敗しました。"
+
+#: includes/doroto-admin.php:507
+msgid "The settings page could not be loaded. Check that the web server can read the folder build/ of the plugin (folders 755, files 644) and reload the page."
+msgstr "設定ページを読み込めませんでした。Web サーバーがプラグインの build/ フォルダーを読み取れるか (フォルダー 755、ファイル 644) を確認し、ページを再読み込みしてください。"
+
+#: includes/doroto-admin.php:503
+msgid "The settings of the plugin need JavaScript."
+msgstr "プラグインの設定には JavaScript が必要です。"
+
+#: includes/doroto-admin.php:387
+msgid "Shows the Rotation tournaments list block in the classic editor."
+msgstr "クラシックエディターでローテーション大会リストブロックを表示します。"
+
+#: includes/doroto-admin.php:386
+msgid "Shows the Rotation tournament block in the classic editor. All parameters are optional."
+msgstr "クラシックエディターでローテーション大会ブロックを表示します。すべてのパラメーターは省略可能です。"
+
+#: includes/doroto-admin.php:383
+msgid "The Help button (?) of the block starts guided tours on the example tournaments."
+msgstr "ブロックのヘルプボタン (?) で、サンプル大会のガイドツアーを開始します。"
+
+#: includes/doroto-admin.php:382
+msgid "Add the block \"Rotation tournaments list\" under it, so visitors can choose another tournament."
+msgstr "訪問者が別の大会を選べるよう、その下に「ローテーション大会リスト」ブロックを追加してください。"
+
+#: includes/doroto-admin.php:381
+msgid "In the block settings choose the tournament, or leave it empty to show the tournament chosen in the list."
+msgstr "ブロック設定で大会を選ぶか、空欄にしてリストで選択した大会を表示します。"
+
+#: includes/doroto-admin.php:380
+msgid "Open a page in the editor and add the block \"Rotation tournament\" (search for \"tournament\")."
+msgstr "エディターでページを開き、「ローテーション大会」ブロックを追加してください (「大会」で検索)。"
+
+#: includes/doroto-admin.php:377
+msgid "A link that registers the visitor for a tournament. It disappears when the registration closes."
+msgstr "訪問者を大会に登録するリンク。登録受付が終わると消えます。"
+
+#: includes/doroto-admin.php:377
+msgid "Rotation tournament invitation"
+msgstr "ローテーション大会への招待"
+
+#: includes/doroto-admin.php:376
+msgid "Tournaments of the website with filters, search and pages, and the button to create a tournament."
+msgstr "フィルター、検索、ページ付きのサイトの大会一覧と大会作成ボタン。"
+
+#: includes/doroto-admin.php:376
+msgid "Rotation tournaments list"
+msgstr "ローテーション大会リスト"
+
+#: includes/doroto-admin.php:375
+msgid "Variations of the same block that show only some sections. The presentation variation shows them one after another, for a large screen at the club."
+msgstr "一部のセクションだけを表示する同じブロックのバリエーション。プレゼンテーション版は、クラブの大画面向けにそれらを順番に表示します。"
+
+#: includes/doroto-admin.php:375
+msgid "Rotation tournament: standings, matches, presentation"
+msgstr "ローテーション大会: 順位、試合、プレゼンテーション"
+
+#: includes/doroto-admin.php:374
+msgid "Matches, players, results, statistics and settings of one tournament on tabs. Every change is saved without reloading the page, and the page updates itself when somebody else enters a result. Without a fixed tournament it shows the tournament chosen in the list (address parameter tournament_id)."
+msgstr "1 つの大会の試合、選手、結果、統計、設定をタブで表示。すべての変更はページを再読み込みせずに保存され、他の人が結果を入力するとページが更新されます。大会を固定しない場合は、リストで選択した大会を表示します (アドレスパラメーター tournament_id)。"
+
+#: includes/doroto-admin.php:241
+msgid "Enter a full web address starting with https://, or leave the field empty."
+msgstr "https:// で始まる完全な Web アドレスを入力するか、空欄のままにしてください。"
+
+#: includes/doroto-admin.php:226
+msgid "Choose one of the options."
+msgstr "いずれかのオプションを選んでください。"
+
+#. translators: 1: lowest allowed value, 2: highest allowed value
+#: includes/doroto-admin.php:219
+msgid "Enter a number from %1$d to %2$d."
+msgstr "%1$d から %2$d までの数値を入力してください。"
+
+#. translators: 1: lowest allowed value, 2: highest allowed value
+#: includes/doroto-admin.php:211
+msgid "Enter a whole number from %1$d to %2$d."
+msgstr "%1$d から %2$d までの整数を入力してください。"
+
+#: includes/doroto-admin.php:134
+msgid "Club location on the map"
+msgstr "地図上のクラブの位置"
+
+#: includes/doroto-admin.php:133
+msgid "Default tournament visibility option in the list"
+msgstr "リストでの大会の表示設定 (既定)"
+
+#: includes/doroto-admin.php:132
+msgid "Anyone can register"
+msgstr "誰でも登録可能"
+
+#: includes/doroto-admin.php:130
+msgid "Show this website in the app"
+msgstr "このサイトをアプリに表示"
+
+#: includes/doroto-admin.php:129
+msgid "Website description"
+msgstr "サイトの説明"
+
+#: includes/doroto-admin.php:128
+msgid "Website address"
+msgstr "サイトのアドレス"
+
+#: includes/doroto-admin.php:114
+msgid "The Presentation button of the tournament block uses this time too (at least 5 seconds)."
+msgstr "大会ブロックのプレゼンテーションボタンもこの時間を使用します (5 秒以上)。"
+
+#: includes/doroto-admin.php:87
+msgid "Only the pages built from the shortcodes are reloaded. The tournament blocks update themselves every 30 seconds without reloading."
+msgstr "再読み込みされるのはショートコードで作成したページだけです。大会ブロックは再読み込みせずに 30 秒ごとに自動更新されます。"
+
+#: build/blocks/tournament/render.php:635 src/blocks/tournament/render.php:635
+msgid "The examples open the example tournaments of this website. Logged-in users become their organizers, so they can try every setting there."
+msgstr "サンプルではこのサイトのサンプル大会が開きます。ログインしたユーザーはその主催者になるため、あらゆる設定を試せます。"
+
+#: build/blocks/tournament/render.php:632 src/blocks/tournament/render.php:632
+msgid "Video help on YouTube"
+msgstr "YouTube のビデオヘルプ"
+
+#: build/blocks/tournament/render.php:622 src/blocks/tournament/render.php:622
+msgid "The invitation link registers the player who opens it for the tournament."
+msgstr "招待リンクを開いた選手が大会に登録されます。"
+
+#: build/blocks/tournament/render.php:617 src/blocks/tournament/render.php:617
+msgid "Copy the tournament link"
+msgstr "大会のリンクをコピー"
+
+#: build/blocks/tournament/render.php:615 src/blocks/tournament/render.php:615
+msgid "Scan the code with the phone camera or with the Rotation Tournaments app. It opens the tournament in the app, or on this website when the app is not installed."
+msgstr "スマートフォンのカメラまたは Rotation Tournaments アプリでコードを読み取ってください。アプリで大会が開き、アプリがない場合はこのサイトで開きます。"
+
+#: build/blocks/tournament/render.php:613 src/blocks/tournament/render.php:613
+msgid "Share the tournament"
+msgstr "大会を共有"
+
+#: build/blocks/tournament/render.php:604 src/blocks/tournament/render.php:604
+msgid "0:0 marks the match as skipped."
+msgstr "0:0 は試合をスキップ扱いにします。"
+
+#: build/blocks/tournament/render.php:574 src/blocks/tournament/render.php:574
+msgid "Delete the tournament"
+msgstr "大会を削除"
+
+#: build/blocks/tournament/render.php:573 src/blocks/tournament/render.php:573
+msgid "Delete all results"
+msgstr "すべての結果を削除"
+
+#: build/blocks/tournament/render.php:565 src/blocks/tournament/render.php:565
+msgid "Add organizer"
+msgstr "主催者を追加"
+
+#: build/blocks/tournament/render.php:558 src/blocks/tournament/render.php:558
+msgid "New organizer"
+msgstr "新しい主催者"
+
+#: build/blocks/tournament/render.php:553 src/blocks/tournament/render.php:553
+msgid "Remove"
+msgstr "削除"
+
+#: build/blocks/tournament/render.php:552 src/blocks/tournament/render.php:552
+msgid "founder"
+msgstr "創設者"
+
+#: build/blocks/tournament/render.php:547 src/blocks/tournament/render.php:547
+msgid "Organizers"
+msgstr "主催者"
+
+#: build/blocks/tournament/render.php:541 src/blocks/tournament/render.php:541
+msgid "Unsaved changes"
+msgstr "未保存の変更"
+
+#: build/blocks/tournament/render.php:529 includes/doroto-help.php:159 src/blocks/tournament/render.php:529
+msgid "Click on the map to set the place of the tournament."
+msgstr "地図をクリックして大会の場所を設定してください。"
+
+#: build/blocks/tournament/render.php:512 src/blocks/tournament/render.php:512
+msgid "Reopen the tournament"
+msgstr "大会を再開"
+
+#: build/blocks/tournament/render.php:511 src/blocks/tournament/render.php:511
+msgid "End the tournament"
+msgstr "大会を終了"
+
+#: build/blocks/tournament/render.php:508 src/blocks/tournament/render.php:508
+msgid "Open the registration again"
+msgstr "登録を再開"
+
+#: build/blocks/tournament/render.php:507 src/blocks/tournament/render.php:507
+msgid "Close the registration and start"
+msgstr "登録を締め切って開始"
+
+#: build/blocks/tournament/render.php:472 src/blocks/tournament/render.php:472
+msgid "Teammate right"
+msgstr "右のパートナー"
+
+#: build/blocks/tournament/render.php:468 src/blocks/tournament/render.php:468
+msgid "Teammate left"
+msgstr "左のパートナー"
+
+#: build/blocks/tournament/render.php:458 src/blocks/tournament/render.php:458
+msgid "How many times the player played with each player as the left or right teammate and against them."
+msgstr "選手が各選手と左または右のパートナーとして、また対戦相手として何回プレーしたか。"
+
+#: build/blocks/tournament/render.php:435 src/blocks/tournament/render.php:435
+msgid "Create and add"
+msgstr "作成して追加"
+
+#: build/blocks/tournament/render.php:434 src/blocks/tournament/render.php:434
+msgid "The player gets an e-mail with a link to set the password."
+msgstr "選手にはパスワード設定用リンク付きのメールが届きます。"
+
+#: build/blocks/tournament/render.php:426 src/blocks/tournament/render.php:426
+msgid "E-mail"
+msgstr "メール"
+
+#: build/blocks/tournament/render.php:426 src/blocks/tournament/render.php:426
+msgid "Last name"
+msgstr "姓"
+
+#: build/blocks/tournament/render.php:426 src/blocks/tournament/render.php:426
+msgid "First name"
+msgstr "名"
+
+#: build/blocks/tournament/render.php:425 src/blocks/tournament/render.php:425
+msgid "New player account"
+msgstr "新しい選手アカウント"
+
+#: build/blocks/tournament/render.php:421 src/blocks/tournament/render.php:421
+msgid "Add"
+msgstr "追加"
+
+#: build/blocks/tournament/render.php:413 src/blocks/tournament/render.php:413
+msgid "Player from the database"
+msgstr "データベースの選手"
+
+#: build/blocks/tournament/render.php:411 src/blocks/tournament/render.php:411
+msgid "Add a player"
+msgstr "選手を追加"
+
+#: build/blocks/tournament/render.php:398 src/blocks/tournament/render.php:398
+msgid "Remove from the tournament"
+msgstr "大会から削除"
+
+#: build/blocks/tournament/render.php:396 src/blocks/tournament/render.php:396
+msgid "Remove from the special group"
+msgstr "特別グループから外す"
+
+#: build/blocks/tournament/render.php:395 src/blocks/tournament/render.php:395
+msgid "Add to the special group"
+msgstr "特別グループに追加"
+
+#: build/blocks/tournament/render.php:391 src/blocks/tournament/render.php:391
+msgid "Restore"
+msgstr "再開"
+
+#: build/blocks/tournament/render.php:390 src/blocks/tournament/render.php:390
+msgid "Suspend"
+msgstr "一時停止"
+
+#: build/blocks/tournament/render.php:378 src/blocks/tournament/render.php:378
+msgid "Fewer matches than the minimum for the winner"
+msgstr "優勝に必要な最低試合数に未到達"
+
+#: build/blocks/tournament/render.php:376 src/blocks/tournament/render.php:376
+msgid "winner"
+msgstr "優勝者"
+
+#: build/blocks/tournament/render.php:375 src/blocks/tournament/render.php:375
+msgid "suspended"
+msgstr "一時停止中"
+
+#: build/blocks/tournament/render.php:365 build/blocks/tournament/render.php:388 src/blocks/tournament/render.php:365 src/blocks/tournament/render.php:388
+msgid "Actions"
+msgstr "操作"
+
+#: build/blocks/tournament/render.php:363 src/blocks/tournament/render.php:363
+msgid "Matches left to the end of the round"
+msgstr "ラウンド終了までの残り試合数"
+
+#: build/blocks/tournament/render.php:362 src/blocks/tournament/render.php:362
+msgid "Paid"
+msgstr "支払済み"
+
+#: build/blocks/tournament/render.php:357 src/blocks/tournament/render.php:357
+msgid "M"
+msgstr "試"
+
+#: build/blocks/tournament/render.php:311 src/blocks/tournament/render.php:311
+msgid "No match has been played yet."
+msgstr "まだ試合は行われていません。"
+
+#: build/blocks/tournament/render.php:294 src/blocks/tournament/render.php:294
+msgid "Winners"
+msgstr "優勝者"
+
+#: build/blocks/tournament/render.php:256 src/blocks/tournament/render.php:256
+msgid "Final match"
+msgstr "決勝戦"
+
+#: build/blocks/tournament/render.php:249 src/blocks/tournament/render.php:249
+msgid "Skip"
+msgstr "スキップ"
+
+#: build/blocks/tournament/render.php:241 build/blocks/tournament/render.php:288 build/blocks/tournament/render.php:602 src/blocks/tournament/render.php:241 src/blocks/tournament/render.php:288 src/blocks/tournament/render.php:602
+msgid "Score of the second team"
+msgstr "2 番目のチームのスコア"
+
+#: build/blocks/tournament/render.php:236 build/blocks/tournament/render.php:286 build/blocks/tournament/render.php:600 src/blocks/tournament/render.php:236 src/blocks/tournament/render.php:286 src/blocks/tournament/render.php:600
+msgid "Score of the first team"
+msgstr "1 番目のチームのスコア"
+
+#: build/blocks/tournament/render.php:231 build/blocks/tournament/render.php:233 build/blocks/tournament/render.php:261 build/blocks/tournament/render.php:263 src/blocks/tournament/render.php:231 src/blocks/tournament/render.php:233 src/blocks/tournament/render.php:261 src/blocks/tournament/render.php:263
+msgid "serves"
+msgstr "サーブ"
+
+#: build/blocks/tournament/render.php:231 build/blocks/tournament/render.php:233 build/blocks/tournament/render.php:261 build/blocks/tournament/render.php:263 src/blocks/tournament/render.php:231 src/blocks/tournament/render.php:233 src/blocks/tournament/render.php:261 src/blocks/tournament/render.php:263
+msgid "Starts the game by serving"
+msgstr "サーブでゲームを開始"
+
+#: build/blocks/tournament/render.php:224 build/blocks/tournament/render.php:258 build/blocks/tournament/render.php:322 build/blocks/tournament/render.php:349 build/blocks/tournament/render.php:460 src/blocks/tournament/render.php:224 src/blocks/tournament/render.php:258 src/blocks/tournament/render.php:322 src/blocks/tournament/render.php:349 src/blocks/tournament/render.php:460
+msgid "Highlighted names:"
+msgstr "強調表示された名前:"
+
+#: build/blocks/tournament/render.php:219 src/blocks/tournament/render.php:219
+msgid "Skip the selected matches"
+msgstr "選択した試合をスキップ"
+
+#: build/blocks/tournament/render.php:218 src/blocks/tournament/render.php:218
+msgid "Skip matches"
+msgstr "試合をスキップ"
+
+#: build/blocks/tournament/render.php:213 src/blocks/tournament/render.php:213
+msgid "No match is being played right now."
+msgstr "現在行われている試合はありません。"
+
+#: build/blocks/tournament/render.php:210 src/blocks/tournament/render.php:210
+msgid "Matches are drawn after the organizer closes the registration."
+msgstr "試合は、主催者が登録を締め切った後に抽選されます。"
+
+#: build/blocks/tournament/render.php:177 src/blocks/tournament/render.php:177 build/blocks/tournament/index.js:1 src/blocks/tournament/index.js:56
+msgid "Tournament"
+msgstr "大会"
+
+#: build/blocks/tournament/render.php:154 src/blocks/tournament/render.php:154
+msgid "End the presentation"
+msgstr "プレゼンテーションを終了"
+
+#: build/blocks/tournament/render.php:150 src/blocks/tournament/render.php:150
+msgid "Share"
+msgstr "共有"
+
+#: build/blocks/tournament/render.php:113 includes/doroto-view-list.php:92 src/blocks/tournament/render.php:113
+msgid "Closed"
+msgstr "終了"
+
+#: build/blocks/tournament/render.php:112 includes/doroto-view-list.php:91 src/blocks/tournament/render.php:112
+msgid "In progress"
+msgstr "進行中"
+
+#: build/blocks/tournament/render.php:111 includes/doroto-view-list.php:90 src/blocks/tournament/render.php:111
+msgid "Registration open"
+msgstr "登録受付中"
+
+#: build/blocks/tournament/render.php:75 build/blocks/tournament/render.php:448 src/blocks/tournament/render.php:75 src/blocks/tournament/render.php:448 build/blocks/tournament/index.js:1 src/blocks/tournament/index.js:28
+msgid "Statistics"
+msgstr "統計"
+
+#: build/blocks/tournament/render.php:73 build/blocks/tournament/render.php:310 src/blocks/tournament/render.php:73 src/blocks/tournament/render.php:310 build/blocks/tournament/index.js:1 src/blocks/tournament/index.js:26
+msgid "Results"
+msgstr "結果"
+
+#: build/blocks/tournament/render.php:72 build/blocks/tournament/render.php:196 build/blocks/tournament/render.php:357 src/blocks/tournament/render.php:72 src/blocks/tournament/render.php:196 src/blocks/tournament/render.php:357 build/blocks/tournament/index.js:1 src/blocks/tournament/index.js:25
+msgid "Matches"
+msgstr "試合"
+
+#: build/blocks/tournament-list/render.php:97 build/blocks/tournament/render.php:588 src/blocks/tournament-list/render.php:97 src/blocks/tournament/render.php:588
+msgid "Create"
+msgstr "作成"
+
+#: build/blocks/tournament-list/render.php:84 src/blocks/tournament-list/render.php:84
+msgid "Previous"
+msgstr "前へ"
+
+#: build/blocks/tournament-list/render.php:83 src/blocks/tournament-list/render.php:83 build/admin/index.js:1 src/admin/index.js:498
+msgid "Pages"
+msgstr "ページ"
+
+#: build/blocks/tournament-list/render.php:77 src/blocks/tournament-list/render.php:77
+msgid "I organize"
+msgstr "主催"
+
+#: build/blocks/tournament-list/render.php:76 src/blocks/tournament-list/render.php:76
+msgid "I play"
+msgstr "参加"
+
+#: build/blocks/tournament-list/render.php:63 src/blocks/tournament-list/render.php:63
+msgid "No tournament matches the filter."
+msgstr "フィルターに一致する大会はありません。"
+
+#: build/blocks/tournament-list/render.php:57 src/blocks/tournament-list/render.php:57
+msgid "Search"
+msgstr "検索"
+
+#: build/blocks/tournament-list/render.php:49 src/blocks/tournament-list/render.php:49
+msgid "Show"
+msgstr "表示"
+
+#: build/blocks/invite/render.php:63 build/blocks/tournament/render.php:619 src/blocks/invite/render.php:63 src/blocks/tournament/render.php:619
+msgid "Copy the invitation link"
+msgstr "招待リンクをコピー"
+
+#: build/blocks/invite/render.php:61 build/blocks/tournament/render.php:137 src/blocks/invite/render.php:61 src/blocks/tournament/render.php:137
+msgid "Join the tournament"
+msgstr "大会に参加"
+
+#: build/blocks/invite/render.php:59 src/blocks/invite/render.php:59
+msgid "The tournament is full."
+msgstr "大会は満員です。"
+
+#: build/blocks/invite/render.php:57 src/blocks/invite/render.php:57
+msgid "You are registered."
+msgstr "登録済みです。"
+
+#: includes/doroto-tournament-management.php:3301
+msgid "Continue to the tournament"
+msgstr "大会へ進む"
+
+#. translators: 1: tournament number, 2: website address
+#: includes/doroto-tournament-management.php:3297
+msgid "Tournament no. %1$d is run on the website %2$s."
+msgstr "大会番号 %1$d はサイト %2$s で開催されています。"
+
+#: includes/doroto-admin.php:374 includes/doroto-tournament-management.php:3293
+msgid "Rotation tournament"
+msgstr "ローテーション大会"
+
+#: includes/doroto-services.php:95
+msgid "The match was not found."
+msgstr "試合が見つかりません。"
+
+#: build/blocks/tournament/render.php:167 includes/doroto-shortcodes.php:3017 src/blocks/tournament/render.php:167
+msgid "Open in the app"
+msgstr "アプリで開く"
+
+#: build/blocks/tournament/render.php:165 includes/doroto-help.php:143 includes/doroto-shortcodes.php:3006 src/blocks/tournament/render.php:165
+msgid "Rotation Tournaments app for Android"
+msgstr "Android 用 Rotation Tournaments アプリ"
+
+#: build/blocks/tournament/render.php:164 includes/doroto-help.php:143 includes/doroto-shortcodes.php:3004 src/blocks/tournament/render.php:164
+msgid "Follow the tournament and enter results on your phone:"
+msgstr "スマートフォンで大会を確認し、結果を入力できます:"
+
+#: build/blocks/tournament/render.php:142 includes/doroto-shortcodes.php:2931 src/blocks/tournament/render.php:142
+msgid "Leave the tournament"
+msgstr "大会から退出"
+
+#: includes/doroto-shortcodes.php:2928
+msgid "Sign up for the tournament"
+msgstr "大会に参加登録"
+
+#: includes/doroto-services.php:196
+msgid "You are already registered in tournament no."
+msgstr "すでに登録済みです。大会番号"
+
+#: includes/doroto-endpoints.php:2990
+msgid "Your login e-mail:"
+msgstr "ログイン用メールアドレス:"
+
+#: includes/doroto-endpoints.php:2988
+msgid "To sign in on the website or in the Doroto app, first set your password here:"
+msgstr "サイトまたは Doroto アプリにログインするには、まずここでパスワードを設定してください:"
+
+#: includes/doroto-endpoints.php:2987
+msgid "A tournament organizer has created a player account for you."
+msgstr "大会の主催者があなたの選手アカウントを作成しました。"
+
+#. translators: %s: Site name.
+#: includes/doroto-endpoints.php:2979
+msgid "[%s] Your player account has been created"
+msgstr "[%s] 選手アカウントが作成されました"
+
+#. translators: %s: Tournament name.
+#: includes/doroto-services.php:574
+msgid "You have been added to the tournament: %s"
+msgstr "大会に追加されました: %s"
+
+#: includes/doroto-backend-pages.php:259 includes/doroto-repeated-functions.php:693 includes/doroto-security.php:124 includes/doroto-services.php:75 includes/doroto-services.php:93 includes/doroto-services.php:120
+msgid "You do not have permission to perform this action."
+msgstr "この操作を行う権限がありません。"
+
+#: includes/doroto-backend-pages.php:247
+msgid "Support forum"
+msgstr "サポートフォーラム"
+
+#: includes/doroto-backend-pages.php:246
+msgid "A problem or an idea?"
+msgstr "問題やアイデアがありますか?"
+
+#: includes/doroto-backend-pages.php:245
+msgid "I have already rated it"
+msgstr "評価済みです"
+
+#: includes/doroto-backend-pages.php:244
+msgid "Remind me in 7 days"
+msgstr "7 日後に再通知"
+
+#: includes/doroto-backend-pages.php:243
+msgid "Rate the plugin"
+msgstr "プラグインを評価"
+
+#: includes/doroto-backend-pages.php:241
+msgid "A short review on WordPress.org helps other clubs find the plugin and keeps its development going. It takes about a minute."
+msgstr "WordPress.org での短いレビューは、他のクラブがプラグインを見つける助けとなり、開発の継続にもつながります。1 分ほどで終わります。"
+
+#: includes/doroto-backend-pages.php:240
+msgid "Do you find Rotation Tournaments useful?"
+msgstr "Rotation Tournaments はお役に立っていますか?"
+
+#: includes/doroto-admin.php:131
+msgid "A short note under the tournament details tells players about the Android app."
+msgstr "大会の詳細の下に、選手へ Android アプリを紹介する短いメモを表示します。"
+
+#: includes/doroto-admin.php:131
+msgid "Show a link to the app on the tournament page?"
+msgstr "大会ページにアプリへのリンクを表示しますか?"
+
+#. translators: %s: The missing tournament ID or name.
+#: includes/doroto-repeated-functions.php:374
+msgid "Missing tournament ID: %s"
+msgstr "大会 ID がありません: %s"
+
+#: includes/doroto-backend-pages.php:46 build/admin/index.js:1 src/admin/index.js:635
+msgid "Get it on Google Play"
+msgstr "Google Play で手に入れよう"
+
+#: includes/doroto-endpoints.php:2991 includes/doroto-services.php:599
+msgid "The Doroto Team"
+msgstr "Doroto チーム"
+
+#: includes/doroto-endpoints.php:2991 includes/doroto-services.php:598
+msgid "Best regards,"
+msgstr "よろしくお願いいたします。"
+
+#. translators: %s: Tournament name.
+#: includes/doroto-services.php:590
+msgid "You have also been added to the '<strong>%s</strong>' tournament."
+msgstr "大会「<strong>%s</strong>」にも追加されました。"
+
+#. translators: %s: Player name.
+#: includes/doroto-endpoints.php:2984 includes/doroto-services.php:581
+msgid "Hello %s,"
+msgstr "%s 様"
+
+#: includes/doroto-shortcodes.php:2631
+msgid "Set tournament location on the map."
+msgstr "地図で大会の場所を設定してください。"
+
+#: includes/doroto-shortcodes.php:2625
+msgid "Copy"
+msgstr "コピー"
+
+#: includes/doroto-shortcodes.php:2623
+msgid "Coordinates for sharing:"
+msgstr "共有用の座標:"
+
+#: includes/doroto-blocks.php:248 includes/doroto-shortcodes.php:2609
+msgid "Location"
+msgstr "場所"
+
+#: includes/doroto-blocks.php:214 includes/doroto-shortcodes.php:2447
+msgid "Can other players see your tournament?"
+msgstr "他の選手があなたの大会を閲覧できますか?"
+
+#: includes/doroto-frontend-pages.php:745 includes/doroto-frontend-pages.php:814
+msgid "Terms of Service (DoRoTo)"
+msgstr "利用規約 (DoRoTo)"
+
+#: includes/doroto-frontend-pages.php:703 includes/doroto-frontend-pages.php:783
+msgid "Privacy Policy (DoRoTo)"
+msgstr "プライバシーポリシー (DoRoTo)"
+
+#: includes/doroto-frontend-pages.php:677
+msgid "We may revise these Terms from time to time. The most current version will always be posted on this page. By continuing to access or use the Service after revisions become effective, you agree to be bound by the revised Terms."
+msgstr "本規約は随時改訂される場合があります。最新版は常にこのページに掲載されます。改訂の発効後も本サービスへのアクセスまたは利用を継続することにより、改訂後の規約に同意したものとみなされます。"
+
+#: includes/doroto-frontend-pages.php:676
+msgid "7. Changes to These Terms"
+msgstr "7. 本規約の変更"
+
+#: includes/doroto-frontend-pages.php:673
+msgid "You can terminate your account at any time. This action will result in the irreversible loss of your tournament history. We may also suspend or terminate your account if you violate these Terms, at the discretion of the website administrator."
+msgstr "アカウントはいつでも削除できます。この操作により、大会履歴は元に戻せない形で失われます。また、本規約に違反した場合、サイト管理者の判断によりアカウントを停止または削除することがあります。"
+
+#: includes/doroto-frontend-pages.php:672
+msgid "6. Account Termination"
+msgstr "6. アカウントの終了"
+
+#: includes/doroto-frontend-pages.php:669
+msgid "To the fullest extent permitted by law, the developers of the Rotation Tournaments plugin shall not be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of profits or revenues, whether incurred directly or indirectly, or any loss of data, use, goodwill, or other intangible losses, resulting from your access to or use of or inability to access or use the Service."
+msgstr "法律で認められる最大限の範囲において、Rotation Tournaments プラグインの開発者は、本サービスへのアクセスもしくは利用、またはアクセスもしくは利用ができないことに起因する、間接的、付随的、特別、結果的または懲罰的損害、直接的か間接的かを問わない利益または収益の損失、データ、使用機会、信用その他の無形の損失について、一切責任を負いません。"
+
+#: includes/doroto-frontend-pages.php:668
+msgid "5. Limitation of Liability"
+msgstr "5. 責任の制限"
+
+#: includes/doroto-frontend-pages.php:665
+msgid "The security of your data depends on the practices of the administrator of the website you are using. The developers of the Rotation Tournaments plugin are not responsible for any data breaches or security incidents that occur on the hosting server."
+msgstr "データのセキュリティは、ご利用のサイトの管理者の運用に依存します。Rotation Tournaments プラグインの開発者は、ホスティングサーバーで発生したデータ漏えいやセキュリティ事故について責任を負いません。"
+
+#: includes/doroto-frontend-pages.php:665
+msgid "Data Security:"
+msgstr "データセキュリティ:"
+
+#: includes/doroto-frontend-pages.php:664
+msgid "The Service is provided \"AS IS\" without any warranties, express or implied. We do not warrant that the Service will be uninterrupted, secure, or error-free."
+msgstr "本サービスは、明示または黙示を問わず、いかなる保証もなく「現状のまま」提供されます。本サービスが中断せず、安全で、エラーがないことは保証しません。"
+
+#: includes/doroto-frontend-pages.php:663
+msgid "4. Disclaimers"
+msgstr "4. 免責事項"
+
+#: includes/doroto-frontend-pages.php:660
+msgid "The website administrator and tournament organizers are responsible for the data and content related to their tournaments. The developers of the Rotation Tournaments plugin have no liability for user-generated content or its management."
+msgstr "大会に関するデータと内容については、サイト管理者と大会主催者が責任を負います。Rotation Tournaments プラグインの開発者は、ユーザーが作成したコンテンツやその管理について責任を負いません。"
+
+#: includes/doroto-frontend-pages.php:658
+msgid "You are responsible for your Display Name. While your real name is collected for registration, you can change your Display Name to a nickname for privacy. For more details, see our Privacy Policy."
+msgstr "表示名についてはご自身が責任を負います。登録時には本名を収集しますが、プライバシーのため表示名をニックネームに変更できます。詳しくはプライバシーポリシーをご覧ください。"
+
+#: includes/doroto-frontend-pages.php:657
+msgid "Your Display Name and tournament results will be visible to other users, subject to the visibility settings configured by the website administrator and the tournament organizer."
+msgstr "表示名と大会結果は、サイト管理者と大会主催者が設定した表示設定に応じて、他のユーザーに表示されます。"
+
+#: includes/doroto-frontend-pages.php:655
+msgid "You are responsible for the content you post, including your Display Name and any match results you submit. By participating in a tournament, you acknowledge and agree that:"
+msgstr "表示名や送信した試合結果を含め、投稿した内容についてはご自身が責任を負います。大会に参加することで、次の点を了承し同意したものとみなされます:"
+
+#: includes/doroto-frontend-pages.php:654
+msgid "3. User Content and Responsibility"
+msgstr "3. ユーザーコンテンツと責任"
+
+#: includes/doroto-frontend-pages.php:651
+msgid "To use the Service, you must have a user account on the WordPress website where the plugin is installed. You are responsible for safeguarding your account and for all activities that occur under your account. You agree to provide accurate and complete information when creating and updating your account."
+msgstr "本サービスを利用するには、プラグインがインストールされた WordPress サイトのユーザーアカウントが必要です。アカウントの保護と、アカウントで行われるすべての活動についてはご自身が責任を負います。アカウントの作成時および更新時には、正確かつ完全な情報を提供することに同意するものとします。"
+
+#: includes/doroto-frontend-pages.php:650
+msgid "2. User Accounts"
+msgstr "2. ユーザーアカウント"
+
+#: includes/doroto-frontend-pages.php:646
+msgid "Players can participate in tournaments, view their progress, and, if enabled by the organizer, submit the results of their own matches."
+msgstr "選手は大会に参加し、成績を確認できます。主催者が許可している場合は、自分の試合の結果を送信できます。"
+
+#: includes/doroto-frontend-pages.php:646
+msgid "Players:"
+msgstr "選手:"
+
+#: includes/doroto-frontend-pages.php:645
+msgid "Any user can create and manage a tournament. The organizer is responsible for the tournament setup, including its privacy settings."
+msgstr "どのユーザーも大会を作成・管理できます。プライバシー設定を含む大会の設定については主催者が責任を負います。"
+
+#: includes/doroto-frontend-pages.php:645
+msgid "Organizers:"
+msgstr "主催者:"
+
+#: includes/doroto-frontend-pages.php:643
+msgid "The Service provides a platform for organizing and participating in doubles rotation tournaments. Users can act as organizers or players."
+msgstr "本サービスは、ダブルスのローテーション大会を開催し参加するためのプラットフォームを提供します。ユーザーは主催者または選手として参加できます。"
+
+#: includes/doroto-frontend-pages.php:642
+msgid "1. Use of the Service"
+msgstr "1. 本サービスの利用"
+
+#: includes/doroto-frontend-pages.php:639
+msgid "These Terms of Service (\"Terms\") govern your access to and use of the Rotation Tournaments plugin and associated mobile application (collectively, \"the Service\"). By accessing or using the Service, you agree to be bound by these Terms."
+msgstr "本利用規約 (以下「本規約」) は、Rotation Tournaments プラグインおよび関連モバイルアプリ (総称して「本サービス」) へのアクセスと利用に適用されます。本サービスにアクセスまたは利用することで、本規約に同意したものとみなされます。"
+
+#: includes/doroto-frontend-pages.php:624
+msgid "We may change this Privacy Policy from time to time. If we make changes, we will notify you by revising the date at the top of the policy and, in some cases, we may provide you with additional notice (such as adding a statement to our homepage or sending you a notification)."
+msgstr "本プライバシーポリシーは随時変更されることがあります。変更する場合は、ポリシー冒頭の日付を更新してお知らせし、場合によっては追加の通知 (ホームページへの告知やお知らせの送信など) を行います。"
+
+#: includes/doroto-frontend-pages.php:623
+msgid "7. Changes to This Privacy Policy"
+msgstr "7. 本プライバシーポリシーの変更"
+
+#: includes/doroto-frontend-pages.php:619
+msgid "You have the option to delete your user account. Please be aware that this action is irreversible and will permanently remove all records of your participation in past and current tournaments."
+msgstr "ユーザーアカウントは削除できます。この操作は元に戻せず、過去および現在の大会への参加記録がすべて完全に削除されることにご注意ください。"
+
+#: includes/doroto-frontend-pages.php:619
+msgid "Delete Your Account:"
+msgstr "アカウントの削除:"
+
+#: includes/doroto-frontend-pages.php:618
+msgid "You are responsible for your \"Display Name\". You can change it to a nickname or any other name you prefer not to correspond with your real name for enhanced privacy. By default, it is generated from the first and last name you provide during registration."
+msgstr "「表示名」についてはご自身が責任を負います。プライバシーを高めるため、ニックネームや本名と一致しない別の名前に変更できます。既定では、登録時に入力した姓名から作成されます。"
+
+#: includes/doroto-frontend-pages.php:618
+msgid "Control Your Display Name:"
+msgstr "表示名の管理:"
+
+#: includes/doroto-frontend-pages.php:617
+msgid "You can access and modify your personal information (name, email, phone) at any time through your user profile editor on the website."
+msgstr "個人情報 (氏名、メール、電話番号) は、サイトのユーザープロフィール編集画面からいつでも確認・変更できます。"
+
+#: includes/doroto-frontend-pages.php:617
+msgid "Edit Your Information:"
+msgstr "情報の編集:"
+
+#: includes/doroto-frontend-pages.php:615
+msgid "6. Your Rights and Choices"
+msgstr "6. あなたの権利と選択"
+
+#: includes/doroto-frontend-pages.php:611
+msgid "Display player names as their full \"Display Name\" or in an obfuscated format (e.g., the first 4 and last 4 characters of the Display Name)."
+msgstr "選手名を完全な「表示名」で表示するか、伏せ字形式 (例: 表示名の最初の 4 文字と最後の 4 文字) で表示する。"
+
+#: includes/doroto-frontend-pages.php:610
+msgid "Make a tournament public or private. Public tournaments may be visible to anyone."
+msgstr "大会を公開または非公開にする。公開大会は誰でも閲覧できる場合があります。"
+
+#: includes/doroto-frontend-pages.php:608
+msgid "A tournament organizer can make the following choices:"
+msgstr "大会主催者は次の設定を選べます:"
+
+#: includes/doroto-frontend-pages.php:607
+msgid "Organizer-Set Visibility:"
+msgstr "主催者が設定する表示範囲:"
+
+#: includes/doroto-frontend-pages.php:605
+msgid "Level 4: You can see the names of all players in the website's user database."
+msgstr "レベル 4: サイトのユーザーデータベースにいるすべての選手の名前を閲覧できます。"
+
+#: includes/doroto-frontend-pages.php:604
+msgid "Level 3 (Default): You can see the names of players from any tournament you have ever participated in."
+msgstr "レベル 3 (既定): これまでに参加したすべての大会の選手名を閲覧できます。"
+
+#: includes/doroto-frontend-pages.php:603
+msgid "Level 2: You can see the names of players from tournaments where you are listed as an organizer or are currently registered."
+msgstr "レベル 2: 主催者として登録されている大会、または現在登録している大会の選手名を閲覧できます。"
+
+#: includes/doroto-frontend-pages.php:602
+msgid "Level 1: You can only see the names of players from tournaments you are currently registered in."
+msgstr "レベル 1: 現在登録している大会の選手名だけを閲覧できます。"
+
+#: includes/doroto-frontend-pages.php:600
+msgid "The website administrator chooses one of four levels of data access for regular users:"
+msgstr "サイト管理者は、一般ユーザー向けに 4 つのデータアクセスレベルから 1 つを選びます:"
+
+#: includes/doroto-frontend-pages.php:599
+msgid "Administrator-Set Visibility:"
+msgstr "管理者が設定する表示範囲:"
+
+#: includes/doroto-frontend-pages.php:598
+msgid "Your visibility to other users depends on settings configured by the website administrator and individual tournament organizers."
+msgstr "他のユーザーにどう表示されるかは、サイト管理者と各大会主催者の設定によって決まります。"
+
+#: includes/doroto-frontend-pages.php:597
+msgid "5. Information Sharing and Disclosure"
+msgstr "5. 情報の共有と開示"
+
+#: includes/doroto-frontend-pages.php:594
+msgid "All data is stored in the WordPress database on the server chosen by the website administrator. The level of security for this database is the sole responsibility of the website administrator. The Rotation Tournaments plugin does not provide its own data hosting or additional security layers beyond standard WordPress practices."
+msgstr "すべてのデータは、サイト管理者が選んだサーバー上の WordPress データベースに保存されます。このデータベースのセキュリティレベルは、サイト管理者のみが責任を負います。Rotation Tournaments プラグインは、独自のデータホスティングや WordPress の標準的な運用を超えるセキュリティ層を提供しません。"
+
+#: includes/doroto-frontend-pages.php:593
+msgid "4. Data Security and Storage"
+msgstr "4. データのセキュリティと保存"
+
+#: includes/doroto-frontend-pages.php:589
+msgid "To allow you and other authorized players to input match results."
+msgstr "あなたと他の許可された選手が試合結果を入力できるようにするため。"
+
+#: includes/doroto-frontend-pages.php:588
+msgid "To allow tournament organizers to manage events."
+msgstr "大会主催者がイベントを管理できるようにするため。"
+
+#: includes/doroto-frontend-pages.php:587
+msgid "To display your name and progress within a tournament."
+msgstr "大会内であなたの名前と成績を表示するため。"
+
+#: includes/doroto-frontend-pages.php:586
+msgid "To register you as a player in tournaments."
+msgstr "大会に選手として登録するため。"
+
+#: includes/doroto-frontend-pages.php:584
+msgid "Your information is used for the following purposes:"
+msgstr "あなたの情報は次の目的で使用されます:"
+
+#: includes/doroto-frontend-pages.php:583
+msgid "3. How We Use Your Information"
+msgstr "3. 情報の利用方法"
+
+#: includes/doroto-frontend-pages.php:579
+msgid "Display Name: By default, this is created by combining your first and last name. You have full control to change this in your user profile."
+msgstr "表示名: 既定では姓名を組み合わせて作成されます。ユーザープロフィールで自由に変更できます。"
+
+#: includes/doroto-frontend-pages.php:578
+msgid "Phone Number"
+msgstr "電話番号"
+
+#: includes/doroto-frontend-pages.php:577
+msgid "Email Address"
+msgstr "メールアドレス"
+
+#: includes/doroto-frontend-pages.php:576
+msgid "First Name and Last Name"
+msgstr "姓名"
+
+#: includes/doroto-frontend-pages.php:574
+msgid "The Service utilizes the existing WordPress user database. When you register on the website or your account is created, we collect and store the following information:"
+msgstr "本サービスは既存の WordPress ユーザーデータベースを使用します。サイトに登録した場合、またはアカウントが作成された場合、次の情報を収集・保存します:"
+
+#: includes/doroto-frontend-pages.php:573
+msgid "2. Information We Collect"
+msgstr "2. 収集する情報"
+
+#: includes/doroto-frontend-pages.php:570
+msgid "The Rotation Tournaments plugin stores all its data, including personal information, on a server chosen by the administrator of the website where the plugin is installed. Therefore, the primary Data Controller is the Administrator of the website you are using. The developers of the Rotation Tournaments plugin do not have access to or control over your personal data."
+msgstr "Rotation Tournaments プラグインは、個人情報を含むすべてのデータを、プラグインがインストールされたサイトの管理者が選んだサーバーに保存します。したがって、主たるデータ管理者はご利用のサイトの管理者です。Rotation Tournaments プラグインの開発者は、あなたの個人データにアクセスすることも管理することもできません。"
+
+#: includes/doroto-frontend-pages.php:569
+msgid "1. Data Controller"
+msgstr "1. データ管理者"
+
+#: includes/doroto-frontend-pages.php:566
+msgid "This Privacy Policy explains how information about you is collected, used, and disclosed when you use the Rotation Tournaments plugin and associated mobile application (collectively, \"the Service\"). This policy applies to the data processed through the WordPress website where this plugin is installed."
+msgstr "本プライバシーポリシーは、Rotation Tournaments プラグインおよび関連モバイルアプリ (総称して「本サービス」) の利用時に、あなたに関する情報がどのように収集、利用、開示されるかを説明します。本ポリシーは、本プラグインがインストールされた WordPress サイトを通じて処理されるデータに適用されます。"
+
+#: includes/doroto-frontend-pages.php:565 includes/doroto-frontend-pages.php:638
+msgid "Last Revision: [2025-07-23]"
+msgstr "最終改訂: [2025-07-23]"
+
+#: includes/doroto-services.php:879
+msgid "Payment(s) recorded."
+msgstr "支払いを記録しました。"
+
+#: includes/doroto-admin.php:134
+msgid "Click on the map to set the club's location. The selected coordinates will be saved."
+msgstr "地図をクリックしてクラブの位置を設定してください。選択した座標が保存されます。"
+
+#: includes/doroto-admin.php:133
+msgid "Choose the default option for whether a newly created tournament will be listed in the public tournament list."
+msgstr "新しく作成した大会を公開大会リストに掲載するかどうかの既定値を選んでください。"
+
+#: includes/doroto-admin.php:126 includes/doroto-backend-pages.php:42
+msgid "This plugin powers the server-side functionality for the Rotation Tournament mobile app. Bring your tournaments to your pocket!"
+msgstr "このプラグインは、Rotation Tournament モバイルアプリのサーバー側機能を提供します。大会をポケットに!"
+
+#: includes/doroto-backend-pages.php:41 build/admin/index.js:1 src/admin/index.js:629
+msgid "Complete Your Tournament Experience with the Android App!"
+msgstr "Android アプリで大会をもっと便利に!"
+
+#: doubles-rotation-tournament.php:524
+msgid "Dismiss this notice"
+msgstr "この通知を非表示"
+
+#: lib/build/block.json
+msgctxt "block description"
+msgid "Example block scaffolded with Create Block tool."
+msgstr "Create Block ツールで作成したサンプルブロック。"
+
+#: lib/build/block.json
+msgctxt "block title"
+msgid "My Block"
+msgstr "マイブロック"
+
+#: lib/build/index.js:57 lib/build/index.js:35
+msgid "My Block – hello from the editor!"
+msgstr "マイブロック – エディターからこんにちは!"
+
+#: includes/doroto-admin.php:132
+msgid "This is a system-wide WordPress setting and cannot be changed here."
+msgstr "これは WordPress 全体の設定のため、ここでは変更できません。"
+
+#: includes/doroto-admin.php:130
+msgid "Should this club website be shown in the list of available servers?"
+msgstr "このクラブのサイトを利用可能なサーバーのリストに表示しますか?"
+
+#: includes/doroto-admin.php:129
+msgid "Description shown to users when selecting club websites in the app."
+msgstr "アプリでクラブのサイトを選ぶ際にユーザーに表示される説明。"
+
+#: includes/doroto-admin.php:128
+msgid "The website that is usable for the mobile application."
+msgstr "モバイルアプリで利用できるサイト。"
+
+#: includes/doroto-admin.php:125 build/admin/index.js:1 src/admin/index.js:621
+msgid "Mobile app"
+msgstr "モバイルアプリ"
+
+#: includes/doroto-services.php:212
+msgid "Could not create user."
+msgstr "ユーザーを作成できませんでした。"
+
+#: includes/doroto-shortcodes.php:3942
+msgid "Register and add player"
+msgstr "選手を登録して追加"
+
+#: includes/doroto-shortcodes.php:3939
+msgid "Email"
+msgstr "メール"
+
+#: includes/doroto-shortcodes.php:3936
+msgid "Last Name"
+msgstr "姓"
+
+#: includes/doroto-shortcodes.php:3933
+msgid "First Name"
+msgstr "名"
+
+#: includes/doroto-shortcodes.php:3928
+msgid "Register and add a new player to the tournament no."
+msgstr "新しい選手を登録して追加します。大会番号"
+
+#: includes/doroto-shortcodes.php:3915
+msgid "Unable to register and add another player from the database."
+msgstr "データベースから別の選手を登録して追加することはできません。"
+
+#: includes/doroto-shortcodes.php:3874
+msgid "The option to register and add a player is closed."
+msgstr "選手の登録と追加は締め切られています。"
+
+#: includes/doroto-shortcodes.php:3862
+msgid "You do not have permission to register and add a player."
+msgstr "選手を登録して追加する権限がありません。"
+
+#: includes/doroto-admin.php:298
+msgid "Unique Players in Tournaments:"
+msgstr "大会参加者 (重複なし):"
+
+#: includes/doroto-admin.php:297
+msgid "With Open Registration:"
+msgstr "登録受付中:"
+
+#: includes/doroto-admin.php:296
+msgid "Still playing:"
+msgstr "進行中:"
+
+#: includes/doroto-admin.php:295
+msgid "Total Tournaments:"
+msgstr "大会の総数:"
+
+#: includes/doroto-backend-pages.php:292
+msgid "Rotation Tournaments Overview"
+msgstr "ローテーション大会の概要"
+
+#: blocks/log-link/build/block.json
+msgctxt "block description"
+msgid "Log in or log out of the Tournament"
+msgstr "大会への参加登録または退出"
+
+#: blocks/log-link/build/block.json
+msgctxt "block title"
+msgid "Log link to the tournament"
+msgstr "大会の参加登録リンク"
+
+#: blocks/log-link/build/index.js:208 blocks/log-link/build/index.js:188
+msgid "Select a tournament for details."
+msgstr "詳細を見るには大会を選んでください。"
+
+#: blocks/log-link/build/index.js:123 blocks/log-link/build/index.js:107
+msgid "Text color"
+msgstr "文字色"
+
+#: blocks/log-link/build/index.js:114 blocks/log-link/build/index.js:99
+msgid "Background color"
+msgstr "背景色"
+
+#: blocks/log-link/build/index.js:104 blocks/log-link/build/index.js:90
+msgid "Select tournament"
+msgstr "大会を選択"
+
+#: blocks/log-link/build/index.js:101 blocks/log-link/build/index.js:88
+msgid "Select tournament:"
+msgstr "大会を選択:"
+
+#: blocks/log-link/build/index.js:93 blocks/log-link/build/index.js:80
+msgid "Hide players count"
+msgstr "選手数を非表示"
+
+#: blocks/log-link/build/index.js:85 blocks/log-link/build/index.js:72
+msgid "Hide tournament name"
+msgstr "大会名を非表示"
+
+#: blocks/log-link/build/index.js:77 blocks/log-link/build/index.js:64
+msgid "Hide invitation"
+msgstr "招待を非表示"
+
+#: blocks/log-link/log-link.php:93 blocks/log-link/build/index.js:188 blocks/log-link/build/index.js:169
+msgid "Log in link:"
+msgstr "参加登録リンク:"
+
+#: blocks/log-link/log-link.php:85 blocks/log-link/build/index.js:174 blocks/log-link/build/index.js:157
+msgid "Players count:"
+msgstr "選手数:"
+
+#: blocks/log-link/log-link.php:81 blocks/log-link/build/index.js:160 blocks/log-link/build/index.js:146
+msgid "Tournament name:"
+msgstr "大会名:"
+
+#: blocks/log-link/log-link.php:47
+msgid "Invalid tournament ID"
+msgstr "無効な大会 ID"
+
+#: blocks/log-link/build/render.php:11
+msgid "Log link to the tournament – hello from a dynamic block!"
+msgstr "大会の参加登録リンク – 動的ブロックからこんにちは!"
+
+#: doubles-rotation-tournament.php:473
+msgid "To quickly understand the capabilities of the Rotation tournaments plugin, start on this page: %s"
+msgstr "Rotation Tournaments プラグインでできることをすばやく理解するには、このページから始めてください: %s"
+
+#: includes/doroto-tournament-management.php:2436
+msgid "Example 4: Beach Volleyball, completed tournament"
+msgstr "例 4: ビーチバレー、終了した大会"
+
+#: includes/doroto-tournament-management.php:2267
+msgid "Example 3: Singles Badminton, final match"
+msgstr "例 3: バドミントンシングルス、決勝戦"
+
+#: includes/doroto-tournament-management.php:2170
+msgid "Example 2: Doubles Padel, closed registration"
+msgstr "例 2: パデルダブルス、登録締切"
+
+#: includes/doroto-tournament-management.php:2087
+msgid "Example 1: Doubles Tennis, open registration"
+msgstr "例 1: テニスダブルス、登録受付中"
+
+#: includes/doroto-tournament-management.php:2071
+msgid "Each time you run the help, a new tournament with the same settings will be randomly generated."
+msgstr "ヘルプを実行するたびに、同じ設定の新しい大会がランダムに作成されます。"
+
+#: includes/doroto-tournament-management.php:2070
+msgid "You can do whatever you want with this tournament. Change its settings, enter match results, and eventually delete it."
+msgstr "この大会は自由に使えます。設定を変更し、試合結果を入力し、最後に削除してください。"
+
+#: includes/doroto-tournament-management.php:2069
+msgid "Several accounts of well-known tennis players were automatically created for testing purposes."
+msgstr "テスト用に、有名なテニス選手のアカウントがいくつか自動的に作成されました。"
+
+#: includes/doroto-tournament-management.php:2068
+msgid "This tournament was created for you to understand the functionality of the system using examples of different tournament settings."
+msgstr "この大会は、さまざまな大会設定の例を通じてシステムの機能を理解していただくために作成されました。"
+
+#: includes/doroto-shortcodes.php:3766
+msgid "At least one tournament example is missing!"
+msgstr "サンプル大会が少なくとも 1 つありません!"
+
+#: includes/doroto-blocks.php:225 includes/doroto-shortcodes.php:2527
+msgid "Winner"
+msgstr "優勝者"
+
+#: includes/doroto-repeated-functions.php:62
+msgid "You might need a little help. You can start by clicking the floating help icon on the right."
+msgstr "少し手助けが必要かもしれません。右側に浮かんでいるヘルプアイコンをクリックして始めましょう。"
+
+#: doubles-rotation-tournament.php:437
+msgid "Finally, your filter was canceled so that it would not unexpectedly affect other tournaments."
+msgstr "最後に、他の大会に予期せぬ影響が出ないよう、フィルターは解除されました。"
+
+#: doubles-rotation-tournament.php:436 includes/doroto-help.php:279
+msgid "Do you know how many more matches would have to be played to ensure a rotation of serve? That is, each pair would play each other twice to alternate serving? Try changing this parameter and see."
+msgstr "サーブのローテーションを確保するには、あと何試合必要かご存じですか? つまり、サーブを交代するために各ペアが 2 回ずつ対戦するということです。このパラメーターを変更して確かめてみてください。"
+
+#: doubles-rotation-tournament.php:435 includes/doroto-help.php:276
+msgid "Looking at the game statistics of the selected man, we see that he actually played with every player. Moreover, the system ensured an even rotation of serve."
+msgstr "選ばれた男性の試合統計を見ると、実際にすべての選手とプレーしていることがわかります。さらに、システムはサーブが均等に回るようにしました。"
+
+#: doubles-rotation-tournament.php:434 includes/doroto-help.php:275
+msgid "Unlike players from the special group (meaning women here), men played 2 more matches."
+msgstr "特別グループの選手 (ここでは女性) とは異なり、男性は 2 試合多くプレーしました。"
+
+#: doubles-rotation-tournament.php:433
+msgid "This is a man who was randomly selected for us to look at his results."
+msgstr "結果を見るためにランダムに選ばれた男性です。"
+
+#: doubles-rotation-tournament.php:432 includes/doroto-help.php:274
+msgid "Let's set the filter to one of the men."
+msgstr "フィルターを男性の 1 人に設定しましょう。"
+
+#: doubles-rotation-tournament.php:431 includes/doroto-help.php:271
+msgid "The end of a tournament round can be recognized when the players have no matches left. However, in doubles, a situation is also allowed where a maximum of 3 players have 1 match left. In this case, it is not possible to find 4 players who have not played together before."
+msgstr "大会ラウンドの終わりは、選手に残り試合がなくなったことでわかります。ただしダブルスでは、最大 3 人の選手に 1 試合が残る状況も認められます。この場合、まだ一緒にプレーしていない 4 人の選手を見つけることはできません。"
+
+#: doubles-rotation-tournament.php:430 includes/doroto-help.php:268
+msgid "Thus, the tournament round was closed, from which we required everyone to play with everyone, provided that the settings allowed it."
+msgstr "こうして、設定が許す限り全員が全員とプレーすることを求めた大会ラウンドが終了しました。"
+
+#: doubles-rotation-tournament.php:429 includes/doroto-help.php:268
+msgid "This table shows that the woman who was actually selected did not pair up with another woman, but only with men. At the same time, she played one match with each man."
+msgstr "この表から、選ばれた女性は他の女性とはペアを組まず、男性とだけ組んだことがわかります。同時に、各男性と 1 試合ずつプレーしました。"
+
+#: doubles-rotation-tournament.php:428
+msgid "Here the number of matches played as a teammate and opponent is added up."
+msgstr "ここでは、パートナーおよび対戦相手としてプレーした試合数が合計されます。"
+
+#: doubles-rotation-tournament.php:427 includes/doroto-help.php:267
+msgid "This column reports the number of matches played where the player listed in this row was in the opposing position."
+msgstr "この列は、この行の選手が対戦相手側にいた試合数を示します。"
+
+#: doubles-rotation-tournament.php:426 includes/doroto-help.php:266
+msgid "This column reports the number of matches played where the player listed in this row was a teammate of the selected woman on the right."
+msgstr "この列は、この行の選手が選ばれた女性の右側のパートナーだった試合数を示します。"
+
+#: doubles-rotation-tournament.php:425 includes/doroto-help.php:265
+msgid "This column reports the number of matches played where the player listed in this row was a teammate of the selected woman on the left."
+msgstr "この列は、この行の選手が選ばれた女性の左側のパートナーだった試合数を示します。"
+
+#: doubles-rotation-tournament.php:424 includes/doroto-help.php:264
+msgid "The statistical data can be read line by line. The player's name is at the beginning."
+msgstr "統計データは 1 行ずつ読めます。先頭に選手名があります。"
+
+#: doubles-rotation-tournament.php:423 includes/doroto-help.php:264
+msgid "Here are the statistics of this woman's games played."
+msgstr "この女性がプレーしたゲームの統計です。"
+
+#: doubles-rotation-tournament.php:422
+msgid "I remind you that this woman was chosen to filter the matches and create statistics."
+msgstr "この女性は、試合の絞り込みと統計作成のために選ばれたことを思い出してください。"
+
+#: doubles-rotation-tournament.php:421 includes/doroto-help.php:263
+msgid "Let's look at the matches played by a selected woman from a special group. She actually played matches only with male colleagues, but the opponent could be not only a man + woman group, but also a man + man."
+msgstr "特別グループから選ばれた女性の試合を見てみましょう。実際には男性のパートナーとだけプレーしましたが、対戦相手は男性 + 女性のペアだけでなく、男性 + 男性のこともありました。"
+
+#: doubles-rotation-tournament.php:420 includes/doroto-help.php:258
+msgid "Another setting allows you to create pairs between members outside of special groups. In our case, you can create male + male pairs."
+msgstr "別の設定では、特別グループ以外のメンバー同士のペアを作ることができます。この例では男性 + 男性のペアを作れます。"
+
+#: doubles-rotation-tournament.php:419 includes/doroto-help.php:257
+msgid "This setting determines that there will be no 2 from the special group in the pair. That is, no woman + woman pairs will be created."
+msgstr "この設定では、ペアに特別グループの 2 人が入らないようにします。つまり、女性 + 女性のペアは作られません。"
+
+#: doubles-rotation-tournament.php:418 includes/doroto-help.php:256
+msgid "Now let's look at the number of matches played by individual players. There are significant differences. These are caused by the special group settings."
+msgstr "では、各選手がプレーした試合数を見てみましょう。大きな差があります。これは特別グループの設定によるものです。"
+
+#: doubles-rotation-tournament.php:417 includes/doroto-help.php:254
+msgid "The tournament has already been closed because the tournament round has ended."
+msgstr "大会ラウンドが終了したため、大会はすでに終了しています。"
+
+#: doubles-rotation-tournament.php:416 includes/doroto-help.php:253
+msgid "Tennis players, 3 men and 3 women, decided to play beach volleyball."
+msgstr "男性 3 人と女性 3 人のテニス選手が、ビーチバレーをすることにしました。"
+
+#: doubles-rotation-tournament.php:415
+msgid "If you are not logged in to your account, you will not see an important part of this example."
+msgstr "アカウントにログインしていない場合、この例の重要な部分が表示されません。"
+
+#: doubles-rotation-tournament.php:414 includes/doroto-help.php:262
+msgid "One of the female players was randomly selected and a filter was set based on that."
+msgstr "女性選手の 1 人がランダムに選ばれ、それに基づいてフィルターが設定されました。"
+
+#: doubles-rotation-tournament.php:413
+msgid "Preparing help"
+msgstr "ヘルプを準備中"
+
+#: doubles-rotation-tournament.php:411 includes/doroto-help.php:246
+msgid "If someone incorrectly enters the result of a match, the tournament organizer can correct the result."
+msgstr "試合結果が誤って入力された場合、大会主催者が修正できます。"
+
+#: doubles-rotation-tournament.php:410
+msgid "If you have a filter set for a specific player, you can view their detailed statistical data."
+msgstr "特定の選手にフィルターを設定している場合、その選手の詳細な統計データを閲覧できます。"
+
+#: doubles-rotation-tournament.php:409
+msgid "Results can be filtered by player. You can only filter results after logging into your account."
+msgstr "結果は選手で絞り込めます。絞り込みはアカウントにログインした後にのみ可能です。"
+
+#: doubles-rotation-tournament.php:408 includes/doroto-help.php:147 includes/doroto-help.php:244
+msgid "Here you can find a table with all the matches played."
+msgstr "ここには、行われたすべての試合の表があります。"
+
+#: doubles-rotation-tournament.php:407 includes/doroto-help.php:243
+msgid "To prevent an absent player from being declared the winner, this option can be disabled."
+msgstr "不在の選手が優勝者にならないよう、このオプションを無効にできます。"
+
+#: doubles-rotation-tournament.php:406 includes/doroto-help.php:242
+msgid "It is also not necessary to play all the matches to complete the round. Perhaps Iga Swiatek and Novak Djokovic will not be coming and so the round-robin game could not be completed."
+msgstr "ラウンドを終えるために、すべての試合を行う必要はありません。イガ・シフィオンテクとノバク・ジョコビッチが来ないかもしれず、総当たりを完了できませんでした。"
+
+#: doubles-rotation-tournament.php:405 includes/doroto-help.php:241
+msgid "It is important to understand that the total number of matches played does not affect the ranking. What matters is the ratio of points won and lost."
+msgstr "試合の合計数は順位に影響しないことを理解しておくことが大切です。重要なのは、獲得したポイントと失ったポイントの比率です。"
+
+#: doubles-rotation-tournament.php:404
+msgid "The fact that Iga Swiatek and Novak Djokovic still have a suspended game can be seen by the check box next to their names."
+msgstr "イガ・シフィオンテクとノバク・ジョコビッチがまだ一時停止中であることは、名前の横のチェックボックスでわかります。"
+
+#: doubles-rotation-tournament.php:403 includes/doroto-help.php:239
+msgid "The overview shows that the players played a different number of matches due to the fact that Iga Swiatek and Novak Djokovic decided to interrupt the tournament sometime in the middle."
+msgstr "概要から、イガ・シフィオンテクとノバク・ジョコビッチが大会の途中でプレーを中断したため、選手ごとに試合数が異なることがわかります。"
+
+#: doubles-rotation-tournament.php:402 includes/doroto-help.php:237
+msgid "At the same time, the winner in the best player of the tournament category was announced."
+msgstr "同時に、大会最優秀選手部門の優勝者が発表されました。"
+
+#: doubles-rotation-tournament.php:401 includes/doroto-help.php:238
+msgid "The tournament has already ended with the announcement of the winners in the most ideal couple category."
+msgstr "大会は、最も理想的なペア部門の優勝者の発表をもって終了しました。"
+
+#: doubles-rotation-tournament.php:400 includes/doroto-help.php:236
+msgid "The 12 world-famous tennis players from the previous examples decided to play singles badminton, regardless of gender."
+msgstr "前の例に登場した世界的に有名な 12 人のテニス選手が、性別に関係なくバドミントンのシングルスをすることにしました。"
+
+#: doubles-rotation-tournament.php:398 includes/doroto-help.php:146 includes/doroto-help.php:220
+msgid "However, this can only be done by the player playing the game, the tournament organizer, or the website administrator."
+msgstr "ただし、これを行えるのは、その試合でプレーしている選手、大会主催者、サイト管理者だけです。"
+
+#: doubles-rotation-tournament.php:397 includes/doroto-help.php:220
+msgid "Button to save results. Pressing this button will draw the next match according to the settings."
+msgstr "結果を保存するボタン。押すと、設定に従って次の試合が抽選されます。"
+
+#: doubles-rotation-tournament.php:396 includes/doroto-help.php:220
+msgid "Field for entering game results."
+msgstr "試合結果の入力欄。"
+
+#: doubles-rotation-tournament.php:395
+msgid "The match can be skipped by checking this box and pressing the Save button."
+msgstr "このボックスにチェックを入れて「保存」ボタンを押すと、試合をスキップできます。"
+
+#: doubles-rotation-tournament.php:394
+msgid "Player of team 2 on the right side of the court."
+msgstr "コートの右側にいるチーム 2 の選手。"
+
+#: doubles-rotation-tournament.php:393
+msgid "Player of team 2 on the left side of the court."
+msgstr "コートの左側にいるチーム 2 の選手。"
+
+#: doubles-rotation-tournament.php:392
+msgid "Player of team 1 on the right side of the court. This player starts the game by serving."
+msgstr "コートの右側にいるチーム 1 の選手。この選手がサーブでゲームを始めます。"
+
+#: doubles-rotation-tournament.php:391
+msgid "Player of team 1 on the left side of the court."
+msgstr "コートの左側にいるチーム 1 の選手。"
+
+#: doubles-rotation-tournament.php:390
+msgid "In each column of the table you will find the match number."
+msgstr "表の各列に試合番号があります。"
+
+#: doubles-rotation-tournament.php:389 includes/doroto-help.php:145 includes/doroto-help.php:217
+msgid "Here, individual matches are drawn in a number corresponding to the selected number of available courts or playing surfaces."
+msgstr "ここでは、選択した利用可能なコートまたは競技面の数に応じた数の試合が抽選されます。"
+
+#: doubles-rotation-tournament.php:388
+msgid "To make the tournament prediction reliable, you must check and possibly adjust the parameters marked with *."
+msgstr "大会の予測を信頼できるものにするには、* 印のパラメーターを確認し、必要に応じて調整してください。"
+
+#: doubles-rotation-tournament.php:387 includes/doroto-help.php:216
+msgid "However, if you request the end of the tournament round, an estimated time for the tournament will be displayed."
+msgstr "ただし、大会ラウンドの終了を指定すると、大会の予想所要時間が表示されます。"
+
+#: doubles-rotation-tournament.php:386 includes/doroto-help.php:228
+msgid "In the settings you can choose whether the tournament targets the end of the round and whether the service rotation is taken into account. The end of the round does not have to be tracked according to the settings."
+msgstr "設定で、大会がラウンドの終了を目指すかどうか、サーブのローテーションを考慮するかどうかを選べます。設定によっては、ラウンドの終了を追跡する必要はありません。"
+
+#: doubles-rotation-tournament.php:385 includes/doroto-help.php:227
+msgid "If the goal of the tournament is to close the round, the remaining number of matches for each player is displayed here."
+msgstr "大会の目的がラウンドを終えることなら、ここに各選手の残り試合数が表示されます。"
+
+#: doubles-rotation-tournament.php:384 includes/doroto-help.php:226
+msgid "The trend shows how many matches in a row ended in a win or loss."
+msgstr "トレンドは、何試合連続で勝ったか負けたかを示します。"
+
+#: doubles-rotation-tournament.php:383 includes/doroto-help.php:225
+msgid "The ratio between games won and lost (points) determines the overall ranking among players."
+msgstr "獲得したゲーム (ポイント) と失ったゲームの比率が、選手間の総合順位を決めます。"
+
+#: doubles-rotation-tournament.php:382 includes/doroto-help.php:224
+msgid "Similarly, each player has a total of all lost games or points."
+msgstr "同様に、各選手には失ったすべてのゲームまたはポイントの合計があります。"
+
+#: doubles-rotation-tournament.php:381 includes/doroto-help.php:223
+msgid "For each player, we will find the total number of games won, or points in another type of game."
+msgstr "各選手について、獲得したゲームの合計数、または他の競技ではポイントがわかります。"
+
+#: doubles-rotation-tournament.php:380 includes/doroto-help.php:229
+msgid "The required number of matches played for a player to be declared the winner is set here."
+msgstr "ここでは、選手が優勝者になるために必要な試合数を設定します。"
+
+#: doubles-rotation-tournament.php:379 includes/doroto-help.php:222
+msgid "Each player has played 3 or 4 matches so far. For those who have only played 3 matches, a '!' appears after the number, indicating that the player has not yet played enough matches to be declared the winner."
+msgstr "各選手はこれまでに 3 試合または 4 試合プレーしました。3 試合しかしていない選手の数字の後には '!' が表示され、優勝者になるのに必要な試合数にまだ達していないことを示します。"
+
+#: doubles-rotation-tournament.php:377
+msgid "Click this floating icon to view help. It will guide you through the various options for how a rotation tournament works and how to set them up."
+msgstr "この浮かんでいるアイコンをクリックするとヘルプが表示されます。ローテーション大会の仕組みのさまざまなオプションと、その設定方法を案内します。"
+
+#: build/blocks/tournament/render.php:626 doubles-rotation-tournament.php:376 src/blocks/tournament/render.php:626
+msgid "Do you need advice?"
+msgstr "アドバイスが必要ですか?"
+
+#: doubles-rotation-tournament.php:375 includes/doroto-help.php:210
+msgid "If the tournament organizer records entry fee payments, the information about received payments is processed here."
+msgstr "大会主催者が参加費の支払いを記録している場合、受け取った支払いの情報はここで処理されます。"
+
+#: doubles-rotation-tournament.php:374 includes/doroto-help.php:203
+msgid "As a tournament organizer, you can place selected players in a special group. For example, here all women are in a special group. The name of the player in the special group will be highlighted in color."
+msgstr "大会主催者は、選んだ選手を特別グループに入れることができます。たとえばここでは、すべての女性が特別グループに入っています。特別グループの選手の名前は色で強調表示されます。"
+
+#: doubles-rotation-tournament.php:373 includes/doroto-help.php:200
+msgid "This link will only be available to other players when player registration is open."
+msgstr "このリンクは、選手の登録受付中のみ他の選手が利用できます。"
+
+#: doubles-rotation-tournament.php:372 includes/doroto-help.php:207
+msgid "Here, the tournament organizer can add players to the tournament from the player database individually, even during the tournament. For reasons of personal data protection, access to the database may be restricted by the website administrator."
+msgstr "ここでは大会主催者が、大会中でも選手データベースから 1 人ずつ選手を大会に追加できます。個人データ保護のため、サイト管理者がデータベースへのアクセスを制限する場合があります。"
+
+#: doubles-rotation-tournament.php:371 includes/doroto-help.php:206
+msgid "The administrator can pause and resume the game of any player. A player can only change himself. The interruption of the game by a player is shown in the table above."
+msgstr "管理者はどの選手のプレーも一時停止・再開できます。選手は自分自身についてのみ変更できます。選手によるプレーの中断は上の表に表示されます。"
+
+#: doubles-rotation-tournament.php:370 includes/doroto-help.php:153 includes/doroto-help.php:206
+msgid "Pausing the game, adding players to the tournament, managing special groups and payments are all done in this section."
+msgstr "プレーの一時停止、大会への選手の追加、特別グループと支払いの管理は、すべてこのセクションで行います。"
+
+#: doubles-rotation-tournament.php:369 includes/doroto-help.php:205
+msgid "The tournament organizer can keep statistics on entry fee payments. Here, the 2nd, 4th, and 6th players paid."
+msgstr "大会主催者は参加費の支払い状況を記録できます。ここでは 2 番目、4 番目、6 番目の選手が支払いました。"
+
+#: doubles-rotation-tournament.php:368 includes/doroto-help.php:204
+msgid "Players can interrupt the game at any time during the tournament and will not be placed in matches during the interruption. Here the game was interrupted by the 4th player."
+msgstr "選手は大会中いつでもプレーを中断でき、中断中は試合に組み込まれません。ここでは 4 番目の選手がプレーを中断しました。"
+
+#: doubles-rotation-tournament.php:367 includes/doroto-help.php:139 includes/doroto-help.php:202
+msgid "The name of the tournament organizer, who can make all the settings, can be found here."
+msgstr "すべての設定ができる大会主催者の名前はここにあります。"
+
+#: doubles-rotation-tournament.php:366 includes/doroto-help.php:200
+msgid "You can register for this tournament also via this link."
+msgstr "このリンクからもこの大会に登録できます。"
+
+#: doubles-rotation-tournament.php:365
+msgid "Registration for the tournament is closed."
+msgstr "大会への登録は締め切られました。"
+
+#: doubles-rotation-tournament.php:364 includes/doroto-help.php:198
+msgid "Registration for the tournament is still open."
+msgstr "大会への登録はまだ受付中です。"
+
+#: doubles-rotation-tournament.php:363 includes/doroto-help.php:199
+msgid "13 world-class tennis players, 7 men and 6 women, have registered for this tournament."
+msgstr "この大会には、世界トップクラスのテニス選手 13 人 (男性 7 人、女性 6 人) が登録しています。"
+
+#: doubles-rotation-tournament.php:361 includes/doroto-help.php:112 includes/doroto-shortcodes.php:3781
+msgid "Example 4: doubles completed"
+msgstr "例 4: ダブルス終了"
+
+#: doubles-rotation-tournament.php:360 includes/doroto-help.php:111 includes/doroto-shortcodes.php:3780
+msgid "Example 3: singles completed"
+msgstr "例 3: シングルス終了"
+
+#: doubles-rotation-tournament.php:359 includes/doroto-help.php:110 includes/doroto-shortcodes.php:3779
+msgid "Example 2: during the tournament"
+msgstr "例 2: 大会中"
+
+#: doubles-rotation-tournament.php:358 includes/doroto-help.php:109 includes/doroto-shortcodes.php:3778
+msgid "Example 1: open registration"
+msgstr "例 1: 登録受付中"
+
+#: doubles-rotation-tournament.php:356 includes/doroto-help.php:161
+msgid "Administrator privileges can be extended to other people."
+msgstr "管理者権限は他の人にも付与できます。"
+
+#: doubles-rotation-tournament.php:355 includes/doroto-help.php:160
+msgid "Changes must be saved using this button. Only the tournament administrator has this permission."
+msgstr "変更はこのボタンで保存する必要があります。この権限を持つのは大会管理者だけです。"
+
+#: doubles-rotation-tournament.php:354 includes/doroto-help.php:158 includes/doroto-help.php:209
+msgid "Settings that allow you to create different pairs, such as man + woman, adult + child, etc."
+msgstr "男性 + 女性、大人 + 子どもなど、さまざまなペアを作れる設定。"
+
+#: doubles-rotation-tournament.php:353 includes/doroto-help.php:157
+msgid "Variables that help estimate the length of the tournament."
+msgstr "大会の所要時間の見積もりに役立つ変数。"
+
+#: doubles-rotation-tournament.php:352 includes/doroto-help.php:156 includes/doroto-help.php:230
+msgid "Here you can enter the number of courts that are available, edit the name of the tournament and the type of tournament."
+msgstr "ここでは、利用可能なコート数の入力と、大会名と大会タイプの編集ができます。"
+
+#: doubles-rotation-tournament.php:351
+msgid "Under these tabs you will find all possible settings of the selected tournament."
+msgstr "これらのタブの下に、選択した大会のすべての設定があります。"
+
+#: doubles-rotation-tournament.php:350 includes/doroto-shortcodes.php:3776
+msgid "Advance tournament management"
+msgstr "大会の詳細管理"
+
+#: doubles-rotation-tournament.php:348
+msgid "...or you can use this option...."
+msgstr "...またはこのオプションを使用できます...."
+
+#: doubles-rotation-tournament.php:347 includes/doroto-help.php:155
+msgid "When enough matches have been played, the organizer can end the tournament here."
+msgstr "十分な試合が行われたら、主催者はここで大会を終了できます。"
+
+#: doubles-rotation-tournament.php:346
+msgid "Only the tournament administrator can make these adjustments."
+msgstr "これらの調整は大会管理者のみが行えます。"
+
+#: doubles-rotation-tournament.php:345 includes/doroto-help.php:155 includes/doroto-help.php:208
+msgid "If enough players have registered for the tournament, the organizer can close the registration of new players."
+msgstr "十分な数の選手が登録したら、主催者は新しい選手の登録を締め切れます。"
+
+#: doubles-rotation-tournament.php:344 includes/doroto-shortcodes.php:3775
+msgid "Basic tournament management"
+msgstr "大会の基本管理"
+
+#: doubles-rotation-tournament.php:342 includes/doroto-help.php:148
+msgid "The list of registered players and later the current ranking can be found here."
+msgstr "登録した選手のリストと、後には現在の順位がここにあります。"
+
+#: doubles-rotation-tournament.php:341
+msgid "This shows the number of players logged in. If you also see a number after the slash, this indicates the maximum number of players set by the tournament organizer."
+msgstr "登録している選手の数を示します。スラッシュの後にも数字がある場合は、大会主催者が設定した最大選手数です。"
+
+#: doubles-rotation-tournament.php:340
+msgid "You can select the tournament with which you will continue to work by clicking on its name. A colored background means that this tournament has already been selected."
+msgstr "大会名をクリックすると、作業を続ける大会を選べます。色付きの背景は、その大会が選択済みであることを示します。"
+
+#: doubles-rotation-tournament.php:339
+msgid "Because player registration for the tournament has already been closed, this link is inactive."
+msgstr "大会への選手登録はすでに締め切られているため、このリンクは無効です。"
+
+#: doubles-rotation-tournament.php:338 includes/doroto-help.php:140
+msgid "For the selected tournament, you can log in or log out here."
+msgstr "選択した大会への参加登録や退出はここで行えます。"
+
+#: doubles-rotation-tournament.php:337 includes/doroto-shortcodes.php:3774
+msgid "Tournament registration"
+msgstr "大会への登録"
+
+#: doubles-rotation-tournament.php:335 includes/doroto-help.php:180
+msgid "If you log in to your account and we run this tutorial again, I will grant you tournament organizer rights. If you can try out other options in this trial tournament."
+msgstr "アカウントにログインしてこのチュートリアルをもう一度実行すると、大会主催者の権限を付与します。その後、この試用大会で他のオプションを試せます。"
+
+#: doubles-rotation-tournament.php:334
+msgid "Can I redirect you to tournament no."
+msgstr "次の大会に移動しますか? 大会番号"
+
+#: doubles-rotation-tournament.php:333
+msgid "We will demonstrate this tip on a selected tournament example."
+msgstr "このヒントを、選んだサンプル大会で説明します。"
+
+#: doubles-rotation-tournament.php:332
+msgid "Redirect"
+msgstr "移動"
+
+#: doubles-rotation-tournament.php:331
+msgid "The settings have been made, you just need to reload the page."
+msgstr "設定が完了しました。ページを再読み込みしてください。"
+
+#: doubles-rotation-tournament.php:330
+msgid "Reload"
+msgstr "再読み込み"
+
+#: build/blocks/tournament/render.php:607 doubles-rotation-tournament.php:329 src/blocks/tournament/render.php:607
+msgid "Cancel"
+msgstr "キャンセル"
+
+#: build/blocks/tournament/render.php:620 build/blocks/tournament/render.php:637 doubles-rotation-tournament.php:328 includes/doroto-blocks.php:63 src/blocks/tournament/render.php:620 src/blocks/tournament/render.php:637
+msgid "Close"
+msgstr "閉じる"
+
+#: doubles-rotation-tournament.php:327 includes/doroto-blocks.php:62
+msgid "Back"
+msgstr "戻る"
+
+#: build/blocks/tournament-list/render.php:86 doubles-rotation-tournament.php:326 includes/doroto-blocks.php:61 src/blocks/tournament-list/render.php:86
+msgid "Next"
+msgstr "次へ"
+
+#: doubles-rotation-tournament.php:325
+msgid "Register"
+msgstr "登録"
+
+#: doubles-rotation-tournament.php:323
+msgid "You are not yet listed as an organizer in this tournament. To make things easier for you, I will list your name among the tournament organizers."
+msgstr "あなたはまだこの大会の主催者として登録されていません。わかりやすくするため、あなたの名前を大会主催者に追加します。"
+
+#: doubles-rotation-tournament.php:322
+msgid "If you were logged into your account, you can now see your name among the tournament organizers and have permission to make changes to the settings."
+msgstr "アカウントにログインしていた場合、大会主催者の中にあなたの名前が表示され、設定を変更する権限が付与されています。"
+
+#: doubles-rotation-tournament.php:321
+msgid "The newly created tournament will have this background color. The tournament marked in this way is displayed in all tables above."
+msgstr "新しく作成した大会にはこの背景色が付きます。この印の付いた大会は、上のすべての表に表示されます。"
+
+#: doubles-rotation-tournament.php:320
+msgid "The newly created tournament will appear at the top of the table of available tournaments."
+msgstr "新しく作成した大会は、利用可能な大会の表の一番上に表示されます。"
+
+#: doubles-rotation-tournament.php:319
+msgid "Press this button and the tournament will be created."
+msgstr "このボタンを押すと大会が作成されます。"
+
+#: doubles-rotation-tournament.php:318
+msgid "First, select the type of tournament you want to create."
+msgstr "まず、作成する大会のタイプを選んでください。"
+
+#: doubles-rotation-tournament.php:317
+msgid "End of preparation. Let's get started!"
+msgstr "準備完了です。始めましょう!"
+
+#: includes/doroto-tournament-management.php:3166
+msgid "points"
+msgstr "ポイント"
+
+#: includes/doroto-shortcodes.php:2811
+msgid "Variables used for estimating the end of the tournament."
+msgstr "大会の終了見込みの計算に使う変数。"
+
+#: includes/doroto-blocks.php:202 includes/doroto-shortcodes.php:2351
+msgid "How many games (points) are played per hour on one court (table)?"
+msgstr "1 面のコート (台) で 1 時間に何ゲーム (ポイント) 行いますか?"
+
+#: includes/doroto-blocks.php:199 includes/doroto-shortcodes.php:2325
+msgid "Yes, but don't consider service rotation."
+msgstr "はい。ただしサーブのローテーションは考慮しません。"
+
+#: includes/doroto-blocks.php:196 includes/doroto-shortcodes.php:2304
+msgid "If you play tennis and your matches end with an average score of 6:4, then enter a value of 10."
+msgstr "テニスで試合が平均 6:4 で終わる場合は、値 10 を入力してください。"
+
+#: includes/doroto-blocks.php:196 includes/doroto-shortcodes.php:2303
+msgid "Average match result."
+msgstr "平均試合結果。"
+
+#: build/blocks/tournament/render.php:363 includes/doroto-shortcodes.php:576 src/blocks/tournament/render.php:363
+msgid "Residue"
+msgstr "残り"
+
+#: build/blocks/tournament/render.php:359 includes/doroto-shortcodes.php:565 src/blocks/tournament/render.php:359
+msgid "Lost"
+msgstr "負け"
+
+#: build/blocks/tournament/render.php:358 includes/doroto-shortcodes.php:565 src/blocks/tournament/render.php:358
+msgid "Won"
+msgstr "勝ち"
+
+#: includes/doroto-shortcodes.php:93
+msgid "minutes"
+msgstr "分"
+
+#: includes/doroto-shortcodes.php:87
+msgid "hours"
+msgstr "時間"
+
+#: includes/doroto-shortcodes.php:85
+msgid "Estimated time to finish:"
+msgstr "終了までの予想時間:"
+
+#: includes/doroto-shortcodes.php:82
+msgid "completed"
+msgstr "完了"
+
+#: includes/doroto-shortcodes.php:38
+msgid "Tournament progress calculation is not available."
+msgstr "大会の進行状況を計算できません。"
+
+#: includes/doroto-admin.php:76
+msgid "How many points are played on one court (field) in 1 hour on average."
+msgstr "1 面のコートで 1 時間に平均何ポイント行うか。"
+
+#: includes/doroto-admin.php:75
+msgid "Average total points per game. E.g. with an average result of 6:4, the average total is 10."
+msgstr "1 ゲームあたりの平均合計ポイント。例: 平均結果が 6:4 なら平均合計は 10。"
+
+#: includes/doroto-admin.php:71
+msgid "Average number of points played per hour"
+msgstr "1 時間あたりの平均ポイント数"
+
+#: includes/doroto-admin.php:70
+msgid "Total average points in one game"
+msgstr "1 ゲームの平均合計ポイント"
+
+#: includes/doroto-admin.php:69
+msgid "Visibility"
+msgstr "表示設定"
+
+#: build/blocks/tournament/render.php:582 includes/doroto-admin.php:68 src/blocks/tournament/render.php:582
+msgid "Tournament type"
+msgstr "大会タイプ"
+
+#: includes/doroto-admin.php:58
+msgid "Parameters that will be used to time estimate the progress of the tournament."
+msgstr "大会の進行時間の見積もりに使うパラメーター。"
+
+#: includes/doroto-shortcodes.php:539
+msgid "out of maximum"
+msgstr "/ 最大"
+
+#: includes/doroto-tournament-management.php:3091
+msgid "Maybe this means the end of the tournament round."
+msgstr "大会ラウンドが終了したのかもしれません。"
+
+#: includes/doroto-tournament-management.php:3091
+msgid "played the same number of matches with everyone."
+msgstr "はすべての選手と同じ数の試合をしました。"
+
+#: includes/doroto-frontend-pages.php:453
+msgid "If the system finds more players with the same number of matches in common, then the next criterion, the smallest number of matches in total, decides"
+msgstr "共通の試合数が同じ選手が複数いる場合は、次の基準である合計試合数の最も少ない選手が優先されます"
+
+#: includes/doroto-frontend-pages.php:452
+msgid "For this player, the player with the least number of matches played together at the level of a teammate is preferentially sought"
+msgstr "この選手には、パートナーとして一緒にプレーした試合数が最も少ない選手が優先的に選ばれます"
+
+#: includes/doroto-frontend-pages.php:451
+msgid "The active player with the fewest matches will be selected"
+msgstr "試合数が最も少ない参加中の選手が選ばれます"
+
+#: includes/doroto-frontend-pages.php:450
+msgid "The drawing of pairs takes place according to the following procedure:"
+msgstr "ペアの抽選は次の手順で行われます:"
+
+#: includes/doroto-frontend-pages.php:449
+msgid "Pair selection mechanism"
+msgstr "ペア選択の仕組み"
+
+#: includes/doroto-admin.php:106
+msgid "Enter a value between 1 and 10 for minimum matches."
+msgstr "最低試合数には 1 から 10 までの値を入力してください。"
+
+#: includes/doroto-admin.php:106 includes/doroto-blocks.php:232 includes/doroto-shortcodes.php:2566
+msgid "The minimum number of matches a player must play to be declared the winner."
+msgstr "選手が優勝者になるために必要な最低試合数。"
+
+#: includes/doroto-shortcodes.php:2062
+msgid "Not enough matches have been played to declare a winner"
+msgstr "優勝者を決めるのに十分な試合が行われていません"
+
+#: includes/doroto-services.php:126 includes/doroto-services.php:204
+msgid "The player cannot be removed because he has already played at least one match in the tournament."
+msgstr "この選手はすでに大会で 1 試合以上プレーしているため削除できません。"
+
+#: includes/doroto-shortcodes.php:1720
+msgid "No player can be removed now."
+msgstr "現在、削除できる選手はいません。"
+
+#: includes/doroto-shortcodes.php:937
+msgid "Unable to add another player from the database."
+msgstr "データベースから別の選手を追加できません。"
+
+#: includes/doroto-repeated-functions.php:569
+msgid "Change the setting of this parameter:"
+msgstr "このパラメーターの設定を変更してください:"
+
+#: includes/doroto-repeated-functions.php:568
+msgid "Add the required count of players to the Special Group."
+msgstr "必要な人数の選手を特別グループに追加してください。"
+
+#: includes/doroto-repeated-functions.php:567
+msgid "Do at least one of the following:"
+msgstr "次のうち少なくとも 1 つを行ってください:"
+
+#: includes/doroto-repeated-functions.php:566
+msgid "The Special Group does not contain enough players."
+msgstr "特別グループの選手が足りません。"
+
+#: includes/doroto-repeated-functions.php:565
+msgid "The setup requires a player from a Special Group to be selected for each team."
+msgstr "この設定では、各チームに特別グループの選手を 1 人選ぶ必要があります。"
+
+#: includes/doroto-repeated-functions.php:58
+msgid "You can log in here."
+msgstr "ここからログインできます。"
+
+#: includes/doroto-repeated-functions.php:56
+msgid "Warning: You are not logged in to your account."
+msgstr "警告: アカウントにログインしていません。"
+
+#: includes/doroto-admin.php:336
+msgid "Pay attention to the settings"
+msgstr "次のプラグインの設定にご注意ください:"
+
+#: includes/doroto-admin.php:336
+msgid "Plugins restricting user roles may limit the functionality of"
+msgstr "ユーザー権限を制限するプラグインにより、次の機能が制限される場合があります:"
+
+#: includes/doroto-admin.php:102
+msgid "all players w/o limitations"
+msgstr "制限なしですべての選手"
+
+#: includes/doroto-admin.php:101
+msgid "that they have met at a tournament where was also another organizer"
+msgstr "他の主催者もいた大会で会ったことのある選手"
+
+#: includes/doroto-admin.php:100
+msgid "for whom they have already organized a tournament in the past"
+msgstr "過去に大会を主催したことのある選手"
+
+#: includes/doroto-admin.php:99
+msgid "from the current tournament"
+msgstr "現在の大会の選手"
+
+#: includes/doroto-admin.php:98
+msgid "Tournament organizers can only find players in the database"
+msgstr "大会主催者がデータベースで見つけられる選手:"
+
+#: includes/doroto-admin.php:98
+msgid "Select the restriction level for working with the player database."
+msgstr "選手データベースを扱う際の制限レベルを選んでください。"
+
+#: includes/doroto-admin.php:98
+msgid "In addition to the web administrator, the tournament organizer could also work with the player database."
+msgstr "サイト管理者に加えて、大会主催者も選手データベースを扱えます。"
+
+#: includes/doroto-admin.php:90
+msgid "If you leave the field blank, the log in prompt will not be displayed."
+msgstr "空欄にすると、ログインの案内は表示されません。"
+
+#: includes/doroto-admin.php:90
+msgid "The URL of the page to log into your account."
+msgstr "アカウントにログインするページの URL。"
+
+#: includes/doroto-admin.php:96
+msgid "Select what data will define Rights of the tournament organizer and players."
+msgstr "大会主催者と選手の権限をどのデータで決めるかを選んでください。"
+
+#: includes/doroto-admin.php:95
+msgid "Rights"
+msgstr "権限"
+
+#: includes/doroto-services.php:188
+msgid "The end of the round will be announced again."
+msgstr "ラウンドの終了が再度通知されます。"
+
+#: includes/doroto-services.php:190
+msgid "Other notifications will be hidden."
+msgstr "その他の通知は非表示になります。"
+
+#: build/blocks/tournament/render.php:203 includes/doroto-tournament-management.php:3104 src/blocks/tournament/render.php:203
+msgid "hide this message"
+msgstr "このメッセージを非表示"
+
+#: build/blocks/tournament/render.php:201 includes/doroto-tournament-management.php:3097 src/blocks/tournament/render.php:201
+msgid "continue to the next round"
+msgstr "次のラウンドへ進む"
+
+#: includes/doroto-shortcodes.php:2339
+msgid "Yes, with service"
+msgstr "はい、サーブあり"
+
+#: includes/doroto-shortcodes.php:2338
+msgid "Yes, w/o service"
+msgstr "はい、サーブなし"
+
+#: includes/doroto-blocks.php:200 includes/doroto-shortcodes.php:2326
+msgid "Yes, and ensure service rotation."
+msgstr "はい、サーブのローテーションも確保します。"
+
+#: includes/doroto-blocks.php:198 includes/doroto-shortcodes.php:2324
+msgid "No, do not announce the end of the round."
+msgstr "いいえ、ラウンドの終了を通知しません。"
+
+#: includes/doroto-blocks.php:197 includes/doroto-shortcodes.php:2323
+msgid "After the end of the entire tournament round, show the offer, what to do next?"
+msgstr "大会ラウンド全体が終わったら、次の操作のメニューを表示しますか?"
+
+#: includes/doroto-shortcodes.php:3341
+msgid "If you wish to record payments from players, enable in"
+msgstr "選手からの支払いを記録したい場合は、次で有効にしてください:"
+
+#: includes/doroto-blocks.php:239 includes/doroto-shortcodes.php:2666
+msgid "This option reduces variability."
+msgstr "このオプションでは組み合わせの多様性が下がります。"
+
+#: includes/doroto-blocks.php:241 includes/doroto-shortcodes.php:2665
+msgid "Draw a next match immediately."
+msgstr "次の試合をすぐに抽選します。"
+
+#: includes/doroto-blocks.php:240 includes/doroto-shortcodes.php:2664
+msgid "Wait to draw until all matches have been played."
+msgstr "すべての試合が終わるまで抽選を待ちます。"
+
+#: includes/doroto-blocks.php:239 includes/doroto-shortcodes.php:2663
+msgid "When enough players are available:"
+msgstr "十分な選手がいる場合:"
+
+#: includes/doroto-shortcodes.php:2977 includes/doroto-tournament-management.php:3109
+msgid "or"
+msgstr "または"
+
+#: includes/doroto-blocks.php:189 includes/doroto-shortcodes.php:2261
+msgid "You can change the tournament type here, if the tournament hasn't started yet."
+msgstr "大会がまだ始まっていなければ、ここで大会タイプを変更できます。"
+
+#: includes/doroto-shortcodes.php:2164
+msgid "player starts the game by serving."
+msgstr "の選手がサーブでゲームを始めます。"
+
+#: includes/doroto-frontend-pages.php:134
+msgid "Payments from players"
+msgstr "選手からの支払い"
+
+#: includes/doroto-frontend-pages.php:129
+msgid "Special group management"
+msgstr "特別グループの管理"
+
+#: includes/doroto-frontend-pages.php:123
+msgid "Add or Remove a Player"
+msgstr "選手の追加または削除"
+
+#: includes/doroto-frontend-pages.php:118
+msgid "Suspension and Resumption"
+msgstr "一時停止と再開"
+
+#: includes/doroto-tournament-management.php:2904
+msgid "Doubles Badminton"
+msgstr "バドミントンダブルス"
+
+#: includes/doroto-tournament-management.php:2903
+msgid "Singles Badminton"
+msgstr "バドミントンシングルス"
+
+#: includes/doroto-shortcodes.php:2554
+msgid "2 separately"
+msgstr "2 人別々"
+
+#: includes/doroto-shortcodes.php:2553
+msgid "1 of all"
+msgstr "全員から 1 人"
+
+#: includes/doroto-shortcodes.php:2552
+msgid "1 outside"
+msgstr "グループ外から 1 人"
+
+#: includes/doroto-blocks.php:230 includes/doroto-shortcodes.php:2544
+msgid "2 separately (1 from the special group and 1 outside the special group)"
+msgstr "2 人別々 (特別グループから 1 人、特別グループ外から 1 人)"
+
+#: includes/doroto-blocks.php:229 includes/doroto-shortcodes.php:2543
+msgid "1 of all players"
+msgstr "全選手から 1 人"
+
+#: includes/doroto-blocks.php:228 includes/doroto-shortcodes.php:2542
+msgid "1 outside the special group"
+msgstr "特別グループ外から 1 人"
+
+#: includes/doroto-blocks.php:227 includes/doroto-shortcodes.php:2541
+msgid "The winner of the tournament will be:"
+msgstr "大会の優勝者:"
+
+#: includes/doroto-blocks.php:212 includes/doroto-shortcodes.php:2418
+msgid "No limit"
+msgstr "制限なし"
+
+#: includes/doroto-blocks.php:212 includes/doroto-shortcodes.php:2408
+msgid "Maximum number of registered players."
+msgstr "登録選手の最大数。"
+
+#: build/blocks/tournament/render.php:361 includes/doroto-shortcodes.php:565 src/blocks/tournament/render.php:361
+msgid "Trend"
+msgstr "トレンド"
+
+#: build/admin/index.js:1 src/admin/index.js:647
+msgid "Terms used:"
+msgstr "使用する用語:"
+
+#: includes/doroto-admin.php:331
+msgid "The minimum number of registered players in Wordpress is 4."
+msgstr "WordPress の登録選手の最低数は 4 人です。"
+
+#: includes/doroto-admin.php:331
+msgid "Since the plugin only works with registered players, a very low number of registered users may affect the functionality."
+msgstr "プラグインは登録された選手とのみ動作するため、登録ユーザーが非常に少ないと機能に影響する場合があります。"
+
+#: includes/doroto-admin.php:326
+msgid "Allow anyone to register"
+msgstr "誰でも登録できるようにする"
+
+#: includes/doroto-admin.php:324
+msgid "You have the Anyone Can Register option disabled in your Wordpress settings, which could interfere with the functionality of this plugin!"
+msgstr "WordPress の設定で「だれでもユーザー登録ができるようにする」が無効になっているため、このプラグインの機能に支障が出る可能性があります!"
+
+#: includes/doroto-admin.php:312
+msgid "A post with an example of a tournament presentation."
+msgstr "大会プレゼンテーションの例を含む投稿。"
+
+#: includes/doroto-admin.php:311
+msgid "Help page for"
+msgstr "ヘルプページ:"
+
+#: includes/doroto-admin.php:310
+msgid "The main page for the management of all tournaments."
+msgstr "すべての大会を管理するメインページ。"
+
+#: build/blocks/tournament/render.php:570 includes/doroto-shortcodes.php:2775 src/blocks/tournament/render.php:570
+msgid "Test or Delete the tournament"
+msgstr "大会のテストまたは削除"
+
+#: includes/doroto-blocks.php:255 includes/doroto-shortcodes.php:2728
+msgid "Post about the tournament"
+msgstr "大会についての投稿"
+
+#: includes/doroto-blocks.php:237 includes/doroto-shortcodes.php:2649
+msgid "Other settings"
+msgstr "その他の設定"
+
+#: includes/doroto-blocks.php:218 includes/doroto-repeated-functions.php:569 includes/doroto-shortcodes.php:2471
+msgid "Special group of players"
+msgstr "選手の特別グループ"
+
+#: includes/doroto-blocks.php:206 includes/doroto-shortcodes.php:2376
+msgid "Player rights"
+msgstr "選手の権限"
+
+#: includes/doroto-blocks.php:194 includes/doroto-shortcodes.php:2289
+msgid "Match result options"
+msgstr "試合結果のオプション"
+
+#: includes/doroto-blocks.php:186 includes/doroto-shortcodes.php:2214
+msgid "Name and type, number of courts"
+msgstr "名前とタイプ、コート数"
+
+#: includes/doroto-shortcodes.php:2673
+msgid "Draw"
+msgstr "抽選"
+
+#: includes/doroto-shortcodes.php:2673
+msgid "Wait"
+msgstr "待機"
+
+#: includes/doroto-tournament-management.php:893
+msgid "Rotation Tournament!"
+msgstr "ローテーション大会!"
+
+#: includes/doroto-shortcodes.php:3268
+msgid "for"
+msgstr "–"
+
+#: includes/doroto-shortcodes.php:3060
+msgid "Type"
+msgstr "タイプ"
+
+#: build/blocks/tournament/render.php:473 includes/doroto-shortcodes.php:201 src/blocks/tournament/render.php:473
+msgid "Opponent R"
+msgstr "対戦相手 R"
+
+#: build/blocks/tournament/render.php:469 includes/doroto-shortcodes.php:200 src/blocks/tournament/render.php:469
+msgid "Opponent L"
+msgstr "対戦相手 L"
+
+#: includes/doroto-admin.php:358
+msgid "is an alternative form of a Singles Tournament where players face each other without elimination rounds. Depending on the time options, everyone plays against everyone."
+msgstr "は、選手がノックアウト方式なしで対戦するシングルス大会の別形式です。時間が許す限り、全員が全員と対戦します。"
+
+#: includes/doroto-admin.php:358
+msgid "Singles Rotation Tournament (hereinafter SiRoTo)"
+msgstr "シングルスローテーション大会 (以下 SiRoTo)"
+
+#: includes/doroto-admin.php:120
+msgid "Table with available tournaments."
+msgstr "利用可能な大会の表。"
+
+#: includes/doroto-admin.php:119
+msgid "Table with statistics of a randomly selected player."
+msgstr "ランダムに選ばれた選手の統計表。"
+
+#: includes/doroto-admin.php:118
+msgid "Table with all played games."
+msgstr "行われたすべての試合の表。"
+
+#: includes/doroto-admin.php:117
+msgid "Table with players and their ranking."
+msgstr "選手とその順位の表。"
+
+#: includes/doroto-admin.php:116
+msgid "Schedule of matches."
+msgstr "試合スケジュール。"
+
+#: includes/doroto-admin.php:115
+msgid "Invitation link to the tournament."
+msgstr "大会への招待リンク。"
+
+#: includes/doroto-tournament-management.php:2902
+msgid "Squash"
+msgstr "スカッシュ"
+
+#: includes/doroto-tournament-management.php:2901
+msgid "Beach Volleyball"
+msgstr "ビーチバレー"
+
+#: includes/doroto-tournament-management.php:2900
+msgid "Doubles Padel"
+msgstr "パデルダブルス"
+
+#: includes/doroto-tournament-management.php:2899
+msgid "Singles Padel"
+msgstr "パデルシングルス"
+
+#: includes/doroto-tournament-management.php:2898
+msgid "Doubles Table Tennis"
+msgstr "卓球ダブルス"
+
+#: includes/doroto-tournament-management.php:2897
+msgid "Singles Table Tennis"
+msgstr "卓球シングルス"
+
+#: includes/doroto-tournament-management.php:2896
+msgid "Doubles Tennis"
+msgstr "テニスダブルス"
+
+#: includes/doroto-admin.php:74
+msgid "Specify whether this tournament type is visible for filtering and when creating a new tournament."
+msgstr "この大会タイプを絞り込みや新しい大会の作成時に表示するかどうかを指定します。"
+
+#: includes/doroto-tournament-management.php:2895
+msgid "Singles Tennis"
+msgstr "テニスシングルス"
+
+#: includes/doroto-admin.php:60
+msgid "This option appears by default by the create tournament button."
+msgstr "このオプションは既定で大会作成ボタンの横に表示されます。"
+
+#: includes/doroto-admin.php:60
+msgid "Specify the default tournament type to select."
+msgstr "既定で選択される大会タイプを指定します。"
+
+#: includes/doroto-admin.php:58
+msgid "Select the default tournament type and specify which tournament types you allow to be created."
+msgstr "既定の大会タイプを選び、作成を許可する大会タイプを指定してください。"
+
+#: includes/doroto-admin.php:112
+msgid "The plugin allows presenting real-time tournament results on a large screen so that all players can stay informed. Here, you choose what information you want to display and how quickly the screens will transition."
+msgstr "このプラグインでは、すべての選手が状況を把握できるよう、大会結果を大画面でリアルタイムに表示できます。ここでは、表示する情報と画面の切り替え速度を選びます。"
+
+#: includes/doroto-admin.php:140
+msgid "Select what data will be deleted during the plugin uninstallation and what will happen upon its reactivation."
+msgstr "プラグインのアンインストール時に削除するデータと、再有効化時の動作を選んでください。"
+
+#: build/blocks/tournament/render.php:153 includes/doroto-admin.php:111 src/blocks/tournament/render.php:153 build/blocks/tournament/index.js:1 src/blocks/tournament/index.js:94
+msgid "Presentation"
+msgstr "プレゼンテーション"
+
+#: includes/doroto-admin.php:139
+msgid "Uninstall"
+msgstr "アンインストール"
+
+#: includes/doroto-admin.php:83
+msgid "Environment"
+msgstr "環境"
+
+#: includes/doroto-admin.php:57
+msgid "Tournament types"
+msgstr "大会タイプ"
+
+#. Description of the plugin
+#: doubles-rotation-tournament.php doubles-rotation-tournament.php:51
+msgid "Organize Rotation Tournaments where each player competes against every other player without eliminations. Suitable for sports like tennis, table tennis, squash, padel, and beach volleyball."
+msgstr "各選手が脱落なしで他のすべての選手と競うローテーション大会を開催できます。テニス、卓球、スカッシュ、パデル、ビーチバレーなどの競技に適しています。"
+
+#. Plugin Name of the plugin
+#: doubles-rotation-tournament.php doubles-rotation-tournament.php:52 doubles-rotation-tournament.php:469 includes/doroto-admin.php:336 includes/doroto-backend-pages.php:23 includes/doroto-backend-pages.php:24 includes/doroto-backend-pages.php:309 includes/doroto-frontend-pages.php:46 includes/doroto-frontend-pages.php:255
+msgid "Rotation Tournaments"
+msgstr "ローテーション大会"
+
+#: includes/doroto-frontend-pages.php:401
+msgid "Doubles Rotation Tournament is an alternative form of a doubles tournament, where players play each match with a different partner and in different positions (alternating left and right sides)."
+msgstr "ダブルスローテーション大会は、選手が毎試合異なるパートナーと異なるポジション (左右を交互) でプレーするダブルス大会の別形式です。"
+
+#: includes/doroto-tournament-management.php:2881
+msgid "List of available tournaments was updated."
+msgstr "利用可能な大会のリストを更新しました。"
+
+#: includes/doroto-tournament-management.php:2628
+msgid "The data is being displayed for the tournament no."
+msgstr "次の大会のデータを表示しています: 大会番号"
+
+#: includes/doroto-services.php:84
+msgid "was open for registration."
+msgstr "の登録受付を開始しました。"
+
+#: includes/doroto-services.php:85
+msgid "was closed."
+msgstr "が締め切られました。"
+
+#: includes/doroto-services.php:85
+msgid "Registration of tournament players no."
+msgstr "選手の登録 大会番号"
+
+#: includes/doroto-services.php:79
+msgid "does not have sufficient occupancy to close registration."
+msgstr "は登録を締め切るのに十分な参加者がいません。"
+
+#: includes/doroto-services.php:81
+msgid "A tournament cannot be closed while player registration is open."
+msgstr "選手の登録受付中は大会を終了できません。"
+
+#: includes/doroto-services.php:97
+msgid "has not been scheduled yet."
+msgstr "はまだ抽選されていません。"
+
+#: includes/doroto-services.php:101
+msgid "was previously entered with a score"
+msgstr "は以前に次のスコアで入力されています:"
+
+#: includes/doroto-services.php:106
+msgid "was skipped."
+msgstr "はスキップされました。"
+
+#: build/blocks/tournament/render.php:229 includes/doroto-services.php:105 src/blocks/tournament/render.php:229
+msgid "Match no."
+msgstr "試合番号"
+
+#: includes/doroto-services.php:109
+msgid "was saved with a score"
+msgstr "が次のスコアで保存されました:"
+
+#: includes/doroto-services.php:184
+msgid "The final match is over!"
+msgstr "決勝戦が終了しました!"
+
+#: includes/doroto-services.php:180
+msgid "Please choose different names for L1, R1, L2 and R2!"
+msgstr "L1、R1、L2、R2 には異なる名前を選んでください!"
+
+#: includes/doroto-services.php:182
+msgid "You can start playing the final match."
+msgstr "決勝戦を始められます。"
+
+#: includes/doroto-services.php:182
+msgid "Final group composition saved."
+msgstr "決勝グループの構成を保存しました。"
+
+#: includes/doroto-tournament-management.php:1289
+msgid "You do not have permission to make a final group."
+msgstr "決勝グループを作成する権限がありません。"
+
+#: build/blocks/tournament/render.php:270 includes/doroto-tournament-management.php:1286 src/blocks/tournament/render.php:270
+msgid "Save the composition of the final group"
+msgstr "決勝グループの構成を保存"
+
+#: includes/doroto-tournament-management.php:1245
+msgid "Confirm the final pairings for the match that will determine the winning team."
+msgstr "優勝チームを決める試合の決勝ペアを確定してください。"
+
+#: includes/doroto-services.php:208
+msgid "A new tournament has just been created."
+msgstr "新しい大会が作成されました。"
+
+#: includes/doroto-tournament-management.php:893
+msgid "I invite you to"
+msgstr "ご招待します:"
+
+#: includes/doroto-tournament-management.php:367 includes/doroto-tournament-management.php:559
+msgid "The tournament settings do not allow the next match to be drawn."
+msgstr "大会の設定により、次の試合を抽選できません。"
+
+#: includes/doroto-tournament-management.php:211
+msgid "The small number of active players does not allow another match to be drawn."
+msgstr "参加中の選手が少ないため、次の試合を抽選できません。"
+
+#: includes/doroto-tournament-management.php:182
+msgid "Match list not found!"
+msgstr "試合リストが見つかりません!"
+
+#: includes/doroto-shortcodes.php:3643
+msgid "Click here to stop the presentation."
+msgstr "ここをクリックするとプレゼンテーションを停止します。"
+
+#: includes/doroto-shortcodes.php:3639
+msgid "Click here to run the presentation."
+msgstr "ここをクリックするとプレゼンテーションを開始します。"
+
+#: includes/doroto-shortcodes.php:3629
+msgid "If you log in, you can start the presentation of the selected tournament."
+msgstr "ログインすると、選択した大会のプレゼンテーションを開始できます。"
+
+#: build/blocks/tournament-list/render.php:60 includes/doroto-shortcodes.php:3578 src/blocks/tournament-list/render.php:60
+msgid "Filter Tournaments"
+msgstr "大会を絞り込む"
+
+#: includes/doroto-shortcodes.php:3567 includes/doroto-view-list.php:30
+msgid "Where I Am Not Admin"
+msgstr "管理者ではない大会"
+
+#: includes/doroto-shortcodes.php:3566 includes/doroto-view-list.php:29
+msgid "Where I Am Admin"
+msgstr "管理者である大会"
+
+#: includes/doroto-shortcodes.php:3565 includes/doroto-view-list.php:28
+msgid "Where I Am Not Logged In"
+msgstr "登録していない大会"
+
+#: includes/doroto-shortcodes.php:3564 includes/doroto-view-list.php:27
+msgid "Where I Am Logged In"
+msgstr "登録している大会"
+
+#: includes/doroto-shortcodes.php:3563 includes/doroto-view-list.php:23
+msgid "Only Closed"
+msgstr "終了済みのみ"
+
+#: includes/doroto-shortcodes.php:3562 includes/doroto-view-list.php:22
+msgid "Still Playing"
+msgstr "進行中"
+
+#: includes/doroto-shortcodes.php:3561 includes/doroto-view-list.php:21
+msgid "Only Open Registration"
+msgstr "登録受付中のみ"
+
+#: includes/doroto-services.php:152
+msgid "has been removed from the list."
+msgstr "がリストから削除されました。"
+
+#: build/blocks/tournament/render.php:394 includes/doroto-shortcodes.php:3505 src/blocks/tournament/render.php:394
+msgid "Remove payment"
+msgstr "支払いを削除"
+
+#: includes/doroto-shortcodes.php:3493
+msgid "Remove the payment of the selected player in tournament no."
+msgstr "選択した選手の支払いを削除します。大会番号"
+
+#: includes/doroto-shortcodes.php:3488 includes/doroto-shortcodes.php:3507
+msgid "None of the players have paid yet."
+msgstr "まだ誰も支払っていません。"
+
+#: includes/doroto-shortcodes.php:3483
+msgid "You do not have permission to remove a payment."
+msgstr "支払いを削除する権限がありません。"
+
+#: includes/doroto-shortcodes.php:3438
+msgid "You must log in to remove a payment!"
+msgstr "支払いを削除するにはログインが必要です!"
+
+#: includes/doroto-services.php:150
+msgid "has been added to the list."
+msgstr "がリストに追加されました。"
+
+#: includes/doroto-services.php:150 includes/doroto-services.php:152
+msgid "The payment of the player"
+msgstr "選手の支払い"
+
+#: build/blocks/tournament/render.php:393 includes/doroto-shortcodes.php:3383 src/blocks/tournament/render.php:393
+msgid "Confirm payment"
+msgstr "支払いを確認"
+
+#: includes/doroto-shortcodes.php:3369
+msgid "Confirm the payment of the selected player in tournament no."
+msgstr "選択した選手の支払いを確認します。大会番号"
+
+#: includes/doroto-shortcodes.php:3364 includes/doroto-shortcodes.php:3385
+msgid "All players have already paid."
+msgstr "すべての選手が支払い済みです。"
+
+#: includes/doroto-shortcodes.php:3357
+msgid "You do not have permission to confirm a payment."
+msgstr "支払いを確認する権限がありません。"
+
+#: includes/doroto-shortcodes.php:3309
+msgid "You must log in to confirm a payment!"
+msgstr "支払いを確認するにはログインが必要です!"
+
+#: includes/doroto-shortcodes.php:3234
+msgid "No tournament has been found."
+msgstr "大会が見つかりません。"
+
+#: includes/doroto-shortcodes.php:3197 includes/doroto-shortcodes.php:3205
+msgid "open tournament"
+msgstr "開催中の大会"
+
+#: includes/doroto-shortcodes.php:3197 includes/doroto-shortcodes.php:3205
+msgid "finished tournament"
+msgstr "終了した大会"
+
+#: includes/doroto-shortcodes.php:3160
+msgid "registration closed"
+msgstr "登録締切"
+
+#: includes/doroto-shortcodes.php:3160
+msgid "registration allowed"
+msgstr "登録可能"
+
+#: includes/doroto-shortcodes.php:3114
+msgid "Log out"
+msgstr "退出"
+
+#: includes/doroto-shortcodes.php:3060
+msgid "Tournament status"
+msgstr "大会の状態"
+
+#: build/blocks/tournament/render.php:119 includes/doroto-shortcodes.php:3060 src/blocks/tournament/render.php:119
+msgid "Organizer"
+msgstr "主催者"
+
+#: includes/doroto-shortcodes.php:3060
+msgid "Registration status"
+msgstr "登録の状態"
+
+#: includes/doroto-shortcodes.php:3060
+msgid "Creation date"
+msgstr "作成日"
+
+#: includes/doroto-shortcodes.php:3060
+msgid "Players count"
+msgstr "選手数"
+
+#: build/blocks/tournament/render.php:145 doubles-rotation-tournament.php:324 includes/doroto-shortcodes.php:3060 includes/doroto-shortcodes.php:3114 src/blocks/tournament/render.php:145
+msgid "Log in"
+msgstr "参加登録"
+
+#: includes/doroto-shortcodes.php:3057
+msgid "List of available tournaments:"
+msgstr "利用可能な大会のリスト:"
+
+#: build/blocks/tournament/render.php:202 includes/doroto-shortcodes.php:2970 includes/doroto-shortcodes.php:3201 includes/doroto-tournament-management.php:3101 src/blocks/tournament/render.php:202
+msgid "end the tournament"
+msgstr "大会を終了"
+
+#: includes/doroto-shortcodes.php:2970 includes/doroto-shortcodes.php:3201
+msgid "reopen the tournament"
+msgstr "大会を再開"
+
+#: includes/doroto-shortcodes.php:2966 includes/doroto-shortcodes.php:3194
+msgid "start the final match"
+msgstr "決勝戦を開始"
+
+#: includes/doroto-shortcodes.php:2966 includes/doroto-shortcodes.php:3194
+msgid "back to drawn matches"
+msgstr "抽選された試合に戻る"
+
+#: includes/doroto-shortcodes.php:2951 includes/doroto-shortcodes.php:3153
+msgid "reopen registration"
+msgstr "登録を再開"
+
+#: includes/doroto-shortcodes.php:2951 includes/doroto-shortcodes.php:3153
+msgid "close registration"
+msgstr "登録を締め切る"
+
+#: includes/doroto-shortcodes.php:2976 includes/doroto-tournament-management.php:3108
+msgid "If you wish, you can as an administrator"
+msgstr "必要であれば、管理者として次の操作ができます:"
+
+#: blocks/log-link/log-link.php:93 blocks/log-link/build/index.js:201 blocks/log-link/build/index.js:180
+msgid "Log in/Log out from the tournament"
+msgstr "大会への参加登録/退出"
+
+#: includes/doroto-shortcodes.php:2928
+msgid "You can enter the tournament using this link:"
+msgstr "このリンクから大会に参加できます:"
+
+#: build/blocks/tournament/render.php:123 includes/doroto-shortcodes.php:2915 src/blocks/tournament/render.php:123
+msgid "Details about tournament no."
+msgstr "大会の詳細 大会番号"
+
+#: includes/doroto-services.php:172
+msgid "were saved."
+msgstr "が保存されました。"
+
+#: includes/doroto-services.php:172
+msgid "Tournament parameters no."
+msgstr "大会のパラメーター 大会番号"
+
+#: includes/doroto-services.php:174
+msgid "You do not have the necessary rights to create a post."
+msgstr "投稿を作成するために必要な権限がありません。"
+
+#: includes/doroto-shortcodes.php:2825
+msgid "Tournament parameters cannot be changed more than 24 hours after closing."
+msgstr "大会のパラメーターは終了後 24 時間を過ぎると変更できません。"
+
+#: includes/doroto-shortcodes.php:2814
+msgid "You are not authorized to change the parameters of tournament no."
+msgstr "この大会のパラメーターを変更する権限がありません。大会番号"
+
+#: includes/doroto-shortcodes.php:2798
+msgid "Checking the box will delete the tournament record after saving. (Irreversible change!)"
+msgstr "チェックを入れると、保存後に大会の記録が削除されます。(元に戻せません!)"
+
+#: build/blocks/tournament/render.php:571 includes/doroto-help.php:162 includes/doroto-shortcodes.php:2789 src/blocks/tournament/render.php:571
+msgid "Checking the box will delete all match results and put the tournament into open registration. Thanks to this option, you can test the course of the tournament with the option of returning to the default state. (Irreversible change!)"
+msgstr "チェックを入れると、すべての試合結果が削除され、大会は登録受付中の状態に戻ります。このオプションを使うと、初期状態に戻せる形で大会の進行をテストできます。(元に戻せません!)"
+
+#: includes/doroto-blocks.php:257 includes/doroto-shortcodes.php:2753
+msgid "Welcome text for the tournament. It will be inserted into a new post. HTML tags can be used."
+msgstr "大会の歓迎文。新しい投稿に挿入されます。HTML タグを使用できます。"
+
+#: includes/doroto-shortcodes.php:2745 includes/doroto-shortcodes.php:2755
+msgid "(Available only for website administrators)"
+msgstr "(サイト管理者のみ利用可能)"
+
+#: build/blocks/tournament/render.php:533 includes/doroto-shortcodes.php:2742 src/blocks/tournament/render.php:533
+msgid "When you check the box, a new post dedicated only to this tournament will be created."
+msgstr "チェックを入れると、この大会専用の新しい投稿が作成されます。"
+
+#: includes/doroto-blocks.php:244 includes/doroto-shortcodes.php:2702 includes/doroto-shortcodes.php:3343
+msgid "Show control over the paid entry fee?"
+msgstr "参加費の支払い管理を表示しますか?"
+
+#: includes/doroto-blocks.php:243 includes/doroto-shortcodes.php:2684
+msgid "After the tournament closes, allow a final match to determine the best pair?"
+msgstr "大会終了後、最優秀ペアを決める決勝戦を許可しますか?"
+
+#: includes/doroto-blocks.php:213 includes/doroto-shortcodes.php:2429
+msgid "Can players independently enter game results?"
+msgstr "選手が自分で試合結果を入力できますか?"
+
+#: includes/doroto-blocks.php:221 includes/doroto-repeated-functions.php:569 includes/doroto-shortcodes.php:2503
+msgid "Skip matches where 2 non-special group players would play together?"
+msgstr "特別グループ外の 2 人が組む試合をスキップしますか?"
+
+#: includes/doroto-blocks.php:220 includes/doroto-shortcodes.php:2485
+msgid "Skip matches where 2 players would play together in a special group?"
+msgstr "特別グループの 2 人が組む試合をスキップしますか?"
+
+#: includes/doroto-blocks.php:233 includes/doroto-shortcodes.php:2585
+msgid "Can a player who is currently suspended be declared the winner?"
+msgstr "現在一時停止中の選手を優勝者にできますか?"
+
+#: includes/doroto-blocks.php:190 includes/doroto-shortcodes.php:2242
+msgid "Number of courts available for the tournament"
+msgstr "大会で利用可能なコート数"
+
+#: includes/doroto-blocks.php:210 includes/doroto-shortcodes.php:2397
+msgid "Full names"
+msgstr "フルネーム"
+
+#: includes/doroto-blocks.php:209 includes/doroto-shortcodes.php:2397
+msgid "Abbreviated names"
+msgstr "短縮名"
+
+#: includes/doroto-blocks.php:208 includes/doroto-shortcodes.php:2390
+msgid "This option determines whether player names will be displayed in full or if they will be obfuscated to protect personal data."
+msgstr "このオプションでは、選手名を完全に表示するか、個人データ保護のために伏せ字にするかを決めます。"
+
+#: includes/doroto-blocks.php:188 includes/doroto-shortcodes.php:2228
+msgid "The name of the tournament can be edited here."
+msgstr "大会名はここで編集できます。"
+
+#: includes/doroto-shortcodes.php:2223 includes/doroto-shortcodes.php:2298 includes/doroto-shortcodes.php:2385 includes/doroto-shortcodes.php:2480 includes/doroto-shortcodes.php:2536 includes/doroto-shortcodes.php:2658 includes/doroto-shortcodes.php:2737 includes/doroto-shortcodes.php:2784
+msgid "Value"
+msgstr "値"
+
+#: includes/doroto-shortcodes.php:2221 includes/doroto-shortcodes.php:2296 includes/doroto-shortcodes.php:2383 includes/doroto-shortcodes.php:2478 includes/doroto-shortcodes.php:2534 includes/doroto-shortcodes.php:2656 includes/doroto-shortcodes.php:2735 includes/doroto-shortcodes.php:2782
+msgid "Variable"
+msgstr "変数"
+
+#: includes/doroto-shortcodes.php:2206
+msgid "Edit tournament no."
+msgstr "大会の編集 大会番号"
+
+#: build/blocks/tournament/render.php:245 build/blocks/tournament/render.php:282 build/blocks/tournament/render.php:289 build/blocks/tournament/render.php:542 build/blocks/tournament/render.php:606 includes/doroto-shortcodes.php:2104 includes/doroto-shortcodes.php:2152 includes/doroto-shortcodes.php:2823 includes/doroto-tournament-management.php:1356 includes/doroto-tournament-management.php:1420 src/blocks/tournament/render.php:245 src/blocks/tournament/render.php:282 src/blocks/tournament/render.php:289 src/blocks/tournament/render.php:542 src/blocks/tournament/render.php:606
+msgid "Save"
+msgstr "保存"
+
+#: includes/doroto-shortcodes.php:1873 includes/doroto-shortcodes.php:2103 includes/doroto-tournament-management.php:1353
+msgid "Result"
+msgstr "結果"
+
+#: includes/doroto-shortcodes.php:2103
+msgid "Hide"
+msgstr "非表示"
+
+#: includes/doroto-shortcodes.php:2093
+msgid "Currently, the following matches are being played in tournament no."
+msgstr "現在、次の試合が行われています。大会番号"
+
+#: includes/doroto-shortcodes.php:2073
+msgid "Best Player Winner:"
+msgstr "最優秀選手:"
+
+#: includes/doroto-shortcodes.php:2053
+msgid "If you want, you can adjust the Maximum number of games and Settings of the possible results of the match for this match."
+msgstr "必要であれば、この試合の最大ゲーム数と試合結果の設定を調整できます。"
+
+#: includes/doroto-shortcodes.php:2051
+msgid "The final match is being played."
+msgstr "決勝戦が行われています。"
+
+#: includes/doroto-shortcodes.php:2040
+msgid "Winner in the category of the most ideal couple:"
+msgstr "最も理想的なペア部門の優勝者:"
+
+#: includes/doroto-shortcodes.php:2031
+msgid "You cannot go to the finals while registration is open."
+msgstr "登録受付中は決勝に進めません。"
+
+#: includes/doroto-shortcodes.php:1995
+msgid "is closed."
+msgstr "は終了しています。"
+
+#: includes/doroto-shortcodes.php:1942
+msgid "was not found."
+msgstr "が見つかりません。"
+
+#: includes/doroto-shortcodes.php:1939
+msgid "Player registration is still in progress and the matches have not yet been drawn."
+msgstr "選手の登録はまだ受付中で、試合はまだ抽選されていません。"
+
+#: includes/doroto-shortcodes.php:1871
+msgid "L2+R2"
+msgstr "L2+R2"
+
+#: includes/doroto-shortcodes.php:1871
+msgid "L1+R1"
+msgstr "L1+R1"
+
+#: includes/doroto-shortcodes.php:1871 includes/doroto-shortcodes.php:2100 includes/doroto-tournament-management.php:1248 includes/doroto-tournament-management.php:1353
+msgid "R2"
+msgstr "R2"
+
+#: includes/doroto-shortcodes.php:1871 includes/doroto-shortcodes.php:2100 includes/doroto-tournament-management.php:1248 includes/doroto-tournament-management.php:1353
+msgid "L2"
+msgstr "L2"
+
+#: includes/doroto-shortcodes.php:1869 includes/doroto-shortcodes.php:2097 includes/doroto-shortcodes.php:2164 includes/doroto-tournament-management.php:1248 includes/doroto-tournament-management.php:1353
+msgid "R1"
+msgstr "R1"
+
+#: includes/doroto-shortcodes.php:1869 includes/doroto-shortcodes.php:2097 includes/doroto-tournament-management.php:1248 includes/doroto-tournament-management.php:1353
+msgid "L1"
+msgstr "L1"
+
+#: includes/doroto-shortcodes.php:1856
+msgid "The tournament is still being played."
+msgstr "大会はまだ進行中です。"
+
+#: includes/doroto-shortcodes.php:1854
+msgid "Tournament is closed."
+msgstr "大会は終了しました。"
+
+#: includes/doroto-tournament-management.php:3164
+msgid "games"
+msgstr "ゲーム"
+
+#: includes/doroto-shortcodes.php:1851
+msgid "matches and"
+msgstr "試合、"
+
+#: includes/doroto-shortcodes.php:1851
+msgid "were played"
+msgstr "実施済み:"
+
+#: includes/doroto-shortcodes.php:1851
+msgid "Meantime"
+msgstr "これまでに"
+
+#: includes/doroto-shortcodes.php:1850
+msgid "Match results"
+msgstr "試合結果"
+
+#: includes/doroto-services.php:132
+msgid "was removed from the tournament."
+msgstr "が大会から削除されました。"
+
+#: includes/doroto-shortcodes.php:1716
+msgid "Remove player"
+msgstr "選手を削除"
+
+#: includes/doroto-shortcodes.php:1703
+msgid "Removing a player from tournament no."
+msgstr "大会からの選手の削除 大会番号"
+
+#: includes/doroto-shortcodes.php:1671
+msgid "The option to remove a player is closed."
+msgstr "選手の削除は締め切られています。"
+
+#: includes/doroto-shortcodes.php:1664
+msgid "You do not have permission to remove a player."
+msgstr "選手を削除する権限がありません。"
+
+#: includes/doroto-services.php:140
+msgid "has renewed participation."
+msgstr "が参加を再開しました。"
+
+#: includes/doroto-services.php:138
+msgid "All players have renewed participation."
+msgstr "すべての選手が参加を再開しました。"
+
+#: includes/doroto-shortcodes.php:1595
+msgid "All players are active."
+msgstr "すべての選手が参加中です。"
+
+#: includes/doroto-shortcodes.php:1588
+msgid "Resume participation"
+msgstr "参加を再開"
+
+#: includes/doroto-shortcodes.php:1560
+msgid "Resuming the game of the selected player in tournament no."
+msgstr "選択した選手のプレーを再開します。大会番号"
+
+#: includes/doroto-shortcodes.php:1545
+msgid "The option to restore the player game is closed."
+msgstr "選手のプレーの再開は締め切られています。"
+
+#: includes/doroto-shortcodes.php:1524
+msgid "You must log in to restore the game!"
+msgstr "プレーを再開するにはログインが必要です!"
+
+#: includes/doroto-services.php:136
+msgid "has temporarily suspended participation."
+msgstr "が参加を一時停止しました。"
+
+#: includes/doroto-services.php:134
+msgid "All players have temporarily suspended participation."
+msgstr "すべての選手が参加を一時停止しました。"
+
+#: includes/doroto-shortcodes.php:1469
+msgid "Suspend participation"
+msgstr "参加を一時停止"
+
+#: build/blocks/tournament/render.php:315 includes/doroto-endpoints.php:2114 includes/doroto-endpoints.php:2209 includes/doroto-shortcodes.php:1465 includes/doroto-shortcodes.php:1584 src/blocks/tournament/render.php:315
+msgid "All players"
+msgstr "すべての選手"
+
+#: includes/doroto-shortcodes.php:1441
+msgid "Suspension of the game of the selected player in tournament no."
+msgstr "選択した選手のプレーを一時停止します。大会番号"
+
+#: includes/doroto-shortcodes.php:1426
+msgid "The option to suspend the player game is closed."
+msgstr "選手のプレーの一時停止は締め切られています。"
+
+#: includes/doroto-shortcodes.php:1405
+msgid "You must log in to temporarily suspend a player!"
+msgstr "選手を一時停止するにはログインが必要です!"
+
+#: includes/doroto-services.php:162
+msgid "has been added to the admins."
+msgstr "が管理者に追加されました。"
+
+#: includes/doroto-shortcodes.php:1353
+msgid "Add organizer rights"
+msgstr "主催者権限を追加"
+
+#: includes/doroto-shortcodes.php:1339
+msgid "Adding organizer rights in tournament no."
+msgstr "主催者権限の追加 大会番号"
+
+#: includes/doroto-shortcodes.php:1334 includes/doroto-shortcodes.php:1355
+msgid "No one is currently registered for the tournament, so there is no one to grant organizer rights to."
+msgstr "現在この大会に登録している人がいないため、主催者権限を付与できる人がいません。"
+
+#: includes/doroto-shortcodes.php:1298
+msgid "The option to add organizer rights is closed."
+msgstr "主催者権限の追加は締め切られています。"
+
+#: includes/doroto-shortcodes.php:1293
+msgid "You do not have permission to add organizer rights."
+msgstr "主催者権限を追加する権限がありません。"
+
+#: includes/doroto-shortcodes.php:1284 includes/doroto-shortcodes.php:2938
+msgid "is"
+msgstr "の主催者:"
+
+#: includes/doroto-shortcodes.php:1284 includes/doroto-shortcodes.php:2938
+msgid "The organizer of tournament no."
+msgstr "大会番号"
+
+#: includes/doroto-services.php:142
+msgid "has been added to a special group."
+msgstr "が特別グループに追加されました。"
+
+#: includes/doroto-shortcodes.php:1201
+msgid "Add to special group"
+msgstr "特別グループに追加"
+
+#: includes/doroto-shortcodes.php:1187
+msgid "Addition to the special group of the tournament no."
+msgstr "特別グループへの追加 大会番号"
+
+#: includes/doroto-shortcodes.php:1183 includes/doroto-shortcodes.php:1203
+msgid "No one has signed up for the tournament yet, so there is no one to include in a special group."
+msgstr "まだ誰も大会に登録していないため、特別グループに入れる人がいません。"
+
+#: includes/doroto-shortcodes.php:1167
+msgid "The option to add to a special group is closed."
+msgstr "特別グループへの追加は締め切られています。"
+
+#: includes/doroto-shortcodes.php:1162
+msgid "You do not have permission to add to a special group."
+msgstr "特別グループに追加する権限がありません。"
+
+#: includes/doroto-services.php:144
+msgid "was taken from a special group."
+msgstr "が特別グループから外されました。"
+
+#: includes/doroto-shortcodes.php:1083
+msgid "Remove from special group"
+msgstr "特別グループから外す"
+
+#: includes/doroto-shortcodes.php:1069
+msgid "Removal from the special group of the tournament no."
+msgstr "特別グループからの削除 大会番号"
+
+#: includes/doroto-shortcodes.php:1064 includes/doroto-shortcodes.php:1085
+msgid "No one has signed up for the tournament yet, so there is no one to remove from the special group."
+msgstr "まだ誰も大会に登録していないため、特別グループから外す人がいません。"
+
+#: includes/doroto-shortcodes.php:1060
+msgid "The special group is empty, so there is no one to subscribe to."
+msgstr "特別グループが空のため、外す人がいません。"
+
+#: includes/doroto-shortcodes.php:1047
+msgid "The option to remove from a special group is closed."
+msgstr "特別グループからの削除は締め切られています。"
+
+#: includes/doroto-shortcodes.php:1041
+msgid "You do not have permission to remove from a special group."
+msgstr "特別グループから外す権限がありません。"
+
+#: includes/doroto-services.php:130
+msgid "was added to the tournament."
+msgstr "が大会に追加されました。"
+
+#: includes/doroto-services.php:118
+msgid "Tournament or user not found."
+msgstr "大会またはユーザーが見つかりません。"
+
+#: includes/doroto-shortcodes.php:969
+msgid "Add player"
+msgstr "選手を追加"
+
+#: includes/doroto-shortcodes.php:952
+msgid "Add a new player to the tournament no."
+msgstr "新しい選手の追加 大会番号"
+
+#: includes/doroto-shortcodes.php:875
+msgid "The option to add a player is closed."
+msgstr "選手の追加は締め切られています。"
+
+#: includes/doroto-shortcodes.php:863
+msgid "You do not have permission to add a player from the database."
+msgstr "データベースから選手を追加する権限がありません。"
+
+#: includes/doroto-shortcodes.php:815
+msgid "Filter by player"
+msgstr "選手で絞り込む"
+
+#: includes/doroto-shortcodes.php:803 includes/doroto-shortcodes.php:3560 includes/doroto-view-list.php:20
+msgid "No Filter"
+msgstr "絞り込みなし"
+
+#: includes/doroto-shortcodes.php:766
+msgid "Filtering by player is only available for logged in users."
+msgstr "選手での絞り込みはログインしたユーザーのみ利用できます。"
+
+#: includes/doroto-shortcodes.php:756 includes/doroto-shortcodes.php:847 includes/doroto-shortcodes.php:3846
+msgid "Invalid tournament ID."
+msgstr "無効な大会 ID です。"
+
+#: includes/doroto-shortcodes.php:569
+msgid "Payment"
+msgstr "支払い"
+
+#: build/blocks/tournament/render.php:360 includes/doroto-shortcodes.php:565 src/blocks/tournament/render.php:360
+msgid "Ratio"
+msgstr "比率"
+
+#: includes/doroto-shortcodes.php:565
+msgid "Match count"
+msgstr "試合数"
+
+#: includes/doroto-shortcodes.php:561 includes/doroto-shortcodes.php:3060
+msgid "Name"
+msgstr "名前"
+
+#: includes/doroto-shortcodes.php:560
+msgid "State"
+msgstr "状態"
+
+#: includes/doroto-shortcodes.php:559
+msgid "Order"
+msgstr "順位"
+
+#: includes/doroto-shortcodes.php:553
+msgid ", but the maximum number of players has already been reached"
+msgstr "。ただし、最大選手数にすでに達しています"
+
+#: includes/doroto-shortcodes.php:549
+msgid "closed"
+msgstr "締切"
+
+#: includes/doroto-shortcodes.php:547
+msgid "open"
+msgstr "受付中"
+
+#: includes/doroto-shortcodes.php:544
+msgid "to the tournament is"
+msgstr "登録は"
+
+#: includes/doroto-shortcodes.php:544
+msgid "Registration"
+msgstr "大会への"
+
+#: includes/doroto-shortcodes.php:542 includes/doroto-shortcodes.php:1850
+msgid "tournament no."
+msgstr "大会番号"
+
+#: includes/doroto-shortcodes.php:536
+msgid "total"
+msgstr "合計"
+
+#: build/blocks/invite/render.php:49 build/blocks/tournament-list/render.php:72 build/blocks/tournament/render.php:74 build/blocks/tournament/render.php:116 build/blocks/tournament/render.php:346 includes/doroto-shortcodes.php:530 src/blocks/invite/render.php:49 src/blocks/tournament-list/render.php:72 src/blocks/tournament/render.php:74 src/blocks/tournament/render.php:116 src/blocks/tournament/render.php:346 build/blocks/tournament/index.js:1 src/blocks/tournament/index.js:27
+msgid "Players"
+msgstr "選手"
+
+#: includes/doroto-shortcodes.php:412
+msgid "The result of the final match"
+msgstr "決勝戦の結果"
+
+#: includes/doroto-services.php:116 includes/doroto-shortcodes.php:412
+msgid "was changed."
+msgstr "が変更されました。"
+
+#: includes/doroto-services.php:100 includes/doroto-services.php:108 includes/doroto-services.php:116
+msgid "The result of match no."
+msgstr "試合結果 試合番号"
+
+#: includes/doroto-services.php:186 includes/doroto-shortcodes.php:400 includes/doroto-shortcodes.php:772 includes/doroto-shortcodes.php:986 includes/doroto-shortcodes.php:1104 includes/doroto-shortcodes.php:1221 includes/doroto-shortcodes.php:1375 includes/doroto-shortcodes.php:1491 includes/doroto-shortcodes.php:1610 includes/doroto-shortcodes.php:1735 includes/doroto-shortcodes.php:2843 includes/doroto-shortcodes.php:3404 includes/doroto-shortcodes.php:3526 includes/doroto-shortcodes.php:3595 includes/doroto-shortcodes.php:3960 includes/doroto-tournament-management.php:1218 includes/doroto-tournament-management.php:1451 includes/doroto-tournament-management.php:1545 includes/doroto-tournament-management.php:2852
+msgid "Invalid request."
+msgstr "無効なリクエストです。"
+
+#: includes/doroto-shortcodes.php:382
+msgid "No matches have been played in the tournament yet, so there is nothing to edit."
+msgstr "大会でまだ試合が行われていないため、編集できるものはありません。"
+
+#: build/blocks/tournament/render.php:333 build/blocks/tournament/render.php:597 includes/doroto-shortcodes.php:377 includes/doroto-shortcodes.php:1913 includes/doroto-shortcodes.php:1914 src/blocks/tournament/render.php:333 src/blocks/tournament/render.php:597
+msgid "Edit result"
+msgstr "結果を編集"
+
+#: includes/doroto-shortcodes.php:353 includes/doroto-shortcodes.php:356 includes/doroto-shortcodes.php:1869 includes/doroto-shortcodes.php:2097 includes/doroto-shortcodes.php:3060
+msgid "ID"
+msgstr "ID"
+
+#: includes/doroto-shortcodes.php:343
+msgid "The final match"
+msgstr "決勝戦"
+
+#: includes/doroto-shortcodes.php:320
+msgid "Change of match result in tournament No."
+msgstr "試合結果の変更 大会番号"
+
+#: includes/doroto-shortcodes.php:310
+msgid "The option to modify the match results is closed."
+msgstr "試合結果の変更は締め切られています。"
+
+#: includes/doroto-shortcodes.php:303
+msgid "You do not have permission to modify tournament results."
+msgstr "大会結果を変更する権限がありません。"
+
+#: includes/doroto-services.php:91 includes/doroto-services.php:210 includes/doroto-tournament-management.php:1487
+msgid "Invalid value entered."
+msgstr "無効な値が入力されました。"
+
+#: build/blocks/tournament/render.php:476 includes/doroto-shortcodes.php:204 src/blocks/tournament/render.php:476
+msgid "Total"
+msgstr "合計"
+
+#: build/blocks/tournament/render.php:475 includes/doroto-shortcodes.php:198 src/blocks/tournament/render.php:475
+msgid "Opponent"
+msgstr "対戦相手"
+
+#: includes/doroto-shortcodes.php:197
+msgid "Teammate R"
+msgstr "パートナー R"
+
+#: includes/doroto-shortcodes.php:196
+msgid "Teammate L"
+msgstr "パートナー L"
+
+#: build/blocks/tournament/render.php:313 build/blocks/tournament/render.php:356 build/blocks/tournament/render.php:450 build/blocks/tournament/render.php:466 includes/doroto-services.php:130 includes/doroto-services.php:132 includes/doroto-services.php:142 includes/doroto-services.php:144 includes/doroto-services.php:162 includes/doroto-services.php:164 includes/doroto-shortcodes.php:193 includes/doroto-tournament-management.php:3091 src/blocks/tournament/render.php:313 src/blocks/tournament/render.php:356 src/blocks/tournament/render.php:450 src/blocks/tournament/render.php:466
+msgid "Player"
+msgstr "選手"
+
+#: includes/doroto-shortcodes.php:173
+msgid "Statistical data for"
+msgstr "統計データ:"
+
+#: includes/doroto-services.php:62 includes/doroto-shortcodes.php:81 includes/doroto-shortcodes.php:173 includes/doroto-shortcodes.php:1942 includes/doroto-shortcodes.php:1995
+msgid "Tournament no."
+msgstr "大会番号"
+
+#: includes/doroto-shortcodes.php:168
+msgid "Statistical data cannot be displayed without using a filter."
+msgstr "フィルターを使わないと統計データは表示できません。"
+
+#: includes/doroto-shortcodes.php:146 includes/doroto-tournament-management.php:42
+msgid "Once registration is closed, statistical data will be available."
+msgstr "登録が締め切られると統計データが利用可能になります。"
+
+#: includes/doroto-repeated-functions.php:381 includes/doroto-shortcodes.php:20 includes/doroto-shortcodes.php:132 includes/doroto-shortcodes.php:290 includes/doroto-shortcodes.php:473 includes/doroto-shortcodes.php:760 includes/doroto-shortcodes.php:852 includes/doroto-shortcodes.php:1030 includes/doroto-shortcodes.php:1149 includes/doroto-shortcodes.php:1266 includes/doroto-shortcodes.php:1415 includes/doroto-shortcodes.php:1534 includes/doroto-shortcodes.php:1651 includes/doroto-shortcodes.php:1813 includes/doroto-shortcodes.php:1975 includes/doroto-shortcodes.php:2194 includes/doroto-shortcodes.php:2900 includes/doroto-shortcodes.php:3319 includes/doroto-shortcodes.php:3448 includes/doroto-shortcodes.php:3851 includes/doroto-tournament-management.php:147
+msgid "No tournament has been created yet."
+msgstr "まだ大会が作成されていません。"
+
+#: includes/doroto-shortcodes.php:1025 includes/doroto-shortcodes.php:1144 includes/doroto-shortcodes.php:1261
+msgid "Missing tournament ID"
+msgstr "大会 ID がありません"
+
+#: includes/doroto-repeated-functions.php:246 includes/doroto-repeated-functions.php:283 includes/doroto-tournament-management.php:1082
+msgid "Unknown player"
+msgstr "不明な選手"
+
+#: build/blocks/invite/render.php:55 includes/doroto-services.php:198 src/blocks/invite/render.php:55
+msgid "The registration for the tournament has already been closed."
+msgstr "この大会の登録はすでに締め切られています。"
+
+#: includes/doroto-services.php:200
+msgid "We are sorry, but the maximum number of registered participants has been reached in tournament no."
+msgstr "申し訳ありませんが、登録参加者が上限に達しました。大会番号"
+
+#: includes/doroto-services.php:194
+msgid "You signed up for tournament no."
+msgstr "大会に参加登録しました。大会番号"
+
+#: includes/doroto-repeated-functions.php:14
+msgid "If you want to register for the tournament, you must log in to your account!"
+msgstr "大会に登録するには、アカウントにログインする必要があります!"
+
+#: includes/doroto-players-management.php:254 includes/doroto-tournament-management.php:2622
+msgid "Tournament ID was not provided."
+msgstr "大会 ID が指定されていません。"
+
+#: includes/doroto-endpoints.php:751 includes/doroto-endpoints.php:915 includes/doroto-shortcodes.php:89 includes/doroto-shortcodes.php:1289 includes/doroto-shortcodes.php:2043 includes/doroto-shortcodes.php:2045 includes/doroto-shortcodes.php:2069 includes/doroto-shortcodes.php:2943
+msgid "&"
+msgstr "&"
+
+#: build/blocks/tournament/render.php:347 includes/doroto-players-management.php:74 includes/doroto-shortcodes.php:514 src/blocks/tournament/render.php:347
+msgid "No one has registered for the tournament yet."
+msgstr "まだ誰も大会に登録していません。"
+
+#: blocks/log-link/log-link.php:53 build/blocks/invite/render.php:24 build/blocks/tournament/render.php:32 includes/doroto-players-management.php:68 includes/doroto-repeated-functions.php:386 includes/doroto-services.php:66 includes/doroto-services.php:166 includes/doroto-shortcodes.php:26 includes/doroto-shortcodes.php:138 includes/doroto-shortcodes.php:286 includes/doroto-shortcodes.php:296 includes/doroto-shortcodes.php:480 includes/doroto-shortcodes.php:787 includes/doroto-shortcodes.php:858 includes/doroto-shortcodes.php:1036 includes/doroto-shortcodes.php:1155 includes/doroto-shortcodes.php:1272 includes/doroto-shortcodes.php:1410 includes/doroto-shortcodes.php:1421 includes/doroto-shortcodes.php:1529 includes/doroto-shortcodes.php:1540 includes/doroto-shortcodes.php:1646 includes/doroto-shortcodes.php:1657 includes/doroto-shortcodes.php:1819 includes/doroto-shortcodes.php:1988 includes/doroto-shortcodes.php:2201 includes/doroto-shortcodes.php:2895 includes/doroto-shortcodes.php:2906 includes/doroto-shortcodes.php:3314 includes/doroto-shortcodes.php:3325 includes/doroto-shortcodes.php:3443 includes/doroto-shortcodes.php:3454 includes/doroto-shortcodes.php:3857 includes/doroto-tournament-management.php:28 includes/doroto-tournament-management.php:154 src/blocks/invite/render.php:24 src/blocks/tournament/render.php:32
+msgid "The tournament was not found."
+msgstr "大会が見つかりません。"
+
+#: includes/doroto-frontend-pages.php:530
+msgid "DoRoTo"
+msgstr "DoRoTo"
+
+#: includes/doroto-frontend-pages.php:509
+msgid "The schedule of Rotation Tournaments can be found on a separate page"
+msgstr "ローテーション大会のスケジュールは別のページにあります"
+
+#: includes/doroto-frontend-pages.php:494
+msgid "Rules for the Doubles Rotation Tournament can be found on a separate page"
+msgstr "ダブルスローテーション大会のルールは別のページにあります"
+
+#: includes/doroto-frontend-pages.php:478
+msgid "At the end of DoRoTo, 2 categories of winners will be announced: the Best player of the tournament and the Most ideal pair of the tournament (theoretically, this pair could play together for the first time during the final match)."
+msgstr "DoRoTo の最後には 2 部門の優勝者が発表されます: 大会最優秀選手と大会で最も理想的なペア (理論上、このペアは決勝戦で初めて一緒にプレーした可能性もあります)。"
+
+#: includes/doroto-frontend-pages.php:477
+msgid "There is no downtime during the tournament waiting for a match to be played to move the tournament forward."
+msgstr "大会中、大会を進めるために試合の終了を待つ空き時間はありません。"
+
+#: includes/doroto-frontend-pages.php:476
+msgid "DoRoTo perfectly provides an overview of the quality of individual players, where the quality of a teammate does not affect the rating due to the frequent change of partners."
+msgstr "DoRoTo では、パートナーが頻繁に替わるため、パートナーの実力が評価に影響せず、各選手の実力を的確に把握できます。"
+
+#: includes/doroto-frontend-pages.php:475
+msgid "It is not necessary for each player to play the same number of matches (the final ranking is determined only by the ratio of games won to games lost)."
+msgstr "各選手が同じ数の試合をする必要はありません (最終順位は獲得ゲームと失ったゲームの比率だけで決まります)。"
+
+#: includes/doroto-frontend-pages.php:474
+msgid "Players can temporarily or permanently interrupt their game or enter the tournament in the middle, for example."
+msgstr "選手は、たとえばプレーを一時的または完全に中断したり、大会の途中から参加したりできます。"
+
+#: includes/doroto-frontend-pages.php:473
+msgid "The tournament can be interrupted or extended in time at any time and it will not disrupt its progress in any way."
+msgstr "大会はいつでも中断したり延長したりでき、進行に支障はありません。"
+
+#: includes/doroto-frontend-pages.php:472
+msgid "Usually shorter matches are played and thus more will be played during the tournament (or, on the contrary, shorter matches allow more players to participate)."
+msgstr "通常は短い試合を行うため、大会中により多くの試合ができます (逆に、短い試合によってより多くの選手が参加できます)。"
+
+#: includes/doroto-frontend-pages.php:471
+msgid "DoRoTo does not take place in the form of eliminations, so players are still in the game for the duration of the tournament and will play the same number of matches according to the settings."
+msgstr "DoRoTo はノックアウト方式ではないため、選手は大会期間中ずっとプレーを続け、設定に従って同じ数の試合を行います。"
+
+#: includes/doroto-frontend-pages.php:470
+msgid "DoRoTo allows you to define a special group of players for which special conditions can be set (if women are included in the special group, it can be set that only male+female pairs are drawn. Alternatively, male+male can be allowed but female+female prohibited. And vice versa (Similar combinations can be created in the relationship of parent + child or strong + weaker player)."
+msgstr "DoRoTo では、特別な条件を設定できる選手の特別グループを定義できます (特別グループに女性を入れた場合、男性 + 女性のペアだけを抽選するよう設定できます。あるいは男性 + 男性は許可し、女性 + 女性を禁止することもできます。その逆も可能です。同様の組み合わせは、親 + 子や実力の高い選手 + 低い選手の関係でも作れます)。"
+
+#: includes/doroto-frontend-pages.php:469
+msgid "The tournament can be organized even with an odd number of players and even with a minimum lineup of 4 players (this DoRoTo feature saves the tournament organizer a lot of trouble)."
+msgstr "大会は奇数の選手でも、最低 4 人の選手でも開催できます (DoRoTo のこの特長により、大会主催者の手間が大幅に省けます)。"
+
+#: includes/doroto-frontend-pages.php:468
+msgid "An individual can enter the tournament without a teammate (thanks to rotation, you do not have a permanent partner anyway)."
+msgstr "パートナーなしで個人で大会に参加できます (ローテーションのため、そもそも固定のパートナーはいません)。"
+
+#: includes/doroto-frontend-pages.php:467
+msgid "There is a rotation of teammates (DoRoTo tries, depending on the setup and the number of games, to play with everyone as much as possible, alternating the left and right sides of the court equally)."
+msgstr "パートナーは交代します (DoRoTo は設定とゲーム数に応じて、できるだけ多くの選手とプレーし、コートの左右を均等に交代するようにします)。"
+
+#: includes/doroto-frontend-pages.php:464
+msgid "If, optionally, a final match between the 4 selected participants with the highest score is arranged at the end, then 2 players will emerge from this final as the winners in the category of the Most Ideal Pair."
+msgstr "最後にオプションとして、スコア上位の選ばれた 4 人で決勝戦を行う場合、この決勝から 2 人の選手が最も理想的なペア部門の優勝者になります。"
+
+#: includes/doroto-frontend-pages.php:463
+msgid "If multiple players have the same score, multiple players may be declared winners of the tournament."
+msgstr "複数の選手が同じスコアの場合、複数の選手が大会の優勝者になることがあります。"
+
+#: includes/doroto-frontend-pages.php:463
+msgid "Best Doubles Partner"
+msgstr "ベストダブルスパートナー。"
+
+#: includes/doroto-frontend-pages.php:463
+msgid "The winner of the tournament is announced as the player with the highest ratio of games won to games lost. This player may be proclaimed as"
+msgstr "大会の優勝者は、獲得ゲームと失ったゲームの比率が最も高い選手です。この選手には次の称号が与えられます:"
+
+#: includes/doroto-frontend-pages.php:461
+msgid "If a result with a difference of 2 games is required when playing up to a total of 5 games, then the match cannot be ended at 3:2, but it is at 4:2. If the game is tied, the match concludes with a tiebreak, with a score of 4:3."
+msgstr "合計 5 ゲームまでの試合で 2 ゲーム差の結果が必要な場合、3:2 では試合を終えられませんが、4:2 なら終えられます。同点の場合は、タイブレークにより 4:3 で試合が終わります。"
+
+#: includes/doroto-frontend-pages.php:460
+msgid "For example, if the total sum of games played is 5, the match can be concluded with scores like 0:3 or 1:3. If the total sum of gems played is 7, the match can be ended at scores like 0:4, 1:4, 2:4, or 1:5."
+msgstr "たとえば、合計ゲーム数が 5 の場合、0:3 や 1:3 のようなスコアで試合を終えられます。合計ゲーム数が 7 の場合は、0:4、1:4、2:4、1:5 のようなスコアで終えられます。"
+
+#: includes/doroto-frontend-pages.php:458
+msgid "It can also be agreed that only a result with a difference of 2 games will be accepted. A combination of a 2-game difference and an early exit option can also be set."
+msgstr "2 ゲーム差の結果のみを認めると取り決めることもできます。2 ゲーム差と早期終了の組み合わせも設定できます。"
+
+#: includes/doroto-frontend-pages.php:457
+msgid "At the beginning of the tournament, it can be agreed that matches that cannot be won anymore may be prematurely ended based on a request from the losing pair."
+msgstr "大会の初めに、もう勝てない試合は負けているペアの申し出により早めに終了できると取り決めることができます。"
+
+#: includes/doroto-frontend-pages.php:456
+msgid "During the tournament, results are continuously recorded, allowing players to observe their overall ranking during the course of the event."
+msgstr "大会中は結果が随時記録されるため、選手はイベント中に総合順位を確認できます。"
+
+#: includes/doroto-frontend-pages.php:447
+msgid "who starts with the serve in the first game (player with the index R1)"
+msgstr "最初のゲームでサーブから始める選手 (R1 の選手)"
+
+#: includes/doroto-frontend-pages.php:446
+msgid "on which side the player will be standing while receiving (L - left or R - right side)"
+msgstr "レシーブ時に選手が立つ側 (L – 左側、R – 右側)"
+
+#: includes/doroto-frontend-pages.php:445
+msgid "against which pair they will play (against L2 & R2)"
+msgstr "どのペアと対戦するか (L2 と R2 と対戦)"
+
+#: includes/doroto-frontend-pages.php:444
+msgid "who will play against whom (L1 & R1)"
+msgstr "誰と誰が組むか (L1 と R1)"
+
+#: includes/doroto-frontend-pages.php:443
+msgid "The course of the game is determined by randomly drawn matches. The following can be read from the description of the drawn matches:"
+msgstr "試合の進行は、ランダムに抽選された試合によって決まります。抽選された試合の表示から次のことがわかります:"
+
+#: includes/doroto-frontend-pages.php:441
+msgid "Using a special group is optional. If men of approximately the same level will play, the use of a special group loses its meaning."
+msgstr "特別グループの使用は任意です。ほぼ同じレベルの男性がプレーする場合、特別グループを使う意味はありません。"
+
+#: includes/doroto-frontend-pages.php:440
+msgid "Parents of playing children can be placed in a special group. When it is set that neither 2 players in the group nor 2 players outside the group will be drawn into a pair, a parent-child pair is always ensured. When choosing that a player in a special group cannot win, it is ensured that the winner is not the parent, but only the highest placed child."
+msgstr "プレーする子どもの保護者を特別グループに入れることができます。グループ内の 2 人もグループ外の 2 人もペアにしないよう設定すると、必ず保護者と子どものペアになります。特別グループの選手は優勝できないと設定すると、保護者ではなく最上位の子どもだけが優勝者になります。"
+
+#: includes/doroto-frontend-pages.php:438
+msgid "Players of various skill levels will participate in the tournament. In order not to create a pair that is too weak or too strong due to random selection, less skilled or too strong players are placed in a special group. This special group, in addition to respectful treatment from players, ensures that pairs consisting of 2 players from this group or 2 players outside of this group are optionally not drawn. It is also possible to ensure that a player in this special group is not declared the winner."
+msgstr "大会にはさまざまなレベルの選手が参加します。ランダムな選択で弱すぎる、または強すぎるペアができないよう、技術の低い選手や強すぎる選手を特別グループに入れます。この特別グループは、他の選手からの配慮に加え、オプションでこのグループの 2 人またはグループ外の 2 人からなるペアを抽選しないようにします。特別グループの選手を優勝者にしないようにすることもできます。"
+
+#: includes/doroto-frontend-pages.php:437 build/blocks/tournament-list/index.js:1 build/blocks/tournament/index.js:1 src/blocks/color-panel.js:46
+msgid "Special group"
+msgstr "特別グループ"
+
+#: includes/doroto-frontend-pages.php:436
+msgid "The table determining who will play with whom and on which side of the court will be provided by dedicated software through random selection. With an increasing number of players, the number of match combinations grows significantly, making it difficult to manage the tournament successfully without computational techniques."
+msgstr "誰が誰と、コートのどちら側でプレーするかを決める表は、専用ソフトウェアがランダムに作成します。選手数が増えると試合の組み合わせ数は大幅に増えるため、コンピューターなしで大会を上手に運営するのは困難です。"
+
+#: includes/doroto-frontend-pages.php:435
+msgid "With the aim of allowing players to play with more tennis partners during the tournament, we will try to choose more matches with a smaller number of played games."
+msgstr "選手が大会中により多くのテニス仲間とプレーできるよう、ゲーム数の少ない試合を多く行うようにします。"
+
+#: includes/doroto-frontend-pages.php:434
+msgid "If the organizer wanted to ensure quicker rotation of pairs, they could opt for a total of 3 games per match. Then, it would be possible to play 180 / 3 = 60 matches, and each player would participate in an average of 60 / (20 / 4) = 12 games."
+msgstr "主催者がペアをより早く交代させたい場合は、1 試合の合計を 3 ゲームにできます。すると 180 / 3 = 60 試合が可能になり、各選手は平均 60 / (20 / 4) = 12 試合に出場します。"
+
+#: includes/doroto-frontend-pages.php:433
+msgid "Now, assuming a game with a total of 5 games, which allows for 36 matches to be played (180 / 5). Each player will participate in an average of 36 / (20 / 4) = 7 games."
+msgstr "次に、合計 5 ゲームの試合を想定すると、36 試合が可能です (180 / 5)。各選手は平均 36 / (20 / 4) = 7 試合に出場します。"
+
+#: includes/doroto-frontend-pages.php:432
+msgid "The tournament organizer has 2 courts available. They plan to organize a doubles tournament for 20 players within a time frame from 9:00 AM to 3:00 PM. It is estimated that 15 games can be played on 1 court within 1 hour. Altogether, it is possible to play approximately 6 hours x 15 games x 2 courts = 180 games."
+msgstr "大会主催者は 2 面のコートを使えます。9:00 から 15:00 まで 20 人の選手でダブルス大会を開催する予定です。1 面のコートで 1 時間に 15 ゲームできると見込みます。合計で約 6 時間 x 15 ゲーム x 2 面 = 180 ゲームを行えます。"
+
+#: includes/doroto-frontend-pages.php:431 includes/doroto-frontend-pages.php:439 includes/doroto-frontend-pages.php:459
+msgid "Example"
+msgstr "例"
+
+#: includes/doroto-frontend-pages.php:430
+msgid "The outcome of this agreement should be the determination of how many matches each player can play in different pairs and how many total gems each match will have."
+msgstr "この取り決めで、各選手が異なるペアで何試合プレーできるか、各試合の合計ゲーム数をいくつにするかを決めます。"
+
+#: build/blocks/tournament/render.php:224 build/blocks/tournament/render.php:258 build/blocks/tournament/render.php:297 build/blocks/tournament/render.php:322 build/blocks/tournament/render.php:349 build/blocks/tournament/render.php:460 includes/doroto-frontend-pages.php:428 includes/doroto-view-model.php:189 src/blocks/tournament/render.php:224 src/blocks/tournament/render.php:258 src/blocks/tournament/render.php:297 src/blocks/tournament/render.php:322 src/blocks/tournament/render.php:349 src/blocks/tournament/render.php:460
+msgid "special group"
+msgstr "特別グループ"
+
+#: includes/doroto-frontend-pages.php:428
+msgid "amount of players in"
+msgstr "の選手数"
+
+#: includes/doroto-frontend-pages.php:427
+msgid "number of players"
+msgstr "選手数"
+
+#: includes/doroto-frontend-pages.php:426
+msgid "the total agreed sum of games in each match"
+msgstr "各試合の合計ゲーム数 (取り決め)"
+
+#: includes/doroto-frontend-pages.php:425
+msgid "estimated duration of the tournament"
+msgstr "大会の予想所要時間"
+
+#: includes/doroto-frontend-pages.php:424
+msgid "the number of courts allocated for play"
+msgstr "試合に割り当てるコート数"
+
+#: includes/doroto-frontend-pages.php:423
+msgid "Before the tournament begins, the game format is agreed upon. The following parameters play a decisive role:"
+msgstr "大会の開始前に試合形式を取り決めます。次のパラメーターが決定的な役割を果たします:"
+
+#: includes/doroto-frontend-pages.php:422
+msgid "Agreement on the Game Format"
+msgstr "試合形式の取り決め"
+
+#: includes/doroto-frontend-pages.php:421
+msgid "Game Preparation"
+msgstr "試合の準備"
+
+#: includes/doroto-frontend-pages.php:420
+msgid "Optionally, a final match can be organized, from which 2 players will be announced as winners in the category of the most ideal pair."
+msgstr "オプションで決勝戦を行い、その結果 2 人の選手を最も理想的なペア部門の優勝者として発表できます。"
+
+#: includes/doroto-frontend-pages.php:419
+msgid "The winner of the tournament is the player with the highest ratio. Such a player can adapt best to new circumstances and becomes the ideal teammate for doubles matches."
+msgstr "大会の優勝者は、最も高い比率の選手です。このような選手は新しい状況に最もよく適応し、ダブルスの試合に理想的なパートナーとなります。"
+
+#: includes/doroto-frontend-pages.php:418
+msgid "Participants of the tournament randomly change partners several times during the tournament and play against different pairs. For each participant, the ratio of games won to games lost is calculated."
+msgstr "大会の参加者は大会中に何度かランダムにパートナーを替え、異なるペアと対戦します。各参加者について、獲得ゲームと失ったゲームの比率が計算されます。"
+
+#: includes/doroto-frontend-pages.php:416
+msgid "Explanation of abbreviation: DoRoTo (DOuble ROtation TOurnament)"
+msgstr "略称の説明: DoRoTo (DOuble ROtation TOurnament) = ダブルスローテーション大会"
+
+#: includes/doroto-frontend-pages.php:415
+msgid "fully adheres to the official tennis rules except for the exceptions described below."
+msgstr "以下に記載する例外を除き、テニスの公式ルールに完全に従います。"
+
+#: includes/doroto-frontend-pages.php:415
+msgid "In DoRoTo"
+msgstr "DoRoTo では"
+
+#: includes/doroto-frontend-pages.php:414
+msgid "making new friends"
+msgstr "新しい友人を作る"
+
+#: includes/doroto-frontend-pages.php:413
+msgid "creating a pleasant atmosphere for social events"
+msgstr "交流イベントにふさわしい楽しい雰囲気を作る"
+
+#: includes/doroto-frontend-pages.php:412
+msgid "opening up participation to players of various skill levels (especially suitable for tournaments where it might be challenging to gather players of similar skill levels)"
+msgstr "さまざまなレベルの選手に参加の機会を広げる (同じレベルの選手を集めにくい大会に特に適しています)"
+
+#: includes/doroto-frontend-pages.php:410 includes/doroto-frontend-pages.php:466
+msgid "Comparison with the classic tournament"
+msgstr "通常の大会との比較"
+
+#: includes/doroto-frontend-pages.php:409 includes/doroto-frontend-pages.php:462
+msgid "Evaluation of the tournament"
+msgstr "大会の評価"
+
+#: includes/doroto-frontend-pages.php:408 includes/doroto-frontend-pages.php:455
+msgid "Tournament Progress"
+msgstr "大会の進行"
+
+#: includes/doroto-frontend-pages.php:407 includes/doroto-frontend-pages.php:442
+msgid "Start of the game"
+msgstr "試合の開始"
+
+#: includes/doroto-frontend-pages.php:406
+msgid "Preparing the game"
+msgstr "試合の準備"
+
+#: includes/doroto-frontend-pages.php:405 includes/doroto-frontend-pages.php:417
+msgid "Principle of the game"
+msgstr "試合の原則"
+
+#: includes/doroto-frontend-pages.php:404 includes/doroto-frontend-pages.php:411
+msgid "Objective of Doubles Rotation Tournament"
+msgstr "ダブルスローテーション大会の目的"
+
+#: includes/doroto-frontend-pages.php:403
+msgid "Content:"
+msgstr "目次:"
+
+#: includes/doroto-frontend-pages.php:402
+msgid "This type of tournament stands out for its dynamism and social component, and thus can serve as a suitable environment for all doubles tournaments where different groups of players meet on the court. The ratio of games won to games lost is calculated for each participant. The winner of the tournament is the player with this highest ratio. Such a player can best adapt to new circumstances and thus becomes an ideal teammate for doubles."
+msgstr "この大会形式は、ダイナミックさと交流の要素が際立っており、さまざまな選手グループがコートで出会うあらゆるダブルス大会に適した環境となります。各参加者について、獲得ゲームと失ったゲームの比率が計算されます。大会の優勝者は、この比率が最も高い選手です。このような選手は新しい状況に最もよく適応し、ダブルスの理想的なパートナーとなります。"
+
+#: includes/doroto-admin.php:359
+msgid "is an alternative form of a Doubles Tournament, where players play each match with a different partner and in different positions (alternating left and right sides)."
+msgstr "は、選手が毎試合異なるパートナーと異なるポジション (左右を交互) でプレーするダブルス大会の別形式です。"
+
+#: includes/doroto-admin.php:359
+msgid "Doubles Rotation Tournament (hereinafter DoRoTo)"
+msgstr "ダブルスローテーション大会 (以下 DoRoTo)"
+
+#: includes/doroto-frontend-pages.php:305 includes/doroto-frontend-pages.php:379
+msgid "Announcement of Doubles Rotation Tournament (Example)"
+msgstr "ダブルスローテーション大会の告知 (例)"
+
+#: includes/doroto-frontend-pages.php:236
+msgid "You can start a presentation of the tournament on your computer screen, giving everyone the opportunity to easily get an overview of the progress of the tournament. Turn on full screen mode (F11) in the browser."
+msgstr "パソコンの画面で大会のプレゼンテーションを開始すれば、誰でも大会の進行状況を簡単に把握できます。ブラウザーで全画面表示 (F11) にしてください。"
+
+#: includes/doroto-frontend-pages.php:236
+msgid "Presentation of the interim results of the tournament."
+msgstr "大会の途中結果のプレゼンテーション。"
+
+#: includes/doroto-frontend-pages.php:234
+msgid "After the tournament is closed, the winner of the tournament with the best ratio of games won to losses will be highlighted in color in the table of registered players."
+msgstr "大会の終了後、登録選手の表で、獲得ゲームと失ったゲームの比率が最も良い優勝者が色で強調表示されます。"
+
+#: includes/doroto-frontend-pages.php:232
+msgid "Only the tournament organizer has the right to close the tournament. After closing, it is no longer possible to enter results or make edits."
+msgstr "大会を終了する権利を持つのは大会主催者だけです。終了後は結果の入力や編集はできません。"
+
+#: includes/doroto-frontend-pages.php:232
+msgid "Closing the tournament and announcing the winner."
+msgstr "大会の終了と優勝者の発表。"
+
+#: includes/doroto-frontend-pages.php:230
+msgid "In the table of registered players, the players with the best results are displayed at the top."
+msgstr "登録選手の表では、成績の良い選手が上位に表示されます。"
+
+#: includes/doroto-frontend-pages.php:228
+msgid "In the list of played matches, the organizer can make corrections in case of incorrectly entered results."
+msgstr "終了した試合のリストで、主催者は誤って入力された結果を修正できます。"
+
+#: includes/doroto-frontend-pages.php:226
+msgid "Each of the players can suspend their participation in the tournament. After that, the player will not be assigned to matches. Suspension of participation in the tournament can also be done by the administrator."
+msgstr "各選手は大会への参加を一時停止できます。その後、その選手は試合に組み込まれません。参加の一時停止は管理者も行えます。"
+
+#: includes/doroto-frontend-pages.php:224
+msgid "The option to hide a match is used only when, for example, one of the players is currently unavailable. This leads to the scheduling of another match, and this hidden match is not counted in the tournament results."
+msgstr "試合を非表示にするオプションは、たとえば選手の 1 人が一時的に不在の場合にのみ使います。これにより別の試合が抽選され、非表示にした試合は大会結果に含まれません。"
+
+#: includes/doroto-frontend-pages.php:222
+msgid "Only players participating in the match and the tournament organizer can enter match results."
+msgstr "試合結果を入力できるのは、その試合に出場している選手と大会主催者だけです。"
+
+#: includes/doroto-frontend-pages.php:220
+msgid "The number of matches scheduled depends on the chosen number of courts and the number of players."
+msgstr "組まれる試合の数は、選んだコート数と選手数によって決まります。"
+
+#: includes/doroto-frontend-pages.php:218
+msgid "The serving starts with the player at position R1."
+msgstr "サーブは R1 の位置の選手から始めます。"
+
+#: includes/doroto-frontend-pages.php:216
+msgid "Once the player registration is closed, the scheduling of the first matches will be displayed."
+msgstr "選手の登録が締め切られると、最初の試合の抽選結果が表示されます。"
+
+#: includes/doroto-frontend-pages.php:215
+msgid "Match scheduling and result entry"
+msgstr "試合の抽選と結果の入力"
+
+#: includes/doroto-frontend-pages.php:213
+msgid "Only the tournament organizer can close the player registration."
+msgstr "選手の登録を締め切れるのは大会主催者だけです。"
+
+#: includes/doroto-frontend-pages.php:212
+msgid "The closing of player registration"
+msgstr "選手の登録締切"
+
+#: includes/doroto-frontend-pages.php:210
+msgid "Players can withdraw from the tournament on their own, or the match organizer can remove them from the match."
+msgstr "選手は自分で大会から辞退でき、主催者が選手を外すこともできます。"
+
+#: includes/doroto-frontend-pages.php:208
+msgid "In the tournament settings, you can enable the possibility to track the payment of the entry fee."
+msgstr "大会の設定で、参加費の支払い状況の管理を有効にできます。"
+
+#: includes/doroto-frontend-pages.php:206
+msgid "Adding to a special group will colorfully alert the player to the pre-agreed method of handling the special group. This can only be done by the match organizer."
+msgstr "特別グループに追加すると、事前に取り決めた特別グループの扱い方を色で選手に知らせます。これを行えるのは主催者だけです。"
+
+#: includes/doroto-frontend-pages.php:204
+msgid "Adding players from the database can be restricted to the website administrator."
+msgstr "データベースからの選手の追加は、サイト管理者のみに制限できます。"
+
+#: includes/doroto-frontend-pages.php:203
+msgid "Adding players and adding them to a special group"
+msgstr "選手の追加と特別グループへの追加"
+
+#: includes/doroto-frontend-pages.php:201
+msgid "The tournament organizer can grant organizer rights to another player."
+msgstr "大会主催者は、他の選手に主催者権限を付与できます。"
+
+#: includes/doroto-frontend-pages.php:199
+msgid "The website administrator can add an invitation to the tournament, which will be displayed through a newly created post."
+msgstr "サイト管理者は大会への招待を追加でき、新しく作成した投稿で表示されます。"
+
+#: includes/doroto-frontend-pages.php:197
+msgid "The Minimum Playing Players parameter determines the minimum number of players required to proceed to the next match. A higher number provides more variability but may also slow down the progress of the tournament."
+msgstr "「試合に出ない選手の最低数」パラメーターは、次の試合を抽選するのに必要な選手の最低数を決めます。数を大きくすると組み合わせが多様になりますが、大会の進行が遅くなることもあります。"
+
+#: includes/doroto-frontend-pages.php:195
+msgid "You have the option to choose whether player names will be displayed in a shortened form to avoid disclosing sensitive information."
+msgstr "機密情報を公開しないよう、選手名を短縮して表示するかどうかを選べます。"
+
+#: includes/doroto-frontend-pages.php:193
+msgid "Editing tournament parameters"
+msgstr "大会パラメーターの編集"
+
+#: includes/doroto-frontend-pages.php:191
+msgid "Click on the tournament name to view its details."
+msgstr "大会名をクリックすると詳細が表示されます。"
+
+#: includes/doroto-frontend-pages.php:189
+msgid "Individual players sign up (or withdraw) in the list of available tournaments separately."
+msgstr "利用可能な大会のリストで、各選手が個別に参加登録 (または退出) します。"
+
+#: includes/doroto-frontend-pages.php:187
+msgid "The creator of the tournament becomes its organizer. Only the organizer has the right to close the registration and the tournament."
+msgstr "大会を作成した人がその主催者になります。登録と大会を締め切る権利を持つのは主催者だけです。"
+
+#: build/blocks/tournament-list/render.php:91 build/blocks/tournament/render.php:580 doubles-rotation-tournament.php:316 includes/doroto-frontend-pages.php:186 includes/doroto-shortcodes.php:3266 includes/doroto-shortcodes.php:3773 src/blocks/tournament-list/render.php:91 src/blocks/tournament/render.php:580
+msgid "Create a new tournament"
+msgstr "新しい大会を作成"
+
+#: includes/doroto-frontend-pages.php:184
+msgid "This standalone page will guide you through the entire tournament in all of the following consecutive stages:"
+msgstr "この独立したページでは、次の各段階を順を追って大会全体を案内します:"
+
+#: includes/doroto-frontend-pages.php:181
+msgid "View the help video in an external window."
+msgstr "ヘルプ動画を別ウィンドウで表示します。"
+
+#: includes/doroto-frontend-pages.php:152
+msgid "Help ..."
+msgstr "ヘルプ ..."
+
+#: includes/doroto-frontend-pages.php:146
+msgid "Tournament Selection ..."
+msgstr "大会の選択 ..."
+
+#: includes/doroto-frontend-pages.php:141 includes/doroto-repeated-functions.php:569 includes/doroto-shortcodes.php:3342
+msgid "Tournament Editing ..."
+msgstr "大会の編集 ..."
+
+#: includes/doroto-frontend-pages.php:116
+msgid "Player Management ..."
+msgstr "選手の管理 ..."
+
+#: includes/doroto-frontend-pages.php:109
+msgid "Played Matches ..."
+msgstr "終了した試合 ..."
+
+#: includes/doroto-frontend-pages.php:74 includes/doroto-frontend-pages.php:277
+msgid "Rules of the Doubles Rotation Tournament"
+msgstr "ダブルスローテーション大会のルール"
+
+#: build/admin/index.js:1 src/admin/index.js:923
+msgid "Save Settings"
+msgstr "設定を保存"
+
+#: build/admin/index.js:1 src/admin/index.js:818
+msgid "Settings saved successfully!"
+msgstr "設定を保存しました!"
+
+#: includes/doroto-admin.php:145
+msgid "This option keeps up with new plugin updates."
+msgstr "このオプションはプラグインの新しい更新に追従します。"
+
+#: includes/doroto-admin.php:145
+msgid "Update pages every time you activate the plugin?"
+msgstr "プラグインを有効化するたびにページを更新しますか?"
+
+#: includes/doroto-admin.php:144
+msgid "Uninstall saved settings data at the same time as the plugin?"
+msgstr "保存した設定データをプラグインと一緒にアンインストールしますか?"
+
+#: includes/doroto-admin.php:143
+msgid "If you have edited page settings, here you have the option to keep these changes even in the event of an update or uninstallation."
+msgstr "ページ設定を編集した場合、ここで更新やアンインストール時にもその変更を保持できます。"
+
+#: includes/doroto-admin.php:143
+msgid "Uninstall tournament pages at the same time as the plugin?"
+msgstr "大会ページをプラグインと一緒にアンインストールしますか?"
+
+#: includes/doroto-admin.php:142 includes/doroto-admin.php:144
+msgid "If you ever want to return to the plugin, it will be a shame to lose your data."
+msgstr "いつかプラグインに戻りたくなったとき、データを失うのはもったいないことです。"
+
+#: includes/doroto-admin.php:142
+msgid "Uninstall the tournament database at the same time as the plugin?"
+msgstr "大会データベースをプラグインと一緒にアンインストールしますか?"
+
+#: includes/doroto-admin.php:114
+msgid "Enter a value between 1 and 120 for the number of seconds."
+msgstr "秒数には 1 から 120 までの値を入力してください。"
+
+#: includes/doroto-admin.php:114
+msgid "Enter the number of seconds as the time between transitions to show the next shortcode."
+msgstr "次のショートコードを表示するまでの切り替え間隔を秒数で入力してください。"
+
+#: includes/doroto-admin.php:89
+msgid "If you leave the field blank, the help video will not be displayed."
+msgstr "空欄にすると、ヘルプ動画は表示されません。"
+
+#: includes/doroto-admin.php:89
+msgid "Enter the YouTube video link."
+msgstr "YouTube 動画のリンクを入力してください。"
+
+#: includes/doroto-admin.php:89
+msgid "YouTube Video Link with a help."
+msgstr "ヘルプ付き YouTube 動画のリンク。"
+
+#: includes/doroto-admin.php:88
+msgid "Enter a value between 5 and 30 for the number of characters."
+msgstr "文字数には 5 から 30 までの値を入力してください。"
+
+#: includes/doroto-admin.php:88
+msgid "Enter the maximum number of characters allowed in the players display name."
+msgstr "選手の表示名に使える最大文字数を入力してください。"
+
+#: includes/doroto-admin.php:105
+msgid "By default, this is enabled by everybody who is logged in. Otherwise, only an administrator, editor or author can create a tournament."
+msgstr "既定では、ログインしている全員に許可されています。そうでない場合、大会を作成できるのは管理者、編集者、投稿者のみです。"
+
+#: includes/doroto-admin.php:105
+msgid "Can only a website administrator create a new tournament?"
+msgstr "新しい大会を作成できるのはサイト管理者だけにしますか?"
+
+#: includes/doroto-admin.php:87
+msgid "Enter a value between 0 and 1000 for the number of seconds."
+msgstr "秒数には 0 から 1000 までの値を入力してください。"
+
+#: includes/doroto-admin.php:87
+msgid "Choose the time after which the page will be refreshed. Good especially when you are not the only one entering new data.. (0 = no refresh)"
+msgstr "ページを更新するまでの時間を選んでください。新しいデータを入力するのが自分だけではない場合に特に便利です。。(0 = 更新しない)"
+
+#: includes/doroto-admin.php:104
+msgid "By default, this is enabled by the site administrator. Otherwise, anyone can create a post."
+msgstr "既定では、サイト管理者に許可されています。そうでない場合、誰でも投稿を作成できます。"
+
+#: includes/doroto-admin.php:104
+msgid "Allow the tournament organizer to create a post to promote and administer the tournament?"
+msgstr "大会主催者が大会の宣伝と運営のための投稿を作成できるようにしますか?"
+
+#: includes/doroto-admin.php:86
+msgid "Enter a value between 0 and 100 for display rows."
+msgstr "表示する行数には 0 から 100 までの値を入力してください。"
+
+#: includes/doroto-admin.php:86
+msgid "Maximum number of displayed tournaments in the table. (0 = no limit)"
+msgstr "表に表示する大会の最大数。(0 = 制限なし)"
+
+#: build/blocks/tournament/render.php:645 includes/doroto-admin.php:27 includes/doroto-admin.php:132 includes/doroto-blocks.php:183 includes/doroto-shortcodes.php:2337 includes/doroto-shortcodes.php:2436 includes/doroto-shortcodes.php:2454 includes/doroto-shortcodes.php:2492 includes/doroto-shortcodes.php:2510 includes/doroto-shortcodes.php:2592 includes/doroto-shortcodes.php:2691 includes/doroto-shortcodes.php:2709 src/blocks/tournament/render.php:645
+msgid "No"
+msgstr "いいえ"
+
+#: build/blocks/tournament/render.php:644 includes/doroto-admin.php:26 includes/doroto-admin.php:132 includes/doroto-blocks.php:183 includes/doroto-shortcodes.php:2436 includes/doroto-shortcodes.php:2454 includes/doroto-shortcodes.php:2492 includes/doroto-shortcodes.php:2510 includes/doroto-shortcodes.php:2592 includes/doroto-shortcodes.php:2691 includes/doroto-shortcodes.php:2709 src/blocks/tournament/render.php:644
+msgid "Yes"
+msgstr "はい"
+
+#: includes/doroto-admin.php:84
+msgid "Here you can set restrictions for tournament administration from the website administrator's point of view."
+msgstr "ここでは、サイト管理者の立場から大会運営の制限を設定できます。"
+
+#: build/blocks/tournament/render.php:157 includes/doroto-shortcodes.php:3771 src/blocks/tournament/render.php:157 build/admin/index.js:1 src/admin/index.js:879
+msgid "Help"
+msgstr "ヘルプ"
+
+#: build/blocks/tournament/render.php:78 build/blocks/tournament/render.php:503 src/blocks/tournament/render.php:78 src/blocks/tournament/render.php:503 blocks/log-link/build/index.js:73 build/admin/index.js:1 build/blocks/tournament/index.js:1 src/admin/index.js:875 src/blocks/tournament/index.js:29 blocks/log-link/build/index.js:61
+msgid "Settings"
+msgstr "設定"
+
+#: includes/doroto-admin.php:413
+msgid "Displays a link to start the presentation of the selected tournament. In the admin menu, you can set which tournament parameters will be shown on the screen in the selected time sequence. Especially suitable for displaying the running results of the tournament on a larger screen."
+msgstr "選択した大会のプレゼンテーションを開始するリンクを表示します。管理メニューで、どの大会パラメーターを選んだ時間順に画面に表示するかを設定できます。大会の途中経過を大きな画面に表示するのに特に適しています。"
+
+#: includes/doroto-admin.php:412
+msgid "Shows help for using the main page."
+msgstr "メインページの使い方のヘルプを表示します。"
+
+#: includes/doroto-admin.php:411
+msgid "Shows a button to create a new tournament."
+msgstr "新しい大会を作成するボタンを表示します。"
+
+#: includes/doroto-admin.php:410
+msgid "Filtering displayed tournaments in the table."
+msgstr "表に表示する大会を絞り込みます。"
+
+#: includes/doroto-admin.php:409
+msgid "Displays a list of available tournaments. If the display_rows parameter is not specified, only the last 20 tournaments will be displayed."
+msgstr "利用可能な大会のリストを表示します。display_rows パラメーターを指定しない場合は、最新の 20 大会のみ表示されます。"
+
+#: includes/doroto-admin.php:408
+msgid "It will allow adding match organizer rights to other tournament participants."
+msgstr "他の大会参加者に試合主催者の権限を追加できます。"
+
+#: includes/doroto-admin.php:407
+msgid "Displays the text for logging into the tournament by id. It works with the invitation text parameter. This link disappears when registration is closed."
+msgstr "id で指定した大会への参加登録の文字を表示します。invitation text パラメーターと連動します。登録が締め切られるとこのリンクは消えます。"
+
+#: includes/doroto-admin.php:406
+msgid "A function that displays the optional parameters for the tournament and allows them to be changed. The whole_names parameter determines how player names will be displayed, and the only_web_admin parameter limits the range of users who are allowed to edit the tournament."
+msgstr "大会の任意パラメーターを表示し、変更できるようにする機能です。whole_names パラメーターは選手名の表示方法を決め、only_web_admin パラメーターは大会を編集できるユーザーの範囲を制限します。"
+
+#: includes/doroto-admin.php:405
+msgid "Here you can manually delete the information about the completed payment of a certain player."
+msgstr "ここでは、特定の選手の支払い済みの情報を手動で削除できます。"
+
+#: includes/doroto-admin.php:404
+msgid "Here you can manually enter information about the payment made by a certain player."
+msgstr "ここでは、特定の選手の支払い情報を手動で入力できます。"
+
+#: includes/doroto-admin.php:403
+msgid "It will allow the tournament organizer or participant to resume their participation in the tournament."
+msgstr "大会主催者または参加者が大会への参加を再開できるようにします。"
+
+#: includes/doroto-admin.php:402
+msgid "It will allow the tournament organizer or the participant himself to temporarily suspend his participation in further matches. Then this player is not included in the draw for further games."
+msgstr "大会主催者または参加者本人が、以降の試合への参加を一時的に停止できるようにします。その後、この選手は以降の試合の抽選に含まれません。"
+
+#: includes/doroto-admin.php:401
+msgid "Ability to cancel assignment to a special group for a player."
+msgstr "選手の特別グループへの割り当てを取り消す機能。"
+
+#: includes/doroto-admin.php:400
+msgid "If the player is included in a special group, then his name will be colored blue in the table. These other players are provided with information about a different implementation of the game."
+msgstr "選手が特別グループに入っている場合、表の名前が青色で表示されます。これにより他の選手に、異なる試合の進め方があることを知らせます。"
+
+#: includes/doroto-admin.php:399
+msgid "Allows the tournament organizer to remove players from the tournament. When whole_names=1, the whole names are displayed, if whole_names=0, the first 4 characters of the first name and the last 4 characters of the last name are displayed. The only_web_admin parameter will limit the range of users of this function to only web administrators with the function admin, editor and editor-in-chief."
+msgstr "大会主催者が大会から選手を削除できるようにします。whole_names=1 の場合はフルネームを表示し、whole_names=0 の場合は名の最初の 4 文字と姓の最後の 4 文字を表示します。only_web_admin パラメーターにより、この機能の利用者を管理者、編集者、編集長の権限を持つサイト管理者のみに制限します。"
+
+#: includes/doroto-admin.php:398
+msgid "Allows the organizer to insert players from the user database. The only_web_admin parameter will limit the range of users of this function to only web administrators with the function admin, editor and editor-in-chief."
+msgstr "主催者がユーザーデータベースから選手を追加できるようにします。only_web_admin パラメーターにより、この機能の利用者を管理者、編集者、編集長の権限を持つサイト管理者のみに制限します。"
+
+#: includes/doroto-admin.php:397
+msgid "Displays all game statistics for the selected player."
+msgstr "選択した選手のすべての試合の統計を表示します。"
+
+#: includes/doroto-admin.php:396
+msgid "Match results can be edited here. Especially useful when an error occurred when entering the result of a played match."
+msgstr "ここで試合結果を編集できます。終了した試合の結果の入力を誤った場合に特に便利です。"
+
+#: includes/doroto-admin.php:395
+msgid "Displays a list of drawn games only for the selected player."
+msgstr "選択した選手の抽選された試合のリストのみを表示します。"
+
+#: includes/doroto-admin.php:394
+msgid "Displays a list of drawn games for the selected tournament. The only_played parameter determines whether only played games are listed."
+msgstr "選択した大会の抽選された試合のリストを表示します。only_played パラメーターで、終了した試合のみを表示するかどうかを決めます。"
+
+#: includes/doroto-admin.php:393
+msgid "It will display red marked reports from submitted forms."
+msgstr "送信されたフォームのメッセージを赤色で表示します。"
+
+#: includes/doroto-admin.php:392
+msgid "It will refresh the page after a certain number of seconds."
+msgstr "一定の秒数が経過するとページを更新します。"
+
+#: includes/doroto-admin.php:391
+msgid "Displays the list of tournament participants and their running ranking. The format of displayed names depends on the setting of the display full names parameter. Add the tournament number after the id parameter if necessary."
+msgstr "大会参加者のリストと現在の順位を表示します。表示される名前の形式は、フルネーム表示パラメーターの設定によって異なります。必要に応じて、id パラメーターの後に大会番号を追加してください。"
+
+#: includes/doroto-admin.php:390
+msgid "Shows drawn games. Their number depends on the parameters of the tournament, such as the number of courts, the minimum number of non-playing players and, according to the permission to compare the number of matches. The tournament_id parameter is optional."
+msgstr "抽選された試合を表示します。その数は、コート数、試合に出ない選手の最低数、試合数を揃える許可など、大会のパラメーターによって異なります。tournament_id パラメーターは省略可能です。"
+
+#. Author of the plugin
+#: doubles-rotation-tournament.php
+msgid "globus2008"
+msgstr "globus2008"
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+#: doubles-rotation-tournament.php
+msgid "https://doroto.ltcchrast.cz/"
+msgstr "https://doroto.ltcchrast.cz/"
+
+#: includes/doroto-admin.php:311
+msgid "Doubles Rotation Tournament"
+msgstr "ダブルスローテーション大会"
+

@@ -1,0 +1,1289 @@
+# Translation of Plugins - Rotation Tournaments - Development Readme (trunk) in Ukrainian
+# This file is distributed under the same license as the Plugins - Rotation Tournaments - Development Readme (trunk) package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Plugins - Rotation Tournaments - Development Readme (trunk)\n"
+"PO-Revision-Date: 2026-10-07 12:11:46+0000\n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n % 10 == 1 && n % 100 != 11) ? 0 : ((n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14)) ? 1 : 2);\n"
+"X-Generator: GlotPress/4.1.0\n"
+
+#. Short description.
+#, gp-priority: high
+msgid "Do you play Singles or Doubles Tournaments? This plugin manages Rotation Tournaments where players have a different partner in each game."
+msgstr "Ви граєте одиночні чи парні турніри? Цей плагін керує ротаційними турнірами, у яких гравці в кожній грі мають нового партнера."
+
+#. Plugin name.
+#, gp-priority: high
+msgid "Rotation Tournaments"
+msgstr "Ротаційні турніри"
+
+#. Found in installation paragraph.
+msgid "After installation, go to the app's settings and enter the address of your website where this plugin is installed."
+msgstr "Після встановлення відкрийте налаштування застосунку й введіть адресу сайту, на якому встановлено цей плагін."
+
+#. Found in installation paragraph.
+msgid "Or download it directly from this link: https://play.google.com/store/apps/details?id=cz.doroto.app"
+msgstr "Або завантажте його безпосередньо за посиланням: https://play.google.com/store/apps/details?id=cz.doroto.app"
+
+#. Found in installation paragraph.
+msgid "Search for \"Rotation Tournaments\" on the Google Play Store."
+msgstr "Знайдіть «Rotation Tournaments» у Google Play."
+
+#. Found in description paragraph.
+msgid "To get the full experience of managing tournaments on the go, download our mobile app, now available on Google Play!"
+msgstr "Щоб повною мірою керувати турнірами в дорозі, завантажте наш мобільний застосунок, уже доступний у Google Play!"
+
+#. Found in description paragraph.
+msgid "<strong>YouTube quick intro:</strong>"
+msgstr "<strong>Короткий вступ на YouTube:</strong>"
+
+#. Found in description list item.
+msgid "Video for a quick introduction to the Rotation Tournament:"
+msgstr "Відео з коротким вступом до ротаційного турніру:"
+
+#. Found in faq paragraph.
+msgid "Yes. If you install the Rotation Tournaments plugin, allow player registration, and enable visibility in the website list, your site can appear in the Android app. Initially, someone must manually enter your website address into the app. After that, it becomes visible in the list for all users."
+msgstr "Так. Якщо ви встановите плагін Rotation Tournaments, дозволите реєстрацію гравців і ввімкнете видимість у списку сайтів, ваш сайт може з’явитися в застосунку для Android. Спочатку хтось має вручну ввести адресу вашого сайту в застосунку. Після цього сайт стане видимим у списку для всіх користувачів."
+
+#. Found in faq paragraph.
+msgid "Yes. An iOS version of the Rotation Tournaments app is planned and will be released in the near future."
+msgstr "Так. Версію застосунку Rotation Tournaments для iOS заплановано, і вона вийде найближчим часом."
+
+#. Found in faq header.
+msgid "Will my website be visible in the Rotation Tournaments Android app?"
+msgstr "Чи буде мій сайт видно в застосунку Rotation Tournaments для Android?"
+
+#. Found in faq header.
+msgid "Will there be an iPhone or iPad version of the app?"
+msgstr "Чи буде версія застосунку для iPhone або iPad?"
+
+#. Found in installation paragraph.
+msgid "<strong>How to install Wordpress plugin:</strong>"
+msgstr "<strong>Як установити плагін WordPress:</strong>"
+
+#. Found in installation list item.
+msgid "After activating the plugin, 4 pages will be created: one for managing tournaments (main page), one with tournament rules, and additional pages for Privacy Policy and Terms of Service. A sample post announcing a newly created tournament will also be added."
+msgstr "Після активації плагіна буде створено 4 сторінки: одну для керування турнірами (головна сторінка), одну з правилами турніру та сторінки політики конфіденційності й умов використання. Також буде додано приклад запису з оголошенням про новий турнір."
+
+#. Found in installation paragraph.
+msgid "<strong>How to install the Android app:</strong>"
+msgstr "<strong>Як установити застосунок для Android:</strong>"
+
+#. Found in description paragraph.
+msgid "<strong>This plugin is the server-side for the \"Rotation Tournaments\" Android app.</strong>"
+msgstr "<strong>Цей плагін — серверна частина застосунку «Rotation Tournaments» для Android.</strong>"
+
+#. Screenshot description.
+msgid "Individual tournament participants enter their results into the WordPress server and share the data with each other."
+msgstr "Учасники турніру вводять свої результати на сервер WordPress і діляться даними одне з одним."
+
+#. Screenshot description.
+msgid "Matches played. (Android app)"
+msgstr "Зіграні матчі. (Застосунок для Android)"
+
+#. Screenshot description.
+msgid "Tournament table. (Wordpress)"
+msgstr "Таблиця турніру. (WordPress)"
+
+#. Screenshot description.
+msgid "Matches drawn. (Android app)"
+msgstr "Розіграні матчі. (Застосунок для Android)"
+
+#. Screenshot description.
+msgid "Editing tournament parameters. (Wordpress)"
+msgstr "Редагування параметрів турніру. (WordPress)"
+
+#. Screenshot description.
+msgid "Table of players with rankings. (Android app)"
+msgstr "Таблиця гравців із місцями. (Застосунок для Android)"
+
+#. Screenshot description.
+msgid "Matches played. (Wordpress)"
+msgstr "Зіграні матчі. (WordPress)"
+
+#. Screenshot description.
+msgid "Basic overview of the tournament. (Android app)"
+msgstr "Основний огляд турніру. (Застосунок для Android)"
+
+#. Screenshot description.
+msgid "Matches drawn. (Wordpress)"
+msgstr "Розіграні матчі. (WordPress)"
+
+#. Found in description paragraph.
+msgid "<strong>Rotation Tournaments</strong> provides a platform for organizing all kinds of sports Singles and Doubles Tournaments, e.g."
+msgstr "<strong>Ротаційні турніри</strong> — платформа для організації будь-яких спортивних турнірів в одиночному й парному розрядах, наприклад:"
+
+#. Found in description list item.
+msgid "Squash"
+msgstr "Сквош"
+
+#. Found in description list item.
+msgid "Beach Volleyball"
+msgstr "Пляжний волейбол"
+
+#. Found in description list item.
+msgid "Badminton"
+msgstr "Бадмінтон"
+
+#. Found in description list item.
+msgid "Padel"
+msgstr "Падел"
+
+#. Found in description list item.
+msgid "Table Tennis"
+msgstr "Настільний теніс"
+
+#. Found in description list item.
+msgid "Tennis"
+msgstr "Теніс"
+
+#. Found in faq paragraph.
+msgid ""
+"This plugin can be used for all types of sports where 2 or 4 players compete in singles or doubles.\n"
+"You can use this plugin for tennis, table tennis, squash, padel, badminton, beach volleyball and probably for more."
+msgstr ""
+"Цей плагін підходить для всіх видів спорту, у яких змагаються 2 або 4 гравці в одиночному чи парному розряді.\n"
+"Його можна використовувати для тенісу, настільного тенісу, сквошу, паделу, бадмінтону, пляжного волейболу й, імовірно, інших видів спорту."
+
+#. Found in faq paragraph.
+msgid "Yes. When creating a tournament, you can choose whether to create a singles or a doubles tournament."
+msgstr "Так. Під час створення турніру можна вибрати одиночний або парний турнір."
+
+#. Found in faq header.
+msgid "What sports tournaments is this plugin for?"
+msgstr "Для яких спортивних турнірів призначено цей плагін?"
+
+#. Found in description paragraph.
+msgid "<strong>General Features:</strong>"
+msgstr "<strong>Загальні можливості:</strong>"
+
+#. Found in description paragraph.
+msgid "<strong>Doubles Rotation Tournament:</strong>"
+msgstr "<strong>Парний ротаційний турнір:</strong>"
+
+#. Found in description paragraph.
+msgid "<strong>Singles Rotation Tournament:</strong>"
+msgstr "<strong>Одиночний ротаційний турнір:</strong>"
+
+#. Found in description paragraph.
+msgid "The participants of a tournament change partners several times during the tournament by a random selection and play against different players. The ratio of games won to games lost is calculated for each participant. The winner of the tournament is the player with this highest ratio. While a Singles Rotation Tournament can be organized without the aid of technology, in the case of a Doubles Rotation Tournament, this is not possible."
+msgstr "Учасники турніру кілька разів за турнір випадково змінюють партнерів і грають проти різних гравців. Для кожного учасника розраховується співвідношення виграних і програних геймів. Переможцем стає гравець із найкращим співвідношенням. Одиночний ротаційний турнір можна провести без допомоги техніки, а парний — ні."
+
+#. Found in description paragraph.
+msgid "The <strong>Rotation Tournaments</strong> have a strong social aspect because its goal is to keep players in the tournament until the very end. The situation where weaker players would leave the tournament due to elimination rounds is eliminated. It allows grouping players into a special category with special conditions. This special setting can be utilized, for example, in mixed tournaments."
+msgstr "<strong>Ротаційні турніри</strong> мають сильну соціальну складову, бо їхня мета — утримати гравців у турнірі до самого кінця. Виключається ситуація, коли слабші гравці залишають турнір через вибування. Гравців можна об’єднати в особливу категорію з особливими умовами. Це особливе налаштування можна використати, наприклад, у змішаних турнірах."
+
+#. Found in description paragraph.
+msgid "In <strong>Rotation Tournaments</strong>, each participant plays against every other participant and there are no eliminations in individual rounds. To maximize the variety of match combinations, the matches are typically played in a single set."
+msgstr "У <strong>ротаційних турнірах</strong> кожен учасник грає проти кожного, і в окремих колах ніхто не вибуває. Щоб отримати якомога більше поєднань, матчі зазвичай грають в один сет."
+
+#. Found in description list item.
+msgid "Suitable for various sports: tennis, table tennis, squash, padel, badminton, beach volleyball, and more."
+msgstr "Підходить для різних видів спорту: теніс, настільний теніс, сквош, падел, бадмінтон, пляжний волейбол та інші."
+
+#. Found in description list item.
+msgid "Integration with website user accounts."
+msgstr "Інтеграція з обліковими записами користувачів сайту."
+
+#. Found in description list item.
+msgid "No downtime during the tournament."
+msgstr "Жодних простоїв під час турніру."
+
+#. Found in description list item.
+msgid "Comprehensive overview of player quality."
+msgstr "Повне уявлення про рівень гравців."
+
+#. Found in description list item.
+msgid "User-friendly interface for administrators and participants."
+msgstr "Зручний інтерфейс для адміністраторів і учасників."
+
+#. Found in description list item.
+msgid "Customizable settings for each tournament."
+msgstr "Гнучкі налаштування для кожного турніру."
+
+#. Found in description list item.
+msgid "Real-time score tracking."
+msgstr "Відстеження рахунку в реальному часі."
+
+#. Found in description list item.
+msgid "Seamless scheduling of matches."
+msgstr "Зручне складання розкладу матчів."
+
+#. Found in description list item.
+msgid "Announcement of the Best Player and Most Ideal Pair at the end of the tournament."
+msgstr "Оголошення найкращого гравця й ідеальної пари наприкінці турніру."
+
+#. Found in description list item.
+msgid "Ranking based on the ratio of games won to games lost."
+msgstr "Місця визначаються співвідношенням виграних і програних геймів."
+
+#. Found in description list item.
+msgid "Individual players can join or leave the tournament at any time."
+msgstr "Гравці можуть будь-коли приєднатися до турніру або залишити його."
+
+#. Found in description list item.
+msgid "Tournament can be interrupted or extended without disruption."
+msgstr "Турнір можна перервати чи подовжити без порушення ходу."
+
+#. Found in description list item.
+msgid "Shorter matches for more participation."
+msgstr "Коротші матчі для більшої участі."
+
+#. Found in description list item.
+msgid "No eliminations, ensuring all players stay in the game."
+msgstr "Без вибування — усі гравці залишаються в грі."
+
+#. Found in description list item.
+msgid "Define special groups of players with unique conditions."
+msgstr "Визначення спеціальних груп гравців з особливими умовами."
+
+#. Found in description list item.
+msgid "Suitable for odd numbers of players and minimum lineups of 4 players."
+msgstr "Підходить для непарної кількості гравців і мінімального складу з 4 гравців."
+
+#. Found in description list item.
+msgid "Individuals can enter the tournament without a permanent teammate."
+msgstr "Можна брати участь у турнірі без постійного партнера."
+
+#. Found in description list item.
+msgid "Rotation of teammates, ensuring variety in partnerships."
+msgstr "Ротація партнерів забезпечує різноманітність пар."
+
+#. Found in description list item.
+msgid "Alternative form of a Doubles Tournament where players enter each match with a different partner and in different positions (alternating left and right sides)."
+msgstr "Альтернативна форма парного турніру, у якій гравці грають кожен матч із новим партнером і на різних позиціях (чергуючи лівий і правий боки)."
+
+#. Found in description list item.
+msgid "Depending on the time options, everyone plays against everyone."
+msgstr "Залежно від часу кожен грає з кожним."
+
+#. Found in description list item.
+msgid "Alternative form of a Singles Tournament where players face each other without elimination rounds."
+msgstr "Альтернативна форма одиночного турніру, у якій гравці зустрічаються без вибування."
+
+#. Found in description header.
+msgid "Features"
+msgstr "Можливості"
+
+#. Found in faq header.
+msgid "Is this plugin suitable for singles tournaments?"
+msgstr "Чи підходить цей плагін для одиночних турнірів?"
+
+#. Found in faq paragraph.
+msgid "Yes, each tournament participant must have their own account. If a website has disabled user registration, this account must be created by the website administrator."
+msgstr "Так, кожен учасник турніру повинен мати власний обліковий запис. Якщо на сайті вимкнено реєстрацію користувачів, цей обліковий запис має створити адміністратор сайту."
+
+#. Found in faq header.
+msgid "Does each player have to have an account created on my website?"
+msgstr "Чи повинен кожен гравець мати обліковий запис на моєму сайті?"
+
+#. Found in installation list item.
+msgid "At the end close the tournament and look who was announced as the winner."
+msgstr "Наприкінці закрийте турнір і подивіться, кого оголошено переможцем."
+
+#. Found in installation list item.
+msgid "You can change tournament settings on the main page or you can look at 2 new admin pages that are dedicated for overall environmental settings and for description of all possible shortcodes."
+msgstr "Налаштування турніру можна змінити на головній сторінці або переглянути 2 нові сторінки адміністрування, присвячені загальним налаштуванням середовища й опису всіх доступних шорткодів."
+
+#. Found in installation list item.
+msgid "If you have a sufficient amount of players then you can close a registration and start playing matches."
+msgstr "Якщо гравців достатньо, можна закрити реєстрацію й почати грати матчі."
+
+#. Found in installation list item.
+msgid "Then you can log in your created tournament and as a tournament´s administrator you can add manually also other players sourced from WP database."
+msgstr "Потім можна зареєструватися на створений турнір і як адміністратор турніру вручну додати інших гравців із бази WordPress."
+
+#. Found in installation list item.
+msgid "Start by clicking on \"Create a new tournament\" under \"Tournament Selection …\" on the main page."
+msgstr "Почніть із натискання «Створити новий турнір» у розділі «Вибір турніру…» на головній сторінці."
+
+#. Found in installation list item.
+msgid "Install the plugin as usual."
+msgstr "Установіть плагін як зазвичай."
+
+#. Found in description paragraph.
+msgid "Visit <a href=\"https://doroto.ltcchrast.cz/\">test page</a> for more information, try to create your own tournament and take a look at <a href=\"https://doroto.ltcchrast.cz/rules-of-the-doubles-rotation-tournament/\">Rules of the Doubles Rotation Tournament</a>."
+msgstr "Відвідайте <a href=\"https://doroto.ltcchrast.cz/\">тестову сторінку</a>, щоб дізнатися більше, спробуйте створити власний турнір і перегляньте <a href=\"https://doroto.ltcchrast.cz/rules-of-the-doubles-rotation-tournament/\">правила парного ротаційного турніру</a>."
+
+#. Found in description paragraph.
+msgid "[youtube https://www.youtube.com/watch?v=NoL9aPTv8u8]"
+msgstr "[youtube https://www.youtube.com/watch?v=NoL9aPTv8u8]"
+
+#. Found in description header.
+msgid "More information"
+msgstr "Докладніше"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - the plugin restores read permissions of its files after an FTP upload (the web server answered 403 and the admin page stayed empty); the admin page shows a notice when its script cannot be loaded"
+msgstr "Виправлення — плагін відновлює права на читання своїх файлів після завантаження через FTP (вебсервер відповідав 403, і сторінка адміністрування залишалася порожньою); сторінка адміністрування показує сповіщення, якщо її скрипт не вдається завантажити"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - tournament settings keep the ranges of 1.x and of the app (a larger value made the app's dropdowns fail)"
+msgstr "Виправлення — налаштування турніру зберігають діапазони версії 1.x і застосунку (більше значення спричиняло збій випадних списків застосунку)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - REST requests from the website use the WordPress login (cookie and nonce) when no app token is sent"
+msgstr "Покращення — REST-запити із сайту використовують вхід WordPress (cookie й nonce), якщо токен застосунку не надіслано"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - styles, scripts and no-cache headers are sent only on pages that show the plugin; the unused tipTip library was removed and the admin no longer calls ip-api.com"
+msgstr "Покращення — стилі, скрипти й заголовки no-cache надсилаються лише на сторінках, де показано плагін; невикористовувану бібліотеку tipTip вилучено, а адміністрування більше не звертається до ip-api.com"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - every change of a tournament (web forms, blocks and the Android app) goes through one shared layer with the same permissions, locking and change detection"
+msgstr "Покращення — кожна зміна турніру (вебформи, блоки й застосунок для Android) проходить через спільний рівень з однаковими правами, блокуваннями й відстеженням змін"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - new admin page with Overview, Settings and Help instead of nine settings tabs; every setting is checked on the server and errors are shown next to the field"
+msgstr "Покращення — нова сторінка адміністрування з розділами «Огляд», «Налаштування» й «Довідка» замість дев’яти вкладок налаштувань; кожне налаштування перевіряється на сервері, а помилки показуються біля поля"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - the serving player is marked on the match cards; the special group is highlighted in matches, results, players, statistics and winners; the tournament details (invitation text) can be shown at any time"
+msgstr "Додано — гравця, що подає, позначено на картках матчів; спеціальну групу виділено в матчах, результатах, гравцях, статистиці й переможцях; подробиці турніру (текст запрошення) можна показати будь-коли"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - the tournament block takes its colours from the theme (button and palette colours); the block's Styles panel can change the accent, the tab bar and table headers, their text and the colour of the special group"
+msgstr "Додано — блок турніру бере кольори з теми (кольори кнопок і палітри); панель «Стилі» блоку дозволяє змінити акцент, панель вкладок і заголовки таблиць, їхній текст і колір спеціальної групи"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - the tournament block: Share dialog with a QR code, \"Open in the app\" line, full-screen presentation that rotates the sections, map of the tournament place in the settings, and guided tours of the page and of four example tournaments"
+msgstr "Додано — у блоці турніру: діалог «Поділитися» з QR-кодом, рядок «Відкрити в застосунку», повноекранна презентація з чергуванням розділів, карта місця турніру в налаштуваннях і покрокові екскурсії сторінкою та чотирма прикладами турнірів"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - the plugin admin can convert the main page to the blocks with one button; the old content stays in the page revisions. New installs create the main page from the blocks. The shortcodes [doroto_tournament] and [doroto_tournament_list] show the blocks in the classic editor; the 1.x shortcodes keep working"
+msgstr "Додано — адміністратор плагіна може однією кнопкою перетворити головну сторінку на блоки; старий вміст залишається в редакціях сторінки. Нові встановлення створюють головну сторінку з блоків. Шорткоди [doroto_tournament] і [doroto_tournament_list] показують блоки в класичному редакторі; шорткоди версії 1.x і далі працюють"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - blocks for the block editor: \"Rotation tournament\" (matches, results, players, statistics and settings on tabs, updated live without reloading the page), its variations \"Tournament standings\", \"Tournament matches\" and \"Tournament presentation\", \"Tournament list\" and \"Tournament invitation\""
+msgstr "Додано — блоки для редактора блоків: «Ротаційний турнір» (матчі, результати, гравці, статистика й налаштування на вкладках, оновлюються в реальному часі без перезавантаження сторінки), його варіанти «Турнірна таблиця», «Матчі турніру» й «Презентація турніру», а також «Список турнірів» і «Запрошення на турнір»"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "2.0.0 - 2026/10/06"
+msgstr "2.0.0 - 2026/10/06"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Change - the review request is shown only to administrators, 14 days after activation once the site has its own tournament, and comes back 7 days after \"Remind me\" until the plugin is rated"
+msgstr "Зміна — прохання про оцінку показується лише адміністраторам, через 14 днів після активації, коли на сайті вже є власний турнір, і з’являється знову через 7 днів після «Нагадати», доки плагін не буде оцінено"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - the tournament page shows a short link to the Android app (can be turned off in Settings -&gt; Mobile app)"
+msgstr "Додано — на сторінці турніру показується коротке посилання на застосунок для Android (вимикається в Налаштування -&gt; Мобільний застосунок)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - optional mode join/leave for the app join endpoint"
+msgstr "Додано — необов’язковий режим «приєднатися/залишити» для кінцевої точки приєднання в застосунку"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - REST endpoint create-player: the organizer creates a player and adds them to the tournament in one step; the player gets an e-mail to set the password"
+msgstr "Додано — REST-точка create-player: організатор створює гравця й додає його до турніру за один крок; гравець отримує лист для встановлення пароля"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Change - tournament links to the home page (\"?tournament_id=5\") and the old app QR codes (\"/tournament?id=5\") open the tournament page"
+msgstr "Зміна — посилання на турнір на головній сторінці («?tournament_id=5») і старі QR-коди застосунку («/tournament?id=5») відкривають сторінку турніру"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Change - the default name of a new tournament uses the site time zone, not UTC"
+msgstr "Зміна — назва нового турніру за замовчуванням використовує часовий пояс сайту, а не UTC"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Change - the app can be signed in on several devices at once (up to 10 per user)"
+msgstr "Зміна — у застосунок можна ввійти на кількох пристроях одночасно (до 10 на користувача)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Change - invitation link only joins the tournament (a second click no longer unregisters the player), redirects to the login page and back, and then to the tournament page"
+msgstr "Зміна — посилання-запрошення лише реєструє на турнір (повторне натискання більше не скасовує реєстрацію гравця), перенаправляє на сторінку входу й назад, а потім на сторінку турніру"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - REST responses are never served from page caches or CDNs"
+msgstr "Виправлення — REST-відповіді більше ніколи не віддаються з кешу сторінок чи CDN"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Authorization header is read also on FPM/CGI hosts"
+msgstr "Виправлення — заголовок Authorization читається й на хостингах із FPM/CGI"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - database upgrade adds new columns also on already installed sites"
+msgstr "Виправлення — оновлення бази даних додає нові стовпці й на вже встановлених сайтах"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - several devices signing in or refreshing their session at the same moment no longer sign each other out"
+msgstr "Виправлення — кілька пристроїв, що одночасно входять або оновлюють сесію, більше не виводять одне одного із системи"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - every change of a running tournament (correcting a result, suspending or removing a player, settings, payments, special group, web forms) runs under the tournament lock; correcting a result while another court saved its result could stall the whole tournament"
+msgstr "Виправлення — кожна зміна поточного турніру (виправлення результату, призупинення чи вилучення гравця, налаштування, платежі, спеціальна група, вебформи) виконується під блокуванням турніру; виправлення результату в момент збереження результату на іншому корті могло зупинити весь турнір"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - tournament lock: results entered at the same time on several courts are no longer lost"
+msgstr "Виправлення — блокування турніру: результати, введені одночасно на кількох кортах, більше не губляться"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - every write to a tournament updates last_update"
+msgstr "Виправлення — кожен запис у турнір оновлює last_update"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - results entered on the web no longer store last_update = 0, so the Android app refreshes again"
+msgstr "Виправлення — результати, введені на сайті, більше не зберігають last_update = 0, тож застосунок для Android знову оновлюється"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Security - with registration disabled only tournament organizers can create player accounts from the app (before, any signed-in player could)"
+msgstr "Безпека — коли реєстрацію вимкнено, створювати облікові записи гравців із застосунку можуть лише організатори турнірів (раніше це міг будь-який гравець, що увійшов)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Security - an account created by an organizer no longer returns a login session of the new player to the organizer"
+msgstr "Безпека — обліковий запис, створений організатором, більше не повертає організатору сесію входу нового гравця"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Security - registration from the app (incl. a new Google account) respects \"Anyone can register\""
+msgstr "Безпека — реєстрація із застосунку (зокрема новий обліковий запис Google) враховує налаштування «Будь-хто може зареєструватися»"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Security - final doubles and registration toggle check tournament admin rights"
+msgstr "Безпека — фінальний парний матч і перемикання реєстрації перевіряють права адміністратора турніру"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Security - guided tour actions need a nonce; regenerating the example tournaments is throttled"
+msgstr "Безпека — діям покрокової екскурсії потрібен nonce; повторне створення прикладів турнірів обмежено"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Security - admin actions sent as links are protected by a nonce (CSRF)"
+msgstr "Безпека — адміністративні дії, що надсилаються посиланнями, захищено nonce (CSRF)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Security - front-end forms check tournament admin rights, not only the nonce (any logged-in user could change players, payments or delete a tournament)"
+msgstr "Безпека — форми на сайті перевіряють права адміністратора турніру, а не лише nonce (раніше будь-який користувач, що увійшов, міг змінювати гравців, платежі чи видалити турнір)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - app tournament links on the central site (?tournament_id=5&amp;doroto_site=) are forwarded to the club's tournament page when the app is not installed (sites from the site directory; other sites get a page with a link)"
+msgstr "Додано — посилання застосунку на турніри на центральному сайті (?tournament_id=5&amp;doroto_site=) перенаправляються на сторінку турніру клубу, якщо застосунок не встановлено (сайти з каталогу сайтів; для інших сайтів показується сторінка з посиланням)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - the tournament page has an \"Open in the app\" link: Android opens the tournament in the app, or Google Play when it is missing"
+msgstr "Додано — на сторінці турніру є посилання «Відкрити в застосунку»: Android відкриває турнір у застосунку або Google Play, якщо застосунку немає"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - saving the tournament settings rejects an unknown tournament type"
+msgstr "Виправлення — під час збереження налаштувань турніру відхиляється невідомий тип турніру"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - a deleted account leaves its open tournaments: removed when it has not played yet, otherwise suspended; it also leaves the organizers, special group and payments (it was drawn into matches as \"Unknown player\")"
+msgstr "Виправлення — видалений обліковий запис залишає свої відкриті турніри: вилучається, якщо ще не грав, інакше призупиняється; також вилучається з організаторів, спеціальної групи й платежів (раніше він потрапляв у жеребкування як «Невідомий гравець»)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - removing a payment no longer turns the payment list into a JSON object (the Android app could crash on the statistics page)"
+msgstr "Виправлення — вилучення платежу більше не перетворює список платежів на JSON-об’єкт (застосунок для Android міг аварійно закриватися на сторінці статистики)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - the change form fits on a phone screen (the result and the button were off screen)"
+msgstr "Виправлення — форма змін уміщується на екрані телефона (результат і кнопка були за межами екрана)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - organizers see an \"Edit result\" button next to every played match; it selects the match and its result in the change form (the form above the table was easy to miss)"
+msgstr "Додано — організатори бачать біля кожного зіграного матчу кнопку «Змінити результат»; вона вибирає матч і його результат у формі змін (форму над таблицею було легко не помітити)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - REST route skip-matches: the organizer skips several ongoing matches at once and new matches are drawn from all free players"
+msgstr "Додано — REST-маршрут skip-matches: організатор пропускає одразу кілька поточних матчів, і нові матчі розігруються серед усіх вільних гравців"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - among players with the same number of new teammates left, the one who played fewer games is drawn first; sides (left/right) alternate for both players of a team"
+msgstr "Покращення — серед гравців з однаковою кількістю нових партнерів, що залишилися, першим розігрується той, хто зіграв менше ігор; боки (лівий/правий) чергуються в обох гравців команди"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - the draw chooses the opposing team (and the teammate) by previous meetings too: players meet more different opponents and the same players meet less often (with 14 players on 2 courts, pairs that met 3 or more times dropped from about 5 to 1 per evening)"
+msgstr "Покращення — жеребкування вибирає команду суперників (і партнера) з урахуванням минулих зустрічей: гравці зустрічаються з більшою кількістю різних суперників, а ті самі гравці зустрічаються рідше (за 14 гравців на 2 кортах кількість пар, що зустрілися 3 й більше разів, зменшилася приблизно з 5 до 1 за вечір)"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.6.0 - 2026/10/02"
+msgstr "1.6.0 - 2026/10/02"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.6.1 - 2026/10/02"
+msgstr "1.6.1 - 2026/10/02"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.6.2 - 2026/10/04"
+msgstr "1.6.2 - 2026/10/04"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - fixed some errors found in Plugin Check"
+msgstr "Виправлення — виправлено деякі помилки, знайдені Plugin Check"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.5.8 - 2026/06/12"
+msgstr "1.5.8 - 2026/06/12"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - some translations"
+msgstr "Виправлення — деякі переклади"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.5.7 - 2026/06/06"
+msgstr "1.5.7 - 2026/06/06"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - register and sign in for android app"
+msgstr "Виправлення — реєстрація й вхід у застосунку для Android"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.5.6 - 2026/05/13"
+msgstr "1.5.6 - 2026/05/13"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - remove admin for android app"
+msgstr "Додано — вилучення адміністратора для застосунку для Android"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.5.5 - 2026/05/12"
+msgstr "1.5.5 - 2026/05/12"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - rest value is safe now"
+msgstr "Виправлення — значення rest тепер безпечне"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.0.0 - 2024/01/01"
+msgstr "1.0.0 - 2024/01/01"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.0.1 - 2024/01/03"
+msgstr "1.0.1 - 2024/01/03"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.0.2 - 2024/01/21"
+msgstr "1.0.2 - 2024/01/21"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.0.3 - 2024/01/26"
+msgstr "1.0.3 - 2024/01/26"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.0.4 - 2024/02/02"
+msgstr "1.0.4 - 2024/02/02"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.1.0 - 2024/02/04"
+msgstr "1.1.0 - 2024/02/04"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.1.1 - 2024/02/09"
+msgstr "1.1.1 - 2024/02/09"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.1.2 - 2024/02/13"
+msgstr "1.1.2 - 2024/02/13"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.1.3 - 2024/02/17"
+msgstr "1.1.3 - 2024/02/17"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.1.4 - 2024/02/18"
+msgstr "1.1.4 - 2024/02/18"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.1.5 - 2024/02/20"
+msgstr "1.1.5 - 2024/02/20"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.1.6 - 2024/02/25"
+msgstr "1.1.6 - 2024/02/25"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.1.7 - 2024/03/01"
+msgstr "1.1.7 - 2024/03/01"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.1.8 - 2024/03/07"
+msgstr "1.1.8 - 2024/03/07"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.1.9 - 2024/03/09"
+msgstr "1.1.9 - 2024/03/09"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.2.0 - 2024/03/20"
+msgstr "1.2.0 - 2024/03/20"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.2.1 - 2024/03/21"
+msgstr "1.2.1 - 2024/03/21"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.2.2 - 2024/04/17"
+msgstr "1.2.2 - 2024/04/17"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.2.3 - 2024/04/19"
+msgstr "1.2.3 - 2024/04/19"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.2.4 - 2024/05/08"
+msgstr "1.2.4 - 2024/05/08"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.2.5 - 2024/05/15"
+msgstr "1.2.5 - 2024/05/15"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.2.6 - 2024/05/29"
+msgstr "1.2.6 - 2024/05/29"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.2.7 - 2024/06/07"
+msgstr "1.2.7 - 2024/06/07"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.2.8 - 2024/06/21"
+msgstr "1.2.8 - 2024/06/21"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.2.9 - 2024/06/23"
+msgstr "1.2.9 - 2024/06/23"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.3.0 - 2024/07/06"
+msgstr "1.3.0 - 2024/07/06"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.3.1 - 2024/07/12"
+msgstr "1.3.1 - 2024/07/12"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.3.2 - 2024/07/18"
+msgstr "1.3.2 - 2024/07/18"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.3.3 - 2024/09/13"
+msgstr "1.3.3 - 2024/09/13"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.3.4 - 2024/09/26"
+msgstr "1.3.4 - 2024/09/26"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.3.5 - 2024/09/28"
+msgstr "1.3.5 - 2024/09/28"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.3.6 - 2024/11/02"
+msgstr "1.3.6 - 2024/11/02"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.3.7 - 2024/12/13"
+msgstr "1.3.7 - 2024/12/13"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.3.8 - 2024/12/15"
+msgstr "1.3.8 - 2024/12/15"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.3.9 - 2024/12/21"
+msgstr "1.3.9 - 2024/12/21"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.4.0 - 2024/12/27"
+msgstr "1.4.0 - 2024/12/27"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.4.1 - 2024/12/31"
+msgstr "1.4.1 - 2024/12/31"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.4.2 - 2025/04/16"
+msgstr "1.4.2 - 2025/04/16"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.4.3 - 2025/05/04"
+msgstr "1.4.3 - 2025/05/04"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.4.4 - 2025/05/25"
+msgstr "1.4.4 - 2025/05/25"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.4.5 - 2025/06/09"
+msgstr "1.4.5 - 2025/06/09"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.4.6 - 2025/06/14"
+msgstr "1.4.6 - 2025/06/14"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.4.7 - 2025/07/27"
+msgstr "1.4.7 - 2025/07/27"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.4.8 - 2025/08/07"
+msgstr "1.4.8 - 2025/08/07"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.4.9 - 2025/08/07"
+msgstr "1.4.9 - 2025/08/07"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.5.0 - 2025/08/08"
+msgstr "1.5.0 - 2025/08/08"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.5.1 - 2025/08/17"
+msgstr "1.5.1 - 2025/08/17"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.5.2 - 2025/08/26"
+msgstr "1.5.2 - 2025/08/26"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.5.3 - 2025/12/05"
+msgstr "1.5.3 - 2025/12/05"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.5.4 - 2026/04/22"
+msgstr "1.5.4 - 2026/04/22"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - stable login to android application"
+msgstr "Виправлення — стабільний вхід у застосунок для Android"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - existing players are not repeated in the menu Add players"
+msgstr "Виправлення — наявні гравці не повторюються в меню «Додати гравців»"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Change - Public release of Android app"
+msgstr "Зміна — публічний випуск застосунку для Android"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Add 'last update' to the database also for already installed plugings"
+msgstr "Виправлення — додавання «last update» до бази даних і для вже встановлених плагінів"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Uninstall also 2 new pages (privacy policy and terms of service)"
+msgstr "Виправлення — видалення й 2 нових сторінок (політика конфіденційності й умови використання)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Add 'last update' to the database"
+msgstr "Виправлення — додавання «last update» до бази даних"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Improved some functions for Android app"
+msgstr "Виправлення — покращено деякі функції для застосунку для Android"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Announcement about the opportunity to become an application tester"
+msgstr "Додано — оголошення про можливість стати тестувальником застосунку"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Privacy Policy page"
+msgstr "Додано — сторінка політики конфіденційності"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Terms of Service page"
+msgstr "Додано — сторінка умов використання"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Info about last update speed up loading"
+msgstr "Додано — інформація про останнє оновлення пришвидшує завантаження"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Correct an error message Undefined array key player['count']"
+msgstr "Виправлення — виправлено повідомлення про помилку Undefined array key player['count']"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Tournaments filtering by distance and visibility"
+msgstr "Додано — фільтрування турнірів за відстанню й видимістю"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Support for a Android app"
+msgstr "Додано — підтримка застосунку для Android"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Controls the visibility of the tournament in the public list."
+msgstr "Додано — керування видимістю турніру в публічному списку."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Location of the tournament."
+msgstr "Додано — місце проведення турніру."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Log in/out block had a problem"
+msgstr "Виправлення — у блоці реєстрації/скасування була проблема"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Parameter When enough players are available had sometimes a wrong value."
+msgstr "Виправлення — параметр «Коли достатньо вільних гравців» іноді мав неправильне значення."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Match hiding correction"
+msgstr "Виправлення — виправлено приховування матчів"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Register and log in a new user only if anyone can register (system settings)."
+msgstr "Виправлення — реєстрація й вхід нового користувача лише тоді, коли будь-хто може зареєструватися (системне налаштування)."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Register and log in a new user."
+msgstr "Додано — реєстрація й вхід нового користувача."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Translation loading too early warning."
+msgstr "Виправлення — попередження про надто раннє завантаження перекладів."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Dashboard overview widget."
+msgstr "Додано — віджет огляду в майстерні."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Log-link block."
+msgstr "Додано — блок Log-link."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Sometimes tournament_id was unknown."
+msgstr "Виправлення — іноді tournament_id був невідомий."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Preserving stored values on the backend."
+msgstr "Виправлення — збереження записаних значень на сервері."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Guaranteed visibility of the selected tournament in the tournament table."
+msgstr "Виправлення — гарантована видимість вибраного турніру в таблиці турнірів."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Error with hide parameter."
+msgstr "Виправлення — помилка з параметром hide."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Permalink structure also works with the floating help icon."
+msgstr "Виправлення — структура постійних посилань працює й із плаваючим значком довідки."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Tournament name is not copied from previous one."
+msgstr "Виправлення — назва турніру не копіюється з попереднього."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - More tournament examples for demonstration."
+msgstr "Додано — більше прикладів турнірів для демонстрації."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Floating help icon."
+msgstr "Додано — плаваючий значок довідки."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Prevent cashing for logged users."
+msgstr "Додано — вимкнення кешування для користувачів, що увійшли."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Doubles Badminton table also for co-players"
+msgstr "Виправлення — таблиця парного бадмінтону й для партнерів"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Tournament progress info."
+msgstr "Додано — інформація про хід турніру."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Change game results availability."
+msgstr "Виправлення — зміна доступності результатів ігор."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Special group count."
+msgstr "Додано — кількість учасників спеціальної групи."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Change of information about the end of the tournament round."
+msgstr "Зміна інформації про кінець кола турніру."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Opponent selection."
+msgstr "Виправлення — вибір суперника."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Pair selection mechanism explanation on the help page."
+msgstr "Додано — пояснення механізму добору пар на сторінці довідки."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Pair selection didn´t take into account number of played games in total."
+msgstr "Виправлення — добір пар не враховував загальну кількість зіграних ігор."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Rights to Suspension and Resumption."
+msgstr "Виправлення — права на призупинення й відновлення."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Rights to add a special group."
+msgstr "Виправлення — права на додавання до спеціальної групи."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Rights to add a tournament admin."
+msgstr "Виправлення — права на додавання адміністратора турніру."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Rights to add other players into tournaments."
+msgstr "Виправлення — права на додавання інших гравців до турнірів."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Do not show instructions during the tournament presentation."
+msgstr "Виправлення — не показувати інструкції під час презентації турніру."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Admin can change a default value for minimum number of games played before a player can be declared a winner."
+msgstr "Додано — адміністратор може змінити значення за замовчуванням для мінімальної кількості зіграних ігор, після якої гравця можна оголосити переможцем."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - The ability to specify a minimum number of games played before a player can be declared a winner."
+msgstr "Додано — можливість задати мінімальну кількість зіграних ігор, після якої гравця можна оголосити переможцем."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Removing a player from a tournament."
+msgstr "Виправлення — вилучення гравця з турніру."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Ready for testing in WP Playground."
+msgstr "Виправлення — готово до тестування у WP Playground."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Solving some database errors with empty values."
+msgstr "Виправлення — усунення деяких помилок бази даних із порожніми значеннями."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Update for WP Playground."
+msgstr "Виправлення — оновлення для WP Playground."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Improved playmate choose."
+msgstr "Виправлення — покращено вибір партнера."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Problems with removing players during a game."
+msgstr "Виправлення — проблеми з вилученням гравців під час гри."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - A currently playing player can´t be removed."
+msgstr "Виправлення — гравця, який зараз грає, не можна вилучити."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Fix real count of players after their removing."
+msgstr "Виправлення — правильна кількість гравців після їх вилучення."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Fix an error during removing a player from the tournament."
+msgstr "Виправлення — помилка під час вилучення гравця з турніру."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Redirection to a tournament in case of a user entry."
+msgstr "Виправлення — перенаправлення на турнір у разі введення даних користувачем."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - icon format."
+msgstr "Виправлення — формат значків."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Modification for WP Playground."
+msgstr "Доопрацювання для WP Playground."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Fixed a bug in the database that prevented a tournament record from being created on some servers."
+msgstr "Виправлення — виправлено помилку бази даних, через яку на деяких серверах не створювався запис турніру."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Unregistered users can no longer enter results in the singles tournament."
+msgstr "Виправлення — незареєстровані користувачі більше не можуть вводити результати в одиночному турнірі."
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid "Possibility to remove players from an already ongoing tournament."
+msgstr "Можливість вилучати гравців із турніру, що вже триває."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "New - Expanded the ability for tournament administrators to browse through players they have already met at the tournament."
+msgstr "Нове — адміністратори турнірів можуть переглядати більше гравців, з якими вже зустрічалися на турнірі."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "New - If the player has not yet registered for any tournament, it is possible to choose whether to show him a quick help."
+msgstr "Нове — якщо гравець ще не реєструвався на жоден турнір, можна вибрати, чи показувати йому коротку довідку."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "New - Optional login prompt."
+msgstr "Нове — необов’язкове запрошення увійти."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - If all tournaments were deleted, a new tournament could not be created."
+msgstr "Виправлення — якщо всі турніри було видалено, створити новий турнір було неможливо."
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid ""
+"Trial tournament improvements.\n"
+"Added the option to announce the end of the tournament round."
+msgstr ""
+"Покращення тренувального турніру.\n"
+"Додано можливість оголошувати кінець кола турніру."
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid ""
+"Improved the visual appearance of the main page.\n"
+"Badminton added to the list of available tournaments."
+msgstr ""
+"Покращено зовнішній вигляд головної сторінки.\n"
+"Бадмінтон додано до списку доступних турнірів."
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid "Option to announce separate winners from the special group and outside the special group."
+msgstr "Можливість оголошувати окремих переможців зі спеціальної групи й поза нею."
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid ""
+"Notices after a plugin activation.\n"
+"Added player trend."
+msgstr ""
+"Сповіщення після активації плагіна.\n"
+"Додано тренд гравця."
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid ""
+"Modified tournament editing tab.\n"
+"Added option to change tournament type."
+msgstr ""
+"Змінено вкладку редагування турніру.\n"
+"Додано можливість змінити тип турніру."
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid ""
+"Reactivating the plugin doesn´t affect the already deleted tournament example. \n"
+"Unblock offering maximum games count.\n"
+"Fix tournament change when entering results.\n"
+"Added quick help for newcomers.\n"
+"Allow the final match also for singles."
+msgstr ""
+"Повторна активація плагіна не впливає на вже видалений приклад турніру.\n"
+"Розблоковано вибір максимальної кількості геймів.\n"
+"Виправлено зміну турніру під час введення результатів.\n"
+"Додано коротку довідку для новачків.\n"
+"Фінальний матч дозволено й для одиночного розряду."
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid ""
+"Added the option for single tournaments. \n"
+"Created an environment for additional sports."
+msgstr ""
+"Додано можливість одиночних турнірів.\n"
+"Створено середовище для інших видів спорту."
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid ""
+"The administrator can now use 'hide' option when editing the match result.\n"
+"Free score input is allowed. This opens using not only for tennis but for example for table tennis or beach volleyball."
+msgstr ""
+"Адміністратор тепер може використовувати варіант «приховати» під час зміни результату матчу.\n"
+"Дозволено вільне введення рахунку. Це дає змогу використовувати плагін не лише для тенісу, а й, наприклад, для настільного тенісу чи пляжного волейболу."
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid ""
+"Minor changes in code:\n"
+"* Allow to transfer organizer rights to a non-playing user.\n"
+"* Ensuring an even rotation of serves at the start of the tournament."
+msgstr ""
+"Невеликі зміни в коді:\n"
+"* Дозволено передавання прав організатора користувачу, який не грає.\n"
+"* Забезпечено рівномірне чергування подачі на початку турніру."
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid "Fixed choosing between left and right side in first matches."
+msgstr "Виправлено вибір лівого й правого боку в перших матчах."
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid "A small modification of admin screen."
+msgstr "Невелика зміна екрана адміністрування."
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid "First release to public."
+msgstr "Перший публічний випуск."
+

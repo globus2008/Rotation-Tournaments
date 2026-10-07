@@ -1,0 +1,1289 @@
+# Translation of Plugins - Rotation Tournaments - Development Readme (trunk) in Finnish
+# This file is distributed under the same license as the Plugins - Rotation Tournaments - Development Readme (trunk) package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Plugins - Rotation Tournaments - Development Readme (trunk)\n"
+"PO-Revision-Date: 2026-10-07 12:20:02+0000\n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/4.1.0\n"
+
+#. Short description.
+#, gp-priority: high
+msgid "Do you play Singles or Doubles Tournaments? This plugin manages Rotation Tournaments where players have a different partner in each game."
+msgstr "Pelaatko kaksin- vai nelinpeliturnauksia? Tämä lisäosa hallinnoi kiertoturnauksia, joissa pelaajilla on jokaisessa pelissä uusi pari."
+
+#. Plugin name.
+#, gp-priority: high
+msgid "Rotation Tournaments"
+msgstr "Kiertoturnaukset"
+
+#. Found in installation paragraph.
+msgid "After installation, go to the app's settings and enter the address of your website where this plugin is installed."
+msgstr "Avaa asennuksen jälkeen sovelluksen asetukset ja syötä sen sivuston osoite, jolle tämä lisäosa on asennettu."
+
+#. Found in installation paragraph.
+msgid "Or download it directly from this link: https://play.google.com/store/apps/details?id=cz.doroto.app"
+msgstr "Tai lataa se suoraan tästä: https://play.google.com/store/apps/details?id=cz.doroto.app"
+
+#. Found in installation paragraph.
+msgid "Search for \"Rotation Tournaments\" on the Google Play Store."
+msgstr "Hae Google Playsta ”Rotation Tournaments”."
+
+#. Found in description paragraph.
+msgid "To get the full experience of managing tournaments on the go, download our mobile app, now available on Google Play!"
+msgstr "Hallinnoi turnauksia täysipainoisesti liikkeellä ollessasi: lataa mobiilisovelluksemme, joka on nyt saatavilla Google Playssa!"
+
+#. Found in description paragraph.
+msgid "<strong>YouTube quick intro:</strong>"
+msgstr "<strong>Lyhyt esittely YouTubessa:</strong>"
+
+#. Found in description list item.
+msgid "Video for a quick introduction to the Rotation Tournament:"
+msgstr "Video, jossa on lyhyt esittely kiertoturnauksesta:"
+
+#. Found in faq paragraph.
+msgid "Yes. If you install the Rotation Tournaments plugin, allow player registration, and enable visibility in the website list, your site can appear in the Android app. Initially, someone must manually enter your website address into the app. After that, it becomes visible in the list for all users."
+msgstr "Kyllä. Jos asennat Rotation Tournaments -lisäosan, sallit pelaajien rekisteröitymisen ja otat käyttöön näkyvyyden sivustoluettelossa, sivustosi voi näkyä Android-sovelluksessa. Ensin jonkun on syötettävä sivustosi osoite sovellukseen käsin. Sen jälkeen sivusto näkyy luettelossa kaikille käyttäjille."
+
+#. Found in faq paragraph.
+msgid "Yes. An iOS version of the Rotation Tournaments app is planned and will be released in the near future."
+msgstr "Kyllä. Rotation Tournaments -sovelluksen iOS-versio on suunnitteilla ja julkaistaan pian."
+
+#. Found in faq header.
+msgid "Will my website be visible in the Rotation Tournaments Android app?"
+msgstr "Näkyykö sivustoni Rotation Tournaments -sovelluksessa Androidille?"
+
+#. Found in faq header.
+msgid "Will there be an iPhone or iPad version of the app?"
+msgstr "Tuleeko sovelluksesta versio iPhonelle tai iPadille?"
+
+#. Found in installation paragraph.
+msgid "<strong>How to install Wordpress plugin:</strong>"
+msgstr "<strong>WordPress-lisäosan asentaminen:</strong>"
+
+#. Found in installation list item.
+msgid "After activating the plugin, 4 pages will be created: one for managing tournaments (main page), one with tournament rules, and additional pages for Privacy Policy and Terms of Service. A sample post announcing a newly created tournament will also be added."
+msgstr "Kun lisäosa on aktivoitu, luodaan 4 sivua: yksi turnausten hallintaan (pääsivu), yksi turnauksen säännöille sekä tietosuojakäytäntö- ja käyttöehtosivut. Lisäksi luodaan esimerkkiartikkeli, jossa julkistetaan uusi turnaus."
+
+#. Found in installation paragraph.
+msgid "<strong>How to install the Android app:</strong>"
+msgstr "<strong>Android-sovelluksen asentaminen:</strong>"
+
+#. Found in description paragraph.
+msgid "<strong>This plugin is the server-side for the \"Rotation Tournaments\" Android app.</strong>"
+msgstr "<strong>Tämä lisäosa on Android-sovelluksen ”Rotation Tournaments” palvelinpuoli.</strong>"
+
+#. Screenshot description.
+msgid "Individual tournament participants enter their results into the WordPress server and share the data with each other."
+msgstr "Turnauksen osallistujat syöttävät tuloksensa WordPress-palvelimelle ja jakavat tiedot keskenään."
+
+#. Screenshot description.
+msgid "Matches played. (Android app)"
+msgstr "Pelatut ottelut. (Android-sovellus)"
+
+#. Screenshot description.
+msgid "Tournament table. (Wordpress)"
+msgstr "Turnauksen taulukko. (WordPress)"
+
+#. Screenshot description.
+msgid "Matches drawn. (Android app)"
+msgstr "Arvotut ottelut. (Android-sovellus)"
+
+#. Screenshot description.
+msgid "Editing tournament parameters. (Wordpress)"
+msgstr "Turnauksen parametrien muokkaus. (WordPress)"
+
+#. Screenshot description.
+msgid "Table of players with rankings. (Android app)"
+msgstr "Pelaajataulukko sijoituksineen. (Android-sovellus)"
+
+#. Screenshot description.
+msgid "Matches played. (Wordpress)"
+msgstr "Pelatut ottelut. (WordPress)"
+
+#. Screenshot description.
+msgid "Basic overview of the tournament. (Android app)"
+msgstr "Turnauksen yleiskatsaus. (Android-sovellus)"
+
+#. Screenshot description.
+msgid "Matches drawn. (Wordpress)"
+msgstr "Arvotut ottelut. (WordPress)"
+
+#. Found in description paragraph.
+msgid "<strong>Rotation Tournaments</strong> provides a platform for organizing all kinds of sports Singles and Doubles Tournaments, e.g."
+msgstr "<strong>Kiertoturnaukset</strong> on alusta kaikenlaisten kaksin- ja nelinpeliturnausten järjestämiseen, esimerkiksi:"
+
+#. Found in description list item.
+msgid "Squash"
+msgstr "Squash"
+
+#. Found in description list item.
+msgid "Beach Volleyball"
+msgstr "Rantalentopallo"
+
+#. Found in description list item.
+msgid "Badminton"
+msgstr "Sulkapallo"
+
+#. Found in description list item.
+msgid "Padel"
+msgstr "Padel"
+
+#. Found in description list item.
+msgid "Table Tennis"
+msgstr "Pöytätennis"
+
+#. Found in description list item.
+msgid "Tennis"
+msgstr "Tennis"
+
+#. Found in faq paragraph.
+msgid ""
+"This plugin can be used for all types of sports where 2 or 4 players compete in singles or doubles.\n"
+"You can use this plugin for tennis, table tennis, squash, padel, badminton, beach volleyball and probably for more."
+msgstr ""
+"Tämä lisäosa sopii kaikkiin lajeihin, joissa 2 tai 4 pelaajaa kilpailee kaksin- tai nelinpelissä.\n"
+"Sitä voi käyttää tenniksessä, pöytätenniksessä, squashissa, padelissa, sulkapallossa, rantalentopallossa ja luultavasti muissakin lajeissa."
+
+#. Found in faq paragraph.
+msgid "Yes. When creating a tournament, you can choose whether to create a singles or a doubles tournament."
+msgstr "Kyllä. Turnausta luotaessa voit valita kaksin- tai nelinpeliturnauksen."
+
+#. Found in faq header.
+msgid "What sports tournaments is this plugin for?"
+msgstr "Millaisiin urheiluturnauksiin tämä lisäosa on tarkoitettu?"
+
+#. Found in description paragraph.
+msgid "<strong>General Features:</strong>"
+msgstr "<strong>Yleiset ominaisuudet:</strong>"
+
+#. Found in description paragraph.
+msgid "<strong>Doubles Rotation Tournament:</strong>"
+msgstr "<strong>Nelinpelin kiertoturnaus:</strong>"
+
+#. Found in description paragraph.
+msgid "<strong>Singles Rotation Tournament:</strong>"
+msgstr "<strong>Kaksinpelin kiertoturnaus:</strong>"
+
+#. Found in description paragraph.
+msgid "The participants of a tournament change partners several times during the tournament by a random selection and play against different players. The ratio of games won to games lost is calculated for each participant. The winner of the tournament is the player with this highest ratio. While a Singles Rotation Tournament can be organized without the aid of technology, in the case of a Doubles Rotation Tournament, this is not possible."
+msgstr "Turnauksen osallistujat vaihtavat satunnaisesti paria useita kertoja turnauksen aikana ja pelaavat eri pelaajia vastaan. Jokaiselle osallistujalle lasketaan voitettujen ja hävittyjen pelien suhde. Voittaja on pelaaja, jolla on paras suhde. Kaksinpelin kiertoturnauksen voi järjestää ilman tekniikkaa, nelinpelin ei."
+
+#. Found in description paragraph.
+msgid "The <strong>Rotation Tournaments</strong> have a strong social aspect because its goal is to keep players in the tournament until the very end. The situation where weaker players would leave the tournament due to elimination rounds is eliminated. It allows grouping players into a special category with special conditions. This special setting can be utilized, for example, in mixed tournaments."
+msgstr "<strong>Kiertoturnauksissa</strong> on vahva sosiaalinen ulottuvuus, koska niiden tavoitteena on pitää pelaajat mukana turnauksessa loppuun asti. Tilanne, jossa heikommat pelaajat poistuvat turnauksesta pudotuksen vuoksi, on poissuljettu. Pelaajia voi koota erityiskategoriaan erityisehdoin. Tätä erityisasetusta voi käyttää esimerkiksi sekaturnauksissa."
+
+#. Found in description paragraph.
+msgid "In <strong>Rotation Tournaments</strong>, each participant plays against every other participant and there are no eliminations in individual rounds. To maximize the variety of match combinations, the matches are typically played in a single set."
+msgstr "<strong>Kiertoturnauksissa</strong> jokainen osallistuja pelaa jokaista vastaan, eikä kukaan putoa yksittäisillä kierroksilla. Jotta yhdistelmiä saataisiin mahdollisimman paljon, ottelut pelataan yleensä yhteen erään."
+
+#. Found in description list item.
+msgid "Suitable for various sports: tennis, table tennis, squash, padel, badminton, beach volleyball, and more."
+msgstr "Sopii eri lajeihin: tennis, pöytätennis, squash, padel, sulkapallo, rantalentopallo ja muut."
+
+#. Found in description list item.
+msgid "Integration with website user accounts."
+msgstr "Integraatio sivuston käyttäjätileihin."
+
+#. Found in description list item.
+msgid "No downtime during the tournament."
+msgstr "Ei odotusaikoja turnauksen aikana."
+
+#. Found in description list item.
+msgid "Comprehensive overview of player quality."
+msgstr "Täydellinen kuva pelaajien tasosta."
+
+#. Found in description list item.
+msgid "User-friendly interface for administrators and participants."
+msgstr "Käyttäjäystävällinen käyttöliittymä ylläpitäjille ja osallistujille."
+
+#. Found in description list item.
+msgid "Customizable settings for each tournament."
+msgstr "Joustavat asetukset jokaiselle turnaukselle."
+
+#. Found in description list item.
+msgid "Real-time score tracking."
+msgstr "Tulosten seuranta reaaliajassa."
+
+#. Found in description list item.
+msgid "Seamless scheduling of matches."
+msgstr "Kätevä otteluaikataulun laadinta."
+
+#. Found in description list item.
+msgid "Announcement of the Best Player and Most Ideal Pair at the end of the tournament."
+msgstr "Parhaan pelaajan ja ihanteellisen parin julistaminen turnauksen lopussa."
+
+#. Found in description list item.
+msgid "Ranking based on the ratio of games won to games lost."
+msgstr "Sijoitukset määräytyvät voitettujen ja hävittyjen pelien suhteesta."
+
+#. Found in description list item.
+msgid "Individual players can join or leave the tournament at any time."
+msgstr "Pelaajat voivat liittyä turnaukseen tai poistua siitä milloin tahansa."
+
+#. Found in description list item.
+msgid "Tournament can be interrupted or extended without disruption."
+msgstr "Turnauksen voi keskeyttää tai sitä voi pidentää häiritsemättä sen kulkua."
+
+#. Found in description list item.
+msgid "Shorter matches for more participation."
+msgstr "Lyhyemmät ottelut suuremman osallistumisen hyväksi."
+
+#. Found in description list item.
+msgid "No eliminations, ensuring all players stay in the game."
+msgstr "Ei pudotuksia – kaikki pelaajat pysyvät pelissä."
+
+#. Found in description list item.
+msgid "Define special groups of players with unique conditions."
+msgstr "Erityisryhmien määrittäminen erityisehdoin."
+
+#. Found in description list item.
+msgid "Suitable for odd numbers of players and minimum lineups of 4 players."
+msgstr "Sopii parittomalle pelaajamäärälle ja vähintään 4 pelaajan kokoonpanolle."
+
+#. Found in description list item.
+msgid "Individuals can enter the tournament without a permanent teammate."
+msgstr "Turnaukseen voi osallistua ilman pysyvää paria."
+
+#. Found in description list item.
+msgid "Rotation of teammates, ensuring variety in partnerships."
+msgstr "Parien kierto takaa vaihtelevat parit."
+
+#. Found in description list item.
+msgid "Alternative form of a Doubles Tournament where players enter each match with a different partner and in different positions (alternating left and right sides)."
+msgstr "Nelinpeliturnauksen vaihtoehtoinen muoto, jossa pelaajat pelaavat jokaisen ottelun uuden parin kanssa ja eri paikoilla (vuorotellen vasemmalla ja oikealla puolella)."
+
+#. Found in description list item.
+msgid "Depending on the time options, everyone plays against everyone."
+msgstr "Ajan salliessa jokainen pelaa jokaista vastaan."
+
+#. Found in description list item.
+msgid "Alternative form of a Singles Tournament where players face each other without elimination rounds."
+msgstr "Kaksinpeliturnauksen vaihtoehtoinen muoto, jossa pelaajat kohtaavat toisensa ilman pudotuksia."
+
+#. Found in description header.
+msgid "Features"
+msgstr "Ominaisuudet"
+
+#. Found in faq header.
+msgid "Is this plugin suitable for singles tournaments?"
+msgstr "Sopiiko tämä lisäosa kaksinpeliturnauksiin?"
+
+#. Found in faq paragraph.
+msgid "Yes, each tournament participant must have their own account. If a website has disabled user registration, this account must be created by the website administrator."
+msgstr "Kyllä, jokaisella turnauksen osallistujalla on oltava oma käyttäjätili. Jos sivustolla on käyttäjien rekisteröinti pois käytöstä, sivuston ylläpitäjän on luotava tämä tili."
+
+#. Found in faq header.
+msgid "Does each player have to have an account created on my website?"
+msgstr "Onko jokaisella pelaajalla oltava tili sivustollani?"
+
+#. Found in installation list item.
+msgid "At the end close the tournament and look who was announced as the winner."
+msgstr "Sulje lopuksi turnaus ja katso, kuka on julistettu voittajaksi."
+
+#. Found in installation list item.
+msgid "You can change tournament settings on the main page or you can look at 2 new admin pages that are dedicated for overall environmental settings and for description of all possible shortcodes."
+msgstr "Turnauksen asetuksia voi muuttaa pääsivulla, tai voit tutustua 2 uuteen ylläpitosivuun, jotka käsittelevät ympäristön yleisasetuksia ja kaikkien käytettävissä olevien lyhytkoodien kuvausta."
+
+#. Found in installation list item.
+msgid "If you have a sufficient amount of players then you can close a registration and start playing matches."
+msgstr "Kun pelaajia on tarpeeksi, voit sulkea ilmoittautumisen ja aloittaa otteluiden pelaamisen."
+
+#. Found in installation list item.
+msgid "Then you can log in your created tournament and as a tournament´s administrator you can add manually also other players sourced from WP database."
+msgstr "Sen jälkeen voit ilmoittautua luotuun turnaukseen ja turnauksen ylläpitäjänä lisätä muita pelaajia käsin WordPress-tietokannasta."
+
+#. Found in installation list item.
+msgid "Start by clicking on \"Create a new tournament\" under \"Tournament Selection …\" on the main page."
+msgstr "Aloita napsauttamalla pääsivun osiossa ”Turnauksen valinta…” kohtaa ”Luo uusi turnaus”."
+
+#. Found in installation list item.
+msgid "Install the plugin as usual."
+msgstr "Asenna lisäosa tavalliseen tapaan."
+
+#. Found in description paragraph.
+msgid "Visit <a href=\"https://doroto.ltcchrast.cz/\">test page</a> for more information, try to create your own tournament and take a look at <a href=\"https://doroto.ltcchrast.cz/rules-of-the-doubles-rotation-tournament/\">Rules of the Doubles Rotation Tournament</a>."
+msgstr "Vieraile <a href=\"https://doroto.ltcchrast.cz/\">testisivulla</a> saadaksesi lisätietoja, kokeile oman turnauksen luomista ja tutustu <a href=\"https://doroto.ltcchrast.cz/rules-of-the-doubles-rotation-tournament/\">nelinpelin kiertoturnauksen sääntöihin</a>."
+
+#. Found in description paragraph.
+msgid "[youtube https://www.youtube.com/watch?v=NoL9aPTv8u8]"
+msgstr "[youtube https://www.youtube.com/watch?v=NoL9aPTv8u8]"
+
+#. Found in description header.
+msgid "More information"
+msgstr "Lisätietoja"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - the plugin restores read permissions of its files after an FTP upload (the web server answered 403 and the admin page stayed empty); the admin page shows a notice when its script cannot be loaded"
+msgstr "Korjaus – lisäosa palauttaa tiedostojensa lukuoikeudet FTP-latauksen jälkeen (verkkopalvelin vastasi 403 ja ylläpitosivu jäi tyhjäksi); ylläpitosivu näyttää ilmoituksen, jos sen skriptiä ei voida ladata"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - tournament settings keep the ranges of 1.x and of the app (a larger value made the app's dropdowns fail)"
+msgstr "Korjaus – turnauksen asetukset pysyvät version 1.x ja sovelluksen alueilla (suurempi arvo kaatoi sovelluksen pudotusvalikot)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - REST requests from the website use the WordPress login (cookie and nonce) when no app token is sent"
+msgstr "Parannus – sivuston REST-pyynnöt käyttävät WordPress-kirjautumista (eväste ja nonce), kun sovelluksen tunnusta ei lähetetä"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - styles, scripts and no-cache headers are sent only on pages that show the plugin; the unused tipTip library was removed and the admin no longer calls ip-api.com"
+msgstr "Parannus – tyylit, skriptit ja no-cache-otsakkeet lähetetään vain sivuilla, joilla lisäosa näkyy; käyttämätön tipTip-kirjasto poistettiin, eikä ylläpito enää ota yhteyttä ip-api.comiin"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - every change of a tournament (web forms, blocks and the Android app) goes through one shared layer with the same permissions, locking and change detection"
+msgstr "Parannus – jokainen turnauksen muutos (verkkolomakkeet, lohkot ja Android-sovellus) kulkee yhteisen kerroksen kautta samoin oikeuksin, lukituksin ja muutosten seurannoin"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - new admin page with Overview, Settings and Help instead of nine settings tabs; every setting is checked on the server and errors are shown next to the field"
+msgstr "Parannus – uusi ylläpitosivu osioilla Yleiskatsaus, Asetukset ja Ohje yhdeksän asetusvälilehden sijaan; jokainen asetus tarkistetaan palvelimella ja virheet näytetään kentän vieressä"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - the serving player is marked on the match cards; the special group is highlighted in matches, results, players, statistics and winners; the tournament details (invitation text) can be shown at any time"
+msgstr "Lisätty – syöttävä pelaaja merkitään otteluiden kortteihin; erityisryhmä korostetaan otteluissa, tuloksissa, pelaajissa, tilastoissa ja voittajissa; turnauksen tiedot (kutsuteksti) voi näyttää milloin tahansa"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - the tournament block takes its colours from the theme (button and palette colours); the block's Styles panel can change the accent, the tab bar and table headers, their text and the colour of the special group"
+msgstr "Lisätty – turnauslohko ottaa värinsä teemasta (painikkeiden ja paletin värit); lohkon Tyylit-paneelissa voi muuttaa korostusväriä, välilehtipalkkia ja taulukon otsikoita, niiden tekstiä sekä erityisryhmän väriä"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - the tournament block: Share dialog with a QR code, \"Open in the app\" line, full-screen presentation that rotates the sections, map of the tournament place in the settings, and guided tours of the page and of four example tournaments"
+msgstr "Lisätty – turnauslohkoon: Jaa-ikkuna QR-koodilla, rivi ”Avaa sovelluksessa”, koko näytön esitys vaihtuvilla osioilla, turnauspaikan kartta asetuksissa sekä opastetut kierrokset sivulla ja neljässä esimerkkiturnauksessa"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - the plugin admin can convert the main page to the blocks with one button; the old content stays in the page revisions. New installs create the main page from the blocks. The shortcodes [doroto_tournament] and [doroto_tournament_list] show the blocks in the classic editor; the 1.x shortcodes keep working"
+msgstr "Lisätty – lisäosan ylläpitäjä voi muuntaa pääsivun lohkoiksi yhdellä painikkeella; vanha sisältö säilyy sivun versioissa. Uudet asennukset luovat pääsivun lohkoista. Lyhytkoodit [doroto_tournament] ja [doroto_tournament_list] näyttävät lohkot klassisessa editorissa; version 1.x lyhytkoodit toimivat edelleen"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - blocks for the block editor: \"Rotation tournament\" (matches, results, players, statistics and settings on tabs, updated live without reloading the page), its variations \"Tournament standings\", \"Tournament matches\" and \"Tournament presentation\", \"Tournament list\" and \"Tournament invitation\""
+msgstr "Lisätty – lohkot lohkoeditoriin: ”Kiertoturnaus” (ottelut, tulokset, pelaajat, tilastot ja asetukset välilehdillä, päivittyy reaaliajassa lataamatta sivua uudelleen), sen muunnelmat ”Turnauksen sijoitukset”, ”Turnauksen ottelut” ja ”Turnauksen esitys” sekä ”Kiertoturnausten luettelo” ja ”Kutsu kiertoturnaukseen”"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "2.0.0 - 2026/10/06"
+msgstr "2.0.0 - 2026/10/06"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Change - the review request is shown only to administrators, 14 days after activation once the site has its own tournament, and comes back 7 days after \"Remind me\" until the plugin is rated"
+msgstr "Muutos – arviointipyyntö näytetään vain ylläpitäjille, 14 päivää aktivoinnin jälkeen, kun sivustolla on jo oma turnaus, ja se palaa 7 päivää ”Muistuta”-valinnan jälkeen, kunnes lisäosa on arvioitu"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - the tournament page shows a short link to the Android app (can be turned off in Settings -&gt; Mobile app)"
+msgstr "Lisätty – turnaussivulla näytetään lyhyt linkki Android-sovellukseen (poistetaan käytöstä kohdassa Asetukset -&gt; Mobiilisovellus)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - optional mode join/leave for the app join endpoint"
+msgstr "Lisätty – valinnainen liity/poistu-tila sovelluksen liittymisrajapinnalle"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - REST endpoint create-player: the organizer creates a player and adds them to the tournament in one step; the player gets an e-mail to set the password"
+msgstr "Lisätty – REST-rajapinta create-player: järjestäjä luo pelaajan ja lisää hänet turnaukseen yhdellä kertaa; pelaaja saa sähköpostin salasanan asettamiseksi"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Change - tournament links to the home page (\"?tournament_id=5\") and the old app QR codes (\"/tournament?id=5\") open the tournament page"
+msgstr "Muutos – pääsivun turnauslinkit (”?tournament_id=5”) ja sovelluksen vanhat QR-koodit (”/tournament?id=5”) avaavat turnaussivun"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Change - the default name of a new tournament uses the site time zone, not UTC"
+msgstr "Muutos – uuden turnauksen oletusnimi käyttää sivuston aikavyöhykettä UTC:n sijaan"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Change - the app can be signed in on several devices at once (up to 10 per user)"
+msgstr "Muutos – sovellukseen voi olla kirjautuneena usealla laitteella yhtä aikaa (enintään 10 käyttäjää kohden)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Change - invitation link only joins the tournament (a second click no longer unregisters the player), redirects to the login page and back, and then to the tournament page"
+msgstr "Muutos – kutsulinkki vain ilmoittaa turnaukseen (toinen napsautus ei enää peru pelaajan ilmoittautumista), ohjaa kirjautumissivulle ja takaisin ja sitten turnaussivulle"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - REST responses are never served from page caches or CDNs"
+msgstr "Korjaus – REST-vastauksia ei enää koskaan tarjoilla sivuvälimuistista tai CDN:stä"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Authorization header is read also on FPM/CGI hosts"
+msgstr "Korjaus – Authorization-otsake luetaan myös FPM-/CGI-isännöinnissä"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - database upgrade adds new columns also on already installed sites"
+msgstr "Korjaus – tietokannan päivitys lisää uudet sarakkeet myös jo asennetuille sivustoille"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - several devices signing in or refreshing their session at the same moment no longer sign each other out"
+msgstr "Korjaus – useat laitteet, jotka kirjautuvat tai uusivat istunnon samaan aikaan, eivät enää kirjaa toisiaan ulos"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - every change of a running tournament (correcting a result, suspending or removing a player, settings, payments, special group, web forms) runs under the tournament lock; correcting a result while another court saved its result could stall the whole tournament"
+msgstr "Korjaus – jokainen käynnissä olevan turnauksen muutos (tuloksen korjaus, pelaajan keskeytys tai poisto, asetukset, maksut, erityisryhmä, verkkolomakkeet) tehdään turnauksen lukituksen alla; tuloksen korjaus samaan aikaan, kun toisella kentällä tallennettiin tulosta, saattoi pysäyttää koko turnauksen"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - tournament lock: results entered at the same time on several courts are no longer lost"
+msgstr "Korjaus – turnauksen lukitus: useilla kentillä yhtä aikaa syötetyt tulokset eivät enää katoa"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - every write to a tournament updates last_update"
+msgstr "Korjaus – jokainen turnaukseen kirjoitus päivittää last_update-arvon"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - results entered on the web no longer store last_update = 0, so the Android app refreshes again"
+msgstr "Korjaus – sivustolla syötetyt tulokset eivät enää tallenna last_update = 0, joten Android-sovellus päivittyy taas"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Security - with registration disabled only tournament organizers can create player accounts from the app (before, any signed-in player could)"
+msgstr "Tietoturva – kun rekisteröinti on poistettu käytöstä, vain turnausten järjestäjät voivat luoda pelaajatilejä sovelluksesta (aiemmin kuka tahansa kirjautunut pelaaja pystyi siihen)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Security - an account created by an organizer no longer returns a login session of the new player to the organizer"
+msgstr "Tietoturva – järjestäjän luoma tili ei enää palauta järjestäjälle uuden pelaajan kirjautumisistuntoa"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Security - registration from the app (incl. a new Google account) respects \"Anyone can register\""
+msgstr "Tietoturva – sovelluksen rekisteröinti (myös uusi Google-tili) noudattaa asetusta ”Kuka tahansa voi rekisteröityä”"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Security - final doubles and registration toggle check tournament admin rights"
+msgstr "Tietoturva – nelinpelin loppuottelu ja ilmoittautumisen vaihto tarkistavat turnauksen ylläpitäjän oikeudet"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Security - guided tour actions need a nonce; regenerating the example tournaments is throttled"
+msgstr "Tietoturva – opastetun kierroksen toiminnot vaativat noncen; esimerkkiturnausten uudelleenluonti on rajoitettu"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Security - admin actions sent as links are protected by a nonce (CSRF)"
+msgstr "Tietoturva – linkeillä lähetettävät ylläpitotoiminnot on suojattu noncella (CSRF)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Security - front-end forms check tournament admin rights, not only the nonce (any logged-in user could change players, payments or delete a tournament)"
+msgstr "Tietoturva – sivuston lomakkeet tarkistavat turnauksen ylläpitäjän oikeudet eikä vain noncea (aiemmin kuka tahansa kirjautunut käyttäjä pystyi muuttamaan pelaajia, maksuja tai poistamaan turnauksen)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - app tournament links on the central site (?tournament_id=5&amp;doroto_site=) are forwarded to the club's tournament page when the app is not installed (sites from the site directory; other sites get a page with a link)"
+msgstr "Lisätty – keskussivuston sovelluslinkit turnauksiin (?tournament_id=5&amp;doroto_site=) ohjaavat seuran turnaussivulle, jos sovellusta ei ole asennettu (sivustohakemiston sivustot; muille sivustoille näytetään sivu, jossa on linkki)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - the tournament page has an \"Open in the app\" link: Android opens the tournament in the app, or Google Play when it is missing"
+msgstr "Lisätty – turnaussivulla on linkki ”Avaa sovelluksessa”: Android avaa turnauksen sovelluksessa tai Google Playssa, jos sovellusta ei ole"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - saving the tournament settings rejects an unknown tournament type"
+msgstr "Korjaus – turnauksen asetuksia tallennettaessa tuntematon turnaustyyppi hylätään"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - a deleted account leaves its open tournaments: removed when it has not played yet, otherwise suspended; it also leaves the organizers, special group and payments (it was drawn into matches as \"Unknown player\")"
+msgstr "Korjaus – poistettu tili poistuu avoimista turnauksistaan: se poistetaan, jos se ei ole vielä pelannut, muuten se keskeytetään; se poistetaan myös järjestäjistä, erityisryhmästä ja maksuista (aiemmin se päätyi arvontaan nimellä ”Tuntematon pelaaja”)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - removing a payment no longer turns the payment list into a JSON object (the Android app could crash on the statistics page)"
+msgstr "Korjaus – maksun poistaminen ei enää muuta maksuluetteloa JSON-objektiksi (Android-sovellus saattoi kaatua tilastosivulla)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - the change form fits on a phone screen (the result and the button were off screen)"
+msgstr "Korjaus – muutoslomake mahtuu puhelimen näytölle (tulos ja painike olivat näytön ulkopuolella)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - organizers see an \"Edit result\" button next to every played match; it selects the match and its result in the change form (the form above the table was easy to miss)"
+msgstr "Lisätty – järjestäjät näkevät jokaisen pelatun ottelun vieressä painikkeen ”Muokkaa tulosta”; se valitsee ottelun ja sen tuloksen muutoslomakkeessa (taulukon yläpuolella olevan lomakkeen saattoi helposti ohittaa)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - REST route skip-matches: the organizer skips several ongoing matches at once and new matches are drawn from all free players"
+msgstr "Lisätty – REST-reitti skip-matches: järjestäjä ohittaa useita käynnissä olevia otteluita kerralla, ja uudet ottelut arvotaan kaikkien vapaiden pelaajien kesken"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - among players with the same number of new teammates left, the one who played fewer games is drawn first; sides (left/right) alternate for both players of a team"
+msgstr "Parannus – pelaajista, joilla on sama määrä jäljellä olevia uusia pareja, arvotaan ensin se, joka on pelannut vähemmän otteluita; puolet (vasen/oikea) vuorottelevat joukkueen molemmilla pelaajilla"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - the draw chooses the opposing team (and the teammate) by previous meetings too: players meet more different opponents and the same players meet less often (with 14 players on 2 courts, pairs that met 3 or more times dropped from about 5 to 1 per evening)"
+msgstr "Parannus – arvonta valitsee vastustajajoukkueen (ja parin) aiempien kohtaamisten perusteella: pelaajat kohtaavat useampia eri vastustajia, ja samat pelaajat kohtaavat harvemmin (14 pelaajalla 2 kentällä 3 kertaa tai useammin kohdanneiden parien määrä laski illan aikana noin 5:stä 1:een)"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.6.0 - 2026/10/02"
+msgstr "1.6.0 - 2026/10/02"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.6.1 - 2026/10/02"
+msgstr "1.6.1 - 2026/10/02"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.6.2 - 2026/10/04"
+msgstr "1.6.2 - 2026/10/04"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - fixed some errors found in Plugin Check"
+msgstr "Korjaus – korjattu joitakin Plugin Checkin löytämiä virheitä"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.5.8 - 2026/06/12"
+msgstr "1.5.8 - 2026/06/12"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - some translations"
+msgstr "Korjaus – joitakin käännöksiä"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.5.7 - 2026/06/06"
+msgstr "1.5.7 - 2026/06/06"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - register and sign in for android app"
+msgstr "Korjaus – rekisteröinti ja kirjautuminen Android-sovelluksessa"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.5.6 - 2026/05/13"
+msgstr "1.5.6 - 2026/05/13"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - remove admin for android app"
+msgstr "Lisätty – ylläpitäjän poistaminen Android-sovellusta varten"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.5.5 - 2026/05/12"
+msgstr "1.5.5 - 2026/05/12"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - rest value is safe now"
+msgstr "Korjaus – rest-arvo on nyt turvallinen"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.0.0 - 2024/01/01"
+msgstr "1.0.0 - 2024/01/01"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.0.1 - 2024/01/03"
+msgstr "1.0.1 - 2024/01/03"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.0.2 - 2024/01/21"
+msgstr "1.0.2 - 2024/01/21"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.0.3 - 2024/01/26"
+msgstr "1.0.3 - 2024/01/26"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.0.4 - 2024/02/02"
+msgstr "1.0.4 - 2024/02/02"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.1.0 - 2024/02/04"
+msgstr "1.1.0 - 2024/02/04"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.1.1 - 2024/02/09"
+msgstr "1.1.1 - 2024/02/09"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.1.2 - 2024/02/13"
+msgstr "1.1.2 - 2024/02/13"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.1.3 - 2024/02/17"
+msgstr "1.1.3 - 2024/02/17"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.1.4 - 2024/02/18"
+msgstr "1.1.4 - 2024/02/18"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.1.5 - 2024/02/20"
+msgstr "1.1.5 - 2024/02/20"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.1.6 - 2024/02/25"
+msgstr "1.1.6 - 2024/02/25"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.1.7 - 2024/03/01"
+msgstr "1.1.7 - 2024/03/01"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.1.8 - 2024/03/07"
+msgstr "1.1.8 - 2024/03/07"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.1.9 - 2024/03/09"
+msgstr "1.1.9 - 2024/03/09"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.2.0 - 2024/03/20"
+msgstr "1.2.0 - 2024/03/20"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.2.1 - 2024/03/21"
+msgstr "1.2.1 - 2024/03/21"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.2.2 - 2024/04/17"
+msgstr "1.2.2 - 2024/04/17"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.2.3 - 2024/04/19"
+msgstr "1.2.3 - 2024/04/19"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.2.4 - 2024/05/08"
+msgstr "1.2.4 - 2024/05/08"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.2.5 - 2024/05/15"
+msgstr "1.2.5 - 2024/05/15"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.2.6 - 2024/05/29"
+msgstr "1.2.6 - 2024/05/29"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.2.7 - 2024/06/07"
+msgstr "1.2.7 - 2024/06/07"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.2.8 - 2024/06/21"
+msgstr "1.2.8 - 2024/06/21"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.2.9 - 2024/06/23"
+msgstr "1.2.9 - 2024/06/23"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.3.0 - 2024/07/06"
+msgstr "1.3.0 - 2024/07/06"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.3.1 - 2024/07/12"
+msgstr "1.3.1 - 2024/07/12"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.3.2 - 2024/07/18"
+msgstr "1.3.2 - 2024/07/18"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.3.3 - 2024/09/13"
+msgstr "1.3.3 - 2024/09/13"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.3.4 - 2024/09/26"
+msgstr "1.3.4 - 2024/09/26"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.3.5 - 2024/09/28"
+msgstr "1.3.5 - 2024/09/28"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.3.6 - 2024/11/02"
+msgstr "1.3.6 - 2024/11/02"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.3.7 - 2024/12/13"
+msgstr "1.3.7 - 2024/12/13"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.3.8 - 2024/12/15"
+msgstr "1.3.8 - 2024/12/15"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.3.9 - 2024/12/21"
+msgstr "1.3.9 - 2024/12/21"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.4.0 - 2024/12/27"
+msgstr "1.4.0 - 2024/12/27"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.4.1 - 2024/12/31"
+msgstr "1.4.1 - 2024/12/31"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.4.2 - 2025/04/16"
+msgstr "1.4.2 - 2025/04/16"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.4.3 - 2025/05/04"
+msgstr "1.4.3 - 2025/05/04"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.4.4 - 2025/05/25"
+msgstr "1.4.4 - 2025/05/25"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.4.5 - 2025/06/09"
+msgstr "1.4.5 - 2025/06/09"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.4.6 - 2025/06/14"
+msgstr "1.4.6 - 2025/06/14"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.4.7 - 2025/07/27"
+msgstr "1.4.7 - 2025/07/27"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.4.8 - 2025/08/07"
+msgstr "1.4.8 - 2025/08/07"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.4.9 - 2025/08/07"
+msgstr "1.4.9 - 2025/08/07"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.5.0 - 2025/08/08"
+msgstr "1.5.0 - 2025/08/08"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.5.1 - 2025/08/17"
+msgstr "1.5.1 - 2025/08/17"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.5.2 - 2025/08/26"
+msgstr "1.5.2 - 2025/08/26"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.5.3 - 2025/12/05"
+msgstr "1.5.3 - 2025/12/05"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.5.4 - 2026/04/22"
+msgstr "1.5.4 - 2026/04/22"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - stable login to android application"
+msgstr "Korjaus – vakaa kirjautuminen Android-sovellukseen"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - existing players are not repeated in the menu Add players"
+msgstr "Korjaus – olemassa olevat pelaajat eivät toistu Lisää pelaajia -valikossa"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Change - Public release of Android app"
+msgstr "Muutos – Android-sovelluksen julkinen julkaisu"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Add 'last update' to the database also for already installed plugings"
+msgstr "Korjaus – ”last update” lisätään tietokantaan myös jo asennetuille lisäosille"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Uninstall also 2 new pages (privacy policy and terms of service)"
+msgstr "Korjaus – myös 2 uuden sivun (tietosuojakäytäntö ja käyttöehdot) poistaminen"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Add 'last update' to the database"
+msgstr "Korjaus – ”last update” lisätään tietokantaan"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Improved some functions for Android app"
+msgstr "Korjaus – parannettu joitakin toimintoja Android-sovellusta varten"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Announcement about the opportunity to become an application tester"
+msgstr "Lisätty – ilmoitus mahdollisuudesta ryhtyä sovelluksen testaajaksi"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Privacy Policy page"
+msgstr "Lisätty – tietosuojakäytäntösivu"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Terms of Service page"
+msgstr "Lisätty – käyttöehtosivu"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Info about last update speed up loading"
+msgstr "Lisätty – tieto viimeisimmästä päivityksestä nopeuttaa latausta"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Correct an error message Undefined array key player['count']"
+msgstr "Korjaus – korjattu virheilmoitus Undefined array key player['count']"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Tournaments filtering by distance and visibility"
+msgstr "Lisätty – turnausten suodatus etäisyyden ja näkyvyyden mukaan"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Support for a Android app"
+msgstr "Lisätty – Android-sovelluksen tuki"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Controls the visibility of the tournament in the public list."
+msgstr "Lisätty – turnauksen näkyvyyden hallinta julkisessa luettelossa."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Location of the tournament."
+msgstr "Lisätty – turnauksen sijainti."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Log in/out block had a problem"
+msgstr "Korjaus – ilmoittautumis-/peruutuslohkossa oli ongelma"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Parameter When enough players are available had sometimes a wrong value."
+msgstr "Korjaus – parametrilla ”Kun pelaajia on tarpeeksi” oli joskus väärä arvo."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Match hiding correction"
+msgstr "Korjaus – otteluiden piilottaminen korjattu"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Register and log in a new user only if anyone can register (system settings)."
+msgstr "Korjaus – uuden käyttäjän rekisteröinti ja kirjautuminen vain, kun kuka tahansa voi rekisteröityä (järjestelmäasetus)."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Register and log in a new user."
+msgstr "Lisätty – uuden käyttäjän rekisteröinti ja kirjautuminen."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Translation loading too early warning."
+msgstr "Korjaus – varoitus liian aikaisin ladatuista käännöksistä."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Dashboard overview widget."
+msgstr "Lisätty – yleiskatsauswidget ohjausnäkymään."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Log-link block."
+msgstr "Lisätty – Log-link-lohko."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Sometimes tournament_id was unknown."
+msgstr "Korjaus – joskus tournament_id oli tuntematon."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Preserving stored values on the backend."
+msgstr "Korjaus – kirjattujen arvojen tallennus palvelimelle."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Guaranteed visibility of the selected tournament in the tournament table."
+msgstr "Korjaus – valitun turnauksen taattu näkyvyys turnaustaulukossa."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Error with hide parameter."
+msgstr "Korjaus – virhe hide-parametrissa."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Permalink structure also works with the floating help icon."
+msgstr "Korjaus – kestolinkkien rakenne toimii myös kelluvan ohjekuvakkeen kanssa."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Tournament name is not copied from previous one."
+msgstr "Korjaus – turnauksen nimeä ei kopioida edellisestä."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - More tournament examples for demonstration."
+msgstr "Lisätty – lisää esimerkkiturnauksia esittelyä varten."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Floating help icon."
+msgstr "Lisätty – kelluva ohjekuvake."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Prevent cashing for logged users."
+msgstr "Lisätty – välimuistin poisto kirjautuneilta käyttäjiltä."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Doubles Badminton table also for co-players"
+msgstr "Korjaus – sulkapallon nelinpelin taulukko myös pareille"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Tournament progress info."
+msgstr "Lisätty – tieto turnauksen edistymisestä."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Change game results availability."
+msgstr "Korjaus – pelitulosten saatavuuden muutos."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Special group count."
+msgstr "Lisätty – erityisryhmän jäsenten määrä."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Change of information about the end of the tournament round."
+msgstr "Turnauskierroksen lopun tiedon muutos."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Opponent selection."
+msgstr "Korjaus – vastustajan valinta."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Pair selection mechanism explanation on the help page."
+msgstr "Lisätty – parinvalintamekanismin selitys ohjesivulla."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Pair selection didn´t take into account number of played games in total."
+msgstr "Korjaus – parinvalinta ei huomioinut pelattujen pelien kokonaismäärää."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Rights to Suspension and Resumption."
+msgstr "Korjaus – keskeyttämis- ja palautusoikeudet."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Rights to add a special group."
+msgstr "Korjaus – oikeudet erityisryhmään lisäämiseen."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Rights to add a tournament admin."
+msgstr "Korjaus – oikeudet turnauksen ylläpitäjän lisäämiseen."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Rights to add other players into tournaments."
+msgstr "Korjaus – oikeudet muiden pelaajien lisäämiseen turnauksiin."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Do not show instructions during the tournament presentation."
+msgstr "Korjaus – ohjeita ei näytetä turnauksen esityksen aikana."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Admin can change a default value for minimum number of games played before a player can be declared a winner."
+msgstr "Lisätty – ylläpitäjä voi muuttaa oletusarvoa sille, kuinka monta peliä vähintään on pelattava, jotta pelaaja voidaan julistaa voittajaksi."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - The ability to specify a minimum number of games played before a player can be declared a winner."
+msgstr "Lisätty – mahdollisuus asettaa vähimmäismäärä pelattuja pelejä, jonka jälkeen pelaaja voidaan julistaa voittajaksi."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Removing a player from a tournament."
+msgstr "Korjaus – pelaajan poistaminen turnauksesta."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Ready for testing in WP Playground."
+msgstr "Korjaus – valmis testattavaksi WP Playgroundissa."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Solving some database errors with empty values."
+msgstr "Korjaus – joidenkin tyhjiin arvoihin liittyvien tietokantavirheiden poistaminen."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Update for WP Playground."
+msgstr "Korjaus – päivitykset WP Playgroundia varten."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Improved playmate choose."
+msgstr "Korjaus – parannettu parin valintaa."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Problems with removing players during a game."
+msgstr "Korjaus – ongelmat pelaajien poistamisessa pelin aikana."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - A currently playing player can´t be removed."
+msgstr "Korjaus – parhaillaan pelaavaa pelaajaa ei voi poistaa."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Fix real count of players after their removing."
+msgstr "Korjaus – oikea pelaajamäärä pelaajien poistamisen jälkeen."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Fix an error during removing a player from the tournament."
+msgstr "Korjaus – virhe pelaajaa turnauksesta poistettaessa."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Redirection to a tournament in case of a user entry."
+msgstr "Korjaus – uudelleenohjaus turnaukseen käyttäjän syötettyä tietoja."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - icon format."
+msgstr "Korjaus – kuvakkeiden muoto."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Modification for WP Playground."
+msgstr "Viimeistelyä WP Playgroundia varten."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Fixed a bug in the database that prevented a tournament record from being created on some servers."
+msgstr "Korjaus – korjattu tietokantavirhe, joka esti turnaustietueen luomisen joillakin palvelimilla."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Unregistered users can no longer enter results in the singles tournament."
+msgstr "Korjaus – rekisteröitymättömät käyttäjät eivät voi enää syöttää tuloksia kaksinpeliturnauksessa."
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid "Possibility to remove players from an already ongoing tournament."
+msgstr "Mahdollisuus poistaa pelaajia jo käynnissä olevasta turnauksesta."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "New - Expanded the ability for tournament administrators to browse through players they have already met at the tournament."
+msgstr "Uutta – turnausten ylläpitäjät voivat nähdä useampia pelaajia, jotka he ovat jo kohdanneet turnauksessa."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "New - If the player has not yet registered for any tournament, it is possible to choose whether to show him a quick help."
+msgstr "Uutta – jos pelaaja ei ole vielä ilmoittautunut yhteenkään turnaukseen, voit valita, näytetäänkö hänelle lyhyt ohje."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "New - Optional login prompt."
+msgstr "Uutta – valinnainen kirjautumiskutsu."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - If all tournaments were deleted, a new tournament could not be created."
+msgstr "Korjaus – jos kaikki turnaukset oli poistettu, uutta turnausta ei voinut luoda."
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid ""
+"Trial tournament improvements.\n"
+"Added the option to announce the end of the tournament round."
+msgstr ""
+"Harjoitusturnauksen parannus.\n"
+"Lisätty mahdollisuus ilmoittaa turnauskierroksen päättymisestä."
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid ""
+"Improved the visual appearance of the main page.\n"
+"Badminton added to the list of available tournaments."
+msgstr ""
+"Pääsivun ulkoasua parannettu.\n"
+"Sulkapallo lisätty käytettävissä olevien turnausten luetteloon."
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid "Option to announce separate winners from the special group and outside the special group."
+msgstr "Mahdollisuus julistaa erilliset voittajat erityisryhmästä ja sen ulkopuolelta."
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid ""
+"Notices after a plugin activation.\n"
+"Added player trend."
+msgstr ""
+"Ilmoitus lisäosan aktivoinnin jälkeen.\n"
+"Lisätty pelaajan trendi."
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid ""
+"Modified tournament editing tab.\n"
+"Added option to change tournament type."
+msgstr ""
+"Turnauksen muokkausvälilehteä muutettu.\n"
+"Lisätty mahdollisuus vaihtaa turnaustyyppiä."
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid ""
+"Reactivating the plugin doesn´t affect the already deleted tournament example. \n"
+"Unblock offering maximum games count.\n"
+"Fix tournament change when entering results.\n"
+"Added quick help for newcomers.\n"
+"Allow the final match also for singles."
+msgstr ""
+"Lisäosan uudelleenaktivointi ei vaikuta jo poistettuun esimerkkiturnaukseen.\n"
+"Pelien enimmäismäärän valinta avattu.\n"
+"Korjattu turnauksen muutos tuloksia syötettäessä.\n"
+"Lisätty lyhyt ohje aloittelijoille.\n"
+"Loppuottelu sallittu myös kaksinpelissä."
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid ""
+"Added the option for single tournaments. \n"
+"Created an environment for additional sports."
+msgstr ""
+"Lisätty mahdollisuus kaksinpeliturnauksiin.\n"
+"Luotu ympäristö muille lajeille."
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid ""
+"The administrator can now use 'hide' option when editing the match result.\n"
+"Free score input is allowed. This opens using not only for tennis but for example for table tennis or beach volleyball."
+msgstr ""
+"Ylläpitäjä voi nyt käyttää piilotusvaihtoehtoa ottelun tulosta muuttaessaan.\n"
+"Sallittu tuloksen vapaa syöttäminen. Näin lisäosaa voi käyttää tenniksen lisäksi esimerkiksi pöytätenniksessä tai rantalentopallossa."
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid ""
+"Minor changes in code:\n"
+"* Allow to transfer organizer rights to a non-playing user.\n"
+"* Ensuring an even rotation of serves at the start of the tournament."
+msgstr ""
+"Pieniä muutoksia koodiin:\n"
+"* Sallittu järjestäjän oikeuksien siirto käyttäjälle, joka ei pelaa.\n"
+"* Varmistettu syötön tasainen vuorottelu turnauksen alussa."
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid "Fixed choosing between left and right side in first matches."
+msgstr "Korjattu vasemman ja oikean puolen valinta ensimmäisissä otteluissa."
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid "A small modification of admin screen."
+msgstr "Pieni muutos ylläpitonäkymään."
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid "First release to public."
+msgstr "Ensimmäinen julkinen julkaisu."
+

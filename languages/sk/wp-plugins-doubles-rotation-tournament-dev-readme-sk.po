@@ -1,0 +1,1289 @@
+# Translation of Plugins - Rotation Tournaments - Development Readme (trunk) in Slovak
+# This file is distributed under the same license as the Plugins - Rotation Tournaments - Development Readme (trunk) package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Plugins - Rotation Tournaments - Development Readme (trunk)\n"
+"PO-Revision-Date: 2026-10-07 12:06:35+0000\n"
+"Language: sk_SK\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n == 1) ? 0 : ((n >= 2 && n <= 4) ? 1 : 2);\n"
+"X-Generator: GlotPress/4.1.0\n"
+
+#. Short description.
+#, gp-priority: high
+msgid "Do you play Singles or Doubles Tournaments? This plugin manages Rotation Tournaments where players have a different partner in each game."
+msgstr "Organizujete turnaje vo dvojhre alebo vo štvorhre? Tento plugin spravuje rotačné turnaje, v ktorých majú hráči v každej hre iného partnera."
+
+#. Plugin name.
+#, gp-priority: high
+msgid "Rotation Tournaments"
+msgstr "Rotačné turnaje"
+
+#. Found in installation paragraph.
+msgid "After installation, go to the app's settings and enter the address of your website where this plugin is installed."
+msgstr "Po inštalácii prejdite do nastavení aplikácie a zadajte adresu webu, na ktorom je tento plugin nainštalovaný."
+
+#. Found in installation paragraph.
+msgid "Or download it directly from this link: https://play.google.com/store/apps/details?id=cz.doroto.app"
+msgstr "Alebo si ju stiahnite priamo z tohto odkazu: https://play.google.com/store/apps/details?id=cz.doroto.app"
+
+#. Found in installation paragraph.
+msgid "Search for \"Rotation Tournaments\" on the Google Play Store."
+msgstr "Vyhľadajte v Obchode Google Play „Rotation Tournaments“."
+
+#. Found in description paragraph.
+msgid "To get the full experience of managing tournaments on the go, download our mobile app, now available on Google Play!"
+msgstr "Ak si chcete naplno užiť správu turnajov na cestách, stiahnite si našu mobilnú aplikáciu, ktorá je už dostupná na Google Play!"
+
+#. Found in description paragraph.
+msgid "<strong>YouTube quick intro:</strong>"
+msgstr "<strong>Stručný úvod na YouTube:</strong>"
+
+#. Found in description list item.
+msgid "Video for a quick introduction to the Rotation Tournament:"
+msgstr "Video so stručným úvodom do rotačných turnajov:"
+
+#. Found in faq paragraph.
+msgid "Yes. If you install the Rotation Tournaments plugin, allow player registration, and enable visibility in the website list, your site can appear in the Android app. Initially, someone must manually enter your website address into the app. After that, it becomes visible in the list for all users."
+msgstr "Áno. Ak si nainštalujete plugin Rotation Tournaments, povolíte registráciu hráčov a zapnete viditeľnosť v zozname webov, váš web sa môže zobraziť v aplikácii pre Android. Najprv musí niekto adresu vášho webu zadať do aplikácie ručne. Potom sa web zobrazí v zozname všetkým používateľom."
+
+#. Found in faq paragraph.
+msgid "Yes. An iOS version of the Rotation Tournaments app is planned and will be released in the near future."
+msgstr "Áno. Verzia aplikácie Rotation Tournaments pre iOS sa pripravuje a vyjde v blízkej budúcnosti."
+
+#. Found in faq header.
+msgid "Will my website be visible in the Rotation Tournaments Android app?"
+msgstr "Bude môj web viditeľný v aplikácii Rotation Tournaments pre Android?"
+
+#. Found in faq header.
+msgid "Will there be an iPhone or iPad version of the app?"
+msgstr "Bude existovať verzia aplikácie pre iPhone alebo iPad?"
+
+#. Found in installation paragraph.
+msgid "<strong>How to install Wordpress plugin:</strong>"
+msgstr "<strong>Ako nainštalovať plugin pre WordPress:</strong>"
+
+#. Found in installation list item.
+msgid "After activating the plugin, 4 pages will be created: one for managing tournaments (main page), one with tournament rules, and additional pages for Privacy Policy and Terms of Service. A sample post announcing a newly created tournament will also be added."
+msgstr "Po aktivácii pluginu sa vytvoria 4 stránky: jedna na správu turnajov (hlavná stránka), jedna s pravidlami turnaja a stránky Zásady ochrany osobných údajov a Podmienky služby. Pridá sa aj ukážkový článok s oznámením o novo vytvorenom turnaji."
+
+#. Found in installation paragraph.
+msgid "<strong>How to install the Android app:</strong>"
+msgstr "<strong>Ako nainštalovať aplikáciu pre Android:</strong>"
+
+#. Found in description paragraph.
+msgid "<strong>This plugin is the server-side for the \"Rotation Tournaments\" Android app.</strong>"
+msgstr "<strong>Tento plugin je serverová časť aplikácie „Rotation Tournaments“ pre Android.</strong>"
+
+#. Screenshot description.
+msgid "Individual tournament participants enter their results into the WordPress server and share the data with each other."
+msgstr "Jednotliví účastníci turnaja zadávajú svoje výsledky na server WordPress a zdieľajú údaje medzi sebou."
+
+#. Screenshot description.
+msgid "Matches played. (Android app)"
+msgstr "Odohrané zápasy. (Aplikácia pre Android)"
+
+#. Screenshot description.
+msgid "Tournament table. (Wordpress)"
+msgstr "Turnajová tabuľka. (WordPress)"
+
+#. Screenshot description.
+msgid "Matches drawn. (Android app)"
+msgstr "Vyžrebované zápasy. (Aplikácia pre Android)"
+
+#. Screenshot description.
+msgid "Editing tournament parameters. (Wordpress)"
+msgstr "Úprava parametrov turnaja. (WordPress)"
+
+#. Screenshot description.
+msgid "Table of players with rankings. (Android app)"
+msgstr "Tabuľka hráčov s poradím. (Aplikácia pre Android)"
+
+#. Screenshot description.
+msgid "Matches played. (Wordpress)"
+msgstr "Odohrané zápasy. (WordPress)"
+
+#. Screenshot description.
+msgid "Basic overview of the tournament. (Android app)"
+msgstr "Základný prehľad turnaja. (Aplikácia pre Android)"
+
+#. Screenshot description.
+msgid "Matches drawn. (Wordpress)"
+msgstr "Vyžrebované zápasy. (WordPress)"
+
+#. Found in description paragraph.
+msgid "<strong>Rotation Tournaments</strong> provides a platform for organizing all kinds of sports Singles and Doubles Tournaments, e.g."
+msgstr "<strong>Rotačné turnaje</strong> poskytujú platformu na organizovanie všetkých druhov športových turnajov vo dvojhre a štvorhre, napr."
+
+#. Found in description list item.
+msgid "Squash"
+msgstr "Squash"
+
+#. Found in description list item.
+msgid "Beach Volleyball"
+msgstr "Plážový volejbal"
+
+#. Found in description list item.
+msgid "Badminton"
+msgstr "Bedminton"
+
+#. Found in description list item.
+msgid "Padel"
+msgstr "Padel"
+
+#. Found in description list item.
+msgid "Table Tennis"
+msgstr "Stolný tenis"
+
+#. Found in description list item.
+msgid "Tennis"
+msgstr "Tenis"
+
+#. Found in faq paragraph.
+msgid ""
+"This plugin can be used for all types of sports where 2 or 4 players compete in singles or doubles.\n"
+"You can use this plugin for tennis, table tennis, squash, padel, badminton, beach volleyball and probably for more."
+msgstr ""
+"Tento plugin možno použiť pre všetky športy, v ktorých súťažia 2 alebo 4 hráči vo dvojhre alebo štvorhre.\n"
+"Tento plugin môžete použiť pre tenis, stolný tenis, squash, padel, bedminton, plážový volejbal a pravdepodobne aj ďalšie."
+
+#. Found in faq paragraph.
+msgid "Yes. When creating a tournament, you can choose whether to create a singles or a doubles tournament."
+msgstr "Áno. Pri vytváraní turnaja si môžete vybrať, či chcete vytvoriť turnaj vo dvojhre, alebo vo štvorhre."
+
+#. Found in faq header.
+msgid "What sports tournaments is this plugin for?"
+msgstr "Pre aké športové turnaje je tento plugin určený?"
+
+#. Found in description paragraph.
+msgid "<strong>General Features:</strong>"
+msgstr "<strong>Všeobecné vlastnosti:</strong>"
+
+#. Found in description paragraph.
+msgid "<strong>Doubles Rotation Tournament:</strong>"
+msgstr "<strong>Turnaj rotujúcich štvorhier:</strong>"
+
+#. Found in description paragraph.
+msgid "<strong>Singles Rotation Tournament:</strong>"
+msgstr "<strong>Turnaj rotujúcich dvojhier:</strong>"
+
+#. Found in description paragraph.
+msgid "The participants of a tournament change partners several times during the tournament by a random selection and play against different players. The ratio of games won to games lost is calculated for each participant. The winner of the tournament is the player with this highest ratio. While a Singles Rotation Tournament can be organized without the aid of technology, in the case of a Doubles Rotation Tournament, this is not possible."
+msgstr "Účastníci turnaja si počas turnaja niekoľkokrát náhodným výberom vymenia partnerov a hrajú proti rôznym hráčom. Pre každého účastníka sa vypočíta pomer vyhraných a prehraných gemov. Víťazom turnaja sa stáva hráč s najvyšším pomerom. Zatiaľ čo turnaj rotujúcich dvojhier možno zorganizovať bez pomoci techniky, pri turnaji rotujúcich štvorhier to možné nie je."
+
+#. Found in description paragraph.
+msgid "The <strong>Rotation Tournaments</strong> have a strong social aspect because its goal is to keep players in the tournament until the very end. The situation where weaker players would leave the tournament due to elimination rounds is eliminated. It allows grouping players into a special category with special conditions. This special setting can be utilized, for example, in mixed tournaments."
+msgstr "<strong>Rotačné turnaje</strong> majú silný spoločenský rozmer, pretože ich cieľom je udržať hráčov v turnaji až do úplného konca. Odpadá situácia, keď by slabší hráči z turnaja odchádzali kvôli vyraďovacím kolám. Hráčov možno zaradiť do osobitnej kategórie s osobitnými podmienkami. Toto osobitné nastavenie možno využiť napríklad v zmiešaných turnajoch."
+
+#. Found in description paragraph.
+msgid "In <strong>Rotation Tournaments</strong>, each participant plays against every other participant and there are no eliminations in individual rounds. To maximize the variety of match combinations, the matches are typically played in a single set."
+msgstr "V <strong>rotačných turnajoch</strong> hrá každý účastník proti každému a v jednotlivých kolách nikto nevypadáva. Aby bolo čo najviac rôznych kombinácií zápasov, hrajú sa zápasy zvyčajne na jeden set."
+
+#. Found in description list item.
+msgid "Suitable for various sports: tennis, table tennis, squash, padel, badminton, beach volleyball, and more."
+msgstr "Vhodné pre rôzne športy: tenis, stolný tenis, squash, padel, bedminton, plážový volejbal a ďalšie."
+
+#. Found in description list item.
+msgid "Integration with website user accounts."
+msgstr "Integrácia s používateľskými účtami webu."
+
+#. Found in description list item.
+msgid "No downtime during the tournament."
+msgstr "Žiadne prestoje počas turnaja."
+
+#. Found in description list item.
+msgid "Comprehensive overview of player quality."
+msgstr "Komplexný prehľad o kvalite hráčov."
+
+#. Found in description list item.
+msgid "User-friendly interface for administrators and participants."
+msgstr "Používateľsky prívetivé rozhranie pre administrátorov a účastníkov."
+
+#. Found in description list item.
+msgid "Customizable settings for each tournament."
+msgstr "Prispôsobiteľné nastavenia pre každý turnaj."
+
+#. Found in description list item.
+msgid "Real-time score tracking."
+msgstr "Sledovanie skóre v reálnom čase."
+
+#. Found in description list item.
+msgid "Seamless scheduling of matches."
+msgstr "Bezproblémové plánovanie zápasov."
+
+#. Found in description list item.
+msgid "Announcement of the Best Player and Most Ideal Pair at the end of the tournament."
+msgstr "Vyhlásenie najlepšieho hráča a najideálnejšej dvojice na konci turnaja."
+
+#. Found in description list item.
+msgid "Ranking based on the ratio of games won to games lost."
+msgstr "Poradie založené na pomere vyhraných a prehraných gemov."
+
+#. Found in description list item.
+msgid "Individual players can join or leave the tournament at any time."
+msgstr "Jednotliví hráči sa môžu do turnaja kedykoľvek zapojiť alebo z neho odísť."
+
+#. Found in description list item.
+msgid "Tournament can be interrupted or extended without disruption."
+msgstr "Turnaj možno prerušiť alebo predĺžiť bez narušenia jeho priebehu."
+
+#. Found in description list item.
+msgid "Shorter matches for more participation."
+msgstr "Kratšie zápasy pre väčšiu účasť."
+
+#. Found in description list item.
+msgid "No eliminations, ensuring all players stay in the game."
+msgstr "Žiadne vyraďovanie, takže všetci hráči zostávajú v hre."
+
+#. Found in description list item.
+msgid "Define special groups of players with unique conditions."
+msgstr "Definovanie špeciálnych skupín hráčov s osobitnými podmienkami."
+
+#. Found in description list item.
+msgid "Suitable for odd numbers of players and minimum lineups of 4 players."
+msgstr "Vhodné aj pre nepárny počet hráčov a minimálnu zostavu 4 hráčov."
+
+#. Found in description list item.
+msgid "Individuals can enter the tournament without a permanent teammate."
+msgstr "Jednotlivci môžu nastúpiť do turnaja bez stáleho spoluhráča."
+
+#. Found in description list item.
+msgid "Rotation of teammates, ensuring variety in partnerships."
+msgstr "Striedanie spoluhráčov zabezpečuje rozmanitosť dvojíc."
+
+#. Found in description list item.
+msgid "Alternative form of a Doubles Tournament where players enter each match with a different partner and in different positions (alternating left and right sides)."
+msgstr "Alternatívna forma turnaja vo štvorhre, v ktorej hráči nastupujú do každého zápasu s iným partnerom a na rôznych pozíciách (striedanie ľavej a pravej strany)."
+
+#. Found in description list item.
+msgid "Depending on the time options, everyone plays against everyone."
+msgstr "Podľa časových možností hrá každý s každým."
+
+#. Found in description list item.
+msgid "Alternative form of a Singles Tournament where players face each other without elimination rounds."
+msgstr "Alternatívna forma turnaja vo dvojhre, v ktorej proti sebe hráči nastupujú bez vyraďovacích kôl."
+
+#. Found in description header.
+msgid "Features"
+msgstr "Funkcie"
+
+#. Found in faq header.
+msgid "Is this plugin suitable for singles tournaments?"
+msgstr "Je tento plugin vhodný pre turnaje vo dvojhre?"
+
+#. Found in faq paragraph.
+msgid "Yes, each tournament participant must have their own account. If a website has disabled user registration, this account must be created by the website administrator."
+msgstr "Áno, každý účastník turnaja musí mať svoj účet. Ak má web zakázanú registráciu používateľov, musí tento účet vytvoriť správca webu."
+
+#. Found in faq header.
+msgid "Does each player have to have an account created on my website?"
+msgstr "Musí mať každý hráč vytvorený účet na mojom webe?"
+
+#. Found in installation list item.
+msgid "At the end close the tournament and look who was announced as the winner."
+msgstr "Na konci turnaj uzavrite a pozrite sa, kto bol vyhlásený za víťaza."
+
+#. Found in installation list item.
+msgid "You can change tournament settings on the main page or you can look at 2 new admin pages that are dedicated for overall environmental settings and for description of all possible shortcodes."
+msgstr "Nastavenia turnaja môžete zmeniť na hlavnej stránke alebo sa pozrieť na 2 nové stránky administrácie, ktoré sú venované celkovému nastaveniu prostredia a popisu všetkých dostupných shortcodov."
+
+#. Found in installation list item.
+msgid "If you have a sufficient amount of players then you can close a registration and start playing matches."
+msgstr "Ak máte dostatočný počet hráčov, môžete uzavrieť registráciu a začať hrať zápasy."
+
+#. Found in installation list item.
+msgid "Then you can log in your created tournament and as a tournament´s administrator you can add manually also other players sourced from WP database."
+msgstr "Potom sa môžete prihlásiť na vytvorený turnaj a ako administrátor turnaja môžete ručne pridať aj ďalších hráčov z databázy WordPressu."
+
+#. Found in installation list item.
+msgid "Start by clicking on \"Create a new tournament\" under \"Tournament Selection …\" on the main page."
+msgstr "Začnite kliknutím na „Vytvoriť nový turnaj“ v časti „Výber turnaja…“ na hlavnej stránke."
+
+#. Found in installation list item.
+msgid "Install the plugin as usual."
+msgstr "Nainštalujte plugin ako obvykle."
+
+#. Found in description paragraph.
+msgid "Visit <a href=\"https://doroto.ltcchrast.cz/\">test page</a> for more information, try to create your own tournament and take a look at <a href=\"https://doroto.ltcchrast.cz/rules-of-the-doubles-rotation-tournament/\">Rules of the Doubles Rotation Tournament</a>."
+msgstr "Navštívte <a href=\"https://doroto.ltcchrast.cz/\">testovaciu stránku</a> pre viac informácií, skúste si vytvoriť vlastný turnaj a pozrite si <a href=\"https://doroto.ltcchrast.cz/rules-of-the-doubles-rotation-tournament/\">pravidlá turnaja rotujúcich štvorhier</a>."
+
+#. Found in description paragraph.
+msgid "[youtube https://www.youtube.com/watch?v=NoL9aPTv8u8]"
+msgstr "[youtube https://www.youtube.com/watch?v=NoL9aPTv8u8]"
+
+#. Found in description header.
+msgid "More information"
+msgstr "Viac informácií"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - the plugin restores read permissions of its files after an FTP upload (the web server answered 403 and the admin page stayed empty); the admin page shows a notice when its script cannot be loaded"
+msgstr "Oprava – plugin po nahratí cez FTP obnoví oprávnenia na čítanie svojich súborov (webový server vracal chybu 403 a stránka administrácie zostávala prázdna); stránka administrácie zobrazí upozornenie, ak nemožno načítať jej skript"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - tournament settings keep the ranges of 1.x and of the app (a larger value made the app's dropdowns fail)"
+msgstr "Oprava – nastavenia turnaja zachovávajú rozsahy z verzie 1.x a z aplikácie (vyššia hodnota spôsobovala zlyhanie rozbaľovacích zoznamov v aplikácii)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - REST requests from the website use the WordPress login (cookie and nonce) when no app token is sent"
+msgstr "Vylepšenie – požiadavky REST z webu používajú prihlásenie WordPressu (cookie a nonce), ak sa neodošle token aplikácie"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - styles, scripts and no-cache headers are sent only on pages that show the plugin; the unused tipTip library was removed and the admin no longer calls ip-api.com"
+msgstr "Vylepšenie – štýly, skripty a hlavičky zakazujúce ukladanie do vyrovnávacej pamäte sa odosielajú iba na stránkach, na ktorých sa plugin zobrazuje; nepoužívaná knižnica tipTip bola odstránená a administrácia už nevolá ip-api.com"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - every change of a tournament (web forms, blocks and the Android app) goes through one shared layer with the same permissions, locking and change detection"
+msgstr "Vylepšenie – každá zmena turnaja (webové formuláre, bloky a aplikácia pre Android) prechádza jednou spoločnou vrstvou s rovnakými oprávneniami, zamykaním a detekciou zmien"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - new admin page with Overview, Settings and Help instead of nine settings tabs; every setting is checked on the server and errors are shown next to the field"
+msgstr "Vylepšenie – nová stránka administrácie s prehľadom, nastaveniami a pomocníkom namiesto deviatich záložiek nastavení; každé nastavenie sa kontroluje na serveri a chyby sa zobrazujú pri príslušnom poli"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - the serving player is marked on the match cards; the special group is highlighted in matches, results, players, statistics and winners; the tournament details (invitation text) can be shown at any time"
+msgstr "Pridané – podávajúci hráč je označený na kartách zápasov; špeciálna skupina je zvýraznená v zápasoch, výsledkoch, hráčoch, štatistikách a víťazoch; podrobnosti turnaja (text pozvánky) možno kedykoľvek zobraziť"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - the tournament block takes its colours from the theme (button and palette colours); the block's Styles panel can change the accent, the tab bar and table headers, their text and the colour of the special group"
+msgstr "Pridané – blok turnaja preberá farby z témy (farby tlačidiel a palety); v paneli Štýly bloku možno zmeniť zvýrazňujúcu farbu, lištu záložiek a hlavičky tabuliek, ich text a farbu špeciálnej skupiny"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - the tournament block: Share dialog with a QR code, \"Open in the app\" line, full-screen presentation that rotates the sections, map of the tournament place in the settings, and guided tours of the page and of four example tournaments"
+msgstr "Pridané – blok turnaja: dialóg Zdieľať s QR kódom, riadok „Otvoriť v aplikácii“, prezentácia na celú obrazovku, ktorá strieda jednotlivé sekcie, mapa miesta konania turnaja v nastaveniach a sprievodcovia stránkou a štyrmi ukážkovými turnajmi"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - the plugin admin can convert the main page to the blocks with one button; the old content stays in the page revisions. New installs create the main page from the blocks. The shortcodes [doroto_tournament] and [doroto_tournament_list] show the blocks in the classic editor; the 1.x shortcodes keep working"
+msgstr "Pridané – administrátor pluginu môže jedným tlačidlom previesť hlavnú stránku na bloky; starý obsah zostane v revíziách stránky. Nové inštalácie vytvoria hlavnú stránku z blokov. Shortcody [doroto_tournament] a [doroto_tournament_list] zobrazujú bloky v klasickom editore; shortcody z verzie 1.x naďalej fungujú"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - blocks for the block editor: \"Rotation tournament\" (matches, results, players, statistics and settings on tabs, updated live without reloading the page), its variations \"Tournament standings\", \"Tournament matches\" and \"Tournament presentation\", \"Tournament list\" and \"Tournament invitation\""
+msgstr "Pridané – bloky pre editor blokov: „Rotačný turnaj“ (zápasy, výsledky, hráči, štatistiky a nastavenia v záložkách, priebežne aktualizované bez opätovného načítania stránky), jeho varianty „Poradie turnaja“, „Zápasy turnaja“ a „Prezentácia turnaja“, „Zoznam turnajov“ a „Pozvánka na turnaj“"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "2.0.0 - 2026/10/06"
+msgstr "2.0.0 - 2026/10/06"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Change - the review request is shown only to administrators, 14 days after activation once the site has its own tournament, and comes back 7 days after \"Remind me\" until the plugin is rated"
+msgstr "Zmena – žiadosť o hodnotenie sa zobrazuje iba administrátorom, 14 dní po aktivácii, keď má web vlastný turnaj, a po kliknutí na „Pripomenúť“ sa znova zobrazí o 7 dní, kým plugin nebude ohodnotený"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - the tournament page shows a short link to the Android app (can be turned off in Settings -&gt; Mobile app)"
+msgstr "Pridané – stránka turnaja zobrazuje krátky odkaz na aplikáciu pre Android (možno vypnúť v Nastavenia -&gt; Mobilná aplikácia)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - optional mode join/leave for the app join endpoint"
+msgstr "Pridané – voliteľný režim prihlásenia/odchodu pre endpoint prihlasovania v aplikácii"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - REST endpoint create-player: the organizer creates a player and adds them to the tournament in one step; the player gets an e-mail to set the password"
+msgstr "Pridané – REST endpoint create-player: organizátor jedným krokom vytvorí hráča a pridá ho do turnaja; hráč dostane e-mail na nastavenie hesla"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Change - tournament links to the home page (\"?tournament_id=5\") and the old app QR codes (\"/tournament?id=5\") open the tournament page"
+msgstr "Zmena – odkazy na turnaj na domovskú stránku („?tournament_id=5“) a staré QR kódy aplikácie („/tournament?id=5“) otvárajú stránku turnaja"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Change - the default name of a new tournament uses the site time zone, not UTC"
+msgstr "Zmena – predvolený názov nového turnaja používa časové pásmo webu, nie UTC"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Change - the app can be signed in on several devices at once (up to 10 per user)"
+msgstr "Zmena – v aplikácii možno byť prihlásený súčasne na viacerých zariadeniach (najviac 10 na používateľa)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Change - invitation link only joins the tournament (a second click no longer unregisters the player), redirects to the login page and back, and then to the tournament page"
+msgstr "Zmena – odkaz pozvánky iba prihlási hráča na turnaj (druhé kliknutie už hráča neodhlási), presmeruje na prihlasovaciu stránku a späť a potom na stránku turnaja"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - REST responses are never served from page caches or CDNs"
+msgstr "Oprava – odpovede REST sa nikdy neposkytujú z vyrovnávacej pamäte stránok ani z CDN"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Authorization header is read also on FPM/CGI hosts"
+msgstr "Oprava – hlavička Authorization sa načíta aj na hostingoch s FPM/CGI"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - database upgrade adds new columns also on already installed sites"
+msgstr "Oprava – aktualizácia databázy pridáva nové stĺpce aj na už nainštalovaných weboch"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - several devices signing in or refreshing their session at the same moment no longer sign each other out"
+msgstr "Oprava – viaceré zariadenia, ktoré sa súčasne prihlasujú alebo obnovujú reláciu, sa už navzájom neodhlasujú"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - every change of a running tournament (correcting a result, suspending or removing a player, settings, payments, special group, web forms) runs under the tournament lock; correcting a result while another court saved its result could stall the whole tournament"
+msgstr "Oprava – každá zmena prebiehajúceho turnaja (oprava výsledku, pozastavenie alebo odobratie hráča, nastavenia, platby, špeciálna skupina, webové formuláre) prebieha pod zámkom turnaja; oprava výsledku počas ukladania výsledku z iného kurtu mohla zablokovať celý turnaj"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - tournament lock: results entered at the same time on several courts are no longer lost"
+msgstr "Oprava – zámok turnaja: výsledky zadané súčasne na viacerých kurtoch sa už nestrácajú"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - every write to a tournament updates last_update"
+msgstr "Oprava – každý zápis do turnaja aktualizuje hodnotu last_update"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - results entered on the web no longer store last_update = 0, so the Android app refreshes again"
+msgstr "Oprava – výsledky zadané na webe už neukladajú last_update = 0, takže aplikácia pre Android sa znova aktualizuje"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Security - with registration disabled only tournament organizers can create player accounts from the app (before, any signed-in player could)"
+msgstr "Zabezpečenie – pri vypnutej registrácii môžu účty hráčov z aplikácie vytvárať iba organizátori turnajov (predtým to mohol každý prihlásený hráč)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Security - an account created by an organizer no longer returns a login session of the new player to the organizer"
+msgstr "Zabezpečenie – účet vytvorený organizátorom už organizátorovi nevracia prihlasovaciu reláciu nového hráča"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Security - registration from the app (incl. a new Google account) respects \"Anyone can register\""
+msgstr "Zabezpečenie – registrácia z aplikácie (vrátane nového účtu Google) rešpektuje nastavenie „Ktokoľvek sa môže zaregistrovať“"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Security - final doubles and registration toggle check tournament admin rights"
+msgstr "Zabezpečenie – finálová štvorhra a prepínanie registrácie kontrolujú oprávnenia administrátora turnaja"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Security - guided tour actions need a nonce; regenerating the example tournaments is throttled"
+msgstr "Zabezpečenie – akcie sprievodcu vyžadujú nonce; opätovné generovanie ukážkových turnajov je obmedzené"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Security - admin actions sent as links are protected by a nonce (CSRF)"
+msgstr "Zabezpečenie – administrátorské akcie odosielané prostredníctvom odkazov sú chránené pomocou nonce (CSRF)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Security - front-end forms check tournament admin rights, not only the nonce (any logged-in user could change players, payments or delete a tournament)"
+msgstr "Zabezpečenie – formuláre na webe kontrolujú oprávnenia administrátora turnaja, nielen nonce (predtým mohol každý prihlásený používateľ meniť hráčov, platby alebo vymazať turnaj)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - app tournament links on the central site (?tournament_id=5&amp;doroto_site=) are forwarded to the club's tournament page when the app is not installed (sites from the site directory; other sites get a page with a link)"
+msgstr "Pridané – odkazy aplikácie na turnaje na centrálnom webe (?tournament_id=5&amp;doroto_site=) sa pri nenainštalovanej aplikácii presmerujú na stránku turnaja klubu (weby z adresára webov; pre ostatné weby sa zobrazí stránka s odkazom)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - the tournament page has an \"Open in the app\" link: Android opens the tournament in the app, or Google Play when it is missing"
+msgstr "Pridané – stránka turnaja obsahuje odkaz „Otvoriť v aplikácii“: Android otvorí turnaj v aplikácii, alebo Google Play, ak aplikácia nie je nainštalovaná"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - saving the tournament settings rejects an unknown tournament type"
+msgstr "Oprava – pri ukladaní nastavení turnaja sa odmietne neznámy typ turnaja"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - a deleted account leaves its open tournaments: removed when it has not played yet, otherwise suspended; it also leaves the organizers, special group and payments (it was drawn into matches as \"Unknown player\")"
+msgstr "Oprava – vymazaný účet opustí svoje otvorené turnaje: ak ešte nehral, je z turnaja odobraný, inak je pozastavený; zároveň je odobraný z organizátorov, špeciálnej skupiny a platieb (predtým bol žrebovaný do zápasov ako „Neznámy hráč“)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - removing a payment no longer turns the payment list into a JSON object (the Android app could crash on the statistics page)"
+msgstr "Oprava – odobratie platby už nemení zoznam platieb na objekt JSON (aplikácia pre Android mohla na stránke štatistík spadnúť)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - the change form fits on a phone screen (the result and the button were off screen)"
+msgstr "Oprava – formulár na zmeny sa zmestí na obrazovku telefónu (výsledok a tlačidlo boli mimo obrazovky)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - organizers see an \"Edit result\" button next to every played match; it selects the match and its result in the change form (the form above the table was easy to miss)"
+msgstr "Pridané – organizátori vidia pri každom odohranom zápase tlačidlo „Upraviť výsledok“; vyberie zápas a jeho výsledok vo formulári na zmeny (formulár nad tabuľkou sa dal ľahko prehliadnuť)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - REST route skip-matches: the organizer skips several ongoing matches at once and new matches are drawn from all free players"
+msgstr "Pridané – REST trasa skip-matches: organizátor preskočí niekoľko prebiehajúcich zápasov naraz a nové zápasy sa vyžrebujú zo všetkých voľných hráčov"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - among players with the same number of new teammates left, the one who played fewer games is drawn first; sides (left/right) alternate for both players of a team"
+msgstr "Vylepšenie – spomedzi hráčov s rovnakým počtom zostávajúcich nových spoluhráčov sa ako prvý vyžrebuje ten, kto odohral menej zápasov; strany (ľavá/pravá) sa striedajú u oboch hráčov tímu"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - the draw chooses the opposing team (and the teammate) by previous meetings too: players meet more different opponents and the same players meet less often (with 14 players on 2 courts, pairs that met 3 or more times dropped from about 5 to 1 per evening)"
+msgstr "Vylepšenie – žrebovanie vyberá súperov tím (aj spoluhráča) aj podľa predchádzajúcich vzájomných stretnutí: hráči sa stretávajú s viacerými rôznymi súpermi a tí istí hráči sa stretávajú menej často (pri 14 hráčoch na 2 kurtoch klesol počet dvojíc, ktoré sa stretli 3-krát a viackrát, približne z 5 na 1 za večer)"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.6.0 - 2026/10/02"
+msgstr "1.6.0 - 2026/10/02"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.6.1 - 2026/10/02"
+msgstr "1.6.1 - 2026/10/02"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.6.2 - 2026/10/04"
+msgstr "1.6.2 - 2026/10/04"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - fixed some errors found in Plugin Check"
+msgstr "Oprava – opravené niektoré chyby nájdené nástrojom Plugin Check"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.5.8 - 2026/06/12"
+msgstr "1.5.8 - 2026/06/12"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - some translations"
+msgstr "Oprava – niektoré preklady"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.5.7 - 2026/06/06"
+msgstr "1.5.7 - 2026/06/06"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - register and sign in for android app"
+msgstr "Oprava – registrácia a prihlásenie do aplikácie pre Android"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.5.6 - 2026/05/13"
+msgstr "1.5.6 - 2026/05/13"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - remove admin for android app"
+msgstr "Pridané – odobratie administrátora pre aplikáciu pre Android"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.5.5 - 2026/05/12"
+msgstr "1.5.5 - 2026/05/12"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - rest value is safe now"
+msgstr "Oprava – hodnota rest je teraz bezpečná"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.0.0 - 2024/01/01"
+msgstr "1.0.0 - 2024/01/01"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.0.1 - 2024/01/03"
+msgstr "1.0.1 - 2024/01/03"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.0.2 - 2024/01/21"
+msgstr "1.0.2 - 2024/01/21"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.0.3 - 2024/01/26"
+msgstr "1.0.3 - 2024/01/26"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.0.4 - 2024/02/02"
+msgstr "1.0.4 - 2024/02/02"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.1.0 - 2024/02/04"
+msgstr "1.1.0 - 2024/02/04"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.1.1 - 2024/02/09"
+msgstr "1.1.1 - 2024/02/09"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.1.2 - 2024/02/13"
+msgstr "1.1.2 - 2024/02/13"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.1.3 - 2024/02/17"
+msgstr "1.1.3 - 2024/02/17"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.1.4 - 2024/02/18"
+msgstr "1.1.4 - 2024/02/18"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.1.5 - 2024/02/20"
+msgstr "1.1.5 - 2024/02/20"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.1.6 - 2024/02/25"
+msgstr "1.1.6 - 2024/02/25"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.1.7 - 2024/03/01"
+msgstr "1.1.7 - 2024/03/01"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.1.8 - 2024/03/07"
+msgstr "1.1.8 - 2024/03/07"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.1.9 - 2024/03/09"
+msgstr "1.1.9 - 2024/03/09"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.2.0 - 2024/03/20"
+msgstr "1.2.0 - 2024/03/20"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.2.1 - 2024/03/21"
+msgstr "1.2.1 - 2024/03/21"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.2.2 - 2024/04/17"
+msgstr "1.2.2 - 2024/04/17"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.2.3 - 2024/04/19"
+msgstr "1.2.3 - 2024/04/19"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.2.4 - 2024/05/08"
+msgstr "1.2.4 - 2024/05/08"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.2.5 - 2024/05/15"
+msgstr "1.2.5 - 2024/05/15"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.2.6 - 2024/05/29"
+msgstr "1.2.6 - 2024/05/29"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.2.7 - 2024/06/07"
+msgstr "1.2.7 - 2024/06/07"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.2.8 - 2024/06/21"
+msgstr "1.2.8 - 2024/06/21"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.2.9 - 2024/06/23"
+msgstr "1.2.9 - 2024/06/23"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.3.0 - 2024/07/06"
+msgstr "1.3.0 - 2024/07/06"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.3.1 - 2024/07/12"
+msgstr "1.3.1 - 2024/07/12"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.3.2 - 2024/07/18"
+msgstr "1.3.2 - 2024/07/18"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.3.3 - 2024/09/13"
+msgstr "1.3.3 - 2024/09/13"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.3.4 - 2024/09/26"
+msgstr "1.3.4 - 2024/09/26"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.3.5 - 2024/09/28"
+msgstr "1.3.5 - 2024/09/28"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.3.6 - 2024/11/02"
+msgstr "1.3.6 - 2024/11/02"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.3.7 - 2024/12/13"
+msgstr "1.3.7 - 2024/12/13"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.3.8 - 2024/12/15"
+msgstr "1.3.8 - 2024/12/15"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.3.9 - 2024/12/21"
+msgstr "1.3.9 - 2024/12/21"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.4.0 - 2024/12/27"
+msgstr "1.4.0 - 2024/12/27"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.4.1 - 2024/12/31"
+msgstr "1.4.1 - 2024/12/31"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.4.2 - 2025/04/16"
+msgstr "1.4.2 - 2025/04/16"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.4.3 - 2025/05/04"
+msgstr "1.4.3 - 2025/05/04"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.4.4 - 2025/05/25"
+msgstr "1.4.4 - 2025/05/25"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.4.5 - 2025/06/09"
+msgstr "1.4.5 - 2025/06/09"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.4.6 - 2025/06/14"
+msgstr "1.4.6 - 2025/06/14"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.4.7 - 2025/07/27"
+msgstr "1.4.7 - 2025/07/27"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.4.8 - 2025/08/07"
+msgstr "1.4.8 - 2025/08/07"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.4.9 - 2025/08/07"
+msgstr "1.4.9 - 2025/08/07"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.5.0 - 2025/08/08"
+msgstr "1.5.0 - 2025/08/08"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.5.1 - 2025/08/17"
+msgstr "1.5.1 - 2025/08/17"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.5.2 - 2025/08/26"
+msgstr "1.5.2 - 2025/08/26"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.5.3 - 2025/12/05"
+msgstr "1.5.3 - 2025/12/05"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.5.4 - 2026/04/22"
+msgstr "1.5.4 - 2026/04/22"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - stable login to android application"
+msgstr "Oprava – stabilné prihlásenie do aplikácie pre Android"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - existing players are not repeated in the menu Add players"
+msgstr "Oprava – existujúci hráči sa v ponuke Pridať hráčov neopakujú"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Change - Public release of Android app"
+msgstr "Zmena – verejné vydanie aplikácie pre Android"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Add 'last update' to the database also for already installed plugings"
+msgstr "Oprava – pridanie „poslednej aktualizácie“ do databázy aj pre už nainštalované pluginy"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Uninstall also 2 new pages (privacy policy and terms of service)"
+msgstr "Oprava – odinštalovanie aj 2 nových stránok (zásady ochrany osobných údajov a podmienky služby)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Add 'last update' to the database"
+msgstr "Oprava – pridanie „poslednej aktualizácie“ do databázy"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Improved some functions for Android app"
+msgstr "Oprava – vylepšené niektoré funkcie pre aplikáciu pre Android"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Announcement about the opportunity to become an application tester"
+msgstr "Pridané – oznámenie o možnosti stať sa testerom aplikácie"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Privacy Policy page"
+msgstr "Pridané – stránka Zásady ochrany osobných údajov"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Terms of Service page"
+msgstr "Pridané – stránka Podmienky služby"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Info about last update speed up loading"
+msgstr "Pridané – informácia o poslednej aktualizácii zrýchľuje načítanie"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Correct an error message Undefined array key player['count']"
+msgstr "Oprava – oprava chybového hlásenia Undefined array key player['count']"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Tournaments filtering by distance and visibility"
+msgstr "Pridané – filtrovanie turnajov podľa vzdialenosti a viditeľnosti"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Support for a Android app"
+msgstr "Pridané – podpora aplikácie pre Android"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Controls the visibility of the tournament in the public list."
+msgstr "Pridané – nastavenie viditeľnosti turnaja vo verejnom zozname."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Location of the tournament."
+msgstr "Pridané – miesto konania turnaja."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Log in/out block had a problem"
+msgstr "Oprava – blok prihlásenia/odhlásenia mal problém"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Parameter When enough players are available had sometimes a wrong value."
+msgstr "Oprava – parameter „Keď je k dispozícii dosť hráčov“ mal niekedy nesprávnu hodnotu."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Match hiding correction"
+msgstr "Oprava – oprava skrývania zápasu"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Register and log in a new user only if anyone can register (system settings)."
+msgstr "Oprava – registrácia a prihlásenie nového používateľa iba vtedy, keď sa môže zaregistrovať ktokoľvek (systémové nastavenie)."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Register and log in a new user."
+msgstr "Pridané – registrácia a prihlásenie nového používateľa."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Translation loading too early warning."
+msgstr "Oprava – upozornenie na príliš skoré načítanie prekladov."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Dashboard overview widget."
+msgstr "Pridané – widget s prehľadom na nástenke."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Log-link block."
+msgstr "Pridané – blok Log-link."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Sometimes tournament_id was unknown."
+msgstr "Oprava – niekedy bolo ID turnaja neznáme."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Preserving stored values on the backend."
+msgstr "Oprava – zachovanie uložených hodnôt na backende."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Guaranteed visibility of the selected tournament in the tournament table."
+msgstr "Oprava – zaručená viditeľnosť vybraného turnaja v tabuľke turnajov."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Error with hide parameter."
+msgstr "Oprava – chyba s parametrom hide."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Permalink structure also works with the floating help icon."
+msgstr "Oprava – štruktúra trvalých odkazov funguje aj s plávajúcou ikonou pomocníka."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Tournament name is not copied from previous one."
+msgstr "Oprava – názov turnaja sa nekopíruje z predchádzajúceho."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - More tournament examples for demonstration."
+msgstr "Pridané – ďalšie ukážkové turnaje."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Floating help icon."
+msgstr "Pridané – plávajúca ikona pomocníka."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Prevent cashing for logged users."
+msgstr "Pridané – zákaz ukladania do vyrovnávacej pamäte pre prihlásených používateľov."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Doubles Badminton table also for co-players"
+msgstr "Oprava – tabuľka štvorhry v bedmintone aj pre spoluhráčov"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Tournament progress info."
+msgstr "Pridané – informácie o priebehu turnaja."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Change game results availability."
+msgstr "Oprava – zmena dostupnosti výsledkov zápasov."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Special group count."
+msgstr "Pridané – počty v špeciálnej skupine."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Change of information about the end of the tournament round."
+msgstr "Zmena informácií o konci turnajového kola."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Opponent selection."
+msgstr "Oprava – výber súpera."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Pair selection mechanism explanation on the help page."
+msgstr "Pridané – vysvetlenie mechanizmu výberu párov na stránke pomocníka."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Pair selection didn´t take into account number of played games in total."
+msgstr "Oprava – výber páru nezohľadňoval celkový počet odohraných hier."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Rights to Suspension and Resumption."
+msgstr "Oprava – práva na pozastavenie a obnovenie."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Rights to add a special group."
+msgstr "Oprava – práva na pridanie do špeciálnej skupiny."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Rights to add a tournament admin."
+msgstr "Oprava – práva na pridanie administrátora turnaja."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Rights to add other players into tournaments."
+msgstr "Oprava – práva na pridanie ďalších hráčov do turnajov."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Do not show instructions during the tournament presentation."
+msgstr "Oprava – nezobrazovať pokyny počas prezentácie turnaja."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Admin can change a default value for minimum number of games played before a player can be declared a winner."
+msgstr "Pridané – administrátor môže zmeniť predvolený minimálny počet odohraných hier, po ktorom môže byť hráč vyhlásený za víťaza."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - The ability to specify a minimum number of games played before a player can be declared a winner."
+msgstr "Pridané – možnosť určiť minimálny počet odohraných hier, po ktorom môže byť hráč vyhlásený za víťaza."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Removing a player from a tournament."
+msgstr "Oprava – odobratie hráča z turnaja."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Ready for testing in WP Playground."
+msgstr "Oprava – pripravené na testovanie vo WP Playground."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Solving some database errors with empty values."
+msgstr "Oprava – riešenie niektorých chýb databázy s prázdnymi hodnotami."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Update for WP Playground."
+msgstr "Oprava – aktualizácia pre WP Playground."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Improved playmate choose."
+msgstr "Oprava – vylepšený výber spoluhráča."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Problems with removing players during a game."
+msgstr "Oprava – problémy s odoberaním hráčov počas hry."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - A currently playing player can´t be removed."
+msgstr "Oprava – práve hrajúceho hráča nemožno odobrať."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Fix real count of players after their removing."
+msgstr "Oprava – skutočný počet hráčov po ich odobratí."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Fix an error during removing a player from the tournament."
+msgstr "Oprava – chyba pri odoberaní hráča z turnaja."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Redirection to a tournament in case of a user entry."
+msgstr "Oprava – presmerovanie na turnaj v prípade zadania používateľom."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - icon format."
+msgstr "Oprava – formát ikon."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Modification for WP Playground."
+msgstr "Úprava pre WP Playground."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Fixed a bug in the database that prevented a tournament record from being created on some servers."
+msgstr "Oprava – opravená chyba v databáze, ktorá na niektorých serveroch bránila vytvoreniu záznamu turnaja."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Unregistered users can no longer enter results in the singles tournament."
+msgstr "Oprava – neregistrovaní používatelia už nemôžu zadávať výsledky v turnaji vo dvojhre."
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid "Possibility to remove players from an already ongoing tournament."
+msgstr "Možnosť odobrať hráčov z už prebiehajúceho turnaja."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "New - Expanded the ability for tournament administrators to browse through players they have already met at the tournament."
+msgstr "Novinka – administrátori turnaja môžu prechádzať viac hráčov, s ktorými sa už na turnaji stretli."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "New - If the player has not yet registered for any tournament, it is possible to choose whether to show him a quick help."
+msgstr "Novinka – ak sa hráč ešte neprihlásil na žiadny turnaj, možno zvoliť, či mu zobraziť rýchleho pomocníka."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "New - Optional login prompt."
+msgstr "Novinka – voliteľná výzva na prihlásenie."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - If all tournaments were deleted, a new tournament could not be created."
+msgstr "Oprava – ak boli vymazané všetky turnaje, nebolo možné vytvoriť nový turnaj."
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid ""
+"Trial tournament improvements.\n"
+"Added the option to announce the end of the tournament round."
+msgstr ""
+"Vylepšenia skúšobného turnaja.\n"
+"Pridaná možnosť ohlásiť koniec turnajového kola."
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid ""
+"Improved the visual appearance of the main page.\n"
+"Badminton added to the list of available tournaments."
+msgstr ""
+"Vylepšený vzhľad hlavnej stránky.\n"
+"Bedminton pridaný do zoznamu dostupných turnajov."
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid "Option to announce separate winners from the special group and outside the special group."
+msgstr "Možnosť vyhlásiť samostatných víťazov zo špeciálnej skupiny a mimo špeciálnej skupiny."
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid ""
+"Notices after a plugin activation.\n"
+"Added player trend."
+msgstr ""
+"Upozornenia po aktivácii pluginu.\n"
+"Pridaný trend hráča."
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid ""
+"Modified tournament editing tab.\n"
+"Added option to change tournament type."
+msgstr ""
+"Upravená záložka Úprava turnaja.\n"
+"Pridaná možnosť zmeny typu turnaja."
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid ""
+"Reactivating the plugin doesn´t affect the already deleted tournament example. \n"
+"Unblock offering maximum games count.\n"
+"Fix tournament change when entering results.\n"
+"Added quick help for newcomers.\n"
+"Allow the final match also for singles."
+msgstr ""
+"Opätovná aktivácia pluginu neovplyvní už vymazaný ukážkový turnaj.\n"
+"Odblokovaná ponuka maximálneho počtu gemov.\n"
+"Oprava zmeny turnaja pri zadávaní výsledkov.\n"
+"Pridaný rýchly pomocník pre nováčikov.\n"
+"Finálový zápas povolený aj pre dvojhru."
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid ""
+"Added the option for single tournaments. \n"
+"Created an environment for additional sports."
+msgstr ""
+"Pridaná možnosť turnajov vo dvojhre.\n"
+"Vytvorené prostredie pre ďalšie športy."
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid ""
+"The administrator can now use 'hide' option when editing the match result.\n"
+"Free score input is allowed. This opens using not only for tennis but for example for table tennis or beach volleyball."
+msgstr ""
+"Administrátor teraz môže pri úprave výsledku zápasu použiť možnosť „skryť“.\n"
+"Je povolené voľné zadávanie skóre. To otvára využitie nielen pre tenis, ale napríklad aj pre stolný tenis alebo plážový volejbal."
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid ""
+"Minor changes in code:\n"
+"* Allow to transfer organizer rights to a non-playing user.\n"
+"* Ensuring an even rotation of serves at the start of the tournament."
+msgstr ""
+"Drobné zmeny v kóde:\n"
+"* Povolený prenos práv organizátora na nehrajúceho používateľa.\n"
+"* Zabezpečenie rovnomerného striedania podania na začiatku turnaja."
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid "Fixed choosing between left and right side in first matches."
+msgstr "Opravená voľba medzi ľavou a pravou stranou v prvých zápasoch."
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid "A small modification of admin screen."
+msgstr "Malá úprava obrazovky administrácie."
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid "First release to public."
+msgstr "Prvé verejné vydanie."
+

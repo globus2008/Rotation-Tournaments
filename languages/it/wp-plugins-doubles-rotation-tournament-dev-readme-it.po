@@ -1,0 +1,1289 @@
+# Translation of Plugins - Rotation Tournaments - Development Readme (trunk) in Italian
+# This file is distributed under the same license as the Plugins - Rotation Tournaments - Development Readme (trunk) package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Plugins - Rotation Tournaments - Development Readme (trunk)\n"
+"PO-Revision-Date: 2026-10-07 11:40:26+0000\n"
+"Language: it_IT\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/4.1.0\n"
+
+#. Short description.
+#, gp-priority: high
+msgid "Do you play Singles or Doubles Tournaments? This plugin manages Rotation Tournaments where players have a different partner in each game."
+msgstr "Giochi tornei di singolare o di doppio? Questo plugin gestisce tornei a rotazione in cui i giocatori hanno un compagno diverso in ogni partita."
+
+#. Plugin name.
+#, gp-priority: high
+msgid "Rotation Tournaments"
+msgstr "Tornei a rotazione"
+
+#. Found in installation paragraph.
+msgid "After installation, go to the app's settings and enter the address of your website where this plugin is installed."
+msgstr "Dopo l'installazione apri le impostazioni dell'app e inserisci l'indirizzo del sito su cui è installato questo plugin."
+
+#. Found in installation paragraph.
+msgid "Or download it directly from this link: https://play.google.com/store/apps/details?id=cz.doroto.app"
+msgstr "Oppure scaricala direttamente da questo link: https://play.google.com/store/apps/details?id=cz.doroto.app"
+
+#. Found in installation paragraph.
+msgid "Search for \"Rotation Tournaments\" on the Google Play Store."
+msgstr "Cerca \"Rotation Tournaments\" nel Google Play Store."
+
+#. Found in description paragraph.
+msgid "To get the full experience of managing tournaments on the go, download our mobile app, now available on Google Play!"
+msgstr "Per gestire al meglio i tornei in mobilità, scarica la nostra app mobile, ora disponibile su Google Play!"
+
+#. Found in description paragraph.
+msgid "<strong>YouTube quick intro:</strong>"
+msgstr "<strong>Breve introduzione su YouTube:</strong>"
+
+#. Found in description list item.
+msgid "Video for a quick introduction to the Rotation Tournament:"
+msgstr "Video di breve introduzione al torneo a rotazione:"
+
+#. Found in faq paragraph.
+msgid "Yes. If you install the Rotation Tournaments plugin, allow player registration, and enable visibility in the website list, your site can appear in the Android app. Initially, someone must manually enter your website address into the app. After that, it becomes visible in the list for all users."
+msgstr "Sì. Se installi il plugin Rotation Tournaments, consenti la registrazione dei giocatori e attivi la visibilità nell'elenco dei siti, il tuo sito può comparire nell'app Android. All'inizio qualcuno deve inserire manualmente l'indirizzo del tuo sito nell'app. Dopodiché sarà visibile nell'elenco per tutti gli utenti."
+
+#. Found in faq paragraph.
+msgid "Yes. An iOS version of the Rotation Tournaments app is planned and will be released in the near future."
+msgstr "Sì. È prevista una versione iOS dell'app Rotation Tournaments, che uscirà a breve."
+
+#. Found in faq header.
+msgid "Will my website be visible in the Rotation Tournaments Android app?"
+msgstr "Il mio sito sarà visibile nell'app Android Rotation Tournaments?"
+
+#. Found in faq header.
+msgid "Will there be an iPhone or iPad version of the app?"
+msgstr "Ci sarà una versione dell'app per iPhone o iPad?"
+
+#. Found in installation paragraph.
+msgid "<strong>How to install Wordpress plugin:</strong>"
+msgstr "<strong>Come installare il plugin WordPress:</strong>"
+
+#. Found in installation list item.
+msgid "After activating the plugin, 4 pages will be created: one for managing tournaments (main page), one with tournament rules, and additional pages for Privacy Policy and Terms of Service. A sample post announcing a newly created tournament will also be added."
+msgstr "Dopo l'attivazione del plugin vengono create 4 pagine: una per la gestione dei tornei (pagina principale), una con le regole del torneo e altre per l'Informativa sulla privacy e i Termini di servizio. Viene aggiunto anche un articolo di esempio che annuncia un torneo appena creato."
+
+#. Found in installation paragraph.
+msgid "<strong>How to install the Android app:</strong>"
+msgstr "<strong>Come installare l'app Android:</strong>"
+
+#. Found in description paragraph.
+msgid "<strong>This plugin is the server-side for the \"Rotation Tournaments\" Android app.</strong>"
+msgstr "<strong>Questo plugin è la parte server dell'app Android \"Rotation Tournaments\".</strong>"
+
+#. Screenshot description.
+msgid "Individual tournament participants enter their results into the WordPress server and share the data with each other."
+msgstr "I singoli partecipanti al torneo inseriscono i propri risultati nel server WordPress e condividono i dati tra loro."
+
+#. Screenshot description.
+msgid "Matches played. (Android app)"
+msgstr "Partite giocate. (App Android)"
+
+#. Screenshot description.
+msgid "Tournament table. (Wordpress)"
+msgstr "Tabella del torneo. (WordPress)"
+
+#. Screenshot description.
+msgid "Matches drawn. (Android app)"
+msgstr "Partite sorteggiate. (App Android)"
+
+#. Screenshot description.
+msgid "Editing tournament parameters. (Wordpress)"
+msgstr "Modifica dei parametri del torneo. (WordPress)"
+
+#. Screenshot description.
+msgid "Table of players with rankings. (Android app)"
+msgstr "Tabella dei giocatori con classifica. (App Android)"
+
+#. Screenshot description.
+msgid "Matches played. (Wordpress)"
+msgstr "Partite giocate. (WordPress)"
+
+#. Screenshot description.
+msgid "Basic overview of the tournament. (Android app)"
+msgstr "Panoramica di base del torneo. (App Android)"
+
+#. Screenshot description.
+msgid "Matches drawn. (Wordpress)"
+msgstr "Partite sorteggiate. (WordPress)"
+
+#. Found in description paragraph.
+msgid "<strong>Rotation Tournaments</strong> provides a platform for organizing all kinds of sports Singles and Doubles Tournaments, e.g."
+msgstr "<strong>Tornei a rotazione</strong> offre una piattaforma per organizzare ogni tipo di torneo sportivo di singolare e di doppio, ad es."
+
+#. Found in description list item.
+msgid "Squash"
+msgstr "Squash"
+
+#. Found in description list item.
+msgid "Beach Volleyball"
+msgstr "Beach volley"
+
+#. Found in description list item.
+msgid "Badminton"
+msgstr "Badminton"
+
+#. Found in description list item.
+msgid "Padel"
+msgstr "Padel"
+
+#. Found in description list item.
+msgid "Table Tennis"
+msgstr "Tennistavolo"
+
+#. Found in description list item.
+msgid "Tennis"
+msgstr "Tennis"
+
+#. Found in faq paragraph.
+msgid ""
+"This plugin can be used for all types of sports where 2 or 4 players compete in singles or doubles.\n"
+"You can use this plugin for tennis, table tennis, squash, padel, badminton, beach volleyball and probably for more."
+msgstr ""
+"Questo plugin può essere usato per tutti gli sport in cui 2 o 4 giocatori si sfidano in singolare o in doppio.\n"
+"Puoi usarlo per tennis, tennistavolo, squash, padel, badminton, beach volley e probabilmente altri sport."
+
+#. Found in faq paragraph.
+msgid "Yes. When creating a tournament, you can choose whether to create a singles or a doubles tournament."
+msgstr "Sì. Quando crei un torneo puoi scegliere se creare un torneo di singolare o di doppio."
+
+#. Found in faq header.
+msgid "What sports tournaments is this plugin for?"
+msgstr "Per quali tornei sportivi è pensato questo plugin?"
+
+#. Found in description paragraph.
+msgid "<strong>General Features:</strong>"
+msgstr "<strong>Funzionalità generali:</strong>"
+
+#. Found in description paragraph.
+msgid "<strong>Doubles Rotation Tournament:</strong>"
+msgstr "<strong>Torneo di doppio a rotazione:</strong>"
+
+#. Found in description paragraph.
+msgid "<strong>Singles Rotation Tournament:</strong>"
+msgstr "<strong>Torneo di singolare a rotazione:</strong>"
+
+#. Found in description paragraph.
+msgid "The participants of a tournament change partners several times during the tournament by a random selection and play against different players. The ratio of games won to games lost is calculated for each participant. The winner of the tournament is the player with this highest ratio. While a Singles Rotation Tournament can be organized without the aid of technology, in the case of a Doubles Rotation Tournament, this is not possible."
+msgstr "I partecipanti a un torneo cambiano compagno più volte durante il torneo tramite sorteggio e giocano contro giocatori diversi. Per ogni partecipante si calcola il rapporto tra game vinti e persi. Il vincitore del torneo è il giocatore con il rapporto più alto. Mentre un torneo di singolare a rotazione si può organizzare senza l'aiuto della tecnologia, per un torneo di doppio a rotazione non è possibile."
+
+#. Found in description paragraph.
+msgid "The <strong>Rotation Tournaments</strong> have a strong social aspect because its goal is to keep players in the tournament until the very end. The situation where weaker players would leave the tournament due to elimination rounds is eliminated. It allows grouping players into a special category with special conditions. This special setting can be utilized, for example, in mixed tournaments."
+msgstr "I <strong>tornei a rotazione</strong> hanno una forte componente sociale, perché il loro obiettivo è tenere i giocatori nel torneo fino alla fine. Si evita che i giocatori più deboli lascino il torneo a causa dei turni a eliminazione. Permettono di raggruppare i giocatori in una categoria speciale con condizioni particolari. Questa impostazione speciale si può usare ad esempio nei tornei misti."
+
+#. Found in description paragraph.
+msgid "In <strong>Rotation Tournaments</strong>, each participant plays against every other participant and there are no eliminations in individual rounds. To maximize the variety of match combinations, the matches are typically played in a single set."
+msgstr "Nei <strong>tornei a rotazione</strong> ogni partecipante gioca contro tutti gli altri e nei singoli turni nessuno viene eliminato. Per ottenere la massima varietà di combinazioni, le partite si giocano di solito in un solo set."
+
+#. Found in description list item.
+msgid "Suitable for various sports: tennis, table tennis, squash, padel, badminton, beach volleyball, and more."
+msgstr "Adatto a vari sport: tennis, tennistavolo, squash, padel, badminton, beach volley e altri."
+
+#. Found in description list item.
+msgid "Integration with website user accounts."
+msgstr "Integrazione con gli account utente del sito."
+
+#. Found in description list item.
+msgid "No downtime during the tournament."
+msgstr "Nessun tempo morto durante il torneo."
+
+#. Found in description list item.
+msgid "Comprehensive overview of player quality."
+msgstr "Quadro completo del livello dei giocatori."
+
+#. Found in description list item.
+msgid "User-friendly interface for administrators and participants."
+msgstr "Interfaccia semplice per amministratori e partecipanti."
+
+#. Found in description list item.
+msgid "Customizable settings for each tournament."
+msgstr "Impostazioni personalizzabili per ogni torneo."
+
+#. Found in description list item.
+msgid "Real-time score tracking."
+msgstr "Monitoraggio dei punteggi in tempo reale."
+
+#. Found in description list item.
+msgid "Seamless scheduling of matches."
+msgstr "Pianificazione fluida delle partite."
+
+#. Found in description list item.
+msgid "Announcement of the Best Player and Most Ideal Pair at the end of the tournament."
+msgstr "Annuncio del miglior giocatore e della coppia ideale alla fine del torneo."
+
+#. Found in description list item.
+msgid "Ranking based on the ratio of games won to games lost."
+msgstr "Classifica basata sul rapporto tra game vinti e persi."
+
+#. Found in description list item.
+msgid "Individual players can join or leave the tournament at any time."
+msgstr "I singoli giocatori possono entrare nel torneo o lasciarlo in qualsiasi momento."
+
+#. Found in description list item.
+msgid "Tournament can be interrupted or extended without disruption."
+msgstr "Il torneo può essere interrotto o prolungato senza problemi."
+
+#. Found in description list item.
+msgid "Shorter matches for more participation."
+msgstr "Partite più brevi per una maggiore partecipazione."
+
+#. Found in description list item.
+msgid "No eliminations, ensuring all players stay in the game."
+msgstr "Nessuna eliminazione: tutti i giocatori restano in gioco."
+
+#. Found in description list item.
+msgid "Define special groups of players with unique conditions."
+msgstr "Definizione di gruppi speciali di giocatori con condizioni proprie."
+
+#. Found in description list item.
+msgid "Suitable for odd numbers of players and minimum lineups of 4 players."
+msgstr "Adatto a un numero dispari di giocatori e a un minimo di 4 giocatori."
+
+#. Found in description list item.
+msgid "Individuals can enter the tournament without a permanent teammate."
+msgstr "Si può partecipare al torneo senza un compagno fisso."
+
+#. Found in description list item.
+msgid "Rotation of teammates, ensuring variety in partnerships."
+msgstr "Rotazione dei compagni per coppie sempre diverse."
+
+#. Found in description list item.
+msgid "Alternative form of a Doubles Tournament where players enter each match with a different partner and in different positions (alternating left and right sides)."
+msgstr "Forma alternativa di torneo di doppio in cui i giocatori disputano ogni partita con un compagno diverso e in posizioni diverse (alternando lato sinistro e destro)."
+
+#. Found in description list item.
+msgid "Depending on the time options, everyone plays against everyone."
+msgstr "In base al tempo disponibile, tutti giocano contro tutti."
+
+#. Found in description list item.
+msgid "Alternative form of a Singles Tournament where players face each other without elimination rounds."
+msgstr "Forma alternativa di torneo di singolare in cui i giocatori si affrontano senza turni a eliminazione."
+
+#. Found in description header.
+msgid "Features"
+msgstr "Funzionalità"
+
+#. Found in faq header.
+msgid "Is this plugin suitable for singles tournaments?"
+msgstr "Questo plugin è adatto ai tornei di singolare?"
+
+#. Found in faq paragraph.
+msgid "Yes, each tournament participant must have their own account. If a website has disabled user registration, this account must be created by the website administrator."
+msgstr "Sì, ogni partecipante al torneo deve avere un proprio account. Se un sito ha disattivato la registrazione degli utenti, questo account deve essere creato dall'amministratore del sito."
+
+#. Found in faq header.
+msgid "Does each player have to have an account created on my website?"
+msgstr "Ogni giocatore deve avere un account sul mio sito?"
+
+#. Found in installation list item.
+msgid "At the end close the tournament and look who was announced as the winner."
+msgstr "Alla fine chiudi il torneo e guarda chi è stato dichiarato vincitore."
+
+#. Found in installation list item.
+msgid "You can change tournament settings on the main page or you can look at 2 new admin pages that are dedicated for overall environmental settings and for description of all possible shortcodes."
+msgstr "Puoi modificare le impostazioni del torneo nella pagina principale oppure consultare 2 nuove pagine di amministrazione dedicate alle impostazioni generali dell'ambiente e alla descrizione di tutti gli shortcode disponibili."
+
+#. Found in installation list item.
+msgid "If you have a sufficient amount of players then you can close a registration and start playing matches."
+msgstr "Se hai abbastanza giocatori, puoi chiudere le iscrizioni e iniziare a giocare le partite."
+
+#. Found in installation list item.
+msgid "Then you can log in your created tournament and as a tournament´s administrator you can add manually also other players sourced from WP database."
+msgstr "Poi puoi iscriverti al torneo creato e, come amministratore del torneo, aggiungere manualmente altri giocatori dal database di WordPress."
+
+#. Found in installation list item.
+msgid "Start by clicking on \"Create a new tournament\" under \"Tournament Selection …\" on the main page."
+msgstr "Inizia facendo clic su \"Crea un nuovo torneo\" in \"Selezione del torneo…\" nella pagina principale."
+
+#. Found in installation list item.
+msgid "Install the plugin as usual."
+msgstr "Installa il plugin come di consueto."
+
+#. Found in description paragraph.
+msgid "Visit <a href=\"https://doroto.ltcchrast.cz/\">test page</a> for more information, try to create your own tournament and take a look at <a href=\"https://doroto.ltcchrast.cz/rules-of-the-doubles-rotation-tournament/\">Rules of the Doubles Rotation Tournament</a>."
+msgstr "Visita la <a href=\"https://doroto.ltcchrast.cz/\">pagina di prova</a> per maggiori informazioni, prova a creare il tuo torneo e dai un'occhiata alle <a href=\"https://doroto.ltcchrast.cz/rules-of-the-doubles-rotation-tournament/\">regole del torneo di doppio a rotazione</a>."
+
+#. Found in description paragraph.
+msgid "[youtube https://www.youtube.com/watch?v=NoL9aPTv8u8]"
+msgstr "[youtube https://www.youtube.com/watch?v=NoL9aPTv8u8]"
+
+#. Found in description header.
+msgid "More information"
+msgstr "Maggiori informazioni"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - the plugin restores read permissions of its files after an FTP upload (the web server answered 403 and the admin page stayed empty); the admin page shows a notice when its script cannot be loaded"
+msgstr "Correzione – il plugin ripristina i permessi di lettura dei suoi file dopo un caricamento via FTP (il server web rispondeva 403 e la pagina di amministrazione restava vuota); la pagina di amministrazione mostra un avviso quando il suo script non può essere caricato"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - tournament settings keep the ranges of 1.x and of the app (a larger value made the app's dropdowns fail)"
+msgstr "Correzione – le impostazioni del torneo mantengono gli intervalli della versione 1.x e dell'app (un valore più grande faceva fallire i menu a discesa dell'app)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - REST requests from the website use the WordPress login (cookie and nonce) when no app token is sent"
+msgstr "Miglioramento – le richieste REST dal sito usano l'accesso di WordPress (cookie e nonce) quando non viene inviato un token dell'app"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - styles, scripts and no-cache headers are sent only on pages that show the plugin; the unused tipTip library was removed and the admin no longer calls ip-api.com"
+msgstr "Miglioramento – stili, script e intestazioni no-cache vengono inviati solo nelle pagine che mostrano il plugin; la libreria tipTip inutilizzata è stata rimossa e l'amministrazione non chiama più ip-api.com"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - every change of a tournament (web forms, blocks and the Android app) goes through one shared layer with the same permissions, locking and change detection"
+msgstr "Miglioramento – ogni modifica di un torneo (moduli web, blocchi e app Android) passa attraverso un unico livello comune con gli stessi permessi, blocchi e rilevamento delle modifiche"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - new admin page with Overview, Settings and Help instead of nine settings tabs; every setting is checked on the server and errors are shown next to the field"
+msgstr "Miglioramento – nuova pagina di amministrazione con Panoramica, Impostazioni e Aiuto al posto di nove schede di impostazioni; ogni impostazione viene verificata sul server e gli errori sono mostrati accanto al campo"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - the serving player is marked on the match cards; the special group is highlighted in matches, results, players, statistics and winners; the tournament details (invitation text) can be shown at any time"
+msgstr "Aggiunta – il giocatore al servizio è indicato sulle schede delle partite; il gruppo speciale è evidenziato in partite, risultati, giocatori, statistiche e vincitori; i dettagli del torneo (testo dell'invito) possono essere mostrati in qualsiasi momento"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - the tournament block takes its colours from the theme (button and palette colours); the block's Styles panel can change the accent, the tab bar and table headers, their text and the colour of the special group"
+msgstr "Aggiunta – il blocco del torneo prende i colori dal tema (colori dei pulsanti e della palette); il pannello Stili del blocco permette di cambiare l'accento, la barra delle schede e le intestazioni delle tabelle, il loro testo e il colore del gruppo speciale"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - the tournament block: Share dialog with a QR code, \"Open in the app\" line, full-screen presentation that rotates the sections, map of the tournament place in the settings, and guided tours of the page and of four example tournaments"
+msgstr "Aggiunta – il blocco del torneo: finestra Condividi con codice QR, riga \"Apri nell'app\", presentazione a schermo intero che alterna le sezioni, mappa del luogo del torneo nelle impostazioni e visite guidate della pagina e di quattro tornei di esempio"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - the plugin admin can convert the main page to the blocks with one button; the old content stays in the page revisions. New installs create the main page from the blocks. The shortcodes [doroto_tournament] and [doroto_tournament_list] show the blocks in the classic editor; the 1.x shortcodes keep working"
+msgstr "Aggiunta – l'amministratore del plugin può convertire la pagina principale in blocchi con un solo pulsante; il vecchio contenuto resta nelle revisioni della pagina. Le nuove installazioni creano la pagina principale con i blocchi. Gli shortcode [doroto_tournament] e [doroto_tournament_list] mostrano i blocchi nell'editor classico; gli shortcode della versione 1.x continuano a funzionare"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - blocks for the block editor: \"Rotation tournament\" (matches, results, players, statistics and settings on tabs, updated live without reloading the page), its variations \"Tournament standings\", \"Tournament matches\" and \"Tournament presentation\", \"Tournament list\" and \"Tournament invitation\""
+msgstr "Aggiunta – blocchi per l'editor a blocchi: \"Torneo a rotazione\" (partite, risultati, giocatori, statistiche e impostazioni in schede, aggiornati in tempo reale senza ricaricare la pagina), le sue varianti \"Classifica del torneo\", \"Partite del torneo\" e \"Presentazione del torneo\", \"Elenco dei tornei\" e \"Invito al torneo\""
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "2.0.0 - 2026/10/06"
+msgstr "2.0.0 - 2026/10/06"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Change - the review request is shown only to administrators, 14 days after activation once the site has its own tournament, and comes back 7 days after \"Remind me\" until the plugin is rated"
+msgstr "Modifica – la richiesta di valutazione viene mostrata solo agli amministratori, 14 giorni dopo l'attivazione quando il sito ha un proprio torneo, e ricompare 7 giorni dopo \"Ricordamelo\" finché il plugin non viene valutato"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - the tournament page shows a short link to the Android app (can be turned off in Settings -&gt; Mobile app)"
+msgstr "Aggiunta – la pagina del torneo mostra un breve link all'app Android (disattivabile in Impostazioni -&gt; App mobile)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - optional mode join/leave for the app join endpoint"
+msgstr "Aggiunta – modalità facoltativa entra/esci per l'endpoint di iscrizione dell'app"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - REST endpoint create-player: the organizer creates a player and adds them to the tournament in one step; the player gets an e-mail to set the password"
+msgstr "Aggiunta – endpoint REST create-player: l'organizzatore crea un giocatore e lo aggiunge al torneo in un solo passaggio; il giocatore riceve un'email per impostare la password"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Change - tournament links to the home page (\"?tournament_id=5\") and the old app QR codes (\"/tournament?id=5\") open the tournament page"
+msgstr "Modifica – i link al torneo verso la home page (\"?tournament_id=5\") e i vecchi codici QR dell'app (\"/tournament?id=5\") aprono la pagina del torneo"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Change - the default name of a new tournament uses the site time zone, not UTC"
+msgstr "Modifica – il nome predefinito di un nuovo torneo usa il fuso orario del sito, non UTC"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Change - the app can be signed in on several devices at once (up to 10 per user)"
+msgstr "Modifica – l'app può essere connessa su più dispositivi contemporaneamente (fino a 10 per utente)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Change - invitation link only joins the tournament (a second click no longer unregisters the player), redirects to the login page and back, and then to the tournament page"
+msgstr "Modifica – il link di invito iscrive soltanto al torneo (un secondo clic non annulla più l'iscrizione del giocatore), reindirizza alla pagina di accesso e ritorno, e poi alla pagina del torneo"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - REST responses are never served from page caches or CDNs"
+msgstr "Correzione – le risposte REST non vengono mai servite dalle cache delle pagine o dalle CDN"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Authorization header is read also on FPM/CGI hosts"
+msgstr "Correzione – l'intestazione Authorization viene letta anche sugli hosting FPM/CGI"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - database upgrade adds new columns also on already installed sites"
+msgstr "Correzione – l'aggiornamento del database aggiunge le nuove colonne anche sui siti già installati"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - several devices signing in or refreshing their session at the same moment no longer sign each other out"
+msgstr "Correzione – più dispositivi che accedono o rinnovano la sessione nello stesso momento non si disconnettono più a vicenda"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - every change of a running tournament (correcting a result, suspending or removing a player, settings, payments, special group, web forms) runs under the tournament lock; correcting a result while another court saved its result could stall the whole tournament"
+msgstr "Correzione – ogni modifica di un torneo in corso (correzione di un risultato, sospensione o rimozione di un giocatore, impostazioni, pagamenti, gruppo speciale, moduli web) avviene sotto il blocco del torneo; correggere un risultato mentre un altro campo salvava il proprio poteva bloccare l'intero torneo"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - tournament lock: results entered at the same time on several courts are no longer lost"
+msgstr "Correzione – blocco del torneo: i risultati inseriti contemporaneamente su più campi non vanno più persi"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - every write to a tournament updates last_update"
+msgstr "Correzione – ogni scrittura in un torneo aggiorna last_update"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - results entered on the web no longer store last_update = 0, so the Android app refreshes again"
+msgstr "Correzione – i risultati inseriti sul sito non salvano più last_update = 0, quindi l'app Android si aggiorna di nuovo"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Security - with registration disabled only tournament organizers can create player accounts from the app (before, any signed-in player could)"
+msgstr "Sicurezza – con la registrazione disattivata, solo gli organizzatori dei tornei possono creare account giocatore dall'app (prima poteva farlo qualsiasi giocatore connesso)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Security - an account created by an organizer no longer returns a login session of the new player to the organizer"
+msgstr "Sicurezza – un account creato da un organizzatore non restituisce più all'organizzatore una sessione di accesso del nuovo giocatore"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Security - registration from the app (incl. a new Google account) respects \"Anyone can register\""
+msgstr "Sicurezza – la registrazione dall'app (incluso un nuovo account Google) rispetta \"Chiunque può registrarsi\""
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Security - final doubles and registration toggle check tournament admin rights"
+msgstr "Sicurezza – il doppio finale e l'attivazione/disattivazione delle iscrizioni verificano i diritti di amministratore del torneo"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Security - guided tour actions need a nonce; regenerating the example tournaments is throttled"
+msgstr "Sicurezza – le azioni della visita guidata richiedono un nonce; la rigenerazione dei tornei di esempio è limitata"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Security - admin actions sent as links are protected by a nonce (CSRF)"
+msgstr "Sicurezza – le azioni di amministrazione inviate come link sono protette da un nonce (CSRF)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Security - front-end forms check tournament admin rights, not only the nonce (any logged-in user could change players, payments or delete a tournament)"
+msgstr "Sicurezza – i moduli pubblici verificano i diritti di amministratore del torneo, non solo il nonce (qualsiasi utente connesso poteva modificare giocatori o pagamenti o eliminare un torneo)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - app tournament links on the central site (?tournament_id=5&amp;doroto_site=) are forwarded to the club's tournament page when the app is not installed (sites from the site directory; other sites get a page with a link)"
+msgstr "Aggiunta – i link ai tornei dell'app sul sito centrale (?tournament_id=5&amp;doroto_site=) vengono inoltrati alla pagina del torneo del circolo quando l'app non è installata (siti della directory dei siti; gli altri siti ricevono una pagina con un link)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - the tournament page has an \"Open in the app\" link: Android opens the tournament in the app, or Google Play when it is missing"
+msgstr "Aggiunta – la pagina del torneo ha un link \"Apri nell'app\": Android apre il torneo nell'app, oppure Google Play se manca"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - saving the tournament settings rejects an unknown tournament type"
+msgstr "Correzione – il salvataggio delle impostazioni del torneo rifiuta un tipo di torneo sconosciuto"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - a deleted account leaves its open tournaments: removed when it has not played yet, otherwise suspended; it also leaves the organizers, special group and payments (it was drawn into matches as \"Unknown player\")"
+msgstr "Correzione – un account eliminato lascia i suoi tornei aperti: viene rimosso se non ha ancora giocato, altrimenti viene sospeso; lascia anche gli organizzatori, il gruppo speciale e i pagamenti (veniva sorteggiato nelle partite come \"Giocatore sconosciuto\")"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - removing a payment no longer turns the payment list into a JSON object (the Android app could crash on the statistics page)"
+msgstr "Correzione – la rimozione di un pagamento non trasforma più l'elenco dei pagamenti in un oggetto JSON (l'app Android poteva bloccarsi nella pagina delle statistiche)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - the change form fits on a phone screen (the result and the button were off screen)"
+msgstr "Correzione – il modulo di modifica entra nello schermo del telefono (il risultato e il pulsante erano fuori schermo)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - organizers see an \"Edit result\" button next to every played match; it selects the match and its result in the change form (the form above the table was easy to miss)"
+msgstr "Aggiunta – gli organizzatori vedono un pulsante \"Modifica il risultato\" accanto a ogni partita giocata; seleziona la partita e il suo risultato nel modulo di modifica (il modulo sopra la tabella passava facilmente inosservato)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - REST route skip-matches: the organizer skips several ongoing matches at once and new matches are drawn from all free players"
+msgstr "Aggiunta – route REST skip-matches: l'organizzatore salta più partite in corso contemporaneamente e le nuove partite vengono sorteggiate tra tutti i giocatori liberi"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - among players with the same number of new teammates left, the one who played fewer games is drawn first; sides (left/right) alternate for both players of a team"
+msgstr "Miglioramento – tra i giocatori con lo stesso numero di nuovi compagni rimanenti viene sorteggiato per primo chi ha giocato meno game; i lati (sinistro/destro) si alternano per entrambi i giocatori di una squadra"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - the draw chooses the opposing team (and the teammate) by previous meetings too: players meet more different opponents and the same players meet less often (with 14 players on 2 courts, pairs that met 3 or more times dropped from about 5 to 1 per evening)"
+msgstr "Miglioramento – il sorteggio sceglie la squadra avversaria (e il compagno) anche in base agli incontri precedenti: i giocatori affrontano più avversari diversi e gli stessi giocatori si incontrano meno spesso (con 14 giocatori su 2 campi, le coppie che si sono incontrate 3 o più volte sono scese da circa 5 a 1 per serata)"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.6.0 - 2026/10/02"
+msgstr "1.6.0 - 2026/10/02"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.6.1 - 2026/10/02"
+msgstr "1.6.1 - 2026/10/02"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.6.2 - 2026/10/04"
+msgstr "1.6.2 - 2026/10/04"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - fixed some errors found in Plugin Check"
+msgstr "Correzione – corretti alcuni errori rilevati da Plugin Check"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.5.8 - 2026/06/12"
+msgstr "1.5.8 - 2026/06/12"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - some translations"
+msgstr "Correzione – alcune traduzioni"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.5.7 - 2026/06/06"
+msgstr "1.5.7 - 2026/06/06"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - register and sign in for android app"
+msgstr "Correzione – registrazione e accesso per l'app Android"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.5.6 - 2026/05/13"
+msgstr "1.5.6 - 2026/05/13"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - remove admin for android app"
+msgstr "Aggiunta – rimozione di un amministratore per l'app Android"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.5.5 - 2026/05/12"
+msgstr "1.5.5 - 2026/05/12"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - rest value is safe now"
+msgstr "Correzione – il valore rest ora è sicuro"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.0.0 - 2024/01/01"
+msgstr "1.0.0 - 2024/01/01"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.0.1 - 2024/01/03"
+msgstr "1.0.1 - 2024/01/03"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.0.2 - 2024/01/21"
+msgstr "1.0.2 - 2024/01/21"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.0.3 - 2024/01/26"
+msgstr "1.0.3 - 2024/01/26"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.0.4 - 2024/02/02"
+msgstr "1.0.4 - 2024/02/02"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.1.0 - 2024/02/04"
+msgstr "1.1.0 - 2024/02/04"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.1.1 - 2024/02/09"
+msgstr "1.1.1 - 2024/02/09"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.1.2 - 2024/02/13"
+msgstr "1.1.2 - 2024/02/13"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.1.3 - 2024/02/17"
+msgstr "1.1.3 - 2024/02/17"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.1.4 - 2024/02/18"
+msgstr "1.1.4 - 2024/02/18"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.1.5 - 2024/02/20"
+msgstr "1.1.5 - 2024/02/20"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.1.6 - 2024/02/25"
+msgstr "1.1.6 - 2024/02/25"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.1.7 - 2024/03/01"
+msgstr "1.1.7 - 2024/03/01"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.1.8 - 2024/03/07"
+msgstr "1.1.8 - 2024/03/07"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.1.9 - 2024/03/09"
+msgstr "1.1.9 - 2024/03/09"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.2.0 - 2024/03/20"
+msgstr "1.2.0 - 2024/03/20"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.2.1 - 2024/03/21"
+msgstr "1.2.1 - 2024/03/21"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.2.2 - 2024/04/17"
+msgstr "1.2.2 - 2024/04/17"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.2.3 - 2024/04/19"
+msgstr "1.2.3 - 2024/04/19"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.2.4 - 2024/05/08"
+msgstr "1.2.4 - 2024/05/08"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.2.5 - 2024/05/15"
+msgstr "1.2.5 - 2024/05/15"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.2.6 - 2024/05/29"
+msgstr "1.2.6 - 2024/05/29"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.2.7 - 2024/06/07"
+msgstr "1.2.7 - 2024/06/07"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.2.8 - 2024/06/21"
+msgstr "1.2.8 - 2024/06/21"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.2.9 - 2024/06/23"
+msgstr "1.2.9 - 2024/06/23"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.3.0 - 2024/07/06"
+msgstr "1.3.0 - 2024/07/06"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.3.1 - 2024/07/12"
+msgstr "1.3.1 - 2024/07/12"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.3.2 - 2024/07/18"
+msgstr "1.3.2 - 2024/07/18"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.3.3 - 2024/09/13"
+msgstr "1.3.3 - 2024/09/13"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.3.4 - 2024/09/26"
+msgstr "1.3.4 - 2024/09/26"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.3.5 - 2024/09/28"
+msgstr "1.3.5 - 2024/09/28"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.3.6 - 2024/11/02"
+msgstr "1.3.6 - 2024/11/02"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.3.7 - 2024/12/13"
+msgstr "1.3.7 - 2024/12/13"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.3.8 - 2024/12/15"
+msgstr "1.3.8 - 2024/12/15"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.3.9 - 2024/12/21"
+msgstr "1.3.9 - 2024/12/21"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.4.0 - 2024/12/27"
+msgstr "1.4.0 - 2024/12/27"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.4.1 - 2024/12/31"
+msgstr "1.4.1 - 2024/12/31"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.4.2 - 2025/04/16"
+msgstr "1.4.2 - 2025/04/16"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.4.3 - 2025/05/04"
+msgstr "1.4.3 - 2025/05/04"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.4.4 - 2025/05/25"
+msgstr "1.4.4 - 2025/05/25"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.4.5 - 2025/06/09"
+msgstr "1.4.5 - 2025/06/09"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.4.6 - 2025/06/14"
+msgstr "1.4.6 - 2025/06/14"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.4.7 - 2025/07/27"
+msgstr "1.4.7 - 2025/07/27"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.4.8 - 2025/08/07"
+msgstr "1.4.8 - 2025/08/07"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.4.9 - 2025/08/07"
+msgstr "1.4.9 - 2025/08/07"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.5.0 - 2025/08/08"
+msgstr "1.5.0 - 2025/08/08"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.5.1 - 2025/08/17"
+msgstr "1.5.1 - 2025/08/17"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.5.2 - 2025/08/26"
+msgstr "1.5.2 - 2025/08/26"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.5.3 - 2025/12/05"
+msgstr "1.5.3 - 2025/12/05"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.5.4 - 2026/04/22"
+msgstr "1.5.4 - 2026/04/22"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - stable login to android application"
+msgstr "Correzione – accesso stabile all'app Android"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - existing players are not repeated in the menu Add players"
+msgstr "Correzione – i giocatori esistenti non si ripetono nel menu Aggiungi giocatori"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Change - Public release of Android app"
+msgstr "Modifica – pubblicazione dell'app Android"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Add 'last update' to the database also for already installed plugings"
+msgstr "Correzione – aggiunta di \"last update\" al database anche per i plugin già installati"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Uninstall also 2 new pages (privacy policy and terms of service)"
+msgstr "Correzione – disinstallazione anche delle 2 nuove pagine (informativa sulla privacy e termini di servizio)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Add 'last update' to the database"
+msgstr "Correzione – aggiunta di \"last update\" al database"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Improved some functions for Android app"
+msgstr "Correzione – migliorate alcune funzioni per l'app Android"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Announcement about the opportunity to become an application tester"
+msgstr "Aggiunta – annuncio della possibilità di diventare tester dell'app"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Privacy Policy page"
+msgstr "Aggiunta – pagina Informativa sulla privacy"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Terms of Service page"
+msgstr "Aggiunta – pagina Termini di servizio"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Info about last update speed up loading"
+msgstr "Aggiunta – l'informazione sull'ultimo aggiornamento velocizza il caricamento"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Correct an error message Undefined array key player['count']"
+msgstr "Correzione – corretto il messaggio di errore Undefined array key player['count']"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Tournaments filtering by distance and visibility"
+msgstr "Aggiunta – filtro dei tornei per distanza e visibilità"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Support for a Android app"
+msgstr "Aggiunta – supporto per un'app Android"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Controls the visibility of the tournament in the public list."
+msgstr "Aggiunta – controlla la visibilità del torneo nell'elenco pubblico."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Location of the tournament."
+msgstr "Aggiunta – luogo del torneo."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Log in/out block had a problem"
+msgstr "Correzione – il blocco di iscrizione/ritiro aveva un problema"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Parameter When enough players are available had sometimes a wrong value."
+msgstr "Correzione – il parametro \"Quando ci sono abbastanza giocatori disponibili\" aveva a volte un valore errato."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Match hiding correction"
+msgstr "Correzione – correzione dell'occultamento delle partite"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Register and log in a new user only if anyone can register (system settings)."
+msgstr "Correzione – registrazione e accesso di un nuovo utente solo se chiunque può registrarsi (impostazione di sistema)."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Register and log in a new user."
+msgstr "Aggiunta – registrazione e accesso di un nuovo utente."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Translation loading too early warning."
+msgstr "Correzione – avviso di caricamento troppo anticipato delle traduzioni."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Dashboard overview widget."
+msgstr "Aggiunta – widget di panoramica nella bacheca."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Log-link block."
+msgstr "Aggiunta – blocco Log-link."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Sometimes tournament_id was unknown."
+msgstr "Correzione – a volte tournament_id era sconosciuto."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Preserving stored values on the backend."
+msgstr "Correzione – conservazione dei valori salvati nel backend."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Guaranteed visibility of the selected tournament in the tournament table."
+msgstr "Correzione – visibilità garantita del torneo selezionato nella tabella dei tornei."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Error with hide parameter."
+msgstr "Correzione – errore con il parametro hide."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Permalink structure also works with the floating help icon."
+msgstr "Correzione – la struttura dei permalink funziona anche con l'icona della guida mobile."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Tournament name is not copied from previous one."
+msgstr "Correzione – il nome del torneo non viene copiato dal precedente."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - More tournament examples for demonstration."
+msgstr "Aggiunta – altri tornei di esempio per la dimostrazione."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Floating help icon."
+msgstr "Aggiunta – icona della guida mobile."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Prevent cashing for logged users."
+msgstr "Aggiunta – evitata la cache per gli utenti connessi."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Doubles Badminton table also for co-players"
+msgstr "Correzione – tabella del badminton doppio anche per i compagni"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Tournament progress info."
+msgstr "Aggiunta – informazioni sull'avanzamento del torneo."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Change game results availability."
+msgstr "Correzione – modifica della disponibilità dei risultati."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Special group count."
+msgstr "Aggiunta – conteggi del gruppo speciale."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Change of information about the end of the tournament round."
+msgstr "Modifica delle informazioni sulla fine del turno del torneo."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Opponent selection."
+msgstr "Correzione – scelta dell'avversario."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Pair selection mechanism explanation on the help page."
+msgstr "Aggiunta – spiegazione del meccanismo di scelta delle coppie nella pagina di aiuto."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Pair selection didn´t take into account number of played games in total."
+msgstr "Correzione – la scelta delle coppie non teneva conto del numero totale di game giocati."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Rights to Suspension and Resumption."
+msgstr "Correzione – diritti di sospensione e ripresa."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Rights to add a special group."
+msgstr "Correzione – diritti di aggiunta a un gruppo speciale."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Rights to add a tournament admin."
+msgstr "Correzione – diritti di aggiunta di un amministratore del torneo."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Rights to add other players into tournaments."
+msgstr "Correzione – diritti di aggiunta di altri giocatori ai tornei."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Do not show instructions during the tournament presentation."
+msgstr "Correzione – non mostrare istruzioni durante la presentazione del torneo."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Admin can change a default value for minimum number of games played before a player can be declared a winner."
+msgstr "Aggiunta – l'amministratore può cambiare il valore predefinito del numero minimo di game giocati prima che un giocatore possa essere dichiarato vincitore."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - The ability to specify a minimum number of games played before a player can be declared a winner."
+msgstr "Aggiunta – possibilità di indicare un numero minimo di game giocati prima che un giocatore possa essere dichiarato vincitore."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Removing a player from a tournament."
+msgstr "Correzione – rimozione di un giocatore da un torneo."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Ready for testing in WP Playground."
+msgstr "Correzione – pronto per i test in WP Playground."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Solving some database errors with empty values."
+msgstr "Correzione – risolti alcuni errori del database con valori vuoti."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Update for WP Playground."
+msgstr "Correzione – aggiornamento per WP Playground."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Improved playmate choose."
+msgstr "Correzione – migliorata la scelta del compagno."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Problems with removing players during a game."
+msgstr "Correzione – problemi nella rimozione di giocatori durante il gioco."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - A currently playing player can´t be removed."
+msgstr "Correzione – un giocatore che sta giocando non può essere rimosso."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Fix real count of players after their removing."
+msgstr "Correzione – conteggio reale dei giocatori dopo la loro rimozione."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Fix an error during removing a player from the tournament."
+msgstr "Correzione – errore durante la rimozione di un giocatore dal torneo."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Redirection to a tournament in case of a user entry."
+msgstr "Correzione – reindirizzamento a un torneo in caso di inserimento da parte dell'utente."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - icon format."
+msgstr "Correzione – formato delle icone."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Modification for WP Playground."
+msgstr "Modifica per WP Playground."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Fixed a bug in the database that prevented a tournament record from being created on some servers."
+msgstr "Correzione – corretto un errore del database che su alcuni server impediva la creazione del record del torneo."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Unregistered users can no longer enter results in the singles tournament."
+msgstr "Correzione – gli utenti non registrati non possono più inserire risultati nel torneo di singolare."
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid "Possibility to remove players from an already ongoing tournament."
+msgstr "Possibilità di rimuovere giocatori da un torneo già in corso."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "New - Expanded the ability for tournament administrators to browse through players they have already met at the tournament."
+msgstr "Novità – gli amministratori dei tornei possono consultare più giocatori già incontrati in un torneo."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "New - If the player has not yet registered for any tournament, it is possible to choose whether to show him a quick help."
+msgstr "Novità – se il giocatore non si è ancora iscritto a nessun torneo, si può scegliere se mostrargli una guida rapida."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "New - Optional login prompt."
+msgstr "Novità – invito facoltativo ad accedere."
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - If all tournaments were deleted, a new tournament could not be created."
+msgstr "Correzione – se tutti i tornei erano stati eliminati, non era possibile crearne uno nuovo."
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid ""
+"Trial tournament improvements.\n"
+"Added the option to announce the end of the tournament round."
+msgstr ""
+"Miglioramenti del torneo di prova.\n"
+"Aggiunta l'opzione per annunciare la fine del turno del torneo."
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid ""
+"Improved the visual appearance of the main page.\n"
+"Badminton added to the list of available tournaments."
+msgstr ""
+"Migliorato l'aspetto della pagina principale.\n"
+"Aggiunto il badminton all'elenco dei tornei disponibili."
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid "Option to announce separate winners from the special group and outside the special group."
+msgstr "Opzione per annunciare vincitori separati del gruppo speciale e di fuori dal gruppo speciale."
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid ""
+"Notices after a plugin activation.\n"
+"Added player trend."
+msgstr ""
+"Avvisi dopo l'attivazione del plugin.\n"
+"Aggiunto il trend del giocatore."
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid ""
+"Modified tournament editing tab.\n"
+"Added option to change tournament type."
+msgstr ""
+"Modificata la scheda di modifica del torneo.\n"
+"Aggiunta l'opzione per cambiare il tipo di torneo."
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid ""
+"Reactivating the plugin doesn´t affect the already deleted tournament example. \n"
+"Unblock offering maximum games count.\n"
+"Fix tournament change when entering results.\n"
+"Added quick help for newcomers.\n"
+"Allow the final match also for singles."
+msgstr ""
+"La riattivazione del plugin non influisce sul torneo di esempio già eliminato.\n"
+"Sbloccata la scelta del numero massimo di game.\n"
+"Corretto il cambio di torneo durante l'inserimento dei risultati.\n"
+"Aggiunta una guida rapida per i nuovi utenti.\n"
+"Partita finale consentita anche nel singolare."
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid ""
+"Added the option for single tournaments. \n"
+"Created an environment for additional sports."
+msgstr ""
+"Aggiunta l'opzione per i tornei di singolare.\n"
+"Creato un ambiente per altri sport."
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid ""
+"The administrator can now use 'hide' option when editing the match result.\n"
+"Free score input is allowed. This opens using not only for tennis but for example for table tennis or beach volleyball."
+msgstr ""
+"L'amministratore ora può usare l'opzione \"nascondi\" quando modifica il risultato di una partita.\n"
+"È consentito l'inserimento libero del punteggio. Questo permette di usare il plugin non solo per il tennis, ma ad esempio anche per il tennistavolo o il beach volley."
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid ""
+"Minor changes in code:\n"
+"* Allow to transfer organizer rights to a non-playing user.\n"
+"* Ensuring an even rotation of serves at the start of the tournament."
+msgstr ""
+"Piccole modifiche al codice:\n"
+"* Consentito il trasferimento dei diritti di organizzatore a un utente che non gioca.\n"
+"* Garantita una rotazione equilibrata del servizio all'inizio del torneo."
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid "Fixed choosing between left and right side in first matches."
+msgstr "Corretta la scelta tra lato sinistro e destro nelle prime partite."
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid "A small modification of admin screen."
+msgstr "Una piccola modifica della schermata di amministrazione."
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid "First release to public."
+msgstr "Prima versione pubblica."
+

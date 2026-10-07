@@ -1,0 +1,1289 @@
+# Translation of Plugins - Rotation Tournaments - Development Readme (trunk) in Bengali (India)
+# This file is distributed under the same license as the Plugins - Rotation Tournaments - Development Readme (trunk) package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Plugins - Rotation Tournaments - Development Readme (trunk)\n"
+"PO-Revision-Date: 2026-10-07 11:28:10+0000\n"
+"Language: bn_IN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: GlotPress/4.1.0\n"
+
+#. Short description.
+#, gp-priority: high
+msgid "Do you play Singles or Doubles Tournaments? This plugin manages Rotation Tournaments where players have a different partner in each game."
+msgstr "আপনি কি সিঙ্গলস বা ডাবলস টুর্নামেন্ট খেলেন? এই প্লাগইন রোটেশন টুর্নামেন্ট পরিচালনা করে, যেখানে প্রতিটি গেমে খেলোয়াড়দের সঙ্গী বদলায়।"
+
+#. Plugin name.
+#, gp-priority: high
+msgid "Rotation Tournaments"
+msgstr "রোটেশন টুর্নামেন্ট"
+
+#. Found in installation paragraph.
+msgid "After installation, go to the app's settings and enter the address of your website where this plugin is installed."
+msgstr "ইনস্টলের পর অ্যাপের সেটিংসে গিয়ে যে ওয়েবসাইটে এই প্লাগইন ইনস্টল করা আছে তার ঠিকানা লিখুন।"
+
+#. Found in installation paragraph.
+msgid "Or download it directly from this link: https://play.google.com/store/apps/details?id=cz.doroto.app"
+msgstr "অথবা সরাসরি এই লিংক থেকে ডাউনলোড করুন: https://play.google.com/store/apps/details?id=cz.doroto.app"
+
+#. Found in installation paragraph.
+msgid "Search for \"Rotation Tournaments\" on the Google Play Store."
+msgstr "Google Play Store-এ “Rotation Tournaments” খুঁজুন।"
+
+#. Found in description paragraph.
+msgid "To get the full experience of managing tournaments on the go, download our mobile app, now available on Google Play!"
+msgstr "চলতে চলতে টুর্নামেন্ট পরিচালনার পূর্ণ অভিজ্ঞতা পেতে আমাদের মোবাইল অ্যাপ ডাউনলোড করুন, এখন Google Play-তে পাওয়া যাচ্ছে!"
+
+#. Found in description paragraph.
+msgid "<strong>YouTube quick intro:</strong>"
+msgstr "<strong>YouTube-এ সংক্ষিপ্ত পরিচিতি:</strong>"
+
+#. Found in description list item.
+msgid "Video for a quick introduction to the Rotation Tournament:"
+msgstr "রোটেশন টুর্নামেন্টের সংক্ষিপ্ত পরিচিতির ভিডিও:"
+
+#. Found in faq paragraph.
+msgid "Yes. If you install the Rotation Tournaments plugin, allow player registration, and enable visibility in the website list, your site can appear in the Android app. Initially, someone must manually enter your website address into the app. After that, it becomes visible in the list for all users."
+msgstr "হ্যাঁ। আপনি Rotation Tournaments প্লাগইন ইনস্টল করে খেলোয়াড় নিবন্ধনের অনুমতি দিলে এবং ওয়েবসাইট তালিকায় দৃশ্যমানতা চালু করলে আপনার সাইট Android অ্যাপে দেখা যেতে পারে। প্রথমে কাউকে অ্যাপে আপনার ওয়েবসাইটের ঠিকানা নিজে লিখতে হবে। এরপর এটি সব ব্যবহারকারীর তালিকায় দেখা যাবে।"
+
+#. Found in faq paragraph.
+msgid "Yes. An iOS version of the Rotation Tournaments app is planned and will be released in the near future."
+msgstr "হ্যাঁ। Rotation Tournaments অ্যাপের iOS সংস্করণের পরিকল্পনা আছে এবং শিগগিরই প্রকাশিত হবে।"
+
+#. Found in faq header.
+msgid "Will my website be visible in the Rotation Tournaments Android app?"
+msgstr "Rotation Tournaments Android অ্যাপে কি আমার ওয়েবসাইট দেখা যাবে?"
+
+#. Found in faq header.
+msgid "Will there be an iPhone or iPad version of the app?"
+msgstr "অ্যাপের কি iPhone বা iPad সংস্করণ আসবে?"
+
+#. Found in installation paragraph.
+msgid "<strong>How to install Wordpress plugin:</strong>"
+msgstr "<strong>WordPress প্লাগইন কীভাবে ইনস্টল করবেন:</strong>"
+
+#. Found in installation list item.
+msgid "After activating the plugin, 4 pages will be created: one for managing tournaments (main page), one with tournament rules, and additional pages for Privacy Policy and Terms of Service. A sample post announcing a newly created tournament will also be added."
+msgstr "প্লাগইন সক্রিয় করার পর 4টি পৃষ্ঠা তৈরি হবে: টুর্নামেন্ট পরিচালনার একটি (মূল পৃষ্ঠা), টুর্নামেন্টের নিয়মের একটি এবং গোপনীয়তা নীতি ও পরিষেবার শর্তাবলির পৃষ্ঠা। নতুন তৈরি টুর্নামেন্টের ঘোষণাসহ একটি উদাহরণ পোস্টও যোগ হবে।"
+
+#. Found in installation paragraph.
+msgid "<strong>How to install the Android app:</strong>"
+msgstr "<strong>Android অ্যাপ কীভাবে ইনস্টল করবেন:</strong>"
+
+#. Found in description paragraph.
+msgid "<strong>This plugin is the server-side for the \"Rotation Tournaments\" Android app.</strong>"
+msgstr "<strong>এই প্লাগইনটি “Rotation Tournaments” Android অ্যাপের সার্ভার অংশ।</strong>"
+
+#. Screenshot description.
+msgid "Individual tournament participants enter their results into the WordPress server and share the data with each other."
+msgstr "টুর্নামেন্টের প্রত্যেক অংশগ্রহণকারী WordPress সার্ভারে নিজের ফলাফল লেখেন এবং একে অপরের সঙ্গে ডেটা শেয়ার করেন।"
+
+#. Screenshot description.
+msgid "Matches played. (Android app)"
+msgstr "খেলা হয়ে যাওয়া ম্যাচ। (Android অ্যাপ)"
+
+#. Screenshot description.
+msgid "Tournament table. (Wordpress)"
+msgstr "টুর্নামেন্টের টেবিল। (WordPress)"
+
+#. Screenshot description.
+msgid "Matches drawn. (Android app)"
+msgstr "ড্র হওয়া ম্যাচ। (Android অ্যাপ)"
+
+#. Screenshot description.
+msgid "Editing tournament parameters. (Wordpress)"
+msgstr "টুর্নামেন্টের প্যারামিটার সম্পাদনা। (WordPress)"
+
+#. Screenshot description.
+msgid "Table of players with rankings. (Android app)"
+msgstr "র‍্যাঙ্কিংসহ খেলোয়াড়দের টেবিল। (Android অ্যাপ)"
+
+#. Screenshot description.
+msgid "Matches played. (Wordpress)"
+msgstr "খেলা হয়ে যাওয়া ম্যাচ। (WordPress)"
+
+#. Screenshot description.
+msgid "Basic overview of the tournament. (Android app)"
+msgstr "টুর্নামেন্টের মৌলিক সংক্ষিপ্ত বিবরণ। (Android অ্যাপ)"
+
+#. Screenshot description.
+msgid "Matches drawn. (Wordpress)"
+msgstr "ড্র হওয়া ম্যাচ। (WordPress)"
+
+#. Found in description paragraph.
+msgid "<strong>Rotation Tournaments</strong> provides a platform for organizing all kinds of sports Singles and Doubles Tournaments, e.g."
+msgstr "<strong>রোটেশন টুর্নামেন্ট</strong> সব ধরনের ক্রীড়া সিঙ্গলস ও ডাবলস টুর্নামেন্ট আয়োজনের একটি প্ল্যাটফর্ম, যেমন"
+
+#. Found in description list item.
+msgid "Squash"
+msgstr "স্কোয়াশ"
+
+#. Found in description list item.
+msgid "Beach Volleyball"
+msgstr "বিচ ভলিবল"
+
+#. Found in description list item.
+msgid "Badminton"
+msgstr "ব্যাডমিন্টন"
+
+#. Found in description list item.
+msgid "Padel"
+msgstr "প্যাডেল"
+
+#. Found in description list item.
+msgid "Table Tennis"
+msgstr "টেবিল টেনিস"
+
+#. Found in description list item.
+msgid "Tennis"
+msgstr "টেনিস"
+
+#. Found in faq paragraph.
+msgid ""
+"This plugin can be used for all types of sports where 2 or 4 players compete in singles or doubles.\n"
+"You can use this plugin for tennis, table tennis, squash, padel, badminton, beach volleyball and probably for more."
+msgstr ""
+"যেসব খেলায় 2 বা 4 জন খেলোয়াড় সিঙ্গলস বা ডাবলসে প্রতিদ্বন্দ্বিতা করেন, সেগুলোর সবকটিতে এই প্লাগইন ব্যবহার করা যায়।\n"
+"টেনিস, টেবিল টেনিস, স্কোয়াশ, প্যাডেল, ব্যাডমিন্টন, বিচ ভলিবল এবং সম্ভবত আরও খেলায় এটি ব্যবহার করতে পারেন।"
+
+#. Found in faq paragraph.
+msgid "Yes. When creating a tournament, you can choose whether to create a singles or a doubles tournament."
+msgstr "হ্যাঁ। টুর্নামেন্ট তৈরির সময় সিঙ্গলস না ডাবলস টুর্নামেন্ট হবে তা বেছে নিতে পারেন।"
+
+#. Found in faq header.
+msgid "What sports tournaments is this plugin for?"
+msgstr "এই প্লাগইন কোন ক্রীড়া টুর্নামেন্টের জন্য?"
+
+#. Found in description paragraph.
+msgid "<strong>General Features:</strong>"
+msgstr "<strong>সাধারণ বৈশিষ্ট্য:</strong>"
+
+#. Found in description paragraph.
+msgid "<strong>Doubles Rotation Tournament:</strong>"
+msgstr "<strong>ডাবলস রোটেশন টুর্নামেন্ট:</strong>"
+
+#. Found in description paragraph.
+msgid "<strong>Singles Rotation Tournament:</strong>"
+msgstr "<strong>সিঙ্গলস রোটেশন টুর্নামেন্ট:</strong>"
+
+#. Found in description paragraph.
+msgid "The participants of a tournament change partners several times during the tournament by a random selection and play against different players. The ratio of games won to games lost is calculated for each participant. The winner of the tournament is the player with this highest ratio. While a Singles Rotation Tournament can be organized without the aid of technology, in the case of a Doubles Rotation Tournament, this is not possible."
+msgstr "টুর্নামেন্টের অংশগ্রহণকারীরা এলোমেলো নির্বাচনের মাধ্যমে টুর্নামেন্টে কয়েকবার সঙ্গী বদলান এবং বিভিন্ন খেলোয়াড়ের বিপক্ষে খেলেন। প্রত্যেক অংশগ্রহণকারীর জন্য জেতা ও হারা গেমের অনুপাত হিসাব করা হয়। সর্বোচ্চ অনুপাতধারী খেলোয়াড় টুর্নামেন্টের বিজয়ী। সিঙ্গলস রোটেশন টুর্নামেন্ট প্রযুক্তির সাহায্য ছাড়া আয়োজন করা গেলেও ডাবলস রোটেশন টুর্নামেন্টে তা সম্ভব নয়।"
+
+#. Found in description paragraph.
+msgid "The <strong>Rotation Tournaments</strong> have a strong social aspect because its goal is to keep players in the tournament until the very end. The situation where weaker players would leave the tournament due to elimination rounds is eliminated. It allows grouping players into a special category with special conditions. This special setting can be utilized, for example, in mixed tournaments."
+msgstr "<strong>রোটেশন টুর্নামেন্ট</strong>-এর একটি জোরালো সামাজিক দিক আছে, কারণ এর লক্ষ্য খেলোয়াড়দের একেবারে শেষ পর্যন্ত টুর্নামেন্টে রাখা। নকআউট রাউন্ডের কারণে দুর্বল খেলোয়াড়দের টুর্নামেন্ট ছেড়ে যাওয়ার পরিস্থিতি থাকে না। খেলোয়াড়দের বিশেষ শর্তসহ একটি বিশেষ বিভাগে রাখা যায়। এই বিশেষ সেটিং যেমন মিশ্র টুর্নামেন্টে কাজে লাগানো যায়।"
+
+#. Found in description paragraph.
+msgid "In <strong>Rotation Tournaments</strong>, each participant plays against every other participant and there are no eliminations in individual rounds. To maximize the variety of match combinations, the matches are typically played in a single set."
+msgstr "<strong>রোটেশন টুর্নামেন্ট</strong>-এ প্রত্যেক অংশগ্রহণকারী অন্য সবার বিপক্ষে খেলেন এবং কোনো রাউন্ডে কেউ বাদ পড়েন না। ম্যাচের সংমিশ্রণে সর্বোচ্চ বৈচিত্র্য আনতে ম্যাচগুলো সাধারণত এক সেটে খেলা হয়।"
+
+#. Found in description list item.
+msgid "Suitable for various sports: tennis, table tennis, squash, padel, badminton, beach volleyball, and more."
+msgstr "বিভিন্ন খেলার জন্য উপযোগী: টেনিস, টেবিল টেনিস, স্কোয়াশ, প্যাডেল, ব্যাডমিন্টন, বিচ ভলিবল ও আরও অনেক।"
+
+#. Found in description list item.
+msgid "Integration with website user accounts."
+msgstr "ওয়েবসাইটের ব্যবহারকারী অ্যাকাউন্টের সঙ্গে সংযুক্তি।"
+
+#. Found in description list item.
+msgid "No downtime during the tournament."
+msgstr "টুর্নামেন্টে কোনো অলস সময় নেই।"
+
+#. Found in description list item.
+msgid "Comprehensive overview of player quality."
+msgstr "খেলোয়াড়দের মান সম্পর্কে পূর্ণাঙ্গ ধারণা।"
+
+#. Found in description list item.
+msgid "User-friendly interface for administrators and participants."
+msgstr "প্রশাসক ও অংশগ্রহণকারীদের জন্য ব্যবহারবান্ধব ইন্টারফেস।"
+
+#. Found in description list item.
+msgid "Customizable settings for each tournament."
+msgstr "প্রতিটি টুর্নামেন্টের জন্য কাস্টমাইজযোগ্য সেটিংস।"
+
+#. Found in description list item.
+msgid "Real-time score tracking."
+msgstr "রিয়েল-টাইমে স্কোর অনুসরণ।"
+
+#. Found in description list item.
+msgid "Seamless scheduling of matches."
+msgstr "ম্যাচের নির্বিঘ্ন সময়সূচি।"
+
+#. Found in description list item.
+msgid "Announcement of the Best Player and Most Ideal Pair at the end of the tournament."
+msgstr "টুর্নামেন্টের শেষে সেরা খেলোয়াড় ও আদর্শ জুটির ঘোষণা।"
+
+#. Found in description list item.
+msgid "Ranking based on the ratio of games won to games lost."
+msgstr "জেতা ও হারা গেমের অনুপাতভিত্তিক র‍্যাঙ্কিং।"
+
+#. Found in description list item.
+msgid "Individual players can join or leave the tournament at any time."
+msgstr "খেলোয়াড়েরা যেকোনো সময় টুর্নামেন্টে যোগ দিতে বা ছাড়তে পারেন।"
+
+#. Found in description list item.
+msgid "Tournament can be interrupted or extended without disruption."
+msgstr "বাধা ছাড়াই টুর্নামেন্ট থামানো বা বাড়ানো যায়।"
+
+#. Found in description list item.
+msgid "Shorter matches for more participation."
+msgstr "বেশি অংশগ্রহণের জন্য ছোট ম্যাচ।"
+
+#. Found in description list item.
+msgid "No eliminations, ensuring all players stay in the game."
+msgstr "কেউ বাদ পড়েন না, সব খেলোয়াড় খেলায় থাকেন।"
+
+#. Found in description list item.
+msgid "Define special groups of players with unique conditions."
+msgstr "নিজস্ব শর্তসহ খেলোয়াড়দের বিশেষ গ্রুপ নির্ধারণ।"
+
+#. Found in description list item.
+msgid "Suitable for odd numbers of players and minimum lineups of 4 players."
+msgstr "বিজোড় সংখ্যক খেলোয়াড় ও ন্যূনতম 4 জন খেলোয়াড়ের জন্য উপযোগী।"
+
+#. Found in description list item.
+msgid "Individuals can enter the tournament without a permanent teammate."
+msgstr "স্থায়ী সঙ্গী ছাড়াই টুর্নামেন্টে যোগ দেওয়া যায়।"
+
+#. Found in description list item.
+msgid "Rotation of teammates, ensuring variety in partnerships."
+msgstr "সঙ্গীর পালাবদল, যা জুটিতে বৈচিত্র্য আনে।"
+
+#. Found in description list item.
+msgid "Alternative form of a Doubles Tournament where players enter each match with a different partner and in different positions (alternating left and right sides)."
+msgstr "ডাবলস টুর্নামেন্টের একটি বিকল্প রূপ, যেখানে খেলোয়াড়েরা প্রতিটি ম্যাচ ভিন্ন সঙ্গীর সঙ্গে ও ভিন্ন অবস্থানে খেলেন (বাঁ ও ডান দিক পালাক্রমে)।"
+
+#. Found in description list item.
+msgid "Depending on the time options, everyone plays against everyone."
+msgstr "সময় অনুযায়ী সবাই সবার বিপক্ষে খেলেন।"
+
+#. Found in description list item.
+msgid "Alternative form of a Singles Tournament where players face each other without elimination rounds."
+msgstr "সিঙ্গলস টুর্নামেন্টের একটি বিকল্প রূপ, যেখানে খেলোয়াড়েরা নকআউট রাউন্ড ছাড়াই মুখোমুখি হন।"
+
+#. Found in description header.
+msgid "Features"
+msgstr "বৈশিষ্ট্য"
+
+#. Found in faq header.
+msgid "Is this plugin suitable for singles tournaments?"
+msgstr "এই প্লাগইন কি সিঙ্গলস টুর্নামেন্টের জন্য উপযুক্ত?"
+
+#. Found in faq paragraph.
+msgid "Yes, each tournament participant must have their own account. If a website has disabled user registration, this account must be created by the website administrator."
+msgstr "হ্যাঁ, টুর্নামেন্টের প্রত্যেক অংশগ্রহণকারীর নিজস্ব অ্যাকাউন্ট থাকতে হবে। কোনো ওয়েবসাইটে ব্যবহারকারী নিবন্ধন বন্ধ থাকলে এই অ্যাকাউন্ট ওয়েবসাইট প্রশাসককে তৈরি করতে হবে।"
+
+#. Found in faq header.
+msgid "Does each player have to have an account created on my website?"
+msgstr "প্রত্যেক খেলোয়াড়ের কি আমার ওয়েবসাইটে অ্যাকাউন্ট থাকতে হবে?"
+
+#. Found in installation list item.
+msgid "At the end close the tournament and look who was announced as the winner."
+msgstr "শেষে টুর্নামেন্ট বন্ধ করে দেখুন কাকে বিজয়ী ঘোষণা করা হয়েছে।"
+
+#. Found in installation list item.
+msgid "You can change tournament settings on the main page or you can look at 2 new admin pages that are dedicated for overall environmental settings and for description of all possible shortcodes."
+msgstr "মূল পৃষ্ঠায় টুর্নামেন্টের সেটিংস বদলাতে পারেন, অথবা পরিবেশের সামগ্রিক সেটিংস ও সব উপলব্ধ শর্টকোডের বিবরণের জন্য তৈরি 2টি নতুন অ্যাডমিন পৃষ্ঠা দেখতে পারেন।"
+
+#. Found in installation list item.
+msgid "If you have a sufficient amount of players then you can close a registration and start playing matches."
+msgstr "যথেষ্ট খেলোয়াড় থাকলে নিবন্ধন বন্ধ করে ম্যাচ খেলা শুরু করতে পারেন।"
+
+#. Found in installation list item.
+msgid "Then you can log in your created tournament and as a tournament´s administrator you can add manually also other players sourced from WP database."
+msgstr "তারপর আপনার তৈরি টুর্নামেন্টে নাম লেখাতে পারেন এবং টুর্নামেন্ট প্রশাসক হিসেবে WordPress ডেটাবেস থেকে অন্য খেলোয়াড়দেরও নিজে যোগ করতে পারেন।"
+
+#. Found in installation list item.
+msgid "Start by clicking on \"Create a new tournament\" under \"Tournament Selection …\" on the main page."
+msgstr "মূল পৃষ্ঠায় “টুর্নামেন্ট নির্বাচন…” অংশে “নতুন টুর্নামেন্ট তৈরি করুন”-এ ক্লিক করে শুরু করুন।"
+
+#. Found in installation list item.
+msgid "Install the plugin as usual."
+msgstr "স্বাভাবিক নিয়মে প্লাগইন ইনস্টল করুন।"
+
+#. Found in description paragraph.
+msgid "Visit <a href=\"https://doroto.ltcchrast.cz/\">test page</a> for more information, try to create your own tournament and take a look at <a href=\"https://doroto.ltcchrast.cz/rules-of-the-doubles-rotation-tournament/\">Rules of the Doubles Rotation Tournament</a>."
+msgstr "আরও তথ্যের জন্য <a href=\"https://doroto.ltcchrast.cz/\">পরীক্ষামূলক পৃষ্ঠা</a> দেখুন, নিজের টুর্নামেন্ট তৈরি করে দেখুন এবং <a href=\"https://doroto.ltcchrast.cz/rules-of-the-doubles-rotation-tournament/\">ডাবলস রোটেশন টুর্নামেন্টের নিয়ম</a> দেখে নিন।"
+
+#. Found in description paragraph.
+msgid "[youtube https://www.youtube.com/watch?v=NoL9aPTv8u8]"
+msgstr "[youtube https://www.youtube.com/watch?v=NoL9aPTv8u8]"
+
+#. Found in description header.
+msgid "More information"
+msgstr "আরও তথ্য"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - the plugin restores read permissions of its files after an FTP upload (the web server answered 403 and the admin page stayed empty); the admin page shows a notice when its script cannot be loaded"
+msgstr "সংশোধন – FTP-তে আপলোডের পর প্লাগইন তার ফাইলগুলোর পড়ার অনুমতি পুনরুদ্ধার করে (ওয়েব সার্ভার 403 দিত এবং অ্যাডমিন পৃষ্ঠা ফাঁকা থাকত); স্ক্রিপ্ট লোড না হলে অ্যাডমিন পৃষ্ঠা একটি বিজ্ঞপ্তি দেখায়"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - tournament settings keep the ranges of 1.x and of the app (a larger value made the app's dropdowns fail)"
+msgstr "সংশোধন – টুর্নামেন্টের সেটিংস 1.x সংস্করণ ও অ্যাপের পরিসীমা বজায় রাখে (বড় মানের কারণে অ্যাপের ড্রপডাউন ব্যর্থ হতো)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - REST requests from the website use the WordPress login (cookie and nonce) when no app token is sent"
+msgstr "উন্নতি – অ্যাপ টোকেন না পাঠালে ওয়েবসাইটের REST অনুরোধ WordPress লগ ইন (কুকি ও nonce) ব্যবহার করে"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - styles, scripts and no-cache headers are sent only on pages that show the plugin; the unused tipTip library was removed and the admin no longer calls ip-api.com"
+msgstr "উন্নতি – স্টাইল, স্ক্রিপ্ট ও no-cache হেডার কেবল প্লাগইন দেখানো পৃষ্ঠায় পাঠানো হয়; অব্যবহৃত tipTip লাইব্রেরি সরানো হয়েছে এবং অ্যাডমিন আর ip-api.com-এ অনুরোধ পাঠায় না"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - every change of a tournament (web forms, blocks and the Android app) goes through one shared layer with the same permissions, locking and change detection"
+msgstr "উন্নতি – টুর্নামেন্টের প্রতিটি পরিবর্তন (ওয়েব ফর্ম, ব্লক ও Android অ্যাপ) একই অনুমতি, লক ও পরিবর্তন শনাক্তকরণসহ একটি সাধারণ স্তরের মধ্য দিয়ে যায়"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - new admin page with Overview, Settings and Help instead of nine settings tabs; every setting is checked on the server and errors are shown next to the field"
+msgstr "উন্নতি – নয়টি সেটিংস ট্যাবের বদলে সংক্ষিপ্ত বিবরণ, সেটিংস ও সাহায্যসহ নতুন অ্যাডমিন পৃষ্ঠা; প্রতিটি সেটিং সার্ভারে যাচাই হয় এবং ত্রুটি ঘরের পাশে দেখানো হয়"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - the serving player is marked on the match cards; the special group is highlighted in matches, results, players, statistics and winners; the tournament details (invitation text) can be shown at any time"
+msgstr "যোগ – ম্যাচ কার্ডে সার্ভকারী খেলোয়াড় চিহ্নিত থাকে; ম্যাচ, ফলাফল, খেলোয়াড়, পরিসংখ্যান ও বিজয়ীদের মধ্যে বিশেষ গ্রুপ হাইলাইট করা হয়; টুর্নামেন্টের বিবরণ (আমন্ত্রণের লেখা) যেকোনো সময় দেখানো যায়"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - the tournament block takes its colours from the theme (button and palette colours); the block's Styles panel can change the accent, the tab bar and table headers, their text and the colour of the special group"
+msgstr "যোগ – টুর্নামেন্ট ব্লক থিম থেকে রং নেয় (বোতাম ও প্যালেটের রং); ব্লকের স্টাইল প্যানেলে অ্যাকসেন্ট, ট্যাব বার ও টেবিল শিরোনাম, তাদের লেখা এবং বিশেষ গ্রুপের রং বদলানো যায়"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - the tournament block: Share dialog with a QR code, \"Open in the app\" line, full-screen presentation that rotates the sections, map of the tournament place in the settings, and guided tours of the page and of four example tournaments"
+msgstr "যোগ – টুর্নামেন্ট ব্লক: QR কোডসহ শেয়ার ডায়ালগ, “অ্যাপে খুলুন” লাইন, অংশগুলো পালাক্রমে দেখানো পূর্ণ স্ক্রিন উপস্থাপনা, সেটিংসে টুর্নামেন্টের স্থানের মানচিত্র এবং পৃষ্ঠা ও চারটি উদাহরণ টুর্নামেন্টের গাইডেড ট্যুর"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - the plugin admin can convert the main page to the blocks with one button; the old content stays in the page revisions. New installs create the main page from the blocks. The shortcodes [doroto_tournament] and [doroto_tournament_list] show the blocks in the classic editor; the 1.x shortcodes keep working"
+msgstr "যোগ – প্লাগইন প্রশাসক একটি বোতামে মূল পৃষ্ঠাকে ব্লকে রূপান্তর করতে পারেন; পুরোনো বিষয়বস্তু পৃষ্ঠার সংশোধনীতে থাকে। নতুন ইনস্টলেশনে মূল পৃষ্ঠা ব্লক দিয়ে তৈরি হয়। [doroto_tournament] ও [doroto_tournament_list] শর্টকোড ক্লাসিক এডিটরে ব্লক দেখায়; 1.x-এর শর্টকোড আগের মতোই কাজ করে"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - blocks for the block editor: \"Rotation tournament\" (matches, results, players, statistics and settings on tabs, updated live without reloading the page), its variations \"Tournament standings\", \"Tournament matches\" and \"Tournament presentation\", \"Tournament list\" and \"Tournament invitation\""
+msgstr "যোগ – ব্লক এডিটরের জন্য ব্লক: “রোটেশন টুর্নামেন্ট” (ম্যাচ, ফলাফল, খেলোয়াড়, পরিসংখ্যান ও সেটিংস ট্যাবে, পৃষ্ঠা পুনরায় লোড ছাড়াই সরাসরি হালনাগাদ), এর রূপ “টুর্নামেন্টের র‍্যাঙ্কিং”, “টুর্নামেন্টের ম্যাচ” ও “টুর্নামেন্ট উপস্থাপনা”, এবং “টুর্নামেন্টের তালিকা” ও “টুর্নামেন্টের আমন্ত্রণ”"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "2.0.0 - 2026/10/06"
+msgstr "2.0.0 - 2026/10/06"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Change - the review request is shown only to administrators, 14 days after activation once the site has its own tournament, and comes back 7 days after \"Remind me\" until the plugin is rated"
+msgstr "পরিবর্তন – রিভিউয়ের অনুরোধ কেবল প্রশাসকদের দেখানো হয়, সক্রিয় করার 14 দিন পরে এবং সাইটে নিজস্ব টুর্নামেন্ট থাকলে, এবং প্লাগইনে রেটিং না দেওয়া পর্যন্ত “মনে করিয়ে দিন”-এর 7 দিন পরে আবার আসে"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - the tournament page shows a short link to the Android app (can be turned off in Settings -&gt; Mobile app)"
+msgstr "যোগ – টুর্নামেন্ট পৃষ্ঠায় Android অ্যাপের একটি ছোট লিংক দেখানো হয় (সেটিংস -&gt; মোবাইল অ্যাপ থেকে বন্ধ করা যায়)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - optional mode join/leave for the app join endpoint"
+msgstr "যোগ – অ্যাপের যোগদান endpoint-এর জন্য ঐচ্ছিক যোগ/ত্যাগ মোড"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - REST endpoint create-player: the organizer creates a player and adds them to the tournament in one step; the player gets an e-mail to set the password"
+msgstr "যোগ – REST endpoint create-player: আয়োজক এক ধাপে খেলোয়াড় তৈরি করে টুর্নামেন্টে যোগ করেন; খেলোয়াড় পাসওয়ার্ড সেট করার ইমেল পান"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Change - tournament links to the home page (\"?tournament_id=5\") and the old app QR codes (\"/tournament?id=5\") open the tournament page"
+msgstr "পরিবর্তন – হোম পেজে টুর্নামেন্টের লিংক (“?tournament_id=5”) এবং অ্যাপের পুরোনো QR কোড (“/tournament?id=5”) টুর্নামেন্ট পৃষ্ঠা খোলে"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Change - the default name of a new tournament uses the site time zone, not UTC"
+msgstr "পরিবর্তন – নতুন টুর্নামেন্টের ডিফল্ট নাম UTC নয়, সাইটের সময় অঞ্চল ব্যবহার করে"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Change - the app can be signed in on several devices at once (up to 10 per user)"
+msgstr "পরিবর্তন – অ্যাপে একসঙ্গে কয়েকটি ডিভাইসে লগ ইন করা যায় (প্রতি ব্যবহারকারীর জন্য সর্বোচ্চ 10)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Change - invitation link only joins the tournament (a second click no longer unregisters the player), redirects to the login page and back, and then to the tournament page"
+msgstr "পরিবর্তন – আমন্ত্রণ লিংক কেবল টুর্নামেন্টে যোগ করে (দ্বিতীয় ক্লিকে আর খেলোয়াড়ের নাম প্রত্যাহার হয় না), লগ ইন পৃষ্ঠায় নিয়ে গিয়ে ফেরত আনে, তারপর টুর্নামেন্ট পৃষ্ঠায় নিয়ে যায়"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - REST responses are never served from page caches or CDNs"
+msgstr "সংশোধন – REST উত্তর কখনো পৃষ্ঠা ক্যাশ বা CDN থেকে দেওয়া হয় না"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Authorization header is read also on FPM/CGI hosts"
+msgstr "সংশোধন – FPM/CGI হোস্টেও Authorization হেডার পড়া হয়"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - database upgrade adds new columns also on already installed sites"
+msgstr "সংশোধন – ডেটাবেস আপগ্রেড ইতিমধ্যে ইনস্টল করা সাইটেও নতুন কলাম যোগ করে"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - several devices signing in or refreshing their session at the same moment no longer sign each other out"
+msgstr "সংশোধন – একই মুহূর্তে লগ ইন বা সেশন নবায়ন করা কয়েকটি ডিভাইস আর একে অপরকে লগ আউট করে না"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - every change of a running tournament (correcting a result, suspending or removing a player, settings, payments, special group, web forms) runs under the tournament lock; correcting a result while another court saved its result could stall the whole tournament"
+msgstr "সংশোধন – চলমান টুর্নামেন্টের প্রতিটি পরিবর্তন (ফলাফল সংশোধন, খেলোয়াড় স্থগিত বা অপসারণ, সেটিংস, পেমেন্ট, বিশেষ গ্রুপ, ওয়েব ফর্ম) টুর্নামেন্ট লকের অধীনে চলে; অন্য কোর্ট ফলাফল সংরক্ষণের সময় ফলাফল সংশোধন করলে পুরো টুর্নামেন্ট আটকে যেতে পারত"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - tournament lock: results entered at the same time on several courts are no longer lost"
+msgstr "সংশোধন – টুর্নামেন্ট লক: একসঙ্গে কয়েকটি কোর্টে লেখা ফলাফল আর হারায় না"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - every write to a tournament updates last_update"
+msgstr "সংশোধন – টুর্নামেন্টে প্রতিটি লেখা last_update হালনাগাদ করে"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - results entered on the web no longer store last_update = 0, so the Android app refreshes again"
+msgstr "সংশোধন – ওয়েবে লেখা ফলাফল আর last_update = 0 সংরক্ষণ করে না, তাই Android অ্যাপ আবার হালনাগাদ হয়"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Security - with registration disabled only tournament organizers can create player accounts from the app (before, any signed-in player could)"
+msgstr "নিরাপত্তা – নিবন্ধন বন্ধ থাকলে অ্যাপ থেকে খেলোয়াড় অ্যাকাউন্ট কেবল টুর্নামেন্ট আয়োজকেরা তৈরি করতে পারেন (আগে লগ ইন করা যেকোনো খেলোয়াড় পারতেন)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Security - an account created by an organizer no longer returns a login session of the new player to the organizer"
+msgstr "নিরাপত্তা – আয়োজকের তৈরি অ্যাকাউন্ট আর আয়োজককে নতুন খেলোয়াড়ের লগ ইন সেশন ফেরত দেয় না"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Security - registration from the app (incl. a new Google account) respects \"Anyone can register\""
+msgstr "নিরাপত্তা – অ্যাপ থেকে নিবন্ধন (নতুন Google অ্যাকাউন্টসহ) “যে কেউ নিবন্ধন করতে পারবেন” সেটিং মেনে চলে"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Security - final doubles and registration toggle check tournament admin rights"
+msgstr "নিরাপত্তা – ফাইনাল ডাবলস ও নিবন্ধন টগল টুর্নামেন্ট প্রশাসকের অধিকার যাচাই করে"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Security - guided tour actions need a nonce; regenerating the example tournaments is throttled"
+msgstr "নিরাপত্তা – গাইডেড ট্যুরের কাজের জন্য nonce দরকার; উদাহরণ টুর্নামেন্ট পুনঃতৈরি সীমিত করা হয়েছে"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Security - admin actions sent as links are protected by a nonce (CSRF)"
+msgstr "নিরাপত্তা – লিংক হিসেবে পাঠানো অ্যাডমিন কাজ nonce দিয়ে সুরক্ষিত (CSRF)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Security - front-end forms check tournament admin rights, not only the nonce (any logged-in user could change players, payments or delete a tournament)"
+msgstr "নিরাপত্তা – ফ্রন্ট-এন্ড ফর্ম কেবল nonce নয়, টুর্নামেন্ট প্রশাসকের অধিকারও যাচাই করে (আগে লগ ইন করা যেকোনো ব্যবহারকারী খেলোয়াড়, পেমেন্ট বদলাতে বা টুর্নামেন্ট মুছতে পারতেন)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - app tournament links on the central site (?tournament_id=5&amp;doroto_site=) are forwarded to the club's tournament page when the app is not installed (sites from the site directory; other sites get a page with a link)"
+msgstr "যোগ – কেন্দ্রীয় সাইটে অ্যাপের টুর্নামেন্ট লিংক (?tournament_id=5&amp;doroto_site=) অ্যাপ ইনস্টল না থাকলে ক্লাবের টুর্নামেন্ট পৃষ্ঠায় পাঠানো হয় (সাইট ডিরেক্টরির সাইট; অন্য সাইটগুলো একটি লিংকসহ পৃষ্ঠা পায়)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - the tournament page has an \"Open in the app\" link: Android opens the tournament in the app, or Google Play when it is missing"
+msgstr "যোগ – টুর্নামেন্ট পৃষ্ঠায় “অ্যাপে খুলুন” লিংক আছে: Android অ্যাপে টুর্নামেন্ট খোলে, অ্যাপ না থাকলে Google Play খোলে"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - saving the tournament settings rejects an unknown tournament type"
+msgstr "সংশোধন – টুর্নামেন্টের সেটিংস সংরক্ষণের সময় অজানা টুর্নামেন্ট ধরন প্রত্যাখ্যাত হয়"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - a deleted account leaves its open tournaments: removed when it has not played yet, otherwise suspended; it also leaves the organizers, special group and payments (it was drawn into matches as \"Unknown player\")"
+msgstr "সংশোধন – মুছে ফেলা অ্যাকাউন্ট তার খোলা টুর্নামেন্ট ছেড়ে যায়: এখনও না খেলে থাকলে সরানো হয়, না হলে স্থগিত হয়; এটি আয়োজক, বিশেষ গ্রুপ ও পেমেন্ট থেকেও সরে যায় (আগে “অজানা খেলোয়াড়” হিসেবে ম্যাচে ড্র হতো)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - removing a payment no longer turns the payment list into a JSON object (the Android app could crash on the statistics page)"
+msgstr "সংশোধন – পেমেন্ট সরালে পেমেন্টের তালিকা আর JSON অবজেক্টে পরিণত হয় না (Android অ্যাপ পরিসংখ্যান পৃষ্ঠায় ক্র্যাশ করতে পারত)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - the change form fits on a phone screen (the result and the button were off screen)"
+msgstr "সংশোধন – পরিবর্তনের ফর্ম ফোনের স্ক্রিনে এঁটে যায় (ফলাফল ও বোতাম স্ক্রিনের বাইরে ছিল)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - organizers see an \"Edit result\" button next to every played match; it selects the match and its result in the change form (the form above the table was easy to miss)"
+msgstr "যোগ – আয়োজকেরা প্রতিটি খেলা ম্যাচের পাশে “ফলাফল সম্পাদনা” বোতাম দেখেন; এটি পরিবর্তনের ফর্মে ম্যাচ ও এর ফলাফল বেছে দেয় (টেবিলের উপরের ফর্মটি সহজেই চোখ এড়িয়ে যেত)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - REST route skip-matches: the organizer skips several ongoing matches at once and new matches are drawn from all free players"
+msgstr "যোগ – REST রুট skip-matches: আয়োজক একসঙ্গে কয়েকটি চলমান ম্যাচ বাদ দেন এবং নতুন ম্যাচ সব অবসর খেলোয়াড়দের মধ্য থেকে ড্র হয়"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - among players with the same number of new teammates left, the one who played fewer games is drawn first; sides (left/right) alternate for both players of a team"
+msgstr "উন্নতি – বাকি নতুন সঙ্গীর সংখ্যা সমান এমন খেলোয়াড়দের মধ্যে যিনি কম খেলেছেন তাঁকে আগে ড্র করা হয়; দলের দুই খেলোয়াড়ের জন্যই দিক (বাঁ/ডান) পালাক্রমে বদলায়"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - the draw chooses the opposing team (and the teammate) by previous meetings too: players meet more different opponents and the same players meet less often (with 14 players on 2 courts, pairs that met 3 or more times dropped from about 5 to 1 per evening)"
+msgstr "উন্নতি – ড্র আগের সাক্ষাৎও বিবেচনা করে প্রতিপক্ষ দল (ও সঙ্গী) বেছে নেয়: খেলোয়াড়েরা বেশি ভিন্ন প্রতিপক্ষের মুখোমুখি হন এবং একই খেলোয়াড়দের দেখা কম হয় (2টি কোর্টে 14 জন খেলোয়াড় নিয়ে, 3 বা তার বেশিবার দেখা হওয়া জুটির সংখ্যা প্রতি সন্ধ্যায় প্রায় 5 থেকে কমে 1 হয়েছে)"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.6.0 - 2026/10/02"
+msgstr "1.6.0 - 2026/10/02"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.6.1 - 2026/10/02"
+msgstr "1.6.1 - 2026/10/02"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.6.2 - 2026/10/04"
+msgstr "1.6.2 - 2026/10/04"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - fixed some errors found in Plugin Check"
+msgstr "সংশোধন – Plugin Check-এ পাওয়া কিছু ত্রুটি সংশোধন করা হয়েছে"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.5.8 - 2026/06/12"
+msgstr "1.5.8 - 2026/06/12"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - some translations"
+msgstr "সংশোধন – কিছু অনুবাদ"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.5.7 - 2026/06/06"
+msgstr "1.5.7 - 2026/06/06"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - register and sign in for android app"
+msgstr "সংশোধন – Android অ্যাপের জন্য নিবন্ধন ও লগ ইন"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.5.6 - 2026/05/13"
+msgstr "1.5.6 - 2026/05/13"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - remove admin for android app"
+msgstr "যোগ – Android অ্যাপের জন্য প্রশাসক অপসারণ"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.5.5 - 2026/05/12"
+msgstr "1.5.5 - 2026/05/12"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - rest value is safe now"
+msgstr "সংশোধন – rest মান এখন নিরাপদ"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.0.0 - 2024/01/01"
+msgstr "1.0.0 - 2024/01/01"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.0.1 - 2024/01/03"
+msgstr "1.0.1 - 2024/01/03"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.0.2 - 2024/01/21"
+msgstr "1.0.2 - 2024/01/21"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.0.3 - 2024/01/26"
+msgstr "1.0.3 - 2024/01/26"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.0.4 - 2024/02/02"
+msgstr "1.0.4 - 2024/02/02"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.1.0 - 2024/02/04"
+msgstr "1.1.0 - 2024/02/04"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.1.1 - 2024/02/09"
+msgstr "1.1.1 - 2024/02/09"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.1.2 - 2024/02/13"
+msgstr "1.1.2 - 2024/02/13"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.1.3 - 2024/02/17"
+msgstr "1.1.3 - 2024/02/17"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.1.4 - 2024/02/18"
+msgstr "1.1.4 - 2024/02/18"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.1.5 - 2024/02/20"
+msgstr "1.1.5 - 2024/02/20"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.1.6 - 2024/02/25"
+msgstr "1.1.6 - 2024/02/25"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.1.7 - 2024/03/01"
+msgstr "1.1.7 - 2024/03/01"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.1.8 - 2024/03/07"
+msgstr "1.1.8 - 2024/03/07"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.1.9 - 2024/03/09"
+msgstr "1.1.9 - 2024/03/09"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.2.0 - 2024/03/20"
+msgstr "1.2.0 - 2024/03/20"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.2.1 - 2024/03/21"
+msgstr "1.2.1 - 2024/03/21"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.2.2 - 2024/04/17"
+msgstr "1.2.2 - 2024/04/17"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.2.3 - 2024/04/19"
+msgstr "1.2.3 - 2024/04/19"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.2.4 - 2024/05/08"
+msgstr "1.2.4 - 2024/05/08"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.2.5 - 2024/05/15"
+msgstr "1.2.5 - 2024/05/15"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.2.6 - 2024/05/29"
+msgstr "1.2.6 - 2024/05/29"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.2.7 - 2024/06/07"
+msgstr "1.2.7 - 2024/06/07"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.2.8 - 2024/06/21"
+msgstr "1.2.8 - 2024/06/21"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.2.9 - 2024/06/23"
+msgstr "1.2.9 - 2024/06/23"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.3.0 - 2024/07/06"
+msgstr "1.3.0 - 2024/07/06"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.3.1 - 2024/07/12"
+msgstr "1.3.1 - 2024/07/12"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.3.2 - 2024/07/18"
+msgstr "1.3.2 - 2024/07/18"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.3.3 - 2024/09/13"
+msgstr "1.3.3 - 2024/09/13"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.3.4 - 2024/09/26"
+msgstr "1.3.4 - 2024/09/26"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.3.5 - 2024/09/28"
+msgstr "1.3.5 - 2024/09/28"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.3.6 - 2024/11/02"
+msgstr "1.3.6 - 2024/11/02"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.3.7 - 2024/12/13"
+msgstr "1.3.7 - 2024/12/13"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.3.8 - 2024/12/15"
+msgstr "1.3.8 - 2024/12/15"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.3.9 - 2024/12/21"
+msgstr "1.3.9 - 2024/12/21"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.4.0 - 2024/12/27"
+msgstr "1.4.0 - 2024/12/27"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.4.1 - 2024/12/31"
+msgstr "1.4.1 - 2024/12/31"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.4.2 - 2025/04/16"
+msgstr "1.4.2 - 2025/04/16"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.4.3 - 2025/05/04"
+msgstr "1.4.3 - 2025/05/04"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.4.4 - 2025/05/25"
+msgstr "1.4.4 - 2025/05/25"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.4.5 - 2025/06/09"
+msgstr "1.4.5 - 2025/06/09"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.4.6 - 2025/06/14"
+msgstr "1.4.6 - 2025/06/14"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.4.7 - 2025/07/27"
+msgstr "1.4.7 - 2025/07/27"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.4.8 - 2025/08/07"
+msgstr "1.4.8 - 2025/08/07"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.4.9 - 2025/08/07"
+msgstr "1.4.9 - 2025/08/07"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.5.0 - 2025/08/08"
+msgstr "1.5.0 - 2025/08/08"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.5.1 - 2025/08/17"
+msgstr "1.5.1 - 2025/08/17"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.5.2 - 2025/08/26"
+msgstr "1.5.2 - 2025/08/26"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.5.3 - 2025/12/05"
+msgstr "1.5.3 - 2025/12/05"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "1.5.4 - 2026/04/22"
+msgstr "1.5.4 - 2026/04/22"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - stable login to android application"
+msgstr "সংশোধন – Android অ্যাপে স্থিতিশীল লগ ইন"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - existing players are not repeated in the menu Add players"
+msgstr "সংশোধন – “খেলোয়াড় যোগ করুন” মেনুতে বিদ্যমান খেলোয়াড়েরা আর পুনরাবৃত্তি হন না"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Change - Public release of Android app"
+msgstr "পরিবর্তন – Android অ্যাপের সর্বজনীন প্রকাশ"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Add 'last update' to the database also for already installed plugings"
+msgstr "সংশোধন – ইতিমধ্যে ইনস্টল করা প্লাগইনের জন্যও ডেটাবেসে “last update” যোগ"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Uninstall also 2 new pages (privacy policy and terms of service)"
+msgstr "সংশোধন – নতুন 2টি পৃষ্ঠাও আনইনস্টল (গোপনীয়তা নীতি ও পরিষেবার শর্তাবলি)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Add 'last update' to the database"
+msgstr "সংশোধন – ডেটাবেসে “last update” যোগ"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Improved some functions for Android app"
+msgstr "সংশোধন – Android অ্যাপের জন্য কিছু ফাংশনের উন্নতি"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Announcement about the opportunity to become an application tester"
+msgstr "যোগ – অ্যাপ পরীক্ষক হওয়ার সুযোগের ঘোষণা"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Privacy Policy page"
+msgstr "যোগ – গোপনীয়তা নীতি পৃষ্ঠা"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Terms of Service page"
+msgstr "যোগ – পরিষেবার শর্তাবলি পৃষ্ঠা"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Info about last update speed up loading"
+msgstr "যোগ – শেষ হালনাগাদের তথ্য লোডিং দ্রুত করে"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Correct an error message Undefined array key player['count']"
+msgstr "সংশোধন – ত্রুটি বার্তা Undefined array key player['count'] সংশোধন"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Tournaments filtering by distance and visibility"
+msgstr "যোগ – দূরত্ব ও দৃশ্যমানতা অনুযায়ী টুর্নামেন্ট ফিল্টার"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Support for a Android app"
+msgstr "যোগ – Android অ্যাপের সমর্থন"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Controls the visibility of the tournament in the public list."
+msgstr "যোগ – সর্বজনীন তালিকায় টুর্নামেন্টের দৃশ্যমানতা নিয়ন্ত্রণ।"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Location of the tournament."
+msgstr "যোগ – টুর্নামেন্টের স্থান।"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Log in/out block had a problem"
+msgstr "সংশোধন – নাম লেখানো/প্রত্যাহারের ব্লকে সমস্যা ছিল"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Parameter When enough players are available had sometimes a wrong value."
+msgstr "সংশোধন – “যখন যথেষ্ট খেলোয়াড় পাওয়া যায়” প্যারামিটারের মান কখনো কখনো ভুল ছিল।"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Match hiding correction"
+msgstr "সংশোধন – ম্যাচ লুকানো সংশোধন"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Register and log in a new user only if anyone can register (system settings)."
+msgstr "সংশোধন – যে কেউ নিবন্ধন করতে পারলে তবেই নতুন ব্যবহারকারীর নিবন্ধন ও লগ ইন (সিস্টেম সেটিং)।"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Register and log in a new user."
+msgstr "যোগ – নতুন ব্যবহারকারীর নিবন্ধন ও লগ ইন।"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Translation loading too early warning."
+msgstr "সংশোধন – অনুবাদ খুব আগে লোড হওয়ার সতর্কতা।"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Dashboard overview widget."
+msgstr "যোগ – ড্যাশবোর্ডে সংক্ষিপ্ত বিবরণের উইজেট।"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Log-link block."
+msgstr "যোগ – Log-link ব্লক।"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Sometimes tournament_id was unknown."
+msgstr "সংশোধন – কখনো কখনো tournament_id অজানা ছিল।"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Preserving stored values on the backend."
+msgstr "সংশোধন – ব্যাকএন্ডে সংরক্ষিত মান রক্ষা।"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Guaranteed visibility of the selected tournament in the tournament table."
+msgstr "সংশোধন – টুর্নামেন্টের টেবিলে নির্বাচিত টুর্নামেন্টের নিশ্চিত দৃশ্যমানতা।"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Error with hide parameter."
+msgstr "সংশোধন – hide প্যারামিটারের ত্রুটি।"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Permalink structure also works with the floating help icon."
+msgstr "সংশোধন – ভাসমান সাহায্য আইকনের সঙ্গেও পার্মালিংক কাঠামো কাজ করে।"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Tournament name is not copied from previous one."
+msgstr "সংশোধন – টুর্নামেন্টের নাম আগেরটি থেকে কপি হয় না।"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - More tournament examples for demonstration."
+msgstr "যোগ – প্রদর্শনের জন্য আরও উদাহরণ টুর্নামেন্ট।"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Floating help icon."
+msgstr "যোগ – ভাসমান সাহায্য আইকন।"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Prevent cashing for logged users."
+msgstr "যোগ – লগ ইন করা ব্যবহারকারীদের জন্য ক্যাশিং বন্ধ।"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Doubles Badminton table also for co-players"
+msgstr "সংশোধন – সঙ্গীদের জন্যও ব্যাডমিন্টন ডাবলসের টেবিল"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Tournament progress info."
+msgstr "যোগ – টুর্নামেন্টের অগ্রগতির তথ্য।"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Change game results availability."
+msgstr "সংশোধন – খেলার ফলাফলের প্রাপ্যতা পরিবর্তন।"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Special group count."
+msgstr "যোগ – বিশেষ গ্রুপের সদস্যসংখ্যা।"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Change of information about the end of the tournament round."
+msgstr "টুর্নামেন্ট রাউন্ড শেষের তথ্যে পরিবর্তন।"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Opponent selection."
+msgstr "সংশোধন – প্রতিপক্ষ নির্বাচন।"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Pair selection mechanism explanation on the help page."
+msgstr "যোগ – সাহায্য পৃষ্ঠায় জুটি নির্বাচনের পদ্ধতির ব্যাখ্যা।"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Pair selection didn´t take into account number of played games in total."
+msgstr "সংশোধন – জুটি নির্বাচনে মোট খেলা গেমের সংখ্যা বিবেচনা করা হতো না।"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Rights to Suspension and Resumption."
+msgstr "সংশোধন – স্থগিত ও পুনরায় চালুর অধিকার।"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Rights to add a special group."
+msgstr "সংশোধন – বিশেষ গ্রুপে যোগের অধিকার।"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Rights to add a tournament admin."
+msgstr "সংশোধন – টুর্নামেন্ট প্রশাসক যোগের অধিকার।"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Rights to add other players into tournaments."
+msgstr "সংশোধন – টুর্নামেন্টে অন্য খেলোয়াড় যোগের অধিকার।"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Do not show instructions during the tournament presentation."
+msgstr "সংশোধন – টুর্নামেন্ট উপস্থাপনার সময় নির্দেশনা দেখাবে না।"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - Admin can change a default value for minimum number of games played before a player can be declared a winner."
+msgstr "যোগ – খেলোয়াড়কে বিজয়ী ঘোষণার আগে ন্যূনতম খেলা গেমের ডিফল্ট মান প্রশাসক বদলাতে পারেন।"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - The ability to specify a minimum number of games played before a player can be declared a winner."
+msgstr "যোগ – খেলোয়াড়কে বিজয়ী ঘোষণার আগে ন্যূনতম খেলা গেমের সংখ্যা নির্ধারণের সুযোগ।"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Removing a player from a tournament."
+msgstr "সংশোধন – টুর্নামেন্ট থেকে খেলোয়াড় অপসারণ।"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Ready for testing in WP Playground."
+msgstr "সংশোধন – WP Playground-এ পরীক্ষার জন্য প্রস্তুত।"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Solving some database errors with empty values."
+msgstr "সংশোধন – খালি মানসহ কিছু ডেটাবেস ত্রুটির সমাধান।"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Update for WP Playground."
+msgstr "সংশোধন – WP Playground-এর জন্য হালনাগাদ।"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Improved playmate choose."
+msgstr "সংশোধন – সঙ্গী বাছাইয়ের উন্নতি।"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Problems with removing players during a game."
+msgstr "সংশোধন – খেলার সময় খেলোয়াড় অপসারণের সমস্যা।"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - A currently playing player can´t be removed."
+msgstr "সংশোধন – বর্তমানে খেলছেন এমন খেলোয়াড়কে সরানো যায় না।"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Fix real count of players after their removing."
+msgstr "সংশোধন – অপসারণের পর খেলোয়াড়ের প্রকৃত সংখ্যা।"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Fix an error during removing a player from the tournament."
+msgstr "সংশোধন – টুর্নামেন্ট থেকে খেলোয়াড় সরানোর সময় ত্রুটি।"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Redirection to a tournament in case of a user entry."
+msgstr "সংশোধন – ব্যবহারকারীর ইনপুটের ক্ষেত্রে টুর্নামেন্টে পুনঃনির্দেশ।"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - icon format."
+msgstr "সংশোধন – আইকনের ফরম্যাট।"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Modification for WP Playground."
+msgstr "WP Playground-এর জন্য পরিবর্তন।"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Fixed a bug in the database that prevented a tournament record from being created on some servers."
+msgstr "সংশোধন – ডেটাবেসের একটি ত্রুটি সংশোধন, যা কিছু সার্ভারে টুর্নামেন্টের রেকর্ড তৈরি আটকে দিত।"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - Unregistered users can no longer enter results in the singles tournament."
+msgstr "সংশোধন – অনিবন্ধিত ব্যবহারকারীরা সিঙ্গলস টুর্নামেন্টে আর ফলাফল লিখতে পারেন না।"
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid "Possibility to remove players from an already ongoing tournament."
+msgstr "ইতিমধ্যে চলমান টুর্নামেন্ট থেকে খেলোয়াড় সরানোর সুযোগ।"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "New - Expanded the ability for tournament administrators to browse through players they have already met at the tournament."
+msgstr "নতুন – টুর্নামেন্ট প্রশাসকেরা টুর্নামেন্টে আগে দেখা হওয়া আরও খেলোয়াড় দেখতে পারেন।"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "New - If the player has not yet registered for any tournament, it is possible to choose whether to show him a quick help."
+msgstr "নতুন – খেলোয়াড় এখনও কোনো টুর্নামেন্টে নাম না লেখালে তাঁকে দ্রুত সাহায্য দেখানো হবে কি না বেছে নেওয়া যায়।"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "New - Optional login prompt."
+msgstr "নতুন – ঐচ্ছিক লগ ইনের অনুরোধ।"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Fix - If all tournaments were deleted, a new tournament could not be created."
+msgstr "সংশোধন – সব টুর্নামেন্ট মুছে ফেলা হলে নতুন টুর্নামেন্ট তৈরি করা যেত না।"
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid ""
+"Trial tournament improvements.\n"
+"Added the option to announce the end of the tournament round."
+msgstr ""
+"পরীক্ষামূলক টুর্নামেন্টের উন্নতি।\n"
+"টুর্নামেন্ট রাউন্ড শেষের ঘোষণার বিকল্প যোগ।"
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid ""
+"Improved the visual appearance of the main page.\n"
+"Badminton added to the list of available tournaments."
+msgstr ""
+"মূল পৃষ্ঠার চেহারা উন্নত।\n"
+"উপলব্ধ টুর্নামেন্টের তালিকায় ব্যাডমিন্টন যোগ।"
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid "Option to announce separate winners from the special group and outside the special group."
+msgstr "বিশেষ গ্রুপ ও বিশেষ গ্রুপের বাইরে থেকে আলাদা বিজয়ী ঘোষণার বিকল্প।"
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid ""
+"Notices after a plugin activation.\n"
+"Added player trend."
+msgstr ""
+"প্লাগইন সক্রিয় করার পর বিজ্ঞপ্তি।\n"
+"খেলোয়াড়ের ট্রেন্ড যোগ।"
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid ""
+"Modified tournament editing tab.\n"
+"Added option to change tournament type."
+msgstr ""
+"টুর্নামেন্ট সম্পাদনার ট্যাব পরিবর্তিত।\n"
+"টুর্নামেন্টের ধরন বদলানোর বিকল্প যোগ।"
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid ""
+"Reactivating the plugin doesn´t affect the already deleted tournament example. \n"
+"Unblock offering maximum games count.\n"
+"Fix tournament change when entering results.\n"
+"Added quick help for newcomers.\n"
+"Allow the final match also for singles."
+msgstr ""
+"প্লাগইন আবার সক্রিয় করলে ইতিমধ্যে মুছে ফেলা উদাহরণ টুর্নামেন্টে প্রভাব পড়ে না।\n"
+"সর্বোচ্চ গেম সংখ্যার বিকল্প উন্মুক্ত।\n"
+"ফলাফল লেখার সময় টুর্নামেন্ট বদল সংশোধন।\n"
+"নতুনদের জন্য দ্রুত সাহায্য যোগ।\n"
+"সিঙ্গলসেও ফাইনাল ম্যাচের অনুমতি।"
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid ""
+"Added the option for single tournaments. \n"
+"Created an environment for additional sports."
+msgstr ""
+"সিঙ্গলস টুর্নামেন্টের বিকল্প যোগ।\n"
+"অন্যান্য খেলার জন্য পরিবেশ তৈরি।"
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid ""
+"The administrator can now use 'hide' option when editing the match result.\n"
+"Free score input is allowed. This opens using not only for tennis but for example for table tennis or beach volleyball."
+msgstr ""
+"ম্যাচের ফলাফল সম্পাদনার সময় প্রশাসক এখন “লুকান” বিকল্প ব্যবহার করতে পারেন।\n"
+"স্কোর মুক্তভাবে লেখার অনুমতি দেওয়া হয়েছে। এতে কেবল টেনিস নয়, যেমন টেবিল টেনিস বা বিচ ভলিবলেও ব্যবহার করা যায়।"
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid ""
+"Minor changes in code:\n"
+"* Allow to transfer organizer rights to a non-playing user.\n"
+"* Ensuring an even rotation of serves at the start of the tournament."
+msgstr ""
+"কোডে ছোট পরিবর্তন:\n"
+"* না-খেলা ব্যবহারকারীকে আয়োজকের অধিকার হস্তান্তরের অনুমতি।\n"
+"* টুর্নামেন্টের শুরুতে সার্ভের সমান পালাবদল নিশ্চিত।"
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid "Fixed choosing between left and right side in first matches."
+msgstr "প্রথম ম্যাচগুলোতে বাঁ ও ডান দিক বাছাই সংশোধন।"
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid "A small modification of admin screen."
+msgstr "অ্যাডমিন স্ক্রিনে ছোট পরিবর্তন।"
+
+#. Found in changelog paragraph.
+#, gp-priority: low
+msgid "First release to public."
+msgstr "প্রথম সর্বজনীন প্রকাশ।"
+
