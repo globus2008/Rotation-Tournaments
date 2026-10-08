@@ -30,7 +30,7 @@
 | `src/admin` -> `build/admin` | React admin page (`npm run build` builds both; `build:blocks`, `build:admin` separately) |
 | `languages/` | cs_CZ only |
 
-## Services layer (2.0, branch `v2-blocks`)
+## Services layer (2.0)
 - Plan: blocks + Interactivity API front end. Stage A (foundations) first; see the owner's approved plan.
 - `includes/doroto-services.php`: `doroto_service_*()` never read `$_POST`, redirect or print. They return
   `doroto_service_ok($action, $extra)` or `doroto_service_error($error_code, $status)` (a `WP_Error`); the codes are
