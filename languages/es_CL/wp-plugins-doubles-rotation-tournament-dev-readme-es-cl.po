@@ -1,14 +1,14 @@
-# Translation of Plugins - Rotation Tournaments - Development Readme (trunk) in Chinese (Taiwan)
+# Translation of Plugins - Rotation Tournaments - Development Readme (trunk) in Spanish (Chile)
 # This file is distributed under the same license as the Plugins - Rotation Tournaments - Development Readme (trunk) package.
 msgid ""
 msgstr ""
 "Project-Id-Version: Plugins - Rotation Tournaments - Development Readme (trunk)\n"
 "PO-Revision-Date: 2026-10-08 18:18:50+0000\n"
-"Language: zh_TW\n"
+"Language: es_CL\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: GlotPress/4.1.0\n"
 
 #. Short description.
@@ -16,43 +16,51 @@ msgstr ""
 msgid ""
 "Do you play Singles or Doubles Tournaments? This plugin manages Rotation "
 "Tournaments where players have a different partner in each game."
-msgstr "您在進行單打或雙打比賽嗎？此外掛可管理輪換賽，選手在每場比賽中都有新搭檔。"
+msgstr ""
+"¿Juegas torneos individuales o de dobles? Este plugin gestiona torneos "
+"rotativos en los que los jugadores tienen un compañero distinto en cada "
+"juego."
 
 #. Plugin name.
 #, gp-priority: high
 msgid "Rotation Tournaments"
-msgstr "輪換賽"
+msgstr "Torneos rotativos"
 
 #. Found in installation paragraph.
 msgid ""
 "After installation, go to the app's settings and enter the address of your "
 "website where this plugin is installed."
-msgstr "安裝後，開啟應用程式設定並輸入安裝此外掛的網站地址。"
+msgstr ""
+"Tras la instalación, ve a los ajustes de la aplicación e ingresa la "
+"dirección del sitio web donde está instalado este plugin."
 
 #. Found in installation paragraph.
 msgid ""
 "Or download it directly from this link: "
 "https://play.google.com/store/apps/details?id=cz.doroto.app"
 msgstr ""
-"或直接透過此連結下載：https://play.google.com/store/apps/details?id=cz.doroto.app"
+"O descárgala directamente desde este enlace: "
+"https://play.google.com/store/apps/details?id=cz.doroto.app"
 
 #. Found in installation paragraph.
 msgid "Search for \"Rotation Tournaments\" on the Google Play Store."
-msgstr "在 Google Play 中搜尋「Rotation Tournaments」。"
+msgstr "Busca “Rotation Tournaments” en Google Play Store."
 
 #. Found in description paragraph.
 msgid ""
 "To get the full experience of managing tournaments on the go, download our "
 "mobile app, now available on Google Play!"
-msgstr "要隨時隨地全面管理賽事，請下載我們的行動應用程式，現已在 Google Play 上架！"
+msgstr ""
+"Para gestionar los torneos sobre la marcha con todas las funciones, descarga"
+" nuestra aplicación móvil, ¡ya disponible en Google Play!"
 
 #. Found in description paragraph.
 msgid "<strong>YouTube quick intro:</strong>"
-msgstr "<strong>YouTube 簡介：</strong>"
+msgstr "<strong>Introducción rápida en YouTube:</strong>"
 
 #. Found in description list item.
 msgid "Video for a quick introduction to the Rotation Tournament:"
-msgstr "輪換賽簡介影片："
+msgstr "Video de introducción rápida al torneo rotativo:"
 
 #. Found in faq paragraph.
 msgid ""
@@ -62,26 +70,32 @@ msgid ""
 "website address into the app. After that, it becomes visible in the list for"
 " all users."
 msgstr ""
-"可以。如果您安裝 Rotation Tournaments 外掛、允許選手註冊並在網站列表中開啟可見性，您的網站就可能出現在 Android "
-"應用程式中。首先需要有人在應用程式中手動輸入您的網站地址。之後，該網站將在列表中對所有使用者可見。"
+"Sí. Si instalas el plugin Rotation Tournaments, permites el registro de "
+"jugadores y activas la visibilidad en la lista de sitios web, tu sitio puede"
+" aparecer en la aplicación de Android. Al principio, alguien tiene que "
+"ingresar manualmente la dirección de tu sitio web en la aplicación. Después,"
+" será visible en la lista para todos los usuarios."
 
 #. Found in faq paragraph.
 msgid ""
 "Yes. An iOS version of the Rotation Tournaments app is planned and will be "
 "released in the near future."
-msgstr "會的。Rotation Tournaments 應用程式的 iOS 版本已在計劃中，即將釋出。"
+msgstr ""
+"Sí. Está prevista una versión de la aplicación Rotation Tournaments para "
+"iOS, que se publicará próximamente."
 
 #. Found in faq header.
 msgid "Will my website be visible in the Rotation Tournaments Android app?"
-msgstr "我的網站會顯示在 Android 版 Rotation Tournaments 應用程式中嗎？"
+msgstr ""
+"¿Será visible mi sitio web en la aplicación de Android Rotation Tournaments?"
 
 #. Found in faq header.
 msgid "Will there be an iPhone or iPad version of the app?"
-msgstr "會有 iPhone 或 iPad 版的應用程式嗎？"
+msgstr "¿Habrá una versión de la aplicación para iPhone o iPad?"
 
 #. Found in installation paragraph.
 msgid "<strong>How to install Wordpress plugin:</strong>"
-msgstr "<strong>如何安裝 WordPress 外掛：</strong>"
+msgstr "<strong>Cómo instalar el plugin de WordPress:</strong>"
 
 #. Found in installation list item.
 msgid ""
@@ -89,115 +103,127 @@ msgid ""
 "tournaments (main page), one with tournament rules, and additional pages for"
 " Privacy Policy and Terms of Service. A sample post announcing a newly "
 "created tournament will also be added."
-msgstr "啟用外掛後將建立 4 個頁面：一個用於管理賽事（主頁面），一個用於賽事規則，以及隱私政策和服務條款頁面。還會新增一篇宣佈新賽事的示例文章。"
+msgstr ""
+"Al activar el plugin se crearán 4 páginas: una para gestionar los torneos "
+"(página principal), otra con las reglas del torneo y otras dos para la "
+"Política de privacidad y los Términos del servicio. También se agregará una "
+"entrada de ejemplo que anuncia un torneo recién creado."
 
 #. Found in installation paragraph.
 msgid "<strong>How to install the Android app:</strong>"
-msgstr "<strong>如何安裝 Android 應用程式：</strong>"
+msgstr "<strong>Cómo instalar la aplicación de Android:</strong>"
 
 #. Found in description paragraph.
 msgid ""
 "<strong>This plugin is the server-side for the \"Rotation Tournaments\" "
 "Android app.</strong>"
-msgstr "<strong>此外掛是 Android 應用程式「Rotation Tournaments」的伺服器端。</strong>"
+msgstr ""
+"<strong>Este plugin es la parte de servidor de la aplicación de Android "
+"“Rotation Tournaments”.</strong>"
 
 #. Screenshot description.
 msgid ""
 "Individual tournament participants enter their results into the WordPress "
 "server and share the data with each other."
-msgstr "賽事參與者將結果錄入 WordPress 伺服器，並相互共享資料。"
+msgstr ""
+"Cada participante del torneo ingresa sus resultados en el servidor de "
+"WordPress y comparte los datos con los demás."
 
 #. Screenshot description.
 msgid "Matches played. (Android app)"
-msgstr "已進行的比賽。（Android 應用程式）"
+msgstr "Partidos jugados. (Aplicación de Android)"
 
 #. Screenshot description.
 msgid "Tournament table. (Wordpress)"
-msgstr "賽事表格。（WordPress）"
+msgstr "Tabla del torneo. (WordPress)"
 
 #. Screenshot description.
 msgid "Matches drawn. (Android app)"
-msgstr "已抽籤的比賽。（Android 應用程式）"
+msgstr "Partidos sorteados. (Aplicación de Android)"
 
 #. Screenshot description.
 msgid "Editing tournament parameters. (Wordpress)"
-msgstr "編輯賽事引數。（WordPress）"
+msgstr "Edición de los parámetros del torneo. (WordPress)"
 
 #. Screenshot description.
 msgid "Table of players with rankings. (Android app)"
-msgstr "帶排名的選手錶。（Android 應用程式）"
+msgstr "Tabla de jugadores con la clasificación. (Aplicación de Android)"
 
 #. Screenshot description.
 msgid "Matches played. (Wordpress)"
-msgstr "已進行的比賽。（WordPress）"
+msgstr "Partidos jugados. (WordPress)"
 
 #. Screenshot description.
 msgid "Basic overview of the tournament. (Android app)"
-msgstr "賽事主概覽。（Android 應用程式）"
+msgstr "Resumen básico del torneo. (Aplicación de Android)"
 
 #. Screenshot description.
 msgid "Matches drawn. (Wordpress)"
-msgstr "已抽籤的比賽。（WordPress）"
+msgstr "Partidos sorteados. (WordPress)"
 
 #. Found in description paragraph.
 msgid ""
 "<strong>Rotation Tournaments</strong> provides a platform for organizing all"
 " kinds of sports Singles and Doubles Tournaments, e.g."
-msgstr "<strong>輪換賽</strong>是組織各類單打和雙打體育賽事的平臺，例如："
+msgstr ""
+"<strong>Torneos rotativos</strong> ofrece una plataforma para organizar todo"
+" tipo de torneos deportivos individuales y de dobles, p. ej."
 
 #. Found in description list item.
 msgid "Squash"
-msgstr "壁球"
+msgstr "Squash"
 
 #. Found in description list item.
 msgid "Beach Volleyball"
-msgstr "沙灘排球"
+msgstr "Vóley playa"
 
 #. Found in description list item.
 msgid "Badminton"
-msgstr "羽毛球"
+msgstr "Bádminton"
 
 #. Found in description list item.
 msgid "Padel"
-msgstr "板式網球"
+msgstr "Pádel"
 
 #. Found in description list item.
 msgid "Table Tennis"
-msgstr "乒乓球"
+msgstr "Tenis de mesa"
 
 #. Found in description list item.
 msgid "Tennis"
-msgstr "網球"
+msgstr "Tenis"
 
 #. Found in faq paragraph.
 msgid ""
 "This plugin can be used for all types of sports where 2 or 4 players compete in singles or doubles.\n"
 "You can use this plugin for tennis, table tennis, squash, padel, badminton, beach volleyball and probably for more."
 msgstr ""
-"此外掛適用於所有 2 人或 4 人進行單打或雙打比賽的運動。\n"
-"可用於網球、乒乓球、壁球、板式網球、羽毛球、沙灘排球，可能還包括其他運動。"
+"Este plugin se puede usar para todos los deportes en los que compiten 2 o 4 jugadores en individuales o dobles.\n"
+"Puedes usar este plugin para tenis, tenis de mesa, squash, pádel, bádminton, vóley playa y probablemente para más."
 
 #. Found in faq paragraph.
 msgid ""
 "Yes. When creating a tournament, you can choose whether to create a singles "
 "or a doubles tournament."
-msgstr "是的。建立賽事時可以選擇單打或雙打賽事。"
+msgstr ""
+"Sí. Al crear un torneo, puedes elegir si quieres crear un torneo individual "
+"o de dobles."
 
 #. Found in faq header.
 msgid "What sports tournaments is this plugin for?"
-msgstr "此外掛適用於哪些體育賽事？"
+msgstr "¿Para qué torneos deportivos sirve este plugin?"
 
 #. Found in description paragraph.
 msgid "<strong>General Features:</strong>"
-msgstr "<strong>通用功能：</strong>"
+msgstr "<strong>Características generales:</strong>"
 
 #. Found in description paragraph.
 msgid "<strong>Doubles Rotation Tournament:</strong>"
-msgstr "<strong>雙打輪換賽：</strong>"
+msgstr "<strong>Torneo rotativo de dobles:</strong>"
 
 #. Found in description paragraph.
 msgid "<strong>Singles Rotation Tournament:</strong>"
-msgstr "<strong>單打輪換賽：</strong>"
+msgstr "<strong>Torneo rotativo individual:</strong>"
 
 #. Found in description paragraph.
 msgid ""
@@ -208,7 +234,12 @@ msgid ""
 "Singles Rotation Tournament can be organized without the aid of technology, "
 "in the case of a Doubles Rotation Tournament, this is not possible."
 msgstr ""
-"賽事參與者在賽事期間多次隨機更換搭檔，並與不同選手比賽。為每位參與者計算贏得與輸掉的局數之比。比率最佳的選手獲勝。單打輪換賽可以不借助技術手段進行，而雙打則不行。"
+"Los participantes de un torneo cambian de compañero varias veces durante el "
+"torneo mediante una selección al azar y juegan contra distintos jugadores. "
+"Para cada participante se calcula la proporción de juegos ganados y "
+"perdidos. El ganador del torneo es el jugador con la mayor proporción. "
+"Mientras que un torneo rotativo individual se puede organizar sin ayuda de "
+"la tecnología, en el caso de un torneo rotativo de dobles no es posible."
 
 #. Found in description paragraph.
 msgid ""
@@ -219,7 +250,12 @@ msgid ""
 "category with special conditions. This special setting can be utilized, for "
 "example, in mixed tournaments."
 msgstr ""
-"<strong>輪換賽</strong>具有很強的社交性，因為其目標是讓選手留在賽事中直到最後。不會出現較弱選手因被淘汰而離開賽事的情況。可以將選手歸入帶有特殊條件的特殊類別。例如，這一特殊設定可用於混合賽事。"
+"Los <strong>torneos rotativos</strong> tienen un fuerte componente social, "
+"ya que su objetivo es mantener a los jugadores en el torneo hasta el final. "
+"Se evita que los jugadores más débiles abandonen el torneo por las rondas "
+"eliminatorias. Permite agrupar a los jugadores en una categoría especial con"
+" condiciones especiales. Este ajuste especial se puede aprovechar, por "
+"ejemplo, en torneos mixtos."
 
 #. Found in description paragraph.
 msgid ""
@@ -227,154 +263,180 @@ msgid ""
 "every other participant and there are no eliminations in individual rounds. "
 "To maximize the variety of match combinations, the matches are typically "
 "played in a single set."
-msgstr "在<strong>輪換賽</strong>中，每位參與者都與所有人比賽，各輪中沒有人被淘汰。為了獲得儘可能多的組合，比賽通常只打一盤。"
+msgstr ""
+"En los <strong>torneos rotativos</strong>, cada participante juega contra "
+"todos los demás y no hay eliminaciones en las rondas. Para obtener la mayor "
+"variedad de combinaciones, los partidos se suelen jugar a un solo set."
 
 #. Found in description list item.
 msgid ""
 "Suitable for various sports: tennis, table tennis, squash, padel, badminton,"
 " beach volleyball, and more."
-msgstr "適用於多種運動：網球、乒乓球、壁球、板式網球、羽毛球、沙灘排球等。"
+msgstr ""
+"Adecuado para varios deportes: tenis, tenis de mesa, squash, pádel, "
+"bádminton, vóley playa y más."
 
 #. Found in description list item.
 msgid "Integration with website user accounts."
-msgstr "與網站使用者帳號整合。"
+msgstr "Integración con las cuentas de usuario del sitio web."
 
 #. Found in description list item.
 msgid "No downtime during the tournament."
-msgstr "賽事期間無空閒等待。"
+msgstr "Sin tiempos muertos durante el torneo."
 
 #. Found in description list item.
 msgid "Comprehensive overview of player quality."
-msgstr "全面瞭解選手水平。"
+msgstr "Visión completa del nivel de los jugadores."
 
 #. Found in description list item.
 msgid "User-friendly interface for administrators and participants."
-msgstr "對管理員和參與者友好的介面。"
+msgstr "Interfaz fácil de usar para administradores y participantes."
 
 #. Found in description list item.
 msgid "Customizable settings for each tournament."
-msgstr "每項賽事都有靈活的設定。"
+msgstr "Ajustes personalizables para cada torneo."
 
 #. Found in description list item.
 msgid "Real-time score tracking."
-msgstr "即時比分跟蹤。"
+msgstr "Seguimiento de resultados en tiempo real."
 
 #. Found in description list item.
 msgid "Seamless scheduling of matches."
-msgstr "便捷的比賽安排。"
+msgstr "Programación fluida de los partidos."
 
 #. Found in description list item.
 msgid ""
 "Announcement of the Best Player and Most Ideal Pair at the end of the "
 "tournament."
-msgstr "賽事結束時公佈最佳選手和理想組合。"
+msgstr ""
+"Anuncio del mejor jugador y de la pareja más ideal al final del torneo."
 
 #. Found in description list item.
 msgid "Ranking based on the ratio of games won to games lost."
-msgstr "排名由贏得與輸掉的局數之比決定。"
+msgstr "Clasificación basada en la proporción de juegos ganados y perdidos."
 
 #. Found in description list item.
 msgid "Individual players can join or leave the tournament at any time."
-msgstr "選手可以隨時加入或退出賽事。"
+msgstr ""
+"Los jugadores pueden unirse al torneo o abandonarlo en cualquier momento."
 
 #. Found in description list item.
 msgid "Tournament can be interrupted or extended without disruption."
-msgstr "可以中斷或延長賽事而不影響其程序。"
+msgstr "El torneo se puede interrumpir o alargar sin alterar su desarrollo."
 
 #. Found in description list item.
 msgid "Shorter matches for more participation."
-msgstr "比賽更短，參與更多。"
+msgstr "Partidos más cortos para una mayor participación."
 
 #. Found in description list item.
 msgid "No eliminations, ensuring all players stay in the game."
-msgstr "無淘汰——所有選手都留在比賽中。"
+msgstr "Sin eliminaciones: todos los jugadores siguen en juego."
 
 #. Found in description list item.
 msgid "Define special groups of players with unique conditions."
-msgstr "定義帶有特殊條件的選手特殊組。"
+msgstr "Definición de grupos especiales de jugadores con condiciones propias."
 
 #. Found in description list item.
 msgid "Suitable for odd numbers of players and minimum lineups of 4 players."
-msgstr "適合奇數選手人數和最少 4 人的陣容。"
+msgstr ""
+"Adecuado para números impares de jugadores y un mínimo de 4 jugadores."
 
 #. Found in description list item.
 msgid "Individuals can enter the tournament without a permanent teammate."
-msgstr "無需固定搭檔即可參賽。"
+msgstr "Se puede participar en el torneo sin un compañero fijo."
 
 #. Found in description list item.
 msgid "Rotation of teammates, ensuring variety in partnerships."
-msgstr "搭檔輪換確保組合多樣。"
+msgstr "Rotación de compañeros, que asegura variedad en las parejas."
 
 #. Found in description list item.
 msgid ""
 "Alternative form of a Doubles Tournament where players enter each match with"
 " a different partner and in different positions (alternating left and right "
 "sides)."
-msgstr "雙打賽事的一種替代形式，選手每場比賽都與新搭檔在不同位置比賽（左右兩側交替）。"
+msgstr ""
+"Forma alternativa de torneo de dobles en la que los jugadores juegan cada "
+"partido con un compañero distinto y en posiciones distintas (alternando los "
+"lados izquierdo y derecho)."
 
 #. Found in description list item.
 msgid "Depending on the time options, everyone plays against everyone."
-msgstr "視時間而定，每個人與所有人比賽。"
+msgstr "Según el tiempo disponible, todos juegan contra todos."
 
 #. Found in description list item.
 msgid ""
 "Alternative form of a Singles Tournament where players face each other "
 "without elimination rounds."
-msgstr "單打賽事的一種替代形式，選手之間無淘汰地對陣。"
+msgstr ""
+"Forma alternativa de torneo individual en la que los jugadores se enfrentan "
+"sin rondas eliminatorias."
 
 #. Found in description header.
 msgid "Features"
-msgstr "功能"
+msgstr "Características"
 
 #. Found in faq header.
 msgid "Is this plugin suitable for singles tournaments?"
-msgstr "此外掛適用於單打賽事嗎？"
+msgstr "¿Este plugin es adecuado para torneos individuales?"
 
 #. Found in faq paragraph.
 msgid ""
 "Yes, each tournament participant must have their own account. If a website "
 "has disabled user registration, this account must be created by the website "
 "administrator."
-msgstr "是的，每位賽事參與者都必須有自己的使用者帳號。如果網站關閉了使用者註冊，該帳號必須由網站管理員建立。"
+msgstr ""
+"Sí, cada participante del torneo debe tener su propia cuenta. Si un sitio "
+"web tiene desactivado el registro de usuarios, el administrador del sitio "
+"web debe crear esa cuenta."
 
 #. Found in faq header.
 msgid "Does each player have to have an account created on my website?"
-msgstr "每位選手都必須在我的網站上有帳號嗎？"
+msgstr "¿Cada jugador tiene que tener una cuenta creada en mi sitio web?"
 
 #. Found in installation list item.
 msgid ""
 "At the end close the tournament and look who was announced as the winner."
-msgstr "最後，關閉賽事並檢視誰被宣佈為冠軍。"
+msgstr "Al final, cierra el torneo y mira quién ha sido declarado ganador."
 
 #. Found in installation list item.
 msgid ""
 "You can change tournament settings on the main page or you can look at 2 new"
 " admin pages that are dedicated for overall environmental settings and for "
 "description of all possible shortcodes."
-msgstr "可以在主頁面上更改賽事設定，也可以檢視 2 個新的管理頁面，它們介紹環境的通用設定以及所有可用簡碼的說明。"
+msgstr ""
+"Puedes cambiar los ajustes del torneo en la página principal o ver 2 nuevas "
+"páginas de administración dedicadas a los ajustes generales del entorno y a "
+"la descripción de todos los shortcodes disponibles."
 
 #. Found in installation list item.
 msgid ""
 "If you have a sufficient amount of players then you can close a registration"
 " and start playing matches."
-msgstr "如果選手足夠，您可以截止報名並開始比賽。"
+msgstr ""
+"Si tienes suficientes jugadores, puedes cerrar la inscripción y empezar a "
+"jugar los partidos."
 
 #. Found in installation list item.
 msgid ""
 "Then you can log in your created tournament and as a tournament´s "
 "administrator you can add manually also other players sourced from WP "
 "database."
-msgstr "然後您可以報名已建立的賽事，並以賽事管理員身份從 WordPress 資料庫中手動新增其他選手。"
+msgstr ""
+"Después puedes inscribirte en el torneo que has creado y, como administrador"
+" del torneo, agregar manualmente otros jugadores de la base de datos de "
+"WordPress."
 
 #. Found in installation list item.
 msgid ""
 "Start by clicking on \"Create a new tournament\" under \"Tournament "
 "Selection …\" on the main page."
-msgstr "首先在主頁面「選擇賽事……」部分點選「建立新賽事」。"
+msgstr ""
+"Empieza haciendo clic en “Crear un torneo nuevo”, en “Selección de torneo…” "
+"de la página principal."
 
 #. Found in installation list item.
 msgid "Install the plugin as usual."
-msgstr "照常安裝外掛。"
+msgstr "Instala el plugin como de costumbre."
 
 #. Found in description paragraph.
 msgid ""
@@ -383,9 +445,10 @@ msgid ""
 "href=\"https://doroto.ltcchrast.cz/rules-of-the-doubles-rotation-"
 "tournament/\">Rules of the Doubles Rotation Tournament</a>."
 msgstr ""
-"訪問<a href=\"https://doroto.ltcchrast.cz/\">測試頁面</a>瞭解更多，嘗試建立您自己的賽事，並檢視<a "
-"href=\"https://doroto.ltcchrast.cz/rules-of-the-doubles-rotation-"
-"tournament/\">雙打輪換賽規則</a>。"
+"Visita la <a href=\"https://doroto.ltcchrast.cz/\">página de prueba</a> para"
+" más información, prueba a crear tu propio torneo y echa un vistazo a las <a"
+" href=\"https://doroto.ltcchrast.cz/rules-of-the-doubles-rotation-"
+"tournament/\">reglas del torneo rotativo de dobles</a>."
 
 #. Found in description paragraph.
 msgid "[youtube https://www.youtube.com/watch?v=NoL9aPTv8u8]"
@@ -393,7 +456,7 @@ msgstr "[youtube https://www.youtube.com/watch?v=NoL9aPTv8u8]"
 
 #. Found in description header.
 msgid "More information"
-msgstr "更多資訊"
+msgstr "Más información"
 
 #. Found in changelog list item.
 #, gp-priority: low
@@ -402,21 +465,29 @@ msgid ""
 "(the web server answered 403 and the admin page stayed empty); the admin "
 "page shows a notice when its script cannot be loaded"
 msgstr ""
-"修復——透過 FTP 上傳後，外掛會恢復其檔案的讀取許可權（網站伺服器返回 403，管理頁面一片空白）；如果無法載入其指令碼，管理頁面會顯示通知"
+"Corrección: el plugin restablece los permisos de lectura de sus archivos "
+"tras una subida por FTP (el servidor web respondía 403 y la página de "
+"administración quedaba vacía); la página de administración muestra un aviso "
+"cuando no se puede cargar su script"
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid ""
 "Fix - tournament settings keep the ranges of 1.x and of the app (a larger "
 "value made the app's dropdowns fail)"
-msgstr "修復——賽事設定保持在 1.x 版和應用程式的範圍內（較大的值會導致應用程式的下拉選單崩潰）"
+msgstr ""
+"Corrección: los ajustes del torneo mantienen los rangos de la versión 1.x y "
+"de la aplicación (un valor mayor hacía fallar los desplegables de la "
+"aplicación)"
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid ""
 "Improvement - REST requests from the website use the WordPress login (cookie"
 " and nonce) when no app token is sent"
-msgstr "改進——未傳送應用程式令牌時，網站的 REST 請求使用 WordPress 登入（Cookie 和 nonce）"
+msgstr ""
+"Mejora: las peticiones REST desde el sitio web usan el acceso de WordPress "
+"(cookie y nonce) cuando no se envía un token de la aplicación"
 
 #. Found in changelog list item.
 #, gp-priority: low
@@ -425,7 +496,9 @@ msgid ""
 "that show the plugin; the unused tipTip library was removed and the admin no"
 " longer calls ip-api.com"
 msgstr ""
-"改進——樣式、指令碼和 no-cache 頭只在顯示外掛的頁面上傳送；刪除了未使用的 tipTip 庫，管理後臺不再連線 ip-api.com"
+"Mejora: los estilos, los scripts y las cabeceras no-cache solo se envían en "
+"las páginas que muestran el plugin; se ha quitado la biblioteca tipTip, que "
+"no se usaba, y la administración ya no llama a ip-api.com"
 
 #. Found in changelog list item.
 #, gp-priority: low
@@ -433,7 +506,10 @@ msgid ""
 "Improvement - every change of a tournament (web forms, blocks and the "
 "Android app) goes through one shared layer with the same permissions, "
 "locking and change detection"
-msgstr "改進——賽事的每次更改（網頁表單、區塊和 Android 應用程式）都透過一個共同層，使用相同的許可權、鎖定和更改跟蹤"
+msgstr ""
+"Mejora: cada cambio de un torneo (formularios web, bloques y la aplicación "
+"de Android) pasa por una capa común con los mismos permisos, bloqueos y "
+"detección de cambios"
 
 #. Found in changelog list item.
 #, gp-priority: low
@@ -441,7 +517,10 @@ msgid ""
 "Improvement - new admin page with Overview, Settings and Help instead of "
 "nine settings tabs; every setting is checked on the server and errors are "
 "shown next to the field"
-msgstr "改進——新的管理頁面以概覽、設定和幫助三部分取代九個設定標籤；每項設定都在伺服器上檢查，錯誤顯示在欄位旁"
+msgstr ""
+"Mejora: nueva página de administración con Resumen, Ajustes y Ayuda en lugar"
+" de nueve pestañas de ajustes; cada ajuste se comprueba en el servidor y los"
+" errores se muestran junto al campo"
 
 #. Found in changelog list item.
 #, gp-priority: low
@@ -449,7 +528,11 @@ msgid ""
 "Add - the serving player is marked on the match cards; the special group is "
 "highlighted in matches, results, players, statistics and winners; the "
 "tournament details (invitation text) can be shown at any time"
-msgstr "新增——發球選手在比賽卡片上標出；特殊組在比賽、結果、選手、統計和冠軍中突出顯示；可隨時顯示賽事詳情（邀請文字）"
+msgstr ""
+"Agregado: el jugador que saca aparece marcado en las tarjetas de los "
+"partidos; el grupo especial se resalta en partidos, resultados, jugadores, "
+"estadísticas y ganadores; los detalles del torneo (texto de invitación) se "
+"pueden mostrar en cualquier momento"
 
 #. Found in changelog list item.
 #, gp-priority: low
@@ -457,7 +540,11 @@ msgid ""
 "Add - the tournament block takes its colors from the theme (button and "
 "palette colors); the block's Styles panel can change the accent, the tab bar"
 " and table headers, their text and the color of the special group"
-msgstr "新增——賽事區塊從主題獲取顏色（按鈕和調色盤顏色）；區塊的樣式面板可更改強調色、標籤欄和表頭、其文字以及特殊組顏色"
+msgstr ""
+"Agregado: el bloque del torneo toma sus colores del tema (colores de los "
+"botones y de la paleta); el panel Estilos del bloque permite cambiar el "
+"acento, la barra de pestañas y las cabeceras de tabla, su texto y el color "
+"del grupo especial"
 
 #. Found in changelog list item.
 #, gp-priority: low
@@ -467,8 +554,10 @@ msgid ""
 "tournament place in the settings, and guided tours of the page and of four "
 "example tournaments"
 msgstr ""
-"新增——賽事區塊中：帶QR "
-"碼的分享對話方塊、「在應用程式中開啟」一行、輪換顯示各部分的全螢幕演示、設定中的賽事地點地圖，以及頁面和四個示例賽事的引導教學"
+"Agregado: el bloque del torneo tiene un diálogo Compartir con código QR, una"
+" línea “Abrir en la aplicación”, una presentación a pantalla completa que "
+"alterna las secciones, un mapa del lugar del torneo en los ajustes y visitas"
+" guiadas de la página y de cuatro torneos de ejemplo"
 
 #. Found in changelog list item.
 #, gp-priority: low
@@ -479,8 +568,12 @@ msgid ""
 "[doroto_tournament_list] show the blocks in the classic editor; the 1.x "
 "shortcodes keep working"
 msgstr ""
-"新增——外掛管理員可一鍵將主頁面轉換為區塊；舊內容保留在頁面修訂版本中。新安裝會用區塊建立主頁面。簡碼 [doroto_tournament] 和 "
-"[doroto_tournament_list] 在經典編輯器中顯示區塊；1.x 版的簡碼仍可使用"
+"Agregado: el administrador del plugin puede convertir la página principal a "
+"bloques con un botón; el contenido antiguo se conserva en las revisiones de "
+"la página. Las instalaciones nuevas crean la página principal con los "
+"bloques. Los shortcodes [doroto_tournament] y [doroto_tournament_list] "
+"muestran los bloques en el editor clásico; los shortcodes de 1.x siguen "
+"funcionando"
 
 #. Found in changelog list item.
 #, gp-priority: low
@@ -491,7 +584,11 @@ msgid ""
 "matches\" and \"Tournament presentation\", \"Tournament list\" and "
 "\"Tournament invitation\""
 msgstr ""
-"新增——區塊編輯器的區塊：「輪換賽」（以標籤顯示比賽、結果、選手、統計和設定，無需重新載入頁面即可即時更新），其變體「賽事排名」「賽事比賽」和「賽事演示」，以及「輪換賽列表」和「輪換賽邀請」"
+"Agregado: bloques para el editor de bloques: “Torneo rotativo” (partidos, "
+"resultados, jugadores, estadísticas y ajustes en pestañas, actualizados en "
+"tiempo real sin recargar la página), sus variaciones “Clasificación del "
+"torneo”, “Partidos del torneo” y “Presentación del torneo”, “Lista de "
+"torneos” e “Invitación al torneo”"
 
 #. Found in changelog header.
 #, gp-priority: low
@@ -504,19 +601,27 @@ msgid ""
 "Change - the review request is shown only to administrators, 14 days after "
 "activation once the site has its own tournament, and comes back 7 days after"
 " \"Remind me\" until the plugin is rated"
-msgstr "變更——評分請求只向管理員顯示，在啟用 14 天后且網站已有自己的賽事時出現，並在點選「提醒我」7 天后再次出現，直到外掛被評分"
+msgstr ""
+"Cambio: la petición de valoración solo se muestra a los administradores, 14 "
+"días después de la activación y cuando el sitio ya tiene su propio torneo, y"
+" vuelve a aparecer 7 días después de “Recordármelo” hasta que se valore el "
+"plugin"
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid ""
 "Add - the tournament page shows a short link to the Android app (can be "
 "turned off in Settings -&gt; Mobile app)"
-msgstr "新增——賽事頁面顯示 Android 應用程式的簡短連結（可在設定 -&gt; 行動應用程式中關閉）"
+msgstr ""
+"Agregado: la página del torneo muestra un breve enlace a la aplicación de "
+"Android (se puede desactivar en Ajustes -&gt; Aplicación móvil)"
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "Add - optional mode join/leave for the app join endpoint"
-msgstr "新增——應用程式加入介面的可選加入/退出模式"
+msgstr ""
+"Agregado: modo opcional unirse/abandonar para el endpoint de unión de la "
+"aplicación"
 
 #. Found in changelog list item.
 #, gp-priority: low
@@ -524,7 +629,10 @@ msgid ""
 "Add - REST endpoint create-player: the organizer creates a player and adds "
 "them to the tournament in one step; the player gets an e-mail to set the "
 "password"
-msgstr "新增——REST 介面 create-player：組織者一步建立選手並將其新增到賽事；選手會收到設定密碼的電子郵件"
+msgstr ""
+"Agregado: endpoint REST create-player: el organizador crea un jugador y lo "
+"agrega al torneo en un solo paso; el jugador recibe un correo electrónico "
+"para establecer la contraseña"
 
 #. Found in changelog list item.
 #, gp-priority: low
@@ -532,21 +640,27 @@ msgid ""
 "Change - tournament links to the home page (\"?tournament_id=5\") and the "
 "old app QR codes (\"/tournament?id=5\") open the tournament page"
 msgstr ""
-"變更——主頁面上的賽事連結（「?tournament_id=5」）和應用程式的舊QR 碼（「/tournament?id=5」）會開啟賽事頁面"
+"Cambio: los enlaces de torneo a la página de inicio (“?tournament_id=5”) y "
+"los códigos QR antiguos de la aplicación (“/tournament?id=5”) abren la "
+"página del torneo"
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid ""
 "Change - the default name of a new tournament uses the site time zone, not "
 "UTC"
-msgstr "變更——新賽事的預設名稱使用網站時區，而不是 UTC"
+msgstr ""
+"Cambio: el nombre predeterminado de un torneo nuevo usa la zona horaria del "
+"sitio, no UTC"
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid ""
 "Change - the app can be signed in on several devices at once (up to 10 per "
 "user)"
-msgstr "變更——可以同時在多臺裝置上登入應用程式（每位使用者最多 10 臺）"
+msgstr ""
+"Cambio: se puede acceder a la aplicación en varios dispositivos a la vez "
+"(hasta 10 por usuario)"
 
 #. Found in changelog list item.
 #, gp-priority: low
@@ -554,30 +668,41 @@ msgid ""
 "Change - invitation link only joins the tournament (a second click no longer"
 " unregisters the player), redirects to the login page and back, and then to "
 "the tournament page"
-msgstr "變更——邀請連結只為賽事報名（再次點選不再取消選手報名），先跳轉到登入頁面再返回，然後開啟賽事頁面"
+msgstr ""
+"Cambio: el enlace de invitación solo inscribe en el torneo (un segundo clic "
+"ya no da de baja al jugador), redirige a la página de acceso y de vuelta, y "
+"después a la página del torneo"
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "Fix - REST responses are never served from page caches or CDNs"
-msgstr "修復——REST 響應不再從頁面快取或 CDN 提供"
+msgstr ""
+"Corrección: las respuestas REST nunca se sirven desde cachés de página ni "
+"CDN"
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "Fix - Authorization header is read also on FPM/CGI hosts"
-msgstr "修復——在 FPM/CGI 主機上也能讀取 Authorization 頭"
+msgstr ""
+"Corrección: la cabecera Authorization también se lee en servidores con "
+"FPM/CGI"
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid ""
 "Fix - database upgrade adds new columns also on already installed sites"
-msgstr "修復——資料庫更新也會在已安裝的網站上新增新列"
+msgstr ""
+"Corrección: la actualización de la base de datos agrega las columnas nuevas "
+"también en sitios ya instalados"
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid ""
 "Fix - several devices signing in or refreshing their session at the same "
 "moment no longer sign each other out"
-msgstr "修復——多臺裝置同時登入或續期會話時不再相互登出"
+msgstr ""
+"Corrección: varios dispositivos que acceden o renuevan su sesión al mismo "
+"tiempo ya no se desconectan entre sí"
 
 #. Found in changelog list item.
 #, gp-priority: low
@@ -587,73 +712,96 @@ msgid ""
 "under the tournament lock; correcting a result while another court saved its"
 " result could stall the whole tournament"
 msgstr ""
-"修復——進行中賽事的每次更改（更正結果、暫停或移除選手、設定、付款、特殊組、網頁表單）都在賽事鎖定下進行；在另一塊場地儲存結果時更正結果可能會導致整個賽事停止"
+"Corrección: cada cambio en un torneo en curso (corregir un resultado, pausar"
+" o quitar a un jugador, ajustes, pagos, grupo especial, formularios web) se "
+"realiza bajo el bloqueo del torneo; corregir un resultado mientras otra "
+"cancha guardaba el suyo podía bloquear todo el torneo"
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid ""
 "Fix - tournament lock: results entered at the same time on several courts "
 "are no longer lost"
-msgstr "修復——賽事鎖定：在多塊場地同時錄入的結果不再丟失"
+msgstr ""
+"Corrección: bloqueo del torneo: los resultados ingresados a la vez en varias"
+" canchas ya no se pierden"
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "Fix - every write to a tournament updates last_update"
-msgstr "修復——每次寫入賽事都會更新 last_update"
+msgstr "Corrección: cada escritura en un torneo actualiza last_update"
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid ""
 "Fix - results entered on the web no longer store last_update = 0, so the "
 "Android app refreshes again"
-msgstr "修復——在網站上錄入的結果不再儲存 last_update = 0，因此 Android 應用程式又能更新了"
+msgstr ""
+"Corrección: los resultados ingresados en la web ya no guardan last_update = "
+"0, así que la aplicación de Android vuelve a actualizarse"
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid ""
 "Security - with registration disabled only tournament organizers can create "
 "player accounts from the app (before, any signed-in player could)"
-msgstr "安全——關閉註冊時，只有賽事組織者可以從應用程式建立選手帳號（以前任何已登入選手都可以）"
+msgstr ""
+"Seguridad: con el registro desactivado, solo los organizadores de torneos "
+"pueden crear cuentas de jugador desde la aplicación (antes podía hacerlo "
+"cualquier jugador conectado)"
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid ""
 "Security - an account created by an organizer no longer returns a login "
 "session of the new player to the organizer"
-msgstr "安全——組織者建立的帳號不再將新選手的登入會話返回給組織者"
+msgstr ""
+"Seguridad: una cuenta creada por un organizador ya no devuelve al "
+"organizador una sesión del nuevo jugador"
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid ""
 "Security - registration from the app (incl. a new Google account) respects "
 "\"Anyone can register\""
-msgstr "安全——從應用程式註冊（包括新的 Google 帳號）遵守「任何人都可以註冊」設定"
+msgstr ""
+"Seguridad: el registro desde la aplicación (incluida una cuenta nueva de "
+"Google) respeta “Cualquiera puede registrarse”"
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid ""
 "Security - final doubles and registration toggle check tournament admin "
 "rights"
-msgstr "安全——雙打決賽和報名切換會檢查賽事管理員的許可權"
+msgstr ""
+"Seguridad: los dobles finales y el cambio de inscripción comprueban los "
+"derechos de administrador del torneo"
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid ""
 "Security - guided tour actions need a nonce; regenerating the example "
 "tournaments is throttled"
-msgstr "安全——引導教學的操作需要 nonce；限制重新建立示例賽事"
+msgstr ""
+"Seguridad: las acciones de la visita guiada necesitan un nonce; la "
+"regeneración de los torneos de ejemplo está limitada"
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "Security - admin actions sent as links are protected by a nonce (CSRF)"
-msgstr "安全——透過連結傳送的管理操作受 nonce（CSRF）保護"
+msgstr ""
+"Seguridad: las acciones de administración enviadas como enlaces están "
+"protegidas con un nonce (CSRF)"
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid ""
 "Security - front-end forms check tournament admin rights, not only the nonce"
 " (any logged-in user could change players, payments or delete a tournament)"
-msgstr "安全——網站上的表單會檢查賽事管理員的許可權，而不僅是 nonce（以前任何已登入使用者都可以更改選手、付款或刪除賽事）"
+msgstr ""
+"Seguridad: los formularios de la parte pública comprueban los derechos de "
+"administrador del torneo, no solo el nonce (cualquier usuario conectado "
+"podía cambiar jugadores o pagos, o borrar un torneo)"
 
 #. Found in changelog list item.
 #, gp-priority: low
@@ -663,20 +811,27 @@ msgid ""
 "page when the app is not installed (sites from the site directory; other "
 "sites get a page with a link)"
 msgstr ""
-"新增——中央網站上指向賽事的應用程式連結（?tournament_id=5&amp;doroto_site=）在未安裝應用程式時會跳轉到俱樂部的賽事頁面（網站目錄中的網站；其他網站會顯示一個帶連結的頁面）"
+"Agregado: los enlaces de torneo de la aplicación en el sitio central "
+"(?tournament_id=5&amp;doroto_site=) se redirigen a la página del torneo del "
+"club cuando la aplicación no está instalada (sitios del directorio de "
+"sitios; los demás sitios reciben una página con un enlace)"
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid ""
 "Add - the tournament page has an \"Open in the app\" link: Android opens the"
 " tournament in the app, or Google Play when it is missing"
-msgstr "新增——賽事頁面有「在應用程式中開啟」連結：Android 會在應用程式中開啟賽事，若未安裝應用程式則開啟 Google Play"
+msgstr ""
+"Agregado: la página del torneo tiene un enlace “Abrir en la aplicación”: "
+"Android abre el torneo en la aplicación, o Google Play si no está instalada"
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid ""
 "Fix - saving the tournament settings rejects an unknown tournament type"
-msgstr "修復——儲存賽事設定時會拒絕未知的賽事型別"
+msgstr ""
+"Corrección: al guardar los ajustes del torneo se rechaza un tipo de torneo "
+"desconocido"
 
 #. Found in changelog list item.
 #, gp-priority: low
@@ -684,21 +839,29 @@ msgid ""
 "Fix - a deleted account leaves its open tournaments: removed when it has not"
 " played yet, otherwise suspended; it also leaves the organizers, special "
 "group and payments (it was drawn into matches as \"Unknown player\")"
-msgstr "修復——已刪除的帳號會退出其進行中的賽事：尚未比賽則移除，否則暫停；同時也從組織者、特殊組和付款中移除（以前它會以「未知選手」進入抽籤）"
+msgstr ""
+"Corrección: una cuenta borrada abandona sus torneos abiertos: se quita si "
+"todavía no ha jugado y, si no, se pausa; también deja de figurar entre los "
+"organizadores, el grupo especial y los pagos (se sorteaba en partidos como "
+"“Jugador desconocido”)"
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid ""
 "Fix - removing a payment no longer turns the payment list into a JSON object"
 " (the Android app could crash on the statistics page)"
-msgstr "修復——移除付款不再把付款列表變成 JSON 物件（Android 應用程式可能在統計頁面崩潰）"
+msgstr ""
+"Corrección: quitar un pago ya no convierte la lista de pagos en un objeto "
+"JSON (la aplicación de Android podía cerrarse en la página de estadísticas)"
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid ""
 "Fix - the change form fits on a phone screen (the result and the button were"
 " off screen)"
-msgstr "修復——更改表單可以完整顯示在手機螢幕上（結果和按鈕曾在螢幕外）"
+msgstr ""
+"Corrección: el formulario de cambios cabe en la pantalla del celular (el "
+"resultado y el botón quedaban fuera de la pantalla)"
 
 #. Found in changelog list item.
 #, gp-priority: low
@@ -706,14 +869,20 @@ msgid ""
 "Add - organizers see an \"Edit result\" button next to every played match; "
 "it selects the match and its result in the change form (the form above the "
 "table was easy to miss)"
-msgstr "新增——組織者在每場已進行比賽旁都能看到「編輯結果」按鈕；它會在更改表單中選中該比賽及其結果（表格上方的表單很容易被忽略）"
+msgstr ""
+"Agregado: los organizadores ven un botón “Editar resultado” junto a cada "
+"partido jugado; selecciona el partido y su resultado en el formulario de "
+"cambios (el formulario sobre la tabla pasaba fácilmente desapercibido)"
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid ""
 "Add - REST route skip-matches: the organizer skips several ongoing matches "
 "at once and new matches are drawn from all free players"
-msgstr "新增——REST 路由 skip-matches：組織者一次跳過多場進行中的比賽，新比賽從所有空閒選手中抽籤"
+msgstr ""
+"Agregado: ruta REST skip-matches: el organizador omite varios partidos en "
+"curso a la vez y los nuevos partidos se sortean entre todos los jugadores "
+"libres"
 
 #. Found in changelog list item.
 #, gp-priority: low
@@ -721,7 +890,10 @@ msgid ""
 "Improvement - among players with the same number of new teammates left, the "
 "one who played fewer games is drawn first; sides (left/right) alternate for "
 "both players of a team"
-msgstr "改進——剩餘新搭檔數量相同的選手中，比賽場數較少者優先抽籤；隊伍兩名選手的左右側都會交替"
+msgstr ""
+"Mejora: entre jugadores con el mismo número de compañeros nuevos pendientes,"
+" se sortea primero al que ha jugado menos juegos; los lados "
+"(izquierdo/derecho) se alternan para los dos jugadores de un equipo"
 
 #. Found in changelog list item.
 #, gp-priority: low
@@ -731,8 +903,11 @@ msgid ""
 "players meet less often (with 14 players on 2 courts, pairs that met 3 or "
 "more times dropped from about 5 to 1 per evening)"
 msgstr ""
-"改進——抽籤會根據以往交手情況選擇對手隊伍（和搭檔）：選手會遇到更多不同的對手，同樣的選手相遇次數更少（14 名選手在 2 塊場地上，一晚之內相遇 3 "
-"次及以上的組合數從約 5 降到 1）"
+"Mejora: el sorteo elige el equipo rival (y el compañero) también según los "
+"enfrentamientos anteriores: los jugadores se enfrentan a más rivales "
+"distintos y los mismos jugadores coinciden menos (con 14 jugadores en 2 "
+"canchas, las parejas que coincidieron 3 o más veces bajaron de unas 5 a 1 "
+"por tarde)"
 
 #. Found in changelog header.
 #, gp-priority: low
@@ -752,7 +927,8 @@ msgstr "1.6.2 - 2026/10/04"
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "Fix - fixed some errors found in Plugin Check"
-msgstr "修復——修正了 Plugin Check 發現的一些錯誤"
+msgstr ""
+"Corrección: se han corregido algunos errores detectados por Plugin Check"
 
 #. Found in changelog header.
 #, gp-priority: low
@@ -762,7 +938,7 @@ msgstr "1.5.8 - 2026/06/12"
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "Fix - some translations"
-msgstr "修復——部分翻譯"
+msgstr "Corrección: algunas traducciones"
 
 #. Found in changelog header.
 #, gp-priority: low
@@ -772,7 +948,7 @@ msgstr "1.5.7 - 2026/06/06"
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "Fix - register and sign in for android app"
-msgstr "修復——Android 應用程式中的註冊和登入"
+msgstr "Corrección: registro y acceso en la aplicación de Android"
 
 #. Found in changelog header.
 #, gp-priority: low
@@ -782,7 +958,7 @@ msgstr "1.5.6 - 2026/05/13"
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "Add - remove admin for android app"
-msgstr "新增——為 Android 應用程式移除管理員"
+msgstr "Agregado: quitar un administrador desde la aplicación de Android"
 
 #. Found in changelog header.
 #, gp-priority: low
@@ -792,7 +968,7 @@ msgstr "1.5.5 - 2026/05/12"
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "Fix - rest value is safe now"
-msgstr "修復——rest 值現在是安全的"
+msgstr "Corrección: el valor rest ahora es seguro"
 
 #. Found in changelog header.
 #, gp-priority: low
@@ -1047,361 +1223,400 @@ msgstr "1.5.4 - 2026/04/22"
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "Fix - stable login to android application"
-msgstr "修復——穩定登入 Android 應用程式"
+msgstr "Corrección: acceso estable a la aplicación de Android"
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "Fix - existing players are not repeated in the menu Add players"
-msgstr "修復——新增選手選單中不再重複顯示已有選手"
+msgstr ""
+"Corrección: los jugadores existentes no se repiten en el menú Agregar "
+"jugadores"
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "Change - Public release of Android app"
-msgstr "變更——Android 應用程式公開發布"
+msgstr "Cambio: publicación pública de la aplicación de Android"
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid ""
 "Fix - Add 'last update' to the database also for already installed plugings"
-msgstr "修復——對已安裝的外掛也在資料庫中新增「last update」"
+msgstr ""
+"Corrección: se agrega “last update” a la base de datos también en plugins ya"
+" instalados"
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "Fix - Uninstall also 2 new pages (privacy policy and terms of service)"
-msgstr "修復——同時刪除 2 個新頁面（隱私政策和服務條款）"
+msgstr ""
+"Corrección: también se desinstalan las 2 páginas nuevas (política de "
+"privacidad y términos del servicio)"
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "Fix - Add 'last update' to the database"
-msgstr "修復——在資料庫中新增「last update」"
+msgstr "Corrección: se agrega “last update” a la base de datos"
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "Fix - Improved some functions for Android app"
-msgstr "修復——為 Android 應用程式改進了部分功能"
+msgstr ""
+"Corrección: se han mejorado algunas funciones para la aplicación de Android"
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid ""
 "Add - Announcement about the opportunity to become an application tester"
-msgstr "新增——關於成為應用程式測試者的公告"
+msgstr "Agregado: aviso sobre la oportunidad de ser probador de la aplicación"
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "Add - Privacy Policy page"
-msgstr "新增——隱私政策頁面"
+msgstr "Agregado: página de Política de privacidad"
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "Add - Terms of Service page"
-msgstr "新增——服務條款頁面"
+msgstr "Agregado: página de Términos del servicio"
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "Add - Info about last update speed up loading"
-msgstr "新增——最近更新資訊可加快載入"
+msgstr ""
+"Agregado: la información sobre la última actualización acelera la carga"
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "Fix - Correct an error message Undefined array key player['count']"
-msgstr "修復——修正了錯誤訊息 Undefined array key player['count']"
+msgstr ""
+"Corrección: se corrige el mensaje de error Undefined array key "
+"player['count']"
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "Add - Tournaments filtering by distance and visibility"
-msgstr "新增——按距離和可見性篩選賽事"
+msgstr "Agregado: filtrado de torneos por distancia y visibilidad"
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "Add - Support for a Android app"
-msgstr "新增——支援 Android 應用程式"
+msgstr "Agregado: compatibilidad con una aplicación de Android"
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "Add - Controls the visibility of the tournament in the public list."
-msgstr "新增——管理賽事在公開列表中的可見性。"
+msgstr "Agregado: control de la visibilidad del torneo en la lista pública."
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "Add - Location of the tournament."
-msgstr "新增——賽事地點。"
+msgstr "Agregado: ubicación del torneo."
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "Fix - Log in/out block had a problem"
-msgstr "修復——報名/退出區塊存在問題"
+msgstr "Corrección: el bloque de inscripción/baja tenía un problema"
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid ""
 "Fix - Parameter When enough players are available had sometimes a wrong "
 "value."
-msgstr "修復——引數「有足夠選手時」有時值不正確。"
+msgstr ""
+"Corrección: el parámetro “Cuando haya suficientes jugadores disponibles” "
+"tenía a veces un valor incorrecto."
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "Fix - Match hiding correction"
-msgstr "修復——修正了隱藏比賽"
+msgstr "Corrección: corrección al ocultar partidos"
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid ""
 "Fix - Register and log in a new user only if anyone can register (system "
 "settings)."
-msgstr "修復——僅在任何人都可以註冊時（系統設定）才允許新使用者註冊和登入。"
+msgstr ""
+"Corrección: registrar y conectar a un usuario nuevo solo si cualquiera puede"
+" registrarse (ajuste del sistema)."
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "Add - Register and log in a new user."
-msgstr "新增——新使用者註冊和登入。"
+msgstr "Agregado: registro y acceso de un usuario nuevo."
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "Fix - Translation loading too early warning."
-msgstr "修復——關於翻譯載入過早的警告。"
+msgstr "Corrección: aviso de carga demasiado temprana de las traducciones."
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "Add - Dashboard overview widget."
-msgstr "新增——儀表盤中的概覽小工具。"
+msgstr "Agregado: widget de resumen en el escritorio."
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "Add - Log-link block."
-msgstr "新增——Log-link 區塊。"
+msgstr "Agregado: bloque Log-link."
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "Fix - Sometimes tournament_id was unknown."
-msgstr "修復——有時 tournament_id 未知。"
+msgstr "Corrección: a veces tournament_id era desconocido."
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "Fix - Preserving stored values on the backend."
-msgstr "修復——將記錄的值儲存到伺服器。"
+msgstr "Corrección: se conservan los valores guardados en el backend."
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid ""
 "Fix - Guaranteed visibility of the selected tournament in the tournament "
 "table."
-msgstr "修復——確保所選賽事在賽事表格中可見。"
+msgstr ""
+"Corrección: visibilidad garantizada del torneo seleccionado en la tabla de "
+"torneos."
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "Fix - Error with hide parameter."
-msgstr "修復——hide 引數的錯誤。"
+msgstr "Corrección: error con el parámetro hide."
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "Fix - Permalink structure also works with the floating help icon."
-msgstr "修復——固定連結結構在使用懸浮幫助圖示時也能工作。"
+msgstr ""
+"Corrección: la estructura de enlaces permanentes también funciona con el "
+"ícono flotante de ayuda."
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "Fix - Tournament name is not copied from previous one."
-msgstr "修復——賽事名稱不再從上一個賽事複製。"
+msgstr "Corrección: el nombre del torneo no se copia del anterior."
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "Add - More tournament examples for demonstration."
-msgstr "新增——更多用於演示的示例賽事。"
+msgstr "Agregado: más torneos de ejemplo para demostración."
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "Add - Floating help icon."
-msgstr "新增——懸浮幫助圖示。"
+msgstr "Agregado: ícono flotante de ayuda."
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "Add - Prevent cashing for logged users."
-msgstr "新增——為已登入使用者關閉快取。"
+msgstr "Agregado: se evita la caché para usuarios conectados."
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "Fix - Doubles Badminton table also for co-players"
-msgstr "修復——羽毛球雙打表格也適用於搭檔"
+msgstr "Corrección: tabla de bádminton dobles también para compañeros"
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "Add - Tournament progress info."
-msgstr "新增——賽事進度資訊。"
+msgstr "Agregado: información sobre el progreso del torneo."
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "Fix - Change game results availability."
-msgstr "修復——更改比賽結果的可訪問性。"
+msgstr ""
+"Corrección: cambio en la disponibilidad de los resultados de los juegos."
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "Add - Special group count."
-msgstr "新增——特殊組成員人數。"
+msgstr "Agregado: recuento del grupo especial."
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "Change of information about the end of the tournament round."
-msgstr "更改賽事輪次結束的資訊。"
+msgstr "Cambio de la información sobre el final de la ronda del torneo."
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "Fix - Opponent selection."
-msgstr "修復——對手選擇。"
+msgstr "Corrección: selección del rival."
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "Add - Pair selection mechanism explanation on the help page."
-msgstr "新增——在幫助頁面說明組合選擇機制。"
+msgstr ""
+"Agregado: explicación del mecanismo de selección de parejas en la página de "
+"ayuda."
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid ""
 "Fix - Pair selection didn´t take into account number of played games in "
 "total."
-msgstr "修復——組合選擇未考慮已進行比賽的總場數。"
+msgstr ""
+"Corrección: la selección de parejas no tenía en cuenta el número total de "
+"juegos jugados."
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "Fix - Rights to Suspension and Resumption."
-msgstr "修復——暫停和恢復的許可權。"
+msgstr "Corrección: derechos de pausa y reanudación."
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "Fix - Rights to add a special group."
-msgstr "修復——加入特殊組的許可權。"
+msgstr "Corrección: derechos para agregar a un grupo especial."
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "Fix - Rights to add a tournament admin."
-msgstr "修復——新增賽事管理員的許可權。"
+msgstr "Corrección: derechos para agregar un administrador del torneo."
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "Fix - Rights to add other players into tournaments."
-msgstr "修復——向賽事新增其他選手的許可權。"
+msgstr "Corrección: derechos para agregar otros jugadores a los torneos."
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "Fix - Do not show instructions during the tournament presentation."
-msgstr "修復——賽事演示期間不顯示說明。"
+msgstr ""
+"Corrección: no mostrar instrucciones durante la presentación del torneo."
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid ""
 "Add - Admin can change a default value for minimum number of games played "
 "before a player can be declared a winner."
-msgstr "新增——管理員可以更改選手被宣佈為冠軍所需最少比賽場數的預設值。"
+msgstr ""
+"Agregado: el administrador puede cambiar el valor predeterminado del número "
+"mínimo de juegos jugados antes de que un jugador pueda ser declarado "
+"ganador."
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid ""
 "Add - The ability to specify a minimum number of games played before a "
 "player can be declared a winner."
-msgstr "新增——可設定選手被宣佈為冠軍所需的最少比賽場數。"
+msgstr ""
+"Agregado: posibilidad de indicar un número mínimo de juegos jugados antes de"
+" que un jugador pueda ser declarado ganador."
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "Fix - Removing a player from a tournament."
-msgstr "修復——從賽事中移除選手。"
+msgstr "Corrección: quitar un jugador de un torneo."
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "Fix - Ready for testing in WP Playground."
-msgstr "修復——可在 WP Playground 中測試。"
+msgstr "Corrección: listo para probar en WP Playground."
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "Fix - Solving some database errors with empty values."
-msgstr "修復——消除了一些與空值有關的資料庫錯誤。"
+msgstr ""
+"Corrección: solución de algunos errores de base de datos con valores vacíos."
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "Fix - Update for WP Playground."
-msgstr "修復——針對 WP Playground 的更新。"
+msgstr "Corrección: actualización para WP Playground."
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "Fix - Improved playmate choose."
-msgstr "修復——改進了搭檔選擇。"
+msgstr "Corrección: mejora en la elección del compañero."
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "Fix - Problems with removing players during a game."
-msgstr "修復——比賽中移除選手的問題。"
+msgstr "Corrección: problemas al quitar jugadores durante un juego."
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "Fix - A currently playing player can´t be removed."
-msgstr "修復——正在比賽的選手不能被移除。"
+msgstr "Corrección: no se puede quitar a un jugador que está jugando."
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "Fix - Fix real count of players after their removing."
-msgstr "修復——移除選手後選手人數正確。"
+msgstr "Corrección: recuento real de jugadores tras quitarlos."
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "Fix - Fix an error during removing a player from the tournament."
-msgstr "修復——從賽事中移除選手時的錯誤。"
+msgstr "Corrección: error al quitar un jugador del torneo."
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "Fix - Redirection to a tournament in case of a user entry."
-msgstr "修復——使用者錄入資料時跳轉到賽事。"
+msgstr "Corrección: redirección a un torneo en caso de entrada del usuario."
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "Fix - icon format."
-msgstr "修復——圖示格式。"
+msgstr "Corrección: formato de los íconos."
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "Modification for WP Playground."
-msgstr "針對 WP Playground 的完善。"
+msgstr "Modificación para WP Playground."
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid ""
 "Fix - Fixed a bug in the database that prevented a tournament record from "
 "being created on some servers."
-msgstr "修復——修正了導致某些伺服器上無法建立賽事記錄的資料庫錯誤。"
+msgstr ""
+"Corrección: se ha corregido un error de la base de datos que impedía crear "
+"el registro de un torneo en algunos servidores."
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid ""
 "Fix - Unregistered users can no longer enter results in the singles "
 "tournament."
-msgstr "修復——未註冊使用者不再能在單打賽事中錄入結果。"
+msgstr ""
+"Corrección: los usuarios no registrados ya no pueden ingresar resultados en "
+"el torneo individual."
 
 #. Found in changelog paragraph.
 #, gp-priority: low
 msgid "Possibility to remove players from an already ongoing tournament."
-msgstr "可以從已在進行的賽事中移除選手。"
+msgstr "Posibilidad de quitar jugadores de un torneo ya en curso."
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid ""
 "New - Expanded the ability for tournament administrators to browse through "
 "players they have already met at the tournament."
-msgstr "新功能——賽事管理員可以看到更多已在賽事中遇到過的選手。"
+msgstr ""
+"Novedad: los administradores de torneos pueden consultar más jugadores con "
+"los que ya han coincidido en un torneo."
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid ""
 "New - If the player has not yet registered for any tournament, it is "
 "possible to choose whether to show him a quick help."
-msgstr "新功能——如果選手尚未報名任何賽事，可以選擇是否向其顯示簡短幫助。"
+msgstr ""
+"Novedad: si el jugador aún no se ha inscrito en ningún torneo, se puede "
+"elegir si mostrarle una ayuda rápida."
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "New - Optional login prompt."
-msgstr "新功能——可選的登入邀請。"
+msgstr "Novedad: invitación opcional a acceder."
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid ""
 "Fix - If all tournaments were deleted, a new tournament could not be "
 "created."
-msgstr "修復——刪除所有賽事後無法建立新賽事。"
+msgstr ""
+"Corrección: si se borraban todos los torneos, no se podía crear uno nuevo."
 
 #. Found in changelog paragraph.
 #, gp-priority: low
@@ -1409,8 +1624,8 @@ msgid ""
 "Trial tournament improvements.\n"
 "Added the option to announce the end of the tournament round."
 msgstr ""
-"改進了練習賽事。\n"
-"新增公佈賽事輪次結束的功能。"
+"Mejoras del torneo de prueba.\n"
+"Se ha agregado la opción de anunciar el final de la ronda del torneo."
 
 #. Found in changelog paragraph.
 #, gp-priority: low
@@ -1418,15 +1633,17 @@ msgid ""
 "Improved the visual appearance of the main page.\n"
 "Badminton added to the list of available tournaments."
 msgstr ""
-"改進了主頁面外觀。\n"
-"將羽毛球加入可用賽事列表。"
+"Se ha mejorado el aspecto visual de la página principal.\n"
+"Se ha agregado el bádminton a la lista de torneos disponibles."
 
 #. Found in changelog paragraph.
 #, gp-priority: low
 msgid ""
 "Option to announce separate winners from the special group and outside the "
 "special group."
-msgstr "可以分別公佈特殊組內外的冠軍。"
+msgstr ""
+"Opción de anunciar ganadores separados del grupo especial y de fuera del "
+"grupo especial."
 
 #. Found in changelog paragraph.
 #, gp-priority: low
@@ -1434,8 +1651,8 @@ msgid ""
 "Notices after a plugin activation.\n"
 "Added player trend."
 msgstr ""
-"啟用外掛後的通知。\n"
-"新增選手趨勢。"
+"Avisos tras activar el plugin.\n"
+"Se ha agregado la racha del jugador."
 
 #. Found in changelog paragraph.
 #, gp-priority: low
@@ -1443,8 +1660,8 @@ msgid ""
 "Modified tournament editing tab.\n"
 "Added option to change tournament type."
 msgstr ""
-"更改了賽事編輯標籤。\n"
-"新增更改賽事型別的功能。"
+"Pestaña de edición del torneo modificada.\n"
+"Se ha agregado la opción de cambiar el tipo de torneo."
 
 #. Found in changelog paragraph.
 #, gp-priority: low
@@ -1455,11 +1672,11 @@ msgid ""
 "Added quick help for newcomers.\n"
 "Allow the final match also for singles."
 msgstr ""
-"重新啟用外掛不會影響已刪除的示例賽事。\n"
-"開放了最大局數的選擇。\n"
-"修正了錄入結果時賽事被更改的問題。\n"
-"為新手新增了簡短幫助。\n"
-"單打也允許進行決賽。"
+"Reactivar el plugin no afecta al torneo de ejemplo ya borrado.\n"
+"Se desbloquea la oferta del número máximo de juegos.\n"
+"Corrección del cambio de torneo al ingresar resultados.\n"
+"Se ha agregado una ayuda rápida para los recién llegados.\n"
+"Se permite el partido final también en individuales."
 
 #. Found in changelog paragraph.
 #, gp-priority: low
@@ -1467,8 +1684,8 @@ msgid ""
 "Added the option for single tournaments. \n"
 "Created an environment for additional sports."
 msgstr ""
-"新增單打賽事功能。\n"
-"為其他運動建立了環境。"
+"Se ha agregado la opción de torneos individuales.\n"
+"Se ha creado un entorno para otros deportes."
 
 #. Found in changelog paragraph.
 #, gp-priority: low
@@ -1476,8 +1693,8 @@ msgid ""
 "The administrator can now use 'hide' option when editing the match result.\n"
 "Free score input is allowed. This opens using not only for tennis but for example for table tennis or beach volleyball."
 msgstr ""
-"管理員現在可以在更改比賽結果時使用「隱藏」選項。\n"
-"允許自由錄入比分。這樣外掛不僅可用於網球，也可用於乒乓球或沙灘排球等。"
+"El administrador ya puede usar la opción “ocultar” al editar el resultado de un partido.\n"
+"Se permite ingresar el resultado libremente. Esto permite usar el plugin no solo para tenis, sino también, por ejemplo, para tenis de mesa o vóley playa."
 
 #. Found in changelog paragraph.
 #, gp-priority: low
@@ -1486,24 +1703,26 @@ msgid ""
 "* Allow to transfer organizer rights to a non-playing user.\n"
 "* Ensuring an even rotation of serves at the start of the tournament."
 msgstr ""
-"程式碼的小改動：\n"
-"* 允許將組織者許可權轉讓給不參賽的使用者。\n"
-"* 確保賽事開始時發球均衡交替。"
+"Pequeños cambios en el código:\n"
+"* Se permite transferir los derechos de organizador a un usuario que no juega.\n"
+"* Se asegura una rotación equilibrada del saque al principio del torneo."
 
 #. Found in changelog paragraph.
 #, gp-priority: low
 msgid "Fixed choosing between left and right side in first matches."
-msgstr "修正了首輪比賽中左右側的選擇。"
+msgstr ""
+"Corregida la elección entre el lado izquierdo y el derecho en los primeros "
+"partidos."
 
 #. Found in changelog paragraph.
 #, gp-priority: low
 msgid "A small modification of admin screen."
-msgstr "管理介面的小改動。"
+msgstr "Una pequeña modificación de la pantalla de administración."
 
 #. Found in changelog paragraph.
 #, gp-priority: low
 msgid "First release to public."
-msgstr "首個公開版本。"
+msgstr "Primera versión pública."
 
 #. Found in changelog header.
 #, gp-priority: low
@@ -1516,18 +1735,25 @@ msgid ""
 "Improvement - messages, headings and notices are translated as whole "
 "sentences, so languages with a different word order (e.g. Turkish, "
 "Hungarian, Hindi, Japanese, Korean and Chinese) read naturally"
-msgstr "改進——訊息、標題和通知按完整句子翻譯，使語序不同的語言（如土耳其語、匈牙利語、印地語、日語、韓語和中文）讀起來自然"
+msgstr ""
+"Mejora: los mensajes, títulos y avisos se traducen como oraciones completas,"
+" por lo que los idiomas con otro orden de palabras (p. ej., turco, húngaro, "
+"hindi, japonés, coreano y chino) se leen con naturalidad"
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid ""
 "Improvement - the round-end notice of the tournament block no longer repeats"
 " the texts of its buttons"
-msgstr "改進——賽事區塊的輪次結束通知不再重複其按鈕的文字"
+msgstr ""
+"Mejora: el aviso de fin de ronda del bloque del torneo ya no repite los "
+"textos de sus botones"
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid ""
 "Add - English variants for the UK, Australia, Canada, New Zealand and South "
 "Africa"
-msgstr "新增——面向英國、澳大利亞、加拿大、紐西蘭和南非的英語變體"
+msgstr ""
+"Agregado: variantes del inglés para el Reino Unido, Australia, Canadá, Nueva"
+" Zelanda y Sudáfrica"

@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plugins - Rotation Tournaments - Development Readme (trunk)\n"
-"PO-Revision-Date: 2026-10-07 11:45:08+0000\n"
+"PO-Revision-Date: 2026-10-08 18:18:50+0000\n"
 "Language: pt_PT\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1286,3 +1286,23 @@ msgstr "Uma pequena alteração do ecrã de administração."
 #, gp-priority: low
 msgid "First release to public."
 msgstr "Primeira versão pública."
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "2.0.1 - 2026/10/08"
+msgstr "2.0.1 - 2026/10/08"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - messages, headings and notices are translated as whole sentences, so languages with a different word order (e.g. Turkish, Hungarian, Hindi, Japanese, Korean and Chinese) read naturally"
+msgstr "Melhoria – as mensagens, títulos e avisos são traduzidos como frases completas, para que os idiomas com outra ordem das palavras (p. ex. turco, húngaro, hindi, japonês, coreano e chinês) se leiam com naturalidade"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - the round-end notice of the tournament block no longer repeats the texts of its buttons"
+msgstr "Melhoria – o aviso de fim de ronda do bloco do torneio já não repete os textos dos seus botões"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - English variants for the UK, Australia, Canada, New Zealand and South Africa"
+msgstr "Adição – variantes do inglês para o Reino Unido, Austrália, Canadá, Nova Zelândia e África do Sul"

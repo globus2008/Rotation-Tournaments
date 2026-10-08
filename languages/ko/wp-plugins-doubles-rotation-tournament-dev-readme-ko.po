@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plugins - Rotation Tournaments - Development Readme (trunk)\n"
-"PO-Revision-Date: 2026-10-07 16:58:11+0000\n"
+"PO-Revision-Date: 2026-10-08 18:18:50+0000\n"
 "Language: ko_KR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1286,3 +1286,23 @@ msgstr "관리 화면의 작은 변경."
 #, gp-priority: low
 msgid "First release to public."
 msgstr "첫 공개 버전."
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "2.0.1 - 2026/10/08"
+msgstr "2.0.1 - 2026/10/08"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - messages, headings and notices are translated as whole sentences, so languages with a different word order (e.g. Turkish, Hungarian, Hindi, Japanese, Korean and Chinese) read naturally"
+msgstr "개선 – 메시지, 제목, 알림이 완전한 문장으로 번역되어 어순이 다른 언어(예: 튀르키예어, 헝가리어, 힌디어, 일본어, 한국어, 중국어)에서도 자연스럽게 읽힙니다"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - the round-end notice of the tournament block no longer repeats the texts of its buttons"
+msgstr "개선 – 대회 블록의 라운드 종료 알림이 더 이상 버튼의 텍스트를 반복하지 않습니다"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - English variants for the UK, Australia, Canada, New Zealand and South Africa"
+msgstr "추가 – 영국, 호주, 캐나다, 뉴질랜드, 남아프리카공화국용 영어 변형"

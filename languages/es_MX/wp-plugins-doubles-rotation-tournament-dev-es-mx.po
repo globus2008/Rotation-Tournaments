@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plugins - Rotation Tournaments - Development (trunk)\n"
-"PO-Revision-Date: 2026-10-08 17:31:19+0000\n"
+"PO-Revision-Date: 2026-10-08 18:06:49+0000\n"
 "Language: es_MX\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -2828,7 +2828,7 @@ msgid ""
 "easier for you, I will list your name among the tournament organizers."
 msgstr ""
 "Todavía no figuras como organizador de este torneo. Para facilitarte las "
-"cosas, añadiré tu nombre a los organizadores del torneo."
+"cosas, agregaré tu nombre a los organizadores del torneo."
 
 #: doubles-rotation-tournament.php:322
 msgid ""
@@ -5659,7 +5659,7 @@ msgstr ""
 #. translators: %d: tournament number
 #: includes/doroto-shortcodes.php:3931
 msgid "Register and add a new player to tournament no. %d"
-msgstr "Registrar y añadir un nuevo jugador al torneo n.º %d"
+msgstr "Registrar y agregar un nuevo jugador al torneo n.º %d"
 
 #: includes/doroto-shortcodes.php:547
 msgid "Registration to the tournament is closed."

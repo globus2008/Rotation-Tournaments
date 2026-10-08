@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plugins - Rotation Tournaments - Development Readme (trunk)\n"
-"PO-Revision-Date: 2026-10-07 12:20:02+0000\n"
+"PO-Revision-Date: 2026-10-08 18:18:50+0000\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1286,3 +1286,23 @@ msgstr "Pieni muutos ylläpitonäkymään."
 #, gp-priority: low
 msgid "First release to public."
 msgstr "Ensimmäinen julkinen julkaisu."
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "2.0.1 - 2026/10/08"
+msgstr "2.0.1 - 2026/10/08"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - messages, headings and notices are translated as whole sentences, so languages with a different word order (e.g. Turkish, Hungarian, Hindi, Japanese, Korean and Chinese) read naturally"
+msgstr "Parannus – viestit, otsikot ja ilmoitukset käännetään kokonaisina lauseina, joten kielet, joissa on eri sanajärjestys (esim. turkki, unkari, hindi, japani, korea ja kiina), kuulostavat luontevilta"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - the round-end notice of the tournament block no longer repeats the texts of its buttons"
+msgstr "Parannus – turnauslohkon kierroksen päättymisilmoitus ei enää toista painikkeidensa tekstejä"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - English variants for the UK, Australia, Canada, New Zealand and South Africa"
+msgstr "Lisätty – englannin kielen versiot Yhdistyneelle kuningaskunnalle, Australialle, Kanadalle, Uudelle-Seelannille ja Etelä-Afrikalle"
