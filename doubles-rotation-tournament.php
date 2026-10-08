@@ -11,7 +11,7 @@
  * License URI: http://www.gnu.org/licenses/gpl-3.0.txt
  * Text Domain: doubles-rotation-tournament
  * Requires at least: 6.5
- * Tested up to: 7.1.2
+ * Tested up to: 7.1.3
  * Requires PHP: 8.0
  * Stable tag: 2.0.1
  * 
