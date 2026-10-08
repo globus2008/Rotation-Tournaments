@@ -354,7 +354,7 @@ msgstr "Neu – der aufschlagende Spieler ist auf den Matchkarten markiert; die 
 
 #. Found in changelog list item.
 #, gp-priority: low
-msgid "Add - the tournament block takes its colours from the theme (button and palette colours); the block's Styles panel can change the accent, the tab bar and table headers, their text and the colour of the special group"
+msgid "Add - the tournament block takes its colors from the theme (button and palette colors); the block's Styles panel can change the accent, the tab bar and table headers, their text and the color of the special group"
 msgstr "Neu – der Turnierblock übernimmt seine Farben vom Theme (Button- und Palettenfarben); im Stile-Bereich des Blocks lassen sich der Akzent, die Tab-Leiste und Tabellenköpfe, deren Text und die Farbe der Sondergruppe ändern"
 
 #. Found in changelog list item.
@@ -1286,4 +1286,3 @@ msgstr "Eine kleine Änderung des Admin-Bildschirms."
 #, gp-priority: low
 msgid "First release to public."
 msgstr "Erste öffentliche Veröffentlichung."
-

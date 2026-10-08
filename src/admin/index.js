@@ -650,7 +650,7 @@ function OverviewTab( { overview, update } ) {
 				<CardBody>
 					{ overview.terms.map( ( term ) => (
 						<p key={ term.term }>
-							<strong>{ term.term }</strong> { term.text }
+							<strong>{ term.term }</strong>: { term.text }
 						</p>
 					) ) }
 				</CardBody>

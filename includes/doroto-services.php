@@ -59,8 +59,6 @@ function doroto_service_rest_response($result): WP_REST_Response
 function doroto_service_message($result, int $tournament_id = 0): string
 {
 	$code = is_wp_error($result) ? $result->get_error_code() : ($result['action'] ?? '');
-	$no = __("Tournament no.", "doubles-rotation-tournament") . ' ' . $tournament_id . ' ';
-
 	switch ($code) {
 		case 'tournament_not_found':
 			return __('The tournament was not found.', 'doubles-rotation-tournament');
@@ -76,13 +74,16 @@ function doroto_service_message($result, int $tournament_id = 0): string
 		case 'toggle_reg_when_tournament_closed':
 			return __('Registration cannot be changed in a closed tournament.', 'doubles-rotation-tournament');
 		case 'toggle_reg_not_enough_players':
-			return $no . __("does not have sufficient occupancy to close registration.", "doubles-rotation-tournament");
+			/* translators: %d: tournament number */
+			return sprintf(__('Tournament no. %d does not have enough players to close the registration.', 'doubles-rotation-tournament'), $tournament_id);
 		case 'toggle_tournament_when_reg_open':
 			return __("A tournament cannot be closed while player registration is open.", "doubles-rotation-tournament");
 		case 'registration_toggled':
 			return !empty($result['open_registration'])
-				? $no . __("was open for registration.", "doubles-rotation-tournament")
-				: __("Registration of tournament players no.", "doubles-rotation-tournament") . ' ' . $tournament_id . ' ' . __("was closed.", "doubles-rotation-tournament");
+				/* translators: %d: tournament number */
+				? sprintf(__('The registration of players for tournament no. %d was opened.', 'doubles-rotation-tournament'), $tournament_id)
+				/* translators: %d: tournament number */
+				: sprintf(__('The registration of players for tournament no. %d was closed.', 'doubles-rotation-tournament'), $tournament_id);
 		case 'tournament_state_toggled':
 			return !empty($result['close_tournament'])
 				? __('The tournament was closed.', 'doubles-rotation-tournament')
@@ -94,26 +95,28 @@ function doroto_service_message($result, int $tournament_id = 0): string
 		case 'match_not_found':
 			return __('The match was not found.', 'doubles-rotation-tournament');
 		case 'tournament_not_scheduled':
-			return $no . __('has not been scheduled yet.', 'doubles-rotation-tournament');
+			/* translators: %d: tournament number */
+			return sprintf(__('Tournament no. %d has not been scheduled yet.', 'doubles-rotation-tournament'), $tournament_id);
 		case 'match_already_entered':
 			$data = $result->get_error_data();
-			return __('The result of match no.', 'doubles-rotation-tournament') . ' ' . intval($data['match_number'] ?? 0) . ' '
-				. __('was previously entered with a score', 'doubles-rotation-tournament') . ' '
-				. intval($data['result_1'] ?? 0) . ':' . intval($data['result_2'] ?? 0) . '.';
+			/* translators: 1: match number, 2: score of team 1, 3: score of team 2 */
+			return sprintf(__('The result of match no. %1$d was already entered with the score %2$d:%3$d.', 'doubles-rotation-tournament'),
+				intval($data['match_number'] ?? 0), intval($data['result_1'] ?? 0), intval($data['result_2'] ?? 0));
 		case 'match_result_updated':
 			if (!empty($result['hidden'])) {
-				return __('Match no.', 'doubles-rotation-tournament') . ' ' . intval($result['match_number']) . ' '
-					. __('was skipped.', 'doubles-rotation-tournament');
+				/* translators: %d: match number */
+				return sprintf(__('Match no. %d was skipped.', 'doubles-rotation-tournament'), intval($result['match_number']));
 			}
-			return __('The result of match no.', 'doubles-rotation-tournament') . ' ' . intval($result['match_number']) . ' '
-				. __('was saved with a score', 'doubles-rotation-tournament') . ' '
-				. intval($result['result_1']) . ':' . intval($result['result_2']) . '.';
+			/* translators: 1: match number, 2: score of team 1, 3: score of team 2 */
+			return sprintf(__('The result of match no. %1$d was saved with the score %2$d:%3$d.', 'doubles-rotation-tournament'),
+				intval($result['match_number']), intval($result['result_1']), intval($result['result_2']));
 		case 'edit_match_results_closed':
 			return __('Results of this tournament can no longer be changed.', 'doubles-rotation-tournament');
 		case 'match_not_finished':
 			return __('This match has not been played yet.', 'doubles-rotation-tournament');
 		case 'match_result_changed':
-			return __('The result of match no.', 'doubles-rotation-tournament') . ' ' . intval($result['match_number']) . ' ' . __('was changed.', 'doubles-rotation-tournament');
+			/* translators: %d: match number */
+			return sprintf(__('The result of match no. %d was changed.', 'doubles-rotation-tournament'), intval($result['match_number']));
 		case 'missing_tournament_or_player_id':
 			return __('Tournament or user not found.', 'doubles-rotation-tournament');
 		case 'add_player_forbidden':
@@ -127,29 +130,37 @@ function doroto_service_message($result, int $tournament_id = 0): string
 		case 'suspend_player_tournament_closed':
 			return __('Players cannot be suspended in a closed tournament.', 'doubles-rotation-tournament');
 		case 'player_added_to_tournament':
-			return __('Player', 'doubles-rotation-tournament') . ' ' . $result['player_name'] . ' ' . __('was added to the tournament.', 'doubles-rotation-tournament');
+			/* translators: %s: player name */
+			return sprintf(__('Player %s was added to the tournament.', 'doubles-rotation-tournament'), $result['player_name']);
 		case 'player_removed_from_tournament':
-			return __('Player', 'doubles-rotation-tournament') . ' ' . $result['player_name'] . ' ' . __('was removed from the tournament.', 'doubles-rotation-tournament');
+			/* translators: %s: player name */
+			return sprintf(__('Player %s was removed from the tournament.', 'doubles-rotation-tournament'), $result['player_name']);
 		case 'all_players_suspended':
 			return __('All players have temporarily suspended participation.', 'doubles-rotation-tournament');
 		case 'single_player_suspended':
-			return $result['player_name'] . ' ' . __('has temporarily suspended participation.', 'doubles-rotation-tournament');
+			/* translators: %s: player name */
+			return sprintf(__('Player %s has temporarily suspended participation.', 'doubles-rotation-tournament'), $result['player_name']);
 		case 'all_players_restored':
 			return __('All players have renewed participation.', 'doubles-rotation-tournament');
 		case 'single_player_restored':
-			return $result['player_name'] . ' ' . __('has renewed participation.', 'doubles-rotation-tournament');
+			/* translators: %s: player name */
+			return sprintf(__('Player %s has renewed participation.', 'doubles-rotation-tournament'), $result['player_name']);
 		case 'player_added_to_special_group':
-			return __('Player', 'doubles-rotation-tournament') . ' ' . $result['player_name'] . ' ' . __('has been added to a special group.', 'doubles-rotation-tournament');
+			/* translators: %s: player name */
+			return sprintf(__('Player %s has been added to the special group.', 'doubles-rotation-tournament'), $result['player_name']);
 		case 'player_removed_from_special_group':
-			return __('Player', 'doubles-rotation-tournament') . ' ' . $result['player_name'] . ' ' . __('was taken from a special group.', 'doubles-rotation-tournament');
+			/* translators: %s: player name */
+			return sprintf(__('Player %s was removed from the special group.', 'doubles-rotation-tournament'), $result['player_name']);
 		case 'player_already_in_special_group':
 			return __('The player is already in the special group.', 'doubles-rotation-tournament');
 		case 'player_not_in_special_group':
 			return __('The player is not in the special group.', 'doubles-rotation-tournament');
 		case 'payment_recorded':
-			return __('The payment of the player', 'doubles-rotation-tournament') . ' ' . $result['player_name'] . ' ' . __('has been added to the list.', 'doubles-rotation-tournament');
+			/* translators: %s: player name */
+			return sprintf(__('The payment of player %s has been recorded.', 'doubles-rotation-tournament'), $result['player_name']);
 		case 'payment_removed':
-			return __('The payment of the player', 'doubles-rotation-tournament') . ' ' . $result['player_name'] . ' ' . __('has been removed from the list.', 'doubles-rotation-tournament');
+			/* translators: %s: player name */
+			return sprintf(__('The payment of player %s has been removed.', 'doubles-rotation-tournament'), $result['player_name']);
 		case 'payment_not_found':
 			return __('The player has no recorded payment.', 'doubles-rotation-tournament');
 		case 'add_admin_tournament_closed':
@@ -159,9 +170,11 @@ function doroto_service_message($result, int $tournament_id = 0): string
 		case 'cannot_remove_founder':
 			return __('The founder of the tournament cannot be removed.', 'doubles-rotation-tournament');
 		case 'organizer_added':
-			return __('Player', 'doubles-rotation-tournament') . ' ' . $result['player_name'] . ' ' . __('has been added to the admins.', 'doubles-rotation-tournament');
+			/* translators: %s: player name */
+			return sprintf(__('Player %s has been added to the organizers.', 'doubles-rotation-tournament'), $result['player_name']);
 		case 'organizer_removed':
-			return __('Player', 'doubles-rotation-tournament') . ' ' . $result['player_name'] . ' ' . __('is no longer an organizer.', 'doubles-rotation-tournament');
+			/* translators: %s: player name */
+			return sprintf(__('Player %s is no longer an organizer.', 'doubles-rotation-tournament'), $result['player_name']);
 		case 'invalid_tournament_id':
 			return __('The tournament was not found.', 'doubles-rotation-tournament');
 		case 'invalid_tournament_type':
@@ -169,13 +182,15 @@ function doroto_service_message($result, int $tournament_id = 0): string
 		case 'tournament_closed_for_changes':
 			return __('The tournament was closed more than 24 hours ago and can no longer be changed.', 'doubles-rotation-tournament');
 		case 'tournament_updated':
-			$text = __('Tournament parameters no.', 'doubles-rotation-tournament') . ' ' . $tournament_id . ' ' . __('were saved.', 'doubles-rotation-tournament');
+			/* translators: %d: tournament number */
+			$text = sprintf(__('The parameters of tournament no. %d were saved.', 'doubles-rotation-tournament'), $tournament_id);
 			if (!empty($result['post_not_allowed'])) {
 				$text = __('You do not have the necessary rights to create a post.', 'doubles-rotation-tournament') . ' ' . $text;
 			}
 			return $text;
 		case 'tournament_deleted':
-			return $no . __('was deleted.', 'doubles-rotation-tournament');
+			/* translators: %d: tournament number */
+			return sprintf(__('Tournament no. %d was deleted.', 'doubles-rotation-tournament'), $tournament_id);
 		case 'final_players_not_different':
 			return __('Please choose different names for L1, R1, L2 and R2!', 'doubles-rotation-tournament');
 		case 'final_four_saved':
@@ -191,13 +206,16 @@ function doroto_service_message($result, int $tournament_id = 0): string
 		case 'tournament_ended':
 			return __('The tournament was closed.', 'doubles-rotation-tournament');
 		case 'registered':
-			return __("You signed up for tournament no.", "doubles-rotation-tournament") . ' ' . $tournament_id . '.';
+			/* translators: %d: tournament number */
+			return sprintf(__('You signed up for tournament no. %d.', 'doubles-rotation-tournament'), $tournament_id);
 		case 'already_registered':
-			return __("You are already registered in tournament no.", "doubles-rotation-tournament") . ' ' . $tournament_id . '.';
+			/* translators: %d: tournament number */
+			return sprintf(__('You are already registered in tournament no. %d.', 'doubles-rotation-tournament'), $tournament_id);
 		case 'registration_is_closed':
 			return __("The registration for the tournament has already been closed.", "doubles-rotation-tournament");
 		case 'registration_max_players':
-			return __("We are sorry, but the maximum number of registered participants has been reached in tournament no.", "doubles-rotation-tournament") . ' ' . $tournament_id . '.';
+			/* translators: %d: tournament number */
+			return sprintf(__('We are sorry, but tournament no. %d has already reached the maximum number of registered participants.', 'doubles-rotation-tournament'), $tournament_id);
 		case 'unregistered':
 			return __('You have left the tournament.', 'doubles-rotation-tournament');
 		case 'unregister_player_has_played':

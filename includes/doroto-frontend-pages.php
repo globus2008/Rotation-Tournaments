@@ -412,7 +412,8 @@ function doroto_help_page()
 	$output .= '<ul><li>' . esc_html__('opening up participation to players of various skill levels (especially suitable for tournaments where it might be challenging to gather players of similar skill levels)', 'doubles-rotation-tournament') . '</li>';
 	$output .= '<li>' . esc_html__('creating a pleasant atmosphere for social events', 'doubles-rotation-tournament') . '</li>';
 	$output .= '<li>' . esc_html__('making new friends', 'doubles-rotation-tournament') . '</li></ul>';
-	$output .= '<p><b>' . esc_html__('In DoRoTo', 'doubles-rotation-tournament') . ' ' . '</b>' . esc_html__('fully adheres to the official tennis rules except for the exceptions described below.', 'doubles-rotation-tournament') . '</p>';
+	/* translators: %s: abbreviation of the tournament format (DoRoTo) */
+	$output .= '<p>' . sprintf(esc_html__('%s fully follows the official tennis rules, except for the exceptions described below.', 'doubles-rotation-tournament'), '<b>DoRoTo</b>') . '</p>';
 	$output .= '<p>' . esc_html__('Explanation of abbreviation: DoRoTo (DOuble ROtation TOurnament)', 'doubles-rotation-tournament') . '</p>';
 	$output .= '<h4 class="wp-block-heading" id="game-principle">' . '2. ' . esc_html__('Principle of the game', 'doubles-rotation-tournament') . '</h4>';
 	$output .= '<p>' . esc_html__('Participants of the tournament randomly change partners several times during the tournament and play against different pairs. For each participant, the ratio of games won to games lost is calculated.', 'doubles-rotation-tournament') . '</p>';
@@ -425,7 +426,8 @@ function doroto_help_page()
 	$output .= '<li>' . esc_html__('estimated duration of the tournament', 'doubles-rotation-tournament') . '</li>';
 	$output .= '<li>' . esc_html__('the total agreed sum of games in each match', 'doubles-rotation-tournament') . '</li>';
 	$output .= '<li>' . esc_html__('number of players', 'doubles-rotation-tournament') . '</li>';
-	$output .= '<li>' . esc_html__("amount of players in", "doubles-rotation-tournament") . ' <a href="#group" data-type="internal" data-id="#group">' . esc_html__("special group", "doubles-rotation-tournament") . '</a></li></ul>';
+	/* translators: %s: link "special group" */
+	$output .= '<li>' . sprintf(esc_html__('number of players in the %s', 'doubles-rotation-tournament'), '<a href="#group" data-type="internal" data-id="#group">' . esc_html__("special group", "doubles-rotation-tournament") . '</a>') . '</li></ul>';
 
 	$output .= '<p>' . esc_html__('The outcome of this agreement should be the determination of how many matches each player can play in different pairs and how many total gems each match will have.', 'doubles-rotation-tournament') . '</p>';
 	$output .= '<h6 class="wp-block-heading">' . esc_html__('Example', 'doubles-rotation-tournament') . '</h6>';
@@ -460,7 +462,8 @@ function doroto_help_page()
 	$output .= '<p><em>' . esc_html__('For example, if the total sum of games played is 5, the match can be concluded with scores like 0:3 or 1:3. If the total sum of gems played is 7, the match can be ended at scores like 0:4, 1:4, 2:4, or 1:5.', 'doubles-rotation-tournament') . '</em></p>';
 	$output .= '<p><em>' . esc_html__('If a result with a difference of 2 games is required when playing up to a total of 5 games, then the match cannot be ended at 3:2, but it is at 4:2. If the game is tied, the match concludes with a tiebreak, with a score of 4:3.', 'doubles-rotation-tournament') . '</em></p>';
 	$output .= '<h4 class="wp-block-heading" id="evaluation-tournament">' . '6. ' . esc_html__('Evaluation of the tournament', 'doubles-rotation-tournament') . '</h4>';
-	$output .= '<p>' . esc_html__('The winner of the tournament is announced as the player with the highest ratio of games won to games lost. This player may be proclaimed as', 'doubles-rotation-tournament') . ' <strong>' . esc_html__('Best Doubles Partner', 'doubles-rotation-tournament') . '</strong> ' . esc_html__('If multiple players have the same score, multiple players may be declared winners of the tournament.', 'doubles-rotation-tournament') . '</p>';
+	/* translators: %s: title of the winner (Best Doubles Partner) */
+	$output .= '<p>' . sprintf(esc_html__('The winner of the tournament is the player with the highest ratio of games won to games lost. This player may be proclaimed the %s.', 'doubles-rotation-tournament'), '<strong>' . esc_html__('Best Doubles Partner', 'doubles-rotation-tournament') . '</strong>') . ' ' . esc_html__('If multiple players have the same score, multiple players may be declared winners of the tournament.', 'doubles-rotation-tournament') . '</p>';
 	$output .= '<p>' . esc_html__('If, optionally, a final match between the 4 selected participants with the highest score is arranged at the end, then 2 players will emerge from this final as the winners in the category of the Most Ideal Pair.', 'doubles-rotation-tournament') . '</p>';
 
 	$output .= '<h4 class="wp-block-heading" id="comparison-tournament">' . '7. ' . esc_html__('Comparison with the classic tournament', 'doubles-rotation-tournament') . '</h4>';

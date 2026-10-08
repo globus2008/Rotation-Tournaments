@@ -354,7 +354,7 @@ msgstr "Novo – o jogador que saca é marcado nos cartões das partidas; o grup
 
 #. Found in changelog list item.
 #, gp-priority: low
-msgid "Add - the tournament block takes its colours from the theme (button and palette colours); the block's Styles panel can change the accent, the tab bar and table headers, their text and the colour of the special group"
+msgid "Add - the tournament block takes its colors from the theme (button and palette colors); the block's Styles panel can change the accent, the tab bar and table headers, their text and the color of the special group"
 msgstr "Novo – o bloco do torneio usa as cores do tema (cores dos botões e da paleta); o painel Estilos do bloco permite alterar o destaque, a barra de abas e os cabeçalhos da tabela, o texto deles e a cor do grupo especial"
 
 #. Found in changelog list item.
@@ -1286,4 +1286,3 @@ msgstr "Pequena mudança na tela de administração."
 #, gp-priority: low
 msgid "First release to public."
 msgstr "Primeiro lançamento público."
-

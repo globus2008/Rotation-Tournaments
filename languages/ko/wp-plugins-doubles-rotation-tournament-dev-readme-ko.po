@@ -354,7 +354,7 @@ msgstr "추가 – 서브하는 선수가 경기 카드에 표시됩니다. 특�
 
 #. Found in changelog list item.
 #, gp-priority: low
-msgid "Add - the tournament block takes its colours from the theme (button and palette colours); the block's Styles panel can change the accent, the tab bar and table headers, their text and the colour of the special group"
+msgid "Add - the tournament block takes its colors from the theme (button and palette colors); the block's Styles panel can change the accent, the tab bar and table headers, their text and the color of the special group"
 msgstr "추가 – 대회 블록은 테마에서 색상(버튼과 팔레트 색상)을 가져옵니다. 블록의 스타일 패널에서 강조 색상, 탭 바와 표 머리글, 그 글자, 특별 그룹 색상을 바꿀 수 있습니다"
 
 #. Found in changelog list item.
@@ -1286,4 +1286,3 @@ msgstr "관리 화면의 작은 변경."
 #, gp-priority: low
 msgid "First release to public."
 msgstr "첫 공개 버전."
-

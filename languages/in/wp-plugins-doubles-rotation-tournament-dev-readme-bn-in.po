@@ -354,7 +354,7 @@ msgstr "যোগ – ম্যাচ কার্ডে সার্ভকা�
 
 #. Found in changelog list item.
 #, gp-priority: low
-msgid "Add - the tournament block takes its colours from the theme (button and palette colours); the block's Styles panel can change the accent, the tab bar and table headers, their text and the colour of the special group"
+msgid "Add - the tournament block takes its colors from the theme (button and palette colors); the block's Styles panel can change the accent, the tab bar and table headers, their text and the color of the special group"
 msgstr "যোগ – টুর্নামেন্ট ব্লক থিম থেকে রং নেয় (বোতাম ও প্যালেটের রং); ব্লকের স্টাইল প্যানেলে অ্যাকসেন্ট, ট্যাব বার ও টেবিল শিরোনাম, তাদের লেখা এবং বিশেষ গ্রুপের রং বদলানো যায়"
 
 #. Found in changelog list item.
@@ -1286,4 +1286,3 @@ msgstr "অ্যাডমিন স্ক্রিনে ছোট পরিব
 #, gp-priority: low
 msgid "First release to public."
 msgstr "প্রথম সর্বজনীন প্রকাশ।"
-

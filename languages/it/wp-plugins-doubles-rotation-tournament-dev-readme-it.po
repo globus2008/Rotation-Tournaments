@@ -354,7 +354,7 @@ msgstr "Aggiunta – il giocatore al servizio è indicato sulle schede delle par
 
 #. Found in changelog list item.
 #, gp-priority: low
-msgid "Add - the tournament block takes its colours from the theme (button and palette colours); the block's Styles panel can change the accent, the tab bar and table headers, their text and the colour of the special group"
+msgid "Add - the tournament block takes its colors from the theme (button and palette colors); the block's Styles panel can change the accent, the tab bar and table headers, their text and the color of the special group"
 msgstr "Aggiunta – il blocco del torneo prende i colori dal tema (colori dei pulsanti e della palette); il pannello Stili del blocco permette di cambiare l'accento, la barra delle schede e le intestazioni delle tabelle, il loro testo e il colore del gruppo speciale"
 
 #. Found in changelog list item.
@@ -1286,4 +1286,3 @@ msgstr "Una piccola modifica della schermata di amministrazione."
 #, gp-priority: low
 msgid "First release to public."
 msgstr "Prima versione pubblica."
-

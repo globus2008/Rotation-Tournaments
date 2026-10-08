@@ -4,7 +4,7 @@
  * Plugin Name: Rotation Tournaments
  * Plugin URI: https://doroto.ltcchrast.cz/
  * Description: Organize Rotation Tournaments where each player competes against every other player without eliminations. Suitable for sports like tennis, table tennis, squash, padel, and beach volleyball.
- * Version: 2.0.0
+ * Version: 2.0.1
  * Author: globus2008
  * Author URI: https://doroto.ltcchrast.cz/
  * License: GPL-3.0-or-later
@@ -13,7 +13,7 @@
  * Requires at least: 6.5
  * Tested up to: 7.1.2
  * Requires PHP: 8.0
- * Stable tag: 2.0.0
+ * Stable tag: 2.0.1
  * 
  * @since             1.0.0
  * @package           doubles-rotation-tournament
@@ -28,7 +28,7 @@ if (!defined('ABSPATH'))
 
 // GLOBALS AND CONSTANTS
 if (!defined('doroto_VERSION')) {
-	define('doroto_VERSION', '2.0.0');
+	define('doroto_VERSION', '2.0.1');
 }
 if (!defined('doroto_PLUGIN_NAME')) {
 	define('doroto_PLUGIN_NAME', 'doubles-rotation-tournament');
@@ -331,7 +331,8 @@ function doroto_enqueue_shepherd_assets()
 		'doroto_text_reload_message' => __('The settings have been made, you just need to reload the page.', 'doubles-rotation-tournament'),
 		'doroto_text_redirect' => __('Redirect', 'doubles-rotation-tournament'),
 		'doroto_text_redirect_message' => __('We will demonstrate this tip on a selected tournament example.', 'doubles-rotation-tournament'),
-		'doroto_text_redirect_message_extended' => __('Can I redirect you to tournament no.', 'doubles-rotation-tournament'),
+		/* translators: %s: tournament number */
+		'doroto_text_redirect_message_extended' => __('Can I redirect you to tournament no. %s?', 'doubles-rotation-tournament'),
 		'doroto_text_not_login' => __('If you log in to your account and we run this tutorial again, I will grant you tournament organizer rights. If you can try out other options in this trial tournament.', 'doubles-rotation-tournament'),
 
 		'doroto_text_login_logout' => __('Tournament registration', 'doubles-rotation-tournament'),

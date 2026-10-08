@@ -120,7 +120,7 @@ $doroto_style = doroto_block_color_style($attributes);
 		</p>
 		<?php // Invitation text: open while registration is open, folded once the tournament runs (like the old shortcode). ?>
 		<details class="doroto-details" data-help="details" data-wp-bind--hidden="!context.data.view.invitation"<?php echo $doroto_view['invitation'] === '' ? ' hidden' : ''; ?><?php echo $doroto_flags['registration'] ? ' open' : ''; ?>>
-			<summary><?php esc_html_e('Details about tournament no.', 'doubles-rotation-tournament'); ?> <span data-wp-text="context.data.view.id"><?php echo esc_html((string) $doroto_view['id']); ?></span></summary>
+			<summary data-wp-text="context.data.view.details_title"><?php echo esc_html($doroto_view['details_title']); ?></summary>
 			<div class="doroto-details__text" data-wp-watch="callbacks.syncInvitation"><?php echo $doroto_view['invitation']; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- wp_kses in doroto_view_model() ?></div>
 		</details>
 		<div class="doroto-progress" data-help="progress" data-wp-bind--hidden="!context.data.view.progress.percent" <?php echo $doroto_view['progress']['percent'] ? '' : 'hidden'; ?>>
@@ -226,7 +226,7 @@ $doroto_style = doroto_block_color_style($attributes);
 		<ul class="doroto-cards">
 			<template data-wp-each--match="context.data.view.ongoing" data-wp-each-key="context.match.number">
 				<li class="doroto-card doroto-match" data-help="match">
-					<p class="doroto-match__number"><?php esc_html_e('Match no.', 'doubles-rotation-tournament'); ?> <span data-wp-text="context.match.number"></span></p>
+					<p class="doroto-match__number"><span data-wp-text="context.match.label"></span></p>
 					<div class="doroto-match__sides">
 						<span class="doroto-match__side"><span class="doroto-name" data-wp-class--is-me="context.match.teams.0.0.me" data-wp-class--is-special="context.match.teams.0.0.special" data-wp-text="context.match.teams.0.0.name"></span><span class="doroto-serve" data-wp-bind--hidden="!context.match.teams.0.0.serve" title="<?php esc_attr_e('Starts the game by serving', 'doubles-rotation-tournament'); ?>"><?php esc_html_e('serves', 'doubles-rotation-tournament'); ?></span><span data-wp-bind--hidden="!context.data.view.doubles"> &amp; <span class="doroto-name" data-wp-class--is-me="context.match.teams.0.1.me" data-wp-class--is-special="context.match.teams.0.1.special" data-wp-text="context.match.teams.0.1.name"></span><span class="doroto-serve" data-wp-bind--hidden="!context.match.teams.0.1.serve" title="<?php esc_attr_e('Starts the game by serving', 'doubles-rotation-tournament'); ?>"><?php esc_html_e('serves', 'doubles-rotation-tournament'); ?></span></span></span>
 						<span class="doroto-match__vs" aria-hidden="true">&times;</span>

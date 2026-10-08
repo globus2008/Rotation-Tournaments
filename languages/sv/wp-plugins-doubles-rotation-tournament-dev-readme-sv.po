@@ -354,7 +354,7 @@ msgstr "Tillagt – den servande spelaren är markerad på matchkorten; den sär
 
 #. Found in changelog list item.
 #, gp-priority: low
-msgid "Add - the tournament block takes its colours from the theme (button and palette colours); the block's Styles panel can change the accent, the tab bar and table headers, their text and the colour of the special group"
+msgid "Add - the tournament block takes its colors from the theme (button and palette colors); the block's Styles panel can change the accent, the tab bar and table headers, their text and the color of the special group"
 msgstr "Tillagt – turneringsblocket hämtar sina färger från temat (knapp- och palettfärger); blockets panel Stilar kan ändra accenten, flikfältet och tabellrubrikerna, deras text och färgen för den särskilda gruppen"
 
 #. Found in changelog list item.
@@ -1286,4 +1286,3 @@ msgstr "En liten ändring av administrationsskärmen."
 #, gp-priority: low
 msgid "First release to public."
 msgstr "Första offentliga versionen."
-

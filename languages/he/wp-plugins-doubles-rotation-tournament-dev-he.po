@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plugins - Rotation Tournaments - Development (trunk)\n"
-"PO-Revision-Date: 2026-10-07 16:47:32+0000\n"
+"PO-Revision-Date: 2026-10-08 17:31:19+0000\n"
 "Language: he_IL\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -295,10 +295,6 @@ msgstr "לא ניתן היה ליצור את הטורניר."
 msgid "You have left the tournament."
 msgstr "עזבת את הטורניר."
 
-#: includes/doroto-services.php:178
-msgid "was deleted."
-msgstr "נמחק."
-
 #: includes/doroto-services.php:170
 msgid "The tournament was closed more than 24 hours ago and can no longer be changed."
 msgstr "הטורניר נסגר לפני יותר מ־24 שעות ולא ניתן עוד לשנות אותו."
@@ -306,10 +302,6 @@ msgstr "הטורניר נסגר לפני יותר מ־24 שעות ולא נית�
 #: includes/doroto-services.php:168
 msgid "Unknown tournament type."
 msgstr "סוג טורניר לא ידוע."
-
-#: includes/doroto-services.php:164
-msgid "is no longer an organizer."
-msgstr "אינו עוד מארגן."
 
 #: includes/doroto-services.php:160
 msgid "The founder of the tournament cannot be removed."
@@ -954,10 +946,6 @@ msgstr "עזיבת הטורניר"
 msgid "Sign up for the tournament"
 msgstr "הרשמה לטורניר"
 
-#: includes/doroto-services.php:196
-msgid "You are already registered in tournament no."
-msgstr "כבר נרשמת לטורניר מס׳"
-
 #: includes/doroto-endpoints.php:2990
 msgid "Your login e-mail:"
 msgstr "דוא״ל ההתחברות שלך:"
@@ -1404,10 +1392,6 @@ msgstr "שם משפחה"
 #: includes/doroto-shortcodes.php:3933
 msgid "First Name"
 msgstr "שם פרטי"
-
-#: includes/doroto-shortcodes.php:3928
-msgid "Register and add a new player to the tournament no."
-msgstr "רישום והוספה של שחקן חדש לטורניר מס׳"
 
 #: includes/doroto-shortcodes.php:3915
 msgid "Unable to register and add another player from the database."
@@ -1931,10 +1915,6 @@ msgstr "הרשמה לטורניר"
 msgid "If you log in to your account and we run this tutorial again, I will grant you tournament organizer rights. If you can try out other options in this trial tournament."
 msgstr "אם תתחבר/י לחשבון ונפעיל שוב את המדריך הזה, אעניק לך הרשאות מארגן טורניר. אז אפשר יהיה לנסות אפשרויות נוספות בטורניר הניסיון הזה."
 
-#: doubles-rotation-tournament.php:334
-msgid "Can I redirect you to tournament no."
-msgstr "האם להעביר אותך לטורניר מס׳"
-
 #: doubles-rotation-tournament.php:333
 msgid "We will demonstrate this tip on a selected tournament example."
 msgstr "נדגים טיפ זה על טורניר דוגמה נבחר."
@@ -2035,21 +2015,9 @@ msgstr "הפסדים"
 msgid "Won"
 msgstr "ניצחונות"
 
-#: includes/doroto-shortcodes.php:93
-msgid "minutes"
-msgstr "דקות"
-
-#: includes/doroto-shortcodes.php:87
-msgid "hours"
-msgstr "שעות"
-
 #: includes/doroto-shortcodes.php:85
 msgid "Estimated time to finish:"
 msgstr "זמן משוער לסיום:"
-
-#: includes/doroto-shortcodes.php:82
-msgid "completed"
-msgstr "הושלם"
 
 #: includes/doroto-shortcodes.php:38
 msgid "Tournament progress calculation is not available."
@@ -2083,17 +2051,9 @@ msgstr "סוג טורניר"
 msgid "Parameters that will be used to time estimate the progress of the tournament."
 msgstr "פרמטרים שישמשו להערכת הזמן של התקדמות הטורניר."
 
-#: includes/doroto-shortcodes.php:539
-msgid "out of maximum"
-msgstr "מתוך מקסימום"
-
 #: includes/doroto-tournament-management.php:3091
 msgid "Maybe this means the end of the tournament round."
 msgstr "ייתכן שזה מסמן את סוף סבב הטורניר."
-
-#: includes/doroto-tournament-management.php:3091
-msgid "played the same number of matches with everyone."
-msgstr "שיחק מספר זהה של משחקים עם כולם."
 
 #: includes/doroto-frontend-pages.php:453
 msgid "If the system finds more players with the same number of matches in common, then the next criterion, the smallest number of matches in total, decides"
@@ -2166,14 +2126,6 @@ msgstr "אפשר להתחבר כאן."
 #: includes/doroto-repeated-functions.php:56
 msgid "Warning: You are not logged in to your account."
 msgstr "אזהרה: לא התחברת לחשבון."
-
-#: includes/doroto-admin.php:336
-msgid "Pay attention to the settings"
-msgstr "יש לשים לב להגדרות התוסף"
-
-#: includes/doroto-admin.php:336
-msgid "Plugins restricting user roles may limit the functionality of"
-msgstr "תוספים שמגבילים תפקידי משתמשים עלולים להגביל את הפעולה של"
 
 #: includes/doroto-admin.php:102
 msgid "all players w/o limitations"
@@ -2255,10 +2207,6 @@ msgstr "לא, לא להכריז על סוף הסבב."
 msgid "After the end of the entire tournament round, show the offer, what to do next?"
 msgstr "בסיום סבב הטורניר כולו, להציג תפריט של הצעדים הבאים?"
 
-#: includes/doroto-shortcodes.php:3341
-msgid "If you wish to record payments from players, enable in"
-msgstr "כדי לרשום תשלומים משחקנים, יש להפעיל ב"
-
 #: includes/doroto-blocks.php:239 includes/doroto-shortcodes.php:2666
 msgid "This option reduces variability."
 msgstr "אפשרות זו מקטינה את המגוון."
@@ -2275,17 +2223,9 @@ msgstr "המתנה עם ההגרלה עד שכל המשחקים ישוחקו."
 msgid "When enough players are available:"
 msgstr "כשיש מספיק שחקנים זמינים:"
 
-#: includes/doroto-shortcodes.php:2977 includes/doroto-tournament-management.php:3109
-msgid "or"
-msgstr "או"
-
 #: includes/doroto-blocks.php:189 includes/doroto-shortcodes.php:2261
 msgid "You can change the tournament type here, if the tournament hasn't started yet."
 msgstr "כאן אפשר לשנות את סוג הטורניר, אם הטורניר עוד לא התחיל."
-
-#: includes/doroto-shortcodes.php:2164
-msgid "player starts the game by serving."
-msgstr "השחקן פותח את הגיים בהגשה."
 
 #: includes/doroto-frontend-pages.php:134
 msgid "Payments from players"
@@ -2375,10 +2315,6 @@ msgstr "האפשרות „כל אחד יכול להירשם” כבויה בהג
 msgid "A post with an example of a tournament presentation."
 msgstr "פוסט עם דוגמה למצגת טורניר."
 
-#: includes/doroto-admin.php:311
-msgid "Help page for"
-msgstr "עמוד עזרה עבור"
-
 #: includes/doroto-admin.php:310
 msgid "The main page for the management of all tournaments."
 msgstr "העמוד הראשי לניהול כל הטורנירים."
@@ -2419,14 +2355,6 @@ msgstr "הגרלה"
 msgid "Wait"
 msgstr "המתנה"
 
-#: includes/doroto-tournament-management.php:893
-msgid "Rotation Tournament!"
-msgstr "– טורניר רוטציה!"
-
-#: includes/doroto-shortcodes.php:3268
-msgid "for"
-msgstr "–"
-
 #: includes/doroto-shortcodes.php:3060
 msgid "Type"
 msgstr "סוג"
@@ -2438,10 +2366,6 @@ msgstr "יריב י"
 #: build/blocks/tournament/render.php:469 includes/doroto-shortcodes.php:200 src/blocks/tournament/render.php:469
 msgid "Opponent L"
 msgstr "יריב ש"
-
-#: includes/doroto-admin.php:358
-msgid "is an alternative form of a Singles Tournament where players face each other without elimination rounds. Depending on the time options, everyone plays against everyone."
-msgstr "היא צורה חלופית של טורניר יחידים, שבה השחקנים מתמודדים זה מול זה ללא סבבי הדחה. בהתאם לזמן, כל אחד משחק נגד כולם."
 
 #: includes/doroto-admin.php:358
 msgid "Singles Rotation Tournament (hereinafter SiRoTo)"
@@ -2561,49 +2485,9 @@ msgstr "טורניר רוטציה לזוגות הוא צורה חלופית של
 msgid "List of available tournaments was updated."
 msgstr "רשימת הטורנירים הזמינים עודכנה."
 
-#: includes/doroto-tournament-management.php:2628
-msgid "The data is being displayed for the tournament no."
-msgstr "מוצגים הנתונים של טורניר מס׳"
-
-#: includes/doroto-services.php:84
-msgid "was open for registration."
-msgstr "נפתח להרשמה."
-
-#: includes/doroto-services.php:85
-msgid "was closed."
-msgstr "נסגרה."
-
-#: includes/doroto-services.php:85
-msgid "Registration of tournament players no."
-msgstr "הרשמת השחקנים לטורניר מס׳"
-
-#: includes/doroto-services.php:79
-msgid "does not have sufficient occupancy to close registration."
-msgstr "אין מספיק משתתפים כדי לסגור את ההרשמה."
-
 #: includes/doroto-services.php:81
 msgid "A tournament cannot be closed while player registration is open."
 msgstr "לא ניתן לסגור טורניר כשהרשמת השחקנים פתוחה."
-
-#: includes/doroto-services.php:97
-msgid "has not been scheduled yet."
-msgstr "עדיין לא הוגרל."
-
-#: includes/doroto-services.php:101
-msgid "was previously entered with a score"
-msgstr "כבר הוזן קודם עם התוצאה"
-
-#: includes/doroto-services.php:106
-msgid "was skipped."
-msgstr "דולג."
-
-#: build/blocks/tournament/render.php:229 includes/doroto-services.php:105 src/blocks/tournament/render.php:229
-msgid "Match no."
-msgstr "משחק מס׳"
-
-#: includes/doroto-services.php:109
-msgid "was saved with a score"
-msgstr "נשמר עם התוצאה"
 
 #: includes/doroto-services.php:184
 msgid "The final match is over!"
@@ -2636,10 +2520,6 @@ msgstr "יש לאשר את זוגות הגמר למשחק שיקבע את הקב
 #: includes/doroto-services.php:208
 msgid "A new tournament has just been created."
 msgstr "טורניר חדש נוצר זה עתה."
-
-#: includes/doroto-tournament-management.php:893
-msgid "I invite you to"
-msgstr "הוזמנת ל:"
 
 #: includes/doroto-tournament-management.php:367 includes/doroto-tournament-management.php:559
 msgid "The tournament settings do not allow the next match to be drawn."
@@ -2697,17 +2577,9 @@ msgstr "עדיין בתהליך"
 msgid "Only Open Registration"
 msgstr "רק הרשמה פתוחה"
 
-#: includes/doroto-services.php:152
-msgid "has been removed from the list."
-msgstr "הוסר מהרשימה."
-
 #: build/blocks/tournament/render.php:394 includes/doroto-shortcodes.php:3505 src/blocks/tournament/render.php:394
 msgid "Remove payment"
 msgstr "הסרת תשלום"
-
-#: includes/doroto-shortcodes.php:3493
-msgid "Remove the payment of the selected player in tournament no."
-msgstr "הסרת התשלום של השחקן שנבחר בטורניר מס׳"
 
 #: includes/doroto-shortcodes.php:3488 includes/doroto-shortcodes.php:3507
 msgid "None of the players have paid yet."
@@ -2721,21 +2593,9 @@ msgstr "אין לך הרשאה להסיר תשלום."
 msgid "You must log in to remove a payment!"
 msgstr "יש להתחבר כדי להסיר תשלום!"
 
-#: includes/doroto-services.php:150
-msgid "has been added to the list."
-msgstr "נוסף לרשימה."
-
-#: includes/doroto-services.php:150 includes/doroto-services.php:152
-msgid "The payment of the player"
-msgstr "התשלום של השחקן"
-
 #: build/blocks/tournament/render.php:393 includes/doroto-shortcodes.php:3383 src/blocks/tournament/render.php:393
 msgid "Confirm payment"
 msgstr "אישור תשלום"
-
-#: includes/doroto-shortcodes.php:3369
-msgid "Confirm the payment of the selected player in tournament no."
-msgstr "אישור התשלום של השחקן שנבחר בטורניר מס׳"
 
 #: includes/doroto-shortcodes.php:3364 includes/doroto-shortcodes.php:3385
 msgid "All players have already paid."
@@ -2825,10 +2685,6 @@ msgstr "לפתוח מחדש את ההרשמה"
 msgid "close registration"
 msgstr "לסגור את ההרשמה"
 
-#: includes/doroto-shortcodes.php:2976 includes/doroto-tournament-management.php:3108
-msgid "If you wish, you can as an administrator"
-msgstr "אם רוצים, אפשר כמנהל"
-
 #: blocks/log-link/log-link.php:93 blocks/log-link/build/index.js:201 blocks/log-link/build/index.js:180
 msgid "Log in/Log out from the tournament"
 msgstr "הרשמה לטורניר / עזיבתו"
@@ -2837,18 +2693,6 @@ msgstr "הרשמה לטורניר / עזיבתו"
 msgid "You can enter the tournament using this link:"
 msgstr "אפשר להצטרף לטורניר באמצעות קישור זה:"
 
-#: build/blocks/tournament/render.php:123 includes/doroto-shortcodes.php:2915 src/blocks/tournament/render.php:123
-msgid "Details about tournament no."
-msgstr "פרטים על טורניר מס׳"
-
-#: includes/doroto-services.php:172
-msgid "were saved."
-msgstr "נשמרו."
-
-#: includes/doroto-services.php:172
-msgid "Tournament parameters no."
-msgstr "פרמטרים של טורניר מס׳"
-
 #: includes/doroto-services.php:174
 msgid "You do not have the necessary rights to create a post."
 msgstr "אין לך את ההרשאות הדרושות ליצירת פוסט."
@@ -2856,10 +2700,6 @@ msgstr "אין לך את ההרשאות הדרושות ליצירת פוסט."
 #: includes/doroto-shortcodes.php:2825
 msgid "Tournament parameters cannot be changed more than 24 hours after closing."
 msgstr "לא ניתן לשנות את פרמטרי הטורניר יותר מ־24 שעות אחרי הסגירה."
-
-#: includes/doroto-shortcodes.php:2814
-msgid "You are not authorized to change the parameters of tournament no."
-msgstr "אין לך הרשאה לשנות את הפרמטרים של טורניר מס׳"
 
 #: includes/doroto-shortcodes.php:2798
 msgid "Checking the box will delete the tournament record after saving. (Irreversible change!)"
@@ -2933,10 +2773,6 @@ msgstr "ערך"
 msgid "Variable"
 msgstr "משתנה"
 
-#: includes/doroto-shortcodes.php:2206
-msgid "Edit tournament no."
-msgstr "עריכת טורניר מס׳"
-
 #: build/blocks/tournament/render.php:245 build/blocks/tournament/render.php:282 build/blocks/tournament/render.php:289 build/blocks/tournament/render.php:542 build/blocks/tournament/render.php:606 includes/doroto-shortcodes.php:2104 includes/doroto-shortcodes.php:2152 includes/doroto-shortcodes.php:2823 includes/doroto-tournament-management.php:1356 includes/doroto-tournament-management.php:1420 src/blocks/tournament/render.php:245 src/blocks/tournament/render.php:282 src/blocks/tournament/render.php:289 src/blocks/tournament/render.php:542 src/blocks/tournament/render.php:606
 msgid "Save"
 msgstr "שמירה"
@@ -2948,10 +2784,6 @@ msgstr "תוצאה"
 #: includes/doroto-shortcodes.php:2103
 msgid "Hide"
 msgstr "הסתרה"
-
-#: includes/doroto-shortcodes.php:2093
-msgid "Currently, the following matches are being played in tournament no."
-msgstr "כעת משוחקים המשחקים הבאים בטורניר מס׳"
 
 #: includes/doroto-shortcodes.php:2073
 msgid "Best Player Winner:"
@@ -2972,14 +2804,6 @@ msgstr "המנצח בקטגוריית הזוג האידיאלי ביותר:"
 #: includes/doroto-shortcodes.php:2031
 msgid "You cannot go to the finals while registration is open."
 msgstr "לא ניתן לעבור לגמר כשההרשמה פתוחה."
-
-#: includes/doroto-shortcodes.php:1995
-msgid "is closed."
-msgstr "סגור."
-
-#: includes/doroto-shortcodes.php:1942
-msgid "was not found."
-msgstr "לא נמצא."
 
 #: includes/doroto-shortcodes.php:1939
 msgid "Player registration is still in progress and the matches have not yet been drawn."
@@ -3021,33 +2845,9 @@ msgstr "הטורניר סגור."
 msgid "games"
 msgstr "גיימים"
 
-#: includes/doroto-shortcodes.php:1851
-msgid "matches and"
-msgstr "משחקים ו־"
-
-#: includes/doroto-shortcodes.php:1851
-msgid "were played"
-msgstr "שוחקו"
-
-#: includes/doroto-shortcodes.php:1851
-msgid "Meantime"
-msgstr "בינתיים"
-
-#: includes/doroto-shortcodes.php:1850
-msgid "Match results"
-msgstr "תוצאות המשחקים"
-
-#: includes/doroto-services.php:132
-msgid "was removed from the tournament."
-msgstr "הוסר מהטורניר."
-
 #: includes/doroto-shortcodes.php:1716
 msgid "Remove player"
 msgstr "הסרת שחקן"
-
-#: includes/doroto-shortcodes.php:1703
-msgid "Removing a player from tournament no."
-msgstr "הסרת שחקן מטורניר מס׳"
 
 #: includes/doroto-shortcodes.php:1671
 msgid "The option to remove a player is closed."
@@ -3056,10 +2856,6 @@ msgstr "האפשרות להסיר שחקן סגורה."
 #: includes/doroto-shortcodes.php:1664
 msgid "You do not have permission to remove a player."
 msgstr "אין לך הרשאה להסיר שחקן."
-
-#: includes/doroto-services.php:140
-msgid "has renewed participation."
-msgstr "חידש את השתתפותו."
 
 #: includes/doroto-services.php:138
 msgid "All players have renewed participation."
@@ -3073,10 +2869,6 @@ msgstr "כל השחקנים פעילים."
 msgid "Resume participation"
 msgstr "חידוש השתתפות"
 
-#: includes/doroto-shortcodes.php:1560
-msgid "Resuming the game of the selected player in tournament no."
-msgstr "חידוש המשחק של השחקן שנבחר בטורניר מס׳"
-
 #: includes/doroto-shortcodes.php:1545
 msgid "The option to restore the player game is closed."
 msgstr "האפשרות לשחזר את משחק השחקן סגורה."
@@ -3084,10 +2876,6 @@ msgstr "האפשרות לשחזר את משחק השחקן סגורה."
 #: includes/doroto-shortcodes.php:1524
 msgid "You must log in to restore the game!"
 msgstr "יש להתחבר כדי לשחזר את המשחק!"
-
-#: includes/doroto-services.php:136
-msgid "has temporarily suspended participation."
-msgstr "השעה זמנית את השתתפותו."
 
 #: includes/doroto-services.php:134
 msgid "All players have temporarily suspended participation."
@@ -3101,10 +2889,6 @@ msgstr "השעיית השתתפות"
 msgid "All players"
 msgstr "כל השחקנים"
 
-#: includes/doroto-shortcodes.php:1441
-msgid "Suspension of the game of the selected player in tournament no."
-msgstr "השעיית המשחק של השחקן שנבחר בטורניר מס׳"
-
 #: includes/doroto-shortcodes.php:1426
 msgid "The option to suspend the player game is closed."
 msgstr "האפשרות להשעות את משחק השחקן סגורה."
@@ -3113,17 +2897,9 @@ msgstr "האפשרות להשעות את משחק השחקן סגורה."
 msgid "You must log in to temporarily suspend a player!"
 msgstr "יש להתחבר כדי להשעות שחקן זמנית!"
 
-#: includes/doroto-services.php:162
-msgid "has been added to the admins."
-msgstr "נוסף למנהלים."
-
 #: includes/doroto-shortcodes.php:1353
 msgid "Add organizer rights"
 msgstr "הוספת הרשאות מארגן"
-
-#: includes/doroto-shortcodes.php:1339
-msgid "Adding organizer rights in tournament no."
-msgstr "הוספת הרשאות מארגן בטורניר מס׳"
 
 #: includes/doroto-shortcodes.php:1334 includes/doroto-shortcodes.php:1355
 msgid "No one is currently registered for the tournament, so there is no one to grant organizer rights to."
@@ -3137,25 +2913,9 @@ msgstr "האפשרות להוסיף הרשאות מארגן סגורה."
 msgid "You do not have permission to add organizer rights."
 msgstr "אין לך הרשאה להוסיף הרשאות מארגן."
 
-#: includes/doroto-shortcodes.php:1284 includes/doroto-shortcodes.php:2938
-msgid "is"
-msgstr "הוא"
-
-#: includes/doroto-shortcodes.php:1284 includes/doroto-shortcodes.php:2938
-msgid "The organizer of tournament no."
-msgstr "המארגן של טורניר מס׳"
-
-#: includes/doroto-services.php:142
-msgid "has been added to a special group."
-msgstr "נוסף לקבוצה המיוחדת."
-
 #: includes/doroto-shortcodes.php:1201
 msgid "Add to special group"
 msgstr "הוספה לקבוצה המיוחדת"
-
-#: includes/doroto-shortcodes.php:1187
-msgid "Addition to the special group of the tournament no."
-msgstr "הוספה לקבוצה המיוחדת של טורניר מס׳"
 
 #: includes/doroto-shortcodes.php:1183 includes/doroto-shortcodes.php:1203
 msgid "No one has signed up for the tournament yet, so there is no one to include in a special group."
@@ -3169,17 +2929,9 @@ msgstr "האפשרות להוסיף לקבוצה המיוחדת סגורה."
 msgid "You do not have permission to add to a special group."
 msgstr "אין לך הרשאה להוסיף לקבוצה המיוחדת."
 
-#: includes/doroto-services.php:144
-msgid "was taken from a special group."
-msgstr "הוצא מהקבוצה המיוחדת."
-
 #: includes/doroto-shortcodes.php:1083
 msgid "Remove from special group"
 msgstr "הסרה מהקבוצה המיוחדת"
-
-#: includes/doroto-shortcodes.php:1069
-msgid "Removal from the special group of the tournament no."
-msgstr "הסרה מהקבוצה המיוחדת של טורניר מס׳"
 
 #: includes/doroto-shortcodes.php:1064 includes/doroto-shortcodes.php:1085
 msgid "No one has signed up for the tournament yet, so there is no one to remove from the special group."
@@ -3197,10 +2949,6 @@ msgstr "האפשרות להסיר מהקבוצה המיוחדת סגורה."
 msgid "You do not have permission to remove from a special group."
 msgstr "אין לך הרשאה להסיר מהקבוצה המיוחדת."
 
-#: includes/doroto-services.php:130
-msgid "was added to the tournament."
-msgstr "נוסף לטורניר."
-
 #: includes/doroto-services.php:118
 msgid "Tournament or user not found."
 msgstr "הטורניר או המשתמש לא נמצאו."
@@ -3208,10 +2956,6 @@ msgstr "הטורניר או המשתמש לא נמצאו."
 #: includes/doroto-shortcodes.php:969
 msgid "Add player"
 msgstr "הוספת שחקן"
-
-#: includes/doroto-shortcodes.php:952
-msgid "Add a new player to the tournament no."
-msgstr "הוספת שחקן חדש לטורניר מס׳"
 
 #: includes/doroto-shortcodes.php:875
 msgid "The option to add a player is closed."
@@ -3261,49 +3005,9 @@ msgstr "מצב"
 msgid "Order"
 msgstr "מקום"
 
-#: includes/doroto-shortcodes.php:553
-msgid ", but the maximum number of players has already been reached"
-msgstr ", אבל כבר הושג המספר המרבי של שחקנים"
-
-#: includes/doroto-shortcodes.php:549
-msgid "closed"
-msgstr "סגורה"
-
-#: includes/doroto-shortcodes.php:547
-msgid "open"
-msgstr "פתוחה"
-
-#: includes/doroto-shortcodes.php:544
-msgid "to the tournament is"
-msgstr "לטורניר"
-
-#: includes/doroto-shortcodes.php:544
-msgid "Registration"
-msgstr "ההרשמה"
-
-#: includes/doroto-shortcodes.php:542 includes/doroto-shortcodes.php:1850
-msgid "tournament no."
-msgstr "טורניר מס׳"
-
-#: includes/doroto-shortcodes.php:536
-msgid "total"
-msgstr "סה״כ"
-
 #: build/blocks/invite/render.php:49 build/blocks/tournament-list/render.php:72 build/blocks/tournament/render.php:74 build/blocks/tournament/render.php:116 build/blocks/tournament/render.php:346 includes/doroto-shortcodes.php:530 src/blocks/invite/render.php:49 src/blocks/tournament-list/render.php:72 src/blocks/tournament/render.php:74 src/blocks/tournament/render.php:116 src/blocks/tournament/render.php:346 build/blocks/tournament/index.js:1 src/blocks/tournament/index.js:27
 msgid "Players"
 msgstr "שחקנים"
-
-#: includes/doroto-shortcodes.php:412
-msgid "The result of the final match"
-msgstr "תוצאת משחק הגמר"
-
-#: includes/doroto-services.php:116 includes/doroto-shortcodes.php:412
-msgid "was changed."
-msgstr "שונתה."
-
-#: includes/doroto-services.php:100 includes/doroto-services.php:108 includes/doroto-services.php:116
-msgid "The result of match no."
-msgstr "התוצאה של משחק מס׳"
 
 #: includes/doroto-services.php:186 includes/doroto-shortcodes.php:400 includes/doroto-shortcodes.php:772 includes/doroto-shortcodes.php:986 includes/doroto-shortcodes.php:1104 includes/doroto-shortcodes.php:1221 includes/doroto-shortcodes.php:1375 includes/doroto-shortcodes.php:1491 includes/doroto-shortcodes.php:1610 includes/doroto-shortcodes.php:1735 includes/doroto-shortcodes.php:2843 includes/doroto-shortcodes.php:3404 includes/doroto-shortcodes.php:3526 includes/doroto-shortcodes.php:3595 includes/doroto-shortcodes.php:3960 includes/doroto-tournament-management.php:1218 includes/doroto-tournament-management.php:1451 includes/doroto-tournament-management.php:1545 includes/doroto-tournament-management.php:2852
 msgid "Invalid request."
@@ -3324,10 +3028,6 @@ msgstr "מזהה"
 #: includes/doroto-shortcodes.php:343
 msgid "The final match"
 msgstr "משחק הגמר"
-
-#: includes/doroto-shortcodes.php:320
-msgid "Change of match result in tournament No."
-msgstr "שינוי תוצאת משחק בטורניר מס׳"
 
 #: includes/doroto-shortcodes.php:310
 msgid "The option to modify the match results is closed."
@@ -3361,14 +3061,6 @@ msgstr "שותף ש"
 msgid "Player"
 msgstr "שחקן"
 
-#: includes/doroto-shortcodes.php:173
-msgid "Statistical data for"
-msgstr "נתונים סטטיסטיים עבור"
-
-#: includes/doroto-services.php:62 includes/doroto-shortcodes.php:81 includes/doroto-shortcodes.php:173 includes/doroto-shortcodes.php:1942 includes/doroto-shortcodes.php:1995
-msgid "Tournament no."
-msgstr "טורניר מס׳"
-
 #: includes/doroto-shortcodes.php:168
 msgid "Statistical data cannot be displayed without using a filter."
 msgstr "לא ניתן להציג נתונים סטטיסטיים בלי מסנן."
@@ -3392,14 +3084,6 @@ msgstr "שחקן לא ידוע"
 #: build/blocks/invite/render.php:55 includes/doroto-services.php:198 src/blocks/invite/render.php:55
 msgid "The registration for the tournament has already been closed."
 msgstr "ההרשמה לטורניר כבר נסגרה."
-
-#: includes/doroto-services.php:200
-msgid "We are sorry, but the maximum number of registered participants has been reached in tournament no."
-msgstr "מצטערים, הושג המספר המרבי של משתתפים רשומים בטורניר מס׳"
-
-#: includes/doroto-services.php:194
-msgid "You signed up for tournament no."
-msgstr "נרשמת לטורניר מס׳"
 
 #: includes/doroto-repeated-functions.php:14
 msgid "If you want to register for the tournament, you must log in to your account!"
@@ -3493,10 +3177,6 @@ msgstr "אם לכמה שחקנים יש אותו ניקוד, אפשר להכרי
 msgid "Best Doubles Partner"
 msgstr "שותף הזוגות הטוב ביותר."
 
-#: includes/doroto-frontend-pages.php:463
-msgid "The winner of the tournament is announced as the player with the highest ratio of games won to games lost. This player may be proclaimed as"
-msgstr "המנצח בטורניר הוא השחקן עם היחס הגבוה ביותר בין גיימים שנוצחו לגיימים שהופסדו. אפשר להכריז על שחקן זה כ:"
-
 #: includes/doroto-frontend-pages.php:461
 msgid "If a result with a difference of 2 games is required when playing up to a total of 5 games, then the match cannot be ended at 3:2, but it is at 4:2. If the game is tied, the match concludes with a tiebreak, with a score of 4:3."
 msgstr "אם נדרשת תוצאה עם הפרש של 2 גיימים כשמשחקים עד סך של 5 גיימים, לא ניתן לסיים את המשחק ב־3:2, אבל ב־4:2 כן. אם המשחק שקול, הוא מסתיים בשובר שוויון בתוצאה 4:3."
@@ -3585,10 +3265,6 @@ msgstr "תוצאת ההסכמה צריכה להיות קביעה כמה משחק
 msgid "special group"
 msgstr "קבוצה מיוחדת"
 
-#: includes/doroto-frontend-pages.php:428
-msgid "amount of players in"
-msgstr "מספר השחקנים ב"
-
 #: includes/doroto-frontend-pages.php:427
 msgid "number of players"
 msgstr "מספר השחקנים"
@@ -3632,14 +3308,6 @@ msgstr "משתתפי הטורניר מחליפים שותפים באקראי כ�
 #: includes/doroto-frontend-pages.php:416
 msgid "Explanation of abbreviation: DoRoTo (DOuble ROtation TOurnament)"
 msgstr "הסבר הקיצור: DoRoTo (DOuble ROtation TOurnament) = טורניר רוטציה לזוגות"
-
-#: includes/doroto-frontend-pages.php:415
-msgid "fully adheres to the official tennis rules except for the exceptions described below."
-msgstr "חלים במלואם כללי הטניס הרשמיים, למעט החריגים המתוארים להלן."
-
-#: includes/doroto-frontend-pages.php:415
-msgid "In DoRoTo"
-msgstr "ב־DoRoTo"
 
 #: includes/doroto-frontend-pages.php:414
 msgid "making new friends"
@@ -3688,10 +3356,6 @@ msgstr "תוכן:"
 #: includes/doroto-frontend-pages.php:402
 msgid "This type of tournament stands out for its dynamism and social component, and thus can serve as a suitable environment for all doubles tournaments where different groups of players meet on the court. The ratio of games won to games lost is calculated for each participant. The winner of the tournament is the player with this highest ratio. Such a player can best adapt to new circumstances and thus becomes an ideal teammate for doubles."
 msgstr "סוג טורניר זה בולט בדינמיות ובמרכיב החברתי שלו, ולכן יכול לשמש סביבה מתאימה לכל טורנירי הזוגות שבהם נפגשות על המגרש קבוצות שונות של שחקנים. לכל משתתף מחושב היחס בין הגיימים שנוצחו לגיימים שהופסדו. המנצח בטורניר הוא השחקן עם היחס הגבוה ביותר. שחקן כזה מסתגל הכי טוב לנסיבות חדשות ולכן הופך לשותף אידיאלי לזוגות."
-
-#: includes/doroto-admin.php:359
-msgid "is an alternative form of a Doubles Tournament, where players play each match with a different partner and in different positions (alternating left and right sides)."
-msgstr "היא צורה חלופית של טורניר זוגות, שבה השחקנים משחקים כל משחק עם שותף אחר ובעמדות שונות (לסירוגין בצד שמאל ובצד ימין)."
 
 #: includes/doroto-admin.php:359
 msgid "Doubles Rotation Tournament (hereinafter DoRoTo)"
@@ -4080,3 +3744,361 @@ msgstr "https://doroto.ltcchrast.cz/"
 msgid "Doubles Rotation Tournament"
 msgstr "טורניר רוטציה לזוגות"
 
+#. translators: estimated time to the end of the tournament; 1: hours, 2: minutes
+#: includes/doroto-shortcodes.php:89
+msgid "%1$d h %2$d min"
+msgstr "%1$d ש׳ %2$d דק׳"
+
+#. translators: 1: number of players (e.g. "12" or "10 + 2 = 12" with the special group), 2: maximum number of players
+#: includes/doroto-shortcodes.php:536
+msgid "%1$s out of a maximum of %2$d"
+msgstr "%1$s מתוך %2$d לכל היותר"
+
+#. translators: estimated time to the end of the tournament; %d: hours
+#: includes/doroto-shortcodes.php:92
+msgid "%d h"
+msgstr "%d ש׳"
+
+#. translators: estimated time to the end of the tournament; %d: minutes
+#: includes/doroto-shortcodes.php:95
+msgid "%d min"
+msgstr "%d דק׳"
+
+#. translators: %s: abbreviation of the tournament format (DoRoTo)
+#: includes/doroto-frontend-pages.php:416
+msgid "%s fully follows the official tennis rules, except for the exceptions described below."
+msgstr "ב-%s חלים כללי הטניס הרשמיים במלואם, למעט החריגים המתוארים להלן."
+
+#. translators: %d: tournament number
+#: includes/doroto-shortcodes.php:948
+msgid "Add a new player to tournament no. %d"
+msgstr "הוספת שחקן חדש לטורניר מס׳ %d"
+
+#. translators: %d: tournament number
+#: includes/doroto-shortcodes.php:1333
+msgid "Adding organizer rights in tournament no. %d"
+msgstr "הוספת הרשאות מארגן בטורניר מס׳ %d"
+
+#. translators: %d: tournament number
+#: includes/doroto-shortcodes.php:1183
+msgid "Addition to the special group of tournament no. %d"
+msgstr "הוספה לקבוצה המיוחדת של טורניר מס׳ %d"
+
+#: includes/doroto-admin.php:361
+msgid "An alternative form of a doubles tournament where players play each match with a different partner and in different positions (alternating left and right sides)."
+msgstr "צורה חלופית של טורניר זוגות, שבה השחקנים משחקים כל משחק עם שותף אחר ובעמדות שונות (לסירוגין צד שמאל וצד ימין)."
+
+#: includes/doroto-admin.php:360
+msgid "An alternative form of a singles tournament where players face each other without elimination rounds. Depending on the time available, everyone plays against everyone."
+msgstr "צורה חלופית של טורניר יחידים, שבה השחקנים מתמודדים זה מול זה ללא סבבי הדחה. בהתאם לזמן הפנוי, כל אחד משחק נגד כולם."
+
+#: includes/doroto-shortcodes.php:2978 includes/doroto-tournament-management.php:3111
+msgid "As an administrator, you can:"
+msgstr "כמנהל אפשר:"
+
+#. translators: %s: tournament number
+#: doubles-rotation-tournament.php:335
+msgid "Can I redirect you to tournament no. %s?"
+msgstr "האם להעביר אותך לטורניר מס׳ %s?"
+
+#. translators: %d: tournament number
+#: includes/doroto-shortcodes.php:320
+msgid "Change of a match result in tournament no. %d"
+msgstr "שינוי תוצאת משחק בטורניר מס׳ %d"
+
+#. translators: %d: tournament number
+#: includes/doroto-shortcodes.php:3372
+msgid "Confirm the payment of the selected player in tournament no. %d"
+msgstr "אישור התשלום של השחקן הנבחר בטורניר מס׳ %d"
+
+#. translators: 1: tournament number, 2: tournament name
+#: includes/doroto-shortcodes.php:2097
+msgid "Currently, the following matches are being played in tournament no. %1$d (%2$s):"
+msgstr "בטורניר מס׳ %1$d (%2$s) מתקיימים כעת המשחקים הבאים:"
+
+#. translators: %d: tournament number
+#: includes/doroto-shortcodes.php:2919 includes/doroto-view-model.php:381
+msgid "Details about tournament no. %d"
+msgstr "פרטים על טורניר מס׳ %d"
+
+#. translators: %d: tournament number
+#: includes/doroto-shortcodes.php:2210
+msgid "Edit tournament no. %d"
+msgstr "עריכת טורניר מס׳ %d"
+
+#. translators: %s: name of the tournament format (Doubles Rotation Tournament)
+#: includes/doroto-admin.php:312
+msgid "Help page for %s"
+msgstr "דף עזרה: %s"
+
+#. translators: %s: tournament type, e.g. "Doubles Tennis"
+#: includes/doroto-tournament-management.php:894
+msgid "I invite you to the %s Rotation Tournament!"
+msgstr "הוזמנת לטורניר הרוטציה %s!"
+
+#: includes/doroto-shortcodes.php:560
+msgid "Lost games"
+msgstr "גיימים שהופסדו"
+
+#: includes/doroto-shortcodes.php:560
+msgid "Lost points"
+msgstr "נקודות שהופסדו"
+
+#. translators: %d: match number
+#: includes/doroto-view-model.php:305
+msgid "Match no. %d"
+msgstr "משחק מס׳ %d"
+
+#. translators: %d: match number
+#: includes/doroto-services.php:108
+msgid "Match no. %d was skipped."
+msgstr "משחק מס׳ %d דולג."
+
+#. translators: 1: tournament number, 2: tournament name
+#: includes/doroto-shortcodes.php:1845
+msgid "Match results of tournament no. %1$d (%2$s)."
+msgstr "תוצאות המשחקים של טורניר מס׳ %1$d (%2$s)."
+
+#. translators: 1: tournament number, 2: tournament name, 3: names of the organizers
+#: includes/doroto-repeated-functions.php:710
+msgid "Organizers of tournament no. %1$d (%2$s): %3$s"
+msgstr "המארגנים של טורניר מס׳ %1$d (%2$s): %3$s"
+
+#. translators: 1: number of matches played, 2: number of games played
+#: includes/doroto-shortcodes.php:1848
+msgid "Played so far: matches %1$s, games %2$s."
+msgstr "שוחקו עד כה: משחקים %1$s, גיימים %2$s."
+
+#. translators: 1: number of matches played, 2: number of points played
+#: includes/doroto-shortcodes.php:1850
+msgid "Played so far: matches %1$s, points %2$s."
+msgstr "שוחקו עד כה: משחקים %1$s, נקודות %2$s."
+
+#. translators: %s: player name
+#: includes/doroto-services.php:174
+msgid "Player %s has been added to the organizers."
+msgstr "השחקן %s נוסף למארגנים."
+
+#. translators: %s: player name
+#: includes/doroto-services.php:150
+msgid "Player %s has been added to the special group."
+msgstr "השחקן %s נוסף לקבוצה המיוחדת."
+
+#. translators: %s: player name
+#: includes/doroto-tournament-management.php:3094
+msgid "Player %s has played the same number of matches with everyone."
+msgstr "השחקן %s שיחק מספר משחקים שווה עם כולם."
+
+#. translators: %s: player name
+#: includes/doroto-services.php:147
+msgid "Player %s has renewed participation."
+msgstr "השחקן %s חידש את השתתפותו."
+
+#. translators: %s: player name
+#: includes/doroto-services.php:142
+msgid "Player %s has temporarily suspended participation."
+msgstr "השחקן %s השעה זמנית את השתתפותו."
+
+#. translators: %s: player name
+#: includes/doroto-services.php:177
+msgid "Player %s is no longer an organizer."
+msgstr "השחקן %s כבר אינו מארגן."
+
+#. translators: %s: position label of the player (R1)
+#: includes/doroto-shortcodes.php:2168
+msgid "Player %s starts the game by serving."
+msgstr "השחקן %s פותח את הגיים בהגשה."
+
+#. translators: %s: player name
+#: includes/doroto-services.php:134
+msgid "Player %s was added to the tournament."
+msgstr "השחקן %s נוסף לטורניר."
+
+#. translators: %s: player name
+#: includes/doroto-services.php:153
+msgid "Player %s was removed from the special group."
+msgstr "השחקן %s הוסר מהקבוצה המיוחדת."
+
+#. translators: %s: player name
+#: includes/doroto-services.php:137
+msgid "Player %s was removed from the tournament."
+msgstr "השחקן %s הוסר מהטורניר."
+
+#. translators: 1: tournament number, 2: tournament name, 3: number of players
+#: includes/doroto-shortcodes.php:540
+msgid "Players of tournament no. %1$d (%2$s): %3$s"
+msgstr "השחקנים של טורניר מס׳ %1$d (%2$s): %3$s"
+
+#. translators: 1: name of this plugin (Rotation Tournaments), 2: slug of the other plugin
+#: includes/doroto-admin.php:338
+msgid "Plugins restricting user roles may limit the functionality of %1$s. Pay attention to the settings of %2$s."
+msgstr "תוספים שמגבילים תפקידי משתמשים עלולים להגביל את פעולת %1$s. יש לשים לב להגדרות של %2$s."
+
+#. translators: %d: tournament number
+#: includes/doroto-shortcodes.php:3931
+msgid "Register and add a new player to tournament no. %d"
+msgstr "רישום והוספה של שחקן חדש לטורניר מס׳ %d"
+
+#: includes/doroto-shortcodes.php:547
+msgid "Registration to the tournament is closed."
+msgstr "ההרשמה לטורניר סגורה."
+
+#: includes/doroto-shortcodes.php:543
+msgid "Registration to the tournament is open, but the maximum number of players has already been reached."
+msgstr "ההרשמה לטורניר פתוחה, אבל כבר הושג המספר המרבי של שחקנים."
+
+#: includes/doroto-shortcodes.php:545
+msgid "Registration to the tournament is open."
+msgstr "ההרשמה לטורניר פתוחה."
+
+#. translators: %d: tournament number
+#: includes/doroto-shortcodes.php:1065
+msgid "Removal from the special group of tournament no. %d"
+msgstr "הסרה מהקבוצה המיוחדת של טורניר מס׳ %d"
+
+#. translators: %d: tournament number
+#: includes/doroto-shortcodes.php:3496
+msgid "Remove the payment of the selected player in tournament no. %d"
+msgstr "הסרת התשלום של השחקן הנבחר בטורניר מס׳ %d"
+
+#. translators: %d: tournament number
+#: includes/doroto-shortcodes.php:1697
+msgid "Removing a player from tournament no. %d"
+msgstr "הסרת שחקן מטורניר מס׳ %d"
+
+#. translators: %d: tournament number
+#: includes/doroto-shortcodes.php:1554
+msgid "Resuming the game of the selected player in tournament no. %d"
+msgstr "חידוש המשחק של השחקן הנבחר בטורניר מס׳ %d"
+
+#. translators: %d: tournament number
+#: includes/doroto-shortcodes.php:1435
+msgid "Suspension of the game of the selected player in tournament no. %d"
+msgstr "השעיית המשחק של השחקן הנבחר בטורניר מס׳ %d"
+
+#. translators: %d: tournament number
+#: includes/doroto-tournament-management.php:2630
+msgid "The data of tournament no. %d is displayed."
+msgstr "מוצגים הנתונים של טורניר מס׳ %d."
+
+#. translators: %d: tournament number
+#: includes/doroto-services.php:186
+msgid "The parameters of tournament no. %d were saved."
+msgstr "הפרמטרים של טורניר מס׳ %d נשמרו."
+
+#. translators: %s: player name
+#: includes/doroto-services.php:160
+msgid "The payment of player %s has been recorded."
+msgstr "התשלום של השחקן %s תועד."
+
+#. translators: %s: player name
+#: includes/doroto-services.php:163
+msgid "The payment of player %s has been removed."
+msgstr "התשלום של השחקן %s הוסר."
+
+#. translators: %d: tournament number
+#: includes/doroto-services.php:86
+msgid "The registration of players for tournament no. %d was closed."
+msgstr "הרשמת השחקנים לטורניר מס׳ %d נסגרה."
+
+#. translators: %d: tournament number
+#: includes/doroto-services.php:84
+msgid "The registration of players for tournament no. %d was opened."
+msgstr "הרשמת השחקנים לטורניר מס׳ %d נפתחה."
+
+#. translators: 1: match number, 2: score of team 1, 3: score of team 2
+#: includes/doroto-services.php:103
+msgid "The result of match no. %1$d was already entered with the score %2$d:%3$d."
+msgstr "התוצאה של משחק מס׳ %1$d כבר הוזנה קודם: %2$d:%3$d."
+
+#. translators: 1: match number, 2: score of team 1, 3: score of team 2
+#: includes/doroto-services.php:111
+msgid "The result of match no. %1$d was saved with the score %2$d:%3$d."
+msgstr "התוצאה של משחק מס׳ %1$d נשמרה: %2$d:%3$d."
+
+#. translators: %d: match number
+#: includes/doroto-services.php:119
+msgid "The result of match no. %d was changed."
+msgstr "התוצאה של משחק מס׳ %d שונתה."
+
+#: includes/doroto-shortcodes.php:412
+msgid "The result of the final match was changed."
+msgstr "התוצאה של משחק הגמר שונתה."
+
+#. translators: %s: title of the winner (Best Doubles Partner)
+#: includes/doroto-frontend-pages.php:466
+msgid "The winner of the tournament is the player with the highest ratio of games won to games lost. This player may be proclaimed the %s."
+msgstr "המנצח בטורניר הוא השחקן עם היחס הגבוה ביותר בין גיימים שניצח לגיימים שהפסיד. שחקן זה יכול לקבל את התואר %s."
+
+#. translators: 1: tournament number, 2: tournament name
+#: includes/doroto-shortcodes.php:1997
+msgid "Tournament no. %1$d (%2$s) is closed."
+msgstr "טורניר מס׳ %1$d (%2$s) סגור."
+
+#. translators: 1: tournament number, 2: percentage of the tournament played (e.g. "40 %")
+#: includes/doroto-shortcodes.php:82
+msgid "Tournament no. %1$d: %2$s completed."
+msgstr "טורניר מס׳ %1$d: הושלמו %2$s."
+
+#. translators: 1: tournament number, 2: player name
+#: includes/doroto-shortcodes.php:180
+msgid "Tournament no. %1$d: statistical data for %2$s."
+msgstr "טורניר מס׳ %1$d: נתונים סטטיסטיים של %2$s."
+
+#. translators: %d: tournament number
+#: includes/doroto-services.php:78
+msgid "Tournament no. %d does not have enough players to close the registration."
+msgstr "בטורניר מס׳ %d אין מספיק שחקנים כדי לסגור את ההרשמה."
+
+#. translators: %d: tournament number
+#: includes/doroto-services.php:99
+msgid "Tournament no. %d has not been scheduled yet."
+msgstr "בטורניר מס׳ %d עדיין לא הוגרלו משחקים."
+
+#. translators: %d: tournament number
+#: includes/doroto-services.php:193
+msgid "Tournament no. %d was deleted."
+msgstr "טורניר מס׳ %d נמחק."
+
+#. translators: %d: tournament number
+#: includes/doroto-shortcodes.php:1943
+msgid "Tournament no. %d was not found."
+msgstr "טורניר מס׳ %d לא נמצא."
+
+#. translators: %d: tournament number
+#: includes/doroto-services.php:218
+msgid "We are sorry, but tournament no. %d has already reached the maximum number of registered participants."
+msgstr "מצטערים, טורניר מס׳ %d כבר הגיע למספר המרבי של משתתפים רשומים."
+
+#: includes/doroto-shortcodes.php:559
+msgid "Won games"
+msgstr "גיימים שנוצחו"
+
+#: includes/doroto-shortcodes.php:559
+msgid "Won points"
+msgstr "נקודות שנוצחו"
+
+#. translators: %d: tournament number
+#: includes/doroto-services.php:213
+msgid "You are already registered in tournament no. %d."
+msgstr "כבר נרשמת לטורניר מס׳ %d."
+
+#. translators: %d: tournament number
+#: includes/doroto-shortcodes.php:2818
+msgid "You are not authorized to change the parameters of tournament no. %d."
+msgstr "אין לך הרשאה לשנות את הפרמטרים של טורניר מס׳ %d."
+
+#. translators: %d: tournament number
+#: includes/doroto-services.php:210
+msgid "You signed up for tournament no. %d."
+msgstr "נרשמת לטורניר מס׳ %d."
+
+#. translators: %s: link "special group"
+#: includes/doroto-frontend-pages.php:430
+msgid "number of players in the %s"
+msgstr "מספר השחקנים בקטגוריה: %s"
+
+#. translators: 1: name of the settings section, 2: name of the setting
+#: includes/doroto-shortcodes.php:3344
+msgid "To record payments from players, turn on this option in %1$s: %2$s"
+msgstr "כדי לתעד תשלומים של שחקנים, יש להפעיל ב-%1$s את האפשרות: %2$s"

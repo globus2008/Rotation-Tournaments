@@ -890,7 +890,8 @@ function doroto_insert_tournament(int $tournament_type)
 	$options = doroto_tournament_types();
 	$allowed_html = doroto_allowed_html();
 	$tournament_short_name = sanitize_text_field($options[$tournament_type]);
-	$invitation = wp_kses(__('I invite you to', 'doubles-rotation-tournament') . ' <b>' . ' ' . $tournament_short_name . ' ' . __('Rotation Tournament!', 'doubles-rotation-tournament') . '</b>', $allowed_html);
+	/* translators: %s: tournament type, e.g. "Doubles Tennis" */
+	$invitation = wp_kses(sprintf(__('I invite you to the %s Rotation Tournament!', 'doubles-rotation-tournament'), '<b>' . $tournament_short_name . '</b>'), $allowed_html);
 	// Site time zone: the UTC time in the name confused organizers (12:56 showed as 10-56).
 	$name = sanitize_text_field($tournament_short_name . ' ' . wp_date('d-H-i'));
 
@@ -2625,7 +2626,8 @@ function doroto_choose_tournament(string $tournament_id = '')
 		exit;
 	}
 
-	$output = sanitize_text_field(__("The data is being displayed for the tournament no.", "doubles-rotation-tournament") . ' ' . $tournament_id . '.');
+	/* translators: %d: tournament number */
+	$output = sanitize_text_field(sprintf(__('The data of tournament no. %d is displayed.', 'doubles-rotation-tournament'), $tournament_id));
 	doroto_info_messsages_save($output);
 	doroto_redirect_modify_url($tournament_id, "");
 	exit;
@@ -3088,7 +3090,8 @@ function doroto_notice_round_end(int $tournament_id, ?stdClass $tournament, int 
 	$player_name = doroto_find_player_name($choosen_player, $whole_names);
 
 	$output = "<div class='doroto-message-background'>";
-	$output .= esc_html__("Player", "doubles-rotation-tournament") . ' <b>' . esc_html($player_name) . '</b> ' . esc_html__("played the same number of matches with everyone.", "doubles-rotation-tournament") . ' ' . esc_html__("Maybe this means the end of the tournament round.", "doubles-rotation-tournament");
+	/* translators: %s: player name */
+	$output .= sprintf(esc_html__('Player %s has played the same number of matches with everyone.', 'doubles-rotation-tournament'), '<b>' . esc_html($player_name) . '</b>') . ' ' . esc_html__("Maybe this means the end of the tournament round.", "doubles-rotation-tournament");
 
 	if (doroto_is_admin($tournament_id) > 0) {
 		$option = [];
@@ -3105,8 +3108,8 @@ function doroto_notice_round_end(int $tournament_id, ?stdClass $tournament, int 
 		$option[] = "<a href='" . esc_url(doroto_action_url('doroto_hide_notice_round_end', intval($tournament_id))) . "'>" . esc_html($hide_notice_text) . "</a>";
 
 		if (!empty($option)) {
-			$output .= '<p>' . esc_html__("If you wish, you can as an administrator", "doubles-rotation-tournament") . ' ';
-			$output .= implode(" " . esc_html__("or", "doubles-rotation-tournament") . " ", $option) . '.</p>';
+			$output .= '<p class="doroto-round-end-options">' . esc_html__('As an administrator, you can:', 'doubles-rotation-tournament') . ' ';
+			$output .= implode(' | ', $option) . '</p>';
 		}
 	}
 	$output .= '</div>';
@@ -3152,15 +3155,21 @@ function doroto_next_notice_round_end()
 add_action('wp_ajax_doroto_next_notice_round_end', 'doroto_next_notice_round_end');
 
 /**
+ * Whether the score of the tournament type counts games (tennis, padel) rather than points.
+ * @since 2.0.0
+ */
+function doroto_counts_games(?stdClass $tournament): bool
+{
+	return in_array(intval($tournament->tournament_type ?? 0), [20, 21, 24, 25], true);
+}
+
+/**
  * Return games or points
  * @since 1.3.6
  */
 function doroto_games_points(?stdClass $tournament)
 {
-	$tournament_type = intval($tournament->tournament_type);
-	$games_types = array(20, 21, 24, 25);
-
-	if (in_array($tournament_type, $games_types)) {
+	if (doroto_counts_games($tournament)) {
 		$games_points = esc_html__("games", "doubles-rotation-tournament");
 	} else {
 		$games_points = esc_html__("points", "doubles-rotation-tournament");

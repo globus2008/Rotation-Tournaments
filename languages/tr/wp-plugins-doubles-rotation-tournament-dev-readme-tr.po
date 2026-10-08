@@ -354,7 +354,7 @@ msgstr "Eklendi – servis atan oyuncu maç kartlarında işaretlenir; özel gru
 
 #. Found in changelog list item.
 #, gp-priority: low
-msgid "Add - the tournament block takes its colours from the theme (button and palette colours); the block's Styles panel can change the accent, the tab bar and table headers, their text and the colour of the special group"
+msgid "Add - the tournament block takes its colors from the theme (button and palette colors); the block's Styles panel can change the accent, the tab bar and table headers, their text and the color of the special group"
 msgstr "Eklendi – turnuva bloğu renklerini temadan alır (düğme ve palet renkleri); bloğun Stiller paneli vurguyu, sekme çubuğunu ve tablo başlıklarını, bunların metnini ve özel grup rengini değiştirmeye olanak tanır"
 
 #. Found in changelog list item.
@@ -1286,4 +1286,3 @@ msgstr "Yönetim ekranında küçük değişiklik."
 #, gp-priority: low
 msgid "First release to public."
 msgstr "İlk herkese açık sürüm."
-

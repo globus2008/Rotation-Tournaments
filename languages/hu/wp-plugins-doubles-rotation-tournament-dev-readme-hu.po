@@ -354,7 +354,7 @@ msgstr "Új – az adogató játékos jelölve van a mérkőzéskártyákon; a k
 
 #. Found in changelog list item.
 #, gp-priority: low
-msgid "Add - the tournament block takes its colours from the theme (button and palette colours); the block's Styles panel can change the accent, the tab bar and table headers, their text and the colour of the special group"
+msgid "Add - the tournament block takes its colors from the theme (button and palette colors); the block's Styles panel can change the accent, the tab bar and table headers, their text and the color of the special group"
 msgstr "Új – a verseny blokk a témából veszi színeit (gomb- és palettaszínek); a blokk Stílusok paneljén módosítható a kiemelőszín, a fülsáv és a táblázatfejlécek, azok szövege és a különleges csoport színe"
 
 #. Found in changelog list item.
@@ -1286,4 +1286,3 @@ msgstr "Kisebb módosítás az adminisztrációs képernyőn."
 #, gp-priority: low
 msgid "First release to public."
 msgstr "Első nyilvános kiadás."
-

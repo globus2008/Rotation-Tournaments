@@ -308,7 +308,8 @@ function doroto_admin_overview(): array
 	$pages = [];
 	foreach ([
 		'doroto_main_page_id' => __('The main page for the management of all tournaments.', 'doubles-rotation-tournament'),
-		'doroto_help_page_id' => __('Help page for', 'doubles-rotation-tournament') . ' ' . __('Doubles Rotation Tournament', 'doubles-rotation-tournament'),
+		/* translators: %s: name of the tournament format (Doubles Rotation Tournament) */
+		'doroto_help_page_id' => sprintf(__('Help page for %s', 'doubles-rotation-tournament'), __('Doubles Rotation Tournament', 'doubles-rotation-tournament')),
 		'doroto_example_page_id' => __('A post with an example of a tournament presentation.', 'doubles-rotation-tournament'),
 	] as $option => $label) {
 		$page_id = intval(get_option($option));
@@ -333,7 +334,8 @@ function doroto_admin_overview(): array
 	$active = (array) get_option('active_plugins');
 	foreach (['user-registration', 'user-role-editor', 'members', 'ultimate-member', 'wpfront-user-role-editor', 'hide-admin-bar-based-on-user-roles', 'user-menus', 'nav-menu-roles', 'paid-memberships-pro'] as $plugin) {
 		if (in_array($plugin . '/' . $plugin . '.php', $active, true)) {
-			$notices[] = ['text' => __('Plugins restricting user roles may limit the functionality of', 'doubles-rotation-tournament') . ' ' . __('Rotation Tournaments', 'doubles-rotation-tournament') . '. ' . __('Pay attention to the settings', 'doubles-rotation-tournament') . ' ' . $plugin . '.'];
+			/* translators: 1: name of this plugin (Rotation Tournaments), 2: slug of the other plugin */
+			$notices[] = ['text' => sprintf(__('Plugins restricting user roles may limit the functionality of %1$s. Pay attention to the settings of %2$s.', 'doubles-rotation-tournament'), __('Rotation Tournaments', 'doubles-rotation-tournament'), $plugin)];
 		}
 	}
 
@@ -355,8 +357,8 @@ function doroto_admin_overview(): array
 		],
 		'examples' => $examples,
 		'terms' => [
-			['term' => __('Singles Rotation Tournament (hereinafter SiRoTo)', 'doubles-rotation-tournament'), 'text' => __('is an alternative form of a Singles Tournament where players face each other without elimination rounds. Depending on the time options, everyone plays against everyone.', 'doubles-rotation-tournament')],
-			['term' => __('Doubles Rotation Tournament (hereinafter DoRoTo)', 'doubles-rotation-tournament'), 'text' => __('is an alternative form of a Doubles Tournament, where players play each match with a different partner and in different positions (alternating left and right sides).', 'doubles-rotation-tournament')],
+			['term' => __('Singles Rotation Tournament (hereinafter SiRoTo)', 'doubles-rotation-tournament'), 'text' => __('An alternative form of a singles tournament where players face each other without elimination rounds. Depending on the time available, everyone plays against everyone.', 'doubles-rotation-tournament')],
+			['term' => __('Doubles Rotation Tournament (hereinafter DoRoTo)', 'doubles-rotation-tournament'), 'text' => __('An alternative form of a doubles tournament where players play each match with a different partner and in different positions (alternating left and right sides).', 'doubles-rotation-tournament')],
 		],
 		'storeUrl' => 'https://play.google.com/store/apps/details?id=cz.doroto.app&referrer=utm_source%3Dplugin%26utm_medium%3Dadmin',
 	];

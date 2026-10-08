@@ -354,7 +354,7 @@ msgstr "新增——发球选手在比赛卡片上标出；特殊组在比赛、
 
 #. Found in changelog list item.
 #, gp-priority: low
-msgid "Add - the tournament block takes its colours from the theme (button and palette colours); the block's Styles panel can change the accent, the tab bar and table headers, their text and the colour of the special group"
+msgid "Add - the tournament block takes its colors from the theme (button and palette colors); the block's Styles panel can change the accent, the tab bar and table headers, their text and the color of the special group"
 msgstr "新增——赛事区块从主题获取颜色（按钮和调色板颜色）；区块的样式面板可更改强调色、标签栏和表头、其文字以及特殊组颜色"
 
 #. Found in changelog list item.
@@ -1286,4 +1286,3 @@ msgstr "管理界面的小改动。"
 #, gp-priority: low
 msgid "First release to public."
 msgstr "首个公开版本。"
-

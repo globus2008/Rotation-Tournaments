@@ -354,7 +354,7 @@ msgstr "Thêm mới – người giao bóng được đánh dấu trên thẻ tr
 
 #. Found in changelog list item.
 #, gp-priority: low
-msgid "Add - the tournament block takes its colours from the theme (button and palette colours); the block's Styles panel can change the accent, the tab bar and table headers, their text and the colour of the special group"
+msgid "Add - the tournament block takes its colors from the theme (button and palette colors); the block's Styles panel can change the accent, the tab bar and table headers, their text and the color of the special group"
 msgstr "Thêm mới – khối giải đấu lấy màu từ giao diện (màu nút và bảng màu); bảng Kiểu của khối cho phép thay đổi màu nhấn, thanh tab và tiêu đề bảng, chữ của chúng và màu nhóm đặc biệt"
 
 #. Found in changelog list item.
@@ -1286,4 +1286,3 @@ msgstr "Thay đổi nhỏ trên màn hình quản trị."
 #, gp-priority: low
 msgid "First release to public."
 msgstr "Bản phát hành công khai đầu tiên."
-

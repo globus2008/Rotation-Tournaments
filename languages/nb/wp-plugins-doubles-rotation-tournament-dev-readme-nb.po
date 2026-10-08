@@ -354,7 +354,7 @@ msgstr "Lagt til – den servende spilleren er merket på kampkortene; spesialgr
 
 #. Found in changelog list item.
 #, gp-priority: low
-msgid "Add - the tournament block takes its colours from the theme (button and palette colours); the block's Styles panel can change the accent, the tab bar and table headers, their text and the colour of the special group"
+msgid "Add - the tournament block takes its colors from the theme (button and palette colors); the block's Styles panel can change the accent, the tab bar and table headers, their text and the color of the special group"
 msgstr "Lagt til – turneringsblokken henter fargene sine fra temaet (knapp- og palettfarger); blokkens panel Stiler kan endre aksenten, fanelinjen og tabelloverskriftene, teksten deres og fargen på spesialgruppen"
 
 #. Found in changelog list item.
@@ -1286,4 +1286,3 @@ msgstr "En liten endring av administrasjonsskjermen."
 #, gp-priority: low
 msgid "First release to public."
 msgstr "Første offentlige utgivelse."
-

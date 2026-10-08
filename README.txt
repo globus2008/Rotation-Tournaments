@@ -3,7 +3,7 @@ Contributors: globus2008
 Tags: tournament, game, ranking, sport, tennis
 Requires at least: 6.5
 Tested up to: 7.1.2
-Stable tag: 2.0.0
+Stable tag: 2.0.1
 License: GPLv3 or later
 License URI: [GNU GPL v3.0](https://www.gnu.org/licenses/gpl-3.0.html)
 
@@ -132,11 +132,16 @@ You can use this plugin for tennis, table tennis, squash, padel, badminton, beac
 
 
 == Changelog ==
+= 2.0.1 - 2026/10/08 =
+* Improvement - messages, headings and notices are translated as whole sentences, so languages with a different word order (e.g. Turkish, Hungarian, Hindi, Japanese, Korean and Chinese) read naturally
+* Improvement - the round-end notice of the tournament block no longer repeats the texts of its buttons
+* Add - English variants for the UK, Australia, Canada, New Zealand and South Africa
+
 = 2.0.0 - 2026/10/06 =
 * Add - blocks for the block editor: "Rotation tournament" (matches, results, players, statistics and settings on tabs, updated live without reloading the page), its variations "Tournament standings", "Tournament matches" and "Tournament presentation", "Tournament list" and "Tournament invitation"
 * Add - the plugin admin can convert the main page to the blocks with one button; the old content stays in the page revisions. New installs create the main page from the blocks. The shortcodes [doroto_tournament] and [doroto_tournament_list] show the blocks in the classic editor; the 1.x shortcodes keep working
 * Add - the tournament block: Share dialog with a QR code, "Open in the app" line, full-screen presentation that rotates the sections, map of the tournament place in the settings, and guided tours of the page and of four example tournaments
-* Add - the tournament block takes its colours from the theme (button and palette colours); the block's Styles panel can change the accent, the tab bar and table headers, their text and the colour of the special group
+* Add - the tournament block takes its colors from the theme (button and palette colors); the block's Styles panel can change the accent, the tab bar and table headers, their text and the color of the special group
 * Add - the serving player is marked on the match cards; the special group is highlighted in matches, results, players, statistics and winners; the tournament details (invitation text) can be shown at any time
 * Improvement - new admin page with Overview, Settings and Help instead of nine settings tabs; every setting is checked on the server and errors are shown next to the field
 * Improvement - every change of a tournament (web forms, blocks and the Android app) goes through one shared layer with the same permissions, locking and change detection

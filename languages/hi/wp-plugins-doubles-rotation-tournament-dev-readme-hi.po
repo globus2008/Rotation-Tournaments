@@ -354,7 +354,7 @@ msgstr "जोड़ा गया – सर्व करने वाला ख
 
 #. Found in changelog list item.
 #, gp-priority: low
-msgid "Add - the tournament block takes its colours from the theme (button and palette colours); the block's Styles panel can change the accent, the tab bar and table headers, their text and the colour of the special group"
+msgid "Add - the tournament block takes its colors from the theme (button and palette colors); the block's Styles panel can change the accent, the tab bar and table headers, their text and the color of the special group"
 msgstr "जोड़ा गया – टूर्नामेंट ब्लॉक अपने रंग थीम से लेता है (बटन और पैलेट के रंग); ब्लॉक का स्टाइल पैनल एक्सेंट, टैब बार और तालिका शीर्षक, उनका टेक्स्ट और विशेष समूह का रंग बदलने देता है"
 
 #. Found in changelog list item.
@@ -1286,4 +1286,3 @@ msgstr "व्यवस्थापक स्क्रीन में छोट
 #, gp-priority: low
 msgid "First release to public."
 msgstr "पहली सार्वजनिक रिलीज़।"
-

@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plugins - Rotation Tournaments - Development (trunk)\n"
-"PO-Revision-Date: 2026-10-07 17:02:10+0000\n"
+"PO-Revision-Date: 2026-10-08 17:31:19+0000\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -339,10 +339,6 @@ msgstr "無法建立賽事。"
 msgid "You have left the tournament."
 msgstr "您已退出賽事。"
 
-#: includes/doroto-services.php:178
-msgid "was deleted."
-msgstr "已被刪除。"
-
 #: includes/doroto-services.php:170
 msgid ""
 "The tournament was closed more than 24 hours ago and can no longer be "
@@ -352,10 +348,6 @@ msgstr "賽事已關閉超過 24 小時，無法再更改。"
 #: includes/doroto-services.php:168
 msgid "Unknown tournament type."
 msgstr "未知的賽事型別。"
-
-#: includes/doroto-services.php:164
-msgid "is no longer an organizer."
-msgstr "已不再是組織者。"
 
 #: includes/doroto-services.php:160
 msgid "The founder of the tournament cannot be removed."
@@ -1130,10 +1122,6 @@ msgstr "退出賽事"
 msgid "Sign up for the tournament"
 msgstr "報名參加賽事"
 
-#: includes/doroto-services.php:196
-msgid "You are already registered in tournament no."
-msgstr "您已報名此賽事，賽事編號"
-
 #: includes/doroto-endpoints.php:2990
 msgid "Your login e-mail:"
 msgstr "您的登入電子郵件："
@@ -1713,10 +1701,6 @@ msgstr "姓"
 #: includes/doroto-shortcodes.php:3933
 msgid "First Name"
 msgstr "名"
-
-#: includes/doroto-shortcodes.php:3928
-msgid "Register and add a new player to the tournament no."
-msgstr "註冊新選手並新增到賽事，賽事編號"
 
 #: includes/doroto-shortcodes.php:3915
 msgid "Unable to register and add another player from the database."
@@ -2417,10 +2401,6 @@ msgid ""
 "trial tournament."
 msgstr "如果您登入帳號後我們再次執行本教學，我將授予您賽事組織者許可權。之後您可以在這個試用賽事中嘗試其他選項。"
 
-#: doubles-rotation-tournament.php:334
-msgid "Can I redirect you to tournament no."
-msgstr "是否將您轉到以下賽事？賽事編號"
-
 #: doubles-rotation-tournament.php:333
 msgid "We will demonstrate this tip on a selected tournament example."
 msgstr "我們將在一個選定的示例賽事上演示這個提示。"
@@ -2540,21 +2520,9 @@ msgstr "負"
 msgid "Won"
 msgstr "勝"
 
-#: includes/doroto-shortcodes.php:93
-msgid "minutes"
-msgstr "分鐘"
-
-#: includes/doroto-shortcodes.php:87
-msgid "hours"
-msgstr "小時"
-
 #: includes/doroto-shortcodes.php:85
 msgid "Estimated time to finish:"
 msgstr "預計結束時間："
-
-#: includes/doroto-shortcodes.php:82
-msgid "completed"
-msgstr "已完成"
 
 #: includes/doroto-shortcodes.php:38
 msgid "Tournament progress calculation is not available."
@@ -2593,17 +2561,9 @@ msgid ""
 "tournament."
 msgstr "用於估算賽事程序時間的引數。"
 
-#: includes/doroto-shortcodes.php:539
-msgid "out of maximum"
-msgstr "/ 最多"
-
 #: includes/doroto-tournament-management.php:3091
 msgid "Maybe this means the end of the tournament round."
 msgstr "這可能意味著賽事輪次已結束。"
-
-#: includes/doroto-tournament-management.php:3091
-msgid "played the same number of matches with everyone."
-msgstr "已與每個人打了相同場數的比賽。"
 
 #: includes/doroto-frontend-pages.php:453
 msgid ""
@@ -2686,14 +2646,6 @@ msgstr "您可以在這裡登入。"
 #: includes/doroto-repeated-functions.php:56
 msgid "Warning: You are not logged in to your account."
 msgstr "警告：您尚未登入帳號。"
-
-#: includes/doroto-admin.php:336
-msgid "Pay attention to the settings"
-msgstr "請注意以下外掛的設定："
-
-#: includes/doroto-admin.php:336
-msgid "Plugins restricting user roles may limit the functionality of"
-msgstr "限制使用者角色的外掛可能會限制以下外掛的功能："
 
 #: includes/doroto-admin.php:102
 msgid "all players w/o limitations"
@@ -2784,10 +2736,6 @@ msgid ""
 "next?"
 msgstr "整個賽事輪次結束後，是否顯示後續操作選單？"
 
-#: includes/doroto-shortcodes.php:3341
-msgid "If you wish to record payments from players, enable in"
-msgstr "如果您希望記錄選手的付款，請在以下位置啟用："
-
 #: includes/doroto-blocks.php:239 includes/doroto-shortcodes.php:2666
 msgid "This option reduces variability."
 msgstr "此選項會降低組合的多樣性。"
@@ -2804,20 +2752,11 @@ msgstr "等待所有比賽結束後再抽籤。"
 msgid "When enough players are available:"
 msgstr "有足夠選手時："
 
-#: includes/doroto-shortcodes.php:2977
-#: includes/doroto-tournament-management.php:3109
-msgid "or"
-msgstr "或"
-
 #: includes/doroto-blocks.php:189 includes/doroto-shortcodes.php:2261
 msgid ""
 "You can change the tournament type here, if the tournament hasn't started "
 "yet."
 msgstr "如果賽事尚未開始，您可以在這裡更改賽事型別。"
-
-#: includes/doroto-shortcodes.php:2164
-msgid "player starts the game by serving."
-msgstr "選手以發球開始該局。"
 
 #: includes/doroto-frontend-pages.php:134
 msgid "Payments from players"
@@ -2913,10 +2852,6 @@ msgstr "您的 WordPress 設定中禁用了「任何人都可以註冊」選項�
 msgid "A post with an example of a tournament presentation."
 msgstr "包含賽事演示示例的文章。"
 
-#: includes/doroto-admin.php:311
-msgid "Help page for"
-msgstr "幫助頁面："
-
 #: includes/doroto-admin.php:310
 msgid "The main page for the management of all tournaments."
 msgstr "管理所有賽事的主頁面。"
@@ -2959,14 +2894,6 @@ msgstr "抽籤"
 msgid "Wait"
 msgstr "等待"
 
-#: includes/doroto-tournament-management.php:893
-msgid "Rotation Tournament!"
-msgstr "輪換賽！"
-
-#: includes/doroto-shortcodes.php:3268
-msgid "for"
-msgstr "–"
-
 #: includes/doroto-shortcodes.php:3060
 msgid "Type"
 msgstr "型別"
@@ -2980,13 +2907,6 @@ msgstr "對手 R"
 #: src/blocks/tournament/render.php:469
 msgid "Opponent L"
 msgstr "對手 L"
-
-#: includes/doroto-admin.php:358
-msgid ""
-"is an alternative form of a Singles Tournament where players face each other"
-" without elimination rounds. Depending on the time options, everyone plays "
-"against everyone."
-msgstr "是單打賽事的一種替代形式，選手之間無淘汰輪次地對陣。視時間而定，每個人與所有人比賽。"
 
 #: includes/doroto-admin.php:358
 msgid "Singles Rotation Tournament (hereinafter SiRoTo)"
@@ -3127,50 +3047,9 @@ msgstr "雙打輪換賽是雙打賽事的一種替代形式，選手每場比賽
 msgid "List of available tournaments was updated."
 msgstr "可用賽事列表已更新。"
 
-#: includes/doroto-tournament-management.php:2628
-msgid "The data is being displayed for the tournament no."
-msgstr "正在顯示以下賽事的資料：賽事編號"
-
-#: includes/doroto-services.php:84
-msgid "was open for registration."
-msgstr "已開放報名。"
-
-#: includes/doroto-services.php:85
-msgid "was closed."
-msgstr "已截止。"
-
-#: includes/doroto-services.php:85
-msgid "Registration of tournament players no."
-msgstr "選手報名，賽事編號"
-
-#: includes/doroto-services.php:79
-msgid "does not have sufficient occupancy to close registration."
-msgstr "報名人數不足，無法截止報名。"
-
 #: includes/doroto-services.php:81
 msgid "A tournament cannot be closed while player registration is open."
 msgstr "選手報名開放期間無法關閉賽事。"
-
-#: includes/doroto-services.php:97
-msgid "has not been scheduled yet."
-msgstr "尚未抽籤。"
-
-#: includes/doroto-services.php:101
-msgid "was previously entered with a score"
-msgstr "此前已錄入，比分為"
-
-#: includes/doroto-services.php:106
-msgid "was skipped."
-msgstr "已跳過。"
-
-#: build/blocks/tournament/render.php:229 includes/doroto-services.php:105
-#: src/blocks/tournament/render.php:229
-msgid "Match no."
-msgstr "比賽編號"
-
-#: includes/doroto-services.php:109
-msgid "was saved with a score"
-msgstr "已儲存，比分為"
 
 #: includes/doroto-services.php:184
 msgid "The final match is over!"
@@ -3207,10 +3086,6 @@ msgstr "確認將決定冠軍隊伍的決賽組合。"
 #: includes/doroto-services.php:208
 msgid "A new tournament has just been created."
 msgstr "剛剛建立了一項新賽事。"
-
-#: includes/doroto-tournament-management.php:893
-msgid "I invite you to"
-msgstr "誠邀您參加"
 
 #: includes/doroto-tournament-management.php:367
 #: includes/doroto-tournament-management.php:559
@@ -3273,18 +3148,10 @@ msgstr "仍在進行"
 msgid "Only Open Registration"
 msgstr "僅報名中"
 
-#: includes/doroto-services.php:152
-msgid "has been removed from the list."
-msgstr "已從列表中移除。"
-
 #: build/blocks/tournament/render.php:394 includes/doroto-shortcodes.php:3505
 #: src/blocks/tournament/render.php:394
 msgid "Remove payment"
 msgstr "移除付款"
-
-#: includes/doroto-shortcodes.php:3493
-msgid "Remove the payment of the selected player in tournament no."
-msgstr "移除所選選手的付款，賽事編號"
 
 #: includes/doroto-shortcodes.php:3488 includes/doroto-shortcodes.php:3507
 msgid "None of the players have paid yet."
@@ -3298,22 +3165,10 @@ msgstr "您無權移除付款。"
 msgid "You must log in to remove a payment!"
 msgstr "您必須登入才能移除付款！"
 
-#: includes/doroto-services.php:150
-msgid "has been added to the list."
-msgstr "已新增到列表。"
-
-#: includes/doroto-services.php:150 includes/doroto-services.php:152
-msgid "The payment of the player"
-msgstr "選手的付款"
-
 #: build/blocks/tournament/render.php:393 includes/doroto-shortcodes.php:3383
 #: src/blocks/tournament/render.php:393
 msgid "Confirm payment"
 msgstr "確認付款"
-
-#: includes/doroto-shortcodes.php:3369
-msgid "Confirm the payment of the selected player in tournament no."
-msgstr "確認所選選手的付款，賽事編號"
 
 #: includes/doroto-shortcodes.php:3364 includes/doroto-shortcodes.php:3385
 msgid "All players have already paid."
@@ -3409,11 +3264,6 @@ msgstr "重新開放報名"
 msgid "close registration"
 msgstr "截止報名"
 
-#: includes/doroto-shortcodes.php:2976
-#: includes/doroto-tournament-management.php:3108
-msgid "If you wish, you can as an administrator"
-msgstr "如有需要，您可以以管理員身份"
-
 #: blocks/log-link/log-link.php:93 blocks/log-link/build/index.js:201
 #: blocks/log-link/build/index.js:180
 msgid "Log in/Log out from the tournament"
@@ -3423,19 +3273,6 @@ msgstr "報名/退出賽事"
 msgid "You can enter the tournament using this link:"
 msgstr "您可以透過此連結參加賽事："
 
-#: build/blocks/tournament/render.php:123 includes/doroto-shortcodes.php:2915
-#: src/blocks/tournament/render.php:123
-msgid "Details about tournament no."
-msgstr "賽事詳情，賽事編號"
-
-#: includes/doroto-services.php:172
-msgid "were saved."
-msgstr "已儲存。"
-
-#: includes/doroto-services.php:172
-msgid "Tournament parameters no."
-msgstr "賽事引數，賽事編號"
-
 #: includes/doroto-services.php:174
 msgid "You do not have the necessary rights to create a post."
 msgstr "您沒有建立文章所需的許可權。"
@@ -3444,10 +3281,6 @@ msgstr "您沒有建立文章所需的許可權。"
 msgid ""
 "Tournament parameters cannot be changed more than 24 hours after closing."
 msgstr "賽事關閉超過 24 小時後無法更改賽事引數。"
-
-#: includes/doroto-shortcodes.php:2814
-msgid "You are not authorized to change the parameters of tournament no."
-msgstr "您無權更改此賽事的引數，賽事編號"
 
 #: includes/doroto-shortcodes.php:2798
 msgid ""
@@ -3544,10 +3377,6 @@ msgstr "值"
 msgid "Variable"
 msgstr "變數"
 
-#: includes/doroto-shortcodes.php:2206
-msgid "Edit tournament no."
-msgstr "編輯賽事，賽事編號"
-
 #: build/blocks/tournament/render.php:245
 #: build/blocks/tournament/render.php:282
 #: build/blocks/tournament/render.php:289
@@ -3571,10 +3400,6 @@ msgstr "結果"
 msgid "Hide"
 msgstr "隱藏"
 
-#: includes/doroto-shortcodes.php:2093
-msgid "Currently, the following matches are being played in tournament no."
-msgstr "當前正在進行以下比賽，賽事編號"
-
 #: includes/doroto-shortcodes.php:2073
 msgid "Best Player Winner:"
 msgstr "最佳選手冠軍："
@@ -3596,14 +3421,6 @@ msgstr "最理想組合類別冠軍："
 #: includes/doroto-shortcodes.php:2031
 msgid "You cannot go to the finals while registration is open."
 msgstr "報名開放期間不能進入決賽。"
-
-#: includes/doroto-shortcodes.php:1995
-msgid "is closed."
-msgstr "已關閉。"
-
-#: includes/doroto-shortcodes.php:1942
-msgid "was not found."
-msgstr "未找到。"
 
 #: includes/doroto-shortcodes.php:1939
 msgid ""
@@ -3656,33 +3473,9 @@ msgstr "賽事已關閉。"
 msgid "games"
 msgstr "局"
 
-#: includes/doroto-shortcodes.php:1851
-msgid "matches and"
-msgstr "場比賽和"
-
-#: includes/doroto-shortcodes.php:1851
-msgid "were played"
-msgstr "已進行"
-
-#: includes/doroto-shortcodes.php:1851
-msgid "Meantime"
-msgstr "目前"
-
-#: includes/doroto-shortcodes.php:1850
-msgid "Match results"
-msgstr "比賽結果"
-
-#: includes/doroto-services.php:132
-msgid "was removed from the tournament."
-msgstr "已從賽事中移除。"
-
 #: includes/doroto-shortcodes.php:1716
 msgid "Remove player"
 msgstr "移除選手"
-
-#: includes/doroto-shortcodes.php:1703
-msgid "Removing a player from tournament no."
-msgstr "從賽事中移除選手，賽事編號"
 
 #: includes/doroto-shortcodes.php:1671
 msgid "The option to remove a player is closed."
@@ -3691,10 +3484,6 @@ msgstr "移除選手的功能已關閉。"
 #: includes/doroto-shortcodes.php:1664
 msgid "You do not have permission to remove a player."
 msgstr "您無權移除選手。"
-
-#: includes/doroto-services.php:140
-msgid "has renewed participation."
-msgstr "已恢復參賽。"
 
 #: includes/doroto-services.php:138
 msgid "All players have renewed participation."
@@ -3708,10 +3497,6 @@ msgstr "所有選手都在場。"
 msgid "Resume participation"
 msgstr "恢復參賽"
 
-#: includes/doroto-shortcodes.php:1560
-msgid "Resuming the game of the selected player in tournament no."
-msgstr "恢復所選選手的比賽，賽事編號"
-
 #: includes/doroto-shortcodes.php:1545
 msgid "The option to restore the player game is closed."
 msgstr "恢復選手比賽的功能已關閉。"
@@ -3719,10 +3504,6 @@ msgstr "恢復選手比賽的功能已關閉。"
 #: includes/doroto-shortcodes.php:1524
 msgid "You must log in to restore the game!"
 msgstr "您必須登入才能恢復比賽！"
-
-#: includes/doroto-services.php:136
-msgid "has temporarily suspended participation."
-msgstr "已暫時暫停參賽。"
 
 #: includes/doroto-services.php:134
 msgid "All players have temporarily suspended participation."
@@ -3738,10 +3519,6 @@ msgstr "暫停參賽"
 msgid "All players"
 msgstr "所有選手"
 
-#: includes/doroto-shortcodes.php:1441
-msgid "Suspension of the game of the selected player in tournament no."
-msgstr "暫停所選選手的比賽，賽事編號"
-
 #: includes/doroto-shortcodes.php:1426
 msgid "The option to suspend the player game is closed."
 msgstr "暫停選手比賽的功能已關閉。"
@@ -3750,17 +3527,9 @@ msgstr "暫停選手比賽的功能已關閉。"
 msgid "You must log in to temporarily suspend a player!"
 msgstr "您必須登入才能暫時暫停選手！"
 
-#: includes/doroto-services.php:162
-msgid "has been added to the admins."
-msgstr "已被新增為管理員。"
-
 #: includes/doroto-shortcodes.php:1353
 msgid "Add organizer rights"
 msgstr "新增組織者許可權"
-
-#: includes/doroto-shortcodes.php:1339
-msgid "Adding organizer rights in tournament no."
-msgstr "新增組織者許可權，賽事編號"
 
 #: includes/doroto-shortcodes.php:1334 includes/doroto-shortcodes.php:1355
 msgid ""
@@ -3776,25 +3545,9 @@ msgstr "新增組織者許可權的功能已關閉。"
 msgid "You do not have permission to add organizer rights."
 msgstr "您無權新增組織者許可權。"
 
-#: includes/doroto-shortcodes.php:1284 includes/doroto-shortcodes.php:2938
-msgid "is"
-msgstr "的組織者是"
-
-#: includes/doroto-shortcodes.php:1284 includes/doroto-shortcodes.php:2938
-msgid "The organizer of tournament no."
-msgstr "賽事編號"
-
-#: includes/doroto-services.php:142
-msgid "has been added to a special group."
-msgstr "已加入特殊組。"
-
 #: includes/doroto-shortcodes.php:1201
 msgid "Add to special group"
 msgstr "加入特殊組"
-
-#: includes/doroto-shortcodes.php:1187
-msgid "Addition to the special group of the tournament no."
-msgstr "加入特殊組，賽事編號"
 
 #: includes/doroto-shortcodes.php:1183 includes/doroto-shortcodes.php:1203
 msgid ""
@@ -3810,17 +3563,9 @@ msgstr "加入特殊組的功能已關閉。"
 msgid "You do not have permission to add to a special group."
 msgstr "您無權加入特殊組。"
 
-#: includes/doroto-services.php:144
-msgid "was taken from a special group."
-msgstr "已被移出特殊組。"
-
 #: includes/doroto-shortcodes.php:1083
 msgid "Remove from special group"
 msgstr "從特殊組中移除"
-
-#: includes/doroto-shortcodes.php:1069
-msgid "Removal from the special group of the tournament no."
-msgstr "從特殊組中移除，賽事編號"
 
 #: includes/doroto-shortcodes.php:1064 includes/doroto-shortcodes.php:1085
 msgid ""
@@ -3840,10 +3585,6 @@ msgstr "從特殊組中移除的功能已關閉。"
 msgid "You do not have permission to remove from a special group."
 msgstr "您無權從特殊組中移除。"
 
-#: includes/doroto-services.php:130
-msgid "was added to the tournament."
-msgstr "已加入賽事。"
-
 #: includes/doroto-services.php:118
 msgid "Tournament or user not found."
 msgstr "未找到賽事或使用者。"
@@ -3851,10 +3592,6 @@ msgstr "未找到賽事或使用者。"
 #: includes/doroto-shortcodes.php:969
 msgid "Add player"
 msgstr "新增選手"
-
-#: includes/doroto-shortcodes.php:952
-msgid "Add a new player to the tournament no."
-msgstr "向賽事新增新選手，賽事編號"
 
 #: includes/doroto-shortcodes.php:875
 msgid "The option to add a player is closed."
@@ -3907,34 +3644,6 @@ msgstr "狀態"
 msgid "Order"
 msgstr "名次"
 
-#: includes/doroto-shortcodes.php:553
-msgid ", but the maximum number of players has already been reached"
-msgstr "，但已達到最大選手人數"
-
-#: includes/doroto-shortcodes.php:549
-msgid "closed"
-msgstr "已截止"
-
-#: includes/doroto-shortcodes.php:547
-msgid "open"
-msgstr "開放中"
-
-#: includes/doroto-shortcodes.php:544
-msgid "to the tournament is"
-msgstr "報名"
-
-#: includes/doroto-shortcodes.php:544
-msgid "Registration"
-msgstr "賽事"
-
-#: includes/doroto-shortcodes.php:542 includes/doroto-shortcodes.php:1850
-msgid "tournament no."
-msgstr "賽事編號"
-
-#: includes/doroto-shortcodes.php:536
-msgid "total"
-msgstr "合計"
-
 #: build/blocks/invite/render.php:49
 #: build/blocks/tournament-list/render.php:72
 #: build/blocks/tournament/render.php:74
@@ -3946,19 +3655,6 @@ msgstr "合計"
 #: src/blocks/tournament/index.js:27
 msgid "Players"
 msgstr "選手"
-
-#: includes/doroto-shortcodes.php:412
-msgid "The result of the final match"
-msgstr "決賽結果"
-
-#: includes/doroto-services.php:116 includes/doroto-shortcodes.php:412
-msgid "was changed."
-msgstr "已更改。"
-
-#: includes/doroto-services.php:100 includes/doroto-services.php:108
-#: includes/doroto-services.php:116
-msgid "The result of match no."
-msgstr "比賽結果，比賽編號"
 
 #: includes/doroto-services.php:186 includes/doroto-shortcodes.php:400
 #: includes/doroto-shortcodes.php:772 includes/doroto-shortcodes.php:986
@@ -3997,10 +3693,6 @@ msgstr "ID"
 #: includes/doroto-shortcodes.php:343
 msgid "The final match"
 msgstr "決賽"
-
-#: includes/doroto-shortcodes.php:320
-msgid "Change of match result in tournament No."
-msgstr "更改比賽結果，賽事編號"
 
 #: includes/doroto-shortcodes.php:310
 msgid "The option to modify the match results is closed."
@@ -4046,16 +3738,6 @@ msgstr "搭檔 L"
 msgid "Player"
 msgstr "選手"
 
-#: includes/doroto-shortcodes.php:173
-msgid "Statistical data for"
-msgstr "統計資料："
-
-#: includes/doroto-services.php:62 includes/doroto-shortcodes.php:81
-#: includes/doroto-shortcodes.php:173 includes/doroto-shortcodes.php:1942
-#: includes/doroto-shortcodes.php:1995
-msgid "Tournament no."
-msgstr "賽事編號"
-
 #: includes/doroto-shortcodes.php:168
 msgid "Statistical data cannot be displayed without using a filter."
 msgstr "不使用篩選無法顯示統計資料。"
@@ -4095,16 +3777,6 @@ msgstr "未知選手"
 #: src/blocks/invite/render.php:55
 msgid "The registration for the tournament has already been closed."
 msgstr "此賽事的報名已截止。"
-
-#: includes/doroto-services.php:200
-msgid ""
-"We are sorry, but the maximum number of registered participants has been "
-"reached in tournament no."
-msgstr "抱歉，報名參賽人數已達上限，賽事編號"
-
-#: includes/doroto-services.php:194
-msgid "You signed up for tournament no."
-msgstr "您已報名賽事，賽事編號"
 
 #: includes/doroto-repeated-functions.php:14
 msgid ""
@@ -4267,12 +3939,6 @@ msgstr "如果多名選手得分相同，可以宣佈多名選手為賽事冠軍
 #: includes/doroto-frontend-pages.php:463
 msgid "Best Doubles Partner"
 msgstr "最佳雙打搭檔。"
-
-#: includes/doroto-frontend-pages.php:463
-msgid ""
-"The winner of the tournament is announced as the player with the highest "
-"ratio of games won to games lost. This player may be proclaimed as"
-msgstr "贏得與輸掉的局數之比最高的選手被宣佈為賽事冠軍。該選手可被評為"
 
 #: includes/doroto-frontend-pages.php:461
 msgid ""
@@ -4441,10 +4107,6 @@ msgstr "約定的結果應是確定每位選手能與不同組合打多少場比
 msgid "special group"
 msgstr "特殊組"
 
-#: includes/doroto-frontend-pages.php:428
-msgid "amount of players in"
-msgstr "中的選手人數"
-
 #: includes/doroto-frontend-pages.php:427
 msgid "number of players"
 msgstr "選手人數"
@@ -4498,16 +4160,6 @@ msgstr "賽事參與者在賽事期間多次隨機更換搭檔，並與不同組
 #: includes/doroto-frontend-pages.php:416
 msgid "Explanation of abbreviation: DoRoTo (DOuble ROtation TOurnament)"
 msgstr "縮寫說明：DoRoTo（DOuble ROtation TOurnament）= 雙打輪換賽"
-
-#: includes/doroto-frontend-pages.php:415
-msgid ""
-"fully adheres to the official tennis rules except for the exceptions "
-"described below."
-msgstr "除下文所述例外情況外，完全遵守官方網球規則。"
-
-#: includes/doroto-frontend-pages.php:415
-msgid "In DoRoTo"
-msgstr "在 DoRoTo 中"
 
 #: includes/doroto-frontend-pages.php:414
 msgid "making new friends"
@@ -4572,13 +4224,6 @@ msgid ""
 "adapt to new circumstances and thus becomes an ideal teammate for doubles."
 msgstr ""
 "這種賽事形式以其活力和社交性著稱，因此適合所有讓不同選手群體在場上相遇的雙打賽事。為每位參與者計算贏得與輸掉的局數之比。賽事冠軍是該比率最高的選手。這樣的選手最能適應新情況，因此成為理想的雙打搭檔。"
-
-#: includes/doroto-admin.php:359
-msgid ""
-"is an alternative form of a Doubles Tournament, where players play each "
-"match with a different partner and in different positions (alternating left "
-"and right sides)."
-msgstr "是雙打賽事的一種替代形式，選手每場比賽都與不同的搭檔在不同位置比賽（左右兩側交替）。"
 
 #: includes/doroto-admin.php:359
 msgid "Doubles Rotation Tournament (hereinafter DoRoTo)"
@@ -5105,3 +4750,389 @@ msgstr "https://doroto.ltcchrast.cz/"
 #: includes/doroto-admin.php:311
 msgid "Doubles Rotation Tournament"
 msgstr "雙打輪換賽"
+
+#. translators: estimated time to the end of the tournament; 1: hours, 2:
+#. minutes
+#: includes/doroto-shortcodes.php:89
+msgid "%1$d h %2$d min"
+msgstr "%1$d 小時 %2$d 分鐘"
+
+#. translators: 1: number of players (e.g. "12" or "10 + 2 = 12" with the
+#. special group), 2: maximum number of players
+#: includes/doroto-shortcodes.php:536
+msgid "%1$s out of a maximum of %2$d"
+msgstr "%1$s(上限 %2$d)"
+
+#. translators: estimated time to the end of the tournament; %d: hours
+#: includes/doroto-shortcodes.php:92
+msgid "%d h"
+msgstr "%d 小時"
+
+#. translators: estimated time to the end of the tournament; %d: minutes
+#: includes/doroto-shortcodes.php:95
+msgid "%d min"
+msgstr "%d 分鐘"
+
+#. translators: %s: abbreviation of the tournament format (DoRoTo)
+#: includes/doroto-frontend-pages.php:416
+msgid ""
+"%s fully follows the official tennis rules, except for the exceptions "
+"described below."
+msgstr "%s 完全遵循官方網球規則，下文所述的例外情況除外。"
+
+#. translators: %d: tournament number
+#: includes/doroto-shortcodes.php:948
+msgid "Add a new player to tournament no. %d"
+msgstr "向賽事編號 %d 新增新選手"
+
+#. translators: %d: tournament number
+#: includes/doroto-shortcodes.php:1333
+msgid "Adding organizer rights in tournament no. %d"
+msgstr "在賽事編號 %d 中新增組織者許可權"
+
+#. translators: %d: tournament number
+#: includes/doroto-shortcodes.php:1183
+msgid "Addition to the special group of tournament no. %d"
+msgstr "加入賽事編號 %d 的特殊組"
+
+#: includes/doroto-admin.php:361
+msgid ""
+"An alternative form of a doubles tournament where players play each match "
+"with a different partner and in different positions (alternating left and "
+"right sides)."
+msgstr "雙打賽事的一種替代形式：選手每場比賽都與不同的搭檔、在不同的位置（左右兩側交替）進行比賽。"
+
+#: includes/doroto-admin.php:360
+msgid ""
+"An alternative form of a singles tournament where players face each other "
+"without elimination rounds. Depending on the time available, everyone plays "
+"against everyone."
+msgstr "單打賽事的一種替代形式：選手之間不設淘汰輪次。視可用時間而定，每個人都與其他所有人比賽。"
+
+#: includes/doroto-shortcodes.php:2978
+#: includes/doroto-tournament-management.php:3111
+msgid "As an administrator, you can:"
+msgstr "作為管理員，您可以："
+
+#. translators: %s: tournament number
+#: doubles-rotation-tournament.php:335
+msgid "Can I redirect you to tournament no. %s?"
+msgstr "是否將您轉到賽事編號 %s？"
+
+#. translators: %d: tournament number
+#: includes/doroto-shortcodes.php:320
+msgid "Change of a match result in tournament no. %d"
+msgstr "更改賽事編號 %d 中的比賽結果"
+
+#. translators: %d: tournament number
+#: includes/doroto-shortcodes.php:3372
+msgid "Confirm the payment of the selected player in tournament no. %d"
+msgstr "確認賽事編號 %d 中所選選手的付款"
+
+#. translators: 1: tournament number, 2: tournament name
+#: includes/doroto-shortcodes.php:2097
+msgid ""
+"Currently, the following matches are being played in tournament no. %1$d "
+"(%2$s):"
+msgstr "賽事編號 %1$d（%2$s）當前正在進行以下比賽："
+
+#. translators: %d: tournament number
+#: includes/doroto-shortcodes.php:2919 includes/doroto-view-model.php:381
+msgid "Details about tournament no. %d"
+msgstr "賽事編號 %d 的詳情"
+
+#. translators: %d: tournament number
+#: includes/doroto-shortcodes.php:2210
+msgid "Edit tournament no. %d"
+msgstr "編輯賽事編號 %d"
+
+#. translators: %s: name of the tournament format (Doubles Rotation
+#. Tournament)
+#: includes/doroto-admin.php:312
+msgid "Help page for %s"
+msgstr "幫助頁面：%s"
+
+#. translators: %s: tournament type, e.g. "Doubles Tennis"
+#: includes/doroto-tournament-management.php:894
+msgid "I invite you to the %s Rotation Tournament!"
+msgstr "誠邀您參加 %s 輪換賽！"
+
+#: includes/doroto-shortcodes.php:560
+msgid "Lost games"
+msgstr "負局"
+
+#: includes/doroto-shortcodes.php:560
+msgid "Lost points"
+msgstr "失分"
+
+#. translators: %d: match number
+#: includes/doroto-view-model.php:305
+msgid "Match no. %d"
+msgstr "比賽編號 %d"
+
+#. translators: %d: match number
+#: includes/doroto-services.php:108
+msgid "Match no. %d was skipped."
+msgstr "比賽編號 %d 已跳過。"
+
+#. translators: 1: tournament number, 2: tournament name
+#: includes/doroto-shortcodes.php:1845
+msgid "Match results of tournament no. %1$d (%2$s)."
+msgstr "賽事編號 %1$d（%2$s）的比賽結果。"
+
+#. translators: 1: tournament number, 2: tournament name, 3: names of the
+#. organizers
+#: includes/doroto-repeated-functions.php:710
+msgid "Organizers of tournament no. %1$d (%2$s): %3$s"
+msgstr "賽事編號 %1$d（%2$s）的組織者：%3$s"
+
+#. translators: 1: number of matches played, 2: number of games played
+#: includes/doroto-shortcodes.php:1848
+msgid "Played so far: matches %1$s, games %2$s."
+msgstr "目前已進行：比賽 %1$s，局數 %2$s。"
+
+#. translators: 1: number of matches played, 2: number of points played
+#: includes/doroto-shortcodes.php:1850
+msgid "Played so far: matches %1$s, points %2$s."
+msgstr "目前已進行：比賽 %1$s，分數 %2$s。"
+
+#. translators: %s: player name
+#: includes/doroto-services.php:174
+msgid "Player %s has been added to the organizers."
+msgstr "選手 %s 已被新增為組織者。"
+
+#. translators: %s: player name
+#: includes/doroto-services.php:150
+msgid "Player %s has been added to the special group."
+msgstr "選手 %s 已加入特殊組。"
+
+#. translators: %s: player name
+#: includes/doroto-tournament-management.php:3094
+msgid "Player %s has played the same number of matches with everyone."
+msgstr "選手 %s 與每個人的比賽場數相同。"
+
+#. translators: %s: player name
+#: includes/doroto-services.php:147
+msgid "Player %s has renewed participation."
+msgstr "選手 %s 已恢復參賽。"
+
+#. translators: %s: player name
+#: includes/doroto-services.php:142
+msgid "Player %s has temporarily suspended participation."
+msgstr "選手 %s 已暫時暫停參賽。"
+
+#. translators: %s: player name
+#: includes/doroto-services.php:177
+msgid "Player %s is no longer an organizer."
+msgstr "選手 %s 不再是組織者。"
+
+#. translators: %s: position label of the player (R1)
+#: includes/doroto-shortcodes.php:2168
+msgid "Player %s starts the game by serving."
+msgstr "由選手 %s 發球開始本局。"
+
+#. translators: %s: player name
+#: includes/doroto-services.php:134
+msgid "Player %s was added to the tournament."
+msgstr "選手 %s 已加入賽事。"
+
+#. translators: %s: player name
+#: includes/doroto-services.php:153
+msgid "Player %s was removed from the special group."
+msgstr "選手 %s 已移出特殊組。"
+
+#. translators: %s: player name
+#: includes/doroto-services.php:137
+msgid "Player %s was removed from the tournament."
+msgstr "選手 %s 已移出賽事。"
+
+#. translators: 1: tournament number, 2: tournament name, 3: number of players
+#: includes/doroto-shortcodes.php:540
+msgid "Players of tournament no. %1$d (%2$s): %3$s"
+msgstr "賽事編號 %1$d（%2$s）的選手：%3$s"
+
+#. translators: 1: name of this plugin (Rotation Tournaments), 2: slug of the
+#. other plugin
+#: includes/doroto-admin.php:338
+msgid ""
+"Plugins restricting user roles may limit the functionality of %1$s. Pay "
+"attention to the settings of %2$s."
+msgstr "限制使用者角色的外掛可能會限制 %1$s 的功能。請注意 %2$s 的設定。"
+
+#. translators: %d: tournament number
+#: includes/doroto-shortcodes.php:3931
+msgid "Register and add a new player to tournament no. %d"
+msgstr "註冊新選手並新增到賽事編號 %d"
+
+#: includes/doroto-shortcodes.php:547
+msgid "Registration to the tournament is closed."
+msgstr "賽事報名已關閉。"
+
+#: includes/doroto-shortcodes.php:543
+msgid ""
+"Registration to the tournament is open, but the maximum number of players "
+"has already been reached."
+msgstr "賽事報名已開放，但選手人數已達上限。"
+
+#: includes/doroto-shortcodes.php:545
+msgid "Registration to the tournament is open."
+msgstr "賽事報名已開放。"
+
+#. translators: %d: tournament number
+#: includes/doroto-shortcodes.php:1065
+msgid "Removal from the special group of tournament no. %d"
+msgstr "從賽事編號 %d 的特殊組中移出"
+
+#. translators: %d: tournament number
+#: includes/doroto-shortcodes.php:3496
+msgid "Remove the payment of the selected player in tournament no. %d"
+msgstr "刪除賽事編號 %d 中所選選手的付款"
+
+#. translators: %d: tournament number
+#: includes/doroto-shortcodes.php:1697
+msgid "Removing a player from tournament no. %d"
+msgstr "從賽事編號 %d 中移除選手"
+
+#. translators: %d: tournament number
+#: includes/doroto-shortcodes.php:1554
+msgid "Resuming the game of the selected player in tournament no. %d"
+msgstr "恢復賽事編號 %d 中所選選手的比賽"
+
+#. translators: %d: tournament number
+#: includes/doroto-shortcodes.php:1435
+msgid "Suspension of the game of the selected player in tournament no. %d"
+msgstr "暫停賽事編號 %d 中所選選手的比賽"
+
+#. translators: %d: tournament number
+#: includes/doroto-tournament-management.php:2630
+msgid "The data of tournament no. %d is displayed."
+msgstr "正在顯示賽事編號 %d 的資料。"
+
+#. translators: %d: tournament number
+#: includes/doroto-services.php:186
+msgid "The parameters of tournament no. %d were saved."
+msgstr "賽事編號 %d 的引數已儲存。"
+
+#. translators: %s: player name
+#: includes/doroto-services.php:160
+msgid "The payment of player %s has been recorded."
+msgstr "選手 %s 的付款已記錄。"
+
+#. translators: %s: player name
+#: includes/doroto-services.php:163
+msgid "The payment of player %s has been removed."
+msgstr "選手 %s 的付款已刪除。"
+
+#. translators: %d: tournament number
+#: includes/doroto-services.php:86
+msgid "The registration of players for tournament no. %d was closed."
+msgstr "賽事編號 %d 的選手報名已關閉。"
+
+#. translators: %d: tournament number
+#: includes/doroto-services.php:84
+msgid "The registration of players for tournament no. %d was opened."
+msgstr "賽事編號 %d 的選手報名已開放。"
+
+#. translators: 1: match number, 2: score of team 1, 3: score of team 2
+#: includes/doroto-services.php:103
+msgid ""
+"The result of match no. %1$d was already entered with the score %2$d:%3$d."
+msgstr "比賽編號 %1$d 的結果之前已錄入，比分為 %2$d:%3$d。"
+
+#. translators: 1: match number, 2: score of team 1, 3: score of team 2
+#: includes/doroto-services.php:111
+msgid "The result of match no. %1$d was saved with the score %2$d:%3$d."
+msgstr "比賽編號 %1$d 的結果已儲存，比分為 %2$d:%3$d。"
+
+#. translators: %d: match number
+#: includes/doroto-services.php:119
+msgid "The result of match no. %d was changed."
+msgstr "比賽編號 %d 的結果已更改。"
+
+#: includes/doroto-shortcodes.php:412
+msgid "The result of the final match was changed."
+msgstr "決賽的結果已更改。"
+
+#. translators: %s: title of the winner (Best Doubles Partner)
+#: includes/doroto-frontend-pages.php:466
+msgid ""
+"The winner of the tournament is the player with the highest ratio of games "
+"won to games lost. This player may be proclaimed the %s."
+msgstr "賽事的冠軍是勝局與負局之比最高的選手。該選手可被授予 %s 稱號。"
+
+#. translators: 1: tournament number, 2: tournament name
+#: includes/doroto-shortcodes.php:1997
+msgid "Tournament no. %1$d (%2$s) is closed."
+msgstr "賽事編號 %1$d（%2$s）已結束。"
+
+#. translators: 1: tournament number, 2: percentage of the tournament played
+#. (e.g. "40 %")
+#: includes/doroto-shortcodes.php:82
+msgid "Tournament no. %1$d: %2$s completed."
+msgstr "賽事編號 %1$d：已完成 %2$s。"
+
+#. translators: 1: tournament number, 2: player name
+#: includes/doroto-shortcodes.php:180
+msgid "Tournament no. %1$d: statistical data for %2$s."
+msgstr "賽事編號 %1$d：%2$s 的統計資料。"
+
+#. translators: %d: tournament number
+#: includes/doroto-services.php:78
+msgid ""
+"Tournament no. %d does not have enough players to close the registration."
+msgstr "賽事編號 %d 的選手不足，無法關閉報名。"
+
+#. translators: %d: tournament number
+#: includes/doroto-services.php:99
+msgid "Tournament no. %d has not been scheduled yet."
+msgstr "賽事編號 %d 尚未抽籤。"
+
+#. translators: %d: tournament number
+#: includes/doroto-services.php:193
+msgid "Tournament no. %d was deleted."
+msgstr "賽事編號 %d 已刪除。"
+
+#. translators: %d: tournament number
+#: includes/doroto-shortcodes.php:1943
+msgid "Tournament no. %d was not found."
+msgstr "未找到賽事編號 %d。"
+
+#. translators: %d: tournament number
+#: includes/doroto-services.php:218
+msgid ""
+"We are sorry, but tournament no. %d has already reached the maximum number "
+"of registered participants."
+msgstr "抱歉，賽事編號 %d 的報名人數已達上限。"
+
+#: includes/doroto-shortcodes.php:559
+msgid "Won games"
+msgstr "勝局"
+
+#: includes/doroto-shortcodes.php:559
+msgid "Won points"
+msgstr "得分"
+
+#. translators: %d: tournament number
+#: includes/doroto-services.php:213
+msgid "You are already registered in tournament no. %d."
+msgstr "您已報名賽事編號 %d。"
+
+#. translators: %d: tournament number
+#: includes/doroto-shortcodes.php:2818
+msgid "You are not authorized to change the parameters of tournament no. %d."
+msgstr "您無權更改賽事編號 %d 的引數。"
+
+#. translators: %d: tournament number
+#: includes/doroto-services.php:210
+msgid "You signed up for tournament no. %d."
+msgstr "您已報名參加賽事編號 %d。"
+
+#. translators: %s: link "special group"
+#: includes/doroto-frontend-pages.php:430
+msgid "number of players in the %s"
+msgstr "「%s」中的選手人數"
+
+#. translators: 1: name of the settings section, 2: name of the setting
+#: includes/doroto-shortcodes.php:3344
+msgid "To record payments from players, turn on this option in %1$s: %2$s"
+msgstr "如需記錄選手的付款，請在 %1$s 中開啟此選項：%2$s"

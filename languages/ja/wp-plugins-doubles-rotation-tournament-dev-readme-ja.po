@@ -354,7 +354,7 @@ msgstr "追加 – サーブする選手が試合カードに表示されます�
 
 #. Found in changelog list item.
 #, gp-priority: low
-msgid "Add - the tournament block takes its colours from the theme (button and palette colours); the block's Styles panel can change the accent, the tab bar and table headers, their text and the colour of the special group"
+msgid "Add - the tournament block takes its colors from the theme (button and palette colors); the block's Styles panel can change the accent, the tab bar and table headers, their text and the color of the special group"
 msgstr "追加 – 大会ブロックはテーマから色 (ボタンとパレットの色) を取得します。ブロックのスタイルパネルで、アクセント、タブバーと表見出し、その文字、特別グループの色を変更できます"
 
 #. Found in changelog list item.
@@ -1286,4 +1286,3 @@ msgstr "管理画面の小さな変更。"
 #, gp-priority: low
 msgid "First release to public."
 msgstr "最初の一般公開版。"
-

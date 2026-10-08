@@ -301,7 +301,8 @@ function doroto_view_model(int $tournament_id): ?array
 		$r1 = intval($match['result_1']);
 		$r2 = intval($match['result_2']);
 		$teams = doroto_view_match_teams($match, $doubles, $whole_names, $special, $user_id);
-		$row = ['number' => $number, 'teams' => $teams, 'sides' => doroto_view_sides($teams)];
+		/* translators: %d: match number */
+		$row = ['number' => $number, 'label' => sprintf(__('Match no. %d', 'doubles-rotation-tournament'), $number), 'teams' => $teams, 'sides' => doroto_view_sides($teams)];
 		if (!$skipped && $r1 === 0 && $r2 === 0) {
 			if ($closed) {
 				continue; // a match drawn before closing is not played any more (as in [doroto_games_to_play])
@@ -368,12 +369,16 @@ function doroto_view_model(int $tournament_id): ?array
 		return $row['winner'] !== null;
 	}));
 	$courts_note = doroto_view_courts_note($tournament, count($ongoing), $open || $closed);
+	// The block shows its own buttons instead of the links of the round-end notice.
+	$draw_notice = preg_replace('#<p class="doroto-round-end-options">.*?</p>#s', '', (string) $draw_notice);
 	$notice = trim(preg_replace('/\s+/', ' ', wp_strip_all_tags(str_replace(['<br>', '</div>', '</p>', '</li>'], ' ', $draw_notice))));
 
 	return [
 		'id' => $tournament_id,
 		'name' => (string) $tournament->name,
 		'invitation' => wp_kses((string) $tournament->invitation, doroto_allowed_html()),
+		/* translators: %d: tournament number */
+		'details_title' => sprintf(__('Details about tournament no. %d', 'doubles-rotation-tournament'), $tournament_id),
 		'type' => intval($tournament->tournament_type),
 		'type_name' => $types[intval($tournament->tournament_type)] ?? '',
 		'types' => doroto_visible_tournament_types(intval($tournament->tournament_type)),

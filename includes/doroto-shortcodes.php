@@ -78,22 +78,23 @@ function doroto_display_tournament_progress()
 		$hours_to_end = 0;
 	}
 
-	$output = '<div>' . esc_html__('Tournament no.', 'doubles-rotation-tournament') . ' ' . esc_html($tournament_id) . ': ';
-	$output .= esc_html__('completed', 'doubles-rotation-tournament') . ' ' . esc_html($finished_progress) . ' %.</div>';
+	/* translators: 1: tournament number, 2: percentage of the tournament played (e.g. "40 %") */
+	$output = '<div>' . esc_html(sprintf(__('Tournament no. %1$d: %2$s completed.', 'doubles-rotation-tournament'), $tournament_id, $finished_progress . ' %')) . '</div>';
 
 	if ($hours_to_end > 0) {
-		$output .= '<div id="doroto-tournament-progress">' . esc_html__('Estimated time to finish:', 'doubles-rotation-tournament') . ' ';
-		if ($hours_to_end >= 1) {
-			$output .= esc_html(floor($hours_to_end)) . ' ' . esc_html__('hours', 'doubles-rotation-tournament') . ' ';
-			if (floor($hours_to_end) != $hours_to_end) {
-				$output .= ' ' . esc_html__('&', 'doubles-rotation-tournament') . ' ';
-			}
-		}
-		if (floor($hours_to_end) != $hours_to_end) {
-			$output .= esc_html(floor(60 * ($hours_to_end - floor($hours_to_end)))) . ' ' . esc_html__('minutes', 'doubles-rotation-tournament') . '.</div>';
+		$hours = intval(floor($hours_to_end));
+		$minutes = intval(floor(60 * ($hours_to_end - $hours)));
+		if ($hours > 0 && $minutes > 0) {
+			/* translators: estimated time to the end of the tournament; 1: hours, 2: minutes */
+			$time = sprintf(__('%1$d h %2$d min', 'doubles-rotation-tournament'), $hours, $minutes);
+		} elseif ($hours > 0) {
+			/* translators: estimated time to the end of the tournament; %d: hours */
+			$time = sprintf(__('%d h', 'doubles-rotation-tournament'), $hours);
 		} else {
-			$output .= '.</div>';
+			/* translators: estimated time to the end of the tournament; %d: minutes */
+			$time = sprintf(__('%d min', 'doubles-rotation-tournament'), $minutes);
 		}
+		$output .= '<div id="doroto-tournament-progress">' . esc_html__('Estimated time to finish:', 'doubles-rotation-tournament') . ' ' . esc_html($time) . '</div>';
 	}
 
 
@@ -170,14 +171,13 @@ function doroto_display_player_statistics()
 	}
 
 	$user = get_userdata($selected_player_id);
-	$output = '<p>' . esc_html__('Tournament no.', 'doubles-rotation-tournament') . ' ' . esc_html($tournament_id) . ': ' . esc_html__('Statistical data for', 'doubles-rotation-tournament') . ' <b>';
 	if ($whole_names == 0) {
 		$player_name = doroto_display_short_name($user->display_name);
 	} else {
 		$player_name = $user->display_name;
 	}
-	$output .= esc_html($player_name);
-	$output .= '</b>.</p>';
+	/* translators: 1: tournament number, 2: player name */
+	$output = '<p>' . sprintf(esc_html__('Tournament no. %1$d: statistical data for %2$s.', 'doubles-rotation-tournament'), intval($tournament_id), '<b>' . esc_html($player_name) . '</b>') . '</p>';
 
 	$selectedPlayerData = null;
 	foreach ($statistics as $playerData) {
@@ -317,7 +317,7 @@ function doroto_change_game_shortcode()
 		$matches_list = maybe_unserialize($tournament->matches_list);
 	}
 
-	$output = "<div><b>" . esc_html__("Change of match result in tournament No.", "doubles-rotation-tournament") . " " . esc_html($tournament_id) . "</b>:</div>";
+	$output = "<div><b>" . /* translators: %d: tournament number */ esc_html(sprintf(__('Change of a match result in tournament no. %d', 'doubles-rotation-tournament'), $tournament_id)) . "</b>:</div>";
 	$output .= "<div class='doroto-table-responsive' id='doroto-change-match-result'><table class='doroto-table'>";
 	$output .= '<form id="doroto_change_game_result_form" method="post" action="' . esc_url(admin_url('admin-post.php')) . '">';
 
@@ -409,7 +409,7 @@ function doroto_change_game_form_submit()
 		$result = doroto_service_set_final_result($tournament_id, $result_1, $result_2);
 		$output = is_wp_error($result)
 			? doroto_service_message($result, $tournament_id)
-			: __('The result of the final match', 'doubles-rotation-tournament') . ' ' . __('was changed.', 'doubles-rotation-tournament');
+			: __('The result of the final match was changed.', 'doubles-rotation-tournament');
 	} else {
 		$output = doroto_service_message(doroto_service_change_result($tournament_id, $match_number, $result_1, $result_2), $tournament_id);
 	}
@@ -527,32 +527,26 @@ function doroto_display_players_shortcode($atts = [])
 
 	$payment_display = intval($tournament->payment_display);
 
-	$output = '<p><b>' . esc_html__("Players", "doubles-rotation-tournament") . '</b> (';
-
+	$players_count = count($players);
 	if (!empty($special_group)) {
-		$output .= esc_html(count($players) - count($special_group)) . ' + ' . esc_html(count($special_group)) . ' = ';
+		$players_count = (count($players) - count($special_group)) . ' + ' . count($special_group) . ' = ' . count($players);
 	}
-
-	$output .= esc_html__("total", "doubles-rotation-tournament") . ' ' . esc_html(count($players));
-
 	if ($max_players > 0 && $open_registration) {
-		$output .= ' ' . esc_html__("out of maximum", "doubles-rotation-tournament") . ' ' . esc_html($max_players);
+		/* translators: 1: number of players (e.g. "12" or "10 + 2 = 12" with the special group), 2: maximum number of players */
+		$players_count = sprintf(__('%1$s out of a maximum of %2$d', 'doubles-rotation-tournament'), $players_count, $max_players);
 	}
-
-	$output .= ') ' . esc_html__("tournament no.", "doubles-rotation-tournament") . ' ' . esc_html($tournament_id) . ' (<b><a href="#doroto-display-players" data-type="internal" data-id="#doroto-display-players">' . esc_html($tournament_name) . '</a></b>):';
-
-	$output .= '</br><b>' . esc_html__("Registration", "doubles-rotation-tournament") . '</b> ' . esc_html__("to the tournament is", "doubles-rotation-tournament") . ' <b>';
-
-	if ($open_registration) {
-		$output .= esc_html__("open", "doubles-rotation-tournament");
-	} else {
-		$output .= esc_html__("closed", "doubles-rotation-tournament");
-	}
+	$tournament_link = '<b><a href="#doroto-display-players" data-type="internal" data-id="#doroto-display-players">' . esc_html($tournament_name) . '</a></b>';
+	/* translators: 1: tournament number, 2: tournament name, 3: number of players */
+	$output = '<p>' . sprintf(esc_html__('Players of tournament no. %1$d (%2$s): %3$s', 'doubles-rotation-tournament'), intval($tournament_id), $tournament_link, '<b>' . esc_html($players_count) . '</b>');
 
 	if (count($players) >= $max_players && $max_players > 0 && $open_registration) {
-		$output .= esc_html__(", but the maximum number of players has already been reached", "doubles-rotation-tournament");
+		$registration_text = __('Registration to the tournament is open, but the maximum number of players has already been reached.', 'doubles-rotation-tournament');
+	} elseif ($open_registration) {
+		$registration_text = __('Registration to the tournament is open.', 'doubles-rotation-tournament');
+	} else {
+		$registration_text = __('Registration to the tournament is closed.', 'doubles-rotation-tournament');
 	}
-	$output .= ".</b></p><div class='doroto-table-responsive'>";
+	$output .= '</br><b>' . esc_html($registration_text) . "</b></p><div class='doroto-table-responsive'>";
 	$output .= '<table class="doroto-table" id="doroto-table-player">';
 	$output .= '<tr class="doroto-left-aligned">';
 
@@ -561,8 +555,10 @@ function doroto_display_players_shortcode($atts = [])
 	$output .= '<th id="doroto-table-player-name">' . esc_html__("Name", "doubles-rotation-tournament") . '</th>';
 
 	if (!$open_registration) {
-		$games_points = doroto_games_points($tournament);
-		$output .= '<th id="doroto-table-player-match-count">' . esc_html__("Match count", "doubles-rotation-tournament") . '</th><th id="doroto-table-player-won">' . esc_html__("Won", "doubles-rotation-tournament") . ' ' . esc_html($games_points) . '</th><th id="doroto-table-player-lost">' . esc_html__("Lost", "doubles-rotation-tournament") . ' ' . esc_html($games_points) . '</th><th id="doroto-table-player-ratio">' . esc_html__("Ratio", "doubles-rotation-tournament") . '</th><th id="doroto-table-player-trend">' . esc_html__("Trend", "doubles-rotation-tournament") . '</th>';
+		$counts_games = doroto_counts_games($tournament);
+		$won_text = $counts_games ? __('Won games', 'doubles-rotation-tournament') : __('Won points', 'doubles-rotation-tournament');
+		$lost_text = $counts_games ? __('Lost games', 'doubles-rotation-tournament') : __('Lost points', 'doubles-rotation-tournament');
+		$output .= '<th id="doroto-table-player-match-count">' . esc_html__("Match count", "doubles-rotation-tournament") . '</th><th id="doroto-table-player-won">' . esc_html($won_text) . '</th><th id="doroto-table-player-lost">' . esc_html($lost_text) . '</th><th id="doroto-table-player-ratio">' . esc_html__("Ratio", "doubles-rotation-tournament") . '</th><th id="doroto-table-player-trend">' . esc_html__("Trend", "doubles-rotation-tournament") . '</th>';
 	}
 
 	if ($payment_display) {
@@ -949,7 +945,7 @@ function doroto_add_player_shortcode($atts = [], $content = null, $tag = '')
 	$doroto_settings = get_option('doroto_settings');
 	$player_name_length = intval($doroto_settings['player_name_length']);
 
-	$output = "<div><b>" . esc_html__('Add a new player to the tournament no.', 'doubles-rotation-tournament') . ' ' . esc_html($tournament_id) . "</b>:";
+	$output = "<div><b>" . /* translators: %d: tournament number */ esc_html(sprintf(__('Add a new player to tournament no. %d', 'doubles-rotation-tournament'), $tournament_id)) . "</b>:";
 	$output .= '<form id="add_player_form" method="post" action="' . esc_url(admin_url('admin-post.php')) . '">';
 	$output .= '<input type="hidden" name="action" value="doroto_add_player_to_tournament">';
 	$output .= '<input type="hidden" name="tournament_id" value="' . esc_attr($tournament_id) . '">';
@@ -1066,7 +1062,7 @@ function doroto_remove_special_group_shortcode($atts = [], $content = null, $tag
 	}
 	$users = $wpdb->get_results("SELECT * FROM {$wpdb->users}");
 
-	$output = "<div><b>" . esc_html__('Removal from the special group of the tournament no.', 'doubles-rotation-tournament') . ' ' . esc_html($tournament_id) . "</b>:";
+	$output = "<div><b>" . /* translators: %d: tournament number */ esc_html(sprintf(__('Removal from the special group of tournament no. %d', 'doubles-rotation-tournament'), $tournament_id)) . "</b>:";
 	$output .= '<form id="remove_special_group_form" method="post" action="' . esc_url(admin_url('admin-post.php')) . '">';
 	$output .= '<input type="hidden" name="action" value="doroto_remove_special_group_to_tournament">';
 	$output .= '<input type="hidden" name="tournament_id" value="' . esc_attr($tournament_id) . '">';
@@ -1184,7 +1180,7 @@ function doroto_add_special_group_shortcode($atts = [], $content = null, $tag = 
 		return $output;
 	}
 
-	$output = "<div><b>" . esc_html__('Addition to the special group of the tournament no.', 'doubles-rotation-tournament') . ' ' . esc_html($tournament_id) . "</b>:";
+	$output = "<div><b>" . /* translators: %d: tournament number */ esc_html(sprintf(__('Addition to the special group of tournament no. %d', 'doubles-rotation-tournament'), $tournament_id)) . "</b>:";
 	$output .= '<form id="add_special_group_form" method="post" action="' . esc_url(admin_url('admin-post.php')) . '">';
 	$output .= '<input type="hidden" name="action" value="doroto_add_special_group_to_tournament">';
 	$output .= '<input type="hidden" name="tournament_id" value="' . esc_attr($tournament_id) . '">';
@@ -1281,13 +1277,11 @@ function doroto_add_admin_shortcode($atts = [], $content = null, $tag = '')
 	}
 
 	$whole_names = intval($tournament->whole_names);
-	$output = '<p>' . esc_html__('The organizer of tournament no.', 'doubles-rotation-tournament') . " " . esc_html($tournament_id) . " (<b>" . esc_html($tournament_name) . "</b>) " . esc_html__('is', 'doubles-rotation-tournament') . " <span class='doroto-info-text'>";
 	$admin_names = [];
 	foreach ($admin_users as $admin_id) {
 		$admin_names[] = doroto_find_player_name($admin_id, $whole_names);
 	}
-	$output .= esc_html(implode(' ' . __("&", "doubles-rotation-tournament") . ' ', $admin_names));
-	$output .= "</span>.</p>";
+	$output = '<p>' . doroto_organizers_sentence(intval($tournament_id), (string) $tournament_name, $admin_names, "<span class='doroto-info-text'>") . '</p>';
 
 	if (!(doroto_is_admin($tournament_id) > 0)) {
 		$output = "<div id='doroto-settings-organizer-rights'>" . esc_html__('You do not have permission to add organizer rights.', 'doubles-rotation-tournament') . "</div>";
@@ -1336,7 +1330,7 @@ function doroto_add_admin_shortcode($atts = [], $content = null, $tag = '')
 	}
 	$users = $wpdb->get_results("SELECT * FROM {$wpdb->users}");
 
-	$output .= "<div id='doroto-settings-organizer-rights'><b>" . esc_html__('Adding organizer rights in tournament no.', 'doubles-rotation-tournament') . ' ' . esc_html($tournament_id) . "</b>:</div>";
+	$output .= "<div id='doroto-settings-organizer-rights'><b>" . /* translators: %d: tournament number */ esc_html(sprintf(__('Adding organizer rights in tournament no. %d', 'doubles-rotation-tournament'), $tournament_id)) . "</b>:</div>";
 	$output .= '<form id="add_admin_form" method="post" action="' . esc_url(admin_url('admin-post.php')) . '">';
 	$output .= '<input type="hidden" name="action" value="doroto_add_admin_to_tournament">';
 	$output .= '<input type="hidden" name="tournament_id" value="' . esc_attr($tournament_id) . '">';
@@ -1438,7 +1432,7 @@ function doroto_temporary_disable_player_shortcode($atts = [], $content = null, 
 		return null;
 	}
 
-	$output = "<div><b>" . esc_html__('Suspension of the game of the selected player in tournament no.', 'doubles-rotation-tournament') . ' ' . esc_html($tournament_id) . "</b>:";
+	$output = "<div><b>" . /* translators: %d: tournament number */ esc_html(sprintf(__('Suspension of the game of the selected player in tournament no. %d', 'doubles-rotation-tournament'), $tournament_id)) . "</b>:";
 	$output .= '<form id="doroto_temporary_disable_player" method="post" action="' . esc_url(admin_url('admin-post.php')) . '">';
 	$output .= '<input type="hidden" name="action" value="doroto_disable_player_in_tournament">';
 	$output .= '<input type="hidden" name="tournament_id" value="' . esc_attr($tournament_id) . '">';
@@ -1557,7 +1551,7 @@ function doroto_temporary_enable_player_shortcode($atts = [], $content = null, $
 		return null;
 	}
 
-	$output = "<div><b>" . esc_html__('Resuming the game of the selected player in tournament no.', 'doubles-rotation-tournament') . ' ' . esc_html($tournament_id) . "</b>:";
+	$output = "<div><b>" . /* translators: %d: tournament number */ esc_html(sprintf(__('Resuming the game of the selected player in tournament no. %d', 'doubles-rotation-tournament'), $tournament_id)) . "</b>:";
 	$output .= '<form id="doroto_temporary_enable_player" method="post" action="' . esc_url(admin_url('admin-post.php')) . '">';
 	$output .= '<input type="hidden" name="action" value="doroto_enable_player_in_tournament">';
 	$output .= '<input type="hidden" name="tournament_id" value="' . esc_attr($tournament_id) . '">';
@@ -1700,7 +1694,7 @@ function doroto_remove_player_shortcode($atts = [], $content = null, $tag = '')
 			});
 		}
 
-		$output = "<div><b>" . esc_html__("Removing a player from tournament no.", "doubles-rotation-tournament") . ' ' . esc_html($tournament_id) . "</b>:";
+		$output = "<div><b>" . /* translators: %d: tournament number */ esc_html(sprintf(__('Removing a player from tournament no. %d', 'doubles-rotation-tournament'), $tournament_id)) . "</b>:";
 		$output .= '<form id="remove_player_form" method="post" action="' . esc_url(admin_url('admin-post.php')) . '">';
 		$output .= '<input type="hidden" name="action" value="doroto_remove_player_from_tournament">';
 		$output .= '<input type="hidden" name="tournament_id" value="' . esc_attr($tournament_id) . '">';
@@ -1846,9 +1840,15 @@ function doroto_display_games_func($atts = [])
 					});
 				}
 
-				$games_points = doroto_games_points($tournament);
-				$output = '<p><div><b>' . esc_html__("Match results", "doubles-rotation-tournament") . '</b> ' . esc_html__("tournament no.", "doubles-rotation-tournament") . ' ' . esc_html($tournament_id) . ' (<b> <a href="#doroto-display-games" data-type="internal" data-id="#doroto-display-games">' . esc_html($tournament_name) . '</a></b>).</div>';
-				$output .= '<div><b>' . esc_html__("Meantime", "doubles-rotation-tournament") . '</b>' . ' ' . esc_html__("were played", "doubles-rotation-tournament") . ' <b>' . esc_html($matches_played_count) . ' ' . esc_html__("matches and", "doubles-rotation-tournament") . ' ' . esc_html($game_played_count) . ' ' . esc_html($games_points) . '</b>.</div><b><div>';
+				$tournament_link = '<b><a href="#doroto-display-games" data-type="internal" data-id="#doroto-display-games">' . esc_html($tournament_name) . '</a></b>';
+				/* translators: 1: tournament number, 2: tournament name */
+				$output = '<p><div>' . sprintf(esc_html__('Match results of tournament no. %1$d (%2$s).', 'doubles-rotation-tournament'), intval($tournament_id), $tournament_link) . '</div>';
+				$played_text = doroto_counts_games($tournament)
+					/* translators: 1: number of matches played, 2: number of games played */
+					? esc_html__('Played so far: matches %1$s, games %2$s.', 'doubles-rotation-tournament')
+					/* translators: 1: number of matches played, 2: number of points played */
+					: esc_html__('Played so far: matches %1$s, points %2$s.', 'doubles-rotation-tournament');
+				$output .= '<div>' . sprintf($played_text, '<b>' . esc_html($matches_played_count) . '</b>', '<b>' . esc_html($game_played_count) . '</b>') . '</div><b><div>';
 
 				if ($tournament->close_tournament == '1') {
 					$output .= esc_html__("Tournament is closed.", "doubles-rotation-tournament");
@@ -1939,7 +1939,8 @@ function doroto_display_games_func($atts = [])
 			$output = "<div>" . esc_html__("Player registration is still in progress and the matches have not yet been drawn.", "doubles-rotation-tournament") . "</div>";
 		}
 	} else {
-		$output = "<div>" . esc_html__("Tournament no.", "doubles-rotation-tournament") . ' ' . esc_html($tournament_id) . ' ' . esc_html__("was not found.", "doubles-rotation-tournament") . "</div>";
+		/* translators: %d: tournament number */
+		$output = "<div>" . esc_html(sprintf(__('Tournament no. %d was not found.', 'doubles-rotation-tournament'), $tournament_id)) . "</div>";
 	}
 	return $output;
 }
@@ -1992,7 +1993,8 @@ function doroto_games_to_play_shortcode($atts = [], $content = null, $tag = '')
 	$close_tournament = intval($tournament->close_tournament);
 	if ($close_tournament == 1) {
 		$tournament_name = sanitize_text_field($tournament->name);
-		$output .= '<div>' . esc_html__('Tournament no.', 'doubles-rotation-tournament') . ' ' . esc_html($tournament_id) . ' (<b>' . esc_html($tournament_name) . '</b>) ' . esc_html__('is closed.', 'doubles-rotation-tournament') . '</div>';
+		/* translators: 1: tournament number, 2: tournament name */
+		$output .= '<div>' . sprintf(esc_html__('Tournament no. %1$d (%2$s) is closed.', 'doubles-rotation-tournament'), intval($tournament_id), '<b>' . esc_html($tournament_name) . '</b>') . '</div>';
 	}
 
 	$current_user = wp_get_current_user();
@@ -2090,7 +2092,9 @@ function doroto_games_to_play_shortcode($atts = [], $content = null, $tag = '')
 	$tournament_name = sanitize_text_field($tournament->name);
 	$whole_names = intval($tournament->whole_names);
 
-	$output_temp = '<div><b>' . esc_html__('Currently, the following matches are being played in tournament no.', 'doubles-rotation-tournament') . ' ' . esc_html($tournament_id) . ' (<a href="#doroto-games-to-play" data-type="internal" data-id="#doroto-games-to-play">' . esc_html($tournament_name) . '</a>):</b></div>';
+	$tournament_link = '<a href="#doroto-games-to-play" data-type="internal" data-id="#doroto-games-to-play">' . esc_html($tournament_name) . '</a>';
+	/* translators: 1: tournament number, 2: tournament name */
+	$output_temp = '<div><b>' . sprintf(esc_html__('Currently, the following matches are being played in tournament no. %1$d (%2$s):', 'doubles-rotation-tournament'), intval($tournament_id), $tournament_link) . '</b></div>';
 
 	$output_temp .= "<div class='doroto-table-responsive'>";
 	$output_temp .= '<table class="doroto-table">';
@@ -2161,7 +2165,7 @@ function doroto_games_to_play_shortcode($atts = [], $content = null, $tag = '')
 	}
 
 	$output_temp .= '</table>';
-	$output_temp .= '<div><sup>*</sup><small>' . esc_html__("R1", "doubles-rotation-tournament") . ' ' . esc_html__("player starts the game by serving.", "doubles-rotation-tournament") . '</small></div>';
+	$output_temp .= '<div><sup>*</sup><small>' . /* translators: %s: position label of the player (R1) */ esc_html(sprintf(__('Player %s starts the game by serving.', 'doubles-rotation-tournament'), __('R1', 'doubles-rotation-tournament'))) . '</small></div>';
 	$output_temp .= '</div></p>';
 
 	if (!($no_new_match && $no_old_match)) {
@@ -2203,7 +2207,7 @@ function doroto_add_tournament_parameters()
 	}
 
 	ob_start();
-	$output = '<b>' . esc_html__("Edit tournament no.", "doubles-rotation-tournament") . ' ' . esc_html($tournament_id) . ':</b>';
+	$output = '<b>' . /* translators: %d: tournament number */ esc_html(sprintf(__('Edit tournament no. %d', 'doubles-rotation-tournament'), $tournament_id)) . ':</b>';
 	$output .= '<p><form method="post" action="' . esc_url(admin_url('admin-post.php?action=doroto_tournament_parameters_save')) . '">';
 
 	$output .= '<input type="hidden" name="action" value="doroto_tournament_parameters">';
@@ -2811,7 +2815,7 @@ function doroto_add_tournament_parameters()
 	$output .= '<p><sup id="doroto-variables-progress">(*)</sup><small> - ' . esc_html__("Variables used for estimating the end of the tournament.", "doubles-rotation-tournament") . '</small></p>';
 
 	if (!(doroto_is_admin($tournament_id) > 0)) {
-		$output .= "<div id='doroto-settings-save-button'>" . esc_html__("You are not authorized to change the parameters of tournament no.", "doubles-rotation-tournament") . ' ' . esc_html($tournament_id) . "." . "</div>";
+		$output .= "<div id='doroto-settings-save-button'>" . /* translators: %d: tournament number */ esc_html(sprintf(__('You are not authorized to change the parameters of tournament no. %d.', 'doubles-rotation-tournament'), $tournament_id)) . "</div>";
 	} else {
 		if ($tournament->close_date === '9999-09-09 09:09:09') {
 			$timestamp = PHP_INT_MAX;
@@ -2912,7 +2916,7 @@ function doroto_add_link_to_tournament($atts = [], $content = null, $tag = '')
 	$output = '';
 	if (!$open_registration && !doroto_check_if_presentation_on()) {
 		$output .= '<div class="doroto-content-main">';
-		$output .= '<h4 class="doroto-clickable-title">' . esc_html__('Details about tournament no.', 'doubles-rotation-tournament') . ' ' . esc_html($tournament_id) . ' ...</h4>';
+		$output .= '<h4 class="doroto-clickable-title">' . /* translators: %d: tournament number */ esc_html(sprintf(__('Details about tournament no. %d', 'doubles-rotation-tournament'), $tournament_id)) . ' ...</h4>';
 		$output .= '<div class="doroto-content-container" id="details">';
 	}
 	$output .= doroto_not_logged_message();
@@ -2935,13 +2939,11 @@ function doroto_add_link_to_tournament($atts = [], $content = null, $tag = '')
 
 	$admin_users = maybe_unserialize($tournament->admin_users);
 	$tournament_name = sanitize_text_field($tournament->name);
-	$output .= "<p id='doroto-tournament-name-and-organizer'>" . esc_html__("The organizer of tournament no.", "doubles-rotation-tournament") . " " . esc_html($tournament_id) . " (<b>" . esc_html($tournament_name) . "</b>) " . esc_html__("is", "doubles-rotation-tournament") . " <span class='doroto-info-text' id='doroto_invitation_organizer'>";
 	$admin_names = [];
 	foreach ($admin_users as $admin_id) {
 		$admin_names[] = doroto_find_player_name($admin_id, $whole_names);
 	}
-	$output .= esc_html(implode(' ' . __("&", "doubles-rotation-tournament") . ' ', $admin_names));
-	$output .= "</span>.</p>";
+	$output .= "<p id='doroto-tournament-name-and-organizer'>" . doroto_organizers_sentence(intval($tournament_id), (string) $tournament_name, $admin_names, "<span class='doroto-info-text' id='doroto_invitation_organizer'>") . '</p>';
 
 	$admin_users = maybe_unserialize($tournament->admin_users);
 
@@ -2973,8 +2975,8 @@ function doroto_add_link_to_tournament($atts = [], $content = null, $tag = '')
 		}
 
 		if (!empty($option)) {
-			$output .= '<p id="doroto-invitation-registration-status">' . esc_html__("If you wish, you can as an administrator", "doubles-rotation-tournament") . ' ';
-			$output .= implode(" " . esc_html__("or", "doubles-rotation-tournament") . " ", $option) . '.</p>';
+			$output .= '<p id="doroto-invitation-registration-status">' . esc_html__('As an administrator, you can:', 'doubles-rotation-tournament') . ' ';
+			$output .= implode(' | ', $option) . '</p>';
 		}
 	}
 
@@ -3265,7 +3267,7 @@ function doroto_add_tournament_shortcode()
 
 	$output .= '<input type="submit" id="doroto-add-tournament-submit-button" value="' . esc_html__('Create a new tournament', 'doubles-rotation-tournament') . '">';
 
-	$output .= ' ' . esc_html__('for', 'doubles-rotation-tournament') . ' ';
+	$output .= ' <label for="doroto-add-tournament-tournament-type">' . esc_html__('Tournament type', 'doubles-rotation-tournament') . '</label> ';
 	$tournament_type = doroto_read_settings('tournament_type', 1);
 	$output .= '<select id="doroto-add-tournament-tournament-type" name="doroto_add_tournament_tournament_type" >';
 	$type_variables = doroto_types_variables();
@@ -3338,9 +3340,10 @@ function doroto_enter_payment_manually_shortcode($atts = [], $content = null, $t
 	}
 
 	if (!$payment_display) {
-		$output = "<div>" . esc_html__('If you wish to record payments from players, enable in', 'doubles-rotation-tournament');
-		$output .= " <b>" . esc_html__('Tournament Editing ...', 'doubles-rotation-tournament') . "</b>";
-		$output .= " <i>" . esc_html__('Show control over the paid entry fee?', 'doubles-rotation-tournament') . "</i></div>";
+		/* translators: 1: name of the settings section, 2: name of the setting */
+		$output = "<div>" . sprintf(esc_html__('To record payments from players, turn on this option in %1$s: %2$s', 'doubles-rotation-tournament'),
+			'<b>' . esc_html__('Tournament Editing ...', 'doubles-rotation-tournament') . '</b>',
+			'<i>' . esc_html__('Show control over the paid entry fee?', 'doubles-rotation-tournament') . '</i>') . "</div>";
 		return $output;
 	}
 
@@ -3366,7 +3369,7 @@ function doroto_enter_payment_manually_shortcode($atts = [], $content = null, $t
 	}
 	$users = $wpdb->get_results("SELECT * FROM {$wpdb->users}");
 
-	$output = "<div><b>" . esc_html__('Confirm the payment of the selected player in tournament no.', 'doubles-rotation-tournament') . ' ' . esc_html($tournament_id) . "</b>:";
+	$output = "<div><b>" . /* translators: %d: tournament number */ esc_html(sprintf(__('Confirm the payment of the selected player in tournament no. %d', 'doubles-rotation-tournament'), $tournament_id)) . "</b>:";
 	$output .= '<form id="doroto_enter_payment_manually" method="post" action="' . esc_url(admin_url('admin-post.php')) . '">';
 	$output .= '<input type="hidden" name="action" value="doroto_enter_payment_in_tournament">';
 	$output .= '<input type="hidden" name="tournament_id" value="' . esc_attr($tournament_id) . '">';
@@ -3490,7 +3493,7 @@ function doroto_remove_payment_manually_shortcode($atts = [], $content = null, $
 	}
 	$users = $wpdb->get_results("SELECT * FROM {$wpdb->users}");
 
-	$output = "<div><b>" . esc_html__('Remove the payment of the selected player in tournament no.', 'doubles-rotation-tournament') . ' ' . esc_html($tournament_id) . "</b>:";
+	$output = "<div><b>" . /* translators: %d: tournament number */ esc_html(sprintf(__('Remove the payment of the selected player in tournament no. %d', 'doubles-rotation-tournament'), $tournament_id)) . "</b>:";
 	$output .= '<form id="doroto_remove_payment_manually" method="post" action="' . esc_url(admin_url('admin-post.php')) . '">';
 	$output .= '<input type="hidden" name="action" value="doroto_remove_payment_in_tournament">';
 	$output .= '<input type="hidden" name="tournament_id" value="' . esc_attr($tournament_id) . '">';
@@ -3925,7 +3928,7 @@ function doroto_register_add_player_shortcode($atts = [], $content = null, $tag 
 	}
 
 
-	$output = "<div><b>" . esc_html__('Register and add a new player to the tournament no.', 'doubles-rotation-tournament') . ' ' . esc_html($tournament_id) . "</b>:</div>";
+	$output = "<div><b>" . /* translators: %d: tournament number */ esc_html(sprintf(__('Register and add a new player to tournament no. %d', 'doubles-rotation-tournament'), $tournament_id)) . "</b>:</div>";
 	$output .= '<form id="register_add_player_form" method="post" action="' . esc_url(admin_url('admin-post.php')) . '">';
 	$output .= '<input type="hidden" name="action" value="doroto_register_add_player_to_tournament">';
 	$output .= '<input type="hidden" name="tournament_id" value="' . esc_attr($tournament_id) . '">';

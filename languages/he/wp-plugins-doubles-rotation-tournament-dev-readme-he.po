@@ -354,7 +354,7 @@ msgstr "חדש – השחקן המגיש מסומן בכרטיסי המשחקי�
 
 #. Found in changelog list item.
 #, gp-priority: low
-msgid "Add - the tournament block takes its colours from the theme (button and palette colours); the block's Styles panel can change the accent, the tab bar and table headers, their text and the colour of the special group"
+msgid "Add - the tournament block takes its colors from the theme (button and palette colors); the block's Styles panel can change the accent, the tab bar and table headers, their text and the color of the special group"
 msgstr "חדש – בלוק הטורניר לוקח את צבעיו מערכת העיצוב (צבעי הכפתורים והפלטה); חלונית הסגנונות של הבלוק מאפשרת לשנות את צבע ההדגשה, את סרגל הלשוניות וכותרות הטבלה, את הטקסט שלהם ואת צבע הקבוצה המיוחדת"
 
 #. Found in changelog list item.
@@ -1286,4 +1286,3 @@ msgstr "שינוי קטן במסך הניהול."
 #, gp-priority: low
 msgid "First release to public."
 msgstr "שחרור ציבורי ראשון."
-

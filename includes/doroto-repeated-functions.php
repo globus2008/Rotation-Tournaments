@@ -699,3 +699,14 @@ function doroto_require_admin_action(string $action, int $tournament_id)
 	doroto_lock_tournament($tournament_id);
 	register_shutdown_function('doroto_unlock_tournament', $tournament_id);
 }
+
+/**
+ * "Organizers of tournament no. 5 (Name): A, B" as escaped HTML; the names are wrapped in $names_open ... </span>.
+ * @since 2.0.0
+ */
+function doroto_organizers_sentence(int $tournament_id, string $tournament_name, array $admin_names, string $names_open): string
+{
+	/* translators: 1: tournament number, 2: tournament name, 3: names of the organizers */
+	return sprintf(esc_html__('Organizers of tournament no. %1$d (%2$s): %3$s', 'doubles-rotation-tournament'),
+		$tournament_id, '<b>' . esc_html($tournament_name) . '</b>', $names_open . esc_html(implode(', ', $admin_names)) . '</span>');
+}

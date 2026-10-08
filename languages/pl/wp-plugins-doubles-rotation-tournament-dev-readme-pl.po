@@ -354,7 +354,7 @@ msgstr "Dodano – serwujący gracz jest oznaczony na kartach meczów; grupa spe
 
 #. Found in changelog list item.
 #, gp-priority: low
-msgid "Add - the tournament block takes its colours from the theme (button and palette colours); the block's Styles panel can change the accent, the tab bar and table headers, their text and the colour of the special group"
+msgid "Add - the tournament block takes its colors from the theme (button and palette colors); the block's Styles panel can change the accent, the tab bar and table headers, their text and the color of the special group"
 msgstr "Dodano – blok turnieju przejmuje kolory z motywu (kolory przycisków i palety); panel Style bloku pozwala zmienić akcent, pasek zakładek i nagłówki tabel, ich tekst i kolor grupy specjalnej"
 
 #. Found in changelog list item.
@@ -1286,4 +1286,3 @@ msgstr "Drobna zmiana ekranu administracyjnego."
 #, gp-priority: low
 msgid "First release to public."
 msgstr "Pierwsze publiczne wydanie."
-

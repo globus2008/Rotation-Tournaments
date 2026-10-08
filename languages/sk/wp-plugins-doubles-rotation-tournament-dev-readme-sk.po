@@ -354,7 +354,7 @@ msgstr "Pridané – podávajúci hráč je označený na kartách zápasov; šp
 
 #. Found in changelog list item.
 #, gp-priority: low
-msgid "Add - the tournament block takes its colours from the theme (button and palette colours); the block's Styles panel can change the accent, the tab bar and table headers, their text and the colour of the special group"
+msgid "Add - the tournament block takes its colors from the theme (button and palette colors); the block's Styles panel can change the accent, the tab bar and table headers, their text and the color of the special group"
 msgstr "Pridané – blok turnaja preberá farby z témy (farby tlačidiel a palety); v paneli Štýly bloku možno zmeniť zvýrazňujúcu farbu, lištu záložiek a hlavičky tabuliek, ich text a farbu špeciálnej skupiny"
 
 #. Found in changelog list item.
@@ -1286,4 +1286,3 @@ msgstr "Malá úprava obrazovky administrácie."
 #, gp-priority: low
 msgid "First release to public."
 msgstr "Prvé verejné vydanie."
-

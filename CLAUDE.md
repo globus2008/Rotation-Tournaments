@@ -121,6 +121,11 @@
   whenever the admin page opens. If `index.js` still does not load, the page shows `#doroto-admin-missing`
   (handle `doroto-admin-fallback`; the app sets `data-mounted` on the root).
 - Translations of the plugin are made on translate.wordpress.org, do not edit `languages/`.
+- Source strings are en_US. Every sentence is one translatable string with `sprintf()` placeholders
+  (`%d`, `%1$s`, ...) and a `/* translators: */` comment; never glue fragments like "Tournament no." . $id . "was deleted."
+  (word order differs in tr, hu, hi, ja, ko, zh). Fixed everywhere on 2026-10-08.
+- English variants in `languages/en_*`: en_GB, en_AU, en_NZ, en_ZA use British spelling with -ise (organiser, colour,
+  cancelled); en_CA keeps -ize but uses colour/cancelled. All other strings are copied unchanged from en_US.
 
 ## Data model
 - One table, `{prefix}doroto_tournaments`. Lists are serialized PHP arrays in text columns: `players`, `playing`, `statistics`, `matches_list`, `admin_users`, `special_group`, `payment_done`, `final_four`, `final_result`.

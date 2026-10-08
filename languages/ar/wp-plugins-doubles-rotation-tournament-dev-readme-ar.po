@@ -354,7 +354,7 @@ msgstr "إضافة – يُميَّز اللاعب المرسل على بطاق�
 
 #. Found in changelog list item.
 #, gp-priority: low
-msgid "Add - the tournament block takes its colours from the theme (button and palette colours); the block's Styles panel can change the accent, the tab bar and table headers, their text and the colour of the special group"
+msgid "Add - the tournament block takes its colors from the theme (button and palette colors); the block's Styles panel can change the accent, the tab bar and table headers, their text and the color of the special group"
 msgstr "إضافة – يأخذ مكوّن البطولة ألوانه من القالب (ألوان الأزرار ولوحة الألوان)؛ تتيح لوحة الأنماط في المكوّن تغيير لون التمييز وشريط التبويبات وعناوين الجداول ونصها ولون المجموعة الخاصة"
 
 #. Found in changelog list item.
@@ -1286,4 +1286,3 @@ msgstr "تعديل طفيف على شاشة الإدارة."
 #, gp-priority: low
 msgid "First release to public."
 msgstr "أول إصدار عام."
-

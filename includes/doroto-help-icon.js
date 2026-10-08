@@ -277,7 +277,7 @@ document.addEventListener("DOMContentLoaded", () => {
         console.log("Running tour_login_logout with resumeStep:", resumeStep);
         tour.addStep({
           title: `${dorotoTranslations.doroto_text_preparing_help}: ${dorotoTranslations.doroto_text_create_tournament}`,
-          text: `${dorotoTranslations.doroto_text_redirect_message}<br><br>${dorotoTranslations.doroto_text_redirect_message_extended} ${tournamentId}?`,
+          text: `${dorotoTranslations.doroto_text_redirect_message}<br><br>${dorotoTranslations.doroto_text_redirect_message_extended.replace('%s', tournamentId)}`,
 
           attachTo: {
             element: "#doroto-tournament-name-and-organizer",
@@ -561,7 +561,7 @@ document.addEventListener("DOMContentLoaded", () => {
         console.log("Running tour_login_logout with resumeStep:", resumeStep);
         tour.addStep({
           title: `${dorotoTranslations.doroto_text_preparing_help}: ${dorotoTranslations.doroto_text_login_logout}`,
-          text: `${dorotoTranslations.doroto_text_redirect_message}<br><br>${dorotoTranslations.doroto_text_redirect_message_extended} ${tournamentId}?`,
+          text: `${dorotoTranslations.doroto_text_redirect_message}<br><br>${dorotoTranslations.doroto_text_redirect_message_extended.replace('%s', tournamentId)}`,
           attachTo: {
             element: "#doroto-tournament-name-and-organizer",
             on: "top",
@@ -900,7 +900,7 @@ document.addEventListener("DOMContentLoaded", () => {
         );
         tour.addStep({
           title: `${dorotoTranslations.doroto_text_preparing_help}: ${dorotoTranslations.doroto_text_tournament_management_basic}`,
-          text: `${dorotoTranslations.doroto_text_redirect_message}<br><br>${dorotoTranslations.doroto_text_redirect_message_extended} ${tournamentId}?`,
+          text: `${dorotoTranslations.doroto_text_redirect_message}<br><br>${dorotoTranslations.doroto_text_redirect_message_extended.replace('%s', tournamentId)}`,
           attachTo: {
             element: "#doroto-tournament-name-and-organizer",
             on: "top",
@@ -1212,7 +1212,7 @@ document.addEventListener("DOMContentLoaded", () => {
         );
         tour.addStep({
           title: `${dorotoTranslations.doroto_text_preparing_help}: ${dorotoTranslations.doroto_text_tournament_management_advance}`,
-          text: `${dorotoTranslations.doroto_text_redirect_message}<br><br>${dorotoTranslations.doroto_text_redirect_message_extended} ${tournamentId}?`,
+          text: `${dorotoTranslations.doroto_text_redirect_message}<br><br>${dorotoTranslations.doroto_text_redirect_message_extended.replace('%s', tournamentId)}`,
           attachTo: {
             element: "#doroto-tournament-name-and-organizer",
             on: "top",
@@ -1652,7 +1652,7 @@ document.addEventListener("DOMContentLoaded", () => {
         );
         tour.addStep({
           title: `${dorotoTranslations.doroto_text_preparing_help}: ${dorotoTranslations.doroto_text_example_1}`,
-          text: `${dorotoTranslations.doroto_text_redirect_message}<br><br>${dorotoTranslations.doroto_text_redirect_message_extended} ${tournamentId}?`,
+          text: `${dorotoTranslations.doroto_text_redirect_message}<br><br>${dorotoTranslations.doroto_text_redirect_message_extended.replace('%s', tournamentId)}`,
           attachTo: {
             element: "#doroto-tournament-name-and-organizer",
             on: "top",
@@ -2319,7 +2319,7 @@ document.addEventListener("DOMContentLoaded", () => {
         );
         tour.addStep({
           title: `${dorotoTranslations.doroto_text_preparing_help}: ${dorotoTranslations.doroto_text_example_2}`,
-          text: `${dorotoTranslations.doroto_text_redirect_message}<br><br>${dorotoTranslations.doroto_text_redirect_message_extended} ${tournamentId}?`,
+          text: `${dorotoTranslations.doroto_text_redirect_message}<br><br>${dorotoTranslations.doroto_text_redirect_message_extended.replace('%s', tournamentId)}`,
           attachTo: {
             element: "#doroto-tournament-name-and-organizer",
             on: "top",
@@ -2784,7 +2784,7 @@ document.addEventListener("DOMContentLoaded", () => {
         );
         tour.addStep({
           title: `${dorotoTranslations.doroto_text_preparing_help}: ${dorotoTranslations.doroto_text_example_3}`,
-          text: `${dorotoTranslations.doroto_text_redirect_message}<br><br>${dorotoTranslations.doroto_text_redirect_message_extended} ${tournamentId}?`,
+          text: `${dorotoTranslations.doroto_text_redirect_message}<br><br>${dorotoTranslations.doroto_text_redirect_message_extended.replace('%s', tournamentId)}`,
           attachTo: {
             element: "#doroto-tournament-name-and-organizer",
             on: "top",
@@ -3540,7 +3540,7 @@ document.addEventListener("DOMContentLoaded", () => {
         );
         tour.addStep({
           title: `${dorotoTranslations.doroto_text_preparing_help}: ${dorotoTranslations.doroto_text_example_4}`,
-          text: `${dorotoTranslations.doroto_text_redirect_message}<br><br>${dorotoTranslations.doroto_text_redirect_message_extended} ${tournamentId}?`,
+          text: `${dorotoTranslations.doroto_text_redirect_message}<br><br>${dorotoTranslations.doroto_text_redirect_message_extended.replace('%s', tournamentId)}`,
           attachTo: {
             element: "#doroto-tournament-name-and-organizer",
             on: "top",

@@ -354,7 +354,7 @@ msgstr "Додано — гравця, що подає, позначено на 
 
 #. Found in changelog list item.
 #, gp-priority: low
-msgid "Add - the tournament block takes its colours from the theme (button and palette colours); the block's Styles panel can change the accent, the tab bar and table headers, their text and the colour of the special group"
+msgid "Add - the tournament block takes its colors from the theme (button and palette colors); the block's Styles panel can change the accent, the tab bar and table headers, their text and the color of the special group"
 msgstr "Додано — блок турніру бере кольори з теми (кольори кнопок і палітри); панель «Стилі» блоку дозволяє змінити акцент, панель вкладок і заголовки таблиць, їхній текст і колір спеціальної групи"
 
 #. Found in changelog list item.
@@ -1286,4 +1286,3 @@ msgstr "Невелика зміна екрана адміністрування.
 #, gp-priority: low
 msgid "First release to public."
 msgstr "Перший публічний випуск."
-

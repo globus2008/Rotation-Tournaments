@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plugins - Rotation Tournaments - Development (trunk)\n"
-"PO-Revision-Date: 2026-10-07 10:25:59+0000\n"
+"PO-Revision-Date: 2026-10-08 17:31:19+0000\n"
 "Language: es_MX\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -368,10 +368,6 @@ msgstr "No se ha podido crear el torneo."
 msgid "You have left the tournament."
 msgstr "Has abandonado el torneo."
 
-#: includes/doroto-services.php:178
-msgid "was deleted."
-msgstr "se ha borrado."
-
 #: includes/doroto-services.php:170
 msgid ""
 "The tournament was closed more than 24 hours ago and can no longer be "
@@ -381,10 +377,6 @@ msgstr "El torneo se cerró hace más de 24 horas y ya no se puede cambiar."
 #: includes/doroto-services.php:168
 msgid "Unknown tournament type."
 msgstr "Tipo de torneo desconocido."
-
-#: includes/doroto-services.php:164
-msgid "is no longer an organizer."
-msgstr "ya no es organizador."
 
 #: includes/doroto-services.php:160
 msgid "The founder of the tournament cannot be removed."
@@ -1236,10 +1228,6 @@ msgstr "Abandonar el torneo"
 msgid "Sign up for the tournament"
 msgstr "Inscribirse en el torneo"
 
-#: includes/doroto-services.php:196
-msgid "You are already registered in tournament no."
-msgstr "Ya estás inscrito en el torneo n.º"
-
 #: includes/doroto-endpoints.php:2990
 msgid "Your login e-mail:"
 msgstr "Tu correo electrónico de acceso:"
@@ -1930,10 +1918,6 @@ msgstr "Apellidos"
 #: includes/doroto-shortcodes.php:3933
 msgid "First Name"
 msgstr "Nombre"
-
-#: includes/doroto-shortcodes.php:3928
-msgid "Register and add a new player to the tournament no."
-msgstr "Registrar y agregar un nuevo jugador al torneo n.º"
 
 #: includes/doroto-shortcodes.php:3915
 msgid "Unable to register and add another player from the database."
@@ -2796,10 +2780,6 @@ msgstr ""
 " de organizador del torneo. Así podrás probar otras opciones en este torneo "
 "de prueba."
 
-#: doubles-rotation-tournament.php:334
-msgid "Can I redirect you to tournament no."
-msgstr "¿Puedo redirigirte al torneo n.º"
-
 #: doubles-rotation-tournament.php:333
 msgid "We will demonstrate this tip on a selected tournament example."
 msgstr "Mostraremos este consejo con un torneo de ejemplo seleccionado."
@@ -2929,21 +2909,9 @@ msgstr "Perdidos"
 msgid "Won"
 msgstr "Ganados"
 
-#: includes/doroto-shortcodes.php:93
-msgid "minutes"
-msgstr "minutos"
-
-#: includes/doroto-shortcodes.php:87
-msgid "hours"
-msgstr "horas"
-
 #: includes/doroto-shortcodes.php:85
 msgid "Estimated time to finish:"
 msgstr "Tiempo estimado hasta el final:"
-
-#: includes/doroto-shortcodes.php:82
-msgid "completed"
-msgstr "completado"
 
 #: includes/doroto-shortcodes.php:38
 msgid "Tournament progress calculation is not available."
@@ -2985,17 +2953,9 @@ msgid ""
 msgstr ""
 "Parámetros que se usarán para estimar el tiempo de desarrollo del torneo."
 
-#: includes/doroto-shortcodes.php:539
-msgid "out of maximum"
-msgstr "de un máximo de"
-
 #: includes/doroto-tournament-management.php:3091
 msgid "Maybe this means the end of the tournament round."
 msgstr "Quizá esto signifique el final de la ronda del torneo."
-
-#: includes/doroto-tournament-management.php:3091
-msgid "played the same number of matches with everyone."
-msgstr "ha jugado el mismo número de partidos con todos."
 
 #: includes/doroto-frontend-pages.php:453
 msgid ""
@@ -3088,16 +3048,6 @@ msgstr "Puedes acceder aquí."
 #: includes/doroto-repeated-functions.php:56
 msgid "Warning: You are not logged in to your account."
 msgstr "Advertencia: no has accedido a tu cuenta."
-
-#: includes/doroto-admin.php:336
-msgid "Pay attention to the settings"
-msgstr "Presta atención a los ajustes"
-
-#: includes/doroto-admin.php:336
-msgid "Plugins restricting user roles may limit the functionality of"
-msgstr ""
-"Los plugins que restringen los perfiles de usuario pueden limitar el "
-"funcionamiento de"
 
 #: includes/doroto-admin.php:102
 msgid "all players w/o limitations"
@@ -3200,10 +3150,6 @@ msgstr ""
 "Al terminar toda la ronda del torneo, ¿mostrar las opciones de qué hacer a "
 "continuación?"
 
-#: includes/doroto-shortcodes.php:3341
-msgid "If you wish to record payments from players, enable in"
-msgstr "Si quieres registrar los pagos de los jugadores, actívalo en"
-
 #: includes/doroto-blocks.php:239 includes/doroto-shortcodes.php:2666
 msgid "This option reduces variability."
 msgstr "Esta opción reduce la variedad."
@@ -3220,21 +3166,12 @@ msgstr "Esperar para sortear hasta que se hayan jugado todos los partidos."
 msgid "When enough players are available:"
 msgstr "Cuando haya suficientes jugadores disponibles:"
 
-#: includes/doroto-shortcodes.php:2977
-#: includes/doroto-tournament-management.php:3109
-msgid "or"
-msgstr "o"
-
 #: includes/doroto-blocks.php:189 includes/doroto-shortcodes.php:2261
 msgid ""
 "You can change the tournament type here, if the tournament hasn't started "
 "yet."
 msgstr ""
 "Aquí puedes cambiar el tipo de torneo si el torneo todavía no ha empezado."
-
-#: includes/doroto-shortcodes.php:2164
-msgid "player starts the game by serving."
-msgstr "jugador empieza el juego sacando."
 
 #: includes/doroto-frontend-pages.php:134
 msgid "Payments from players"
@@ -3334,10 +3271,6 @@ msgstr ""
 msgid "A post with an example of a tournament presentation."
 msgstr "Una entrada con un ejemplo de presentación de torneo."
 
-#: includes/doroto-admin.php:311
-msgid "Help page for"
-msgstr "Página de ayuda para"
-
 #: includes/doroto-admin.php:310
 msgid "The main page for the management of all tournaments."
 msgstr "La página principal para gestionar todos los torneos."
@@ -3380,14 +3313,6 @@ msgstr "Sortear"
 msgid "Wait"
 msgstr "Esperar"
 
-#: includes/doroto-tournament-management.php:893
-msgid "Rotation Tournament!"
-msgstr "torneo rotativo!"
-
-#: includes/doroto-shortcodes.php:3268
-msgid "for"
-msgstr "para"
-
 #: includes/doroto-shortcodes.php:3060
 msgid "Type"
 msgstr "Tipo"
@@ -3401,16 +3326,6 @@ msgstr "Rival D"
 #: src/blocks/tournament/render.php:469
 msgid "Opponent L"
 msgstr "Rival I"
-
-#: includes/doroto-admin.php:358
-msgid ""
-"is an alternative form of a Singles Tournament where players face each other"
-" without elimination rounds. Depending on the time options, everyone plays "
-"against everyone."
-msgstr ""
-"es una forma alternativa de torneo individual en la que los jugadores se "
-"enfrentan sin rondas eliminatorias. Según el tiempo disponible, todos juegan"
-" contra todos."
 
 #: includes/doroto-admin.php:358
 msgid "Singles Rotation Tournament (hereinafter SiRoTo)"
@@ -3567,52 +3482,11 @@ msgstr ""
 msgid "List of available tournaments was updated."
 msgstr "Se ha actualizado la lista de torneos disponibles."
 
-#: includes/doroto-tournament-management.php:2628
-msgid "The data is being displayed for the tournament no."
-msgstr "Se muestran los datos del torneo n.º"
-
-#: includes/doroto-services.php:84
-msgid "was open for registration."
-msgstr "se ha abierto para la inscripción."
-
-#: includes/doroto-services.php:85
-msgid "was closed."
-msgstr "se ha cerrado."
-
-#: includes/doroto-services.php:85
-msgid "Registration of tournament players no."
-msgstr "La inscripción de jugadores del torneo n.º"
-
-#: includes/doroto-services.php:79
-msgid "does not have sufficient occupancy to close registration."
-msgstr "no tiene suficientes inscritos para cerrar la inscripción."
-
 #: includes/doroto-services.php:81
 msgid "A tournament cannot be closed while player registration is open."
 msgstr ""
 "No se puede cerrar un torneo mientras la inscripción de jugadores está "
 "abierta."
-
-#: includes/doroto-services.php:97
-msgid "has not been scheduled yet."
-msgstr "todavía no se ha sorteado."
-
-#: includes/doroto-services.php:101
-msgid "was previously entered with a score"
-msgstr "ya se había ingresado con el resultado"
-
-#: includes/doroto-services.php:106
-msgid "was skipped."
-msgstr "se ha omitido."
-
-#: build/blocks/tournament/render.php:229 includes/doroto-services.php:105
-#: src/blocks/tournament/render.php:229
-msgid "Match no."
-msgstr "Partido n.º"
-
-#: includes/doroto-services.php:109
-msgid "was saved with a score"
-msgstr "se ha guardado con el resultado"
 
 #: includes/doroto-services.php:184
 msgid "The final match is over!"
@@ -3650,10 +3524,6 @@ msgstr ""
 #: includes/doroto-services.php:208
 msgid "A new tournament has just been created."
 msgstr "Se acaba de crear un torneo nuevo."
-
-#: includes/doroto-tournament-management.php:893
-msgid "I invite you to"
-msgstr "¡Te invito al"
 
 #: includes/doroto-tournament-management.php:367
 #: includes/doroto-tournament-management.php:559
@@ -3717,18 +3587,10 @@ msgstr "Todavía en juego"
 msgid "Only Open Registration"
 msgstr "Solo con inscripción abierta"
 
-#: includes/doroto-services.php:152
-msgid "has been removed from the list."
-msgstr "se ha quitado de la lista."
-
 #: build/blocks/tournament/render.php:394 includes/doroto-shortcodes.php:3505
 #: src/blocks/tournament/render.php:394
 msgid "Remove payment"
 msgstr "Quitar el pago"
-
-#: includes/doroto-shortcodes.php:3493
-msgid "Remove the payment of the selected player in tournament no."
-msgstr "Quitar el pago del jugador seleccionado en el torneo n.º"
 
 #: includes/doroto-shortcodes.php:3488 includes/doroto-shortcodes.php:3507
 msgid "None of the players have paid yet."
@@ -3742,22 +3604,10 @@ msgstr "No tienes permiso para quitar un pago."
 msgid "You must log in to remove a payment!"
 msgstr "¡Debes acceder para quitar un pago!"
 
-#: includes/doroto-services.php:150
-msgid "has been added to the list."
-msgstr "se ha agregado a la lista."
-
-#: includes/doroto-services.php:150 includes/doroto-services.php:152
-msgid "The payment of the player"
-msgstr "El pago del jugador"
-
 #: build/blocks/tournament/render.php:393 includes/doroto-shortcodes.php:3383
 #: src/blocks/tournament/render.php:393
 msgid "Confirm payment"
 msgstr "Confirmar el pago"
-
-#: includes/doroto-shortcodes.php:3369
-msgid "Confirm the payment of the selected player in tournament no."
-msgstr "Confirmar el pago del jugador seleccionado en el torneo n.º"
 
 #: includes/doroto-shortcodes.php:3364 includes/doroto-shortcodes.php:3385
 msgid "All players have already paid."
@@ -3853,11 +3703,6 @@ msgstr "volver a abrir la inscripción"
 msgid "close registration"
 msgstr "cerrar la inscripción"
 
-#: includes/doroto-shortcodes.php:2976
-#: includes/doroto-tournament-management.php:3108
-msgid "If you wish, you can as an administrator"
-msgstr "Si quieres, como administrador puedes"
-
 #: blocks/log-link/log-link.php:93 blocks/log-link/build/index.js:201
 #: blocks/log-link/build/index.js:180
 msgid "Log in/Log out from the tournament"
@@ -3866,19 +3711,6 @@ msgstr "Inscribirse en el torneo / darse de baja"
 #: includes/doroto-shortcodes.php:2928
 msgid "You can enter the tournament using this link:"
 msgstr "Puedes inscribirte en el torneo con este enlace:"
-
-#: build/blocks/tournament/render.php:123 includes/doroto-shortcodes.php:2915
-#: src/blocks/tournament/render.php:123
-msgid "Details about tournament no."
-msgstr "Detalles del torneo n.º"
-
-#: includes/doroto-services.php:172
-msgid "were saved."
-msgstr "se han guardado."
-
-#: includes/doroto-services.php:172
-msgid "Tournament parameters no."
-msgstr "Los parámetros del torneo n.º"
 
 #: includes/doroto-services.php:174
 msgid "You do not have the necessary rights to create a post."
@@ -3890,10 +3722,6 @@ msgid ""
 msgstr ""
 "Los parámetros del torneo no se pueden cambiar pasadas 24 horas desde su "
 "cierre."
-
-#: includes/doroto-shortcodes.php:2814
-msgid "You are not authorized to change the parameters of tournament no."
-msgstr "No tienes autorización para cambiar los parámetros del torneo n.º"
 
 #: includes/doroto-shortcodes.php:2798
 msgid ""
@@ -4009,10 +3837,6 @@ msgstr "Valor"
 msgid "Variable"
 msgstr "Variable"
 
-#: includes/doroto-shortcodes.php:2206
-msgid "Edit tournament no."
-msgstr "Editar el torneo n.º"
-
 #: build/blocks/tournament/render.php:245
 #: build/blocks/tournament/render.php:282
 #: build/blocks/tournament/render.php:289
@@ -4035,10 +3859,6 @@ msgstr "Resultado"
 #: includes/doroto-shortcodes.php:2103
 msgid "Hide"
 msgstr "Ocultar"
-
-#: includes/doroto-shortcodes.php:2093
-msgid "Currently, the following matches are being played in tournament no."
-msgstr "Ahora se están jugando los siguientes partidos del torneo n.º"
 
 #: includes/doroto-shortcodes.php:2073
 msgid "Best Player Winner:"
@@ -4063,14 +3883,6 @@ msgstr "Ganador en la categoría de pareja más ideal:"
 #: includes/doroto-shortcodes.php:2031
 msgid "You cannot go to the finals while registration is open."
 msgstr "No puedes pasar a la final mientras la inscripción esté abierta."
-
-#: includes/doroto-shortcodes.php:1995
-msgid "is closed."
-msgstr "está cerrado."
-
-#: includes/doroto-shortcodes.php:1942
-msgid "was not found."
-msgstr "no se ha encontrado."
 
 #: includes/doroto-shortcodes.php:1939
 msgid ""
@@ -4125,33 +3937,9 @@ msgstr "El torneo está cerrado."
 msgid "games"
 msgstr "juegos"
 
-#: includes/doroto-shortcodes.php:1851
-msgid "matches and"
-msgstr "partidos y"
-
-#: includes/doroto-shortcodes.php:1851
-msgid "were played"
-msgstr "se han jugado"
-
-#: includes/doroto-shortcodes.php:1851
-msgid "Meantime"
-msgstr "Por ahora"
-
-#: includes/doroto-shortcodes.php:1850
-msgid "Match results"
-msgstr "Resultados de los partidos"
-
-#: includes/doroto-services.php:132
-msgid "was removed from the tournament."
-msgstr "se ha quitado del torneo."
-
 #: includes/doroto-shortcodes.php:1716
 msgid "Remove player"
 msgstr "Quitar jugador"
-
-#: includes/doroto-shortcodes.php:1703
-msgid "Removing a player from tournament no."
-msgstr "Quitar un jugador del torneo n.º"
 
 #: includes/doroto-shortcodes.php:1671
 msgid "The option to remove a player is closed."
@@ -4160,10 +3948,6 @@ msgstr "La opción de quitar un jugador está cerrada."
 #: includes/doroto-shortcodes.php:1664
 msgid "You do not have permission to remove a player."
 msgstr "No tienes permiso para quitar un jugador."
-
-#: includes/doroto-services.php:140
-msgid "has renewed participation."
-msgstr "ha reanudado su participación."
 
 #: includes/doroto-services.php:138
 msgid "All players have renewed participation."
@@ -4177,10 +3961,6 @@ msgstr "Todos los jugadores están activos."
 msgid "Resume participation"
 msgstr "Reanudar la participación"
 
-#: includes/doroto-shortcodes.php:1560
-msgid "Resuming the game of the selected player in tournament no."
-msgstr "Reanudar el juego del jugador seleccionado en el torneo n.º"
-
 #: includes/doroto-shortcodes.php:1545
 msgid "The option to restore the player game is closed."
 msgstr "La opción de reanudar el juego del jugador está cerrada."
@@ -4188,10 +3968,6 @@ msgstr "La opción de reanudar el juego del jugador está cerrada."
 #: includes/doroto-shortcodes.php:1524
 msgid "You must log in to restore the game!"
 msgstr "¡Debes acceder para reanudar el juego!"
-
-#: includes/doroto-services.php:136
-msgid "has temporarily suspended participation."
-msgstr "ha pausado temporalmente su participación."
 
 #: includes/doroto-services.php:134
 msgid "All players have temporarily suspended participation."
@@ -4207,10 +3983,6 @@ msgstr "Pausar la participación"
 msgid "All players"
 msgstr "Todos los jugadores"
 
-#: includes/doroto-shortcodes.php:1441
-msgid "Suspension of the game of the selected player in tournament no."
-msgstr "Pausar el juego del jugador seleccionado en el torneo n.º"
-
 #: includes/doroto-shortcodes.php:1426
 msgid "The option to suspend the player game is closed."
 msgstr "La opción de pausar el juego del jugador está cerrada."
@@ -4219,17 +3991,9 @@ msgstr "La opción de pausar el juego del jugador está cerrada."
 msgid "You must log in to temporarily suspend a player!"
 msgstr "¡Debes acceder para pausar temporalmente a un jugador!"
 
-#: includes/doroto-services.php:162
-msgid "has been added to the admins."
-msgstr "se ha agregado a los organizadores."
-
 #: includes/doroto-shortcodes.php:1353
 msgid "Add organizer rights"
 msgstr "Agregar derechos de organizador"
-
-#: includes/doroto-shortcodes.php:1339
-msgid "Adding organizer rights in tournament no."
-msgstr "Agregar derechos de organizador en el torneo n.º"
 
 #: includes/doroto-shortcodes.php:1334 includes/doroto-shortcodes.php:1355
 msgid ""
@@ -4247,25 +4011,9 @@ msgstr "La opción de agregar derechos de organizador está cerrada."
 msgid "You do not have permission to add organizer rights."
 msgstr "No tienes permiso para agregar derechos de organizador."
 
-#: includes/doroto-shortcodes.php:1284 includes/doroto-shortcodes.php:2938
-msgid "is"
-msgstr "es"
-
-#: includes/doroto-shortcodes.php:1284 includes/doroto-shortcodes.php:2938
-msgid "The organizer of tournament no."
-msgstr "El organizador del torneo n.º"
-
-#: includes/doroto-services.php:142
-msgid "has been added to a special group."
-msgstr "se ha agregado a un grupo especial."
-
 #: includes/doroto-shortcodes.php:1201
 msgid "Add to special group"
 msgstr "Agregar al grupo especial"
-
-#: includes/doroto-shortcodes.php:1187
-msgid "Addition to the special group of the tournament no."
-msgstr "Agregar al grupo especial del torneo n.º"
 
 #: includes/doroto-shortcodes.php:1183 includes/doroto-shortcodes.php:1203
 msgid ""
@@ -4283,17 +4031,9 @@ msgstr "La opción de agregar a un grupo especial está cerrada."
 msgid "You do not have permission to add to a special group."
 msgstr "No tienes permiso para agregar a un grupo especial."
 
-#: includes/doroto-services.php:144
-msgid "was taken from a special group."
-msgstr "se ha quitado de un grupo especial."
-
 #: includes/doroto-shortcodes.php:1083
 msgid "Remove from special group"
 msgstr "Quitar del grupo especial"
-
-#: includes/doroto-shortcodes.php:1069
-msgid "Removal from the special group of the tournament no."
-msgstr "Quitar del grupo especial del torneo n.º"
 
 #: includes/doroto-shortcodes.php:1064 includes/doroto-shortcodes.php:1085
 msgid ""
@@ -4315,10 +4055,6 @@ msgstr "La opción de quitar de un grupo especial está cerrada."
 msgid "You do not have permission to remove from a special group."
 msgstr "No tienes permiso para quitar de un grupo especial."
 
-#: includes/doroto-services.php:130
-msgid "was added to the tournament."
-msgstr "se ha agregado al torneo."
-
 #: includes/doroto-services.php:118
 msgid "Tournament or user not found."
 msgstr "No se ha encontrado el torneo o el usuario."
@@ -4326,10 +4062,6 @@ msgstr "No se ha encontrado el torneo o el usuario."
 #: includes/doroto-shortcodes.php:969
 msgid "Add player"
 msgstr "Agregar jugador"
-
-#: includes/doroto-shortcodes.php:952
-msgid "Add a new player to the tournament no."
-msgstr "Agregar un nuevo jugador al torneo n.º"
 
 #: includes/doroto-shortcodes.php:875
 msgid "The option to add a player is closed."
@@ -4383,34 +4115,6 @@ msgstr "Estado"
 msgid "Order"
 msgstr "Puesto"
 
-#: includes/doroto-shortcodes.php:553
-msgid ", but the maximum number of players has already been reached"
-msgstr ", pero ya se ha alcanzado el número máximo de jugadores"
-
-#: includes/doroto-shortcodes.php:549
-msgid "closed"
-msgstr "cerrada"
-
-#: includes/doroto-shortcodes.php:547
-msgid "open"
-msgstr "abierta"
-
-#: includes/doroto-shortcodes.php:544
-msgid "to the tournament is"
-msgstr "al torneo está"
-
-#: includes/doroto-shortcodes.php:544
-msgid "Registration"
-msgstr "Inscripción"
-
-#: includes/doroto-shortcodes.php:542 includes/doroto-shortcodes.php:1850
-msgid "tournament no."
-msgstr "torneo n.º"
-
-#: includes/doroto-shortcodes.php:536
-msgid "total"
-msgstr "total"
-
 #: build/blocks/invite/render.php:49
 #: build/blocks/tournament-list/render.php:72
 #: build/blocks/tournament/render.php:74
@@ -4422,19 +4126,6 @@ msgstr "total"
 #: src/blocks/tournament/index.js:27
 msgid "Players"
 msgstr "Jugadores"
-
-#: includes/doroto-shortcodes.php:412
-msgid "The result of the final match"
-msgstr "El resultado del partido final"
-
-#: includes/doroto-services.php:116 includes/doroto-shortcodes.php:412
-msgid "was changed."
-msgstr "se ha cambiado."
-
-#: includes/doroto-services.php:100 includes/doroto-services.php:108
-#: includes/doroto-services.php:116
-msgid "The result of match no."
-msgstr "El resultado del partido n.º"
 
 #: includes/doroto-services.php:186 includes/doroto-shortcodes.php:400
 #: includes/doroto-shortcodes.php:772 includes/doroto-shortcodes.php:986
@@ -4475,10 +4166,6 @@ msgstr "ID"
 #: includes/doroto-shortcodes.php:343
 msgid "The final match"
 msgstr "El partido final"
-
-#: includes/doroto-shortcodes.php:320
-msgid "Change of match result in tournament No."
-msgstr "Cambio del resultado de un partido en el torneo n.º"
 
 #: includes/doroto-shortcodes.php:310
 msgid "The option to modify the match results is closed."
@@ -4524,16 +4211,6 @@ msgstr "Compañero I"
 msgid "Player"
 msgstr "Jugador"
 
-#: includes/doroto-shortcodes.php:173
-msgid "Statistical data for"
-msgstr "Estadísticas de"
-
-#: includes/doroto-services.php:62 includes/doroto-shortcodes.php:81
-#: includes/doroto-shortcodes.php:173 includes/doroto-shortcodes.php:1942
-#: includes/doroto-shortcodes.php:1995
-msgid "Tournament no."
-msgstr "Torneo n.º"
-
 #: includes/doroto-shortcodes.php:168
 msgid "Statistical data cannot be displayed without using a filter."
 msgstr "Las estadísticas no se pueden mostrar sin usar un filtro."
@@ -4574,18 +4251,6 @@ msgstr "Jugador desconocido"
 #: src/blocks/invite/render.php:55
 msgid "The registration for the tournament has already been closed."
 msgstr "La inscripción en el torneo ya se ha cerrado."
-
-#: includes/doroto-services.php:200
-msgid ""
-"We are sorry, but the maximum number of registered participants has been "
-"reached in tournament no."
-msgstr ""
-"Lo sentimos, pero se ha alcanzado el número máximo de participantes "
-"inscritos en el torneo n.º"
-
-#: includes/doroto-services.php:194
-msgid "You signed up for tournament no."
-msgstr "Te has inscrito en el torneo n.º"
 
 #: includes/doroto-repeated-functions.php:14
 msgid ""
@@ -4786,14 +4451,6 @@ msgstr ""
 #: includes/doroto-frontend-pages.php:463
 msgid "Best Doubles Partner"
 msgstr "Mejor compañero de dobles."
-
-#: includes/doroto-frontend-pages.php:463
-msgid ""
-"The winner of the tournament is announced as the player with the highest "
-"ratio of games won to games lost. This player may be proclaimed as"
-msgstr ""
-"El ganador del torneo es el jugador con la mayor proporción de juegos "
-"ganados y perdidos. Este jugador puede ser proclamado"
 
 #: includes/doroto-frontend-pages.php:461
 msgid ""
@@ -5005,10 +4662,6 @@ msgstr ""
 msgid "special group"
 msgstr "grupo especial"
 
-#: includes/doroto-frontend-pages.php:428
-msgid "amount of players in"
-msgstr "número de jugadores en el"
-
 #: includes/doroto-frontend-pages.php:427
 msgid "number of players"
 msgstr "número de jugadores"
@@ -5074,18 +4727,6 @@ msgid "Explanation of abbreviation: DoRoTo (DOuble ROtation TOurnament)"
 msgstr ""
 "Explicación de la abreviatura: DoRoTo (DOuble ROtation TOurnament, torneo "
 "rotativo de dobles)"
-
-#: includes/doroto-frontend-pages.php:415
-msgid ""
-"fully adheres to the official tennis rules except for the exceptions "
-"described below."
-msgstr ""
-"se aplican por completo las reglas oficiales del tenis, salvo las "
-"excepciones descritas más abajo."
-
-#: includes/doroto-frontend-pages.php:415
-msgid "In DoRoTo"
-msgstr "En DoRoTo"
 
 #: includes/doroto-frontend-pages.php:414
 msgid "making new friends"
@@ -5159,16 +4800,6 @@ msgstr ""
 "ganador del torneo es el jugador con la mayor proporción. Ese jugador es el "
 "que mejor se adapta a las nuevas circunstancias y se convierte así en el "
 "compañero ideal para jugar dobles."
-
-#: includes/doroto-admin.php:359
-msgid ""
-"is an alternative form of a Doubles Tournament, where players play each "
-"match with a different partner and in different positions (alternating left "
-"and right sides)."
-msgstr ""
-"es una forma alternativa de torneo de dobles en la que los jugadores juegan "
-"cada partido con un compañero distinto y en posiciones distintas (alternando"
-" los lados izquierdo y derecho)."
 
 #: includes/doroto-admin.php:359
 msgid "Doubles Rotation Tournament (hereinafter DoRoTo)"
@@ -5806,3 +5437,410 @@ msgstr "https://doroto.ltcchrast.cz/"
 #: includes/doroto-admin.php:311
 msgid "Doubles Rotation Tournament"
 msgstr "Torneo rotativo de dobles"
+
+#. translators: estimated time to the end of the tournament; 1: hours, 2:
+#. minutes
+#: includes/doroto-shortcodes.php:89
+msgid "%1$d h %2$d min"
+msgstr "%1$d h %2$d min"
+
+#. translators: 1: number of players (e.g. "12" or "10 + 2 = 12" with the
+#. special group), 2: maximum number of players
+#: includes/doroto-shortcodes.php:536
+msgid "%1$s out of a maximum of %2$d"
+msgstr "%1$s de un máximo de %2$d"
+
+#. translators: estimated time to the end of the tournament; %d: hours
+#: includes/doroto-shortcodes.php:92
+msgid "%d h"
+msgstr "%d h"
+
+#. translators: estimated time to the end of the tournament; %d: minutes
+#: includes/doroto-shortcodes.php:95
+msgid "%d min"
+msgstr "%d min"
+
+#. translators: %s: abbreviation of the tournament format (DoRoTo)
+#: includes/doroto-frontend-pages.php:416
+msgid ""
+"%s fully follows the official tennis rules, except for the exceptions "
+"described below."
+msgstr ""
+"En el %s se aplican plenamente las reglas oficiales del tenis, salvo las "
+"excepciones descritas a continuación."
+
+#. translators: %d: tournament number
+#: includes/doroto-shortcodes.php:948
+msgid "Add a new player to tournament no. %d"
+msgstr "Agregar un nuevo jugador al torneo n.º %d"
+
+#. translators: %d: tournament number
+#: includes/doroto-shortcodes.php:1333
+msgid "Adding organizer rights in tournament no. %d"
+msgstr "Concesión de derechos de organizador en el torneo n.º %d"
+
+#. translators: %d: tournament number
+#: includes/doroto-shortcodes.php:1183
+msgid "Addition to the special group of tournament no. %d"
+msgstr "Incorporación al grupo especial del torneo n.º %d"
+
+#: includes/doroto-admin.php:361
+msgid ""
+"An alternative form of a doubles tournament where players play each match "
+"with a different partner and in different positions (alternating left and "
+"right sides)."
+msgstr ""
+"Una forma alternativa de torneo de dobles en la que los jugadores juegan "
+"cada partido con un compañero distinto y en posiciones diferentes "
+"(alternando los lados izquierdo y derecho)."
+
+#: includes/doroto-admin.php:360
+msgid ""
+"An alternative form of a singles tournament where players face each other "
+"without elimination rounds. Depending on the time available, everyone plays "
+"against everyone."
+msgstr ""
+"Una forma alternativa de torneo individual en la que los jugadores se "
+"enfrentan sin rondas eliminatorias. Según el tiempo disponible, todos juegan"
+" contra todos."
+
+#: includes/doroto-shortcodes.php:2978
+#: includes/doroto-tournament-management.php:3111
+msgid "As an administrator, you can:"
+msgstr "Como administrador, puedes:"
+
+#. translators: %s: tournament number
+#: doubles-rotation-tournament.php:335
+msgid "Can I redirect you to tournament no. %s?"
+msgstr "¿Puedo redirigirte al torneo n.º %s?"
+
+#. translators: %d: tournament number
+#: includes/doroto-shortcodes.php:320
+msgid "Change of a match result in tournament no. %d"
+msgstr "Cambio del resultado de un partido en el torneo n.º %d"
+
+#. translators: %d: tournament number
+#: includes/doroto-shortcodes.php:3372
+msgid "Confirm the payment of the selected player in tournament no. %d"
+msgstr "Confirmar el pago del jugador seleccionado en el torneo n.º %d"
+
+#. translators: 1: tournament number, 2: tournament name
+#: includes/doroto-shortcodes.php:2097
+msgid ""
+"Currently, the following matches are being played in tournament no. %1$d "
+"(%2$s):"
+msgstr "En el torneo n.º %1$d (%2$s) se están jugando ahora estos partidos:"
+
+#. translators: %d: tournament number
+#: includes/doroto-shortcodes.php:2919 includes/doroto-view-model.php:381
+msgid "Details about tournament no. %d"
+msgstr "Detalles del torneo n.º %d"
+
+#. translators: %d: tournament number
+#: includes/doroto-shortcodes.php:2210
+msgid "Edit tournament no. %d"
+msgstr "Edición del torneo n.º %d"
+
+#. translators: %s: name of the tournament format (Doubles Rotation
+#. Tournament)
+#: includes/doroto-admin.php:312
+msgid "Help page for %s"
+msgstr "Página de ayuda: %s"
+
+#. translators: %s: tournament type, e.g. "Doubles Tennis"
+#: includes/doroto-tournament-management.php:894
+msgid "I invite you to the %s Rotation Tournament!"
+msgstr "¡Te invito al torneo rotativo %s!"
+
+#: includes/doroto-shortcodes.php:560
+msgid "Lost games"
+msgstr "Juegos perdidos"
+
+#: includes/doroto-shortcodes.php:560
+msgid "Lost points"
+msgstr "Puntos perdidos"
+
+#. translators: %d: match number
+#: includes/doroto-view-model.php:305
+msgid "Match no. %d"
+msgstr "Partido n.º %d"
+
+#. translators: %d: match number
+#: includes/doroto-services.php:108
+msgid "Match no. %d was skipped."
+msgstr "Se ha omitido el partido n.º %d."
+
+#. translators: 1: tournament number, 2: tournament name
+#: includes/doroto-shortcodes.php:1845
+msgid "Match results of tournament no. %1$d (%2$s)."
+msgstr "Resultados de los partidos del torneo n.º %1$d (%2$s)."
+
+#. translators: 1: tournament number, 2: tournament name, 3: names of the
+#. organizers
+#: includes/doroto-repeated-functions.php:710
+msgid "Organizers of tournament no. %1$d (%2$s): %3$s"
+msgstr "Organizadores del torneo n.º %1$d (%2$s): %3$s"
+
+#. translators: 1: number of matches played, 2: number of games played
+#: includes/doroto-shortcodes.php:1848
+msgid "Played so far: matches %1$s, games %2$s."
+msgstr "Jugado hasta ahora: partidos %1$s, juegos %2$s."
+
+#. translators: 1: number of matches played, 2: number of points played
+#: includes/doroto-shortcodes.php:1850
+msgid "Played so far: matches %1$s, points %2$s."
+msgstr "Jugado hasta ahora: partidos %1$s, puntos %2$s."
+
+#. translators: %s: player name
+#: includes/doroto-services.php:174
+msgid "Player %s has been added to the organizers."
+msgstr "El jugador %s se ha agregado a los organizadores."
+
+#. translators: %s: player name
+#: includes/doroto-services.php:150
+msgid "Player %s has been added to the special group."
+msgstr "El jugador %s se ha agregado al grupo especial."
+
+#. translators: %s: player name
+#: includes/doroto-tournament-management.php:3094
+msgid "Player %s has played the same number of matches with everyone."
+msgstr "El jugador %s ha jugado el mismo número de partidos con todos."
+
+#. translators: %s: player name
+#: includes/doroto-services.php:147
+msgid "Player %s has renewed participation."
+msgstr "El jugador %s ha reanudado su participación."
+
+#. translators: %s: player name
+#: includes/doroto-services.php:142
+msgid "Player %s has temporarily suspended participation."
+msgstr "El jugador %s ha pausado temporalmente su participación."
+
+#. translators: %s: player name
+#: includes/doroto-services.php:177
+msgid "Player %s is no longer an organizer."
+msgstr "El jugador %s ya no es organizador."
+
+#. translators: %s: position label of the player (R1)
+#: includes/doroto-shortcodes.php:2168
+msgid "Player %s starts the game by serving."
+msgstr "El jugador %s empieza el juego con el saque."
+
+#. translators: %s: player name
+#: includes/doroto-services.php:134
+msgid "Player %s was added to the tournament."
+msgstr "El jugador %s se ha agregado al torneo."
+
+#. translators: %s: player name
+#: includes/doroto-services.php:153
+msgid "Player %s was removed from the special group."
+msgstr "El jugador %s se ha quitado del grupo especial."
+
+#. translators: %s: player name
+#: includes/doroto-services.php:137
+msgid "Player %s was removed from the tournament."
+msgstr "El jugador %s se ha quitado del torneo."
+
+#. translators: 1: tournament number, 2: tournament name, 3: number of players
+#: includes/doroto-shortcodes.php:540
+msgid "Players of tournament no. %1$d (%2$s): %3$s"
+msgstr "Jugadores del torneo n.º %1$d (%2$s): %3$s"
+
+#. translators: 1: name of this plugin (Rotation Tournaments), 2: slug of the
+#. other plugin
+#: includes/doroto-admin.php:338
+msgid ""
+"Plugins restricting user roles may limit the functionality of %1$s. Pay "
+"attention to the settings of %2$s."
+msgstr ""
+"Los plugins que restringen los roles de usuario pueden limitar el "
+"funcionamiento de %1$s. Presta atención a los ajustes de %2$s."
+
+#. translators: %d: tournament number
+#: includes/doroto-shortcodes.php:3931
+msgid "Register and add a new player to tournament no. %d"
+msgstr "Registrar y añadir un nuevo jugador al torneo n.º %d"
+
+#: includes/doroto-shortcodes.php:547
+msgid "Registration to the tournament is closed."
+msgstr "La inscripción al torneo está cerrada."
+
+#: includes/doroto-shortcodes.php:543
+msgid ""
+"Registration to the tournament is open, but the maximum number of players "
+"has already been reached."
+msgstr ""
+"La inscripción al torneo está abierta, pero ya se ha alcanzado el número "
+"máximo de jugadores."
+
+#: includes/doroto-shortcodes.php:545
+msgid "Registration to the tournament is open."
+msgstr "La inscripción al torneo está abierta."
+
+#. translators: %d: tournament number
+#: includes/doroto-shortcodes.php:1065
+msgid "Removal from the special group of tournament no. %d"
+msgstr "Retirada del grupo especial del torneo n.º %d"
+
+#. translators: %d: tournament number
+#: includes/doroto-shortcodes.php:3496
+msgid "Remove the payment of the selected player in tournament no. %d"
+msgstr "Eliminar el pago del jugador seleccionado en el torneo n.º %d"
+
+#. translators: %d: tournament number
+#: includes/doroto-shortcodes.php:1697
+msgid "Removing a player from tournament no. %d"
+msgstr "Retirada de un jugador del torneo n.º %d"
+
+#. translators: %d: tournament number
+#: includes/doroto-shortcodes.php:1554
+msgid "Resuming the game of the selected player in tournament no. %d"
+msgstr "Reanudación del juego del jugador seleccionado en el torneo n.º %d"
+
+#. translators: %d: tournament number
+#: includes/doroto-shortcodes.php:1435
+msgid "Suspension of the game of the selected player in tournament no. %d"
+msgstr "Pausa del juego del jugador seleccionado en el torneo n.º %d"
+
+#. translators: %d: tournament number
+#: includes/doroto-tournament-management.php:2630
+msgid "The data of tournament no. %d is displayed."
+msgstr "Se muestran los datos del torneo n.º %d."
+
+#. translators: %d: tournament number
+#: includes/doroto-services.php:186
+msgid "The parameters of tournament no. %d were saved."
+msgstr "Se han guardado los parámetros del torneo n.º %d."
+
+#. translators: %s: player name
+#: includes/doroto-services.php:160
+msgid "The payment of player %s has been recorded."
+msgstr "Se ha registrado el pago del jugador %s."
+
+#. translators: %s: player name
+#: includes/doroto-services.php:163
+msgid "The payment of player %s has been removed."
+msgstr "Se ha eliminado el pago del jugador %s."
+
+#. translators: %d: tournament number
+#: includes/doroto-services.php:86
+msgid "The registration of players for tournament no. %d was closed."
+msgstr "Se ha cerrado la inscripción de jugadores del torneo n.º %d."
+
+#. translators: %d: tournament number
+#: includes/doroto-services.php:84
+msgid "The registration of players for tournament no. %d was opened."
+msgstr "Se ha abierto la inscripción de jugadores del torneo n.º %d."
+
+#. translators: 1: match number, 2: score of team 1, 3: score of team 2
+#: includes/doroto-services.php:103
+msgid ""
+"The result of match no. %1$d was already entered with the score %2$d:%3$d."
+msgstr ""
+"El resultado del partido n.º %1$d ya se había ingresado con el marcador "
+"%2$d:%3$d."
+
+#. translators: 1: match number, 2: score of team 1, 3: score of team 2
+#: includes/doroto-services.php:111
+msgid "The result of match no. %1$d was saved with the score %2$d:%3$d."
+msgstr ""
+"El resultado del partido n.º %1$d se ha guardado con el marcador %2$d:%3$d."
+
+#. translators: %d: match number
+#: includes/doroto-services.php:119
+msgid "The result of match no. %d was changed."
+msgstr "Se ha cambiado el resultado del partido n.º %d."
+
+#: includes/doroto-shortcodes.php:412
+msgid "The result of the final match was changed."
+msgstr "Se ha cambiado el resultado del partido final."
+
+#. translators: %s: title of the winner (Best Doubles Partner)
+#: includes/doroto-frontend-pages.php:466
+msgid ""
+"The winner of the tournament is the player with the highest ratio of games "
+"won to games lost. This player may be proclaimed the %s."
+msgstr ""
+"El ganador del torneo es el jugador con la mayor proporción de juegos "
+"ganados frente a perdidos. Este jugador puede ser proclamado %s."
+
+#. translators: 1: tournament number, 2: tournament name
+#: includes/doroto-shortcodes.php:1997
+msgid "Tournament no. %1$d (%2$s) is closed."
+msgstr "El torneo n.º %1$d (%2$s) está cerrado."
+
+#. translators: 1: tournament number, 2: percentage of the tournament played
+#. (e.g. "40 %")
+#: includes/doroto-shortcodes.php:82
+msgid "Tournament no. %1$d: %2$s completed."
+msgstr "Torneo n.º %1$d: %2$s completado."
+
+#. translators: 1: tournament number, 2: player name
+#: includes/doroto-shortcodes.php:180
+msgid "Tournament no. %1$d: statistical data for %2$s."
+msgstr "Torneo n.º %1$d: estadísticas de %2$s."
+
+#. translators: %d: tournament number
+#: includes/doroto-services.php:78
+msgid ""
+"Tournament no. %d does not have enough players to close the registration."
+msgstr ""
+"El torneo n.º %d no tiene suficientes jugadores para cerrar la inscripción."
+
+#. translators: %d: tournament number
+#: includes/doroto-services.php:99
+msgid "Tournament no. %d has not been scheduled yet."
+msgstr "Aún no se han sorteado partidos en el torneo n.º %d."
+
+#. translators: %d: tournament number
+#: includes/doroto-services.php:193
+msgid "Tournament no. %d was deleted."
+msgstr "Se ha eliminado el torneo n.º %d."
+
+#. translators: %d: tournament number
+#: includes/doroto-shortcodes.php:1943
+msgid "Tournament no. %d was not found."
+msgstr "No se ha encontrado el torneo n.º %d."
+
+#. translators: %d: tournament number
+#: includes/doroto-services.php:218
+msgid ""
+"We are sorry, but tournament no. %d has already reached the maximum number "
+"of registered participants."
+msgstr ""
+"Lo sentimos, pero el torneo n.º %d ya ha alcanzado el número máximo de "
+"participantes inscritos."
+
+#: includes/doroto-shortcodes.php:559
+msgid "Won games"
+msgstr "Juegos ganados"
+
+#: includes/doroto-shortcodes.php:559
+msgid "Won points"
+msgstr "Puntos ganados"
+
+#. translators: %d: tournament number
+#: includes/doroto-services.php:213
+msgid "You are already registered in tournament no. %d."
+msgstr "Ya estás inscrito en el torneo n.º %d."
+
+#. translators: %d: tournament number
+#: includes/doroto-shortcodes.php:2818
+msgid "You are not authorized to change the parameters of tournament no. %d."
+msgstr "No tienes permiso para cambiar los parámetros del torneo n.º %d."
+
+#. translators: %d: tournament number
+#: includes/doroto-services.php:210
+msgid "You signed up for tournament no. %d."
+msgstr "Te has inscrito en el torneo n.º %d."
+
+#. translators: %s: link "special group"
+#: includes/doroto-frontend-pages.php:430
+msgid "number of players in the %s"
+msgstr "número de jugadores en la categoría “%s”"
+
+#. translators: 1: name of the settings section, 2: name of the setting
+#: includes/doroto-shortcodes.php:3344
+msgid "To record payments from players, turn on this option in %1$s: %2$s"
+msgstr ""
+"Para registrar los pagos de los jugadores, activa esta opción en %1$s: %2$s"

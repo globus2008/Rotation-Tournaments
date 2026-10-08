@@ -354,7 +354,7 @@ msgstr "เพิ่ม – ผู้เล่นที่เสิร์ฟม�
 
 #. Found in changelog list item.
 #, gp-priority: low
-msgid "Add - the tournament block takes its colours from the theme (button and palette colours); the block's Styles panel can change the accent, the tab bar and table headers, their text and the colour of the special group"
+msgid "Add - the tournament block takes its colors from the theme (button and palette colors); the block's Styles panel can change the accent, the tab bar and table headers, their text and the color of the special group"
 msgstr "เพิ่ม – บล็อกทัวร์นาเมนต์ใช้สีจากธีม (สีปุ่มและชุดสี) แผงสไตล์ของบล็อกเปลี่ยนสีเน้น แถบแท็บและหัวตาราง ข้อความ และสีของกลุ่มพิเศษได้"
 
 #. Found in changelog list item.
@@ -1286,4 +1286,3 @@ msgstr "ปรับหน้าจอผู้ดูแลเล็กน้อ
 #, gp-priority: low
 msgid "First release to public."
 msgstr "เผยแพร่สู่สาธารณะครั้งแรก"
-
