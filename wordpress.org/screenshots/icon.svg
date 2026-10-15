@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <!-- Rotation Tournaments: a doubles court seen from above (4 players), circled by the rotation arrows. -->
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1f5fc4"/>
+      <stop offset="1" stop-color="#0b2a66"/>
+    </linearGradient>
+  </defs>
+  <rect width="256" height="256" rx="56" fill="url(#bg)"/>
+  <!-- rotation arrows -->
+  <g fill="none" stroke-width="17" stroke-linecap="round">
+    <path d="M 46 116 A 84 84 0 0 1 192 70" stroke="#8fd14f"/>
+    <path d="M 210 140 A 84 84 0 0 1 64 186" stroke="#5ec8ff"/>
+  </g>
+  <polygon points="214,50 214,98 170,82" fill="#8fd14f"/>
+  <polygon points="42,206 42,158 86,174" fill="#5ec8ff"/>
+  <!-- court -->
+  <rect x="80" y="70" width="96" height="116" rx="7" fill="#ffffff" fill-opacity="0.12" stroke="#ffffff" stroke-width="5"/>
+  <line x1="72" y1="128" x2="184" y2="128" stroke="#ffffff" stroke-width="5"/>
+  <line x1="128" y1="70" x2="128" y2="186" stroke="#ffffff" stroke-width="3" stroke-opacity="0.55"/>
+  <!-- players: two teams -->
+  <circle cx="104" cy="99" r="14" fill="#8fd14f"/>
+  <circle cx="152" cy="99" r="14" fill="#5ec8ff"/>
+  <circle cx="104" cy="157" r="14" fill="#5ec8ff"/>
+  <circle cx="152" cy="157" r="14" fill="#8fd14f"/>
+</svg>

@@ -1,90 +1,70 @@
 === Rotation Tournaments ===
 Contributors: globus2008
-Tags: tournament, game, ranking, sport, tennis
+Tags: tournament, tennis, padel, badminton, doubles
 Requires at least: 6.5
 Tested up to: 7.1.3
-Stable tag: 2.0.1
+Stable tag: 2.0.2
 License: GPLv3 or later
 License URI: [GNU GPL v3.0](https://www.gnu.org/licenses/gpl-3.0.html)
 
-
-Do you play Singles or Doubles Tournaments? This plugin manages Rotation Tournaments where players have a different partner in each game.
+Run doubles and singles tournaments where players get a new partner every match: fair draws, live results, standings and an Android app.
 
 == Description ==
 
-**Rotation Tournaments** provides a platform for organizing all kinds of sports Singles and Doubles Tournaments, e.g.
+**Rotation Tournaments** runs club tournaments in which nobody is knocked out. In doubles, every player gets a **new partner in every match** and meets as many different opponents as possible. The ranking is the ratio of games won to games lost, so everybody plays until the very end.
 
-- Tennis
-- Table Tennis
-- Padel
-- Badminton
-- Beach Volleyball
-- Squash
+It is made for club evenings and social tournaments in **tennis, padel, badminton, table tennis, squash, beach volleyball** and other sports played one against one or two against two.
 
-In **Rotation Tournaments**, each participant plays against every other participant and there are no eliminations in individual rounds. To maximize the variety of match combinations, the matches are typically played in a single set.
+**How a tournament works**
 
-The **Rotation Tournaments** have a strong social aspect because its goal is to keep players in the tournament until the very end. The situation where weaker players would leave the tournament due to elimination rounds is eliminated. It allows grouping players into a special category with special conditions. This special setting can be utilized, for example, in mixed tournaments.
+1. The organizer creates a tournament and shares the invitation link or QR code.
+2. Players join (also later, during the tournament) and the plugin draws the first matches for the free courts.
+3. Whoever finishes a match enters the score on the website or in the Android app; the next match is drawn at once.
+4. Standings, statistics and the presentation on a big screen update live.
+5. At the end the organizer closes the tournament and the best player and the best pair are announced.
 
-The participants of a tournament change partners several times during the tournament by a random selection and play against different players. The ratio of games won to games lost is calculated for each participant. The winner of the tournament is the player with this highest ratio. While a Singles Rotation Tournament can be organized without the aid of technology, in the case of a Doubles Rotation Tournament, this is not possible.
+**The draw**
 
-**This plugin is the server-side for the "Rotation Tournaments" Android app.**
+* New teammates first: the plugin pairs players who have not played together yet.
+* Opponents are chosen by previous meetings too, so the same players meet less often.
+* Players with fewer games and longer rest go first; sides (left/right) and serve alternate.
+* Works with any number of players from 4 up, odd numbers included; players can join, pause or leave at any time.
+* Special group of players (e.g. women in a mixed tournament) with its own rules: mixed teams only, a separate winner and more.
 
-To get the full experience of managing tournaments on the go, download our mobile app, now available on Google Play!
+**For the website**
 
-== Features ==
+* Blocks for the block editor: "Rotation tournament" (matches, results, players, statistics and settings on tabs), "Tournament standings", "Tournament matches", "Tournament presentation", "Tournament list" and "Tournament invitation". Shortcodes for the classic editor.
+* Live updates without reloading the page.
+* Presentation mode for a TV or projector in the club house.
+* Share dialog with a QR code and a link that opens the tournament in the app.
+* Colors follow your theme; the block's Styles panel can change them.
+* Guided tours of the page and four example tournaments.
+* Players sign in with their WordPress accounts; full or shortened names (privacy).
 
-**General Features:**
+**Android app**
 
-- Seamless scheduling of matches.
-- Real-time score tracking.
-- Customizable settings for each tournament.
-- User-friendly interface for administrators and participants.
-- Comprehensive overview of player quality.
-- No downtime during the tournament.
-- Integration with website user accounts.
-- Suitable for various sports: tennis, table tennis, squash, padel, badminton, beach volleyball, and more.
+The free [Rotation Tournaments app](https://play.google.com/store/apps/details?id=cz.doroto.app) connects to your website: players follow the tournament, enter their results and organizers manage it from the court. The app is available in 27 languages. Several devices can be signed in to one account.
 
-**Singles Rotation Tournament:**
+**Try it**
 
-- Alternative form of a Singles Tournament where players face each other without elimination rounds.
-- Depending on the time options, everyone plays against everyone.
-
-**Doubles Rotation Tournament:**
-
-- Alternative form of a Doubles Tournament where players enter each match with a different partner and in different positions (alternating left and right sides).
-- Rotation of teammates, ensuring variety in partnerships.
-- Individuals can enter the tournament without a permanent teammate.
-- Suitable for odd numbers of players and minimum lineups of 4 players.
-- Define special groups of players with unique conditions.
-- No eliminations, ensuring all players stay in the game.
-- Shorter matches for more participation.
-- Tournament can be interrupted or extended without disruption.
-- Individual players can join or leave the tournament at any time.
-- Ranking based on the ratio of games won to games lost.
-- Announcement of the Best Player and Most Ideal Pair at the end of the tournament.
-
-**YouTube quick intro:**
-
-- Video for a quick introduction to the Rotation Tournament: 
+* [Demo site](https://doroto.ltcchrast.cz/) where you can create your own tournament.
+* [Rules of the Doubles Rotation Tournament](https://doroto.ltcchrast.cz/rules-of-the-doubles-rotation-tournament/).
+* Video introduction:
 
 [youtube https://www.youtube.com/watch?v=NoL9aPTv8u8]
 
-= More information =
-
-Visit [test page](https://doroto.ltcchrast.cz/) for more information, try to create your own tournament and take a look at [Rules of the Doubles Rotation Tournament](https://doroto.ltcchrast.cz/rules-of-the-doubles-rotation-tournament/).
-
 == Screenshots ==
 
-1. Matches drawn. (Wordpress)
-2. Basic overview of the tournament. (Android app)
-3. Matches played. (Wordpress)
-4. Table of players with rankings. (Android app)
-5. Editing tournament parameters. (Wordpress)
-6. Matches drawn. (Android app)
-7. Tournament table. (Wordpress)
-8. Matches played. (Android app)
-9. Individual tournament participants enter their results into the WordPress server and share the data with each other.
-
+1. The same tournament on the website and in the Android app.
+2. Ongoing matches: the next match is drawn as soon as a score is saved. Names of the special group are highlighted.
+3. Results of all matches, with a filter by player.
+4. Live standings by the ratio of games won to games lost, with the trend of each player.
+5. Statistics: how often a player played with and against each other player.
+6. Presentation mode for a TV or projector in the club house.
+7. Share the tournament with a QR code; it opens the tournament in the app.
+8. The "Rotation tournament" block in the block editor.
+9. Tournament settings for organizers.
+10. Android app: entering results, standings and played matches.
 
 == Installation ==
 
@@ -119,7 +99,7 @@ Yes. When creating a tournament, you can choose whether to create a singles or a
 
 = Will there be an iPhone or iPad version of the app? =
 
-Yes. An iOS version of the Rotation Tournaments app is planned and will be released in the near future.
+An iOS version is planned, but there is no release date yet. The tournament pages work in any mobile browser, including iPhone and iPad.
 
 = Will my website be visible in the Rotation Tournaments Android app? =
 
@@ -132,6 +112,10 @@ You can use this plugin for tennis, table tennis, squash, padel, badminton, beac
 
 
 == Changelog ==
+= 2.0.2 - 2026/10/15 =
+* Improvement - new plugin icon and banner, the same icon as the Android app
+* Improvement - readme: new description of the draw, the blocks and the app; new screenshots (also in Spanish for Chile)
+
 = 2.0.1 - 2026/10/08 =
 * Improvement - messages, headings and notices are translated as whole sentences, so languages with a different word order (e.g. Turkish, Hungarian, Hindi, Japanese, Korean and Chinese) read naturally
 * Improvement - the round-end notice of the tournament block no longer repeats the texts of its buttons

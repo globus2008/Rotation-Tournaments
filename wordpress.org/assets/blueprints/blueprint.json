@@ -1,0 +1,37 @@
+{
+    "landingPage": "\/?page_id=4",
+    "features": {
+        "networking": true
+    },
+    "phpExtensionBundles": [
+      "kitchen-sink"
+    ],
+    "steps": [
+        {
+            "step": "login",
+            "username": "admin",
+            "password": "password"
+        },
+    {
+      "step": "installPlugin",
+      "pluginZipFile": {
+        "resource": "wordpress.org/plugins",
+        "slug": "doubles-rotation-tournament"
+      },
+      "options": {
+        "activate": true
+      }
+    },
+	{
+            "step": "installTheme",
+            "themeZipFile": {
+                "resource": "wordpress.org/themes",
+                "slug": "generatepress"
+            },
+            "options": {
+                "activate": true
+            }
+        }
+	
+  ]
+}

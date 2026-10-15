@@ -1,3 +1,7 @@
 node_modules/
 .DS_Store
 *.log
+# Raw captures and local ids (rebuilt by the scripts)
+wordpress.org/screenshots/raw/
+wordpress.org/screenshots/state.json
+wordpress.org/screenshots/__pycache__/
