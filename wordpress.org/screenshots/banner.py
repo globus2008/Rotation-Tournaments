@@ -22,6 +22,8 @@ TEXTS = {
               ['Tennis', 'Padel', 'Badminton', 'Table tennis', 'Squash', 'Beach volleyball']),
     'es_CL': ('Dobles con una nueva pareja en cada partido', 'nueva pareja',
               ['Tenis', 'Pádel', 'Bádminton', 'Tenis de mesa', 'Squash', 'Vóleibol playa']),
+    'cs_CZ': ('Čtyřhra s novým spoluhráčem v každém zápase', 'novým spoluhráčem',
+              ['Tenis', 'Padel', 'Badminton', 'Stolní tenis', 'Squash', 'Plážový volejbal']),
 }
 TAGLINE, HIGHLIGHT, SPORTS = TEXTS.get(LOCALE, TEXTS['en_US'])
 

@@ -369,7 +369,7 @@ msgstr "Results can be filtered by player."
 
 #: includes/doroto-help.php:240
 msgid "The label \"suspended\" next to the names of Iga Swiatek and Novak Djokovic shows that their game is still suspended."
-msgstr "The label \"suspended\" next to the names of Iga Swiatek and Novak Djokovic shows that their game is still suspended."
+msgstr "The label \"suspended\" next to the names of Iga Świątek and Novak Djokovic shows that their game is still suspended."
 
 #: includes/doroto-help.php:221
 msgid "The organizer can skip several matches at once, for example when players have left. The next matches are drawn from all free players."
@@ -393,7 +393,7 @@ msgstr "Click this icon to view help. It will guide you through the various opti
 
 #: includes/doroto-help.php:154
 msgid "Add a player from the player database, or create a new account for a player. The new player gets an e-mail with a link to set the password."
-msgstr "Add a player from the player database, or create a new account for a player. The new player gets an e-mail with a link to set the password."
+msgstr "Add a player from the player database, or create a new account for a player. The new player gets an email with a link to set the password."
 
 #: includes/doroto-help.php:149 includes/doroto-help.php:247
 msgid "Choose a player to see how many times they played with each player as a teammate and against them."
@@ -695,11 +695,11 @@ msgstr "Create and add"
 
 #: build/blocks/tournament/render.php:434 src/blocks/tournament/render.php:434
 msgid "The player gets an e-mail with a link to set the password."
-msgstr "The player gets an e-mail with a link to set the password."
+msgstr "The player gets an email with a link to set the password."
 
 #: build/blocks/tournament/render.php:426 src/blocks/tournament/render.php:426
 msgid "E-mail"
-msgstr "E-mail"
+msgstr "Email"
 
 #: build/blocks/tournament/render.php:426 src/blocks/tournament/render.php:426
 msgid "Last name"
@@ -948,7 +948,7 @@ msgstr "Sign up for the tournament"
 
 #: includes/doroto-endpoints.php:2990
 msgid "Your login e-mail:"
-msgstr "Your login e-mail:"
+msgstr "Your login email:"
 
 #: includes/doroto-endpoints.php:2988
 msgid "To sign in on the website or in the Doroto app, first set your password here:"
@@ -1657,7 +1657,7 @@ msgstr "To prevent an absent player from being declared the winner, this option 
 
 #: doubles-rotation-tournament.php:406 includes/doroto-help.php:242
 msgid "It is also not necessary to play all the matches to complete the round. Perhaps Iga Swiatek and Novak Djokovic will not be coming and so the round-robin game could not be completed."
-msgstr "It is also not necessary to play all the matches to complete the round. Perhaps Iga Swiatek and Novak Djokovic will not be coming and so the round-robin game could not be completed."
+msgstr "It is also not necessary to play all the matches to complete the round. Perhaps Iga Świątek and Novak Djokovic will not be coming and so the round-robin game could not be completed."
 
 #: doubles-rotation-tournament.php:405 includes/doroto-help.php:241
 msgid "It is important to understand that the total number of matches played does not affect the ranking. What matters is the ratio of points won and lost."
@@ -1665,11 +1665,11 @@ msgstr "It is important to understand that the total number of matches played do
 
 #: doubles-rotation-tournament.php:404
 msgid "The fact that Iga Swiatek and Novak Djokovic still have a suspended game can be seen by the check box next to their names."
-msgstr "The fact that Iga Swiatek and Novak Djokovic still have a suspended game can be seen by the check box next to their names."
+msgstr "The fact that Iga Świątek and Novak Djokovic still have a suspended game can be seen by the check box next to their names."
 
 #: doubles-rotation-tournament.php:403 includes/doroto-help.php:239
 msgid "The overview shows that the players played a different number of matches due to the fact that Iga Swiatek and Novak Djokovic decided to interrupt the tournament sometime in the middle."
-msgstr "The overview shows that the players played a different number of matches due to the fact that Iga Swiatek and Novak Djokovic decided to interrupt the tournament sometime in the middle."
+msgstr "The overview shows that the players played a different number of matches due to the fact that Iga Świątek and Novak Djokovic decided to interrupt the tournament sometime in the middle."
 
 #: doubles-rotation-tournament.php:402 includes/doroto-help.php:237
 msgid "At the same time, the winner in the best player of the tournament category was announced."
@@ -2297,7 +2297,7 @@ msgstr "Terms used:"
 
 #: includes/doroto-admin.php:331
 msgid "The minimum number of registered players in Wordpress is 4."
-msgstr "The minimum number of registered players in Wordpress is 4."
+msgstr "The minimum number of registered players in WordPress is 4."
 
 #: includes/doroto-admin.php:331
 msgid "Since the plugin only works with registered players, a very low number of registered users may affect the functionality."
@@ -2309,7 +2309,7 @@ msgstr "Allow anyone to register"
 
 #: includes/doroto-admin.php:324
 msgid "You have the Anyone Can Register option disabled in your Wordpress settings, which could interfere with the functionality of this plugin!"
-msgstr "You have the Anyone Can Register option disabled in your Wordpress settings, which could interfere with the functionality of this plugin!"
+msgstr "You have the Anyone Can Register option disabled in your WordPress settings, which could interfere with the functionality of this plugin!"
 
 #: includes/doroto-admin.php:312
 msgid "A post with an example of a tournament presentation."

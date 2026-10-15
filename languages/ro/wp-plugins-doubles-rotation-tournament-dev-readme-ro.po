@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plugins - Rotation Tournaments - Development Readme (trunk)\n"
-"PO-Revision-Date: 2026-10-08 18:18:50+0000\n"
+"PO-Revision-Date: 2026-10-15 07:57:04+0000\n"
 "Language: ro_RO\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -13,13 +13,161 @@ msgstr ""
 
 #. Short description.
 #, gp-priority: high
-msgid "Do you play Singles or Doubles Tournaments? This plugin manages Rotation Tournaments where players have a different partner in each game."
-msgstr "Jucați turnee de simplu sau de dublu? Acest modul gestionează turnee rotative, în care jucătorii au un partener nou în fiecare joc."
+msgid "Run doubles and singles tournaments where players get a new partner every match: fair draws, live results, standings and an Android app."
+msgstr "Organizați turnee de dublu și de simplu în care jucătorii au un partener nou la fiecare meci: trageri la sorți corecte, rezultate în timp real, clasament și o aplicație pentru Android."
 
 #. Plugin name.
 #, gp-priority: high
 msgid "Rotation Tournaments"
 msgstr "Turnee rotative"
+
+#. Found in faq paragraph.
+msgid "An iOS version is planned, but there is no release date yet. The tournament pages work in any mobile browser, including iPhone and iPad."
+msgstr "Este planificată o versiune pentru iOS, dar încă nu are o dată de lansare. Paginile turneului funcționează în orice browser mobil, inclusiv pe iPhone și iPad."
+
+#. Found in description paragraph.
+msgid "The free <a href=\"https://play.google.com/store/apps/details?id=cz.doroto.app\">Rotation Tournaments app</a> connects to your website: players follow the tournament, enter their results and organizers manage it from the court. The app is available in 27 languages. Several devices can be signed in to one account."
+msgstr "<a href=\"https://play.google.com/store/apps/details?id=cz.doroto.app\">Aplicația Rotation Tournaments</a>, gratuită, se conectează la site-ul dumneavoastră: jucătorii urmăresc turneul și își introduc rezultatele, iar organizatorii îl gestionează direct de pe teren. Aplicația este disponibilă în 27 de limbi. Mai multe dispozitive pot fi autentificate în același cont."
+
+#. Found in description paragraph.
+msgid "<strong>Android app</strong>"
+msgstr "<strong>Aplicația pentru Android</strong>"
+
+#. Found in description paragraph.
+msgid "<strong>For the website</strong>"
+msgstr "<strong>Pentru site</strong>"
+
+#. Found in description paragraph.
+msgid "<strong>The draw</strong>"
+msgstr "<strong>Tragerea la sorți</strong>"
+
+#. Found in description paragraph.
+msgid "<strong>How a tournament works</strong>"
+msgstr "<strong>Cum se desfășoară un turneu</strong>"
+
+#. Found in description paragraph.
+msgid "It is made for club evenings and social tournaments in <strong>tennis, padel, badminton, table tennis, squash, beach volleyball</strong> and other sports played one against one or two against two."
+msgstr "Este gândit pentru serile de club și turneele amicale de <strong>tenis, padel, badminton, tenis de masă, squash, volei pe plajă</strong> și alte sporturi jucate unu la unu sau doi la doi."
+
+#. Found in description paragraph.
+msgid "<strong>Rotation Tournaments</strong> runs club tournaments in which nobody is knocked out. In doubles, every player gets a <strong>new partner in every match</strong> and meets as many different opponents as possible. The ranking is the ratio of games won to games lost, so everybody plays until the very end."
+msgstr "<strong>Turnee rotative</strong> organizează turnee de club în care nimeni nu este eliminat. La dublu, fiecare jucător primește un <strong>partener nou la fiecare meci</strong> și întâlnește cât mai mulți adversari diferiți. Clasamentul este raportul dintre ghemurile câștigate și cele pierdute, așa că toată lumea joacă până la final."
+
+#. Found in description list item.
+msgid "Video introduction:"
+msgstr "Prezentare video:"
+
+#. Found in description list item.
+msgid "<a href=\"https://doroto.ltcchrast.cz/rules-of-the-doubles-rotation-tournament/\">Rules of the Doubles Rotation Tournament</a>."
+msgstr "<a href=\"https://doroto.ltcchrast.cz/rules-of-the-doubles-rotation-tournament/\">Regulile turneului rotativ de dublu</a>."
+
+#. Found in description list item.
+msgid "<a href=\"https://doroto.ltcchrast.cz/\">Demo site</a> where you can create your own tournament."
+msgstr "<a href=\"https://doroto.ltcchrast.cz/\">Site demonstrativ</a> unde vă puteți crea propriul turneu."
+
+#. Found in description list item.
+msgid "Players sign in with their WordPress accounts; full or shortened names (privacy)."
+msgstr "Jucătorii se autentifică cu conturile lor WordPress; nume complete sau prescurtate (confidențialitate)."
+
+#. Found in description list item.
+msgid "Guided tours of the page and four example tournaments."
+msgstr "Ghiduri interactive ale paginii și patru turnee de exemplu."
+
+#. Found in description list item.
+msgid "Colors follow your theme; the block's Styles panel can change them."
+msgstr "Culorile urmează tema dumneavoastră; panoul Stiluri al blocului le poate schimba."
+
+#. Found in description list item.
+msgid "Share dialog with a QR code and a link that opens the tournament in the app."
+msgstr "Dialog Distribuie cu un cod QR și o legătură care deschide turneul în aplicație."
+
+#. Found in description list item.
+msgid "Live updates without reloading the page."
+msgstr "Actualizare în timp real fără reîncărcarea paginii."
+
+#. Found in description list item.
+msgid "Blocks for the block editor: \"Rotation tournament\" (matches, results, players, statistics and settings on tabs), \"Tournament standings\", \"Tournament matches\", \"Tournament presentation\", \"Tournament list\" and \"Tournament invitation\". Shortcodes for the classic editor."
+msgstr "Blocuri pentru editorul de blocuri: „Turneu rotativ” (meciuri, rezultate, jucători, statistici și setări în file), „Clasamentul turneului”, „Meciurile turneului”, „Prezentarea turneului”, „Lista turneelor” și „Invitație la turneu”. Coduri scurte pentru editorul clasic."
+
+#. Found in description list item.
+msgid "Special group of players (e.g. women in a mixed tournament) with its own rules: mixed teams only, a separate winner and more."
+msgstr "Grup special de jucători (de ex. femeile într-un turneu mixt) cu reguli proprii: numai echipe mixte, un câștigător separat și altele."
+
+#. Found in description list item.
+msgid "Works with any number of players from 4 up, odd numbers included; players can join, pause or leave at any time."
+msgstr "Funcționează cu orice număr de jucători de la 4 în sus, inclusiv impar; jucătorii se pot alătura, pot lua o pauză sau pot pleca oricând."
+
+#. Found in description list item.
+msgid "Players with fewer games and longer rest go first; sides (left/right) and serve alternate."
+msgstr "Au prioritate jucătorii cu mai puține meciuri și cu o pauză mai lungă; părțile (stânga/dreapta) și serviciul alternează."
+
+#. Found in description list item.
+msgid "Opponents are chosen by previous meetings too, so the same players meet less often."
+msgstr "Adversarii sunt aleși și după întâlnirile anterioare, astfel încât aceiași jucători se întâlnesc mai rar."
+
+#. Found in description list item.
+msgid "New teammates first: the plugin pairs players who have not played together yet."
+msgstr "Mai întâi parteneri noi: modulul formează perechi din jucători care încă nu au jucat împreună."
+
+#. Found in description list item.
+msgid "At the end the organizer closes the tournament and the best player and the best pair are announced."
+msgstr "La final, organizatorul închide turneul și sunt anunțați cel mai bun jucător și cea mai bună pereche."
+
+#. Found in description list item.
+msgid "Standings, statistics and the presentation on a big screen update live."
+msgstr "Clasamentul, statisticile și prezentarea pe un ecran mare se actualizează în timp real."
+
+#. Found in description list item.
+msgid "Whoever finishes a match enters the score on the website or in the Android app; the next match is drawn at once."
+msgstr "Cine termină un meci introduce scorul pe site sau în aplicația pentru Android; următorul meci este tras la sorți imediat."
+
+#. Found in description list item.
+msgid "Players join (also later, during the tournament) and the plugin draws the first matches for the free courts."
+msgstr "Jucătorii se înscriu (și mai târziu, în timpul turneului), iar modulul trage la sorți primele meciuri pentru terenurile libere."
+
+#. Found in description list item.
+msgid "The organizer creates a tournament and shares the invitation link or QR code."
+msgstr "Organizatorul creează un turneu și distribuie legătura de invitație sau codul QR."
+
+#. Screenshot description.
+msgid "Android app: entering results, standings and played matches."
+msgstr "Aplicația pentru Android: introducerea rezultatelor, clasament și meciuri jucate."
+
+#. Screenshot description.
+msgid "Tournament settings for organizers."
+msgstr "Setările turneului pentru organizatori."
+
+#. Screenshot description.
+msgid "The \"Rotation tournament\" block in the block editor."
+msgstr "Blocul „Turneu rotativ” în editorul de blocuri."
+
+#. Screenshot description.
+msgid "Share the tournament with a QR code; it opens the tournament in the app."
+msgstr "Distribuiți turneul cu un cod QR; acesta deschide turneul în aplicație."
+
+#. Found in description list item.
+msgid "Presentation mode for a TV or projector in the club house."
+msgstr "Mod de prezentare pentru un televizor sau un proiector în clubul sportiv."
+
+#. Screenshot description.
+msgid "Statistics: how often a player played with and against each other player."
+msgstr "Statistici: de câte ori un jucător a jucat cu și împotriva fiecărui alt jucător."
+
+#. Screenshot description.
+msgid "Live standings by the ratio of games won to games lost, with the trend of each player."
+msgstr "Clasament în timp real după raportul dintre ghemurile câștigate și cele pierdute, cu tendința fiecărui jucător."
+
+#. Screenshot description.
+msgid "Results of all matches, with a filter by player."
+msgstr "Rezultatele tuturor meciurilor, cu filtru după jucător."
+
+#. Screenshot description.
+msgid "Ongoing matches: the next match is drawn as soon as a score is saved. Names of the special group are highlighted."
+msgstr "Meciuri în desfășurare: următorul meci este tras la sorți imediat ce se salvează un scor. Numele din grupul special sunt evidențiate."
+
+#. Screenshot description.
+msgid "The same tournament on the website and in the Android app."
+msgstr "Același turneu pe site și în aplicația pentru Android."
 
 #. Found in installation paragraph.
 msgid "After installation, go to the app's settings and enter the address of your website where this plugin is installed."
@@ -33,25 +181,9 @@ msgstr "Sau descărcați-o direct de aici: https://play.google.com/store/apps/de
 msgid "Search for \"Rotation Tournaments\" on the Google Play Store."
 msgstr "Căutați „Rotation Tournaments” în Google Play."
 
-#. Found in description paragraph.
-msgid "To get the full experience of managing tournaments on the go, download our mobile app, now available on Google Play!"
-msgstr "Pentru a gestiona complet turneele din mers, descărcați aplicația noastră mobilă, disponibilă acum pe Google Play!"
-
-#. Found in description paragraph.
-msgid "<strong>YouTube quick intro:</strong>"
-msgstr "<strong>Scurtă introducere pe YouTube:</strong>"
-
-#. Found in description list item.
-msgid "Video for a quick introduction to the Rotation Tournament:"
-msgstr "Videoclip cu o scurtă introducere în turneul rotativ:"
-
 #. Found in faq paragraph.
 msgid "Yes. If you install the Rotation Tournaments plugin, allow player registration, and enable visibility in the website list, your site can appear in the Android app. Initially, someone must manually enter your website address into the app. After that, it becomes visible in the list for all users."
 msgstr "Da. Dacă instalați modulul Rotation Tournaments, permiteți înregistrarea jucătorilor și activați vizibilitatea în lista de site-uri, site-ul dumneavoastră poate apărea în aplicația Android. Mai întâi, cineva trebuie să introducă manual adresa site-ului în aplicație. După aceea, site-ul devine vizibil în listă pentru toți utilizatorii."
-
-#. Found in faq paragraph.
-msgid "Yes. An iOS version of the Rotation Tournaments app is planned and will be released in the near future."
-msgstr "Da. O versiune iOS a aplicației Rotation Tournaments este planificată și va fi lansată în curând."
 
 #. Found in faq header.
 msgid "Will my website be visible in the Rotation Tournaments Android app?"
@@ -74,80 +206,12 @@ msgid "<strong>How to install the Android app:</strong>"
 msgstr "<strong>Cum se instalează aplicația Android:</strong>"
 
 #. Found in description paragraph.
-msgid "<strong>This plugin is the server-side for the \"Rotation Tournaments\" Android app.</strong>"
-msgstr "<strong>Acest modul este partea de server a aplicației Android „Rotation Tournaments”.</strong>"
-
-#. Screenshot description.
-msgid "Individual tournament participants enter their results into the WordPress server and share the data with each other."
-msgstr "Participanții la turneu își introduc rezultatele pe serverul WordPress și își partajează datele între ei."
-
-#. Screenshot description.
-msgid "Matches played. (Android app)"
-msgstr "Meciuri jucate. (Aplicația Android)"
-
-#. Screenshot description.
-msgid "Tournament table. (Wordpress)"
-msgstr "Tabelul turneului. (WordPress)"
-
-#. Screenshot description.
-msgid "Matches drawn. (Android app)"
-msgstr "Meciuri trase la sorți. (Aplicația Android)"
-
-#. Screenshot description.
-msgid "Editing tournament parameters. (Wordpress)"
-msgstr "Editarea parametrilor turneului. (WordPress)"
-
-#. Screenshot description.
-msgid "Table of players with rankings. (Android app)"
-msgstr "Tabelul jucătorilor cu clasament. (Aplicația Android)"
-
-#. Screenshot description.
-msgid "Matches played. (Wordpress)"
-msgstr "Meciuri jucate. (WordPress)"
-
-#. Screenshot description.
-msgid "Basic overview of the tournament. (Android app)"
-msgstr "Prezentarea generală a turneului. (Aplicația Android)"
-
-#. Screenshot description.
-msgid "Matches drawn. (Wordpress)"
-msgstr "Meciuri trase la sorți. (WordPress)"
-
-#. Found in description paragraph.
-msgid "<strong>Rotation Tournaments</strong> provides a platform for organizing all kinds of sports Singles and Doubles Tournaments, e.g."
-msgstr "<strong>Turneele rotative</strong> sunt o platformă pentru organizarea oricăror turnee sportive de simplu și de dublu, de exemplu:"
-
-#. Found in description list item.
-msgid "Squash"
-msgstr "Squash"
-
-#. Found in description list item.
-msgid "Beach Volleyball"
-msgstr "Volei pe plajă"
-
-#. Found in description list item.
-msgid "Badminton"
-msgstr "Badminton"
-
-#. Found in description list item.
-msgid "Padel"
-msgstr "Padel"
-
-#. Found in description list item.
-msgid "Table Tennis"
-msgstr "Tenis de masă"
-
-#. Found in description list item.
-msgid "Tennis"
-msgstr "Tenis"
+msgid "<strong>Try it</strong>"
+msgstr "<strong>Încercați</strong>"
 
 #. Found in faq paragraph.
-msgid ""
-"This plugin can be used for all types of sports where 2 or 4 players compete in singles or doubles.\n"
-"You can use this plugin for tennis, table tennis, squash, padel, badminton, beach volleyball and probably for more."
-msgstr ""
-"Acest modul este potrivit pentru toate sporturile în care concurează 2 sau 4 jucători, la simplu sau la dublu.\n"
-"Poate fi folosit pentru tenis, tenis de masă, squash, padel, badminton, volei pe plajă și probabil și alte sporturi."
+msgid "This plugin can be used for all types of sports where 2 or 4 players compete in singles or doubles.\nYou can use this plugin for tennis, table tennis, squash, padel, badminton, beach volleyball and probably for more."
+msgstr "Acest modul este potrivit pentru toate sporturile în care concurează 2 sau 4 jucători, la simplu sau la dublu.\nPoate fi folosit pentru tenis, tenis de masă, squash, padel, badminton, volei pe plajă și probabil și alte sporturi."
 
 #. Found in faq paragraph.
 msgid "Yes. When creating a tournament, you can choose whether to create a singles or a doubles tournament."
@@ -156,118 +220,6 @@ msgstr "Da. La crearea unui turneu puteți alege un turneu de simplu sau de dubl
 #. Found in faq header.
 msgid "What sports tournaments is this plugin for?"
 msgstr "Pentru ce turnee sportive este destinat acest modul?"
-
-#. Found in description paragraph.
-msgid "<strong>General Features:</strong>"
-msgstr "<strong>Funcții generale:</strong>"
-
-#. Found in description paragraph.
-msgid "<strong>Doubles Rotation Tournament:</strong>"
-msgstr "<strong>Turneu rotativ de dublu:</strong>"
-
-#. Found in description paragraph.
-msgid "<strong>Singles Rotation Tournament:</strong>"
-msgstr "<strong>Turneu rotativ de simplu:</strong>"
-
-#. Found in description paragraph.
-msgid "The participants of a tournament change partners several times during the tournament by a random selection and play against different players. The ratio of games won to games lost is calculated for each participant. The winner of the tournament is the player with this highest ratio. While a Singles Rotation Tournament can be organized without the aid of technology, in the case of a Doubles Rotation Tournament, this is not possible."
-msgstr "Participanții la turneu își schimbă aleatoriu partenerii de mai multe ori în timpul turneului și joacă împotriva unor jucători diferiți. Pentru fiecare participant se calculează raportul dintre ghemurile câștigate și cele pierdute. Câștigătorul este jucătorul cu cel mai bun raport. Un turneu rotativ de simplu se poate desfășura fără ajutorul tehnicii, unul de dublu nu."
-
-#. Found in description paragraph.
-msgid "The <strong>Rotation Tournaments</strong> have a strong social aspect because its goal is to keep players in the tournament until the very end. The situation where weaker players would leave the tournament due to elimination rounds is eliminated. It allows grouping players into a special category with special conditions. This special setting can be utilized, for example, in mixed tournaments."
-msgstr "<strong>Turneele rotative</strong> au o puternică componentă socială, deoarece scopul lor este să păstreze jucătorii în turneu până la final. Este exclusă situația în care jucătorii mai slabi părăsesc turneul din cauza eliminării. Jucătorii pot fi grupați într-o categorie specială, cu condiții speciale. Această setare specială poate fi folosită, de exemplu, la turneele mixte."
-
-#. Found in description paragraph.
-msgid "In <strong>Rotation Tournaments</strong>, each participant plays against every other participant and there are no eliminations in individual rounds. To maximize the variety of match combinations, the matches are typically played in a single set."
-msgstr "În <strong>turneele rotative</strong>, fiecare participant joacă împotriva fiecăruia și nimeni nu este eliminat în rundele individuale. Pentru a obține cât mai multe combinații, meciurile se joacă de obicei într-un singur set."
-
-#. Found in description list item.
-msgid "Suitable for various sports: tennis, table tennis, squash, padel, badminton, beach volleyball, and more."
-msgstr "Potrivit pentru diverse sporturi: tenis, tenis de masă, squash, padel, badminton, volei pe plajă și altele."
-
-#. Found in description list item.
-msgid "Integration with website user accounts."
-msgstr "Integrare cu conturile de utilizator ale site-ului."
-
-#. Found in description list item.
-msgid "No downtime during the tournament."
-msgstr "Fără timpi morți în timpul turneului."
-
-#. Found in description list item.
-msgid "Comprehensive overview of player quality."
-msgstr "O imagine completă a nivelului jucătorilor."
-
-#. Found in description list item.
-msgid "User-friendly interface for administrators and participants."
-msgstr "Interfață ușor de folosit pentru administratori și participanți."
-
-#. Found in description list item.
-msgid "Customizable settings for each tournament."
-msgstr "Setări flexibile pentru fiecare turneu."
-
-#. Found in description list item.
-msgid "Real-time score tracking."
-msgstr "Urmărirea scorului în timp real."
-
-#. Found in description list item.
-msgid "Seamless scheduling of matches."
-msgstr "Programare comodă a meciurilor."
-
-#. Found in description list item.
-msgid "Announcement of the Best Player and Most Ideal Pair at the end of the tournament."
-msgstr "Anunțarea celui mai bun jucător și a perechii ideale la finalul turneului."
-
-#. Found in description list item.
-msgid "Ranking based on the ratio of games won to games lost."
-msgstr "Clasamentul este determinat de raportul dintre ghemurile câștigate și cele pierdute."
-
-#. Found in description list item.
-msgid "Individual players can join or leave the tournament at any time."
-msgstr "Jucătorii pot intra în turneu sau îl pot părăsi oricând."
-
-#. Found in description list item.
-msgid "Tournament can be interrupted or extended without disruption."
-msgstr "Turneul poate fi întrerupt sau prelungit fără a-i perturba desfășurarea."
-
-#. Found in description list item.
-msgid "Shorter matches for more participation."
-msgstr "Meciuri mai scurte pentru o participare mai mare."
-
-#. Found in description list item.
-msgid "No eliminations, ensuring all players stay in the game."
-msgstr "Fără eliminări – toți jucătorii rămân în joc."
-
-#. Found in description list item.
-msgid "Define special groups of players with unique conditions."
-msgstr "Definirea unor grupuri speciale de jucători cu condiții speciale."
-
-#. Found in description list item.
-msgid "Suitable for odd numbers of players and minimum lineups of 4 players."
-msgstr "Potrivit pentru un număr impar de jucători și o formație minimă de 4 jucători."
-
-#. Found in description list item.
-msgid "Individuals can enter the tournament without a permanent teammate."
-msgstr "Se poate participa la turneu fără un partener permanent."
-
-#. Found in description list item.
-msgid "Rotation of teammates, ensuring variety in partnerships."
-msgstr "Rotația partenerilor asigură perechi variate."
-
-#. Found in description list item.
-msgid "Alternative form of a Doubles Tournament where players enter each match with a different partner and in different positions (alternating left and right sides)."
-msgstr "O formă alternativă de turneu de dublu, în care jucătorii joacă fiecare meci cu un partener nou și pe poziții diferite (alternând partea stângă și dreaptă)."
-
-#. Found in description list item.
-msgid "Depending on the time options, everyone plays against everyone."
-msgstr "În funcție de timp, fiecare joacă împotriva fiecăruia."
-
-#. Found in description list item.
-msgid "Alternative form of a Singles Tournament where players face each other without elimination rounds."
-msgstr "O formă alternativă de turneu de simplu, în care jucătorii se înfruntă fără eliminări."
-
-#. Found in description header.
-msgid "Features"
-msgstr "Funcții"
 
 #. Found in faq header.
 msgid "Is this plugin suitable for singles tournaments?"
@@ -306,16 +258,43 @@ msgid "Install the plugin as usual."
 msgstr "Instalați modulul ca de obicei."
 
 #. Found in description paragraph.
-msgid "Visit <a href=\"https://doroto.ltcchrast.cz/\">test page</a> for more information, try to create your own tournament and take a look at <a href=\"https://doroto.ltcchrast.cz/rules-of-the-doubles-rotation-tournament/\">Rules of the Doubles Rotation Tournament</a>."
-msgstr "Vizitați <a href=\"https://doroto.ltcchrast.cz/\">pagina de test</a> pentru a afla mai multe, încercați să creați propriul turneu și consultați <a href=\"https://doroto.ltcchrast.cz/rules-of-the-doubles-rotation-tournament/\">regulile turneului rotativ de dublu</a>."
-
-#. Found in description paragraph.
 msgid "[youtube https://www.youtube.com/watch?v=NoL9aPTv8u8]"
 msgstr "[youtube https://www.youtube.com/watch?v=NoL9aPTv8u8]"
 
-#. Found in description header.
-msgid "More information"
-msgstr "Mai multe informații"
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - readme: new description of the draw, the blocks and the app; new screenshots (also in Spanish for Chile)"
+msgstr "Îmbunătățire – readme: descriere nouă a tragerii la sorți, a blocurilor și a aplicației; capturi de ecran noi (și în spaniolă pentru Chile)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - new plugin icon and banner, the same icon as the Android app"
+msgstr "Îmbunătățire – iconiță și banner noi pentru modul, aceeași iconiță ca aplicația pentru Android"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "2.0.2 - 2026/10/15"
+msgstr "2.0.2 - 2026/10/15"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - English variants for the UK, Australia, Canada, New Zealand and South Africa"
+msgstr "Adăugat – variante ale limbii engleze pentru Regatul Unit, Australia, Canada, Noua Zeelandă și Africa de Sud"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - the round-end notice of the tournament block no longer repeats the texts of its buttons"
+msgstr "Îmbunătățire – notificarea de sfârșit de rundă din blocul turneului nu mai repetă textele butoanelor sale"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - messages, headings and notices are translated as whole sentences, so languages with a different word order (e.g. Turkish, Hungarian, Hindi, Japanese, Korean and Chinese) read naturally"
+msgstr "Îmbunătățire – mesajele, titlurile și notificările sunt traduse ca propoziții întregi, astfel încât limbile cu altă ordine a cuvintelor (de ex. turca, maghiara, hindi, japoneza, coreeana și chineza) să sune natural"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "2.0.1 - 2026/10/08"
+msgstr "2.0.1 - 2026/10/08"
 
 #. Found in changelog list item.
 #, gp-priority: low
@@ -1189,21 +1168,13 @@ msgstr "Corectare – dacă toate turneele au fost șterse, nu se putea crea un 
 
 #. Found in changelog paragraph.
 #, gp-priority: low
-msgid ""
-"Trial tournament improvements.\n"
-"Added the option to announce the end of the tournament round."
-msgstr ""
-"Îmbunătățirea turneului de antrenament.\n"
-"A fost adăugată posibilitatea de a anunța sfârșitul rundei de turneu."
+msgid "Trial tournament improvements.\nAdded the option to announce the end of the tournament round."
+msgstr "Îmbunătățirea turneului de antrenament.\nA fost adăugată posibilitatea de a anunța sfârșitul rundei de turneu."
 
 #. Found in changelog paragraph.
 #, gp-priority: low
-msgid ""
-"Improved the visual appearance of the main page.\n"
-"Badminton added to the list of available tournaments."
-msgstr ""
-"Aspectul paginii principale a fost îmbunătățit.\n"
-"Badmintonul a fost adăugat în lista turneelor disponibile."
+msgid "Improved the visual appearance of the main page.\nBadminton added to the list of available tournaments."
+msgstr "Aspectul paginii principale a fost îmbunătățit.\nBadmintonul a fost adăugat în lista turneelor disponibile."
 
 #. Found in changelog paragraph.
 #, gp-priority: low
@@ -1212,65 +1183,33 @@ msgstr "Posibilitatea de a anunța câștigători separați din grupul special �
 
 #. Found in changelog paragraph.
 #, gp-priority: low
-msgid ""
-"Notices after a plugin activation.\n"
-"Added player trend."
-msgstr ""
-"Notificare după activarea modulului.\n"
-"A fost adăugată tendința jucătorului."
+msgid "Notices after a plugin activation.\nAdded player trend."
+msgstr "Notificare după activarea modulului.\nA fost adăugată tendința jucătorului."
 
 #. Found in changelog paragraph.
 #, gp-priority: low
-msgid ""
-"Modified tournament editing tab.\n"
-"Added option to change tournament type."
-msgstr ""
-"Fila de editare a turneului a fost modificată.\n"
-"A fost adăugată posibilitatea de a schimba tipul turneului."
+msgid "Modified tournament editing tab.\nAdded option to change tournament type."
+msgstr "Fila de editare a turneului a fost modificată.\nA fost adăugată posibilitatea de a schimba tipul turneului."
 
 #. Found in changelog paragraph.
 #, gp-priority: low
-msgid ""
-"Reactivating the plugin doesn´t affect the already deleted tournament example. \n"
-"Unblock offering maximum games count.\n"
-"Fix tournament change when entering results.\n"
-"Added quick help for newcomers.\n"
-"Allow the final match also for singles."
-msgstr ""
-"Reactivarea modulului nu afectează un turneu de exemplu deja șters.\n"
-"A fost deblocată alegerea numărului maxim de ghemuri.\n"
-"A fost corectată modificarea turneului în timpul introducerii rezultatelor.\n"
-"A fost adăugat un scurt ajutor pentru începători.\n"
-"Meciul final a fost permis și la simplu."
+msgid "Reactivating the plugin doesn´t affect the already deleted tournament example. \nUnblock offering maximum games count.\nFix tournament change when entering results.\nAdded quick help for newcomers.\nAllow the final match also for singles."
+msgstr "Reactivarea modulului nu afectează un turneu de exemplu deja șters.\nA fost deblocată alegerea numărului maxim de ghemuri.\nA fost corectată modificarea turneului în timpul introducerii rezultatelor.\nA fost adăugat un scurt ajutor pentru începători.\nMeciul final a fost permis și la simplu."
 
 #. Found in changelog paragraph.
 #, gp-priority: low
-msgid ""
-"Added the option for single tournaments. \n"
-"Created an environment for additional sports."
-msgstr ""
-"A fost adăugată posibilitatea turneelor de simplu.\n"
-"A fost creat mediul pentru alte sporturi."
+msgid "Added the option for single tournaments. \nCreated an environment for additional sports."
+msgstr "A fost adăugată posibilitatea turneelor de simplu.\nA fost creat mediul pentru alte sporturi."
 
 #. Found in changelog paragraph.
 #, gp-priority: low
-msgid ""
-"The administrator can now use 'hide' option when editing the match result.\n"
-"Free score input is allowed. This opens using not only for tennis but for example for table tennis or beach volleyball."
-msgstr ""
-"Administratorul poate folosi acum opțiunea „ascunde” la modificarea rezultatului unui meci.\n"
-"A fost permisă introducerea liberă a scorului. Astfel modulul poate fi folosit nu doar pentru tenis, ci și, de exemplu, pentru tenis de masă sau volei pe plajă."
+msgid "The administrator can now use 'hide' option when editing the match result.\nFree score input is allowed. This opens using not only for tennis but for example for table tennis or beach volleyball."
+msgstr "Administratorul poate folosi acum opțiunea „ascunde” la modificarea rezultatului unui meci.\nA fost permisă introducerea liberă a scorului. Astfel modulul poate fi folosit nu doar pentru tenis, ci și, de exemplu, pentru tenis de masă sau volei pe plajă."
 
 #. Found in changelog paragraph.
 #, gp-priority: low
-msgid ""
-"Minor changes in code:\n"
-"* Allow to transfer organizer rights to a non-playing user.\n"
-"* Ensuring an even rotation of serves at the start of the tournament."
-msgstr ""
-"Mici modificări în cod:\n"
-"* A fost permis transferul drepturilor de organizator unui utilizator care nu joacă.\n"
-"* A fost asigurată alternarea uniformă a serviciului la începutul turneului."
+msgid "Minor changes in code:\n* Allow to transfer organizer rights to a non-playing user.\n* Ensuring an even rotation of serves at the start of the tournament."
+msgstr "Mici modificări în cod:\n* A fost permis transferul drepturilor de organizator unui utilizator care nu joacă.\n* A fost asigurată alternarea uniformă a serviciului la începutul turneului."
 
 #. Found in changelog paragraph.
 #, gp-priority: low
@@ -1286,23 +1225,3 @@ msgstr "Mică modificare a ecranului de administrare."
 #, gp-priority: low
 msgid "First release to public."
 msgstr "Prima versiune publică."
-
-#. Found in changelog header.
-#, gp-priority: low
-msgid "2.0.1 - 2026/10/08"
-msgstr "2.0.1 - 2026/10/08"
-
-#. Found in changelog list item.
-#, gp-priority: low
-msgid "Improvement - messages, headings and notices are translated as whole sentences, so languages with a different word order (e.g. Turkish, Hungarian, Hindi, Japanese, Korean and Chinese) read naturally"
-msgstr "Îmbunătățire – mesajele, titlurile și notificările sunt traduse ca propoziții întregi, astfel încât limbile cu altă ordine a cuvintelor (de ex. turca, maghiara, hindi, japoneza, coreeana și chineza) să sune natural"
-
-#. Found in changelog list item.
-#, gp-priority: low
-msgid "Improvement - the round-end notice of the tournament block no longer repeats the texts of its buttons"
-msgstr "Îmbunătățire – notificarea de sfârșit de rundă din blocul turneului nu mai repetă textele butoanelor sale"
-
-#. Found in changelog list item.
-#, gp-priority: low
-msgid "Add - English variants for the UK, Australia, Canada, New Zealand and South Africa"
-msgstr "Adăugat – variante ale limbii engleze pentru Regatul Unit, Australia, Canada, Noua Zeelandă și Africa de Sud"

@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plugins - Rotation Tournaments - Development Readme (trunk)\n"
-"PO-Revision-Date: 2026-10-08 18:18:50+0000\n"
+"PO-Revision-Date: 2026-10-15 07:57:04+0000\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -13,13 +13,161 @@ msgstr ""
 
 #. Short description.
 #, gp-priority: high
-msgid "Do you play Singles or Doubles Tournaments? This plugin manages Rotation Tournaments where players have a different partner in each game."
-msgstr "您在进行单打或双打比赛吗？此插件可管理轮换赛，选手在每场比赛中都有新搭档。"
+msgid "Run doubles and singles tournaments where players get a new partner every match: fair draws, live results, standings and an Android app."
+msgstr "举办双打和单打比赛，选手每场都换新搭档：公平抽签、实时结果、排名以及 Android 应用。"
 
 #. Plugin name.
 #, gp-priority: high
 msgid "Rotation Tournaments"
 msgstr "轮换赛"
+
+#. Found in faq paragraph.
+msgid "An iOS version is planned, but there is no release date yet. The tournament pages work in any mobile browser, including iPhone and iPad."
+msgstr "iOS 版本已在计划中，但尚无发布日期。赛事页面可在任何移动浏览器中使用，包括 iPhone 和 iPad。"
+
+#. Found in description paragraph.
+msgid "The free <a href=\"https://play.google.com/store/apps/details?id=cz.doroto.app\">Rotation Tournaments app</a> connects to your website: players follow the tournament, enter their results and organizers manage it from the court. The app is available in 27 languages. Several devices can be signed in to one account."
+msgstr "免费的 <a href=\"https://play.google.com/store/apps/details?id=cz.doroto.app\">Rotation Tournaments 应用</a>可连接到你的网站：选手关注赛事并录入自己的结果，组织者在球场上就能管理赛事。应用支持 27 种语言，一个账户可在多台设备上登录。"
+
+#. Found in description paragraph.
+msgid "<strong>Android app</strong>"
+msgstr "<strong>Android 应用</strong>"
+
+#. Found in description paragraph.
+msgid "<strong>For the website</strong>"
+msgstr "<strong>网站端</strong>"
+
+#. Found in description paragraph.
+msgid "<strong>The draw</strong>"
+msgstr "<strong>抽签</strong>"
+
+#. Found in description paragraph.
+msgid "<strong>How a tournament works</strong>"
+msgstr "<strong>赛事如何进行</strong>"
+
+#. Found in description paragraph.
+msgid "It is made for club evenings and social tournaments in <strong>tennis, padel, badminton, table tennis, squash, beach volleyball</strong> and other sports played one against one or two against two."
+msgstr "专为俱乐部活动之夜和友谊赛设计，适用于<strong>网球、板式网球、羽毛球、乒乓球、壁球、沙滩排球</strong>以及其他一对一或二对二的运动。"
+
+#. Found in description paragraph.
+msgid "<strong>Rotation Tournaments</strong> runs club tournaments in which nobody is knocked out. In doubles, every player gets a <strong>new partner in every match</strong> and meets as many different opponents as possible. The ranking is the ratio of games won to games lost, so everybody plays until the very end."
+msgstr "<strong>轮换赛</strong>举办没有淘汰的俱乐部比赛。双打中，每位选手<strong>每场比赛都有新搭档</strong>，并尽可能与更多不同的对手交手。排名由赢得与输掉的局数之比决定，因此人人都打到最后。"
+
+#. Found in description list item.
+msgid "Video introduction:"
+msgstr "介绍视频："
+
+#. Found in description list item.
+msgid "<a href=\"https://doroto.ltcchrast.cz/rules-of-the-doubles-rotation-tournament/\">Rules of the Doubles Rotation Tournament</a>."
+msgstr "<a href=\"https://doroto.ltcchrast.cz/rules-of-the-doubles-rotation-tournament/\">双打轮换赛规则</a>。"
+
+#. Found in description list item.
+msgid "<a href=\"https://doroto.ltcchrast.cz/\">Demo site</a> where you can create your own tournament."
+msgstr "<a href=\"https://doroto.ltcchrast.cz/\">演示网站</a>，可在其中创建你自己的赛事。"
+
+#. Found in description list item.
+msgid "Players sign in with their WordPress accounts; full or shortened names (privacy)."
+msgstr "选手使用 WordPress 账户登录；显示全名或缩写名（隐私）。"
+
+#. Found in description list item.
+msgid "Guided tours of the page and four example tournaments."
+msgstr "页面导览和四个示例赛事。"
+
+#. Found in description list item.
+msgid "Colors follow your theme; the block's Styles panel can change them."
+msgstr "颜色跟随你的主题；可在区块的“样式”面板中修改。"
+
+#. Found in description list item.
+msgid "Share dialog with a QR code and a link that opens the tournament in the app."
+msgstr "带二维码和链接的分享对话框，链接可在应用中打开赛事。"
+
+#. Found in description list item.
+msgid "Live updates without reloading the page."
+msgstr "无需重新加载页面即可实时更新。"
+
+#. Found in description list item.
+msgid "Blocks for the block editor: \"Rotation tournament\" (matches, results, players, statistics and settings on tabs), \"Tournament standings\", \"Tournament matches\", \"Tournament presentation\", \"Tournament list\" and \"Tournament invitation\". Shortcodes for the classic editor."
+msgstr "区块编辑器的区块：“轮换赛”（以标签显示比赛、结果、选手、统计和设置）、“赛事排名”“赛事比赛”“赛事演示”“轮换赛列表”和“轮换赛邀请”。经典编辑器可使用简码。"
+
+#. Found in description list item.
+msgid "Special group of players (e.g. women in a mixed tournament) with its own rules: mixed teams only, a separate winner and more."
+msgstr "拥有专属规则的选手特殊组（例如混合赛中的女选手）：仅限混合组队、单独评选优胜者等。"
+
+#. Found in description list item.
+msgid "Works with any number of players from 4 up, odd numbers included; players can join, pause or leave at any time."
+msgstr "适用于 4 人及以上任意人数，包括奇数；选手可随时加入、暂停或离开。"
+
+#. Found in description list item.
+msgid "Players with fewer games and longer rest go first; sides (left/right) and serve alternate."
+msgstr "比赛场次较少、休息较久的选手优先上场；场地左右两侧和发球轮流交替。"
+
+#. Found in description list item.
+msgid "Opponents are chosen by previous meetings too, so the same players meet less often."
+msgstr "选择对手时也会参考以往交手记录，因此相同的选手相遇更少。"
+
+#. Found in description list item.
+msgid "New teammates first: the plugin pairs players who have not played together yet."
+msgstr "新搭档优先：插件会把尚未一起打过球的选手配成一对。"
+
+#. Found in description list item.
+msgid "At the end the organizer closes the tournament and the best player and the best pair are announced."
+msgstr "最后，组织者结束赛事，并公布最佳选手和最佳搭档。"
+
+#. Found in description list item.
+msgid "Standings, statistics and the presentation on a big screen update live."
+msgstr "排名、统计和大屏幕演示实时更新。"
+
+#. Found in description list item.
+msgid "Whoever finishes a match enters the score on the website or in the Android app; the next match is drawn at once."
+msgstr "打完比赛的人在网站或 Android 应用中录入比分；下一场比赛立即抽签。"
+
+#. Found in description list item.
+msgid "Players join (also later, during the tournament) and the plugin draws the first matches for the free courts."
+msgstr "选手报名参加（也可在赛事进行中加入），插件为空闲场地抽出首轮比赛。"
+
+#. Found in description list item.
+msgid "The organizer creates a tournament and shares the invitation link or QR code."
+msgstr "组织者创建赛事，并分享邀请链接或二维码。"
+
+#. Screenshot description.
+msgid "Android app: entering results, standings and played matches."
+msgstr "Android 应用：录入结果、排名和已赛场次。"
+
+#. Screenshot description.
+msgid "Tournament settings for organizers."
+msgstr "面向组织者的赛事设置。"
+
+#. Screenshot description.
+msgid "The \"Rotation tournament\" block in the block editor."
+msgstr "区块编辑器中的“轮换赛”区块。"
+
+#. Screenshot description.
+msgid "Share the tournament with a QR code; it opens the tournament in the app."
+msgstr "用二维码分享赛事；扫码即可在应用中打开赛事。"
+
+#. Found in description list item.
+msgid "Presentation mode for a TV or projector in the club house."
+msgstr "适用于俱乐部会所电视或投影仪的演示模式。"
+
+#. Screenshot description.
+msgid "Statistics: how often a player played with and against each other player."
+msgstr "统计：某位选手与其他每位选手搭档和交手的次数。"
+
+#. Screenshot description.
+msgid "Live standings by the ratio of games won to games lost, with the trend of each player."
+msgstr "按赢得与输掉的局数之比实时排名，并显示每位选手的走势。"
+
+#. Screenshot description.
+msgid "Results of all matches, with a filter by player."
+msgstr "所有比赛的结果，可按选手筛选。"
+
+#. Screenshot description.
+msgid "Ongoing matches: the next match is drawn as soon as a score is saved. Names of the special group are highlighted."
+msgstr "进行中的比赛：比分一保存，下一场比赛就会抽出。特殊组的名字会突出显示。"
+
+#. Screenshot description.
+msgid "The same tournament on the website and in the Android app."
+msgstr "网站和 Android 应用中的同一赛事。"
 
 #. Found in installation paragraph.
 msgid "After installation, go to the app's settings and enter the address of your website where this plugin is installed."
@@ -33,25 +181,9 @@ msgstr "或直接通过此链接下载：https://play.google.com/store/apps/deta
 msgid "Search for \"Rotation Tournaments\" on the Google Play Store."
 msgstr "在 Google Play 中搜索“Rotation Tournaments”。"
 
-#. Found in description paragraph.
-msgid "To get the full experience of managing tournaments on the go, download our mobile app, now available on Google Play!"
-msgstr "要随时随地全面管理赛事，请下载我们的移动应用，现已在 Google Play 上架！"
-
-#. Found in description paragraph.
-msgid "<strong>YouTube quick intro:</strong>"
-msgstr "<strong>YouTube 简介：</strong>"
-
-#. Found in description list item.
-msgid "Video for a quick introduction to the Rotation Tournament:"
-msgstr "轮换赛简介视频："
-
 #. Found in faq paragraph.
 msgid "Yes. If you install the Rotation Tournaments plugin, allow player registration, and enable visibility in the website list, your site can appear in the Android app. Initially, someone must manually enter your website address into the app. After that, it becomes visible in the list for all users."
 msgstr "可以。如果您安装 Rotation Tournaments 插件、允许选手注册并在网站列表中开启可见性，您的网站就可能出现在 Android 应用中。首先需要有人在应用中手动输入您的网站地址。之后，该网站将在列表中对所有用户可见。"
-
-#. Found in faq paragraph.
-msgid "Yes. An iOS version of the Rotation Tournaments app is planned and will be released in the near future."
-msgstr "会的。Rotation Tournaments 应用的 iOS 版本已在计划中，即将发布。"
 
 #. Found in faq header.
 msgid "Will my website be visible in the Rotation Tournaments Android app?"
@@ -74,80 +206,12 @@ msgid "<strong>How to install the Android app:</strong>"
 msgstr "<strong>如何安装 Android 应用：</strong>"
 
 #. Found in description paragraph.
-msgid "<strong>This plugin is the server-side for the \"Rotation Tournaments\" Android app.</strong>"
-msgstr "<strong>此插件是 Android 应用“Rotation Tournaments”的服务器端。</strong>"
-
-#. Screenshot description.
-msgid "Individual tournament participants enter their results into the WordPress server and share the data with each other."
-msgstr "赛事参与者将结果录入 WordPress 服务器，并相互共享数据。"
-
-#. Screenshot description.
-msgid "Matches played. (Android app)"
-msgstr "已进行的比赛。（Android 应用）"
-
-#. Screenshot description.
-msgid "Tournament table. (Wordpress)"
-msgstr "赛事表格。（WordPress）"
-
-#. Screenshot description.
-msgid "Matches drawn. (Android app)"
-msgstr "已抽签的比赛。（Android 应用）"
-
-#. Screenshot description.
-msgid "Editing tournament parameters. (Wordpress)"
-msgstr "编辑赛事参数。（WordPress）"
-
-#. Screenshot description.
-msgid "Table of players with rankings. (Android app)"
-msgstr "带排名的选手表。（Android 应用）"
-
-#. Screenshot description.
-msgid "Matches played. (Wordpress)"
-msgstr "已进行的比赛。（WordPress）"
-
-#. Screenshot description.
-msgid "Basic overview of the tournament. (Android app)"
-msgstr "赛事主概览。（Android 应用）"
-
-#. Screenshot description.
-msgid "Matches drawn. (Wordpress)"
-msgstr "已抽签的比赛。（WordPress）"
-
-#. Found in description paragraph.
-msgid "<strong>Rotation Tournaments</strong> provides a platform for organizing all kinds of sports Singles and Doubles Tournaments, e.g."
-msgstr "<strong>轮换赛</strong>是组织各类单打和双打体育赛事的平台，例如："
-
-#. Found in description list item.
-msgid "Squash"
-msgstr "壁球"
-
-#. Found in description list item.
-msgid "Beach Volleyball"
-msgstr "沙滩排球"
-
-#. Found in description list item.
-msgid "Badminton"
-msgstr "羽毛球"
-
-#. Found in description list item.
-msgid "Padel"
-msgstr "板式网球"
-
-#. Found in description list item.
-msgid "Table Tennis"
-msgstr "乒乓球"
-
-#. Found in description list item.
-msgid "Tennis"
-msgstr "网球"
+msgid "<strong>Try it</strong>"
+msgstr "<strong>试一试</strong>"
 
 #. Found in faq paragraph.
-msgid ""
-"This plugin can be used for all types of sports where 2 or 4 players compete in singles or doubles.\n"
-"You can use this plugin for tennis, table tennis, squash, padel, badminton, beach volleyball and probably for more."
-msgstr ""
-"此插件适用于所有 2 人或 4 人进行单打或双打比赛的运动。\n"
-"可用于网球、乒乓球、壁球、板式网球、羽毛球、沙滩排球，可能还包括其他运动。"
+msgid "This plugin can be used for all types of sports where 2 or 4 players compete in singles or doubles.\nYou can use this plugin for tennis, table tennis, squash, padel, badminton, beach volleyball and probably for more."
+msgstr "此插件适用于所有 2 人或 4 人进行单打或双打比赛的运动。\n可用于网球、乒乓球、壁球、板式网球、羽毛球、沙滩排球，可能还包括其他运动。"
 
 #. Found in faq paragraph.
 msgid "Yes. When creating a tournament, you can choose whether to create a singles or a doubles tournament."
@@ -156,118 +220,6 @@ msgstr "是的。创建赛事时可以选择单打或双打赛事。"
 #. Found in faq header.
 msgid "What sports tournaments is this plugin for?"
 msgstr "此插件适用于哪些体育赛事？"
-
-#. Found in description paragraph.
-msgid "<strong>General Features:</strong>"
-msgstr "<strong>通用功能：</strong>"
-
-#. Found in description paragraph.
-msgid "<strong>Doubles Rotation Tournament:</strong>"
-msgstr "<strong>双打轮换赛：</strong>"
-
-#. Found in description paragraph.
-msgid "<strong>Singles Rotation Tournament:</strong>"
-msgstr "<strong>单打轮换赛：</strong>"
-
-#. Found in description paragraph.
-msgid "The participants of a tournament change partners several times during the tournament by a random selection and play against different players. The ratio of games won to games lost is calculated for each participant. The winner of the tournament is the player with this highest ratio. While a Singles Rotation Tournament can be organized without the aid of technology, in the case of a Doubles Rotation Tournament, this is not possible."
-msgstr "赛事参与者在赛事期间多次随机更换搭档，并与不同选手比赛。为每位参与者计算赢得与输掉的局数之比。比率最佳的选手获胜。单打轮换赛可以不借助技术手段进行，而双打则不行。"
-
-#. Found in description paragraph.
-msgid "The <strong>Rotation Tournaments</strong> have a strong social aspect because its goal is to keep players in the tournament until the very end. The situation where weaker players would leave the tournament due to elimination rounds is eliminated. It allows grouping players into a special category with special conditions. This special setting can be utilized, for example, in mixed tournaments."
-msgstr "<strong>轮换赛</strong>具有很强的社交性，因为其目标是让选手留在赛事中直到最后。不会出现较弱选手因被淘汰而离开赛事的情况。可以将选手归入带有特殊条件的特殊类别。例如，这一特殊设置可用于混合赛事。"
-
-#. Found in description paragraph.
-msgid "In <strong>Rotation Tournaments</strong>, each participant plays against every other participant and there are no eliminations in individual rounds. To maximize the variety of match combinations, the matches are typically played in a single set."
-msgstr "在<strong>轮换赛</strong>中，每位参与者都与所有人比赛，各轮中没有人被淘汰。为了获得尽可能多的组合，比赛通常只打一盘。"
-
-#. Found in description list item.
-msgid "Suitable for various sports: tennis, table tennis, squash, padel, badminton, beach volleyball, and more."
-msgstr "适用于多种运动：网球、乒乓球、壁球、板式网球、羽毛球、沙滩排球等。"
-
-#. Found in description list item.
-msgid "Integration with website user accounts."
-msgstr "与网站用户账户集成。"
-
-#. Found in description list item.
-msgid "No downtime during the tournament."
-msgstr "赛事期间无空闲等待。"
-
-#. Found in description list item.
-msgid "Comprehensive overview of player quality."
-msgstr "全面了解选手水平。"
-
-#. Found in description list item.
-msgid "User-friendly interface for administrators and participants."
-msgstr "对管理员和参与者友好的界面。"
-
-#. Found in description list item.
-msgid "Customizable settings for each tournament."
-msgstr "每项赛事都有灵活的设置。"
-
-#. Found in description list item.
-msgid "Real-time score tracking."
-msgstr "实时比分跟踪。"
-
-#. Found in description list item.
-msgid "Seamless scheduling of matches."
-msgstr "便捷的比赛安排。"
-
-#. Found in description list item.
-msgid "Announcement of the Best Player and Most Ideal Pair at the end of the tournament."
-msgstr "赛事结束时公布最佳选手和理想组合。"
-
-#. Found in description list item.
-msgid "Ranking based on the ratio of games won to games lost."
-msgstr "排名由赢得与输掉的局数之比决定。"
-
-#. Found in description list item.
-msgid "Individual players can join or leave the tournament at any time."
-msgstr "选手可以随时加入或退出赛事。"
-
-#. Found in description list item.
-msgid "Tournament can be interrupted or extended without disruption."
-msgstr "可以中断或延长赛事而不影响其进程。"
-
-#. Found in description list item.
-msgid "Shorter matches for more participation."
-msgstr "比赛更短，参与更多。"
-
-#. Found in description list item.
-msgid "No eliminations, ensuring all players stay in the game."
-msgstr "无淘汰——所有选手都留在比赛中。"
-
-#. Found in description list item.
-msgid "Define special groups of players with unique conditions."
-msgstr "定义带有特殊条件的选手特殊组。"
-
-#. Found in description list item.
-msgid "Suitable for odd numbers of players and minimum lineups of 4 players."
-msgstr "适合奇数选手人数和最少 4 人的阵容。"
-
-#. Found in description list item.
-msgid "Individuals can enter the tournament without a permanent teammate."
-msgstr "无需固定搭档即可参赛。"
-
-#. Found in description list item.
-msgid "Rotation of teammates, ensuring variety in partnerships."
-msgstr "搭档轮换确保组合多样。"
-
-#. Found in description list item.
-msgid "Alternative form of a Doubles Tournament where players enter each match with a different partner and in different positions (alternating left and right sides)."
-msgstr "双打赛事的一种替代形式，选手每场比赛都与新搭档在不同位置比赛（左右两侧交替）。"
-
-#. Found in description list item.
-msgid "Depending on the time options, everyone plays against everyone."
-msgstr "视时间而定，每个人与所有人比赛。"
-
-#. Found in description list item.
-msgid "Alternative form of a Singles Tournament where players face each other without elimination rounds."
-msgstr "单打赛事的一种替代形式，选手之间无淘汰地对阵。"
-
-#. Found in description header.
-msgid "Features"
-msgstr "功能"
 
 #. Found in faq header.
 msgid "Is this plugin suitable for singles tournaments?"
@@ -306,16 +258,43 @@ msgid "Install the plugin as usual."
 msgstr "照常安装插件。"
 
 #. Found in description paragraph.
-msgid "Visit <a href=\"https://doroto.ltcchrast.cz/\">test page</a> for more information, try to create your own tournament and take a look at <a href=\"https://doroto.ltcchrast.cz/rules-of-the-doubles-rotation-tournament/\">Rules of the Doubles Rotation Tournament</a>."
-msgstr "访问<a href=\"https://doroto.ltcchrast.cz/\">测试页面</a>了解更多，尝试创建您自己的赛事，并查看<a href=\"https://doroto.ltcchrast.cz/rules-of-the-doubles-rotation-tournament/\">双打轮换赛规则</a>。"
-
-#. Found in description paragraph.
 msgid "[youtube https://www.youtube.com/watch?v=NoL9aPTv8u8]"
 msgstr "[youtube https://www.youtube.com/watch?v=NoL9aPTv8u8]"
 
-#. Found in description header.
-msgid "More information"
-msgstr "更多信息"
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - readme: new description of the draw, the blocks and the app; new screenshots (also in Spanish for Chile)"
+msgstr "改进——readme：抽签、区块和应用的新说明；新截图（也有智利西班牙语版本）"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - new plugin icon and banner, the same icon as the Android app"
+msgstr "改进——插件的新图标和横幅，与 Android 应用使用同一图标"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "2.0.2 - 2026/10/15"
+msgstr "2.0.2 - 2026/10/15"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - English variants for the UK, Australia, Canada, New Zealand and South Africa"
+msgstr "新增——面向英国、澳大利亚、加拿大、新西兰和南非的英语变体"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - the round-end notice of the tournament block no longer repeats the texts of its buttons"
+msgstr "改进——赛事区块的轮次结束通知不再重复其按钮的文字"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - messages, headings and notices are translated as whole sentences, so languages with a different word order (e.g. Turkish, Hungarian, Hindi, Japanese, Korean and Chinese) read naturally"
+msgstr "改进——消息、标题和通知按完整句子翻译，使语序不同的语言（如土耳其语、匈牙利语、印地语、日语、韩语和中文）读起来自然"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "2.0.1 - 2026/10/08"
+msgstr "2.0.1 - 2026/10/08"
 
 #. Found in changelog list item.
 #, gp-priority: low
@@ -1189,21 +1168,13 @@ msgstr "修复——删除所有赛事后无法创建新赛事。"
 
 #. Found in changelog paragraph.
 #, gp-priority: low
-msgid ""
-"Trial tournament improvements.\n"
-"Added the option to announce the end of the tournament round."
-msgstr ""
-"改进了练习赛事。\n"
-"新增公布赛事轮次结束的功能。"
+msgid "Trial tournament improvements.\nAdded the option to announce the end of the tournament round."
+msgstr "改进了练习赛事。\n新增公布赛事轮次结束的功能。"
 
 #. Found in changelog paragraph.
 #, gp-priority: low
-msgid ""
-"Improved the visual appearance of the main page.\n"
-"Badminton added to the list of available tournaments."
-msgstr ""
-"改进了主页面外观。\n"
-"将羽毛球加入可用赛事列表。"
+msgid "Improved the visual appearance of the main page.\nBadminton added to the list of available tournaments."
+msgstr "改进了主页面外观。\n将羽毛球加入可用赛事列表。"
 
 #. Found in changelog paragraph.
 #, gp-priority: low
@@ -1212,65 +1183,33 @@ msgstr "可以分别公布特殊组内外的冠军。"
 
 #. Found in changelog paragraph.
 #, gp-priority: low
-msgid ""
-"Notices after a plugin activation.\n"
-"Added player trend."
-msgstr ""
-"启用插件后的通知。\n"
-"新增选手趋势。"
+msgid "Notices after a plugin activation.\nAdded player trend."
+msgstr "启用插件后的通知。\n新增选手趋势。"
 
 #. Found in changelog paragraph.
 #, gp-priority: low
-msgid ""
-"Modified tournament editing tab.\n"
-"Added option to change tournament type."
-msgstr ""
-"更改了赛事编辑标签。\n"
-"新增更改赛事类型的功能。"
+msgid "Modified tournament editing tab.\nAdded option to change tournament type."
+msgstr "更改了赛事编辑标签。\n新增更改赛事类型的功能。"
 
 #. Found in changelog paragraph.
 #, gp-priority: low
-msgid ""
-"Reactivating the plugin doesn´t affect the already deleted tournament example. \n"
-"Unblock offering maximum games count.\n"
-"Fix tournament change when entering results.\n"
-"Added quick help for newcomers.\n"
-"Allow the final match also for singles."
-msgstr ""
-"重新启用插件不会影响已删除的示例赛事。\n"
-"开放了最大局数的选择。\n"
-"修正了录入结果时赛事被更改的问题。\n"
-"为新手添加了简短帮助。\n"
-"单打也允许进行决赛。"
+msgid "Reactivating the plugin doesn´t affect the already deleted tournament example. \nUnblock offering maximum games count.\nFix tournament change when entering results.\nAdded quick help for newcomers.\nAllow the final match also for singles."
+msgstr "重新启用插件不会影响已删除的示例赛事。\n开放了最大局数的选择。\n修正了录入结果时赛事被更改的问题。\n为新手添加了简短帮助。\n单打也允许进行决赛。"
 
 #. Found in changelog paragraph.
 #, gp-priority: low
-msgid ""
-"Added the option for single tournaments. \n"
-"Created an environment for additional sports."
-msgstr ""
-"新增单打赛事功能。\n"
-"为其他运动建立了环境。"
+msgid "Added the option for single tournaments. \nCreated an environment for additional sports."
+msgstr "新增单打赛事功能。\n为其他运动建立了环境。"
 
 #. Found in changelog paragraph.
 #, gp-priority: low
-msgid ""
-"The administrator can now use 'hide' option when editing the match result.\n"
-"Free score input is allowed. This opens using not only for tennis but for example for table tennis or beach volleyball."
-msgstr ""
-"管理员现在可以在更改比赛结果时使用“隐藏”选项。\n"
-"允许自由录入比分。这样插件不仅可用于网球，也可用于乒乓球或沙滩排球等。"
+msgid "The administrator can now use 'hide' option when editing the match result.\nFree score input is allowed. This opens using not only for tennis but for example for table tennis or beach volleyball."
+msgstr "管理员现在可以在更改比赛结果时使用“隐藏”选项。\n允许自由录入比分。这样插件不仅可用于网球，也可用于乒乓球或沙滩排球等。"
 
 #. Found in changelog paragraph.
 #, gp-priority: low
-msgid ""
-"Minor changes in code:\n"
-"* Allow to transfer organizer rights to a non-playing user.\n"
-"* Ensuring an even rotation of serves at the start of the tournament."
-msgstr ""
-"代码的小改动：\n"
-"* 允许将组织者权限转让给不参赛的用户。\n"
-"* 确保赛事开始时发球均衡交替。"
+msgid "Minor changes in code:\n* Allow to transfer organizer rights to a non-playing user.\n* Ensuring an even rotation of serves at the start of the tournament."
+msgstr "代码的小改动：\n* 允许将组织者权限转让给不参赛的用户。\n* 确保赛事开始时发球均衡交替。"
 
 #. Found in changelog paragraph.
 #, gp-priority: low
@@ -1286,23 +1225,3 @@ msgstr "管理界面的小改动。"
 #, gp-priority: low
 msgid "First release to public."
 msgstr "首个公开版本。"
-
-#. Found in changelog header.
-#, gp-priority: low
-msgid "2.0.1 - 2026/10/08"
-msgstr "2.0.1 - 2026/10/08"
-
-#. Found in changelog list item.
-#, gp-priority: low
-msgid "Improvement - messages, headings and notices are translated as whole sentences, so languages with a different word order (e.g. Turkish, Hungarian, Hindi, Japanese, Korean and Chinese) read naturally"
-msgstr "改进——消息、标题和通知按完整句子翻译，使语序不同的语言（如土耳其语、匈牙利语、印地语、日语、韩语和中文）读起来自然"
-
-#. Found in changelog list item.
-#, gp-priority: low
-msgid "Improvement - the round-end notice of the tournament block no longer repeats the texts of its buttons"
-msgstr "改进——赛事区块的轮次结束通知不再重复其按钮的文字"
-
-#. Found in changelog list item.
-#, gp-priority: low
-msgid "Add - English variants for the UK, Australia, Canada, New Zealand and South Africa"
-msgstr "新增——面向英国、澳大利亚、加拿大、新西兰和南非的英语变体"

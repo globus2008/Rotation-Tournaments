@@ -14,7 +14,7 @@ msgstr ""
 #: build/blocks/tournament/block.json src/blocks/tournament/block.json
 msgctxt "block variation description"
 msgid "Rotates matches, standings and results, e.g. on a screen at the club."
-msgstr "Wisselt wedstrijden, stand en uitslagen af, bijv. op een scherm in de club."
+msgstr "Roteert wedstrijden, stand en uitslagen, bijv. op een scherm in de club."
 
 #: build/blocks/tournament/block.json src/blocks/tournament/block.json
 msgctxt "block variation title"
@@ -112,7 +112,7 @@ msgstr "Seconden per onderdeel"
 
 #: build/blocks/tournament/index.js:1 src/blocks/tournament/index.js:102
 msgid "Rotate the sections (read only)"
-msgstr "Onderdelen afwisselen (alleen-lezen)"
+msgstr "Onderdelen roteren (alleen-lezen)"
 
 #: build/blocks/tournament/index.js:1 src/blocks/tournament/index.js:79
 msgid "Sections"
@@ -148,11 +148,11 @@ msgstr "Zonder keuze gebruikt het blok de accentkleuren van het thema (de knoppe
 
 #: build/blocks/tournament-list/index.js:1 build/blocks/tournament/index.js:1 src/blocks/color-panel.js:39
 msgid "Text of the tab bar and table headers"
-msgstr "Tekst van de tabbalk en tabelkoppen"
+msgstr "Tekst van de tabbalk en tabelheaders"
 
 #: build/blocks/tournament-list/index.js:1 build/blocks/tournament/index.js:1 src/blocks/color-panel.js:32
 msgid "Tab bar and table headers"
-msgstr "Tabbalk en tabelkoppen"
+msgstr "Tabbalk en tabelheaders"
 
 #: build/blocks/tournament-list/index.js:1 build/blocks/tournament/index.js:1 src/blocks/color-panel.js:25
 msgid "Accent (buttons, active tab, progress)"
@@ -240,11 +240,11 @@ msgstr "Hoofdpagina omzetten naar blokken"
 
 #: build/admin/index.js:1 src/admin/index.js:550
 msgid "The main page now uses the blocks. The previous content is kept in the page revisions."
-msgstr "De hoofdpagina gebruikt nu de blokken. De vorige inhoud blijft bewaard in de revisies van de pagina."
+msgstr "De hoofdpagina gebruikt nu de blokken. De vorige content blijft bewaard in de revisies van de pagina."
 
 #: build/admin/index.js:1 src/admin/index.js:546
 msgid "Replace the content of the main page with the blocks? The previous content stays in the page revisions."
-msgstr "De inhoud van de hoofdpagina vervangen door de blokken? De vorige inhoud blijft in de revisies van de pagina."
+msgstr "De content van de hoofdpagina vervangen door de blokken? De vorige content blijft in de revisies van de pagina."
 
 #: build/admin/index.js:1 src/admin/index.js:531
 msgid "The main page still uses the shortcodes. The tournament blocks show the same tournament on one page with tabs and save every change without reloading the page."
@@ -389,7 +389,7 @@ msgstr "De schatting gebruikt de gemiddelde wedstrijduitslag en het aantal games
 
 #: includes/doroto-help.php:165
 msgid "Click this icon to view help. It will guide you through the various options for how a rotation tournament works and how to set them up."
-msgstr "Klik op dit pictogram om de help te bekijken. Die leidt je langs de verschillende mogelijkheden van een rotatietoernooi en hoe je ze instelt."
+msgstr "Klik op dit icoon om de help te bekijken. Die leidt je langs de verschillende mogelijkheden van een rotatietoernooi en hoe je ze instelt."
 
 #: includes/doroto-help.php:154
 msgid "Add a player from the player database, or create a new account for a player. The new player gets an e-mail with a link to set the password."
@@ -401,11 +401,11 @@ msgstr "Kies een speler om te zien hoe vaak hij met elke speler als partner en t
 
 #: includes/doroto-help.php:146
 msgid "Enter the score of both teams and press Save. The next match is drawn right away."
-msgstr "Vul de score van beide teams in en klik op Opslaan. De volgende wedstrijd wordt meteen geloot."
+msgstr "Voer de score van beide teams in en klik op Opslaan. De volgende wedstrijd wordt meteen geloot."
 
 #: includes/doroto-help.php:144
 msgid "The tournament is divided into tabs. The page updates itself every 30 seconds, so you do not need to reload it."
-msgstr "Het toernooi is verdeeld in tabs. De pagina werkt zichzelf elke 30 seconden bij, dus je hoeft hem niet te herladen."
+msgstr "Het toernooi is verdeeld in tabs. De pagina wordt elke 30 seconden geüpdatet, dus je hoeft hem niet te herladen."
 
 #: includes/doroto-help.php:142
 msgid "The presentation shows the matches, the standings and the results one after another on the whole screen. Especially suitable for displaying the running results of the tournament on a larger screen."
@@ -413,7 +413,7 @@ msgstr "De presentatie toont de wedstrijden, de stand en de uitslagen na elkaar 
 
 #: includes/doroto-help.php:141 includes/doroto-help.php:201
 msgid "Share the tournament: a QR code and links for the players. The QR code opens the tournament in the Android app, or on this website when the app is not installed."
-msgstr "Deel het toernooi: een QR-code en links voor de spelers. De QR-code opent het toernooi in de Android-app, of op deze website als de app niet is geïnstalleerd."
+msgstr "Deel het toernooi: een QR-code en links voor de spelers. De QR-code opent het toernooi in de Android-app, of op deze site als de app niet is geïnstalleerd."
 
 #: includes/doroto-help.php:138
 msgid "The name of the tournament, its state, the type of the game and the number of players. While the tournament runs, the bar shows its progress and the estimated time to the end."
@@ -425,7 +425,7 @@ msgstr "Rondleiding door deze pagina"
 
 #: includes/doroto-blocks.php:305
 msgid "Tournament Selection"
-msgstr "Toernooikeuze"
+msgstr "Toernooiselectie"
 
 #: includes/doroto-blocks.php:251
 msgid "Longitude"
@@ -445,11 +445,11 @@ msgstr "Het toernooi is verwijderd."
 
 #: includes/doroto-blocks.php:59
 msgid "The tournament was updated."
-msgstr "Het toernooi is bijgewerkt."
+msgstr "Het toernooi is geüpdatet."
 
 #: includes/doroto-blocks.php:58
 msgid "Enter the score of both teams."
-msgstr "Vul de score van beide teams in."
+msgstr "Voer de score van beide teams in."
 
 #: includes/doroto-blocks.php:57
 msgid "The link was copied."
@@ -545,11 +545,11 @@ msgstr "Rotatietoernooi: stand, wedstrijden, presentatie"
 
 #: includes/doroto-admin.php:374
 msgid "Matches, players, results, statistics and settings of one tournament on tabs. Every change is saved without reloading the page, and the page updates itself when somebody else enters a result. Without a fixed tournament it shows the tournament chosen in the list (address parameter tournament_id)."
-msgstr "Wedstrijden, spelers, uitslagen, statistieken en instellingen van één toernooi in tabs. Elke wijziging wordt opgeslagen zonder de pagina te herladen, en de pagina werkt zichzelf bij als iemand anders een uitslag invoert. Zonder vast toernooi wordt het in de lijst gekozen toernooi getoond (adresparameter tournament_id)."
+msgstr "Wedstrijden, spelers, uitslagen, statistieken en instellingen van één toernooi in tabs. Elke wijziging wordt opgeslagen zonder de pagina te herladen, en de pagina wordt geüpdatet als iemand anders een uitslag invoert. Zonder vast toernooi wordt het in de lijst geselecteerde toernooi getoond (adresparameter tournament_id)."
 
 #: includes/doroto-admin.php:241
 msgid "Enter a full web address starting with https://, or leave the field empty."
-msgstr "Vul een volledig webadres in dat begint met https://, of laat het veld leeg."
+msgstr "Voer een volledig webadres in dat begint met https://, of laat het veld leeg."
 
 #: includes/doroto-admin.php:226
 msgid "Choose one of the options."
@@ -558,12 +558,12 @@ msgstr "Kies een van de opties."
 #. translators: 1: lowest allowed value, 2: highest allowed value
 #: includes/doroto-admin.php:219
 msgid "Enter a number from %1$d to %2$d."
-msgstr "Vul een getal in van %1$d tot %2$d."
+msgstr "Voer een getal in van %1$d tot %2$d."
 
 #. translators: 1: lowest allowed value, 2: highest allowed value
 #: includes/doroto-admin.php:211
 msgid "Enter a whole number from %1$d to %2$d."
-msgstr "Vul een geheel getal in van %1$d tot %2$d."
+msgstr "Voer een geheel getal in van %1$d tot %2$d."
 
 #: includes/doroto-admin.php:134
 msgid "Club location on the map"
@@ -579,15 +579,15 @@ msgstr "Iedereen kan zich registreren"
 
 #: includes/doroto-admin.php:130
 msgid "Show this website in the app"
-msgstr "Deze website in de app tonen"
+msgstr "Deze site in de app tonen"
 
 #: includes/doroto-admin.php:129
 msgid "Website description"
-msgstr "Beschrijving van de website"
+msgstr "Beschrijving van de site"
 
 #: includes/doroto-admin.php:128
 msgid "Website address"
-msgstr "Adres van de website"
+msgstr "Adres van de site"
 
 #: includes/doroto-admin.php:114
 msgid "The Presentation button of the tournament block uses this time too (at least 5 seconds)."
@@ -595,11 +595,11 @@ msgstr "De knop Presentatie van het toernooiblok gebruikt deze tijd ook (minimaa
 
 #: includes/doroto-admin.php:87
 msgid "Only the pages built from the shortcodes are reloaded. The tournament blocks update themselves every 30 seconds without reloading."
-msgstr "Alleen pagina's die met shortcodes zijn opgebouwd worden herladen. De toernooiblokken werken zichzelf elke 30 seconden bij zonder herladen."
+msgstr "Alleen pagina's die met shortcodes zijn opgebouwd worden herladen. De toernooiblokken worden elke 30 seconden geüpdatet zonder herladen."
 
 #: build/blocks/tournament/render.php:635 src/blocks/tournament/render.php:635
 msgid "The examples open the example tournaments of this website. Logged-in users become their organizers, so they can try every setting there."
-msgstr "De voorbeelden openen de voorbeeldtoernooien van deze website. Ingelogde gebruikers worden er organisator van, zodat ze er elke instelling kunnen uitproberen."
+msgstr "De voorbeelden openen de voorbeeldtoernooien van deze site. Ingelogde gebruikers worden er organisator van, zodat ze er elke instelling kunnen uitproberen."
 
 #: build/blocks/tournament/render.php:632 src/blocks/tournament/render.php:632
 msgid "Video help on YouTube"
@@ -615,7 +615,7 @@ msgstr "Toernooilink kopiëren"
 
 #: build/blocks/tournament/render.php:615 src/blocks/tournament/render.php:615
 msgid "Scan the code with the phone camera or with the Rotation Tournaments app. It opens the tournament in the app, or on this website when the app is not installed."
-msgstr "Scan de code met de camera van je telefoon of met de app Rotation Tournaments. Hij opent het toernooi in de app, of op deze website als de app niet is geïnstalleerd."
+msgstr "Scan de code met de camera van je telefoon of met de app Rotation Tournaments. Hij opent het toernooi in de app, of op deze site als de app niet is geïnstalleerd."
 
 #: build/blocks/tournament/render.php:613 src/blocks/tournament/render.php:613
 msgid "Share the tournament"
@@ -739,7 +739,7 @@ msgstr "Aan de speciale groep toevoegen"
 
 #: build/blocks/tournament/render.php:391 src/blocks/tournament/render.php:391
 msgid "Restore"
-msgstr "Hervatten"
+msgstr "Terugzetten"
 
 #: build/blocks/tournament/render.php:390 src/blocks/tournament/render.php:390
 msgid "Suspend"
@@ -916,7 +916,7 @@ msgstr "Verder naar het toernooi"
 #. translators: 1: tournament number, 2: website address
 #: includes/doroto-tournament-management.php:3297
 msgid "Tournament no. %1$d is run on the website %2$s."
-msgstr "Toernooi nr. %1$d wordt gehouden op de website %2$s."
+msgstr "Toernooi nr. %1$d wordt gehouden op de site %2$s."
 
 #: includes/doroto-admin.php:374 includes/doroto-tournament-management.php:3293
 msgid "Rotation tournament"
@@ -948,11 +948,11 @@ msgstr "Inschrijven voor het toernooi"
 
 #: includes/doroto-endpoints.php:2990
 msgid "Your login e-mail:"
-msgstr "Je e-mailadres om in te loggen:"
+msgstr "Je e-mailadres voor de login:"
 
 #: includes/doroto-endpoints.php:2988
 msgid "To sign in on the website or in the Doroto app, first set your password here:"
-msgstr "Stel hier eerst je wachtwoord in om in te loggen op de website of in de Doroto-app:"
+msgstr "Stel hier eerst je wachtwoord in om in te loggen op de site of in de Doroto-app:"
 
 #: includes/doroto-endpoints.php:2987
 msgid "A tournament organizer has created a player account for you."
@@ -974,7 +974,7 @@ msgstr "Je hebt geen toestemming om deze actie uit te voeren."
 
 #: includes/doroto-backend-pages.php:247
 msgid "Support forum"
-msgstr "Supportforum"
+msgstr "Ondersteuningsforum"
 
 #: includes/doroto-backend-pages.php:246
 msgid "A problem or an idea?"
@@ -1002,7 +1002,7 @@ msgstr "Vind je Rotation Tournaments nuttig?"
 
 #: includes/doroto-admin.php:131
 msgid "A short note under the tournament details tells players about the Android app."
-msgstr "Een korte notitie onder de toernooigegevens vertelt spelers over de Android-app."
+msgstr "Een korte notitie onder de toernooidetails vertelt spelers over de Android-app."
 
 #: includes/doroto-admin.php:131
 msgid "Show a link to the app on the tournament page?"
@@ -1105,7 +1105,7 @@ msgstr "4. Uitsluiting van garanties"
 
 #: includes/doroto-frontend-pages.php:660
 msgid "The website administrator and tournament organizers are responsible for the data and content related to their tournaments. The developers of the Rotation Tournaments plugin have no liability for user-generated content or its management."
-msgstr "De websitebeheerder en de toernooiorganisatoren zijn verantwoordelijk voor de gegevens en inhoud van hun toernooien. De ontwikkelaars van de plugin Rotation Tournaments zijn niet aansprakelijk voor door gebruikers gemaakte inhoud of het beheer daarvan."
+msgstr "De sitebeheerder en de toernooiorganisatoren zijn verantwoordelijk voor de gegevens en content van hun toernooien. De ontwikkelaars van de plugin Rotation Tournaments zijn niet aansprakelijk voor door gebruikers gemaakte content of het beheer daarvan."
 
 #: includes/doroto-frontend-pages.php:658
 msgid "You are responsible for your Display Name. While your real name is collected for registration, you can change your Display Name to a nickname for privacy. For more details, see our Privacy Policy."
@@ -1117,15 +1117,15 @@ msgstr "Je weergavenaam en toernooiresultaten zijn zichtbaar voor andere gebruik
 
 #: includes/doroto-frontend-pages.php:655
 msgid "You are responsible for the content you post, including your Display Name and any match results you submit. By participating in a tournament, you acknowledge and agree that:"
-msgstr "Je bent verantwoordelijk voor de inhoud die je plaatst, inclusief je weergavenaam en de wedstrijduitslagen die je invoert. Door deel te nemen aan een toernooi erken en accepteer je dat:"
+msgstr "Je bent verantwoordelijk voor de content die je plaatst, inclusief je weergavenaam en de wedstrijduitslagen die je invoert. Door deel te nemen aan een toernooi erken en accepteer je dat:"
 
 #: includes/doroto-frontend-pages.php:654
 msgid "3. User Content and Responsibility"
-msgstr "3. Inhoud en verantwoordelijkheid van gebruikers"
+msgstr "3. Content en verantwoordelijkheid van gebruikers"
 
 #: includes/doroto-frontend-pages.php:651
 msgid "To use the Service, you must have a user account on the WordPress website where the plugin is installed. You are responsible for safeguarding your account and for all activities that occur under your account. You agree to provide accurate and complete information when creating and updating your account."
-msgstr "Om de Dienst te gebruiken, heb je een gebruikersaccount nodig op de WordPress-website waarop de plugin is geïnstalleerd. Je bent verantwoordelijk voor de beveiliging van je account en voor alle activiteiten onder je account. Je gaat ermee akkoord juiste en volledige gegevens te verstrekken bij het aanmaken en bijwerken van je account."
+msgstr "Om de Dienst te gebruiken, heb je een gebruikersaccount nodig op de WordPress-site waarop de plugin is geïnstalleerd. Je bent verantwoordelijk voor de beveiliging van je account en voor alle activiteiten onder je account. Je gaat ermee akkoord juiste en volledige gegevens te verstrekken bij het aanmaken en updaten van je account."
 
 #: includes/doroto-frontend-pages.php:650
 msgid "2. User Accounts"
@@ -1141,7 +1141,7 @@ msgstr "Spelers:"
 
 #: includes/doroto-frontend-pages.php:645
 msgid "Any user can create and manage a tournament. The organizer is responsible for the tournament setup, including its privacy settings."
-msgstr "Elke gebruiker kan een toernooi aanmaken en beheren. De organisator is verantwoordelijk voor de inrichting van het toernooi, inclusief de privacy-instellingen."
+msgstr "Elke gebruiker kan een toernooi aanmaken en beheren. De organisator is verantwoordelijk voor de setup van het toernooi, inclusief de privacy-instellingen."
 
 #: includes/doroto-frontend-pages.php:645
 msgid "Organizers:"
@@ -1161,7 +1161,7 @@ msgstr "Deze gebruiksvoorwaarden ('Voorwaarden') regelen je toegang tot en gebru
 
 #: includes/doroto-frontend-pages.php:624
 msgid "We may change this Privacy Policy from time to time. If we make changes, we will notify you by revising the date at the top of the policy and, in some cases, we may provide you with additional notice (such as adding a statement to our homepage or sending you a notification)."
-msgstr "We kunnen dit privacybeleid van tijd tot tijd wijzigen. Bij wijzigingen laten we je dat weten door de datum bovenaan het beleid aan te passen en in sommige gevallen met een extra melding (zoals een verklaring op onze homepage of een notificatie)."
+msgstr "We kunnen dit privacybeleid van tijd tot tijd wijzigen. Bij wijzigingen laten we je dat weten door de datum bovenaan het beleid aan te passen en in sommige gevallen met een extra melding (zoals een verklaring op onze homepage of een melding)."
 
 #: includes/doroto-frontend-pages.php:623
 msgid "7. Changes to This Privacy Policy"
@@ -1197,7 +1197,7 @@ msgstr "6. Je rechten en keuzes"
 
 #: includes/doroto-frontend-pages.php:611
 msgid "Display player names as their full \"Display Name\" or in an obfuscated format (e.g., the first 4 and last 4 characters of the Display Name)."
-msgstr "Spelersnamen tonen als volledige 'weergavenaam' of in verkorte vorm (bijv. de eerste 4 en laatste 4 tekens van de weergavenaam)."
+msgstr "Spelersnamen tonen als volledige 'weergavenaam' of in een verkort format (bijv. de eerste 4 en laatste 4 tekens van de weergavenaam)."
 
 #: includes/doroto-frontend-pages.php:610
 msgid "Make a tournament public or private. Public tournaments may be visible to anyone."
@@ -1229,7 +1229,7 @@ msgstr "Niveau 1: je ziet alleen de namen van spelers uit toernooien waarvoor je
 
 #: includes/doroto-frontend-pages.php:600
 msgid "The website administrator chooses one of four levels of data access for regular users:"
-msgstr "De websitebeheerder kiest voor gewone gebruikers een van vier niveaus van gegevenstoegang:"
+msgstr "De sitebeheerder kiest voor gewone gebruikers een van vier niveaus van gegevenstoegang:"
 
 #: includes/doroto-frontend-pages.php:599
 msgid "Administrator-Set Visibility:"
@@ -1309,7 +1309,7 @@ msgstr "1. Verwerkingsverantwoordelijke"
 
 #: includes/doroto-frontend-pages.php:566
 msgid "This Privacy Policy explains how information about you is collected, used, and disclosed when you use the Rotation Tournaments plugin and associated mobile application (collectively, \"the Service\"). This policy applies to the data processed through the WordPress website where this plugin is installed."
-msgstr "Dit privacybeleid legt uit hoe gegevens over jou worden verzameld, gebruikt en openbaar gemaakt wanneer je de plugin Rotation Tournaments en de bijbehorende mobiele app (samen 'de Dienst') gebruikt. Dit beleid geldt voor gegevens die worden verwerkt via de WordPress-website waarop deze plugin is geïnstalleerd."
+msgstr "Dit privacybeleid legt uit hoe gegevens over jou worden verzameld, gebruikt en openbaar gemaakt wanneer je de plugin Rotation Tournaments en de bijbehorende mobiele app (samen 'de Dienst') gebruikt. Dit beleid geldt voor gegevens die worden verwerkt via de WordPress-site waarop deze plugin is geïnstalleerd."
 
 #: includes/doroto-frontend-pages.php:565 includes/doroto-frontend-pages.php:638
 msgid "Last Revision: [2025-07-23]"
@@ -1321,7 +1321,7 @@ msgstr "Betaling(en) geregistreerd."
 
 #: includes/doroto-admin.php:134
 msgid "Click on the map to set the club's location. The selected coordinates will be saved."
-msgstr "Klik op de kaart om de locatie van de club in te stellen. De gekozen coördinaten worden opgeslagen."
+msgstr "Klik op de kaart om de locatie van de club in te stellen. De geselecteerde coördinaten worden opgeslagen."
 
 #: includes/doroto-admin.php:133
 msgid "Choose the default option for whether a newly created tournament will be listed in the public tournament list."
@@ -1359,15 +1359,15 @@ msgstr "Dit is een systeembrede WordPress-instelling en kan hier niet worden gew
 
 #: includes/doroto-admin.php:130
 msgid "Should this club website be shown in the list of available servers?"
-msgstr "Moet de website van deze club in de lijst met beschikbare servers worden getoond?"
+msgstr "Moet de site van deze club in de lijst met beschikbare servers worden getoond?"
 
 #: includes/doroto-admin.php:129
 msgid "Description shown to users when selecting club websites in the app."
-msgstr "Beschrijving die gebruikers zien als ze in de app de website van een club kiezen."
+msgstr "Beschrijving die gebruikers zien bij het selecteren van clubsites in de app."
 
 #: includes/doroto-admin.php:128
 msgid "The website that is usable for the mobile application."
-msgstr "De website die met de mobiele app kan worden gebruikt."
+msgstr "De site die met de mobiele app kan worden gebruikt."
 
 #: includes/doroto-admin.php:125 build/admin/index.js:1 src/admin/index.js:621
 msgid "Mobile app"
@@ -1489,7 +1489,7 @@ msgstr "Inschrijflink voor het toernooi – hallo vanuit een dynamisch blok!"
 
 #: doubles-rotation-tournament.php:473
 msgid "To quickly understand the capabilities of the Rotation tournaments plugin, start on this page: %s"
-msgstr "Begin op deze pagina om snel de mogelijkheden van de plugin Rotatietoernooien te leren kennen: %s"
+msgstr "Begin op deze pagina om snel de mogelijkheden van de plugin Rotation Tournaments te leren kennen: %s"
 
 #: includes/doroto-tournament-management.php:2436
 msgid "Example 4: Beach Volleyball, completed tournament"
@@ -1533,19 +1533,19 @@ msgstr "Winnaar"
 
 #: includes/doroto-repeated-functions.php:62
 msgid "You might need a little help. You can start by clicking the floating help icon on the right."
-msgstr "Misschien heb je wat hulp nodig. Begin door rechts op het zwevende helppictogram te klikken."
+msgstr "Misschien heb je wat hulp nodig. Begin door rechts op het zwevende help-icoon te klikken."
 
 #: doubles-rotation-tournament.php:437
 msgid "Finally, your filter was canceled so that it would not unexpectedly affect other tournaments."
-msgstr "Ten slotte is je filter opgeheven, zodat het andere toernooien niet onverwacht beïnvloedt."
+msgstr "Ten slotte is je filter geannuleerd, zodat het andere toernooien niet onverwacht beïnvloedt."
 
 #: doubles-rotation-tournament.php:436 includes/doroto-help.php:279
 msgid "Do you know how many more matches would have to be played to ensure a rotation of serve? That is, each pair would play each other twice to alternate serving? Try changing this parameter and see."
-msgstr "Weet je hoeveel wedstrijden er extra gespeeld zouden moeten worden om een wisseling van opslag te garanderen? Dus dat elk paar twee keer tegen elkaar speelt om de opslag af te wisselen? Wijzig deze parameter en kijk zelf."
+msgstr "Weet je hoeveel wedstrijden er extra gespeeld zouden moeten worden om een rotatie van de opslag te garanderen? Dus dat elk paar twee keer tegen elkaar speelt om de opslag af te wisselen? Wijzig deze parameter en kijk zelf."
 
 #: doubles-rotation-tournament.php:435 includes/doroto-help.php:276
 msgid "Looking at the game statistics of the selected man, we see that he actually played with every player. Moreover, the system ensured an even rotation of serve."
-msgstr "Uit de spelstatistieken van de gekozen man blijkt dat hij echt met elke speler heeft gespeeld. Bovendien heeft het systeem gezorgd voor een gelijkmatige wisseling van de opslag."
+msgstr "Uit de spelstatistieken van de geselecteerde man blijkt dat hij echt met elke speler heeft gespeeld. Bovendien heeft het systeem gezorgd voor een gelijkmatige rotatie van de opslag."
 
 #: doubles-rotation-tournament.php:434 includes/doroto-help.php:275
 msgid "Unlike players from the special group (meaning women here), men played 2 more matches."
@@ -1553,7 +1553,7 @@ msgstr "Anders dan de spelers uit de speciale groep (hier de vrouwen) speelden d
 
 #: doubles-rotation-tournament.php:433
 msgid "This is a man who was randomly selected for us to look at his results."
-msgstr "Dit is een willekeurig gekozen man, van wie we de resultaten bekijken."
+msgstr "Dit is een willekeurig geselecteerde man, van wie we de resultaten bekijken."
 
 #: doubles-rotation-tournament.php:432 includes/doroto-help.php:274
 msgid "Let's set the filter to one of the men."
@@ -1569,7 +1569,7 @@ msgstr "Zo werd de toernooironde afgesloten, waarin we wilden dat iedereen met i
 
 #: doubles-rotation-tournament.php:429 includes/doroto-help.php:268
 msgid "This table shows that the woman who was actually selected did not pair up with another woman, but only with men. At the same time, she played one match with each man."
-msgstr "Deze tabel laat zien dat de gekozen vrouw geen paar vormde met een andere vrouw, maar alleen met mannen. Daarbij speelde ze met elke man één wedstrijd."
+msgstr "Deze tabel laat zien dat de geselecteerde vrouw geen paar vormde met een andere vrouw, maar alleen met mannen. Daarbij speelde ze met elke man één wedstrijd."
 
 #: doubles-rotation-tournament.php:428
 msgid "Here the number of matches played as a teammate and opponent is added up."
@@ -1581,11 +1581,11 @@ msgstr "Deze kolom geeft het aantal gespeelde wedstrijden waarin de speler in de
 
 #: doubles-rotation-tournament.php:426 includes/doroto-help.php:266
 msgid "This column reports the number of matches played where the player listed in this row was a teammate of the selected woman on the right."
-msgstr "Deze kolom geeft het aantal gespeelde wedstrijden waarin de speler in deze rij de rechterpartner van de gekozen vrouw was."
+msgstr "Deze kolom geeft het aantal gespeelde wedstrijden waarin de speler in deze rij de rechterpartner van de geselecteerde vrouw was."
 
 #: doubles-rotation-tournament.php:425 includes/doroto-help.php:265
 msgid "This column reports the number of matches played where the player listed in this row was a teammate of the selected woman on the left."
-msgstr "Deze kolom geeft het aantal gespeelde wedstrijden waarin de speler in deze rij de linkerpartner van de gekozen vrouw was."
+msgstr "Deze kolom geeft het aantal gespeelde wedstrijden waarin de speler in deze rij de linkerpartner van de geselecteerde vrouw was."
 
 #: doubles-rotation-tournament.php:424 includes/doroto-help.php:264
 msgid "The statistical data can be read line by line. The player's name is at the beginning."
@@ -1601,7 +1601,7 @@ msgstr "Ter herinnering: deze vrouw is gekozen om de wedstrijden te filteren en 
 
 #: doubles-rotation-tournament.php:421 includes/doroto-help.php:263
 msgid "Let's look at the matches played by a selected woman from a special group. She actually played matches only with male colleagues, but the opponent could be not only a man + woman group, but also a man + man."
-msgstr "Laten we kijken naar de wedstrijden van een gekozen vrouw uit de speciale groep. Ze speelde alleen samen met mannen, maar de tegenstander kon niet alleen een paar man + vrouw zijn, maar ook man + man."
+msgstr "Laten we kijken naar de wedstrijden van een geselecteerde vrouw uit de speciale groep. Ze speelde alleen samen met mannen, maar de tegenstander kon niet alleen een paar man + vrouw zijn, maar ook man + man."
 
 #: doubles-rotation-tournament.php:420 includes/doroto-help.php:258
 msgid "Another setting allows you to create pairs between members outside of special groups. In our case, you can create male + male pairs."
@@ -1629,7 +1629,7 @@ msgstr "Als je niet bent ingelogd op je account, zie je een belangrijk deel van 
 
 #: doubles-rotation-tournament.php:414 includes/doroto-help.php:262
 msgid "One of the female players was randomly selected and a filter was set based on that."
-msgstr "Een van de speelsters is willekeurig gekozen en op basis daarvan is een filter ingesteld."
+msgstr "Een van de speelsters is willekeurig geselecteerd en op basis daarvan is een filter ingesteld."
 
 #: doubles-rotation-tournament.php:413
 msgid "Preparing help"
@@ -1657,7 +1657,7 @@ msgstr "Om te voorkomen dat een afwezige speler tot winnaar wordt uitgeroepen, k
 
 #: doubles-rotation-tournament.php:406 includes/doroto-help.php:242
 msgid "It is also not necessary to play all the matches to complete the round. Perhaps Iga Swiatek and Novak Djokovic will not be coming and so the round-robin game could not be completed."
-msgstr "Je hoeft ook niet alle wedstrijden te spelen om de ronde af te ronden. Misschien komen Iga Swiatek en Novak Djokovic niet, zodat het iedereen-tegen-iedereen niet kon worden afgemaakt."
+msgstr "Je hoeft ook niet alle wedstrijden te spelen om de ronde af te ronden. Misschien komen Iga Swiatek en Novak Djokovic niet, zodat het iedereen-tegen-iedereen niet kon worden afgerond."
 
 #: doubles-rotation-tournament.php:405 includes/doroto-help.php:241
 msgid "It is important to understand that the total number of matches played does not affect the ranking. What matters is the ratio of points won and lost."
@@ -1721,7 +1721,7 @@ msgstr "In elke kolom van de tabel vind je het wedstrijdnummer."
 
 #: doubles-rotation-tournament.php:389 includes/doroto-help.php:145 includes/doroto-help.php:217
 msgid "Here, individual matches are drawn in a number corresponding to the selected number of available courts or playing surfaces."
-msgstr "Hier worden de wedstrijden geloot in een aantal dat overeenkomt met het gekozen aantal beschikbare banen of speelvelden."
+msgstr "Hier worden de wedstrijden geloot in een aantal dat overeenkomt met het geselecteerde aantal beschikbare banen of speelvelden."
 
 #: doubles-rotation-tournament.php:388
 msgid "To make the tournament prediction reliable, you must check and possibly adjust the parameters marked with *."
@@ -1733,7 +1733,7 @@ msgstr "Als je echter het einde van de toernooironde nastreeft, wordt een gescha
 
 #: doubles-rotation-tournament.php:386 includes/doroto-help.php:228
 msgid "In the settings you can choose whether the tournament targets the end of the round and whether the service rotation is taken into account. The end of the round does not have to be tracked according to the settings."
-msgstr "In de instellingen kun je kiezen of het toernooi op het einde van de ronde gericht is en of rekening wordt gehouden met de wisseling van opslag. Afhankelijk van de instellingen hoeft het einde van de ronde niet te worden gevolgd."
+msgstr "In de instellingen kun je kiezen of het toernooi op het einde van de ronde gericht is en of rekening wordt gehouden met de rotatie van de opslag. Afhankelijk van de instellingen hoeft het einde van de ronde niet te worden gevolgd."
 
 #: doubles-rotation-tournament.php:385 includes/doroto-help.php:227
 msgid "If the goal of the tournament is to close the round, the remaining number of matches for each player is displayed here."
@@ -1765,7 +1765,7 @@ msgstr "Elke speler heeft tot nu toe 3 of 4 wedstrijden gespeeld. Bij wie maar 3
 
 #: doubles-rotation-tournament.php:377
 msgid "Click this floating icon to view help. It will guide you through the various options for how a rotation tournament works and how to set them up."
-msgstr "Klik op dit zwevende pictogram om de help te bekijken. Die leidt je langs de verschillende mogelijkheden van een rotatietoernooi en hoe je ze instelt."
+msgstr "Klik op dit zwevende icoon om de help te bekijken. Die leidt je langs de verschillende mogelijkheden van een rotatietoernooi en hoe je ze instelt."
 
 #: build/blocks/tournament/render.php:626 doubles-rotation-tournament.php:376 src/blocks/tournament/render.php:626
 msgid "Do you need advice?"
@@ -1777,7 +1777,7 @@ msgstr "Als de toernooiorganisator de betalingen van het inschrijfgeld bijhoudt,
 
 #: doubles-rotation-tournament.php:374 includes/doroto-help.php:203
 msgid "As a tournament organizer, you can place selected players in a special group. For example, here all women are in a special group. The name of the player in the special group will be highlighted in color."
-msgstr "Als toernooiorganisator kun je gekozen spelers in een speciale groep plaatsen. Hier zitten bijvoorbeeld alle vrouwen in een speciale groep. De naam van een speler in de speciale groep wordt met een kleur gemarkeerd."
+msgstr "Als toernooiorganisator kun je geselecteerde spelers in een speciale groep plaatsen. Hier zitten bijvoorbeeld alle vrouwen in een speciale groep. De naam van een speler in de speciale groep wordt met een kleur gemarkeerd."
 
 #: doubles-rotation-tournament.php:373 includes/doroto-help.php:200
 msgid "This link will only be available to other players when player registration is open."
@@ -1857,11 +1857,11 @@ msgstr "Variabelen die helpen de duur van het toernooi te schatten."
 
 #: doubles-rotation-tournament.php:352 includes/doroto-help.php:156 includes/doroto-help.php:230
 msgid "Here you can enter the number of courts that are available, edit the name of the tournament and the type of tournament."
-msgstr "Hier kun je het aantal beschikbare banen invoeren en de naam en het type van het toernooi wijzigen."
+msgstr "Hier kun je het aantal beschikbare banen invoeren en de naam en het type van het toernooi bewerken."
 
 #: doubles-rotation-tournament.php:351
 msgid "Under these tabs you will find all possible settings of the selected tournament."
-msgstr "Onder deze tabs vind je alle mogelijke instellingen van het gekozen toernooi."
+msgstr "Onder deze tabs vind je alle mogelijke instellingen van het geselecteerde toernooi."
 
 #: doubles-rotation-tournament.php:350 includes/doroto-shortcodes.php:3776
 msgid "Advance tournament management"
@@ -1897,7 +1897,7 @@ msgstr "Dit toont het aantal ingeschreven spelers. Zie je achter de schuine stre
 
 #: doubles-rotation-tournament.php:340
 msgid "You can select the tournament with which you will continue to work by clicking on its name. A colored background means that this tournament has already been selected."
-msgstr "Klik op de naam van een toernooi om het toernooi te kiezen waarmee je verder werkt. Een gekleurde achtergrond betekent dat dit toernooi al is gekozen."
+msgstr "Klik op de naam van een toernooi om het toernooi te selecteren waarmee je verder werkt. Een gekleurde achtergrond betekent dat dit toernooi al is geselecteerd."
 
 #: doubles-rotation-tournament.php:339
 msgid "Because player registration for the tournament has already been closed, this link is inactive."
@@ -1905,7 +1905,7 @@ msgstr "Omdat de inschrijving voor het toernooi al gesloten is, is deze link nie
 
 #: doubles-rotation-tournament.php:338 includes/doroto-help.php:140
 msgid "For the selected tournament, you can log in or log out here."
-msgstr "Voor het gekozen toernooi kun je je hier in- of uitschrijven."
+msgstr "Voor het geselecteerde toernooi kun je je hier in- of uitschrijven."
 
 #: doubles-rotation-tournament.php:337 includes/doroto-shortcodes.php:3774
 msgid "Tournament registration"
@@ -1917,11 +1917,11 @@ msgstr "Als je inlogt op je account en we deze uitleg opnieuw starten, geef ik j
 
 #: doubles-rotation-tournament.php:333
 msgid "We will demonstrate this tip on a selected tournament example."
-msgstr "We laten deze tip zien aan de hand van een gekozen voorbeeldtoernooi."
+msgstr "We laten deze tip zien aan de hand van een geselecteerd voorbeeldtoernooi."
 
 #: doubles-rotation-tournament.php:332
 msgid "Redirect"
-msgstr "Doorsturen"
+msgstr "Omleiden"
 
 #: doubles-rotation-tournament.php:331
 msgid "The settings have been made, you just need to reload the page."
@@ -1973,7 +1973,7 @@ msgstr "Klik op deze knop en het toernooi wordt aangemaakt."
 
 #: doubles-rotation-tournament.php:318
 msgid "First, select the type of tournament you want to create."
-msgstr "Kies eerst het type toernooi dat je wilt aanmaken."
+msgstr "Selecteer eerst het type toernooi dat je wilt aanmaken."
 
 #: doubles-rotation-tournament.php:317
 msgid "End of preparation. Let's get started!"
@@ -1993,7 +1993,7 @@ msgstr "Hoeveel games (punten) worden er per uur op één baan (tafel) gespeeld?
 
 #: includes/doroto-blocks.php:199 includes/doroto-shortcodes.php:2325
 msgid "Yes, but don't consider service rotation."
-msgstr "Ja, maar zonder rekening te houden met de wisseling van opslag."
+msgstr "Ja, maar zonder rekening te houden met de rotatie van de opslag."
 
 #: includes/doroto-blocks.php:196 includes/doroto-shortcodes.php:2304
 msgid "If you play tennis and your matches end with an average score of 6:4, then enter a value of 10."
@@ -2065,7 +2065,7 @@ msgstr "Voor deze speler wordt bij voorkeur de partner gezocht met wie hij het m
 
 #: includes/doroto-frontend-pages.php:451
 msgid "The active player with the fewest matches will be selected"
-msgstr "De actieve speler met de minste wedstrijden wordt gekozen"
+msgstr "De actieve speler met de minste wedstrijden wordt geselecteerd"
 
 #: includes/doroto-frontend-pages.php:450
 msgid "The drawing of pairs takes place according to the following procedure:"
@@ -2073,11 +2073,11 @@ msgstr "Het loten van paren verloopt volgens de volgende procedure:"
 
 #: includes/doroto-frontend-pages.php:449
 msgid "Pair selection mechanism"
-msgstr "Mechanisme voor de keuze van paren"
+msgstr "Mechanisme voor de selectie van paren"
 
 #: includes/doroto-admin.php:106
 msgid "Enter a value between 1 and 10 for minimum matches."
-msgstr "Vul voor het minimum aantal wedstrijden een waarde tussen 1 en 10 in."
+msgstr "Voer voor het minimum aantal wedstrijden een waarde tussen 1 en 10 in."
 
 #: includes/doroto-admin.php:106 includes/doroto-blocks.php:232 includes/doroto-shortcodes.php:2566
 msgid "The minimum number of matches a player must play to be declared the winner."
@@ -2117,7 +2117,7 @@ msgstr "De speciale groep bevat niet genoeg spelers."
 
 #: includes/doroto-repeated-functions.php:565
 msgid "The setup requires a player from a Special Group to be selected for each team."
-msgstr "De instelling vereist dat voor elk team een speler uit een speciale groep wordt gekozen."
+msgstr "De setup vereist dat voor elk team een speler uit een speciale groep wordt geselecteerd."
 
 #: includes/doroto-repeated-functions.php:58
 msgid "You can log in here."
@@ -2149,11 +2149,11 @@ msgstr "Toernooiorganisatoren kunnen in de database alleen spelers vinden"
 
 #: includes/doroto-admin.php:98
 msgid "Select the restriction level for working with the player database."
-msgstr "Kies het beperkingsniveau voor het werken met de spelersdatabase."
+msgstr "Selecteer het beperkingsniveau voor het werken met de spelersdatabase."
 
 #: includes/doroto-admin.php:98
 msgid "In addition to the web administrator, the tournament organizer could also work with the player database."
-msgstr "Naast de websitebeheerder zou ook de toernooiorganisator met de spelersdatabase kunnen werken."
+msgstr "Naast de sitebeheerder zou ook de toernooiorganisator met de spelersdatabase kunnen werken."
 
 #: includes/doroto-admin.php:90
 msgid "If you leave the field blank, the log in prompt will not be displayed."
@@ -2165,7 +2165,7 @@ msgstr "De URL van de pagina om in te loggen op je account."
 
 #: includes/doroto-admin.php:96
 msgid "Select what data will define Rights of the tournament organizer and players."
-msgstr "Kies welke gegevens de rechten van de toernooiorganisator en de spelers bepalen."
+msgstr "Selecteer welke gegevens de rechten van de toernooiorganisator en de spelers bepalen."
 
 #: includes/doroto-admin.php:95
 msgid "Rights"
@@ -2197,7 +2197,7 @@ msgstr "Ja, zonder opslag"
 
 #: includes/doroto-blocks.php:200 includes/doroto-shortcodes.php:2326
 msgid "Yes, and ensure service rotation."
-msgstr "Ja, en zorg voor wisseling van opslag."
+msgstr "Ja, en zorg voor rotatie van de opslag."
 
 #: includes/doroto-blocks.php:198 includes/doroto-shortcodes.php:2324
 msgid "No, do not announce the end of the round."
@@ -2377,7 +2377,7 @@ msgstr "Tabel met beschikbare toernooien."
 
 #: includes/doroto-admin.php:119
 msgid "Table with statistics of a randomly selected player."
-msgstr "Tabel met statistieken van een willekeurig gekozen speler."
+msgstr "Tabel met statistieken van een willekeurig geselecteerde speler."
 
 #: includes/doroto-admin.php:118
 msgid "Table with all played games."
@@ -2437,11 +2437,11 @@ msgstr "Deze optie verschijnt standaard bij de knop om een toernooi aan te maken
 
 #: includes/doroto-admin.php:60
 msgid "Specify the default tournament type to select."
-msgstr "Geef het standaard gekozen toernooitype op."
+msgstr "Geef het standaard te selecteren toernooitype op."
 
 #: includes/doroto-admin.php:58
 msgid "Select the default tournament type and specify which tournament types you allow to be created."
-msgstr "Kies het standaard toernooitype en geef aan welke toernooitypes mogen worden aangemaakt."
+msgstr "Selecteer het standaard toernooitype en geef aan voor welke toernooitypes je het aanmaken toestaat."
 
 #: includes/doroto-admin.php:112
 msgid "The plugin allows presenting real-time tournament results on a large screen so that all players can stay informed. Here, you choose what information you want to display and how quickly the screens will transition."
@@ -2449,7 +2449,7 @@ msgstr "Met de plugin kun je toernooiuitslagen live op een groot scherm tonen, z
 
 #: includes/doroto-admin.php:140
 msgid "Select what data will be deleted during the plugin uninstallation and what will happen upon its reactivation."
-msgstr "Kies welke gegevens bij het verwijderen van de plugin worden gewist en wat er gebeurt bij het opnieuw activeren."
+msgstr "Selecteer welke gegevens bij het verwijderen van de plugin worden gewist en wat er gebeurt bij het opnieuw activeren."
 
 #: build/blocks/tournament/render.php:153 includes/doroto-admin.php:111 src/blocks/tournament/render.php:153 build/blocks/tournament/index.js:1 src/blocks/tournament/index.js:94
 msgid "Presentation"
@@ -2483,7 +2483,7 @@ msgstr "Het dubbel-rotatietoernooi is een alternatieve vorm van een dubbeltoerno
 
 #: includes/doroto-tournament-management.php:2881
 msgid "List of available tournaments was updated."
-msgstr "De lijst met beschikbare toernooien is bijgewerkt."
+msgstr "De lijst met beschikbare toernooien is geüpdatet."
 
 #: includes/doroto-services.php:81
 msgid "A tournament cannot be closed while player registration is open."
@@ -2543,7 +2543,7 @@ msgstr "Klik hier om de presentatie te starten."
 
 #: includes/doroto-shortcodes.php:3629
 msgid "If you log in, you can start the presentation of the selected tournament."
-msgstr "Als je inlogt, kun je de presentatie van het gekozen toernooi starten."
+msgstr "Als je inlogt, kun je de presentatie van het geselecteerde toernooi starten."
 
 #: build/blocks/tournament-list/render.php:60 includes/doroto-shortcodes.php:3578 src/blocks/tournament-list/render.php:60
 msgid "Filter Tournaments"
@@ -2871,11 +2871,11 @@ msgstr "Deelname hervatten"
 
 #: includes/doroto-shortcodes.php:1545
 msgid "The option to restore the player game is closed."
-msgstr "De mogelijkheid om het spel van een speler te hervatten is gesloten."
+msgstr "De mogelijkheid om het spel van een speler terug te zetten is gesloten."
 
 #: includes/doroto-shortcodes.php:1524
 msgid "You must log in to restore the game!"
-msgstr "Je moet inloggen om het spel te hervatten!"
+msgstr "Je moet inloggen om het spel terug te zetten!"
 
 #: includes/doroto-services.php:134
 msgid "All players have temporarily suspended participation."
@@ -3127,7 +3127,7 @@ msgstr "Tijdens het toernooi is er geen wachttijd waarin je moet wachten tot een
 
 #: includes/doroto-frontend-pages.php:476
 msgid "DoRoTo perfectly provides an overview of the quality of individual players, where the quality of a teammate does not affect the rating due to the frequent change of partners."
-msgstr "DoRoTo geeft een perfect beeld van de kwaliteit van de afzonderlijke spelers, omdat de kwaliteit van de partner door het vaak wisselen van partners de beoordeling niet beïnvloedt."
+msgstr "DoRoTo geeft een perfect beeld van de kwaliteit van de afzonderlijke spelers, omdat de kwaliteit van de partner door het vaak wisselen van partners de waardering niet beïnvloedt."
 
 #: includes/doroto-frontend-pages.php:475
 msgid "It is not necessary for each player to play the same number of matches (the final ranking is determined only by the ratio of games won to games lost)."
@@ -3163,11 +3163,11 @@ msgstr "Je kunt zonder partner aan het toernooi meedoen (door de rotatie heb je 
 
 #: includes/doroto-frontend-pages.php:467
 msgid "There is a rotation of teammates (DoRoTo tries, depending on the setup and the number of games, to play with everyone as much as possible, alternating the left and right sides of the court equally)."
-msgstr "Partners wisselen (DoRoTo probeert, afhankelijk van de instellingen en het aantal games, dat je zo veel mogelijk met iedereen speelt en daarbij gelijkmatig de linker- en rechterkant van de baan afwisselt)."
+msgstr "Er is een rotatie van partners (DoRoTo probeert, afhankelijk van de setup en het aantal games, dat je zo veel mogelijk met iedereen speelt en daarbij gelijkmatig de linker- en rechterkant van de baan afwisselt)."
 
 #: includes/doroto-frontend-pages.php:464
 msgid "If, optionally, a final match between the 4 selected participants with the highest score is arranged at the end, then 2 players will emerge from this final as the winners in the category of the Most Ideal Pair."
-msgstr "Als er aan het einde optioneel een finalewedstrijd tussen de 4 gekozen deelnemers met de hoogste score wordt gespeeld, komen daaruit 2 spelers als winnaars in de categorie meest ideale paar."
+msgstr "Als er aan het einde optioneel een finalewedstrijd tussen de 4 geselecteerde deelnemers met de hoogste score wordt gespeeld, komen daaruit 2 spelers als winnaars in de categorie meest ideale paar."
 
 #: includes/doroto-frontend-pages.php:463
 msgid "If multiple players have the same score, multiple players may be declared winners of the tournament."
@@ -3227,7 +3227,7 @@ msgstr "Ouders van spelende kinderen kunnen in een speciale groep worden geplaat
 
 #: includes/doroto-frontend-pages.php:438
 msgid "Players of various skill levels will participate in the tournament. In order not to create a pair that is too weak or too strong due to random selection, less skilled or too strong players are placed in a special group. This special group, in addition to respectful treatment from players, ensures that pairs consisting of 2 players from this group or 2 players outside of this group are optionally not drawn. It is also possible to ensure that a player in this special group is not declared the winner."
-msgstr "Aan het toernooi doen spelers van verschillend niveau mee. Om te voorkomen dat het toeval een te zwak of te sterk paar maakt, worden minder geoefende of juist zeer sterke spelers in een speciale groep geplaatst. Deze groep zorgt, naast respectvolle omgang tussen spelers, er optioneel voor dat er geen paren worden geloot van 2 spelers uit deze groep of 2 spelers van buiten deze groep. Ook kun je ervoor zorgen dat een speler uit deze speciale groep niet tot winnaar wordt uitgeroepen."
+msgstr "Aan het toernooi doen spelers van verschillend niveau mee. Om te voorkomen dat een willekeurige selectie een te zwak of te sterk paar maakt, worden minder geoefende of juist zeer sterke spelers in een speciale groep geplaatst. Deze groep zorgt, naast respectvolle omgang tussen spelers, er optioneel voor dat er geen paren worden geloot van 2 spelers uit deze groep of 2 spelers van buiten deze groep. Ook kun je ervoor zorgen dat een speler uit deze speciale groep niet tot winnaar wordt uitgeroepen."
 
 #: includes/doroto-frontend-pages.php:437 build/blocks/tournament-list/index.js:1 build/blocks/tournament/index.js:1 src/blocks/color-panel.js:46
 msgid "Special group"
@@ -3235,7 +3235,7 @@ msgstr "Speciale groep"
 
 #: includes/doroto-frontend-pages.php:436
 msgid "The table determining who will play with whom and on which side of the court will be provided by dedicated software through random selection. With an increasing number of players, the number of match combinations grows significantly, making it difficult to manage the tournament successfully without computational techniques."
-msgstr "De tabel die bepaalt wie met wie speelt en aan welke kant van de baan, wordt door speciale software via willekeurige keuze gemaakt. Met een groeiend aantal spelers neemt het aantal wedstrijdcombinaties sterk toe, zodat een geslaagd toernooibeheer zonder computer moeilijk voorstelbaar is."
+msgstr "De tabel die bepaalt wie met wie speelt en aan welke kant van de baan, wordt door speciale software via willekeurige selectie gemaakt. Met een groeiend aantal spelers neemt het aantal wedstrijdcombinaties sterk toe, zodat een geslaagd toernooibeheer zonder computer moeilijk voorstelbaar is."
 
 #: includes/doroto-frontend-pages.php:435
 msgid "With the aim of allowing players to play with more tennis partners during the tournament, we will try to choose more matches with a smaller number of played games."
@@ -3243,7 +3243,7 @@ msgstr "Omdat spelers tijdens het toernooi met zo veel mogelijk partners moeten 
 
 #: includes/doroto-frontend-pages.php:434
 msgid "If the organizer wanted to ensure quicker rotation of pairs, they could opt for a total of 3 games per match. Then, it would be possible to play 180 / 3 = 60 matches, and each player would participate in an average of 60 / (20 / 4) = 12 games."
-msgstr "Als de organisator de paren sneller wil laten wisselen, kan hij kiezen voor 3 games per wedstrijd. Dan kunnen er 180 / 3 = 60 wedstrijden worden gespeeld en speelt elke speler gemiddeld 60 / (20 / 4) = 12 wedstrijden."
+msgstr "Als de organisator een snellere rotatie van paren wil, kan hij kiezen voor 3 games per wedstrijd. Dan kunnen er 180 / 3 = 60 wedstrijden worden gespeeld en speelt elke speler gemiddeld 60 / (20 / 4) = 12 wedstrijden."
 
 #: includes/doroto-frontend-pages.php:433
 msgid "Now, assuming a game with a total of 5 games, which allows for 36 matches to be played (180 / 5). Each player will participate in an average of 36 / (20 / 4) = 7 games."
@@ -3379,7 +3379,7 @@ msgstr "Na het sluiten van het toernooi wordt de winnaar met de beste verhouding
 
 #: includes/doroto-frontend-pages.php:232
 msgid "Only the tournament organizer has the right to close the tournament. After closing, it is no longer possible to enter results or make edits."
-msgstr "Alleen de toernooiorganisator mag het toernooi sluiten. Na het sluiten kunnen geen uitslagen meer worden ingevoerd of wijzigingen worden gedaan."
+msgstr "Alleen de toernooiorganisator mag het toernooi sluiten. Na het sluiten kunnen geen uitslagen meer worden ingevoerd of bewerkingen worden gedaan."
 
 #: includes/doroto-frontend-pages.php:232
 msgid "Closing the tournament and announcing the winner."
@@ -3427,7 +3427,7 @@ msgstr "Alleen de toernooiorganisator kan de inschrijving van spelers sluiten."
 
 #: includes/doroto-frontend-pages.php:212
 msgid "The closing of player registration"
-msgstr "Sluiten van de inschrijving"
+msgstr "Inschrijving van spelers wordt gesloten"
 
 #: includes/doroto-frontend-pages.php:210
 msgid "Players can withdraw from the tournament on their own, or the match organizer can remove them from the match."
@@ -3439,7 +3439,7 @@ msgstr "In de toernooi-instellingen kun je het bijhouden van de betaling van het
 
 #: includes/doroto-frontend-pages.php:206
 msgid "Adding to a special group will colorfully alert the player to the pre-agreed method of handling the special group. This can only be done by the match organizer."
-msgstr "Toevoegen aan een speciale groep wijst spelers met een kleur op de vooraf afgesproken omgang met de speciale groep. Alleen de organisator kan dit doen."
+msgstr "Toevoegen aan een speciale groep geeft spelers een gekleurde waarschuwing over de vooraf afgesproken omgang met de speciale groep. Alleen de organisator kan dit doen."
 
 #: includes/doroto-frontend-pages.php:204
 msgid "Adding players from the database can be restricted to the website administrator."
@@ -3455,7 +3455,7 @@ msgstr "De toernooiorganisator kan een andere speler organisatorrechten geven."
 
 #: includes/doroto-frontend-pages.php:199
 msgid "The website administrator can add an invitation to the tournament, which will be displayed through a newly created post."
-msgstr "De websitebeheerder kan een uitnodiging voor het toernooi toevoegen, die in een nieuw aangemaakt bericht wordt getoond."
+msgstr "De sitebeheerder kan een uitnodiging voor het toernooi toevoegen, die in een nieuw aangemaakt bericht wordt getoond."
 
 #: includes/doroto-frontend-pages.php:197
 msgid "The Minimum Playing Players parameter determines the minimum number of players required to proceed to the next match. A higher number provides more variability but may also slow down the progress of the tournament."
@@ -3471,7 +3471,7 @@ msgstr "Toernooiparameters bewerken"
 
 #: includes/doroto-frontend-pages.php:191
 msgid "Click on the tournament name to view its details."
-msgstr "Klik op de naam van het toernooi om de details te zien."
+msgstr "Klik op de naam van het toernooi om de details te bekijken."
 
 #: includes/doroto-frontend-pages.php:189
 msgid "Individual players sign up (or withdraw) in the list of available tournaments separately."
@@ -3499,7 +3499,7 @@ msgstr "Help…"
 
 #: includes/doroto-frontend-pages.php:146
 msgid "Tournament Selection ..."
-msgstr "Toernooikeuze…"
+msgstr "Toernooiselectie…"
 
 #: includes/doroto-frontend-pages.php:141 includes/doroto-repeated-functions.php:569 includes/doroto-shortcodes.php:3342
 msgid "Tournament Editing ..."
@@ -3531,7 +3531,7 @@ msgstr "Deze optie houdt gelijke tred met nieuwe updates van de plugin."
 
 #: includes/doroto-admin.php:145
 msgid "Update pages every time you activate the plugin?"
-msgstr "Pagina's bijwerken bij elke activering van de plugin?"
+msgstr "Pagina's updaten bij elke activering van de plugin?"
 
 #: includes/doroto-admin.php:144
 msgid "Uninstall saved settings data at the same time as the plugin?"
@@ -3555,11 +3555,11 @@ msgstr "De toernooidatabase samen met de plugin verwijderen?"
 
 #: includes/doroto-admin.php:114
 msgid "Enter a value between 1 and 120 for the number of seconds."
-msgstr "Vul voor het aantal seconden een waarde tussen 1 en 120 in."
+msgstr "Voer voor het aantal seconden een waarde tussen 1 en 120 in."
 
 #: includes/doroto-admin.php:114
 msgid "Enter the number of seconds as the time between transitions to show the next shortcode."
-msgstr "Vul het aantal seconden in tussen de overgangen naar de volgende shortcode."
+msgstr "Voer het aantal seconden in tussen de overgangen naar de volgende shortcode."
 
 #: includes/doroto-admin.php:89
 msgid "If you leave the field blank, the help video will not be displayed."
@@ -3567,7 +3567,7 @@ msgstr "Als je het veld leeg laat, wordt de helpvideo niet getoond."
 
 #: includes/doroto-admin.php:89
 msgid "Enter the YouTube video link."
-msgstr "Vul de link naar de YouTube-video in."
+msgstr "Voer de link naar de YouTube-video in."
 
 #: includes/doroto-admin.php:89
 msgid "YouTube Video Link with a help."
@@ -3575,11 +3575,11 @@ msgstr "Link naar YouTube-video met help."
 
 #: includes/doroto-admin.php:88
 msgid "Enter a value between 5 and 30 for the number of characters."
-msgstr "Vul voor het aantal tekens een waarde tussen 5 en 30 in."
+msgstr "Voer voor het aantal tekens een waarde tussen 5 en 30 in."
 
 #: includes/doroto-admin.php:88
 msgid "Enter the maximum number of characters allowed in the players display name."
-msgstr "Vul het maximaal toegestane aantal tekens in de weergavenaam van spelers in."
+msgstr "Voer het maximaal toegestane aantal tekens in de weergavenaam van spelers in."
 
 #: includes/doroto-admin.php:105
 msgid "By default, this is enabled by everybody who is logged in. Otherwise, only an administrator, editor or author can create a tournament."
@@ -3587,15 +3587,15 @@ msgstr "Standaard is dit toegestaan voor iedereen die is ingelogd. Anders kan al
 
 #: includes/doroto-admin.php:105
 msgid "Can only a website administrator create a new tournament?"
-msgstr "Mag alleen een websitebeheerder een nieuw toernooi aanmaken?"
+msgstr "Mag alleen een sitebeheerder een nieuw toernooi aanmaken?"
 
 #: includes/doroto-admin.php:87
 msgid "Enter a value between 0 and 1000 for the number of seconds."
-msgstr "Vul voor het aantal seconden een waarde tussen 0 en 1000 in."
+msgstr "Voer voor het aantal seconden een waarde tussen 0 en 1000 in."
 
 #: includes/doroto-admin.php:87
 msgid "Choose the time after which the page will be refreshed. Good especially when you are not the only one entering new data.. (0 = no refresh)"
-msgstr "Kies na hoeveel tijd de pagina wordt vernieuwd. Vooral handig als je niet de enige bent die nieuwe gegevens invoert. (0 = niet vernieuwen)"
+msgstr "Kies na hoeveel tijd de pagina wordt ververst. Vooral handig als je niet de enige bent die nieuwe gegevens invoert. (0 = niet verversen)"
 
 #: includes/doroto-admin.php:104
 msgid "By default, this is enabled by the site administrator. Otherwise, anyone can create a post."
@@ -3607,7 +3607,7 @@ msgstr "De toernooiorganisator toestaan een bericht aan te maken om het toernooi
 
 #: includes/doroto-admin.php:86
 msgid "Enter a value between 0 and 100 for display rows."
-msgstr "Vul voor het aantal getoonde rijen een waarde tussen 0 en 100 in."
+msgstr "Voer voor het aantal getoonde rijen een waarde tussen 0 en 100 in."
 
 #: includes/doroto-admin.php:86
 msgid "Maximum number of displayed tournaments in the table. (0 = no limit)"
@@ -3635,7 +3635,7 @@ msgstr "Instellingen"
 
 #: includes/doroto-admin.php:413
 msgid "Displays a link to start the presentation of the selected tournament. In the admin menu, you can set which tournament parameters will be shown on the screen in the selected time sequence. Especially suitable for displaying the running results of the tournament on a larger screen."
-msgstr "Toont een link om de presentatie van het gekozen toernooi te starten. In het beheermenu kun je instellen welke toernooiparameters in welke volgorde op het scherm worden getoond. Vooral geschikt om de lopende uitslagen van het toernooi op een groter scherm te tonen."
+msgstr "Toont een link om de presentatie van het geselecteerde toernooi te starten. In het beheermenu kun je instellen welke toernooiparameters in de geselecteerde tijdsvolgorde op het scherm worden getoond. Vooral geschikt om de lopende uitslagen van het toernooi op een groter scherm te tonen."
 
 #: includes/doroto-admin.php:412
 msgid "Shows help for using the main page."
@@ -3667,7 +3667,7 @@ msgstr "Een functie die de optionele parameters van het toernooi toont en wijzig
 
 #: includes/doroto-admin.php:405
 msgid "Here you can manually delete the information about the completed payment of a certain player."
-msgstr "Hier kun je de informatie over de betaling van een bepaalde speler handmatig verwijderen."
+msgstr "Hier kun je de informatie over de afgeronde betaling van een bepaalde speler handmatig verwijderen."
 
 #: includes/doroto-admin.php:404
 msgid "Here you can manually enter information about the payment made by a certain player."
@@ -3699,7 +3699,7 @@ msgstr "Laat de organisator spelers toevoegen uit de gebruikersdatabase. De para
 
 #: includes/doroto-admin.php:397
 msgid "Displays all game statistics for the selected player."
-msgstr "Toont alle spelstatistieken van de gekozen speler."
+msgstr "Toont alle spelstatistieken van de geselecteerde speler."
 
 #: includes/doroto-admin.php:396
 msgid "Match results can be edited here. Especially useful when an error occurred when entering the result of a played match."
@@ -3707,23 +3707,23 @@ msgstr "Hier kunnen wedstrijduitslagen worden bewerkt. Vooral handig als er een 
 
 #: includes/doroto-admin.php:395
 msgid "Displays a list of drawn games only for the selected player."
-msgstr "Toont een lijst van gelote games alleen voor de gekozen speler."
+msgstr "Toont een lijst van gelote games alleen voor de geselecteerde speler."
 
 #: includes/doroto-admin.php:394
 msgid "Displays a list of drawn games for the selected tournament. The only_played parameter determines whether only played games are listed."
-msgstr "Toont een lijst van gelote games voor het gekozen toernooi. De parameter only_played bepaalt of alleen gespeelde games worden getoond."
+msgstr "Toont een lijst van gelote games voor het geselecteerde toernooi. De parameter only_played bepaalt of alleen gespeelde games worden getoond."
 
 #: includes/doroto-admin.php:393
 msgid "It will display red marked reports from submitted forms."
-msgstr "Toont rood gemarkeerde meldingen van verzonden formulieren."
+msgstr "Toont rood gemarkeerde rapporten van verzonden formulieren."
 
 #: includes/doroto-admin.php:392
 msgid "It will refresh the page after a certain number of seconds."
-msgstr "Vernieuwt de pagina na een bepaald aantal seconden."
+msgstr "Ververst de pagina na een bepaald aantal seconden."
 
 #: includes/doroto-admin.php:391
 msgid "Displays the list of tournament participants and their running ranking. The format of displayed names depends on the setting of the display full names parameter. Add the tournament number after the id parameter if necessary."
-msgstr "Toont de lijst van deelnemers aan het toernooi en hun actuele positie. De weergave van de namen hangt af van de instelling van de parameter voor volledige namen. Voeg zo nodig het toernooinummer toe na de parameter id."
+msgstr "Toont de lijst van deelnemers aan het toernooi en hun actuele positie. Het format van de getoonde namen hangt af van de instelling van de parameter voor volledige namen. Voeg zo nodig het toernooinummer toe na de parameter id."
 
 #: includes/doroto-admin.php:390
 msgid "Shows drawn games. Their number depends on the parameters of the tournament, such as the number of courts, the minimum number of non-playing players and, according to the permission to compare the number of matches. The tournament_id parameter is optional."
@@ -3799,7 +3799,7 @@ msgstr "Als beheerder kun je:"
 #. translators: %s: tournament number
 #: doubles-rotation-tournament.php:335
 msgid "Can I redirect you to tournament no. %s?"
-msgstr "Mag ik je doorsturen naar toernooi nr. %s?"
+msgstr "Mag ik je omleiden naar toernooi nr. %s?"
 
 #. translators: %d: tournament number
 #: includes/doroto-shortcodes.php:320
@@ -4038,7 +4038,7 @@ msgstr "Toernooi nr. %1$d (%2$s) is gesloten."
 #. translators: 1: tournament number, 2: percentage of the tournament played (e.g. "40 %")
 #: includes/doroto-shortcodes.php:82
 msgid "Tournament no. %1$d: %2$s completed."
-msgstr "Toernooi nr. %1$d: %2$s voltooid."
+msgstr "Toernooi nr. %1$d: %2$s afgerond."
 
 #. translators: 1: tournament number, 2: player name
 #: includes/doroto-shortcodes.php:180

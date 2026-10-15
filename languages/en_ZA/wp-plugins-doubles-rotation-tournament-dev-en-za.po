@@ -393,7 +393,7 @@ msgstr "Click this icon to view help. It will guide you through the various opti
 
 #: includes/doroto-help.php:154
 msgid "Add a player from the player database, or create a new account for a player. The new player gets an e-mail with a link to set the password."
-msgstr "Add a player from the player database, or create a new account for a player. The new player gets an e-mail with a link to set the password."
+msgstr "Add a player from the player database, or create a new account for a player. The new player gets an email with a link to set the password."
 
 #: includes/doroto-help.php:149 includes/doroto-help.php:247
 msgid "Choose a player to see how many times they played with each player as a teammate and against them."
@@ -695,11 +695,11 @@ msgstr "Create and add"
 
 #: build/blocks/tournament/render.php:434 src/blocks/tournament/render.php:434
 msgid "The player gets an e-mail with a link to set the password."
-msgstr "The player gets an e-mail with a link to set the password."
+msgstr "The player gets an email with a link to set the password."
 
 #: build/blocks/tournament/render.php:426 src/blocks/tournament/render.php:426
 msgid "E-mail"
-msgstr "E-mail"
+msgstr "Email"
 
 #: build/blocks/tournament/render.php:426 src/blocks/tournament/render.php:426
 msgid "Last name"
@@ -948,7 +948,7 @@ msgstr "Sign up for the tournament"
 
 #: includes/doroto-endpoints.php:2990
 msgid "Your login e-mail:"
-msgstr "Your login e-mail:"
+msgstr "Your login email:"
 
 #: includes/doroto-endpoints.php:2988
 msgid "To sign in on the website or in the Doroto app, first set your password here:"
@@ -2297,7 +2297,7 @@ msgstr "Terms used:"
 
 #: includes/doroto-admin.php:331
 msgid "The minimum number of registered players in Wordpress is 4."
-msgstr "The minimum number of registered players in Wordpress is 4."
+msgstr "The minimum number of registered players in WordPress is 4."
 
 #: includes/doroto-admin.php:331
 msgid "Since the plugin only works with registered players, a very low number of registered users may affect the functionality."
@@ -2309,7 +2309,7 @@ msgstr "Allow anyone to register"
 
 #: includes/doroto-admin.php:324
 msgid "You have the Anyone Can Register option disabled in your Wordpress settings, which could interfere with the functionality of this plugin!"
-msgstr "You have the Anyone Can Register option disabled in your Wordpress settings, which could interfere with the functionality of this plugin!"
+msgstr "You have the Anyone Can Register option disabled in your WordPress settings, which could interfere with the functionality of this plugin!"
 
 #: includes/doroto-admin.php:312
 msgid "A post with an example of a tournament presentation."

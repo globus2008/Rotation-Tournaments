@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plugins - Rotation Tournaments - Development Readme (trunk)\n"
-"PO-Revision-Date: 2026-10-08 18:18:50+0000\n"
+"PO-Revision-Date: 2026-10-15 07:57:04+0000\n"
 "Language: hu_HU\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -13,13 +13,161 @@ msgstr ""
 
 #. Short description.
 #, gp-priority: high
-msgid "Do you play Singles or Doubles Tournaments? This plugin manages Rotation Tournaments where players have a different partner in each game."
-msgstr "Egyéni vagy páros versenyeket játszik? Ez a bővítmény körversenyeket kezel, amelyekben a játékosoknak minden játékban új partnerük van."
+msgid "Run doubles and singles tournaments where players get a new partner every match: fair draws, live results, standings and an Android app."
+msgstr "Rendezzen páros és egyéni versenyeket, ahol a játékosok minden mérkőzésen új partnert kapnak: igazságos sorsolás, élő eredmények, állás és Android-alkalmazás."
 
 #. Plugin name.
 #, gp-priority: high
 msgid "Rotation Tournaments"
 msgstr "Körversenyek"
+
+#. Found in faq paragraph.
+msgid "An iOS version is planned, but there is no release date yet. The tournament pages work in any mobile browser, including iPhone and iPad."
+msgstr "Az iOS-verzió tervben van, de megjelenési dátuma még nincs. A verseny oldalai bármely mobilböngészőben működnek, iPhone-on és iPaden is."
+
+#. Found in description paragraph.
+msgid "The free <a href=\"https://play.google.com/store/apps/details?id=cz.doroto.app\">Rotation Tournaments app</a> connects to your website: players follow the tournament, enter their results and organizers manage it from the court. The app is available in 27 languages. Several devices can be signed in to one account."
+msgstr "Az ingyenes <a href=\"https://play.google.com/store/apps/details?id=cz.doroto.app\">Rotation Tournaments alkalmazás</a> csatlakozik a webhelyéhez: a játékosok követik a versenyt és beírják az eredményeiket, a szervezők pedig közvetlenül a pályáról irányítják. Az alkalmazás 27 nyelven érhető el. Egy fiókba több eszköz is bejelentkezhet."
+
+#. Found in description paragraph.
+msgid "<strong>Android app</strong>"
+msgstr "<strong>Android-alkalmazás</strong>"
+
+#. Found in description paragraph.
+msgid "<strong>For the website</strong>"
+msgstr "<strong>A webhelyhez</strong>"
+
+#. Found in description paragraph.
+msgid "<strong>The draw</strong>"
+msgstr "<strong>A sorsolás</strong>"
+
+#. Found in description paragraph.
+msgid "<strong>How a tournament works</strong>"
+msgstr "<strong>Hogyan zajlik egy verseny</strong>"
+
+#. Found in description paragraph.
+msgid "It is made for club evenings and social tournaments in <strong>tennis, padel, badminton, table tennis, squash, beach volleyball</strong> and other sports played one against one or two against two."
+msgstr "Klubestekre és baráti versenyekre készült <strong>teniszben, padelben, tollaslabdában, asztaliteniszben, squashban, strandröplabdában</strong> és más sportágakban, amelyeket egy az egy ellen vagy kettő a kettő ellen játszanak."
+
+#. Found in description paragraph.
+msgid "<strong>Rotation Tournaments</strong> runs club tournaments in which nobody is knocked out. In doubles, every player gets a <strong>new partner in every match</strong> and meets as many different opponents as possible. The ranking is the ratio of games won to games lost, so everybody plays until the very end."
+msgstr "A <strong>Körversenyek</strong> olyan klubversenyeket bonyolít le, amelyekből senki sem esik ki. Párosban minden játékos <strong>minden mérkőzésen új partnert kap</strong>, és a lehető legtöbb különböző ellenféllel találkozik. A sorrendet a nyert és elvesztett játékok aránya adja, így mindenki a legvégéig játszik."
+
+#. Found in description list item.
+msgid "Video introduction:"
+msgstr "Bemutató videó:"
+
+#. Found in description list item.
+msgid "<a href=\"https://doroto.ltcchrast.cz/rules-of-the-doubles-rotation-tournament/\">Rules of the Doubles Rotation Tournament</a>."
+msgstr "<a href=\"https://doroto.ltcchrast.cz/rules-of-the-doubles-rotation-tournament/\">A páros körverseny szabályai</a>."
+
+#. Found in description list item.
+msgid "<a href=\"https://doroto.ltcchrast.cz/\">Demo site</a> where you can create your own tournament."
+msgstr "<a href=\"https://doroto.ltcchrast.cz/\">Bemutató webhely</a>, ahol saját versenyt hozhat létre."
+
+#. Found in description list item.
+msgid "Players sign in with their WordPress accounts; full or shortened names (privacy)."
+msgstr "A játékosok WordPress-fiókjukkal jelentkeznek be; teljes vagy rövidített nevek (adatvédelem)."
+
+#. Found in description list item.
+msgid "Guided tours of the page and four example tournaments."
+msgstr "Az oldal bemutató túrái és négy példaverseny."
+
+#. Found in description list item.
+msgid "Colors follow your theme; the block's Styles panel can change them."
+msgstr "A színek a sablont követik; a blokk Stílusok paneljén módosíthatók."
+
+#. Found in description list item.
+msgid "Share dialog with a QR code and a link that opens the tournament in the app."
+msgstr "Megosztás ablak QR-kóddal és egy hivatkozással, amely megnyitja a versenyt az alkalmazásban."
+
+#. Found in description list item.
+msgid "Live updates without reloading the page."
+msgstr "Élő frissítés az oldal újratöltése nélkül."
+
+#. Found in description list item.
+msgid "Blocks for the block editor: \"Rotation tournament\" (matches, results, players, statistics and settings on tabs), \"Tournament standings\", \"Tournament matches\", \"Tournament presentation\", \"Tournament list\" and \"Tournament invitation\". Shortcodes for the classic editor."
+msgstr "Blokkok a blokkszerkesztőhöz: „Körverseny” (mérkőzések, eredmények, játékosok, statisztika és beállítások füleken), „A verseny állása”, „A verseny mérkőzései”, „Verseny bemutatása”, „Versenyek listája” és „Meghívó a versenyre”. Rövidkódok a klasszikus szerkesztőhöz."
+
+#. Found in description list item.
+msgid "Special group of players (e.g. women in a mixed tournament) with its own rules: mixed teams only, a separate winner and more."
+msgstr "Különleges csoport (pl. a nők egy vegyes versenyen) saját szabályokkal: csak vegyes párok, külön győztes és még sok más."
+
+#. Found in description list item.
+msgid "Works with any number of players from 4 up, odd numbers included; players can join, pause or leave at any time."
+msgstr "Bármennyi játékossal működik 4-től felfelé, páratlan számmal is; a játékosok bármikor csatlakozhatnak, szünetet tarthatnak vagy kiléphetnek."
+
+#. Found in description list item.
+msgid "Players with fewer games and longer rest go first; sides (left/right) and serve alternate."
+msgstr "Elsőbbséget kapnak a kevesebb mérkőzést játszott és hosszabb ideje pihenő játékosok; az oldalak (bal/jobb) és az adogatás váltakoznak."
+
+#. Found in description list item.
+msgid "Opponents are chosen by previous meetings too, so the same players meet less often."
+msgstr "Az ellenfelek kiválasztásánál a korábbi találkozások is számítanak, így ugyanazok a játékosok ritkábban találkoznak."
+
+#. Found in description list item.
+msgid "New teammates first: the plugin pairs players who have not played together yet."
+msgstr "Először új partnerek: a bővítmény olyan játékosokat párosít, akik még nem játszottak együtt."
+
+#. Found in description list item.
+msgid "At the end the organizer closes the tournament and the best player and the best pair are announced."
+msgstr "A végén a szervező lezárja a versenyt, és kihirdetik a legjobb játékost és a legjobb párt."
+
+#. Found in description list item.
+msgid "Standings, statistics and the presentation on a big screen update live."
+msgstr "Az állás, a statisztika és a nagy képernyős bemutató élőben frissül."
+
+#. Found in description list item.
+msgid "Whoever finishes a match enters the score on the website or in the Android app; the next match is drawn at once."
+msgstr "Aki befejez egy mérkőzést, beírja az eredményt a webhelyen vagy az Android-alkalmazásban; a következő mérkőzést azonnal kisorsolja a rendszer."
+
+#. Found in description list item.
+msgid "Players join (also later, during the tournament) and the plugin draws the first matches for the free courts."
+msgstr "A játékosok jelentkeznek (később, a verseny közben is), és a bővítmény kisorsolja az első mérkőzéseket a szabad pályákra."
+
+#. Found in description list item.
+msgid "The organizer creates a tournament and shares the invitation link or QR code."
+msgstr "A szervező létrehozza a versenyt, és megosztja a meghívó hivatkozást vagy a QR-kódot."
+
+#. Screenshot description.
+msgid "Android app: entering results, standings and played matches."
+msgstr "Android-alkalmazás: eredmények beírása, állás és lejátszott mérkőzések."
+
+#. Screenshot description.
+msgid "Tournament settings for organizers."
+msgstr "Versenybeállítások a szervezőknek."
+
+#. Screenshot description.
+msgid "The \"Rotation tournament\" block in the block editor."
+msgstr "A „Körverseny” blokk a blokkszerkesztőben."
+
+#. Screenshot description.
+msgid "Share the tournament with a QR code; it opens the tournament in the app."
+msgstr "A verseny megosztása QR-kóddal; megnyitja a versenyt az alkalmazásban."
+
+#. Found in description list item.
+msgid "Presentation mode for a TV or projector in the club house."
+msgstr "Bemutató mód tévéhez vagy projektorhoz a klubházban."
+
+#. Screenshot description.
+msgid "Statistics: how often a player played with and against each other player."
+msgstr "Statisztika: egy játékos milyen gyakran játszott a többi játékossal együtt és ellenük."
+
+#. Screenshot description.
+msgid "Live standings by the ratio of games won to games lost, with the trend of each player."
+msgstr "Élő állás a nyert és elvesztett játékok aránya szerint, minden játékos trendjével."
+
+#. Screenshot description.
+msgid "Results of all matches, with a filter by player."
+msgstr "Az összes mérkőzés eredménye, játékos szerinti szűrővel."
+
+#. Screenshot description.
+msgid "Ongoing matches: the next match is drawn as soon as a score is saved. Names of the special group are highlighted."
+msgstr "Folyamatban lévő mérkőzések: a következő mérkőzést azonnal kisorsolja a rendszer, amint egy eredményt elmentenek. A különleges csoport nevei ki vannak emelve."
+
+#. Screenshot description.
+msgid "The same tournament on the website and in the Android app."
+msgstr "Ugyanaz a verseny a webhelyen és az Android-alkalmazásban."
 
 #. Found in installation paragraph.
 msgid "After installation, go to the app's settings and enter the address of your website where this plugin is installed."
@@ -33,25 +181,9 @@ msgstr "Vagy töltse le közvetlenül innen: https://play.google.com/store/apps/
 msgid "Search for \"Rotation Tournaments\" on the Google Play Store."
 msgstr "Keressen rá a Google Playen: „Rotation Tournaments”."
 
-#. Found in description paragraph.
-msgid "To get the full experience of managing tournaments on the go, download our mobile app, now available on Google Play!"
-msgstr "A versenyek útközbeni teljes körű kezeléséhez töltse le mobilalkalmazásunkat, amely már elérhető a Google Playen!"
-
-#. Found in description paragraph.
-msgid "<strong>YouTube quick intro:</strong>"
-msgstr "<strong>Rövid bemutató a YouTube-on:</strong>"
-
-#. Found in description list item.
-msgid "Video for a quick introduction to the Rotation Tournament:"
-msgstr "Videó a körverseny rövid bemutatójával:"
-
 #. Found in faq paragraph.
 msgid "Yes. If you install the Rotation Tournaments plugin, allow player registration, and enable visibility in the website list, your site can appear in the Android app. Initially, someone must manually enter your website address into the app. After that, it becomes visible in the list for all users."
 msgstr "Igen. Ha telepíti a Rotation Tournaments bővítményt, engedélyezi a játékosok regisztrációját, és bekapcsolja a webhelylistában való láthatóságot, webhelye megjelenhet az Android-alkalmazásban. Először valakinek kézzel kell megadnia webhelye címét az alkalmazásban. Ezután a webhely minden felhasználó számára látható lesz a listában."
-
-#. Found in faq paragraph.
-msgid "Yes. An iOS version of the Rotation Tournaments app is planned and will be released in the near future."
-msgstr "Igen. A Rotation Tournaments alkalmazás iOS-változata tervben van, és hamarosan megjelenik."
 
 #. Found in faq header.
 msgid "Will my website be visible in the Rotation Tournaments Android app?"
@@ -74,80 +206,12 @@ msgid "<strong>How to install the Android app:</strong>"
 msgstr "<strong>Az Android-alkalmazás telepítése:</strong>"
 
 #. Found in description paragraph.
-msgid "<strong>This plugin is the server-side for the \"Rotation Tournaments\" Android app.</strong>"
-msgstr "<strong>Ez a bővítmény a „Rotation Tournaments” Android-alkalmazás szerveroldala.</strong>"
-
-#. Screenshot description.
-msgid "Individual tournament participants enter their results into the WordPress server and share the data with each other."
-msgstr "A verseny résztvevői a WordPress-szerverre viszik fel eredményeiket, és megosztják egymással az adatokat."
-
-#. Screenshot description.
-msgid "Matches played. (Android app)"
-msgstr "Lejátszott mérkőzések. (Android-alkalmazás)"
-
-#. Screenshot description.
-msgid "Tournament table. (Wordpress)"
-msgstr "Versenytáblázat. (WordPress)"
-
-#. Screenshot description.
-msgid "Matches drawn. (Android app)"
-msgstr "Kisorsolt mérkőzések. (Android-alkalmazás)"
-
-#. Screenshot description.
-msgid "Editing tournament parameters. (Wordpress)"
-msgstr "A verseny paramétereinek szerkesztése. (WordPress)"
-
-#. Screenshot description.
-msgid "Table of players with rankings. (Android app)"
-msgstr "Játékostáblázat helyezésekkel. (Android-alkalmazás)"
-
-#. Screenshot description.
-msgid "Matches played. (Wordpress)"
-msgstr "Lejátszott mérkőzések. (WordPress)"
-
-#. Screenshot description.
-msgid "Basic overview of the tournament. (Android app)"
-msgstr "A verseny fő áttekintése. (Android-alkalmazás)"
-
-#. Screenshot description.
-msgid "Matches drawn. (Wordpress)"
-msgstr "Kisorsolt mérkőzések. (WordPress)"
-
-#. Found in description paragraph.
-msgid "<strong>Rotation Tournaments</strong> provides a platform for organizing all kinds of sports Singles and Doubles Tournaments, e.g."
-msgstr "A <strong>Körversenyek</strong> platform bármilyen egyéni és páros sportverseny szervezéséhez, például:"
-
-#. Found in description list item.
-msgid "Squash"
-msgstr "Fallabda"
-
-#. Found in description list item.
-msgid "Beach Volleyball"
-msgstr "Strandröplabda"
-
-#. Found in description list item.
-msgid "Badminton"
-msgstr "Tollaslabda"
-
-#. Found in description list item.
-msgid "Padel"
-msgstr "Padel"
-
-#. Found in description list item.
-msgid "Table Tennis"
-msgstr "Asztalitenisz"
-
-#. Found in description list item.
-msgid "Tennis"
-msgstr "Tenisz"
+msgid "<strong>Try it</strong>"
+msgstr "<strong>Próbálja ki</strong>"
 
 #. Found in faq paragraph.
-msgid ""
-"This plugin can be used for all types of sports where 2 or 4 players compete in singles or doubles.\n"
-"You can use this plugin for tennis, table tennis, squash, padel, badminton, beach volleyball and probably for more."
-msgstr ""
-"Ez a bővítmény minden olyan sportághoz alkalmas, amelyben 2 vagy 4 játékos versenyez egyéniben vagy párosban.\n"
-"Használható teniszhez, asztaliteniszhez, fallabdához, padelhez, tollaslabdához, strandröplabdához és valószínűleg más sportágakhoz is."
+msgid "This plugin can be used for all types of sports where 2 or 4 players compete in singles or doubles.\nYou can use this plugin for tennis, table tennis, squash, padel, badminton, beach volleyball and probably for more."
+msgstr "Ez a bővítmény minden olyan sportághoz alkalmas, amelyben 2 vagy 4 játékos versenyez egyéniben vagy párosban.\nHasználható teniszhez, asztaliteniszhez, fallabdához, padelhez, tollaslabdához, strandröplabdához és valószínűleg más sportágakhoz is."
 
 #. Found in faq paragraph.
 msgid "Yes. When creating a tournament, you can choose whether to create a singles or a doubles tournament."
@@ -156,118 +220,6 @@ msgstr "Igen. Verseny létrehozásakor egyéni vagy páros versenyt választhat.
 #. Found in faq header.
 msgid "What sports tournaments is this plugin for?"
 msgstr "Milyen sportversenyekhez készült ez a bővítmény?"
-
-#. Found in description paragraph.
-msgid "<strong>General Features:</strong>"
-msgstr "<strong>Általános funkciók:</strong>"
-
-#. Found in description paragraph.
-msgid "<strong>Doubles Rotation Tournament:</strong>"
-msgstr "<strong>Páros körverseny:</strong>"
-
-#. Found in description paragraph.
-msgid "<strong>Singles Rotation Tournament:</strong>"
-msgstr "<strong>Egyéni körverseny:</strong>"
-
-#. Found in description paragraph.
-msgid "The participants of a tournament change partners several times during the tournament by a random selection and play against different players. The ratio of games won to games lost is calculated for each participant. The winner of the tournament is the player with this highest ratio. While a Singles Rotation Tournament can be organized without the aid of technology, in the case of a Doubles Rotation Tournament, this is not possible."
-msgstr "A verseny résztvevői a verseny során többször véletlenszerűen partnert cserélnek, és különböző játékosok ellen játszanak. Minden résztvevőnél kiszámítják a nyert és elvesztett játékok arányát. A győztes a legjobb arányú játékos. Egyéni körverseny technika nélkül is lebonyolítható, páros nem."
-
-#. Found in description paragraph.
-msgid "The <strong>Rotation Tournaments</strong> have a strong social aspect because its goal is to keep players in the tournament until the very end. The situation where weaker players would leave the tournament due to elimination rounds is eliminated. It allows grouping players into a special category with special conditions. This special setting can be utilized, for example, in mixed tournaments."
-msgstr "A <strong>körversenyeknek</strong> erős társasági jellegük van, mert céljuk, hogy a játékosokat a végéig a versenyben tartsák. Kizárt, hogy a gyengébb játékosok kiesés miatt elhagyják a versenyt. A játékosok különleges feltételekkel különleges kategóriába sorolhatók. Ez a különleges beállítás használható például vegyes versenyeken."
-
-#. Found in description paragraph.
-msgid "In <strong>Rotation Tournaments</strong>, each participant plays against every other participant and there are no eliminations in individual rounds. To maximize the variety of match combinations, the matches are typically played in a single set."
-msgstr "A <strong>körversenyeken</strong> minden résztvevő mindenki ellen játszik, és az egyes körökben senki sem esik ki. A minél több kombináció érdekében a mérkőzéseket általában egy szettben játsszák."
-
-#. Found in description list item.
-msgid "Suitable for various sports: tennis, table tennis, squash, padel, badminton, beach volleyball, and more."
-msgstr "Alkalmas különböző sportágakhoz: tenisz, asztalitenisz, fallabda, padel, tollaslabda, strandröplabda és mások."
-
-#. Found in description list item.
-msgid "Integration with website user accounts."
-msgstr "Integráció a webhely felhasználói fiókjaival."
-
-#. Found in description list item.
-msgid "No downtime during the tournament."
-msgstr "Nincs holtidő a verseny alatt."
-
-#. Found in description list item.
-msgid "Comprehensive overview of player quality."
-msgstr "Teljes áttekintés a játékosok tudásáról."
-
-#. Found in description list item.
-msgid "User-friendly interface for administrators and participants."
-msgstr "Felhasználóbarát felület adminisztrátoroknak és résztvevőknek."
-
-#. Found in description list item.
-msgid "Customizable settings for each tournament."
-msgstr "Rugalmas beállítások minden versenyhez."
-
-#. Found in description list item.
-msgid "Real-time score tracking."
-msgstr "Valós idejű eredménykövetés."
-
-#. Found in description list item.
-msgid "Seamless scheduling of matches."
-msgstr "Kényelmes mérkőzésbeosztás."
-
-#. Found in description list item.
-msgid "Announcement of the Best Player and Most Ideal Pair at the end of the tournament."
-msgstr "A legjobb játékos és az ideális pár kihirdetése a verseny végén."
-
-#. Found in description list item.
-msgid "Ranking based on the ratio of games won to games lost."
-msgstr "A helyezést a nyert és elvesztett játékok aránya határozza meg."
-
-#. Found in description list item.
-msgid "Individual players can join or leave the tournament at any time."
-msgstr "A játékosok bármikor csatlakozhatnak a versenyhez vagy kiléphetnek belőle."
-
-#. Found in description list item.
-msgid "Tournament can be interrupted or extended without disruption."
-msgstr "A verseny megszakítható vagy meghosszabbítható a menet megzavarása nélkül."
-
-#. Found in description list item.
-msgid "Shorter matches for more participation."
-msgstr "Rövidebb mérkőzések a nagyobb részvételért."
-
-#. Found in description list item.
-msgid "No eliminations, ensuring all players stay in the game."
-msgstr "Nincs kiesés – minden játékos játékban marad."
-
-#. Found in description list item.
-msgid "Define special groups of players with unique conditions."
-msgstr "Különleges feltételekkel rendelkező játékoscsoportok meghatározása."
-
-#. Found in description list item.
-msgid "Suitable for odd numbers of players and minimum lineups of 4 players."
-msgstr "Páratlan játékosszámhoz és minimum 4 fős létszámhoz is alkalmas."
-
-#. Found in description list item.
-msgid "Individuals can enter the tournament without a permanent teammate."
-msgstr "Állandó partner nélkül is részt lehet venni a versenyen."
-
-#. Found in description list item.
-msgid "Rotation of teammates, ensuring variety in partnerships."
-msgstr "A partnerrotáció változatos párokat biztosít."
-
-#. Found in description list item.
-msgid "Alternative form of a Doubles Tournament where players enter each match with a different partner and in different positions (alternating left and right sides)."
-msgstr "A páros verseny alternatív formája, amelyben a játékosok minden mérkőzést új partnerrel és más pozícióban játszanak (váltakozva a bal és jobb oldalon)."
-
-#. Found in description list item.
-msgid "Depending on the time options, everyone plays against everyone."
-msgstr "Az időtől függően mindenki mindenki ellen játszik."
-
-#. Found in description list item.
-msgid "Alternative form of a Singles Tournament where players face each other without elimination rounds."
-msgstr "Az egyéni verseny alternatív formája, amelyben a játékosok kiesés nélkül mérkőznek egymással."
-
-#. Found in description header.
-msgid "Features"
-msgstr "Funkciók"
 
 #. Found in faq header.
 msgid "Is this plugin suitable for singles tournaments?"
@@ -306,16 +258,43 @@ msgid "Install the plugin as usual."
 msgstr "Telepítse a bővítményt a szokásos módon."
 
 #. Found in description paragraph.
-msgid "Visit <a href=\"https://doroto.ltcchrast.cz/\">test page</a> for more information, try to create your own tournament and take a look at <a href=\"https://doroto.ltcchrast.cz/rules-of-the-doubles-rotation-tournament/\">Rules of the Doubles Rotation Tournament</a>."
-msgstr "További információkért látogasson el a <a href=\"https://doroto.ltcchrast.cz/\">tesztoldalra</a>, próbáljon meg saját versenyt létrehozni, és nézze meg a <a href=\"https://doroto.ltcchrast.cz/rules-of-the-doubles-rotation-tournament/\">páros körverseny szabályait</a>."
-
-#. Found in description paragraph.
 msgid "[youtube https://www.youtube.com/watch?v=NoL9aPTv8u8]"
 msgstr "[youtube https://www.youtube.com/watch?v=NoL9aPTv8u8]"
 
-#. Found in description header.
-msgid "More information"
-msgstr "További információ"
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - readme: new description of the draw, the blocks and the app; new screenshots (also in Spanish for Chile)"
+msgstr "Fejlesztés – readme: a sorsolás, a blokkok és az alkalmazás új leírása; új képernyőképek (chilei spanyol nyelven is)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - new plugin icon and banner, the same icon as the Android app"
+msgstr "Fejlesztés – új bővítményikon és banner, ugyanaz az ikon, mint az Android-alkalmazásé"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "2.0.2 - 2026/10/15"
+msgstr "2.0.2 - 2026/10/15"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - English variants for the UK, Australia, Canada, New Zealand and South Africa"
+msgstr "Új – angol nyelvváltozatok az Egyesült Királyság, Ausztrália, Kanada, Új-Zéland és a Dél-afrikai Köztársaság számára"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - the round-end notice of the tournament block no longer repeats the texts of its buttons"
+msgstr "Fejlesztés – a verseny blokkjában a forduló végéről szóló értesítés már nem ismétli meg a gombjai szövegét"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - messages, headings and notices are translated as whole sentences, so languages with a different word order (e.g. Turkish, Hungarian, Hindi, Japanese, Korean and Chinese) read naturally"
+msgstr "Fejlesztés – az üzenetek, címsorok és értesítések teljes mondatként fordíthatók, így a más szórendű nyelvek (pl. török, magyar, hindi, japán, koreai és kínai) természetesen hangzanak"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "2.0.1 - 2026/10/08"
+msgstr "2.0.1 - 2026/10/08"
 
 #. Found in changelog list item.
 #, gp-priority: low
@@ -1189,21 +1168,13 @@ msgstr "Javítás – ha minden versenyt töröltek, nem lehetett új versenyt l
 
 #. Found in changelog paragraph.
 #, gp-priority: low
-msgid ""
-"Trial tournament improvements.\n"
-"Added the option to announce the end of the tournament round."
-msgstr ""
-"A gyakorló verseny fejlesztése.\n"
-"Hozzáadva a versenykör végének kihirdetési lehetősége."
+msgid "Trial tournament improvements.\nAdded the option to announce the end of the tournament round."
+msgstr "A gyakorló verseny fejlesztése.\nHozzáadva a versenykör végének kihirdetési lehetősége."
 
 #. Found in changelog paragraph.
 #, gp-priority: low
-msgid ""
-"Improved the visual appearance of the main page.\n"
-"Badminton added to the list of available tournaments."
-msgstr ""
-"A főoldal megjelenése javítva.\n"
-"A tollaslabda bekerült az elérhető versenyek listájába."
+msgid "Improved the visual appearance of the main page.\nBadminton added to the list of available tournaments."
+msgstr "A főoldal megjelenése javítva.\nA tollaslabda bekerült az elérhető versenyek listájába."
 
 #. Found in changelog paragraph.
 #, gp-priority: low
@@ -1212,65 +1183,33 @@ msgstr "Külön győztesek kihirdetésének lehetősége a különleges csoportb
 
 #. Found in changelog paragraph.
 #, gp-priority: low
-msgid ""
-"Notices after a plugin activation.\n"
-"Added player trend."
-msgstr ""
-"Értesítés a bővítmény aktiválása után.\n"
-"Hozzáadva a játékos trendje."
+msgid "Notices after a plugin activation.\nAdded player trend."
+msgstr "Értesítés a bővítmény aktiválása után.\nHozzáadva a játékos trendje."
 
 #. Found in changelog paragraph.
 #, gp-priority: low
-msgid ""
-"Modified tournament editing tab.\n"
-"Added option to change tournament type."
-msgstr ""
-"A verseny szerkesztési füle módosítva.\n"
-"Hozzáadva a versenytípus módosításának lehetősége."
+msgid "Modified tournament editing tab.\nAdded option to change tournament type."
+msgstr "A verseny szerkesztési füle módosítva.\nHozzáadva a versenytípus módosításának lehetősége."
 
 #. Found in changelog paragraph.
 #, gp-priority: low
-msgid ""
-"Reactivating the plugin doesn´t affect the already deleted tournament example. \n"
-"Unblock offering maximum games count.\n"
-"Fix tournament change when entering results.\n"
-"Added quick help for newcomers.\n"
-"Allow the final match also for singles."
-msgstr ""
-"A bővítmény újraaktiválása nem érinti a már törölt példaversenyt.\n"
-"A játékok maximális számának kiválasztása feloldva.\n"
-"Javítva a verseny módosítása eredménymegadás közben.\n"
-"Rövid súgó hozzáadva a kezdőknek.\n"
-"A döntő mérkőzés egyéniben is engedélyezve."
+msgid "Reactivating the plugin doesn´t affect the already deleted tournament example. \nUnblock offering maximum games count.\nFix tournament change when entering results.\nAdded quick help for newcomers.\nAllow the final match also for singles."
+msgstr "A bővítmény újraaktiválása nem érinti a már törölt példaversenyt.\nA játékok maximális számának kiválasztása feloldva.\nJavítva a verseny módosítása eredménymegadás közben.\nRövid súgó hozzáadva a kezdőknek.\nA döntő mérkőzés egyéniben is engedélyezve."
 
 #. Found in changelog paragraph.
 #, gp-priority: low
-msgid ""
-"Added the option for single tournaments. \n"
-"Created an environment for additional sports."
-msgstr ""
-"Hozzáadva az egyéni versenyek lehetősége.\n"
-"Környezet létrehozva más sportágakhoz."
+msgid "Added the option for single tournaments. \nCreated an environment for additional sports."
+msgstr "Hozzáadva az egyéni versenyek lehetősége.\nKörnyezet létrehozva más sportágakhoz."
 
 #. Found in changelog paragraph.
 #, gp-priority: low
-msgid ""
-"The administrator can now use 'hide' option when editing the match result.\n"
-"Free score input is allowed. This opens using not only for tennis but for example for table tennis or beach volleyball."
-msgstr ""
-"Az adminisztrátor mostantól a mérkőzéseredmény módosításakor használhatja az „elrejtés” lehetőséget.\n"
-"Engedélyezve az eredmény szabad megadása. Ez lehetővé teszi a bővítmény használatát nemcsak teniszhez, hanem például asztaliteniszhez vagy strandröplabdához is."
+msgid "The administrator can now use 'hide' option when editing the match result.\nFree score input is allowed. This opens using not only for tennis but for example for table tennis or beach volleyball."
+msgstr "Az adminisztrátor mostantól a mérkőzéseredmény módosításakor használhatja az „elrejtés” lehetőséget.\nEngedélyezve az eredmény szabad megadása. Ez lehetővé teszi a bővítmény használatát nemcsak teniszhez, hanem például asztaliteniszhez vagy strandröplabdához is."
 
 #. Found in changelog paragraph.
 #, gp-priority: low
-msgid ""
-"Minor changes in code:\n"
-"* Allow to transfer organizer rights to a non-playing user.\n"
-"* Ensuring an even rotation of serves at the start of the tournament."
-msgstr ""
-"Kisebb kódmódosítások:\n"
-"* Engedélyezve a szervezői jogok átadása nem játszó felhasználónak.\n"
-"* Biztosítva az adogatás egyenletes váltakozása a verseny elején."
+msgid "Minor changes in code:\n* Allow to transfer organizer rights to a non-playing user.\n* Ensuring an even rotation of serves at the start of the tournament."
+msgstr "Kisebb kódmódosítások:\n* Engedélyezve a szervezői jogok átadása nem játszó felhasználónak.\n* Biztosítva az adogatás egyenletes váltakozása a verseny elején."
 
 #. Found in changelog paragraph.
 #, gp-priority: low
@@ -1286,23 +1225,3 @@ msgstr "Kisebb módosítás az adminisztrációs képernyőn."
 #, gp-priority: low
 msgid "First release to public."
 msgstr "Első nyilvános kiadás."
-
-#. Found in changelog header.
-#, gp-priority: low
-msgid "2.0.1 - 2026/10/08"
-msgstr "2.0.1 - 2026/10/08"
-
-#. Found in changelog list item.
-#, gp-priority: low
-msgid "Improvement - messages, headings and notices are translated as whole sentences, so languages with a different word order (e.g. Turkish, Hungarian, Hindi, Japanese, Korean and Chinese) read naturally"
-msgstr "Fejlesztés – az üzenetek, címsorok és értesítések teljes mondatként fordíthatók, így a más szórendű nyelvek (pl. török, magyar, hindi, japán, koreai és kínai) természetesen hangzanak"
-
-#. Found in changelog list item.
-#, gp-priority: low
-msgid "Improvement - the round-end notice of the tournament block no longer repeats the texts of its buttons"
-msgstr "Fejlesztés – a verseny blokkjában a forduló végéről szóló értesítés már nem ismétli meg a gombjai szövegét"
-
-#. Found in changelog list item.
-#, gp-priority: low
-msgid "Add - English variants for the UK, Australia, Canada, New Zealand and South Africa"
-msgstr "Új – angol nyelvváltozatok az Egyesült Királyság, Ausztrália, Kanada, Új-Zéland és a Dél-afrikai Köztársaság számára"

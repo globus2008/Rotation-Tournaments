@@ -126,6 +126,17 @@
   (word order differs in tr, hu, hi, ja, ko, zh). Fixed everywhere on 2026-10-08.
 - English variants in `languages/en_*`: en_GB, en_AU, en_NZ, en_ZA use British spelling with -ise (organiser, colour,
   cancelled); en_CA keeps -ize but uses colour/cancelled. All other strings are copied unchanged from en_US.
+  Glossaries of all en_* locales: "email" (not e-mail), "dialogue"; en_GB/en_ZA "homepage"; en_GB/AU/NZ/ZA "back end".
+- Feedback of the translate.wordpress.org editors (2026-10-15): the `languages/*/...po` files are our suggestions;
+  editors check them against the locale glossary (`https://translate.wordpress.org/locale/<slug>/default/glossary/-export/`).
+  - nl (Peter Smits): follow the glossary strictly - "site" (not website), "selecteren/geselecteerd" (not kiezen),
+    "voer ... in" for Enter, "content", "icoon", "updaten/geüpdatet", "verversen", "omleiden", "terugzetten";
+    plugin name untranslated ("Rotation Tournaments"); changelog prefixes with a plain hyphen ("Oplossing - ").
+  - es_MX: plugin name untranslated (style guide). tr: "yeniden" (not "tekrar"), common nouns in lower case.
+  - Status per locale: `https://translate.wordpress.org/projects/wp-plugins/doubles-rotation-tournament/dev/` (and
+    `dev-readme/`); reasons are on each string's discussion page; filter `?filters[status]=changesrequested`.
+- The French PO files had a control character (0x01) instead of "»" or ":;!?" after a no-break space (since the first
+  commit); fixed 2026-10-15. Check new PO files with `grep -P '[\x00-\x08]'`.
 
 ## Data model
 - One table, `{prefix}doroto_tournaments`. Lists are serialized PHP arrays in text columns: `players`, `playing`, `statistics`, `matches_list`, `admin_users`, `special_group`, `payment_done`, `final_four`, `final_result`.

@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plugins - Rotation Tournaments - Development Readme (trunk)\n"
-"PO-Revision-Date: 2026-10-08 18:18:50+0000\n"
+"PO-Revision-Date: 2026-10-15 07:57:04+0000\n"
 "Language: ko_KR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -13,13 +13,161 @@ msgstr ""
 
 #. Short description.
 #, gp-priority: high
-msgid "Do you play Singles or Doubles Tournaments? This plugin manages Rotation Tournaments where players have a different partner in each game."
-msgstr "단식이나 복식 대회를 하시나요? 이 플러그인은 선수가 매 경기 새 파트너와 짝을 이루는 로테이션 대회를 관리합니다."
+msgid "Run doubles and singles tournaments where players get a new partner every match: fair draws, live results, standings and an Android app."
+msgstr "매 경기 새로운 파트너와 짝을 이루는 복식·단식 대회를 운영하세요. 공정한 추첨, 실시간 결과, 순위, Android 앱을 제공합니다."
 
 #. Plugin name.
 #, gp-priority: high
 msgid "Rotation Tournaments"
 msgstr "로테이션 대회"
+
+#. Found in faq paragraph.
+msgid "An iOS version is planned, but there is no release date yet. The tournament pages work in any mobile browser, including iPhone and iPad."
+msgstr "iOS 버전이 계획되어 있지만 아직 출시일은 정해지지 않았습니다. 대회 페이지는 iPhone과 iPad를 포함한 모든 모바일 브라우저에서 작동합니다."
+
+#. Found in description paragraph.
+msgid "The free <a href=\"https://play.google.com/store/apps/details?id=cz.doroto.app\">Rotation Tournaments app</a> connects to your website: players follow the tournament, enter their results and organizers manage it from the court. The app is available in 27 languages. Several devices can be signed in to one account."
+msgstr "무료 <a href=\"https://play.google.com/store/apps/details?id=cz.doroto.app\">Rotation Tournaments 앱</a>은 웹사이트에 연결됩니다. 선수는 대회를 따라가며 결과를 입력하고, 주최자는 코트에서 바로 대회를 관리합니다. 앱은 27개 언어로 제공되며, 한 계정에 여러 기기로 로그인할 수 있습니다."
+
+#. Found in description paragraph.
+msgid "<strong>Android app</strong>"
+msgstr "<strong>Android 앱</strong>"
+
+#. Found in description paragraph.
+msgid "<strong>For the website</strong>"
+msgstr "<strong>웹사이트용</strong>"
+
+#. Found in description paragraph.
+msgid "<strong>The draw</strong>"
+msgstr "<strong>추첨</strong>"
+
+#. Found in description paragraph.
+msgid "<strong>How a tournament works</strong>"
+msgstr "<strong>대회 진행 방식</strong>"
+
+#. Found in description paragraph.
+msgid "It is made for club evenings and social tournaments in <strong>tennis, padel, badminton, table tennis, squash, beach volleyball</strong> and other sports played one against one or two against two."
+msgstr "클럽 모임과 친선 대회를 위해 만들어졌으며 <strong>테니스, 파델, 배드민턴, 탁구, 스쿼시, 비치발리볼</strong> 등 일대일 또는 이대이로 하는 종목에 맞습니다."
+
+#. Found in description paragraph.
+msgid "<strong>Rotation Tournaments</strong> runs club tournaments in which nobody is knocked out. In doubles, every player gets a <strong>new partner in every match</strong> and meets as many different opponents as possible. The ranking is the ratio of games won to games lost, so everybody plays until the very end."
+msgstr "<strong>로테이션 대회</strong>는 아무도 탈락하지 않는 클럽 대회를 운영합니다. 복식에서는 모든 선수가 <strong>매 경기 새로운 파트너</strong>와 짝을 이루고 가능한 한 많은 상대와 만납니다. 순위는 이긴 게임과 진 게임의 비율로 정해지므로 모두가 끝까지 경기합니다."
+
+#. Found in description list item.
+msgid "Video introduction:"
+msgstr "소개 영상:"
+
+#. Found in description list item.
+msgid "<a href=\"https://doroto.ltcchrast.cz/rules-of-the-doubles-rotation-tournament/\">Rules of the Doubles Rotation Tournament</a>."
+msgstr "<a href=\"https://doroto.ltcchrast.cz/rules-of-the-doubles-rotation-tournament/\">복식 로테이션 대회 규칙</a>."
+
+#. Found in description list item.
+msgid "<a href=\"https://doroto.ltcchrast.cz/\">Demo site</a> where you can create your own tournament."
+msgstr "<a href=\"https://doroto.ltcchrast.cz/\">데모 사이트</a>에서 직접 대회를 만들어 볼 수 있습니다."
+
+#. Found in description list item.
+msgid "Players sign in with their WordPress accounts; full or shortened names (privacy)."
+msgstr "선수는 WordPress 계정으로 로그인합니다. 전체 이름 또는 줄인 이름(개인정보 보호)."
+
+#. Found in description list item.
+msgid "Guided tours of the page and four example tournaments."
+msgstr "페이지 안내 투어와 예시 대회 4개."
+
+#. Found in description list item.
+msgid "Colors follow your theme; the block's Styles panel can change them."
+msgstr "색상은 테마를 따르며, 블록의 스타일 패널에서 바꿀 수 있습니다."
+
+#. Found in description list item.
+msgid "Share dialog with a QR code and a link that opens the tournament in the app."
+msgstr "QR 코드와 앱에서 대회를 여는 링크가 있는 공유 대화상자."
+
+#. Found in description list item.
+msgid "Live updates without reloading the page."
+msgstr "페이지를 새로 고치지 않아도 실시간으로 업데이트됩니다."
+
+#. Found in description list item.
+msgid "Blocks for the block editor: \"Rotation tournament\" (matches, results, players, statistics and settings on tabs), \"Tournament standings\", \"Tournament matches\", \"Tournament presentation\", \"Tournament list\" and \"Tournament invitation\". Shortcodes for the classic editor."
+msgstr "블록 편집기용 블록: “로테이션 대회”(경기, 결과, 선수, 통계, 설정을 탭으로 표시), “대회 순위”, “대회 경기”, “대회 프레젠테이션”, “대회 목록”, “대회 초대”. 클래식 편집기용 단축 코드."
+
+#. Found in description list item.
+msgid "Special group of players (e.g. women in a mixed tournament) with its own rules: mixed teams only, a separate winner and more."
+msgstr "자체 규칙이 있는 선수 특별 그룹(예: 혼합 대회의 여성): 혼합 팀만, 별도 우승자 등."
+
+#. Found in description list item.
+msgid "Works with any number of players from 4 up, odd numbers included; players can join, pause or leave at any time."
+msgstr "4명 이상이면 홀수를 포함해 몇 명이든 진행할 수 있으며, 선수는 언제든지 참가, 휴식, 이탈할 수 있습니다."
+
+#. Found in description list item.
+msgid "Players with fewer games and longer rest go first; sides (left/right) and serve alternate."
+msgstr "경기 수가 적고 오래 쉰 선수가 먼저 뛰며, 코트 위치(왼쪽/오른쪽)와 서브는 번갈아 바뀝니다."
+
+#. Found in description list item.
+msgid "Opponents are chosen by previous meetings too, so the same players meet less often."
+msgstr "상대는 이전 대결 기록도 고려해 정해지므로 같은 선수끼리 덜 자주 만납니다."
+
+#. Found in description list item.
+msgid "New teammates first: the plugin pairs players who have not played together yet."
+msgstr "새 파트너 우선: 플러그인은 아직 함께 경기하지 않은 선수끼리 짝을 짓습니다."
+
+#. Found in description list item.
+msgid "At the end the organizer closes the tournament and the best player and the best pair are announced."
+msgstr "마지막에 주최자가 대회를 마감하면 최우수 선수와 최우수 페어가 발표됩니다."
+
+#. Found in description list item.
+msgid "Standings, statistics and the presentation on a big screen update live."
+msgstr "순위, 통계, 큰 화면의 프레젠테이션이 실시간으로 업데이트됩니다."
+
+#. Found in description list item.
+msgid "Whoever finishes a match enters the score on the website or in the Android app; the next match is drawn at once."
+msgstr "경기를 마친 사람이 웹사이트나 Android 앱에 점수를 입력하면 다음 경기가 바로 추첨됩니다."
+
+#. Found in description list item.
+msgid "Players join (also later, during the tournament) and the plugin draws the first matches for the free courts."
+msgstr "선수가 참가하면(대회 중간에도 가능) 플러그인이 빈 코트의 첫 경기를 추첨합니다."
+
+#. Found in description list item.
+msgid "The organizer creates a tournament and shares the invitation link or QR code."
+msgstr "주최자가 대회를 만들고 초대 링크나 QR 코드를 공유합니다."
+
+#. Screenshot description.
+msgid "Android app: entering results, standings and played matches."
+msgstr "Android 앱: 결과 입력, 순위, 끝난 경기."
+
+#. Screenshot description.
+msgid "Tournament settings for organizers."
+msgstr "주최자를 위한 대회 설정."
+
+#. Screenshot description.
+msgid "The \"Rotation tournament\" block in the block editor."
+msgstr "블록 편집기의 “로테이션 대회” 블록."
+
+#. Screenshot description.
+msgid "Share the tournament with a QR code; it opens the tournament in the app."
+msgstr "QR 코드로 대회를 공유하세요. 앱에서 대회가 열립니다."
+
+#. Found in description list item.
+msgid "Presentation mode for a TV or projector in the club house."
+msgstr "클럽하우스의 TV나 프로젝터를 위한 프레젠테이션 모드."
+
+#. Screenshot description.
+msgid "Statistics: how often a player played with and against each other player."
+msgstr "통계: 한 선수가 다른 각 선수와 같은 편으로, 또 상대로 몇 번 경기했는지."
+
+#. Screenshot description.
+msgid "Live standings by the ratio of games won to games lost, with the trend of each player."
+msgstr "이긴 게임과 진 게임의 비율에 따른 실시간 순위와 각 선수의 추세."
+
+#. Screenshot description.
+msgid "Results of all matches, with a filter by player."
+msgstr "모든 경기의 결과(선수별 필터 제공)."
+
+#. Screenshot description.
+msgid "Ongoing matches: the next match is drawn as soon as a score is saved. Names of the special group are highlighted."
+msgstr "진행 중인 경기: 점수가 저장되는 즉시 다음 경기가 추첨됩니다. 특별 그룹의 이름은 강조 표시됩니다."
+
+#. Screenshot description.
+msgid "The same tournament on the website and in the Android app."
+msgstr "웹사이트와 Android 앱에서 보는 같은 대회."
 
 #. Found in installation paragraph.
 msgid "After installation, go to the app's settings and enter the address of your website where this plugin is installed."
@@ -33,25 +181,9 @@ msgstr "또는 이 링크에서 바로 내려받으세요: https://play.google.c
 msgid "Search for \"Rotation Tournaments\" on the Google Play Store."
 msgstr "Google Play에서 “Rotation Tournaments”를 검색하세요."
 
-#. Found in description paragraph.
-msgid "To get the full experience of managing tournaments on the go, download our mobile app, now available on Google Play!"
-msgstr "이동 중에도 대회를 완벽하게 관리하려면 Google Play에서 제공하는 모바일 앱을 내려받으세요!"
-
-#. Found in description paragraph.
-msgid "<strong>YouTube quick intro:</strong>"
-msgstr "<strong>YouTube 간단 소개:</strong>"
-
-#. Found in description list item.
-msgid "Video for a quick introduction to the Rotation Tournament:"
-msgstr "로테이션 대회를 간단히 소개하는 동영상:"
-
 #. Found in faq paragraph.
 msgid "Yes. If you install the Rotation Tournaments plugin, allow player registration, and enable visibility in the website list, your site can appear in the Android app. Initially, someone must manually enter your website address into the app. After that, it becomes visible in the list for all users."
 msgstr "예. Rotation Tournaments 플러그인을 설치하고, 선수 등록을 허용하고, 사이트 목록 공개를 켜면 웹사이트가 Android 앱에 나타날 수 있습니다. 먼저 누군가 앱에 웹사이트 주소를 직접 입력해야 합니다. 그 후에는 모든 사용자의 목록에 사이트가 표시됩니다."
-
-#. Found in faq paragraph.
-msgid "Yes. An iOS version of the Rotation Tournaments app is planned and will be released in the near future."
-msgstr "예. Rotation Tournaments 앱의 iOS 버전이 계획되어 있으며 곧 출시됩니다."
 
 #. Found in faq header.
 msgid "Will my website be visible in the Rotation Tournaments Android app?"
@@ -74,80 +206,12 @@ msgid "<strong>How to install the Android app:</strong>"
 msgstr "<strong>Android 앱 설치 방법:</strong>"
 
 #. Found in description paragraph.
-msgid "<strong>This plugin is the server-side for the \"Rotation Tournaments\" Android app.</strong>"
-msgstr "<strong>이 플러그인은 Android 앱 “Rotation Tournaments”의 서버 부분입니다.</strong>"
-
-#. Screenshot description.
-msgid "Individual tournament participants enter their results into the WordPress server and share the data with each other."
-msgstr "대회 참가자는 WordPress 서버에 결과를 입력하고 서로 데이터를 공유합니다."
-
-#. Screenshot description.
-msgid "Matches played. (Android app)"
-msgstr "진행된 경기. (Android 앱)"
-
-#. Screenshot description.
-msgid "Tournament table. (Wordpress)"
-msgstr "대회 표. (WordPress)"
-
-#. Screenshot description.
-msgid "Matches drawn. (Android app)"
-msgstr "추첨된 경기. (Android 앱)"
-
-#. Screenshot description.
-msgid "Editing tournament parameters. (Wordpress)"
-msgstr "대회 매개변수 편집. (WordPress)"
-
-#. Screenshot description.
-msgid "Table of players with rankings. (Android app)"
-msgstr "순위가 있는 선수 표. (Android 앱)"
-
-#. Screenshot description.
-msgid "Matches played. (Wordpress)"
-msgstr "진행된 경기. (WordPress)"
-
-#. Screenshot description.
-msgid "Basic overview of the tournament. (Android app)"
-msgstr "대회 주요 개요. (Android 앱)"
-
-#. Screenshot description.
-msgid "Matches drawn. (Wordpress)"
-msgstr "추첨된 경기. (WordPress)"
-
-#. Found in description paragraph.
-msgid "<strong>Rotation Tournaments</strong> provides a platform for organizing all kinds of sports Singles and Doubles Tournaments, e.g."
-msgstr "<strong>로테이션 대회</strong>는 모든 단식·복식 스포츠 대회를 개최하는 플랫폼입니다. 예:"
-
-#. Found in description list item.
-msgid "Squash"
-msgstr "스쿼시"
-
-#. Found in description list item.
-msgid "Beach Volleyball"
-msgstr "비치발리볼"
-
-#. Found in description list item.
-msgid "Badminton"
-msgstr "배드민턴"
-
-#. Found in description list item.
-msgid "Padel"
-msgstr "파델"
-
-#. Found in description list item.
-msgid "Table Tennis"
-msgstr "탁구"
-
-#. Found in description list item.
-msgid "Tennis"
-msgstr "테니스"
+msgid "<strong>Try it</strong>"
+msgstr "<strong>직접 사용해 보기</strong>"
 
 #. Found in faq paragraph.
-msgid ""
-"This plugin can be used for all types of sports where 2 or 4 players compete in singles or doubles.\n"
-"You can use this plugin for tennis, table tennis, squash, padel, badminton, beach volleyball and probably for more."
-msgstr ""
-"이 플러그인은 2명 또는 4명이 단식이나 복식으로 겨루는 모든 스포츠에 적합합니다.\n"
-"테니스, 탁구, 스쿼시, 파델, 배드민턴, 비치발리볼, 그리고 아마 다른 스포츠에도 쓸 수 있습니다."
+msgid "This plugin can be used for all types of sports where 2 or 4 players compete in singles or doubles.\nYou can use this plugin for tennis, table tennis, squash, padel, badminton, beach volleyball and probably for more."
+msgstr "이 플러그인은 2명 또는 4명이 단식이나 복식으로 겨루는 모든 스포츠에 적합합니다.\n테니스, 탁구, 스쿼시, 파델, 배드민턴, 비치발리볼, 그리고 아마 다른 스포츠에도 쓸 수 있습니다."
 
 #. Found in faq paragraph.
 msgid "Yes. When creating a tournament, you can choose whether to create a singles or a doubles tournament."
@@ -156,118 +220,6 @@ msgstr "예. 대회를 만들 때 단식 또는 복식 대회를 선택할 수 �
 #. Found in faq header.
 msgid "What sports tournaments is this plugin for?"
 msgstr "이 플러그인은 어떤 스포츠 대회를 위한 것인가요?"
-
-#. Found in description paragraph.
-msgid "<strong>General Features:</strong>"
-msgstr "<strong>일반 기능:</strong>"
-
-#. Found in description paragraph.
-msgid "<strong>Doubles Rotation Tournament:</strong>"
-msgstr "<strong>복식 로테이션 대회:</strong>"
-
-#. Found in description paragraph.
-msgid "<strong>Singles Rotation Tournament:</strong>"
-msgstr "<strong>단식 로테이션 대회:</strong>"
-
-#. Found in description paragraph.
-msgid "The participants of a tournament change partners several times during the tournament by a random selection and play against different players. The ratio of games won to games lost is calculated for each participant. The winner of the tournament is the player with this highest ratio. While a Singles Rotation Tournament can be organized without the aid of technology, in the case of a Doubles Rotation Tournament, this is not possible."
-msgstr "대회 참가자는 대회 중 여러 번 무작위로 파트너를 바꾸며 다른 선수들과 경기합니다. 각 참가자에 대해 이긴 게임과 진 게임의 비율을 계산합니다. 비율이 가장 좋은 선수가 우승자입니다. 단식 로테이션 대회는 기술의 도움 없이도 열 수 있지만 복식은 그렇지 않습니다."
-
-#. Found in description paragraph.
-msgid "The <strong>Rotation Tournaments</strong> have a strong social aspect because its goal is to keep players in the tournament until the very end. The situation where weaker players would leave the tournament due to elimination rounds is eliminated. It allows grouping players into a special category with special conditions. This special setting can be utilized, for example, in mixed tournaments."
-msgstr "<strong>로테이션 대회</strong>는 선수들을 끝까지 대회에 남게 하는 것이 목표이므로 친목 요소가 강합니다. 약한 선수가 탈락으로 대회를 떠나는 일이 없습니다. 선수들을 특별 조건이 있는 특별 범주로 묶을 수 있습니다. 이 특별 설정은 예를 들어 혼합 대회에서 쓸 수 있습니다."
-
-#. Found in description paragraph.
-msgid "In <strong>Rotation Tournaments</strong>, each participant plays against every other participant and there are no eliminations in individual rounds. To maximize the variety of match combinations, the matches are typically played in a single set."
-msgstr "<strong>로테이션 대회</strong>에서는 모든 참가자가 모두와 경기하며 각 라운드에서 탈락하는 사람이 없습니다. 조합을 최대한 많이 만들기 위해 보통 한 세트로 경기합니다."
-
-#. Found in description list item.
-msgid "Suitable for various sports: tennis, table tennis, squash, padel, badminton, beach volleyball, and more."
-msgstr "다양한 스포츠에 적합: 테니스, 탁구, 스쿼시, 파델, 배드민턴, 비치발리볼 등."
-
-#. Found in description list item.
-msgid "Integration with website user accounts."
-msgstr "웹사이트 사용자 계정과 연동."
-
-#. Found in description list item.
-msgid "No downtime during the tournament."
-msgstr "대회 중 대기 시간 없음."
-
-#. Found in description list item.
-msgid "Comprehensive overview of player quality."
-msgstr "선수 실력을 한눈에 파악."
-
-#. Found in description list item.
-msgid "User-friendly interface for administrators and participants."
-msgstr "관리자와 참가자를 위한 사용하기 쉬운 화면."
-
-#. Found in description list item.
-msgid "Customizable settings for each tournament."
-msgstr "대회마다 유연한 설정."
-
-#. Found in description list item.
-msgid "Real-time score tracking."
-msgstr "실시간 점수 기록."
-
-#. Found in description list item.
-msgid "Seamless scheduling of matches."
-msgstr "편리한 경기 일정 편성."
-
-#. Found in description list item.
-msgid "Announcement of the Best Player and Most Ideal Pair at the end of the tournament."
-msgstr "대회 끝에 최우수 선수와 이상적인 페어 발표."
-
-#. Found in description list item.
-msgid "Ranking based on the ratio of games won to games lost."
-msgstr "순위는 이긴 게임과 진 게임의 비율로 정해집니다."
-
-#. Found in description list item.
-msgid "Individual players can join or leave the tournament at any time."
-msgstr "선수는 언제든 대회에 참가하거나 떠날 수 있습니다."
-
-#. Found in description list item.
-msgid "Tournament can be interrupted or extended without disruption."
-msgstr "진행을 방해하지 않고 대회를 중단하거나 연장할 수 있습니다."
-
-#. Found in description list item.
-msgid "Shorter matches for more participation."
-msgstr "더 많은 참가를 위한 짧은 경기."
-
-#. Found in description list item.
-msgid "No eliminations, ensuring all players stay in the game."
-msgstr "탈락 없음 – 모든 선수가 계속 경기합니다."
-
-#. Found in description list item.
-msgid "Define special groups of players with unique conditions."
-msgstr "특별 조건이 있는 선수 특별 그룹 정의."
-
-#. Found in description list item.
-msgid "Suitable for odd numbers of players and minimum lineups of 4 players."
-msgstr "홀수 인원과 최소 4명 구성에도 적합."
-
-#. Found in description list item.
-msgid "Individuals can enter the tournament without a permanent teammate."
-msgstr "고정 파트너 없이도 대회에 참가 가능."
-
-#. Found in description list item.
-msgid "Rotation of teammates, ensuring variety in partnerships."
-msgstr "파트너 로테이션으로 다양한 페어 구성."
-
-#. Found in description list item.
-msgid "Alternative form of a Doubles Tournament where players enter each match with a different partner and in different positions (alternating left and right sides)."
-msgstr "선수가 매 경기 새 파트너와 다른 위치(왼쪽과 오른쪽을 번갈아)에서 경기하는 복식 대회의 다른 형식."
-
-#. Found in description list item.
-msgid "Depending on the time options, everyone plays against everyone."
-msgstr "시간에 따라 모두가 모두와 경기합니다."
-
-#. Found in description list item.
-msgid "Alternative form of a Singles Tournament where players face each other without elimination rounds."
-msgstr "선수들이 탈락 없이 맞붙는 단식 대회의 다른 형식."
-
-#. Found in description header.
-msgid "Features"
-msgstr "기능"
 
 #. Found in faq header.
 msgid "Is this plugin suitable for singles tournaments?"
@@ -306,16 +258,43 @@ msgid "Install the plugin as usual."
 msgstr "평소처럼 플러그인을 설치하세요."
 
 #. Found in description paragraph.
-msgid "Visit <a href=\"https://doroto.ltcchrast.cz/\">test page</a> for more information, try to create your own tournament and take a look at <a href=\"https://doroto.ltcchrast.cz/rules-of-the-doubles-rotation-tournament/\">Rules of the Doubles Rotation Tournament</a>."
-msgstr "더 알아보려면 <a href=\"https://doroto.ltcchrast.cz/\">테스트 페이지</a>를 방문해 직접 대회를 만들어 보고 <a href=\"https://doroto.ltcchrast.cz/rules-of-the-doubles-rotation-tournament/\">복식 로테이션 대회 규칙</a>을 확인하세요."
-
-#. Found in description paragraph.
 msgid "[youtube https://www.youtube.com/watch?v=NoL9aPTv8u8]"
 msgstr "[youtube https://www.youtube.com/watch?v=NoL9aPTv8u8]"
 
-#. Found in description header.
-msgid "More information"
-msgstr "자세한 정보"
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - readme: new description of the draw, the blocks and the app; new screenshots (also in Spanish for Chile)"
+msgstr "개선 – readme: 추첨, 블록, 앱에 대한 새 설명, 새 스크린샷(칠레 스페인어 포함)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - new plugin icon and banner, the same icon as the Android app"
+msgstr "개선 – 플러그인의 새 아이콘과 배너, Android 앱과 같은 아이콘"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "2.0.2 - 2026/10/15"
+msgstr "2.0.2 - 2026/10/15"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - English variants for the UK, Australia, Canada, New Zealand and South Africa"
+msgstr "추가 – 영국, 호주, 캐나다, 뉴질랜드, 남아프리카공화국용 영어 변형"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - the round-end notice of the tournament block no longer repeats the texts of its buttons"
+msgstr "개선 – 대회 블록의 라운드 종료 알림이 더 이상 버튼의 텍스트를 반복하지 않습니다"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - messages, headings and notices are translated as whole sentences, so languages with a different word order (e.g. Turkish, Hungarian, Hindi, Japanese, Korean and Chinese) read naturally"
+msgstr "개선 – 메시지, 제목, 알림이 완전한 문장으로 번역되어 어순이 다른 언어(예: 튀르키예어, 헝가리어, 힌디어, 일본어, 한국어, 중국어)에서도 자연스럽게 읽힙니다"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "2.0.1 - 2026/10/08"
+msgstr "2.0.1 - 2026/10/08"
 
 #. Found in changelog list item.
 #, gp-priority: low
@@ -1189,21 +1168,13 @@ msgstr "수정 – 모든 대회를 삭제하면 새 대회를 만들 수 없었
 
 #. Found in changelog paragraph.
 #, gp-priority: low
-msgid ""
-"Trial tournament improvements.\n"
-"Added the option to announce the end of the tournament round."
-msgstr ""
-"연습 대회 개선.\n"
-"대회 라운드 종료를 알리는 기능 추가."
+msgid "Trial tournament improvements.\nAdded the option to announce the end of the tournament round."
+msgstr "연습 대회 개선.\n대회 라운드 종료를 알리는 기능 추가."
 
 #. Found in changelog paragraph.
 #, gp-priority: low
-msgid ""
-"Improved the visual appearance of the main page.\n"
-"Badminton added to the list of available tournaments."
-msgstr ""
-"메인 페이지 모양 개선.\n"
-"사용 가능한 대회 목록에 배드민턴 추가."
+msgid "Improved the visual appearance of the main page.\nBadminton added to the list of available tournaments."
+msgstr "메인 페이지 모양 개선.\n사용 가능한 대회 목록에 배드민턴 추가."
 
 #. Found in changelog paragraph.
 #, gp-priority: low
@@ -1212,65 +1183,33 @@ msgstr "특별 그룹과 그룹 밖에서 따로 우승자를 발표할 수 있�
 
 #. Found in changelog paragraph.
 #, gp-priority: low
-msgid ""
-"Notices after a plugin activation.\n"
-"Added player trend."
-msgstr ""
-"플러그인 활성화 후 알림.\n"
-"선수 트렌드 추가."
+msgid "Notices after a plugin activation.\nAdded player trend."
+msgstr "플러그인 활성화 후 알림.\n선수 트렌드 추가."
 
 #. Found in changelog paragraph.
 #, gp-priority: low
-msgid ""
-"Modified tournament editing tab.\n"
-"Added option to change tournament type."
-msgstr ""
-"대회 편집 탭 변경.\n"
-"대회 유형을 바꾸는 기능 추가."
+msgid "Modified tournament editing tab.\nAdded option to change tournament type."
+msgstr "대회 편집 탭 변경.\n대회 유형을 바꾸는 기능 추가."
 
 #. Found in changelog paragraph.
 #, gp-priority: low
-msgid ""
-"Reactivating the plugin doesn´t affect the already deleted tournament example. \n"
-"Unblock offering maximum games count.\n"
-"Fix tournament change when entering results.\n"
-"Added quick help for newcomers.\n"
-"Allow the final match also for singles."
-msgstr ""
-"플러그인을 다시 활성화해도 이미 삭제한 예시 대회에는 영향이 없습니다.\n"
-"최대 게임 수 선택을 열었습니다.\n"
-"결과 입력 중 대회 변경을 수정했습니다.\n"
-"초보자를 위한 짧은 도움말을 추가했습니다.\n"
-"단식에서도 결승전을 허용했습니다."
+msgid "Reactivating the plugin doesn´t affect the already deleted tournament example. \nUnblock offering maximum games count.\nFix tournament change when entering results.\nAdded quick help for newcomers.\nAllow the final match also for singles."
+msgstr "플러그인을 다시 활성화해도 이미 삭제한 예시 대회에는 영향이 없습니다.\n최대 게임 수 선택을 열었습니다.\n결과 입력 중 대회 변경을 수정했습니다.\n초보자를 위한 짧은 도움말을 추가했습니다.\n단식에서도 결승전을 허용했습니다."
 
 #. Found in changelog paragraph.
 #, gp-priority: low
-msgid ""
-"Added the option for single tournaments. \n"
-"Created an environment for additional sports."
-msgstr ""
-"단식 대회 기능 추가.\n"
-"다른 스포츠를 위한 환경 마련."
+msgid "Added the option for single tournaments. \nCreated an environment for additional sports."
+msgstr "단식 대회 기능 추가.\n다른 스포츠를 위한 환경 마련."
 
 #. Found in changelog paragraph.
 #, gp-priority: low
-msgid ""
-"The administrator can now use 'hide' option when editing the match result.\n"
-"Free score input is allowed. This opens using not only for tennis but for example for table tennis or beach volleyball."
-msgstr ""
-"이제 관리자가 경기 결과를 바꿀 때 “숨기기” 옵션을 쓸 수 있습니다.\n"
-"점수를 자유롭게 입력할 수 있습니다. 이 덕분에 테니스뿐 아니라 탁구나 비치발리볼 등에도 플러그인을 쓸 수 있습니다."
+msgid "The administrator can now use 'hide' option when editing the match result.\nFree score input is allowed. This opens using not only for tennis but for example for table tennis or beach volleyball."
+msgstr "이제 관리자가 경기 결과를 바꿀 때 “숨기기” 옵션을 쓸 수 있습니다.\n점수를 자유롭게 입력할 수 있습니다. 이 덕분에 테니스뿐 아니라 탁구나 비치발리볼 등에도 플러그인을 쓸 수 있습니다."
 
 #. Found in changelog paragraph.
 #, gp-priority: low
-msgid ""
-"Minor changes in code:\n"
-"* Allow to transfer organizer rights to a non-playing user.\n"
-"* Ensuring an even rotation of serves at the start of the tournament."
-msgstr ""
-"코드의 작은 변경:\n"
-"* 경기하지 않는 사용자에게 주최자 권한을 넘길 수 있게 했습니다.\n"
-"* 대회 초반에 서브가 고르게 바뀌도록 했습니다."
+msgid "Minor changes in code:\n* Allow to transfer organizer rights to a non-playing user.\n* Ensuring an even rotation of serves at the start of the tournament."
+msgstr "코드의 작은 변경:\n* 경기하지 않는 사용자에게 주최자 권한을 넘길 수 있게 했습니다.\n* 대회 초반에 서브가 고르게 바뀌도록 했습니다."
 
 #. Found in changelog paragraph.
 #, gp-priority: low
@@ -1286,23 +1225,3 @@ msgstr "관리 화면의 작은 변경."
 #, gp-priority: low
 msgid "First release to public."
 msgstr "첫 공개 버전."
-
-#. Found in changelog header.
-#, gp-priority: low
-msgid "2.0.1 - 2026/10/08"
-msgstr "2.0.1 - 2026/10/08"
-
-#. Found in changelog list item.
-#, gp-priority: low
-msgid "Improvement - messages, headings and notices are translated as whole sentences, so languages with a different word order (e.g. Turkish, Hungarian, Hindi, Japanese, Korean and Chinese) read naturally"
-msgstr "개선 – 메시지, 제목, 알림이 완전한 문장으로 번역되어 어순이 다른 언어(예: 튀르키예어, 헝가리어, 힌디어, 일본어, 한국어, 중국어)에서도 자연스럽게 읽힙니다"
-
-#. Found in changelog list item.
-#, gp-priority: low
-msgid "Improvement - the round-end notice of the tournament block no longer repeats the texts of its buttons"
-msgstr "개선 – 대회 블록의 라운드 종료 알림이 더 이상 버튼의 텍스트를 반복하지 않습니다"
-
-#. Found in changelog list item.
-#, gp-priority: low
-msgid "Add - English variants for the UK, Australia, Canada, New Zealand and South Africa"
-msgstr "추가 – 영국, 호주, 캐나다, 뉴질랜드, 남아프리카공화국용 영어 변형"

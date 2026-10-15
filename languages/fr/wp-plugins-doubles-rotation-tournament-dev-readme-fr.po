@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plugins - Rotation Tournaments - Development Readme (trunk)\n"
-"PO-Revision-Date: 2026-10-08 18:18:50+0000\n"
+"PO-Revision-Date: 2026-10-15 07:57:04+0000\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -13,13 +13,161 @@ msgstr ""
 
 #. Short description.
 #, gp-priority: high
-msgid "Do you play Singles or Doubles Tournaments? This plugin manages Rotation Tournaments where players have a different partner in each game."
-msgstr "Vous jouez des tournois en simple ou en double  Cette extension gère des tournois à rotation dans lesquels les joueurs ont un partenaire différent à chaque partie."
+msgid "Run doubles and singles tournaments where players get a new partner every match: fair draws, live results, standings and an Android app."
+msgstr "Organisez des tournois en double et en simple où chaque joueur change de partenaire à chaque match : tirages équitables, résultats en direct, classement et une application Android."
 
 #. Plugin name.
 #, gp-priority: high
 msgid "Rotation Tournaments"
 msgstr "Tournois à rotation"
+
+#. Found in faq paragraph.
+msgid "An iOS version is planned, but there is no release date yet. The tournament pages work in any mobile browser, including iPhone and iPad."
+msgstr "Une version iOS est prévue, mais sans date de sortie pour l’instant. Les pages du tournoi fonctionnent dans n’importe quel navigateur mobile, y compris sur iPhone et iPad."
+
+#. Found in description paragraph.
+msgid "The free <a href=\"https://play.google.com/store/apps/details?id=cz.doroto.app\">Rotation Tournaments app</a> connects to your website: players follow the tournament, enter their results and organizers manage it from the court. The app is available in 27 languages. Several devices can be signed in to one account."
+msgstr "L’<a href=\"https://play.google.com/store/apps/details?id=cz.doroto.app\">application Rotation Tournaments</a>, gratuite, se connecte à votre site : les joueurs suivent le tournoi et saisissent leurs résultats, les organisateurs le gèrent depuis le terrain. L’application est disponible en 27 langues. Plusieurs appareils peuvent être connectés au même compte."
+
+#. Found in description paragraph.
+msgid "<strong>Android app</strong>"
+msgstr "<strong>Application Android</strong>"
+
+#. Found in description paragraph.
+msgid "<strong>For the website</strong>"
+msgstr "<strong>Pour le site</strong>"
+
+#. Found in description paragraph.
+msgid "<strong>The draw</strong>"
+msgstr "<strong>Le tirage</strong>"
+
+#. Found in description paragraph.
+msgid "<strong>How a tournament works</strong>"
+msgstr "<strong>Comment se déroule un tournoi</strong>"
+
+#. Found in description paragraph.
+msgid "It is made for club evenings and social tournaments in <strong>tennis, padel, badminton, table tennis, squash, beach volleyball</strong> and other sports played one against one or two against two."
+msgstr "Elle est conçue pour les soirées de club et les tournois conviviaux de <strong>tennis, padel, badminton, tennis de table, squash, beach-volley</strong> et d’autres sports qui se jouent à un contre un ou à deux contre deux."
+
+#. Found in description paragraph.
+msgid "<strong>Rotation Tournaments</strong> runs club tournaments in which nobody is knocked out. In doubles, every player gets a <strong>new partner in every match</strong> and meets as many different opponents as possible. The ranking is the ratio of games won to games lost, so everybody plays until the very end."
+msgstr "<strong>Tournois à rotation</strong> gère des tournois de club où personne n’est éliminé. En double, chaque joueur a un <strong>nouveau partenaire à chaque match</strong> et rencontre le plus grand nombre possible d’adversaires différents. Le classement repose sur le rapport entre jeux gagnés et jeux perdus, si bien que tout le monde joue jusqu’au bout."
+
+#. Found in description list item.
+msgid "Video introduction:"
+msgstr "Vidéo de présentation :"
+
+#. Found in description list item.
+msgid "<a href=\"https://doroto.ltcchrast.cz/rules-of-the-doubles-rotation-tournament/\">Rules of the Doubles Rotation Tournament</a>."
+msgstr "<a href=\"https://doroto.ltcchrast.cz/rules-of-the-doubles-rotation-tournament/\">Règles du tournoi de double à rotation</a>."
+
+#. Found in description list item.
+msgid "<a href=\"https://doroto.ltcchrast.cz/\">Demo site</a> where you can create your own tournament."
+msgstr "<a href=\"https://doroto.ltcchrast.cz/\">Site de démonstration</a> où vous pouvez créer votre propre tournoi."
+
+#. Found in description list item.
+msgid "Players sign in with their WordPress accounts; full or shortened names (privacy)."
+msgstr "Les joueurs se connectent avec leur compte WordPress ; noms complets ou abrégés (confidentialité)."
+
+#. Found in description list item.
+msgid "Guided tours of the page and four example tournaments."
+msgstr "Visites guidées de la page et quatre tournois d’exemple."
+
+#. Found in description list item.
+msgid "Colors follow your theme; the block's Styles panel can change them."
+msgstr "Les couleurs suivent votre thème ; le panneau Styles du bloc permet de les modifier."
+
+#. Found in description list item.
+msgid "Share dialog with a QR code and a link that opens the tournament in the app."
+msgstr "Boîte de dialogue Partager avec un QR code et un lien qui ouvre le tournoi dans l’application."
+
+#. Found in description list item.
+msgid "Live updates without reloading the page."
+msgstr "Mise à jour en direct sans recharger la page."
+
+#. Found in description list item.
+msgid "Blocks for the block editor: \"Rotation tournament\" (matches, results, players, statistics and settings on tabs), \"Tournament standings\", \"Tournament matches\", \"Tournament presentation\", \"Tournament list\" and \"Tournament invitation\". Shortcodes for the classic editor."
+msgstr "Blocs pour l’éditeur de blocs : « Tournoi à rotation » (matchs, résultats, joueurs, statistiques et réglages dans des onglets), « Classement du tournoi », « Matchs du tournoi », « Présentation du tournoi », « Liste des tournois » et « Invitation au tournoi ». Codes courts pour l’éditeur classique."
+
+#. Found in description list item.
+msgid "Special group of players (e.g. women in a mixed tournament) with its own rules: mixed teams only, a separate winner and more."
+msgstr "Groupe spécial de joueurs (par ex. les femmes dans un tournoi mixte) avec ses propres règles : équipes mixtes uniquement, un vainqueur à part et plus encore."
+
+#. Found in description list item.
+msgid "Works with any number of players from 4 up, odd numbers included; players can join, pause or leave at any time."
+msgstr "Fonctionne avec n’importe quel nombre de joueurs à partir de 4, y compris impair ; les joueurs peuvent rejoindre le tournoi, faire une pause ou le quitter à tout moment."
+
+#. Found in description list item.
+msgid "Players with fewer games and longer rest go first; sides (left/right) and serve alternate."
+msgstr "Les joueurs ayant disputé le moins de matchs et le plus long repos passent en premier ; les côtés (gauche/droite) et le service alternent."
+
+#. Found in description list item.
+msgid "Opponents are chosen by previous meetings too, so the same players meet less often."
+msgstr "Les adversaires sont aussi choisis en fonction des rencontres précédentes, pour que les mêmes joueurs se retrouvent moins souvent."
+
+#. Found in description list item.
+msgid "New teammates first: the plugin pairs players who have not played together yet."
+msgstr "D’abord de nouveaux partenaires : l’extension associe des joueurs qui n’ont pas encore joué ensemble."
+
+#. Found in description list item.
+msgid "At the end the organizer closes the tournament and the best player and the best pair are announced."
+msgstr "À la fin, l’organisateur clôt le tournoi, puis le meilleur joueur et la meilleure paire sont annoncés."
+
+#. Found in description list item.
+msgid "Standings, statistics and the presentation on a big screen update live."
+msgstr "Le classement, les statistiques et la présentation sur grand écran se mettent à jour en direct."
+
+#. Found in description list item.
+msgid "Whoever finishes a match enters the score on the website or in the Android app; the next match is drawn at once."
+msgstr "Celui qui termine un match saisit le score sur le site ou dans l’application Android ; le match suivant est tiré au sort immédiatement."
+
+#. Found in description list item.
+msgid "Players join (also later, during the tournament) and the plugin draws the first matches for the free courts."
+msgstr "Les joueurs s’inscrivent (même plus tard, pendant le tournoi) et l’extension tire au sort les premiers matchs pour les terrains libres."
+
+#. Found in description list item.
+msgid "The organizer creates a tournament and shares the invitation link or QR code."
+msgstr "L’organisateur crée un tournoi et partage le lien d’invitation ou le QR code."
+
+#. Screenshot description.
+msgid "Android app: entering results, standings and played matches."
+msgstr "Application Android : saisie des résultats, classement et matchs joués."
+
+#. Screenshot description.
+msgid "Tournament settings for organizers."
+msgstr "Réglages du tournoi pour les organisateurs."
+
+#. Screenshot description.
+msgid "The \"Rotation tournament\" block in the block editor."
+msgstr "Le bloc « Tournoi à rotation » dans l’éditeur de blocs."
+
+#. Screenshot description.
+msgid "Share the tournament with a QR code; it opens the tournament in the app."
+msgstr "Partagez le tournoi avec un QR code ; il ouvre le tournoi dans l’application."
+
+#. Found in description list item.
+msgid "Presentation mode for a TV or projector in the club house."
+msgstr "Mode présentation pour une télévision ou un projecteur au club-house."
+
+#. Screenshot description.
+msgid "Statistics: how often a player played with and against each other player."
+msgstr "Statistiques : combien de fois un joueur a joué avec et contre chacun des autres joueurs."
+
+#. Screenshot description.
+msgid "Live standings by the ratio of games won to games lost, with the trend of each player."
+msgstr "Classement en direct selon le rapport entre jeux gagnés et jeux perdus, avec la tendance de chaque joueur."
+
+#. Screenshot description.
+msgid "Results of all matches, with a filter by player."
+msgstr "Résultats de tous les matchs, avec un filtre par joueur."
+
+#. Screenshot description.
+msgid "Ongoing matches: the next match is drawn as soon as a score is saved. Names of the special group are highlighted."
+msgstr "Matchs en cours : le match suivant est tiré au sort dès qu’un score est enregistré. Les noms du groupe spécial sont mis en évidence."
+
+#. Screenshot description.
+msgid "The same tournament on the website and in the Android app."
+msgstr "Le même tournoi sur le site et dans l’application Android."
 
 #. Found in installation paragraph.
 msgid "After installation, go to the app's settings and enter the address of your website where this plugin is installed."
@@ -27,127 +175,43 @@ msgstr "Après l’installation, ouvrez les réglages de l’application et sais
 
 #. Found in installation paragraph.
 msgid "Or download it directly from this link: https://play.google.com/store/apps/details?id=cz.doroto.app"
-msgstr "Ou téléchargez-la directement depuis ce lien  https://play.google.com/store/apps/details?id=cz.doroto.app"
+msgstr "Ou téléchargez-la directement depuis ce lien : https://play.google.com/store/apps/details?id=cz.doroto.app"
 
 #. Found in installation paragraph.
 msgid "Search for \"Rotation Tournaments\" on the Google Play Store."
-msgstr "Recherchez « Rotation Tournaments  sur le Google Play Store."
-
-#. Found in description paragraph.
-msgid "To get the full experience of managing tournaments on the go, download our mobile app, now available on Google Play!"
-msgstr "Pour profiter pleinement de la gestion des tournois en déplacement, téléchargez notre application mobile, désormais disponible sur Google Play "
-
-#. Found in description paragraph.
-msgid "<strong>YouTube quick intro:</strong>"
-msgstr "<strong>Présentation rapide sur YouTube </strong>"
-
-#. Found in description list item.
-msgid "Video for a quick introduction to the Rotation Tournament:"
-msgstr "Vidéo de présentation rapide du tournoi à rotation "
+msgstr "Recherchez « Rotation Tournaments » sur le Google Play Store."
 
 #. Found in faq paragraph.
 msgid "Yes. If you install the Rotation Tournaments plugin, allow player registration, and enable visibility in the website list, your site can appear in the Android app. Initially, someone must manually enter your website address into the app. After that, it becomes visible in the list for all users."
 msgstr "Oui. Si vous installez l’extension Rotation Tournaments, autorisez l’inscription des joueurs et activez la visibilité dans la liste des sites, votre site peut apparaître dans l’application Android. Au départ, quelqu’un doit saisir manuellement l’adresse de votre site dans l’application. Ensuite, il devient visible dans la liste pour tous les utilisateurs."
 
-#. Found in faq paragraph.
-msgid "Yes. An iOS version of the Rotation Tournaments app is planned and will be released in the near future."
-msgstr "Oui. Une version iOS de l’application Rotation Tournaments est prévue et sortira prochainement."
-
 #. Found in faq header.
 msgid "Will my website be visible in the Rotation Tournaments Android app?"
-msgstr "Mon site sera-t-il visible dans l’application Android Rotation Tournaments "
+msgstr "Mon site sera-t-il visible dans l’application Android Rotation Tournaments ?"
 
 #. Found in faq header.
 msgid "Will there be an iPhone or iPad version of the app?"
-msgstr "Y aura-t-il une version de l’application pour iPhone ou iPad "
+msgstr "Y aura-t-il une version de l’application pour iPhone ou iPad ?"
 
 #. Found in installation paragraph.
 msgid "<strong>How to install Wordpress plugin:</strong>"
-msgstr "<strong>Comment installer l’extension WordPress </strong>"
+msgstr "<strong>Comment installer l’extension WordPress :</strong>"
 
 #. Found in installation list item.
 msgid "After activating the plugin, 4 pages will be created: one for managing tournaments (main page), one with tournament rules, and additional pages for Privacy Policy and Terms of Service. A sample post announcing a newly created tournament will also be added."
-msgstr "Après l’activation de l’extension, 4 pages sont créées  une pour gérer les tournois (page principale), une avec les règles du tournoi et deux pages pour la Politique de confidentialité et les Conditions d’utilisation. Un article d’exemple annonçant un tournoi nouvellement créé est également ajouté."
+msgstr "Après l’activation de l’extension, 4 pages sont créées : une pour gérer les tournois (page principale), une avec les règles du tournoi et deux pages pour la Politique de confidentialité et les Conditions d’utilisation. Un article d’exemple annonçant un tournoi nouvellement créé est également ajouté."
 
 #. Found in installation paragraph.
 msgid "<strong>How to install the Android app:</strong>"
-msgstr "<strong>Comment installer l’application Android </strong>"
+msgstr "<strong>Comment installer l’application Android :</strong>"
 
 #. Found in description paragraph.
-msgid "<strong>This plugin is the server-side for the \"Rotation Tournaments\" Android app.</strong>"
-msgstr "<strong>Cette extension constitue la partie serveur de l’application Android « Rotation Tournaments .</strong>"
-
-#. Screenshot description.
-msgid "Individual tournament participants enter their results into the WordPress server and share the data with each other."
-msgstr "Chaque participant au tournoi saisit ses résultats sur le serveur WordPress et partage les données avec les autres."
-
-#. Screenshot description.
-msgid "Matches played. (Android app)"
-msgstr "Matchs joués. (Application Android)"
-
-#. Screenshot description.
-msgid "Tournament table. (Wordpress)"
-msgstr "Tableau du tournoi. (WordPress)"
-
-#. Screenshot description.
-msgid "Matches drawn. (Android app)"
-msgstr "Matchs tirés au sort. (Application Android)"
-
-#. Screenshot description.
-msgid "Editing tournament parameters. (Wordpress)"
-msgstr "Modification des paramètres du tournoi. (WordPress)"
-
-#. Screenshot description.
-msgid "Table of players with rankings. (Android app)"
-msgstr "Tableau des joueurs avec le classement. (Application Android)"
-
-#. Screenshot description.
-msgid "Matches played. (Wordpress)"
-msgstr "Matchs joués. (WordPress)"
-
-#. Screenshot description.
-msgid "Basic overview of the tournament. (Android app)"
-msgstr "Vue d’ensemble du tournoi. (Application Android)"
-
-#. Screenshot description.
-msgid "Matches drawn. (Wordpress)"
-msgstr "Matchs tirés au sort. (WordPress)"
-
-#. Found in description paragraph.
-msgid "<strong>Rotation Tournaments</strong> provides a platform for organizing all kinds of sports Singles and Doubles Tournaments, e.g."
-msgstr "<strong>Tournois à rotation</strong> offre une plateforme pour organiser toutes sortes de tournois sportifs en simple et en double, p. ex."
-
-#. Found in description list item.
-msgid "Squash"
-msgstr "Squash"
-
-#. Found in description list item.
-msgid "Beach Volleyball"
-msgstr "Beach-volley"
-
-#. Found in description list item.
-msgid "Badminton"
-msgstr "Badminton"
-
-#. Found in description list item.
-msgid "Padel"
-msgstr "Padel"
-
-#. Found in description list item.
-msgid "Table Tennis"
-msgstr "Tennis de table"
-
-#. Found in description list item.
-msgid "Tennis"
-msgstr "Tennis"
+msgid "<strong>Try it</strong>"
+msgstr "<strong>Essayez-le</strong>"
 
 #. Found in faq paragraph.
-msgid ""
-"This plugin can be used for all types of sports where 2 or 4 players compete in singles or doubles.\n"
-"You can use this plugin for tennis, table tennis, squash, padel, badminton, beach volleyball and probably for more."
-msgstr ""
-"Cette extension peut être utilisée pour tous les sports où 2 ou 4 joueurs s’affrontent en simple ou en double.\n"
-"Vous pouvez l’utiliser pour le tennis, le tennis de table, le squash, le padel, le badminton, le beach-volley et probablement d’autres sports."
+msgid "This plugin can be used for all types of sports where 2 or 4 players compete in singles or doubles.\nYou can use this plugin for tennis, table tennis, squash, padel, badminton, beach volleyball and probably for more."
+msgstr "Cette extension peut être utilisée pour tous les sports où 2 ou 4 joueurs s’affrontent en simple ou en double.\nVous pouvez l’utiliser pour le tennis, le tennis de table, le squash, le padel, le badminton, le beach-volley et probablement d’autres sports."
 
 #. Found in faq paragraph.
 msgid "Yes. When creating a tournament, you can choose whether to create a singles or a doubles tournament."
@@ -155,123 +219,11 @@ msgstr "Oui. Lors de la création d’un tournoi, vous pouvez choisir de créer 
 
 #. Found in faq header.
 msgid "What sports tournaments is this plugin for?"
-msgstr "Pour quels tournois sportifs cette extension est-elle conçue "
-
-#. Found in description paragraph.
-msgid "<strong>General Features:</strong>"
-msgstr "<strong>Fonctionnalités générales </strong>"
-
-#. Found in description paragraph.
-msgid "<strong>Doubles Rotation Tournament:</strong>"
-msgstr "<strong>Tournoi de double à rotation </strong>"
-
-#. Found in description paragraph.
-msgid "<strong>Singles Rotation Tournament:</strong>"
-msgstr "<strong>Tournoi en simple à rotation </strong>"
-
-#. Found in description paragraph.
-msgid "The participants of a tournament change partners several times during the tournament by a random selection and play against different players. The ratio of games won to games lost is calculated for each participant. The winner of the tournament is the player with this highest ratio. While a Singles Rotation Tournament can be organized without the aid of technology, in the case of a Doubles Rotation Tournament, this is not possible."
-msgstr "Les participants d’un tournoi changent de partenaire plusieurs fois pendant le tournoi par tirage au sort et jouent contre différents joueurs. Pour chaque participant, on calcule le rapport entre jeux gagnés et jeux perdus. Le vainqueur du tournoi est le joueur qui a le meilleur rapport. Si un tournoi en simple à rotation peut être organisé sans aide technique, ce n’est pas possible pour un tournoi de double à rotation."
-
-#. Found in description paragraph.
-msgid "The <strong>Rotation Tournaments</strong> have a strong social aspect because its goal is to keep players in the tournament until the very end. The situation where weaker players would leave the tournament due to elimination rounds is eliminated. It allows grouping players into a special category with special conditions. This special setting can be utilized, for example, in mixed tournaments."
-msgstr "Les <strong>tournois à rotation</strong> ont une forte dimension conviviale, car leur objectif est de garder les joueurs dans le tournoi jusqu’au bout. On évite que les joueurs plus faibles quittent le tournoi à cause des tours éliminatoires. Il est possible de regrouper des joueurs dans une catégorie spéciale avec des conditions particulières. Ce réglage spécial peut être utilisé, par exemple, dans les tournois mixtes."
-
-#. Found in description paragraph.
-msgid "In <strong>Rotation Tournaments</strong>, each participant plays against every other participant and there are no eliminations in individual rounds. To maximize the variety of match combinations, the matches are typically played in a single set."
-msgstr "Dans les <strong>tournois à rotation</strong>, chaque participant joue contre tous les autres et il n’y a pas d’élimination au fil des tours. Pour maximiser la variété des combinaisons, les matchs se jouent généralement en un seul set."
-
-#. Found in description list item.
-msgid "Suitable for various sports: tennis, table tennis, squash, padel, badminton, beach volleyball, and more."
-msgstr "Adapté à divers sports  tennis, tennis de table, squash, padel, badminton, beach-volley et plus encore."
-
-#. Found in description list item.
-msgid "Integration with website user accounts."
-msgstr "Intégration avec les comptes utilisateur du site."
-
-#. Found in description list item.
-msgid "No downtime during the tournament."
-msgstr "Aucun temps mort pendant le tournoi."
-
-#. Found in description list item.
-msgid "Comprehensive overview of player quality."
-msgstr "Vue complète du niveau des joueurs."
-
-#. Found in description list item.
-msgid "User-friendly interface for administrators and participants."
-msgstr "Interface conviviale pour les administrateurs et les participants."
-
-#. Found in description list item.
-msgid "Customizable settings for each tournament."
-msgstr "Réglages personnalisables pour chaque tournoi."
-
-#. Found in description list item.
-msgid "Real-time score tracking."
-msgstr "Suivi des scores en temps réel."
-
-#. Found in description list item.
-msgid "Seamless scheduling of matches."
-msgstr "Planification fluide des matchs."
-
-#. Found in description list item.
-msgid "Announcement of the Best Player and Most Ideal Pair at the end of the tournament."
-msgstr "Annonce du meilleur joueur et de la paire idéale à la fin du tournoi."
-
-#. Found in description list item.
-msgid "Ranking based on the ratio of games won to games lost."
-msgstr "Classement fondé sur le rapport entre jeux gagnés et jeux perdus."
-
-#. Found in description list item.
-msgid "Individual players can join or leave the tournament at any time."
-msgstr "Chaque joueur peut rejoindre ou quitter le tournoi à tout moment."
-
-#. Found in description list item.
-msgid "Tournament can be interrupted or extended without disruption."
-msgstr "Le tournoi peut être interrompu ou prolongé sans perturbation."
-
-#. Found in description list item.
-msgid "Shorter matches for more participation."
-msgstr "Des matchs plus courts pour plus de participation."
-
-#. Found in description list item.
-msgid "No eliminations, ensuring all players stay in the game."
-msgstr "Aucune élimination  tous les joueurs restent en jeu."
-
-#. Found in description list item.
-msgid "Define special groups of players with unique conditions."
-msgstr "Définition de groupes spéciaux de joueurs avec des conditions propres."
-
-#. Found in description list item.
-msgid "Suitable for odd numbers of players and minimum lineups of 4 players."
-msgstr "Adapté à un nombre impair de joueurs et à un minimum de 4 joueurs."
-
-#. Found in description list item.
-msgid "Individuals can enter the tournament without a permanent teammate."
-msgstr "On peut participer au tournoi sans partenaire fixe."
-
-#. Found in description list item.
-msgid "Rotation of teammates, ensuring variety in partnerships."
-msgstr "Rotation des partenaires, pour varier les associations."
-
-#. Found in description list item.
-msgid "Alternative form of a Doubles Tournament where players enter each match with a different partner and in different positions (alternating left and right sides)."
-msgstr "Forme alternative de tournoi de double où les joueurs disputent chaque match avec un partenaire différent et à des positions différentes (en alternant côté gauche et côté droit)."
-
-#. Found in description list item.
-msgid "Depending on the time options, everyone plays against everyone."
-msgstr "Selon le temps disponible, chacun joue contre chacun."
-
-#. Found in description list item.
-msgid "Alternative form of a Singles Tournament where players face each other without elimination rounds."
-msgstr "Forme alternative de tournoi en simple où les joueurs s’affrontent sans tours éliminatoires."
-
-#. Found in description header.
-msgid "Features"
-msgstr "Fonctionnalités"
+msgstr "Pour quels tournois sportifs cette extension est-elle conçue ?"
 
 #. Found in faq header.
 msgid "Is this plugin suitable for singles tournaments?"
-msgstr "Cette extension convient-elle aux tournois en simple "
+msgstr "Cette extension convient-elle aux tournois en simple ?"
 
 #. Found in faq paragraph.
 msgid "Yes, each tournament participant must have their own account. If a website has disabled user registration, this account must be created by the website administrator."
@@ -279,7 +231,7 @@ msgstr "Oui, chaque participant au tournoi doit avoir son propre compte. Si un s
 
 #. Found in faq header.
 msgid "Does each player have to have an account created on my website?"
-msgstr "Chaque joueur doit-il avoir un compte sur mon site "
+msgstr "Chaque joueur doit-il avoir un compte sur mon site ?"
 
 #. Found in installation list item.
 msgid "At the end close the tournament and look who was announced as the winner."
@@ -299,28 +251,55 @@ msgstr "Vous pouvez ensuite vous inscrire au tournoi créé et, en tant qu’adm
 
 #. Found in installation list item.
 msgid "Start by clicking on \"Create a new tournament\" under \"Tournament Selection …\" on the main page."
-msgstr "Commencez par cliquer sur « Créer un nouveau tournoi  dans « Sélection du tournoi…  sur la page principale."
+msgstr "Commencez par cliquer sur « Créer un nouveau tournoi » dans « Sélection du tournoi… » sur la page principale."
 
 #. Found in installation list item.
 msgid "Install the plugin as usual."
 msgstr "Installez l’extension comme d’habitude."
 
 #. Found in description paragraph.
-msgid "Visit <a href=\"https://doroto.ltcchrast.cz/\">test page</a> for more information, try to create your own tournament and take a look at <a href=\"https://doroto.ltcchrast.cz/rules-of-the-doubles-rotation-tournament/\">Rules of the Doubles Rotation Tournament</a>."
-msgstr "Visitez la <a href=\"https://doroto.ltcchrast.cz/\">page de test</a> pour plus d’informations, essayez de créer votre propre tournoi et consultez les <a href=\"https://doroto.ltcchrast.cz/rules-of-the-doubles-rotation-tournament/\">règles du tournoi de double à rotation</a>."
-
-#. Found in description paragraph.
 msgid "[youtube https://www.youtube.com/watch?v=NoL9aPTv8u8]"
 msgstr "[youtube https://www.youtube.com/watch?v=NoL9aPTv8u8]"
 
-#. Found in description header.
-msgid "More information"
-msgstr "Plus d’informations"
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - readme: new description of the draw, the blocks and the app; new screenshots (also in Spanish for Chile)"
+msgstr "Amélioration – readme : nouvelle description du tirage, des blocs et de l’application ; nouvelles captures d’écran (aussi en espagnol du Chili)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - new plugin icon and banner, the same icon as the Android app"
+msgstr "Amélioration – nouvelle icône et nouvelle bannière de l’extension, la même icône que l’application Android"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "2.0.2 - 2026/10/15"
+msgstr "2.0.2 - 2026/10/15"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - English variants for the UK, Australia, Canada, New Zealand and South Africa"
+msgstr "Ajout – variantes de l’anglais pour le Royaume-Uni, l’Australie, le Canada, la Nouvelle-Zélande et l’Afrique du Sud"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - the round-end notice of the tournament block no longer repeats the texts of its buttons"
+msgstr "Amélioration – l’avis de fin de tour du bloc de tournoi ne répète plus les textes de ses boutons"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - messages, headings and notices are translated as whole sentences, so languages with a different word order (e.g. Turkish, Hungarian, Hindi, Japanese, Korean and Chinese) read naturally"
+msgstr "Amélioration – les messages, titres et avis sont traduits en phrases complètes, afin que les langues dont l’ordre des mots est différent (p. ex. le turc, le hongrois, le hindi, le japonais, le coréen et le chinois) se lisent naturellement"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "2.0.1 - 2026/10/08"
+msgstr "2.0.1 - 2026/10/08"
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "Fix - the plugin restores read permissions of its files after an FTP upload (the web server answered 403 and the admin page stayed empty); the admin page shows a notice when its script cannot be loaded"
-msgstr "Correction – l’extension rétablit les droits de lecture de ses fichiers après un envoi par FTP (le serveur web répondait 403 et la page d’administration restait vide)  la page d’administration affiche une notification lorsque son script ne peut pas être chargé"
+msgstr "Correction – l’extension rétablit les droits de lecture de ses fichiers après un envoi par FTP (le serveur web répondait 403 et la page d’administration restait vide) ; la page d’administration affiche une notification lorsque son script ne peut pas être chargé"
 
 #. Found in changelog list item.
 #, gp-priority: low
@@ -335,7 +314,7 @@ msgstr "Amélioration – les requêtes REST du site utilisent la connexion Word
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "Improvement - styles, scripts and no-cache headers are sent only on pages that show the plugin; the unused tipTip library was removed and the admin no longer calls ip-api.com"
-msgstr "Amélioration – les styles, scripts et en-têtes no-cache ne sont envoyés que sur les pages qui affichent l’extension  la bibliothèque tipTip inutilisée a été supprimée et l’administration n’appelle plus ip-api.com"
+msgstr "Amélioration – les styles, scripts et en-têtes no-cache ne sont envoyés que sur les pages qui affichent l’extension ; la bibliothèque tipTip inutilisée a été supprimée et l’administration n’appelle plus ip-api.com"
 
 #. Found in changelog list item.
 #, gp-priority: low
@@ -345,32 +324,32 @@ msgstr "Amélioration – chaque modification d’un tournoi (formulaires web, b
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "Improvement - new admin page with Overview, Settings and Help instead of nine settings tabs; every setting is checked on the server and errors are shown next to the field"
-msgstr "Amélioration – nouvelle page d’administration avec Vue d’ensemble, Réglages et Aide au lieu de neuf onglets de réglages  chaque réglage est vérifié sur le serveur et les erreurs s’affichent à côté du champ"
+msgstr "Amélioration – nouvelle page d’administration avec Vue d’ensemble, Réglages et Aide au lieu de neuf onglets de réglages ; chaque réglage est vérifié sur le serveur et les erreurs s’affichent à côté du champ"
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "Add - the serving player is marked on the match cards; the special group is highlighted in matches, results, players, statistics and winners; the tournament details (invitation text) can be shown at any time"
-msgstr "Ajout – le joueur au service est indiqué sur les cartes des matchs  le groupe spécial est mis en évidence dans les matchs, les résultats, les joueurs, les statistiques et les vainqueurs  les détails du tournoi (texte d’invitation) peuvent être affichés à tout moment"
+msgstr "Ajout – le joueur au service est indiqué sur les cartes des matchs ; le groupe spécial est mis en évidence dans les matchs, les résultats, les joueurs, les statistiques et les vainqueurs ; les détails du tournoi (texte d’invitation) peuvent être affichés à tout moment"
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "Add - the tournament block takes its colors from the theme (button and palette colors); the block's Styles panel can change the accent, the tab bar and table headers, their text and the color of the special group"
-msgstr "Ajout – le bloc du tournoi reprend les couleurs du thème (boutons et palette)  le panneau Styles du bloc permet de modifier l’accent, la barre d’onglets et les en-têtes de tableau, leur texte et la couleur du groupe spécial"
+msgstr "Ajout – le bloc du tournoi reprend les couleurs du thème (boutons et palette) ; le panneau Styles du bloc permet de modifier l’accent, la barre d’onglets et les en-têtes de tableau, leur texte et la couleur du groupe spécial"
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "Add - the tournament block: Share dialog with a QR code, \"Open in the app\" line, full-screen presentation that rotates the sections, map of the tournament place in the settings, and guided tours of the page and of four example tournaments"
-msgstr "Ajout – le bloc du tournoi  boîte de dialogue Partager avec QR code, ligne « Ouvrir dans l’application , présentation plein écran qui fait défiler les sections, carte du lieu du tournoi dans les réglages et visites guidées de la page et de quatre tournois d’exemple"
+msgstr "Ajout – le bloc du tournoi : boîte de dialogue Partager avec QR code, ligne « Ouvrir dans l’application », présentation plein écran qui fait défiler les sections, carte du lieu du tournoi dans les réglages et visites guidées de la page et de quatre tournois d’exemple"
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "Add - the plugin admin can convert the main page to the blocks with one button; the old content stays in the page revisions. New installs create the main page from the blocks. The shortcodes [doroto_tournament] and [doroto_tournament_list] show the blocks in the classic editor; the 1.x shortcodes keep working"
-msgstr "Ajout – l’administrateur de l’extension peut convertir la page principale en blocs d’un seul clic  l’ancien contenu reste dans les révisions de la page. Les nouvelles installations créent la page principale à partir des blocs. Les codes courts [doroto_tournament] et [doroto_tournament_list] affichent les blocs dans l’éditeur classique  les codes courts de la version 1.x continuent de fonctionner"
+msgstr "Ajout – l’administrateur de l’extension peut convertir la page principale en blocs d’un seul clic ; l’ancien contenu reste dans les révisions de la page. Les nouvelles installations créent la page principale à partir des blocs. Les codes courts [doroto_tournament] et [doroto_tournament_list] affichent les blocs dans l’éditeur classique ; les codes courts de la version 1.x continuent de fonctionner"
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "Add - blocks for the block editor: \"Rotation tournament\" (matches, results, players, statistics and settings on tabs, updated live without reloading the page), its variations \"Tournament standings\", \"Tournament matches\" and \"Tournament presentation\", \"Tournament list\" and \"Tournament invitation\""
-msgstr "Ajout – blocs pour l’éditeur de blocs  « Tournoi à rotation  (matchs, résultats, joueurs, statistiques et réglages dans des onglets, mis à jour en direct sans recharger la page), ses variantes « Classement du tournoi , « Matchs du tournoi  et « Présentation du tournoi , « Liste des tournois  et « Invitation au tournoi "
+msgstr "Ajout – blocs pour l’éditeur de blocs : « Tournoi à rotation » (matchs, résultats, joueurs, statistiques et réglages dans des onglets, mis à jour en direct sans recharger la page), ses variantes « Classement du tournoi », « Matchs du tournoi » et « Présentation du tournoi », « Liste des tournois » et « Invitation au tournoi »"
 
 #. Found in changelog header.
 #, gp-priority: low
@@ -380,7 +359,7 @@ msgstr "2.0.0 - 2026/10/06"
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "Change - the review request is shown only to administrators, 14 days after activation once the site has its own tournament, and comes back 7 days after \"Remind me\" until the plugin is rated"
-msgstr "Changement – la demande d’avis n’est affichée qu’aux administrateurs, 14 jours après l’activation et une fois que le site a son propre tournoi, et réapparaît 7 jours après « Me le rappeler  jusqu’à ce que l’extension soit évaluée"
+msgstr "Changement – la demande d’avis n’est affichée qu’aux administrateurs, 14 jours après l’activation et une fois que le site a son propre tournoi, et réapparaît 7 jours après « Me le rappeler » jusqu’à ce que l’extension soit évaluée"
 
 #. Found in changelog list item.
 #, gp-priority: low
@@ -395,12 +374,12 @@ msgstr "Ajout – mode facultatif rejoindre/quitter pour le point d’accès d�
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "Add - REST endpoint create-player: the organizer creates a player and adds them to the tournament in one step; the player gets an e-mail to set the password"
-msgstr "Ajout – point d’accès REST create-player  l’organisateur crée un joueur et l’ajoute au tournoi en une seule étape  le joueur reçoit un e-mail pour définir son mot de passe"
+msgstr "Ajout – point d’accès REST create-player : l’organisateur crée un joueur et l’ajoute au tournoi en une seule étape ; le joueur reçoit un e-mail pour définir son mot de passe"
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "Change - tournament links to the home page (\"?tournament_id=5\") and the old app QR codes (\"/tournament?id=5\") open the tournament page"
-msgstr "Changement – les liens de tournoi vers la page d’accueil (« tournament_id=5 ) et les anciens QR codes de l’application (« /tournament?id=5 ) ouvrent la page du tournoi"
+msgstr "Changement – les liens de tournoi vers la page d’accueil (« ?tournament_id=5 ») et les anciens QR codes de l’application (« /tournament?id=5 ») ouvrent la page du tournoi"
 
 #. Found in changelog list item.
 #, gp-priority: low
@@ -440,12 +419,12 @@ msgstr "Correction – plusieurs appareils qui se connectent ou renouvellent leu
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "Fix - every change of a running tournament (correcting a result, suspending or removing a player, settings, payments, special group, web forms) runs under the tournament lock; correcting a result while another court saved its result could stall the whole tournament"
-msgstr "Correction – chaque modification d’un tournoi en cours (correction d’un résultat, mise en pause ou retrait d’un joueur, réglages, paiements, groupe spécial, formulaires web) s’effectue sous le verrou du tournoi  corriger un résultat pendant qu’un autre terrain enregistrait le sien pouvait bloquer tout le tournoi"
+msgstr "Correction – chaque modification d’un tournoi en cours (correction d’un résultat, mise en pause ou retrait d’un joueur, réglages, paiements, groupe spécial, formulaires web) s’effectue sous le verrou du tournoi ; corriger un résultat pendant qu’un autre terrain enregistrait le sien pouvait bloquer tout le tournoi"
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "Fix - tournament lock: results entered at the same time on several courts are no longer lost"
-msgstr "Correction – verrou du tournoi  les résultats saisis en même temps sur plusieurs terrains ne sont plus perdus"
+msgstr "Correction – verrou du tournoi : les résultats saisis en même temps sur plusieurs terrains ne sont plus perdus"
 
 #. Found in changelog list item.
 #, gp-priority: low
@@ -470,7 +449,7 @@ msgstr "Sécurité – un compte créé par un organisateur ne renvoie plus à l
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "Security - registration from the app (incl. a new Google account) respects \"Anyone can register\""
-msgstr "Sécurité – l’inscription depuis l’application (y compris avec un nouveau compte Google) respecte le réglage « Tout le monde peut s’inscrire "
+msgstr "Sécurité – l’inscription depuis l’application (y compris avec un nouveau compte Google) respecte le réglage « Tout le monde peut s’inscrire »"
 
 #. Found in changelog list item.
 #, gp-priority: low
@@ -480,7 +459,7 @@ msgstr "Sécurité – le double final et la bascule des inscriptions vérifient
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "Security - guided tour actions need a nonce; regenerating the example tournaments is throttled"
-msgstr "Sécurité – les actions de la visite guidée nécessitent un nonce  la régénération des tournois d’exemple est limitée"
+msgstr "Sécurité – les actions de la visite guidée nécessitent un nonce ; la régénération des tournois d’exemple est limitée"
 
 #. Found in changelog list item.
 #, gp-priority: low
@@ -495,12 +474,12 @@ msgstr "Sécurité – les formulaires publics vérifient les droits d’adminis
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "Add - app tournament links on the central site (?tournament_id=5&amp;doroto_site=) are forwarded to the club's tournament page when the app is not installed (sites from the site directory; other sites get a page with a link)"
-msgstr "Ajout – les liens de tournoi de l’application sur le site central (?tournament_id=5&amp;doroto_site=) sont redirigés vers la page du tournoi du club lorsque l’application n’est pas installée (sites de l’annuaire des sites  les autres sites obtiennent une page avec un lien)"
+msgstr "Ajout – les liens de tournoi de l’application sur le site central (?tournament_id=5&amp;doroto_site=) sont redirigés vers la page du tournoi du club lorsque l’application n’est pas installée (sites de l’annuaire des sites ; les autres sites obtiennent une page avec un lien)"
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "Add - the tournament page has an \"Open in the app\" link: Android opens the tournament in the app, or Google Play when it is missing"
-msgstr "Ajout – la page du tournoi comporte un lien « Ouvrir dans l’application   Android ouvre le tournoi dans l’application, ou Google Play si elle n’est pas installée"
+msgstr "Ajout – la page du tournoi comporte un lien « Ouvrir dans l’application » : Android ouvre le tournoi dans l’application, ou Google Play si elle n’est pas installée"
 
 #. Found in changelog list item.
 #, gp-priority: low
@@ -510,7 +489,7 @@ msgstr "Correction – l’enregistrement des réglages du tournoi refuse un typ
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "Fix - a deleted account leaves its open tournaments: removed when it has not played yet, otherwise suspended; it also leaves the organizers, special group and payments (it was drawn into matches as \"Unknown player\")"
-msgstr "Correction – un compte supprimé quitte ses tournois ouverts  il est retiré s’il n’a pas encore joué, sinon mis en pause  il quitte aussi les organisateurs, le groupe spécial et les paiements (il était tiré au sort dans des matchs comme « Joueur inconnu )"
+msgstr "Correction – un compte supprimé quitte ses tournois ouverts : il est retiré s’il n’a pas encore joué, sinon mis en pause ; il quitte aussi les organisateurs, le groupe spécial et les paiements (il était tiré au sort dans des matchs comme « Joueur inconnu »)"
 
 #. Found in changelog list item.
 #, gp-priority: low
@@ -525,22 +504,22 @@ msgstr "Correction – le formulaire de modification tient sur l’écran d’un
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "Add - organizers see an \"Edit result\" button next to every played match; it selects the match and its result in the change form (the form above the table was easy to miss)"
-msgstr "Ajout – les organisateurs voient un bouton « Modifier le résultat  à côté de chaque match joué  il sélectionne le match et son résultat dans le formulaire de modification (le formulaire au-dessus du tableau passait facilement inaperçu)"
+msgstr "Ajout – les organisateurs voient un bouton « Modifier le résultat » à côté de chaque match joué ; il sélectionne le match et son résultat dans le formulaire de modification (le formulaire au-dessus du tableau passait facilement inaperçu)"
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "Add - REST route skip-matches: the organizer skips several ongoing matches at once and new matches are drawn from all free players"
-msgstr "Ajout – route REST skip-matches  l’organisateur passe plusieurs matchs en cours à la fois et les nouveaux matchs sont tirés au sort parmi tous les joueurs libres"
+msgstr "Ajout – route REST skip-matches : l’organisateur passe plusieurs matchs en cours à la fois et les nouveaux matchs sont tirés au sort parmi tous les joueurs libres"
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "Improvement - among players with the same number of new teammates left, the one who played fewer games is drawn first; sides (left/right) alternate for both players of a team"
-msgstr "Amélioration – parmi les joueurs ayant le même nombre de nouveaux partenaires restants, celui qui a joué le moins de jeux est tiré en premier  les côtés (gauche/droite) alternent pour les deux joueurs d’une équipe"
+msgstr "Amélioration – parmi les joueurs ayant le même nombre de nouveaux partenaires restants, celui qui a joué le moins de jeux est tiré en premier ; les côtés (gauche/droite) alternent pour les deux joueurs d’une équipe"
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "Improvement - the draw chooses the opposing team (and the teammate) by previous meetings too: players meet more different opponents and the same players meet less often (with 14 players on 2 courts, pairs that met 3 or more times dropped from about 5 to 1 per evening)"
-msgstr "Amélioration – le tirage choisit l’équipe adverse (et le partenaire) en tenant aussi compte des rencontres précédentes  les joueurs affrontent davantage d’adversaires différents et les mêmes joueurs se retrouvent moins souvent (avec 14 joueurs sur 2 terrains, les paires qui se sont rencontrées 3 fois ou plus sont passées d’environ 5 à 1 par soirée)"
+msgstr "Amélioration – le tirage choisit l’équipe adverse (et le partenaire) en tenant aussi compte des rencontres précédentes : les joueurs affrontent davantage d’adversaires différents et les mêmes joueurs se retrouvent moins souvent (avec 14 joueurs sur 2 terrains, les paires qui se sont rencontrées 3 fois ou plus sont passées d’environ 5 à 1 par soirée)"
 
 #. Found in changelog header.
 #, gp-priority: low
@@ -870,7 +849,7 @@ msgstr "Changement – publication de l’application Android"
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "Fix - Add 'last update' to the database also for already installed plugings"
-msgstr "Correction – ajout de « last update  à la base de données aussi pour les extensions déjà installées"
+msgstr "Correction – ajout de « last update » à la base de données aussi pour les extensions déjà installées"
 
 #. Found in changelog list item.
 #, gp-priority: low
@@ -880,7 +859,7 @@ msgstr "Correction – désinstallation également des 2 nouvelles pages (politi
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "Fix - Add 'last update' to the database"
-msgstr "Correction – ajout de « last update  à la base de données"
+msgstr "Correction – ajout de « last update » à la base de données"
 
 #. Found in changelog list item.
 #, gp-priority: low
@@ -940,7 +919,7 @@ msgstr "Correction – le bloc d’inscription/désinscription présentait un pr
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "Fix - Parameter When enough players are available had sometimes a wrong value."
-msgstr "Correction – le paramètre « Lorsque suffisamment de joueurs sont disponibles  avait parfois une valeur erronée."
+msgstr "Correction – le paramètre « Lorsque suffisamment de joueurs sont disponibles » avait parfois une valeur erronée."
 
 #. Found in changelog list item.
 #, gp-priority: low
@@ -1189,21 +1168,13 @@ msgstr "Correction – si tous les tournois avaient été supprimés, il était 
 
 #. Found in changelog paragraph.
 #, gp-priority: low
-msgid ""
-"Trial tournament improvements.\n"
-"Added the option to announce the end of the tournament round."
-msgstr ""
-"Améliorations du tournoi d’essai.\n"
-"Ajout de l’option d’annonce de la fin du tour du tournoi."
+msgid "Trial tournament improvements.\nAdded the option to announce the end of the tournament round."
+msgstr "Améliorations du tournoi d’essai.\nAjout de l’option d’annonce de la fin du tour du tournoi."
 
 #. Found in changelog paragraph.
 #, gp-priority: low
-msgid ""
-"Improved the visual appearance of the main page.\n"
-"Badminton added to the list of available tournaments."
-msgstr ""
-"Amélioration de l’apparence de la page principale.\n"
-"Ajout du badminton à la liste des tournois disponibles."
+msgid "Improved the visual appearance of the main page.\nBadminton added to the list of available tournaments."
+msgstr "Amélioration de l’apparence de la page principale.\nAjout du badminton à la liste des tournois disponibles."
 
 #. Found in changelog paragraph.
 #, gp-priority: low
@@ -1212,65 +1183,33 @@ msgstr "Option permettant d’annoncer des vainqueurs distincts du groupe spéci
 
 #. Found in changelog paragraph.
 #, gp-priority: low
-msgid ""
-"Notices after a plugin activation.\n"
-"Added player trend."
-msgstr ""
-"Notifications après l’activation de l’extension.\n"
-"Ajout de la tendance du joueur."
+msgid "Notices after a plugin activation.\nAdded player trend."
+msgstr "Notifications après l’activation de l’extension.\nAjout de la tendance du joueur."
 
 #. Found in changelog paragraph.
 #, gp-priority: low
-msgid ""
-"Modified tournament editing tab.\n"
-"Added option to change tournament type."
-msgstr ""
-"Modification de l’onglet de modification du tournoi.\n"
-"Ajout de l’option de changement du type de tournoi."
+msgid "Modified tournament editing tab.\nAdded option to change tournament type."
+msgstr "Modification de l’onglet de modification du tournoi.\nAjout de l’option de changement du type de tournoi."
 
 #. Found in changelog paragraph.
 #, gp-priority: low
-msgid ""
-"Reactivating the plugin doesn´t affect the already deleted tournament example. \n"
-"Unblock offering maximum games count.\n"
-"Fix tournament change when entering results.\n"
-"Added quick help for newcomers.\n"
-"Allow the final match also for singles."
-msgstr ""
-"La réactivation de l’extension n’affecte pas le tournoi d’exemple déjà supprimé.\n"
-"Déblocage du choix du nombre maximal de jeux.\n"
-"Correction du changement de tournoi lors de la saisie des résultats.\n"
-"Ajout d’une aide rapide pour les nouveaux venus.\n"
-"Match final autorisé aussi en simple."
+msgid "Reactivating the plugin doesn´t affect the already deleted tournament example. \nUnblock offering maximum games count.\nFix tournament change when entering results.\nAdded quick help for newcomers.\nAllow the final match also for singles."
+msgstr "La réactivation de l’extension n’affecte pas le tournoi d’exemple déjà supprimé.\nDéblocage du choix du nombre maximal de jeux.\nCorrection du changement de tournoi lors de la saisie des résultats.\nAjout d’une aide rapide pour les nouveaux venus.\nMatch final autorisé aussi en simple."
 
 #. Found in changelog paragraph.
 #, gp-priority: low
-msgid ""
-"Added the option for single tournaments. \n"
-"Created an environment for additional sports."
-msgstr ""
-"Ajout de l’option des tournois en simple.\n"
-"Création d’un environnement pour d’autres sports."
+msgid "Added the option for single tournaments. \nCreated an environment for additional sports."
+msgstr "Ajout de l’option des tournois en simple.\nCréation d’un environnement pour d’autres sports."
 
 #. Found in changelog paragraph.
 #, gp-priority: low
-msgid ""
-"The administrator can now use 'hide' option when editing the match result.\n"
-"Free score input is allowed. This opens using not only for tennis but for example for table tennis or beach volleyball."
-msgstr ""
-"L’administrateur peut désormais utiliser l’option « masquer  lors de la modification du résultat d’un match.\n"
-"La saisie libre du score est autorisée. Cela permet une utilisation non seulement pour le tennis, mais aussi, par exemple, pour le tennis de table ou le beach-volley."
+msgid "The administrator can now use 'hide' option when editing the match result.\nFree score input is allowed. This opens using not only for tennis but for example for table tennis or beach volleyball."
+msgstr "L’administrateur peut désormais utiliser l’option « masquer » lors de la modification du résultat d’un match.\nLa saisie libre du score est autorisée. Cela permet une utilisation non seulement pour le tennis, mais aussi, par exemple, pour le tennis de table ou le beach-volley."
 
 #. Found in changelog paragraph.
 #, gp-priority: low
-msgid ""
-"Minor changes in code:\n"
-"* Allow to transfer organizer rights to a non-playing user.\n"
-"* Ensuring an even rotation of serves at the start of the tournament."
-msgstr ""
-"Modifications mineures du code \n"
-"* Possibilité de transférer les droits d’organisateur à un utilisateur qui ne joue pas.\n"
-"* Rotation équilibrée du service au début du tournoi."
+msgid "Minor changes in code:\n* Allow to transfer organizer rights to a non-playing user.\n* Ensuring an even rotation of serves at the start of the tournament."
+msgstr "Modifications mineures du code :\n* Possibilité de transférer les droits d’organisateur à un utilisateur qui ne joue pas.\n* Rotation équilibrée du service au début du tournoi."
 
 #. Found in changelog paragraph.
 #, gp-priority: low
@@ -1286,23 +1225,3 @@ msgstr "Petite modification de l’écran d’administration."
 #, gp-priority: low
 msgid "First release to public."
 msgstr "Première version publique."
-
-#. Found in changelog header.
-#, gp-priority: low
-msgid "2.0.1 - 2026/10/08"
-msgstr "2.0.1 - 2026/10/08"
-
-#. Found in changelog list item.
-#, gp-priority: low
-msgid "Improvement - messages, headings and notices are translated as whole sentences, so languages with a different word order (e.g. Turkish, Hungarian, Hindi, Japanese, Korean and Chinese) read naturally"
-msgstr "Amélioration – les messages, titres et avis sont traduits en phrases complètes, afin que les langues dont l’ordre des mots est différent (p. ex. le turc, le hongrois, le hindi, le japonais, le coréen et le chinois) se lisent naturellement"
-
-#. Found in changelog list item.
-#, gp-priority: low
-msgid "Improvement - the round-end notice of the tournament block no longer repeats the texts of its buttons"
-msgstr "Amélioration – l’avis de fin de tour du bloc de tournoi ne répète plus les textes de ses boutons"
-
-#. Found in changelog list item.
-#, gp-priority: low
-msgid "Add - English variants for the UK, Australia, Canada, New Zealand and South Africa"
-msgstr "Ajout – variantes de l’anglais pour le Royaume-Uni, l’Australie, le Canada, la Nouvelle-Zélande et l’Afrique du Sud"

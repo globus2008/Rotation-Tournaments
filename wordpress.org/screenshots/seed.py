@@ -30,6 +30,7 @@ WOMEN = ['Emma Walker', 'Sofia Rossi', 'Lena Novak', 'Mia Jensen', 'Chloe Martin
 NAMES = {
     'en_US': ('Friday Mixed Doubles', 'Summer Padel Cup'),
     'es_CL': ('Dobles mixtos del viernes', 'Copa de pádel de verano'),
+    'cs_CZ': ('Páteční smíšená čtyřhra', 'Letní padelový pohár'),
 }
 MEN = ['Liam Carter', 'Lucas Meyer', 'Noah Berg', 'Mateo Garcia', 'Oliver Hughes', 'Jonas Weber']
 

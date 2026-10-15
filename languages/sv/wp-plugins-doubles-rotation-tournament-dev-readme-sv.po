@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plugins - Rotation Tournaments - Development Readme (trunk)\n"
-"PO-Revision-Date: 2026-10-08 18:18:50+0000\n"
+"PO-Revision-Date: 2026-10-15 07:57:04+0000\n"
 "Language: sv_SE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -13,13 +13,161 @@ msgstr ""
 
 #. Short description.
 #, gp-priority: high
-msgid "Do you play Singles or Doubles Tournaments? This plugin manages Rotation Tournaments where players have a different partner in each game."
-msgstr "Spelar du singel- eller dubbelturneringar? Det här tillägget hanterar rotationsturneringar där spelarna har en ny partner i varje spel."
+msgid "Run doubles and singles tournaments where players get a new partner every match: fair draws, live results, standings and an Android app."
+msgstr "Arrangera dubbel- och singelturneringar där spelarna får en ny partner i varje match: rättvisa lottningar, resultat i realtid, ställning och en Android-app."
 
 #. Plugin name.
 #, gp-priority: high
 msgid "Rotation Tournaments"
 msgstr "Rotationsturneringar"
+
+#. Found in faq paragraph.
+msgid "An iOS version is planned, but there is no release date yet. The tournament pages work in any mobile browser, including iPhone and iPad."
+msgstr "En iOS-version är planerad, men det finns inget lanseringsdatum ännu. Turneringssidorna fungerar i alla mobila webbläsare, även på iPhone och iPad."
+
+#. Found in description paragraph.
+msgid "The free <a href=\"https://play.google.com/store/apps/details?id=cz.doroto.app\">Rotation Tournaments app</a> connects to your website: players follow the tournament, enter their results and organizers manage it from the court. The app is available in 27 languages. Several devices can be signed in to one account."
+msgstr "Den kostnadsfria <a href=\"https://play.google.com/store/apps/details?id=cz.doroto.app\">appen Rotation Tournaments</a> ansluter till din webbplats: spelarna följer turneringen och anger sina resultat, och arrangörerna sköter den direkt från banan. Appen finns på 27 språk. Flera enheter kan vara inloggade på samma konto."
+
+#. Found in description paragraph.
+msgid "<strong>Android app</strong>"
+msgstr "<strong>Android-app</strong>"
+
+#. Found in description paragraph.
+msgid "<strong>For the website</strong>"
+msgstr "<strong>För webbplatsen</strong>"
+
+#. Found in description paragraph.
+msgid "<strong>The draw</strong>"
+msgstr "<strong>Lottningen</strong>"
+
+#. Found in description paragraph.
+msgid "<strong>How a tournament works</strong>"
+msgstr "<strong>Så fungerar en turnering</strong>"
+
+#. Found in description paragraph.
+msgid "It is made for club evenings and social tournaments in <strong>tennis, padel, badminton, table tennis, squash, beach volleyball</strong> and other sports played one against one or two against two."
+msgstr "Det är gjort för klubbkvällar och sociala turneringar i <strong>tennis, padel, badminton, bordtennis, squash, beachvolleyboll</strong> och andra sporter som spelas en mot en eller två mot två."
+
+#. Found in description paragraph.
+msgid "<strong>Rotation Tournaments</strong> runs club tournaments in which nobody is knocked out. In doubles, every player gets a <strong>new partner in every match</strong> and meets as many different opponents as possible. The ranking is the ratio of games won to games lost, so everybody plays until the very end."
+msgstr "<strong>Rotationsturneringar</strong> driver klubbturneringar där ingen slås ut. I dubbel får varje spelare <strong>en ny partner i varje match</strong> och möter så många olika motståndare som möjligt. Ställningen bygger på förhållandet mellan vunna och förlorade gem, så alla spelar ända till slutet."
+
+#. Found in description list item.
+msgid "Video introduction:"
+msgstr "Videointroduktion:"
+
+#. Found in description list item.
+msgid "<a href=\"https://doroto.ltcchrast.cz/rules-of-the-doubles-rotation-tournament/\">Rules of the Doubles Rotation Tournament</a>."
+msgstr "<a href=\"https://doroto.ltcchrast.cz/rules-of-the-doubles-rotation-tournament/\">Regler för rotationsturnering i dubbel</a>."
+
+#. Found in description list item.
+msgid "<a href=\"https://doroto.ltcchrast.cz/\">Demo site</a> where you can create your own tournament."
+msgstr "<a href=\"https://doroto.ltcchrast.cz/\">Demowebbplats</a> där du kan skapa en egen turnering."
+
+#. Found in description list item.
+msgid "Players sign in with their WordPress accounts; full or shortened names (privacy)."
+msgstr "Spelarna loggar in med sina WordPress-konton; fullständiga eller förkortade namn (integritet)."
+
+#. Found in description list item.
+msgid "Guided tours of the page and four example tournaments."
+msgstr "Guidade turer genom sidan och fyra exempelturneringar."
+
+#. Found in description list item.
+msgid "Colors follow your theme; the block's Styles panel can change them."
+msgstr "Färgerna följer ditt tema; blockets panel Stilar kan ändra dem."
+
+#. Found in description list item.
+msgid "Share dialog with a QR code and a link that opens the tournament in the app."
+msgstr "Dialogrutan Dela med en QR-kod och en länk som öppnar turneringen i appen."
+
+#. Found in description list item.
+msgid "Live updates without reloading the page."
+msgstr "Uppdateras i realtid utan att sidan laddas om."
+
+#. Found in description list item.
+msgid "Blocks for the block editor: \"Rotation tournament\" (matches, results, players, statistics and settings on tabs), \"Tournament standings\", \"Tournament matches\", \"Tournament presentation\", \"Tournament list\" and \"Tournament invitation\". Shortcodes for the classic editor."
+msgstr "Block för blockredigeraren: ”Rotationsturnering” (matcher, resultat, spelare, statistik och inställningar i flikar), ”Turneringens ställning”, ”Turneringens matcher”, ”Turneringspresentation”, ”Turneringslista” och ”Turneringsinbjudan”. Kortkoder för den klassiska redigeraren."
+
+#. Found in description list item.
+msgid "Special group of players (e.g. women in a mixed tournament) with its own rules: mixed teams only, a separate winner and more."
+msgstr "Särskild grupp av spelare (t.ex. kvinnor i en mixedturnering) med egna regler: endast mixade lag, en egen vinnare med mera."
+
+#. Found in description list item.
+msgid "Works with any number of players from 4 up, odd numbers included; players can join, pause or leave at any time."
+msgstr "Fungerar med valfritt antal spelare från 4, även udda antal; spelare kan ansluta, pausa eller lämna när som helst."
+
+#. Found in description list item.
+msgid "Players with fewer games and longer rest go first; sides (left/right) and serve alternate."
+msgstr "Spelare med färre matcher och längre vila går först; sidorna (vänster/höger) och serven växlar."
+
+#. Found in description list item.
+msgid "Opponents are chosen by previous meetings too, so the same players meet less often."
+msgstr "Motståndarna väljs även utifrån tidigare möten, så att samma spelare möts mer sällan."
+
+#. Found in description list item.
+msgid "New teammates first: the plugin pairs players who have not played together yet."
+msgstr "Nya partner först: tillägget parar ihop spelare som inte har spelat tillsammans än."
+
+#. Found in description list item.
+msgid "At the end the organizer closes the tournament and the best player and the best pair are announced."
+msgstr "I slutet avslutar arrangören turneringen och bästa spelare och bästa par utses."
+
+#. Found in description list item.
+msgid "Standings, statistics and the presentation on a big screen update live."
+msgstr "Ställning, statistik och presentationen på en stor skärm uppdateras i realtid."
+
+#. Found in description list item.
+msgid "Whoever finishes a match enters the score on the website or in the Android app; the next match is drawn at once."
+msgstr "Den som spelar klart en match anger resultatet på webbplatsen eller i Android-appen; nästa match lottas direkt."
+
+#. Found in description list item.
+msgid "Players join (also later, during the tournament) and the plugin draws the first matches for the free courts."
+msgstr "Spelarna anmäler sig (även senare, under turneringen) och tillägget lottar de första matcherna till de lediga banorna."
+
+#. Found in description list item.
+msgid "The organizer creates a tournament and shares the invitation link or QR code."
+msgstr "Arrangören skapar en turnering och delar inbjudningslänken eller QR-koden."
+
+#. Screenshot description.
+msgid "Android app: entering results, standings and played matches."
+msgstr "Android-app: ange resultat, ställning och spelade matcher."
+
+#. Screenshot description.
+msgid "Tournament settings for organizers."
+msgstr "Turneringsinställningar för arrangörer."
+
+#. Screenshot description.
+msgid "The \"Rotation tournament\" block in the block editor."
+msgstr "Blocket ”Rotationsturnering” i blockredigeraren."
+
+#. Screenshot description.
+msgid "Share the tournament with a QR code; it opens the tournament in the app."
+msgstr "Dela turneringen med en QR-kod; den öppnar turneringen i appen."
+
+#. Found in description list item.
+msgid "Presentation mode for a TV or projector in the club house."
+msgstr "Presentationsläge för en tv eller projektor i klubbhuset."
+
+#. Screenshot description.
+msgid "Statistics: how often a player played with and against each other player."
+msgstr "Statistik: hur ofta en spelare har spelat med och mot varje annan spelare."
+
+#. Screenshot description.
+msgid "Live standings by the ratio of games won to games lost, with the trend of each player."
+msgstr "Ställning i realtid efter förhållandet mellan vunna och förlorade gem, med varje spelares trend."
+
+#. Screenshot description.
+msgid "Results of all matches, with a filter by player."
+msgstr "Resultat för alla matcher, med filter per spelare."
+
+#. Screenshot description.
+msgid "Ongoing matches: the next match is drawn as soon as a score is saved. Names of the special group are highlighted."
+msgstr "Pågående matcher: nästa match lottas så snart ett resultat har sparats. Namnen i den särskilda gruppen är markerade."
+
+#. Screenshot description.
+msgid "The same tournament on the website and in the Android app."
+msgstr "Samma turnering på webbplatsen och i Android-appen."
 
 #. Found in installation paragraph.
 msgid "After installation, go to the app's settings and enter the address of your website where this plugin is installed."
@@ -33,25 +181,9 @@ msgstr "Eller ladda ned den direkt via den här länken: https://play.google.com
 msgid "Search for \"Rotation Tournaments\" on the Google Play Store."
 msgstr "Sök efter ”Rotation Tournaments” i Google Play Butik."
 
-#. Found in description paragraph.
-msgid "To get the full experience of managing tournaments on the go, download our mobile app, now available on Google Play!"
-msgstr "Ladda ned vår mobilapp, som nu finns på Google Play, för att hantera turneringar fullt ut när du är på språng!"
-
-#. Found in description paragraph.
-msgid "<strong>YouTube quick intro:</strong>"
-msgstr "<strong>Kort introduktion på YouTube:</strong>"
-
-#. Found in description list item.
-msgid "Video for a quick introduction to the Rotation Tournament:"
-msgstr "Video med en kort introduktion till rotationsturneringen:"
-
 #. Found in faq paragraph.
 msgid "Yes. If you install the Rotation Tournaments plugin, allow player registration, and enable visibility in the website list, your site can appear in the Android app. Initially, someone must manually enter your website address into the app. After that, it becomes visible in the list for all users."
 msgstr "Ja. Om du installerar tillägget Rotation Tournaments, tillåter registrering av spelare och aktiverar synlighet i webbplatslistan kan din webbplats visas i Android-appen. Till att börja med måste någon ange din webbplats adress manuellt i appen. Därefter syns den i listan för alla användare."
-
-#. Found in faq paragraph.
-msgid "Yes. An iOS version of the Rotation Tournaments app is planned and will be released in the near future."
-msgstr "Ja. En iOS-version av appen Rotation Tournaments är planerad och kommer inom kort."
 
 #. Found in faq header.
 msgid "Will my website be visible in the Rotation Tournaments Android app?"
@@ -74,80 +206,12 @@ msgid "<strong>How to install the Android app:</strong>"
 msgstr "<strong>Så installerar du Android-appen:</strong>"
 
 #. Found in description paragraph.
-msgid "<strong>This plugin is the server-side for the \"Rotation Tournaments\" Android app.</strong>"
-msgstr "<strong>Det här tillägget är serverdelen för Android-appen ”Rotation Tournaments”.</strong>"
-
-#. Screenshot description.
-msgid "Individual tournament participants enter their results into the WordPress server and share the data with each other."
-msgstr "Turneringens deltagare anger sina resultat på WordPress-servern och delar data med varandra."
-
-#. Screenshot description.
-msgid "Matches played. (Android app)"
-msgstr "Spelade matcher. (Android-app)"
-
-#. Screenshot description.
-msgid "Tournament table. (Wordpress)"
-msgstr "Turneringstabell. (WordPress)"
-
-#. Screenshot description.
-msgid "Matches drawn. (Android app)"
-msgstr "Lottade matcher. (Android-app)"
-
-#. Screenshot description.
-msgid "Editing tournament parameters. (Wordpress)"
-msgstr "Redigering av turneringens parametrar. (WordPress)"
-
-#. Screenshot description.
-msgid "Table of players with rankings. (Android app)"
-msgstr "Tabell över spelare med placering. (Android-app)"
-
-#. Screenshot description.
-msgid "Matches played. (Wordpress)"
-msgstr "Spelade matcher. (WordPress)"
-
-#. Screenshot description.
-msgid "Basic overview of the tournament. (Android app)"
-msgstr "Grundläggande översikt över turneringen. (Android-app)"
-
-#. Screenshot description.
-msgid "Matches drawn. (Wordpress)"
-msgstr "Lottade matcher. (WordPress)"
-
-#. Found in description paragraph.
-msgid "<strong>Rotation Tournaments</strong> provides a platform for organizing all kinds of sports Singles and Doubles Tournaments, e.g."
-msgstr "<strong>Rotationsturneringar</strong> är en plattform för att arrangera alla slags singel- och dubbelturneringar inom sport, t.ex."
-
-#. Found in description list item.
-msgid "Squash"
-msgstr "Squash"
-
-#. Found in description list item.
-msgid "Beach Volleyball"
-msgstr "Beachvolleyboll"
-
-#. Found in description list item.
-msgid "Badminton"
-msgstr "Badminton"
-
-#. Found in description list item.
-msgid "Padel"
-msgstr "Padel"
-
-#. Found in description list item.
-msgid "Table Tennis"
-msgstr "Bordtennis"
-
-#. Found in description list item.
-msgid "Tennis"
-msgstr "Tennis"
+msgid "<strong>Try it</strong>"
+msgstr "<strong>Prova</strong>"
 
 #. Found in faq paragraph.
-msgid ""
-"This plugin can be used for all types of sports where 2 or 4 players compete in singles or doubles.\n"
-"You can use this plugin for tennis, table tennis, squash, padel, badminton, beach volleyball and probably for more."
-msgstr ""
-"Det här tillägget kan användas i alla sporter där 2 eller 4 spelare tävlar i singel eller dubbel.\n"
-"Du kan använda det för tennis, bordtennis, squash, padel, badminton, beachvolleyboll och troligen fler."
+msgid "This plugin can be used for all types of sports where 2 or 4 players compete in singles or doubles.\nYou can use this plugin for tennis, table tennis, squash, padel, badminton, beach volleyball and probably for more."
+msgstr "Det här tillägget kan användas i alla sporter där 2 eller 4 spelare tävlar i singel eller dubbel.\nDu kan använda det för tennis, bordtennis, squash, padel, badminton, beachvolleyboll och troligen fler."
 
 #. Found in faq paragraph.
 msgid "Yes. When creating a tournament, you can choose whether to create a singles or a doubles tournament."
@@ -156,118 +220,6 @@ msgstr "Ja. När du skapar en turnering kan du välja om det ska vara en singel-
 #. Found in faq header.
 msgid "What sports tournaments is this plugin for?"
 msgstr "Vilka sportturneringar är det här tillägget avsett för?"
-
-#. Found in description paragraph.
-msgid "<strong>General Features:</strong>"
-msgstr "<strong>Allmänna funktioner:</strong>"
-
-#. Found in description paragraph.
-msgid "<strong>Doubles Rotation Tournament:</strong>"
-msgstr "<strong>Dubbel-rotationsturnering:</strong>"
-
-#. Found in description paragraph.
-msgid "<strong>Singles Rotation Tournament:</strong>"
-msgstr "<strong>Singel-rotationsturnering:</strong>"
-
-#. Found in description paragraph.
-msgid "The participants of a tournament change partners several times during the tournament by a random selection and play against different players. The ratio of games won to games lost is calculated for each participant. The winner of the tournament is the player with this highest ratio. While a Singles Rotation Tournament can be organized without the aid of technology, in the case of a Doubles Rotation Tournament, this is not possible."
-msgstr "Deltagarna i en turnering byter partner flera gånger under turneringen genom slumpmässigt urval och spelar mot olika spelare. För varje deltagare beräknas förhållandet mellan vunna och förlorade gem. Turneringens vinnare är spelaren med det högsta förhållandet. En singel-rotationsturnering kan arrangeras utan teknisk hjälp, men det är inte möjligt för en dubbel-rotationsturnering."
-
-#. Found in description paragraph.
-msgid "The <strong>Rotation Tournaments</strong> have a strong social aspect because its goal is to keep players in the tournament until the very end. The situation where weaker players would leave the tournament due to elimination rounds is eliminated. It allows grouping players into a special category with special conditions. This special setting can be utilized, for example, in mixed tournaments."
-msgstr "<strong>Rotationsturneringar</strong> har en stark social sida, eftersom målet är att hålla kvar spelarna i turneringen ända till slutet. Situationen där svagare spelare lämnar turneringen på grund av utslagsomgångar undviks. Spelare kan grupperas i en särskild kategori med särskilda villkor. Den här särskilda inställningen kan till exempel användas i mixturneringar."
-
-#. Found in description paragraph.
-msgid "In <strong>Rotation Tournaments</strong>, each participant plays against every other participant and there are no eliminations in individual rounds. To maximize the variety of match combinations, the matches are typically played in a single set."
-msgstr "I <strong>rotationsturneringar</strong> spelar varje deltagare mot alla andra och ingen slås ut i omgångarna. För att få så många matchkombinationer som möjligt spelas matcherna oftast i ett set."
-
-#. Found in description list item.
-msgid "Suitable for various sports: tennis, table tennis, squash, padel, badminton, beach volleyball, and more."
-msgstr "Passar många sporter: tennis, bordtennis, squash, padel, badminton, beachvolleyboll med flera."
-
-#. Found in description list item.
-msgid "Integration with website user accounts."
-msgstr "Integrering med webbplatsens användarkonton."
-
-#. Found in description list item.
-msgid "No downtime during the tournament."
-msgstr "Inga väntetider under turneringen."
-
-#. Found in description list item.
-msgid "Comprehensive overview of player quality."
-msgstr "Heltäckande bild av spelarnas nivå."
-
-#. Found in description list item.
-msgid "User-friendly interface for administrators and participants."
-msgstr "Användarvänligt gränssnitt för administratörer och deltagare."
-
-#. Found in description list item.
-msgid "Customizable settings for each tournament."
-msgstr "Anpassningsbara inställningar för varje turnering."
-
-#. Found in description list item.
-msgid "Real-time score tracking."
-msgstr "Resultatuppföljning i realtid."
-
-#. Found in description list item.
-msgid "Seamless scheduling of matches."
-msgstr "Smidig schemaläggning av matcher."
-
-#. Found in description list item.
-msgid "Announcement of the Best Player and Most Ideal Pair at the end of the tournament."
-msgstr "Bästa spelare och mest idealiska par utses i slutet av turneringen."
-
-#. Found in description list item.
-msgid "Ranking based on the ratio of games won to games lost."
-msgstr "Placering utifrån förhållandet mellan vunna och förlorade gem."
-
-#. Found in description list item.
-msgid "Individual players can join or leave the tournament at any time."
-msgstr "Spelare kan när som helst gå med i eller lämna turneringen."
-
-#. Found in description list item.
-msgid "Tournament can be interrupted or extended without disruption."
-msgstr "Turneringen kan avbrytas eller förlängas utan störningar."
-
-#. Found in description list item.
-msgid "Shorter matches for more participation."
-msgstr "Kortare matcher för fler deltagare."
-
-#. Found in description list item.
-msgid "No eliminations, ensuring all players stay in the game."
-msgstr "Ingen utslagning – alla spelare är kvar i spelet."
-
-#. Found in description list item.
-msgid "Define special groups of players with unique conditions."
-msgstr "Definiera särskilda grupper av spelare med egna villkor."
-
-#. Found in description list item.
-msgid "Suitable for odd numbers of players and minimum lineups of 4 players."
-msgstr "Passar ett udda antal spelare och minst 4 spelare."
-
-#. Found in description list item.
-msgid "Individuals can enter the tournament without a permanent teammate."
-msgstr "Man kan delta i turneringen utan fast partner."
-
-#. Found in description list item.
-msgid "Rotation of teammates, ensuring variety in partnerships."
-msgstr "Växlande partner ger variation i paren."
-
-#. Found in description list item.
-msgid "Alternative form of a Doubles Tournament where players enter each match with a different partner and in different positions (alternating left and right sides)."
-msgstr "Alternativ form av dubbelturnering där spelarna spelar varje match med en ny partner och på nya positioner (växelvis vänster och höger sida)."
-
-#. Found in description list item.
-msgid "Depending on the time options, everyone plays against everyone."
-msgstr "Beroende på tillgänglig tid spelar alla mot alla."
-
-#. Found in description list item.
-msgid "Alternative form of a Singles Tournament where players face each other without elimination rounds."
-msgstr "Alternativ form av singelturnering där spelarna möter varandra utan utslagsomgångar."
-
-#. Found in description header.
-msgid "Features"
-msgstr "Funktioner"
 
 #. Found in faq header.
 msgid "Is this plugin suitable for singles tournaments?"
@@ -306,16 +258,43 @@ msgid "Install the plugin as usual."
 msgstr "Installera tillägget som vanligt."
 
 #. Found in description paragraph.
-msgid "Visit <a href=\"https://doroto.ltcchrast.cz/\">test page</a> for more information, try to create your own tournament and take a look at <a href=\"https://doroto.ltcchrast.cz/rules-of-the-doubles-rotation-tournament/\">Rules of the Doubles Rotation Tournament</a>."
-msgstr "Besök <a href=\"https://doroto.ltcchrast.cz/\">testsidan</a> för mer information, prova att skapa en egen turnering och läs <a href=\"https://doroto.ltcchrast.cz/rules-of-the-doubles-rotation-tournament/\">reglerna för dubbel-rotationsturneringen</a>."
-
-#. Found in description paragraph.
 msgid "[youtube https://www.youtube.com/watch?v=NoL9aPTv8u8]"
 msgstr "[youtube https://www.youtube.com/watch?v=NoL9aPTv8u8]"
 
-#. Found in description header.
-msgid "More information"
-msgstr "Mer information"
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - readme: new description of the draw, the blocks and the app; new screenshots (also in Spanish for Chile)"
+msgstr "Förbättring – readme: ny beskrivning av lottningen, blocken och appen; nya skärmbilder (även på spanska för Chile)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - new plugin icon and banner, the same icon as the Android app"
+msgstr "Förbättring – ny ikon och ny banner för tillägget, samma ikon som Android-appen"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "2.0.2 - 2026/10/15"
+msgstr "2.0.2 - 2026/10/15"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - English variants for the UK, Australia, Canada, New Zealand and South Africa"
+msgstr "Tillagt – engelska varianter för Storbritannien, Australien, Kanada, Nya Zeeland och Sydafrika"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - the round-end notice of the tournament block no longer repeats the texts of its buttons"
+msgstr "Förbättring – aviseringen om omgångens slut i turneringsblocket upprepar inte längre texterna på knapparna"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - messages, headings and notices are translated as whole sentences, so languages with a different word order (e.g. Turkish, Hungarian, Hindi, Japanese, Korean and Chinese) read naturally"
+msgstr "Förbättring – meddelanden, rubriker och aviseringar översätts som hela meningar, så att språk med en annan ordföljd (t.ex. turkiska, ungerska, hindi, japanska, koreanska och kinesiska) läses naturligt"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "2.0.1 - 2026/10/08"
+msgstr "2.0.1 - 2026/10/08"
 
 #. Found in changelog list item.
 #, gp-priority: low
@@ -1189,21 +1168,13 @@ msgstr "Rättning – om alla turneringar hade tagits bort gick det inte att ska
 
 #. Found in changelog paragraph.
 #, gp-priority: low
-msgid ""
-"Trial tournament improvements.\n"
-"Added the option to announce the end of the tournament round."
-msgstr ""
-"Förbättringar av provturneringen.\n"
-"Alternativ för att meddela turneringsomgångens slut har lagts till."
+msgid "Trial tournament improvements.\nAdded the option to announce the end of the tournament round."
+msgstr "Förbättringar av provturneringen.\nAlternativ för att meddela turneringsomgångens slut har lagts till."
 
 #. Found in changelog paragraph.
 #, gp-priority: low
-msgid ""
-"Improved the visual appearance of the main page.\n"
-"Badminton added to the list of available tournaments."
-msgstr ""
-"Huvudsidans utseende har förbättrats.\n"
-"Badminton har lagts till i listan över tillgängliga turneringar."
+msgid "Improved the visual appearance of the main page.\nBadminton added to the list of available tournaments."
+msgstr "Huvudsidans utseende har förbättrats.\nBadminton har lagts till i listan över tillgängliga turneringar."
 
 #. Found in changelog paragraph.
 #, gp-priority: low
@@ -1212,65 +1183,33 @@ msgstr "Möjlighet att utse separata vinnare från den särskilda gruppen och ut
 
 #. Found in changelog paragraph.
 #, gp-priority: low
-msgid ""
-"Notices after a plugin activation.\n"
-"Added player trend."
-msgstr ""
-"Meddelanden efter aktivering av tillägget.\n"
-"Spelartrend har lagts till."
+msgid "Notices after a plugin activation.\nAdded player trend."
+msgstr "Meddelanden efter aktivering av tillägget.\nSpelartrend har lagts till."
 
 #. Found in changelog paragraph.
 #, gp-priority: low
-msgid ""
-"Modified tournament editing tab.\n"
-"Added option to change tournament type."
-msgstr ""
-"Fliken för redigering av turnering har ändrats.\n"
-"Alternativ för att ändra turneringstyp har lagts till."
+msgid "Modified tournament editing tab.\nAdded option to change tournament type."
+msgstr "Fliken för redigering av turnering har ändrats.\nAlternativ för att ändra turneringstyp har lagts till."
 
 #. Found in changelog paragraph.
 #, gp-priority: low
-msgid ""
-"Reactivating the plugin doesn´t affect the already deleted tournament example. \n"
-"Unblock offering maximum games count.\n"
-"Fix tournament change when entering results.\n"
-"Added quick help for newcomers.\n"
-"Allow the final match also for singles."
-msgstr ""
-"Återaktivering av tillägget påverkar inte den redan borttagna exempelturneringen.\n"
-"Valet av högsta antal gem har låsts upp.\n"
-"Rättning av byte av turnering när resultat anges.\n"
-"Snabbhjälp för nybörjare har lagts till.\n"
-"Finalmatch tillåts även i singel."
+msgid "Reactivating the plugin doesn´t affect the already deleted tournament example. \nUnblock offering maximum games count.\nFix tournament change when entering results.\nAdded quick help for newcomers.\nAllow the final match also for singles."
+msgstr "Återaktivering av tillägget påverkar inte den redan borttagna exempelturneringen.\nValet av högsta antal gem har låsts upp.\nRättning av byte av turnering när resultat anges.\nSnabbhjälp för nybörjare har lagts till.\nFinalmatch tillåts även i singel."
 
 #. Found in changelog paragraph.
 #, gp-priority: low
-msgid ""
-"Added the option for single tournaments. \n"
-"Created an environment for additional sports."
-msgstr ""
-"Alternativ för singelturneringar har lagts till.\n"
-"Miljö för fler sporter har skapats."
+msgid "Added the option for single tournaments. \nCreated an environment for additional sports."
+msgstr "Alternativ för singelturneringar har lagts till.\nMiljö för fler sporter har skapats."
 
 #. Found in changelog paragraph.
 #, gp-priority: low
-msgid ""
-"The administrator can now use 'hide' option when editing the match result.\n"
-"Free score input is allowed. This opens using not only for tennis but for example for table tennis or beach volleyball."
-msgstr ""
-"Administratören kan nu använda alternativet ”dölj” när matchresultatet redigeras.\n"
-"Fri inmatning av poäng är tillåten. Det gör att tillägget kan användas inte bara för tennis utan till exempel även för bordtennis eller beachvolleyboll."
+msgid "The administrator can now use 'hide' option when editing the match result.\nFree score input is allowed. This opens using not only for tennis but for example for table tennis or beach volleyball."
+msgstr "Administratören kan nu använda alternativet ”dölj” när matchresultatet redigeras.\nFri inmatning av poäng är tillåten. Det gör att tillägget kan användas inte bara för tennis utan till exempel även för bordtennis eller beachvolleyboll."
 
 #. Found in changelog paragraph.
 #, gp-priority: low
-msgid ""
-"Minor changes in code:\n"
-"* Allow to transfer organizer rights to a non-playing user.\n"
-"* Ensuring an even rotation of serves at the start of the tournament."
-msgstr ""
-"Mindre ändringar i koden:\n"
-"* Arrangörsbehörighet kan överföras till en användare som inte spelar.\n"
-"* Jämn växling av serven i början av turneringen."
+msgid "Minor changes in code:\n* Allow to transfer organizer rights to a non-playing user.\n* Ensuring an even rotation of serves at the start of the tournament."
+msgstr "Mindre ändringar i koden:\n* Arrangörsbehörighet kan överföras till en användare som inte spelar.\n* Jämn växling av serven i början av turneringen."
 
 #. Found in changelog paragraph.
 #, gp-priority: low
@@ -1286,23 +1225,3 @@ msgstr "En liten ändring av administrationsskärmen."
 #, gp-priority: low
 msgid "First release to public."
 msgstr "Första offentliga versionen."
-
-#. Found in changelog header.
-#, gp-priority: low
-msgid "2.0.1 - 2026/10/08"
-msgstr "2.0.1 - 2026/10/08"
-
-#. Found in changelog list item.
-#, gp-priority: low
-msgid "Improvement - messages, headings and notices are translated as whole sentences, so languages with a different word order (e.g. Turkish, Hungarian, Hindi, Japanese, Korean and Chinese) read naturally"
-msgstr "Förbättring – meddelanden, rubriker och aviseringar översätts som hela meningar, så att språk med en annan ordföljd (t.ex. turkiska, ungerska, hindi, japanska, koreanska och kinesiska) läses naturligt"
-
-#. Found in changelog list item.
-#, gp-priority: low
-msgid "Improvement - the round-end notice of the tournament block no longer repeats the texts of its buttons"
-msgstr "Förbättring – aviseringen om omgångens slut i turneringsblocket upprepar inte längre texterna på knapparna"
-
-#. Found in changelog list item.
-#, gp-priority: low
-msgid "Add - English variants for the UK, Australia, Canada, New Zealand and South Africa"
-msgstr "Tillagt – engelska varianter för Storbritannien, Australien, Kanada, Nya Zeeland och Sydafrika"

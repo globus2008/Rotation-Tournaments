@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plugins - Rotation Tournaments - Development Readme (trunk)\n"
-"PO-Revision-Date: 2026-10-08 18:18:50+0000\n"
+"PO-Revision-Date: 2026-10-15 07:57:04+0000\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -13,13 +13,161 @@ msgstr ""
 
 #. Short description.
 #, gp-priority: high
-msgid "Do you play Singles or Doubles Tournaments? This plugin manages Rotation Tournaments where players have a different partner in each game."
-msgstr "シングルスやダブルスの大会を開催していますか? このプラグインは、選手が毎試合新しいパートナーと組むローテーション大会を管理します。"
+msgid "Run doubles and singles tournaments where players get a new partner every match: fair draws, live results, standings and an Android app."
+msgstr "毎試合パートナーが替わるダブルス・シングルス大会を運営できます。公平な抽選、リアルタイムの結果、順位表、Android アプリ。"
 
 #. Plugin name.
 #, gp-priority: high
 msgid "Rotation Tournaments"
 msgstr "ローテーション大会"
+
+#. Found in faq paragraph.
+msgid "An iOS version is planned, but there is no release date yet. The tournament pages work in any mobile browser, including iPhone and iPad."
+msgstr "iOS 版は予定していますが、リリース日はまだ決まっていません。大会ページは iPhone や iPad を含むどのモバイルブラウザーでも使えます。"
+
+#. Found in description paragraph.
+msgid "The free <a href=\"https://play.google.com/store/apps/details?id=cz.doroto.app\">Rotation Tournaments app</a> connects to your website: players follow the tournament, enter their results and organizers manage it from the court. The app is available in 27 languages. Several devices can be signed in to one account."
+msgstr "無料の <a href=\"https://play.google.com/store/apps/details?id=cz.doroto.app\">Rotation Tournaments アプリ</a>はあなたのサイトに接続します。選手は大会を追いかけて自分の結果を入力し、主催者はコートから直接大会を管理できます。アプリは 27 言語に対応し、1 つのアカウントに複数の端末からサインインできます。"
+
+#. Found in description paragraph.
+msgid "<strong>Android app</strong>"
+msgstr "<strong>Android アプリ</strong>"
+
+#. Found in description paragraph.
+msgid "<strong>For the website</strong>"
+msgstr "<strong>サイト向け</strong>"
+
+#. Found in description paragraph.
+msgid "<strong>The draw</strong>"
+msgstr "<strong>抽選</strong>"
+
+#. Found in description paragraph.
+msgid "<strong>How a tournament works</strong>"
+msgstr "<strong>大会の流れ</strong>"
+
+#. Found in description paragraph.
+msgid "It is made for club evenings and social tournaments in <strong>tennis, padel, badminton, table tennis, squash, beach volleyball</strong> and other sports played one against one or two against two."
+msgstr "クラブの夜の集まりや親睦大会向けに作られています。<strong>テニス、パデル、バドミントン、卓球、スカッシュ、ビーチバレー</strong>など、1 対 1 または 2 対 2 で行う競技に対応します。"
+
+#. Found in description paragraph.
+msgid "<strong>Rotation Tournaments</strong> runs club tournaments in which nobody is knocked out. In doubles, every player gets a <strong>new partner in every match</strong> and meets as many different opponents as possible. The ranking is the ratio of games won to games lost, so everybody plays until the very end."
+msgstr "<strong>ローテーション大会</strong>は、誰も敗退しないクラブ大会を運営します。ダブルスでは全員が<strong>毎試合新しいパートナー</strong>と組み、できるだけ多くの異なる相手と対戦します。順位は獲得ゲームと失ったゲームの比率で決まるので、全員が最後までプレーします。"
+
+#. Found in description list item.
+msgid "Video introduction:"
+msgstr "紹介動画:"
+
+#. Found in description list item.
+msgid "<a href=\"https://doroto.ltcchrast.cz/rules-of-the-doubles-rotation-tournament/\">Rules of the Doubles Rotation Tournament</a>."
+msgstr "<a href=\"https://doroto.ltcchrast.cz/rules-of-the-doubles-rotation-tournament/\">ダブルス・ローテーション大会のルール</a>。"
+
+#. Found in description list item.
+msgid "<a href=\"https://doroto.ltcchrast.cz/\">Demo site</a> where you can create your own tournament."
+msgstr "<a href=\"https://doroto.ltcchrast.cz/\">デモサイト</a>では自分の大会を作成できます。"
+
+#. Found in description list item.
+msgid "Players sign in with their WordPress accounts; full or shortened names (privacy)."
+msgstr "選手は WordPress アカウントでサインインします。氏名は全体表示または短縮表示 (プライバシー) を選べます。"
+
+#. Found in description list item.
+msgid "Guided tours of the page and four example tournaments."
+msgstr "ページのガイドツアーと 4 つのサンプル大会。"
+
+#. Found in description list item.
+msgid "Colors follow your theme; the block's Styles panel can change them."
+msgstr "色はテーマに合わせて表示され、ブロックの「スタイル」パネルで変更できます。"
+
+#. Found in description list item.
+msgid "Share dialog with a QR code and a link that opens the tournament in the app."
+msgstr "QR コードと、アプリで大会を開くリンクを備えた共有ダイアログ。"
+
+#. Found in description list item.
+msgid "Live updates without reloading the page."
+msgstr "ページを再読み込みせずにリアルタイム更新。"
+
+#. Found in description list item.
+msgid "Blocks for the block editor: \"Rotation tournament\" (matches, results, players, statistics and settings on tabs), \"Tournament standings\", \"Tournament matches\", \"Tournament presentation\", \"Tournament list\" and \"Tournament invitation\". Shortcodes for the classic editor."
+msgstr "ブロックエディター用のブロック: 「ローテーション大会」(試合、結果、選手、統計、設定をタブで表示)、「大会の順位」「大会の試合」「大会プレゼンテーション」「大会リスト」「大会への招待」。クラシックエディター用のショートコード。"
+
+#. Found in description list item.
+msgid "Special group of players (e.g. women in a mixed tournament) with its own rules: mixed teams only, a separate winner and more."
+msgstr "独自ルールを持つ特別グループ (例: ミックス大会の女性): ミックスのチームのみ、別枠の優勝者など。"
+
+#. Found in description list item.
+msgid "Works with any number of players from 4 up, odd numbers included; players can join, pause or leave at any time."
+msgstr "4 人以上なら何人でも、奇数でも使えます。選手はいつでも参加、休憩、離脱できます。"
+
+#. Found in description list item.
+msgid "Players with fewer games and longer rest go first; sides (left/right) and serve alternate."
+msgstr "試合数が少なく休憩が長い選手が優先され、サイド (左/右) とサーブは交互になります。"
+
+#. Found in description list item.
+msgid "Opponents are chosen by previous meetings too, so the same players meet less often."
+msgstr "対戦相手は過去の対戦も考慮して選ばれるので、同じ選手同士が当たる回数が減ります。"
+
+#. Found in description list item.
+msgid "New teammates first: the plugin pairs players who have not played together yet."
+msgstr "新しいパートナーを優先: プラグインはまだ一緒にプレーしていない選手同士を組ませます。"
+
+#. Found in description list item.
+msgid "At the end the organizer closes the tournament and the best player and the best pair are announced."
+msgstr "最後に主催者が大会を終了し、最優秀選手と最優秀ペアが発表されます。"
+
+#. Found in description list item.
+msgid "Standings, statistics and the presentation on a big screen update live."
+msgstr "順位表、統計、大画面でのプレゼンテーションがリアルタイムで更新されます。"
+
+#. Found in description list item.
+msgid "Whoever finishes a match enters the score on the website or in the Android app; the next match is drawn at once."
+msgstr "試合を終えた人がサイトまたは Android アプリでスコアを入力すると、次の試合がすぐに抽選されます。"
+
+#. Found in description list item.
+msgid "Players join (also later, during the tournament) and the plugin draws the first matches for the free courts."
+msgstr "選手が参加すると (大会の途中からも参加可能)、プラグインが空いているコートの最初の試合を抽選します。"
+
+#. Found in description list item.
+msgid "The organizer creates a tournament and shares the invitation link or QR code."
+msgstr "主催者が大会を作成し、招待リンクまたは QR コードを共有します。"
+
+#. Screenshot description.
+msgid "Android app: entering results, standings and played matches."
+msgstr "Android アプリ: 結果の入力、順位表、終了した試合。"
+
+#. Screenshot description.
+msgid "Tournament settings for organizers."
+msgstr "主催者向けの大会設定。"
+
+#. Screenshot description.
+msgid "The \"Rotation tournament\" block in the block editor."
+msgstr "ブロックエディターの「ローテーション大会」ブロック。"
+
+#. Screenshot description.
+msgid "Share the tournament with a QR code; it opens the tournament in the app."
+msgstr "QR コードで大会を共有。アプリで大会が開きます。"
+
+#. Found in description list item.
+msgid "Presentation mode for a TV or projector in the club house."
+msgstr "クラブハウスのテレビやプロジェクター向けのプレゼンテーションモード。"
+
+#. Screenshot description.
+msgid "Statistics: how often a player played with and against each other player."
+msgstr "統計: ある選手がほかの各選手と組んだ回数、対戦した回数。"
+
+#. Screenshot description.
+msgid "Live standings by the ratio of games won to games lost, with the trend of each player."
+msgstr "獲得ゲームと失ったゲームの比率によるリアルタイム順位表と、各選手の傾向。"
+
+#. Screenshot description.
+msgid "Results of all matches, with a filter by player."
+msgstr "全試合の結果 (選手で絞り込み可能)。"
+
+#. Screenshot description.
+msgid "Ongoing matches: the next match is drawn as soon as a score is saved. Names of the special group are highlighted."
+msgstr "進行中の試合: スコアが保存されるとすぐに次の試合が抽選されます。特別グループの名前は強調表示されます。"
+
+#. Screenshot description.
+msgid "The same tournament on the website and in the Android app."
+msgstr "サイトと Android アプリに表示される同じ大会。"
 
 #. Found in installation paragraph.
 msgid "After installation, go to the app's settings and enter the address of your website where this plugin is installed."
@@ -33,25 +181,9 @@ msgstr "または次のリンクから直接ダウンロードしてください
 msgid "Search for \"Rotation Tournaments\" on the Google Play Store."
 msgstr "Google Play で「Rotation Tournaments」を検索してください。"
 
-#. Found in description paragraph.
-msgid "To get the full experience of managing tournaments on the go, download our mobile app, now available on Google Play!"
-msgstr "外出先でも大会を十分に管理できるよう、Google Play で公開中のモバイルアプリをダウンロードしてください!"
-
-#. Found in description paragraph.
-msgid "<strong>YouTube quick intro:</strong>"
-msgstr "<strong>YouTube での簡単な紹介:</strong>"
-
-#. Found in description list item.
-msgid "Video for a quick introduction to the Rotation Tournament:"
-msgstr "ローテーション大会の簡単な紹介動画:"
-
 #. Found in faq paragraph.
 msgid "Yes. If you install the Rotation Tournaments plugin, allow player registration, and enable visibility in the website list, your site can appear in the Android app. Initially, someone must manually enter your website address into the app. After that, it becomes visible in the list for all users."
 msgstr "はい。Rotation Tournaments プラグインをインストールし、選手の登録を許可し、サイトリストでの表示を有効にすると、サイトが Android アプリに表示されることがあります。まず誰かがアプリにサイトのアドレスを手動で入力する必要があります。その後、サイトはすべてのユーザーのリストに表示されます。"
-
-#. Found in faq paragraph.
-msgid "Yes. An iOS version of the Rotation Tournaments app is planned and will be released in the near future."
-msgstr "はい。Rotation Tournaments アプリの iOS 版を計画しており、近日公開予定です。"
 
 #. Found in faq header.
 msgid "Will my website be visible in the Rotation Tournaments Android app?"
@@ -74,80 +206,12 @@ msgid "<strong>How to install the Android app:</strong>"
 msgstr "<strong>Android アプリのインストール方法:</strong>"
 
 #. Found in description paragraph.
-msgid "<strong>This plugin is the server-side for the \"Rotation Tournaments\" Android app.</strong>"
-msgstr "<strong>このプラグインは、Android アプリ「Rotation Tournaments」のサーバー側です。</strong>"
-
-#. Screenshot description.
-msgid "Individual tournament participants enter their results into the WordPress server and share the data with each other."
-msgstr "大会の参加者は WordPress サーバーに結果を入力し、データを互いに共有します。"
-
-#. Screenshot description.
-msgid "Matches played. (Android app)"
-msgstr "終了した試合。(Android アプリ)"
-
-#. Screenshot description.
-msgid "Tournament table. (Wordpress)"
-msgstr "大会の表。(WordPress)"
-
-#. Screenshot description.
-msgid "Matches drawn. (Android app)"
-msgstr "抽選された試合。(Android アプリ)"
-
-#. Screenshot description.
-msgid "Editing tournament parameters. (Wordpress)"
-msgstr "大会パラメーターの編集。(WordPress)"
-
-#. Screenshot description.
-msgid "Table of players with rankings. (Android app)"
-msgstr "順位付きの選手表。(Android アプリ)"
-
-#. Screenshot description.
-msgid "Matches played. (Wordpress)"
-msgstr "終了した試合。(WordPress)"
-
-#. Screenshot description.
-msgid "Basic overview of the tournament. (Android app)"
-msgstr "大会の概要。(Android アプリ)"
-
-#. Screenshot description.
-msgid "Matches drawn. (Wordpress)"
-msgstr "抽選された試合。(WordPress)"
-
-#. Found in description paragraph.
-msgid "<strong>Rotation Tournaments</strong> provides a platform for organizing all kinds of sports Singles and Doubles Tournaments, e.g."
-msgstr "<strong>ローテーション大会</strong>は、あらゆるシングルス・ダブルスのスポーツ大会を開催するためのプラットフォームです。例:"
-
-#. Found in description list item.
-msgid "Squash"
-msgstr "スカッシュ"
-
-#. Found in description list item.
-msgid "Beach Volleyball"
-msgstr "ビーチバレー"
-
-#. Found in description list item.
-msgid "Badminton"
-msgstr "バドミントン"
-
-#. Found in description list item.
-msgid "Padel"
-msgstr "パデル"
-
-#. Found in description list item.
-msgid "Table Tennis"
-msgstr "卓球"
-
-#. Found in description list item.
-msgid "Tennis"
-msgstr "テニス"
+msgid "<strong>Try it</strong>"
+msgstr "<strong>試してみる</strong>"
 
 #. Found in faq paragraph.
-msgid ""
-"This plugin can be used for all types of sports where 2 or 4 players compete in singles or doubles.\n"
-"You can use this plugin for tennis, table tennis, squash, padel, badminton, beach volleyball and probably for more."
-msgstr ""
-"このプラグインは、2 人または 4 人がシングルスまたはダブルスで競うすべてのスポーツに適しています。\n"
-"テニス、卓球、スカッシュ、パデル、バドミントン、ビーチバレー、そしておそらく他のスポーツにも使えます。"
+msgid "This plugin can be used for all types of sports where 2 or 4 players compete in singles or doubles.\nYou can use this plugin for tennis, table tennis, squash, padel, badminton, beach volleyball and probably for more."
+msgstr "このプラグインは、2 人または 4 人がシングルスまたはダブルスで競うすべてのスポーツに適しています。\nテニス、卓球、スカッシュ、パデル、バドミントン、ビーチバレー、そしておそらく他のスポーツにも使えます。"
 
 #. Found in faq paragraph.
 msgid "Yes. When creating a tournament, you can choose whether to create a singles or a doubles tournament."
@@ -156,118 +220,6 @@ msgstr "はい。大会の作成時にシングルスまたはダブルスの大
 #. Found in faq header.
 msgid "What sports tournaments is this plugin for?"
 msgstr "このプラグインはどのようなスポーツ大会向けですか?"
-
-#. Found in description paragraph.
-msgid "<strong>General Features:</strong>"
-msgstr "<strong>一般的な機能:</strong>"
-
-#. Found in description paragraph.
-msgid "<strong>Doubles Rotation Tournament:</strong>"
-msgstr "<strong>ダブルスローテーション大会:</strong>"
-
-#. Found in description paragraph.
-msgid "<strong>Singles Rotation Tournament:</strong>"
-msgstr "<strong>シングルスローテーション大会:</strong>"
-
-#. Found in description paragraph.
-msgid "The participants of a tournament change partners several times during the tournament by a random selection and play against different players. The ratio of games won to games lost is calculated for each participant. The winner of the tournament is the player with this highest ratio. While a Singles Rotation Tournament can be organized without the aid of technology, in the case of a Doubles Rotation Tournament, this is not possible."
-msgstr "大会の参加者は大会中に何度かランダムにパートナーを替え、異なる選手と対戦します。各参加者について、獲得ゲームと失ったゲームの比率が計算されます。最も比率の良い選手が優勝者です。シングルスのローテーション大会は技術の助けなしでも開催できますが、ダブルスはできません。"
-
-#. Found in description paragraph.
-msgid "The <strong>Rotation Tournaments</strong> have a strong social aspect because its goal is to keep players in the tournament until the very end. The situation where weaker players would leave the tournament due to elimination rounds is eliminated. It allows grouping players into a special category with special conditions. This special setting can be utilized, for example, in mixed tournaments."
-msgstr "<strong>ローテーション大会</strong>は、選手を最後まで大会に残すことを目的としているため、交流の要素が強い大会です。弱い選手が敗退によって大会を去ることはありません。選手を特別な条件付きの特別カテゴリーにまとめることもできます。この特別設定は、たとえばミックス大会で使えます。"
-
-#. Found in description paragraph.
-msgid "In <strong>Rotation Tournaments</strong>, each participant plays against every other participant and there are no eliminations in individual rounds. To maximize the variety of match combinations, the matches are typically played in a single set."
-msgstr "<strong>ローテーション大会</strong>では、各参加者が全員と対戦し、各ラウンドで脱落する人はいません。できるだけ多くの組み合わせを作るため、通常は 1 セットマッチで行います。"
-
-#. Found in description list item.
-msgid "Suitable for various sports: tennis, table tennis, squash, padel, badminton, beach volleyball, and more."
-msgstr "さまざまなスポーツに対応: テニス、卓球、スカッシュ、パデル、バドミントン、ビーチバレーなど。"
-
-#. Found in description list item.
-msgid "Integration with website user accounts."
-msgstr "サイトのユーザーアカウントとの連携。"
-
-#. Found in description list item.
-msgid "No downtime during the tournament."
-msgstr "大会中の待ち時間なし。"
-
-#. Found in description list item.
-msgid "Comprehensive overview of player quality."
-msgstr "選手の実力を完全に把握。"
-
-#. Found in description list item.
-msgid "User-friendly interface for administrators and participants."
-msgstr "管理者と参加者に使いやすい画面。"
-
-#. Found in description list item.
-msgid "Customizable settings for each tournament."
-msgstr "大会ごとの柔軟な設定。"
-
-#. Found in description list item.
-msgid "Real-time score tracking."
-msgstr "リアルタイムのスコア管理。"
-
-#. Found in description list item.
-msgid "Seamless scheduling of matches."
-msgstr "便利な試合スケジュール作成。"
-
-#. Found in description list item.
-msgid "Announcement of the Best Player and Most Ideal Pair at the end of the tournament."
-msgstr "大会の最後に最優秀選手と理想のペアを発表。"
-
-#. Found in description list item.
-msgid "Ranking based on the ratio of games won to games lost."
-msgstr "順位は獲得ゲームと失ったゲームの比率で決まります。"
-
-#. Found in description list item.
-msgid "Individual players can join or leave the tournament at any time."
-msgstr "選手はいつでも大会に参加・退出できます。"
-
-#. Found in description list item.
-msgid "Tournament can be interrupted or extended without disruption."
-msgstr "進行を乱さずに大会を中断・延長できます。"
-
-#. Found in description list item.
-msgid "Shorter matches for more participation."
-msgstr "短い試合で参加しやすく。"
-
-#. Found in description list item.
-msgid "No eliminations, ensuring all players stay in the game."
-msgstr "脱落なし – 全選手がプレーを続けます。"
-
-#. Found in description list item.
-msgid "Define special groups of players with unique conditions."
-msgstr "特別な条件付きの選手の特別グループを定義。"
-
-#. Found in description list item.
-msgid "Suitable for odd numbers of players and minimum lineups of 4 players."
-msgstr "奇数の選手数や最低 4 人の構成に対応。"
-
-#. Found in description list item.
-msgid "Individuals can enter the tournament without a permanent teammate."
-msgstr "固定パートナーなしで大会に参加可能。"
-
-#. Found in description list item.
-msgid "Rotation of teammates, ensuring variety in partnerships."
-msgstr "パートナーのローテーションで多様なペアを実現。"
-
-#. Found in description list item.
-msgid "Alternative form of a Doubles Tournament where players enter each match with a different partner and in different positions (alternating left and right sides)."
-msgstr "選手が毎試合新しいパートナーと異なるポジション (左右を交互) でプレーするダブルス大会の別形式。"
-
-#. Found in description list item.
-msgid "Depending on the time options, everyone plays against everyone."
-msgstr "時間に応じて全員が全員と対戦。"
-
-#. Found in description list item.
-msgid "Alternative form of a Singles Tournament where players face each other without elimination rounds."
-msgstr "選手が脱落なしで対戦するシングルス大会の別形式。"
-
-#. Found in description header.
-msgid "Features"
-msgstr "機能"
 
 #. Found in faq header.
 msgid "Is this plugin suitable for singles tournaments?"
@@ -306,16 +258,43 @@ msgid "Install the plugin as usual."
 msgstr "通常どおりプラグインをインストールします。"
 
 #. Found in description paragraph.
-msgid "Visit <a href=\"https://doroto.ltcchrast.cz/\">test page</a> for more information, try to create your own tournament and take a look at <a href=\"https://doroto.ltcchrast.cz/rules-of-the-doubles-rotation-tournament/\">Rules of the Doubles Rotation Tournament</a>."
-msgstr "詳しくは<a href=\"https://doroto.ltcchrast.cz/\">テストページ</a>をご覧ください。自分の大会を作成してみたり、<a href=\"https://doroto.ltcchrast.cz/rules-of-the-doubles-rotation-tournament/\">ダブルスローテーション大会のルール</a>を確認したりできます。"
-
-#. Found in description paragraph.
 msgid "[youtube https://www.youtube.com/watch?v=NoL9aPTv8u8]"
 msgstr "[youtube https://www.youtube.com/watch?v=NoL9aPTv8u8]"
 
-#. Found in description header.
-msgid "More information"
-msgstr "詳細情報"
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - readme: new description of the draw, the blocks and the app; new screenshots (also in Spanish for Chile)"
+msgstr "改善 – readme: 抽選、ブロック、アプリの新しい説明。新しいスクリーンショット (チリ向けスペイン語版も)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - new plugin icon and banner, the same icon as the Android app"
+msgstr "改善 – プラグインの新しいアイコンとバナー。Android アプリと同じアイコン"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "2.0.2 - 2026/10/15"
+msgstr "2.0.2 - 2026/10/15"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - English variants for the UK, Australia, Canada, New Zealand and South Africa"
+msgstr "追加 – 英国、オーストラリア、カナダ、ニュージーランド、南アフリカ向けの英語バリエーション"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - the round-end notice of the tournament block no longer repeats the texts of its buttons"
+msgstr "改善 – 大会ブロックのラウンド終了のお知らせで、ボタンのテキストが繰り返されなくなりました"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - messages, headings and notices are translated as whole sentences, so languages with a different word order (e.g. Turkish, Hungarian, Hindi, Japanese, Korean and Chinese) read naturally"
+msgstr "改善 – メッセージ、見出し、お知らせが文全体として翻訳されるようになり、語順の異なる言語（トルコ語、ハンガリー語、ヒンディー語、日本語、韓国語、中国語など）でも自然に読めます"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "2.0.1 - 2026/10/08"
+msgstr "2.0.1 - 2026/10/08"
 
 #. Found in changelog list item.
 #, gp-priority: low
@@ -1189,21 +1168,13 @@ msgstr "修正 – すべての大会を削除すると、新しい大会を作�
 
 #. Found in changelog paragraph.
 #, gp-priority: low
-msgid ""
-"Trial tournament improvements.\n"
-"Added the option to announce the end of the tournament round."
-msgstr ""
-"練習大会を改善。\n"
-"大会ラウンドの終了を通知する機能を追加。"
+msgid "Trial tournament improvements.\nAdded the option to announce the end of the tournament round."
+msgstr "練習大会を改善。\n大会ラウンドの終了を通知する機能を追加。"
 
 #. Found in changelog paragraph.
 #, gp-priority: low
-msgid ""
-"Improved the visual appearance of the main page.\n"
-"Badminton added to the list of available tournaments."
-msgstr ""
-"メインページの外観を改善。\n"
-"利用可能な大会のリストにバドミントンを追加。"
+msgid "Improved the visual appearance of the main page.\nBadminton added to the list of available tournaments."
+msgstr "メインページの外観を改善。\n利用可能な大会のリストにバドミントンを追加。"
 
 #. Found in changelog paragraph.
 #, gp-priority: low
@@ -1212,65 +1183,33 @@ msgstr "特別グループとグループ外で別々の優勝者を発表でき
 
 #. Found in changelog paragraph.
 #, gp-priority: low
-msgid ""
-"Notices after a plugin activation.\n"
-"Added player trend."
-msgstr ""
-"プラグイン有効化後の通知。\n"
-"選手のトレンドを追加。"
+msgid "Notices after a plugin activation.\nAdded player trend."
+msgstr "プラグイン有効化後の通知。\n選手のトレンドを追加。"
 
 #. Found in changelog paragraph.
 #, gp-priority: low
-msgid ""
-"Modified tournament editing tab.\n"
-"Added option to change tournament type."
-msgstr ""
-"大会の編集タブを変更。\n"
-"大会タイプを変更する機能を追加。"
+msgid "Modified tournament editing tab.\nAdded option to change tournament type."
+msgstr "大会の編集タブを変更。\n大会タイプを変更する機能を追加。"
 
 #. Found in changelog paragraph.
 #, gp-priority: low
-msgid ""
-"Reactivating the plugin doesn´t affect the already deleted tournament example. \n"
-"Unblock offering maximum games count.\n"
-"Fix tournament change when entering results.\n"
-"Added quick help for newcomers.\n"
-"Allow the final match also for singles."
-msgstr ""
-"プラグインを再有効化しても、削除済みのサンプル大会には影響しません。\n"
-"最大ゲーム数を選べるようにしました。\n"
-"結果入力中の大会の変更を修正。\n"
-"初心者向けの短いヘルプを追加。\n"
-"シングルスでも決勝戦を可能にしました。"
+msgid "Reactivating the plugin doesn´t affect the already deleted tournament example. \nUnblock offering maximum games count.\nFix tournament change when entering results.\nAdded quick help for newcomers.\nAllow the final match also for singles."
+msgstr "プラグインを再有効化しても、削除済みのサンプル大会には影響しません。\n最大ゲーム数を選べるようにしました。\n結果入力中の大会の変更を修正。\n初心者向けの短いヘルプを追加。\nシングルスでも決勝戦を可能にしました。"
 
 #. Found in changelog paragraph.
 #, gp-priority: low
-msgid ""
-"Added the option for single tournaments. \n"
-"Created an environment for additional sports."
-msgstr ""
-"シングルス大会に対応。\n"
-"他のスポーツ向けの環境を作成。"
+msgid "Added the option for single tournaments. \nCreated an environment for additional sports."
+msgstr "シングルス大会に対応。\n他のスポーツ向けの環境を作成。"
 
 #. Found in changelog paragraph.
 #, gp-priority: low
-msgid ""
-"The administrator can now use 'hide' option when editing the match result.\n"
-"Free score input is allowed. This opens using not only for tennis but for example for table tennis or beach volleyball."
-msgstr ""
-"管理者は試合結果を変更するときに「非表示」オプションを使えるようになりました。\n"
-"スコアを自由に入力できるようにしました。これにより、テニスだけでなく卓球やビーチバレーなどにもプラグインを使えます。"
+msgid "The administrator can now use 'hide' option when editing the match result.\nFree score input is allowed. This opens using not only for tennis but for example for table tennis or beach volleyball."
+msgstr "管理者は試合結果を変更するときに「非表示」オプションを使えるようになりました。\nスコアを自由に入力できるようにしました。これにより、テニスだけでなく卓球やビーチバレーなどにもプラグインを使えます。"
 
 #. Found in changelog paragraph.
 #, gp-priority: low
-msgid ""
-"Minor changes in code:\n"
-"* Allow to transfer organizer rights to a non-playing user.\n"
-"* Ensuring an even rotation of serves at the start of the tournament."
-msgstr ""
-"コードの小さな変更:\n"
-"* プレーしないユーザーへの主催者権限の譲渡を許可。\n"
-"* 大会の初めにサーブが均等に交代するようにしました。"
+msgid "Minor changes in code:\n* Allow to transfer organizer rights to a non-playing user.\n* Ensuring an even rotation of serves at the start of the tournament."
+msgstr "コードの小さな変更:\n* プレーしないユーザーへの主催者権限の譲渡を許可。\n* 大会の初めにサーブが均等に交代するようにしました。"
 
 #. Found in changelog paragraph.
 #, gp-priority: low
@@ -1286,23 +1225,3 @@ msgstr "管理画面の小さな変更。"
 #, gp-priority: low
 msgid "First release to public."
 msgstr "最初の一般公開版。"
-
-#. Found in changelog header.
-#, gp-priority: low
-msgid "2.0.1 - 2026/10/08"
-msgstr "2.0.1 - 2026/10/08"
-
-#. Found in changelog list item.
-#, gp-priority: low
-msgid "Improvement - messages, headings and notices are translated as whole sentences, so languages with a different word order (e.g. Turkish, Hungarian, Hindi, Japanese, Korean and Chinese) read naturally"
-msgstr "改善 – メッセージ、見出し、お知らせが文全体として翻訳されるようになり、語順の異なる言語（トルコ語、ハンガリー語、ヒンディー語、日本語、韓国語、中国語など）でも自然に読めます"
-
-#. Found in changelog list item.
-#, gp-priority: low
-msgid "Improvement - the round-end notice of the tournament block no longer repeats the texts of its buttons"
-msgstr "改善 – 大会ブロックのラウンド終了のお知らせで、ボタンのテキストが繰り返されなくなりました"
-
-#. Found in changelog list item.
-#, gp-priority: low
-msgid "Add - English variants for the UK, Australia, Canada, New Zealand and South Africa"
-msgstr "追加 – 英国、オーストラリア、カナダ、ニュージーランド、南アフリカ向けの英語バリエーション"

@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plugins - Rotation Tournaments - Development Readme (trunk)\n"
-"PO-Revision-Date: 2026-10-08 18:18:50+0000\n"
+"PO-Revision-Date: 2026-10-15 07:57:04+0000\n"
 "Language: vi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -13,13 +13,161 @@ msgstr ""
 
 #. Short description.
 #, gp-priority: high
-msgid "Do you play Singles or Doubles Tournaments? This plugin manages Rotation Tournaments where players have a different partner in each game."
-msgstr "Bạn chơi giải đánh đơn hay đánh đôi? Plugin này quản lý các giải đấu xoay vòng, trong đó người chơi có đồng đội mới ở mỗi trận."
+msgid "Run doubles and singles tournaments where players get a new partner every match: fair draws, live results, standings and an Android app."
+msgstr "Tổ chức giải đánh đôi và đánh đơn, trong đó người chơi có bạn đánh mới ở mỗi trận: bốc thăm công bằng, kết quả trực tiếp, bảng xếp hạng và ứng dụng Android."
 
 #. Plugin name.
 #, gp-priority: high
 msgid "Rotation Tournaments"
 msgstr "Giải đấu xoay vòng"
+
+#. Found in faq paragraph.
+msgid "An iOS version is planned, but there is no release date yet. The tournament pages work in any mobile browser, including iPhone and iPad."
+msgstr "Phiên bản iOS đã được lên kế hoạch nhưng chưa có ngày phát hành. Các trang giải đấu hoạt động trên mọi trình duyệt di động, kể cả iPhone và iPad."
+
+#. Found in description paragraph.
+msgid "The free <a href=\"https://play.google.com/store/apps/details?id=cz.doroto.app\">Rotation Tournaments app</a> connects to your website: players follow the tournament, enter their results and organizers manage it from the court. The app is available in 27 languages. Several devices can be signed in to one account."
+msgstr "<a href=\"https://play.google.com/store/apps/details?id=cz.doroto.app\">Ứng dụng Rotation Tournaments</a> miễn phí kết nối với trang web của bạn: người chơi theo dõi giải và nhập kết quả, còn nhà tổ chức quản lý giải ngay từ sân. Ứng dụng có sẵn bằng 27 ngôn ngữ. Nhiều thiết bị có thể đăng nhập vào cùng một tài khoản."
+
+#. Found in description paragraph.
+msgid "<strong>Android app</strong>"
+msgstr "<strong>Ứng dụng Android</strong>"
+
+#. Found in description paragraph.
+msgid "<strong>For the website</strong>"
+msgstr "<strong>Cho trang web</strong>"
+
+#. Found in description paragraph.
+msgid "<strong>The draw</strong>"
+msgstr "<strong>Bốc thăm</strong>"
+
+#. Found in description paragraph.
+msgid "<strong>How a tournament works</strong>"
+msgstr "<strong>Giải đấu diễn ra thế nào</strong>"
+
+#. Found in description paragraph.
+msgid "It is made for club evenings and social tournaments in <strong>tennis, padel, badminton, table tennis, squash, beach volleyball</strong> and other sports played one against one or two against two."
+msgstr "Plugin dành cho các buổi tối ở câu lạc bộ và giải giao lưu <strong>quần vợt, padel, cầu lông, bóng bàn, squash, bóng chuyền bãi biển</strong> và các môn khác chơi một đấu một hoặc hai đấu hai."
+
+#. Found in description paragraph.
+msgid "<strong>Rotation Tournaments</strong> runs club tournaments in which nobody is knocked out. In doubles, every player gets a <strong>new partner in every match</strong> and meets as many different opponents as possible. The ranking is the ratio of games won to games lost, so everybody plays until the very end."
+msgstr "<strong>Giải đấu xoay vòng</strong> tổ chức các giải câu lạc bộ không ai bị loại. Ở nội dung đôi, mỗi người chơi có <strong>bạn đánh mới ở mỗi trận</strong> và gặp càng nhiều đối thủ khác nhau càng tốt. Thứ hạng dựa trên tỉ lệ game thắng trên game thua, nên ai cũng chơi đến phút cuối."
+
+#. Found in description list item.
+msgid "Video introduction:"
+msgstr "Video giới thiệu:"
+
+#. Found in description list item.
+msgid "<a href=\"https://doroto.ltcchrast.cz/rules-of-the-doubles-rotation-tournament/\">Rules of the Doubles Rotation Tournament</a>."
+msgstr "<a href=\"https://doroto.ltcchrast.cz/rules-of-the-doubles-rotation-tournament/\">Luật giải đánh đôi xoay vòng</a>."
+
+#. Found in description list item.
+msgid "<a href=\"https://doroto.ltcchrast.cz/\">Demo site</a> where you can create your own tournament."
+msgstr "<a href=\"https://doroto.ltcchrast.cz/\">Trang demo</a> nơi bạn có thể tạo giải đấu của riêng mình."
+
+#. Found in description list item.
+msgid "Players sign in with their WordPress accounts; full or shortened names (privacy)."
+msgstr "Người chơi đăng nhập bằng tài khoản WordPress; tên đầy đủ hoặc rút gọn (quyền riêng tư)."
+
+#. Found in description list item.
+msgid "Guided tours of the page and four example tournaments."
+msgstr "Hướng dẫn tham quan trang và bốn giải đấu mẫu."
+
+#. Found in description list item.
+msgid "Colors follow your theme; the block's Styles panel can change them."
+msgstr "Màu sắc theo giao diện của bạn; bảng Kiểu của khối có thể thay đổi chúng."
+
+#. Found in description list item.
+msgid "Share dialog with a QR code and a link that opens the tournament in the app."
+msgstr "Hộp thoại Chia sẻ với mã QR và liên kết mở giải đấu trong ứng dụng."
+
+#. Found in description list item.
+msgid "Live updates without reloading the page."
+msgstr "Cập nhật trực tiếp mà không cần tải lại trang."
+
+#. Found in description list item.
+msgid "Blocks for the block editor: \"Rotation tournament\" (matches, results, players, statistics and settings on tabs), \"Tournament standings\", \"Tournament matches\", \"Tournament presentation\", \"Tournament list\" and \"Tournament invitation\". Shortcodes for the classic editor."
+msgstr "Các khối cho trình soạn thảo khối: “Giải đấu xoay vòng” (trận đấu, kết quả, người chơi, thống kê và cài đặt trong các tab), “Bảng xếp hạng giải đấu”, “Trận đấu của giải”, “Trình chiếu giải đấu”, “Danh sách giải đấu” và “Lời mời tham gia giải”. Mã ngắn cho trình soạn thảo cổ điển."
+
+#. Found in description list item.
+msgid "Special group of players (e.g. women in a mixed tournament) with its own rules: mixed teams only, a separate winner and more."
+msgstr "Nhóm người chơi đặc biệt (ví dụ nữ trong giải hỗn hợp) với luật riêng: chỉ đội hỗn hợp, người thắng riêng và nhiều hơn nữa."
+
+#. Found in description list item.
+msgid "Works with any number of players from 4 up, odd numbers included; players can join, pause or leave at any time."
+msgstr "Hoạt động với số người chơi bất kỳ từ 4 trở lên, kể cả số lẻ; người chơi có thể tham gia, tạm nghỉ hoặc rời đi bất cứ lúc nào."
+
+#. Found in description list item.
+msgid "Players with fewer games and longer rest go first; sides (left/right) and serve alternate."
+msgstr "Người chơi ít trận hơn và nghỉ lâu hơn được ưu tiên; bên sân (trái/phải) và lượt giao bóng luân phiên."
+
+#. Found in description list item.
+msgid "Opponents are chosen by previous meetings too, so the same players meet less often."
+msgstr "Đối thủ cũng được chọn theo các lần gặp trước, nên cùng những người chơi sẽ ít gặp nhau hơn."
+
+#. Found in description list item.
+msgid "New teammates first: the plugin pairs players who have not played together yet."
+msgstr "Ưu tiên bạn đánh mới: plugin ghép cặp những người chơi chưa từng đánh cùng nhau."
+
+#. Found in description list item.
+msgid "At the end the organizer closes the tournament and the best player and the best pair are announced."
+msgstr "Cuối cùng, nhà tổ chức kết thúc giải và công bố người chơi xuất sắc nhất cùng cặp đôi xuất sắc nhất."
+
+#. Found in description list item.
+msgid "Standings, statistics and the presentation on a big screen update live."
+msgstr "Bảng xếp hạng, thống kê và phần trình chiếu trên màn hình lớn cập nhật trực tiếp."
+
+#. Found in description list item.
+msgid "Whoever finishes a match enters the score on the website or in the Android app; the next match is drawn at once."
+msgstr "Ai kết thúc trận thì nhập tỉ số trên trang web hoặc trong ứng dụng Android; trận tiếp theo được bốc thăm ngay."
+
+#. Found in description list item.
+msgid "Players join (also later, during the tournament) and the plugin draws the first matches for the free courts."
+msgstr "Người chơi tham gia (cả sau đó, trong lúc giải diễn ra) và plugin bốc thăm các trận đầu tiên cho các sân trống."
+
+#. Found in description list item.
+msgid "The organizer creates a tournament and shares the invitation link or QR code."
+msgstr "Nhà tổ chức tạo giải đấu và chia sẻ liên kết mời hoặc mã QR."
+
+#. Screenshot description.
+msgid "Android app: entering results, standings and played matches."
+msgstr "Ứng dụng Android: nhập kết quả, bảng xếp hạng và các trận đã đấu."
+
+#. Screenshot description.
+msgid "Tournament settings for organizers."
+msgstr "Cài đặt giải đấu cho nhà tổ chức."
+
+#. Screenshot description.
+msgid "The \"Rotation tournament\" block in the block editor."
+msgstr "Khối “Giải đấu xoay vòng” trong trình soạn thảo khối."
+
+#. Screenshot description.
+msgid "Share the tournament with a QR code; it opens the tournament in the app."
+msgstr "Chia sẻ giải đấu bằng mã QR; mã này mở giải đấu trong ứng dụng."
+
+#. Found in description list item.
+msgid "Presentation mode for a TV or projector in the club house."
+msgstr "Chế độ trình chiếu cho TV hoặc máy chiếu ở nhà câu lạc bộ."
+
+#. Screenshot description.
+msgid "Statistics: how often a player played with and against each other player."
+msgstr "Thống kê: một người chơi đã đánh cùng và đánh với từng người chơi khác bao nhiêu lần."
+
+#. Screenshot description.
+msgid "Live standings by the ratio of games won to games lost, with the trend of each player."
+msgstr "Bảng xếp hạng trực tiếp theo tỉ lệ game thắng trên game thua, kèm xu hướng của từng người chơi."
+
+#. Screenshot description.
+msgid "Results of all matches, with a filter by player."
+msgstr "Kết quả của tất cả các trận, có bộ lọc theo người chơi."
+
+#. Screenshot description.
+msgid "Ongoing matches: the next match is drawn as soon as a score is saved. Names of the special group are highlighted."
+msgstr "Các trận đang diễn ra: trận tiếp theo được bốc thăm ngay khi tỉ số được lưu. Tên trong nhóm đặc biệt được làm nổi bật."
+
+#. Screenshot description.
+msgid "The same tournament on the website and in the Android app."
+msgstr "Cùng một giải đấu trên trang web và trong ứng dụng Android."
 
 #. Found in installation paragraph.
 msgid "After installation, go to the app's settings and enter the address of your website where this plugin is installed."
@@ -33,25 +181,9 @@ msgstr "Hoặc tải trực tiếp tại đây: https://play.google.com/store/ap
 msgid "Search for \"Rotation Tournaments\" on the Google Play Store."
 msgstr "Tìm “Rotation Tournaments” trên Google Play."
 
-#. Found in description paragraph.
-msgid "To get the full experience of managing tournaments on the go, download our mobile app, now available on Google Play!"
-msgstr "Để quản lý giải đấu đầy đủ khi đang di chuyển, hãy tải ứng dụng di động của chúng tôi, hiện đã có trên Google Play!"
-
-#. Found in description paragraph.
-msgid "<strong>YouTube quick intro:</strong>"
-msgstr "<strong>Giới thiệu ngắn trên YouTube:</strong>"
-
-#. Found in description list item.
-msgid "Video for a quick introduction to the Rotation Tournament:"
-msgstr "Video giới thiệu ngắn về giải đấu xoay vòng:"
-
 #. Found in faq paragraph.
 msgid "Yes. If you install the Rotation Tournaments plugin, allow player registration, and enable visibility in the website list, your site can appear in the Android app. Initially, someone must manually enter your website address into the app. After that, it becomes visible in the list for all users."
 msgstr "Có. Nếu bạn cài plugin Rotation Tournaments, cho phép người chơi đăng ký và bật hiển thị trong danh sách trang web, trang của bạn có thể xuất hiện trong ứng dụng Android. Trước tiên, ai đó phải nhập thủ công địa chỉ trang web của bạn vào ứng dụng. Sau đó, trang sẽ hiển thị trong danh sách cho mọi người dùng."
-
-#. Found in faq paragraph.
-msgid "Yes. An iOS version of the Rotation Tournaments app is planned and will be released in the near future."
-msgstr "Có. Phiên bản iOS của ứng dụng Rotation Tournaments đã được lên kế hoạch và sẽ sớm phát hành."
 
 #. Found in faq header.
 msgid "Will my website be visible in the Rotation Tournaments Android app?"
@@ -74,80 +206,12 @@ msgid "<strong>How to install the Android app:</strong>"
 msgstr "<strong>Cách cài đặt ứng dụng Android:</strong>"
 
 #. Found in description paragraph.
-msgid "<strong>This plugin is the server-side for the \"Rotation Tournaments\" Android app.</strong>"
-msgstr "<strong>Plugin này là phần máy chủ của ứng dụng Android “Rotation Tournaments”.</strong>"
-
-#. Screenshot description.
-msgid "Individual tournament participants enter their results into the WordPress server and share the data with each other."
-msgstr "Người tham gia giải đấu nhập kết quả lên máy chủ WordPress và chia sẻ dữ liệu với nhau."
-
-#. Screenshot description.
-msgid "Matches played. (Android app)"
-msgstr "Các trận đã chơi. (Ứng dụng Android)"
-
-#. Screenshot description.
-msgid "Tournament table. (Wordpress)"
-msgstr "Bảng giải đấu. (WordPress)"
-
-#. Screenshot description.
-msgid "Matches drawn. (Android app)"
-msgstr "Các trận đã bốc thăm. (Ứng dụng Android)"
-
-#. Screenshot description.
-msgid "Editing tournament parameters. (Wordpress)"
-msgstr "Chỉnh sửa thông số giải đấu. (WordPress)"
-
-#. Screenshot description.
-msgid "Table of players with rankings. (Android app)"
-msgstr "Bảng người chơi kèm thứ hạng. (Ứng dụng Android)"
-
-#. Screenshot description.
-msgid "Matches played. (Wordpress)"
-msgstr "Các trận đã chơi. (WordPress)"
-
-#. Screenshot description.
-msgid "Basic overview of the tournament. (Android app)"
-msgstr "Tổng quan chính của giải đấu. (Ứng dụng Android)"
-
-#. Screenshot description.
-msgid "Matches drawn. (Wordpress)"
-msgstr "Các trận đã bốc thăm. (WordPress)"
-
-#. Found in description paragraph.
-msgid "<strong>Rotation Tournaments</strong> provides a platform for organizing all kinds of sports Singles and Doubles Tournaments, e.g."
-msgstr "<strong>Giải đấu xoay vòng</strong> là nền tảng tổ chức mọi giải đấu thể thao đánh đơn và đánh đôi, ví dụ:"
-
-#. Found in description list item.
-msgid "Squash"
-msgstr "Squash"
-
-#. Found in description list item.
-msgid "Beach Volleyball"
-msgstr "Bóng chuyền bãi biển"
-
-#. Found in description list item.
-msgid "Badminton"
-msgstr "Cầu lông"
-
-#. Found in description list item.
-msgid "Padel"
-msgstr "Padel"
-
-#. Found in description list item.
-msgid "Table Tennis"
-msgstr "Bóng bàn"
-
-#. Found in description list item.
-msgid "Tennis"
-msgstr "Quần vợt"
+msgid "<strong>Try it</strong>"
+msgstr "<strong>Dùng thử</strong>"
 
 #. Found in faq paragraph.
-msgid ""
-"This plugin can be used for all types of sports where 2 or 4 players compete in singles or doubles.\n"
-"You can use this plugin for tennis, table tennis, squash, padel, badminton, beach volleyball and probably for more."
-msgstr ""
-"Plugin này phù hợp với mọi môn thể thao có 2 hoặc 4 người chơi thi đấu đơn hoặc đôi.\n"
-"Có thể dùng cho quần vợt, bóng bàn, squash, padel, cầu lông, bóng chuyền bãi biển và có lẽ cả các môn khác."
+msgid "This plugin can be used for all types of sports where 2 or 4 players compete in singles or doubles.\nYou can use this plugin for tennis, table tennis, squash, padel, badminton, beach volleyball and probably for more."
+msgstr "Plugin này phù hợp với mọi môn thể thao có 2 hoặc 4 người chơi thi đấu đơn hoặc đôi.\nCó thể dùng cho quần vợt, bóng bàn, squash, padel, cầu lông, bóng chuyền bãi biển và có lẽ cả các môn khác."
 
 #. Found in faq paragraph.
 msgid "Yes. When creating a tournament, you can choose whether to create a singles or a doubles tournament."
@@ -156,118 +220,6 @@ msgstr "Có. Khi tạo giải đấu, bạn có thể chọn giải đánh đơn
 #. Found in faq header.
 msgid "What sports tournaments is this plugin for?"
 msgstr "Plugin này dành cho những giải đấu thể thao nào?"
-
-#. Found in description paragraph.
-msgid "<strong>General Features:</strong>"
-msgstr "<strong>Tính năng chung:</strong>"
-
-#. Found in description paragraph.
-msgid "<strong>Doubles Rotation Tournament:</strong>"
-msgstr "<strong>Giải đấu xoay vòng đánh đôi:</strong>"
-
-#. Found in description paragraph.
-msgid "<strong>Singles Rotation Tournament:</strong>"
-msgstr "<strong>Giải đấu xoay vòng đánh đơn:</strong>"
-
-#. Found in description paragraph.
-msgid "The participants of a tournament change partners several times during the tournament by a random selection and play against different players. The ratio of games won to games lost is calculated for each participant. The winner of the tournament is the player with this highest ratio. While a Singles Rotation Tournament can be organized without the aid of technology, in the case of a Doubles Rotation Tournament, this is not possible."
-msgstr "Người tham gia giải đấu đổi đồng đội ngẫu nhiên nhiều lần trong giải và đấu với những người chơi khác nhau. Với mỗi người tham gia, tỉ lệ game thắng trên game thua được tính. Người thắng là người có tỉ lệ tốt nhất. Giải xoay vòng đánh đơn có thể tổ chức mà không cần công nghệ, còn đánh đôi thì không."
-
-#. Found in description paragraph.
-msgid "The <strong>Rotation Tournaments</strong> have a strong social aspect because its goal is to keep players in the tournament until the very end. The situation where weaker players would leave the tournament due to elimination rounds is eliminated. It allows grouping players into a special category with special conditions. This special setting can be utilized, for example, in mixed tournaments."
-msgstr "<strong>Giải đấu xoay vòng</strong> có tính giao lưu cao, vì mục tiêu là giữ người chơi ở lại giải đến cuối cùng. Không có tình huống người chơi yếu hơn phải rời giải vì bị loại. Người chơi có thể được xếp vào hạng mục đặc biệt với điều kiện đặc biệt. Cài đặt đặc biệt này có thể dùng, chẳng hạn, trong các giải hỗn hợp."
-
-#. Found in description paragraph.
-msgid "In <strong>Rotation Tournaments</strong>, each participant plays against every other participant and there are no eliminations in individual rounds. To maximize the variety of match combinations, the matches are typically played in a single set."
-msgstr "Trong <strong>giải đấu xoay vòng</strong>, mỗi người tham gia đều đấu với mọi người khác và không ai bị loại ở từng vòng. Để có càng nhiều tổ hợp càng tốt, các trận thường chỉ đấu một set."
-
-#. Found in description list item.
-msgid "Suitable for various sports: tennis, table tennis, squash, padel, badminton, beach volleyball, and more."
-msgstr "Phù hợp với nhiều môn thể thao: quần vợt, bóng bàn, squash, padel, cầu lông, bóng chuyền bãi biển và các môn khác."
-
-#. Found in description list item.
-msgid "Integration with website user accounts."
-msgstr "Tích hợp với tài khoản người dùng của trang web."
-
-#. Found in description list item.
-msgid "No downtime during the tournament."
-msgstr "Không có thời gian chết trong giải đấu."
-
-#. Found in description list item.
-msgid "Comprehensive overview of player quality."
-msgstr "Cái nhìn toàn diện về trình độ người chơi."
-
-#. Found in description list item.
-msgid "User-friendly interface for administrators and participants."
-msgstr "Giao diện thân thiện cho quản trị viên và người tham gia."
-
-#. Found in description list item.
-msgid "Customizable settings for each tournament."
-msgstr "Cài đặt linh hoạt cho từng giải đấu."
-
-#. Found in description list item.
-msgid "Real-time score tracking."
-msgstr "Theo dõi tỉ số theo thời gian thực."
-
-#. Found in description list item.
-msgid "Seamless scheduling of matches."
-msgstr "Xếp lịch thi đấu tiện lợi."
-
-#. Found in description list item.
-msgid "Announcement of the Best Player and Most Ideal Pair at the end of the tournament."
-msgstr "Công bố người chơi xuất sắc nhất và cặp đôi lý tưởng vào cuối giải."
-
-#. Found in description list item.
-msgid "Ranking based on the ratio of games won to games lost."
-msgstr "Thứ hạng được xác định bởi tỉ lệ game thắng trên game thua."
-
-#. Found in description list item.
-msgid "Individual players can join or leave the tournament at any time."
-msgstr "Người chơi có thể tham gia hoặc rời giải bất cứ lúc nào."
-
-#. Found in description list item.
-msgid "Tournament can be interrupted or extended without disruption."
-msgstr "Giải đấu có thể tạm dừng hoặc kéo dài mà không ảnh hưởng diễn biến."
-
-#. Found in description list item.
-msgid "Shorter matches for more participation."
-msgstr "Trận ngắn hơn để nhiều người được tham gia hơn."
-
-#. Found in description list item.
-msgid "No eliminations, ensuring all players stay in the game."
-msgstr "Không loại trực tiếp – mọi người chơi đều ở lại thi đấu."
-
-#. Found in description list item.
-msgid "Define special groups of players with unique conditions."
-msgstr "Xác định nhóm người chơi đặc biệt với điều kiện đặc biệt."
-
-#. Found in description list item.
-msgid "Suitable for odd numbers of players and minimum lineups of 4 players."
-msgstr "Phù hợp với số người chơi lẻ và đội hình tối thiểu 4 người."
-
-#. Found in description list item.
-msgid "Individuals can enter the tournament without a permanent teammate."
-msgstr "Có thể tham gia giải mà không cần đồng đội cố định."
-
-#. Found in description list item.
-msgid "Rotation of teammates, ensuring variety in partnerships."
-msgstr "Xoay vòng đồng đội tạo nên các cặp đa dạng."
-
-#. Found in description list item.
-msgid "Alternative form of a Doubles Tournament where players enter each match with a different partner and in different positions (alternating left and right sides)."
-msgstr "Một hình thức thay thế của giải đánh đôi, trong đó người chơi chơi mỗi trận với đồng đội mới và ở vị trí khác (luân phiên bên trái và bên phải)."
-
-#. Found in description list item.
-msgid "Depending on the time options, everyone plays against everyone."
-msgstr "Tùy thời gian, mọi người đều đấu với nhau."
-
-#. Found in description list item.
-msgid "Alternative form of a Singles Tournament where players face each other without elimination rounds."
-msgstr "Một hình thức thay thế của giải đánh đơn, trong đó người chơi đối đầu nhau mà không bị loại."
-
-#. Found in description header.
-msgid "Features"
-msgstr "Tính năng"
 
 #. Found in faq header.
 msgid "Is this plugin suitable for singles tournaments?"
@@ -306,16 +258,43 @@ msgid "Install the plugin as usual."
 msgstr "Cài đặt plugin như bình thường."
 
 #. Found in description paragraph.
-msgid "Visit <a href=\"https://doroto.ltcchrast.cz/\">test page</a> for more information, try to create your own tournament and take a look at <a href=\"https://doroto.ltcchrast.cz/rules-of-the-doubles-rotation-tournament/\">Rules of the Doubles Rotation Tournament</a>."
-msgstr "Truy cập <a href=\"https://doroto.ltcchrast.cz/\">trang thử nghiệm</a> để tìm hiểu thêm, thử tạo giải đấu của riêng bạn và xem <a href=\"https://doroto.ltcchrast.cz/rules-of-the-doubles-rotation-tournament/\">luật giải đấu xoay vòng đánh đôi</a>."
-
-#. Found in description paragraph.
 msgid "[youtube https://www.youtube.com/watch?v=NoL9aPTv8u8]"
 msgstr "[youtube https://www.youtube.com/watch?v=NoL9aPTv8u8]"
 
-#. Found in description header.
-msgid "More information"
-msgstr "Thông tin thêm"
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - readme: new description of the draw, the blocks and the app; new screenshots (also in Spanish for Chile)"
+msgstr "Cải tiến – readme: mô tả mới về bốc thăm, các khối và ứng dụng; ảnh chụp màn hình mới (cả tiếng Tây Ban Nha của Chile)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - new plugin icon and banner, the same icon as the Android app"
+msgstr "Cải tiến – biểu tượng và biểu ngữ mới của plugin, cùng biểu tượng với ứng dụng Android"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "2.0.2 - 2026/10/15"
+msgstr "2.0.2 - 2026/10/15"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - English variants for the UK, Australia, Canada, New Zealand and South Africa"
+msgstr "Thêm mới – các biến thể tiếng Anh cho Vương quốc Anh, Úc, Canada, New Zealand và Nam Phi"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - the round-end notice of the tournament block no longer repeats the texts of its buttons"
+msgstr "Cải tiến – thông báo kết thúc vòng trong khối giải đấu không còn lặp lại nội dung các nút của nó"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - messages, headings and notices are translated as whole sentences, so languages with a different word order (e.g. Turkish, Hungarian, Hindi, Japanese, Korean and Chinese) read naturally"
+msgstr "Cải tiến – thông báo, tiêu đề và lời nhắc được dịch thành câu hoàn chỉnh, nhờ đó các ngôn ngữ có trật tự từ khác (ví dụ tiếng Thổ Nhĩ Kỳ, Hungary, Hindi, Nhật, Hàn và Trung) đọc tự nhiên"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "2.0.1 - 2026/10/08"
+msgstr "2.0.1 - 2026/10/08"
 
 #. Found in changelog list item.
 #, gp-priority: low
@@ -1189,21 +1168,13 @@ msgstr "Sửa lỗi – nếu tất cả giải đấu đã bị xóa thì khôn
 
 #. Found in changelog paragraph.
 #, gp-priority: low
-msgid ""
-"Trial tournament improvements.\n"
-"Added the option to announce the end of the tournament round."
-msgstr ""
-"Cải thiện giải đấu luyện tập.\n"
-"Thêm khả năng thông báo kết thúc vòng đấu."
+msgid "Trial tournament improvements.\nAdded the option to announce the end of the tournament round."
+msgstr "Cải thiện giải đấu luyện tập.\nThêm khả năng thông báo kết thúc vòng đấu."
 
 #. Found in changelog paragraph.
 #, gp-priority: low
-msgid ""
-"Improved the visual appearance of the main page.\n"
-"Badminton added to the list of available tournaments."
-msgstr ""
-"Cải thiện giao diện trang chính.\n"
-"Thêm cầu lông vào danh sách giải đấu khả dụng."
+msgid "Improved the visual appearance of the main page.\nBadminton added to the list of available tournaments."
+msgstr "Cải thiện giao diện trang chính.\nThêm cầu lông vào danh sách giải đấu khả dụng."
 
 #. Found in changelog paragraph.
 #, gp-priority: low
@@ -1212,65 +1183,33 @@ msgstr "Có thể công bố người thắng riêng cho nhóm đặc biệt và
 
 #. Found in changelog paragraph.
 #, gp-priority: low
-msgid ""
-"Notices after a plugin activation.\n"
-"Added player trend."
-msgstr ""
-"Thông báo sau khi kích hoạt plugin.\n"
-"Thêm xu hướng của người chơi."
+msgid "Notices after a plugin activation.\nAdded player trend."
+msgstr "Thông báo sau khi kích hoạt plugin.\nThêm xu hướng của người chơi."
 
 #. Found in changelog paragraph.
 #, gp-priority: low
-msgid ""
-"Modified tournament editing tab.\n"
-"Added option to change tournament type."
-msgstr ""
-"Thay đổi tab chỉnh sửa giải đấu.\n"
-"Thêm khả năng đổi loại giải đấu."
+msgid "Modified tournament editing tab.\nAdded option to change tournament type."
+msgstr "Thay đổi tab chỉnh sửa giải đấu.\nThêm khả năng đổi loại giải đấu."
 
 #. Found in changelog paragraph.
 #, gp-priority: low
-msgid ""
-"Reactivating the plugin doesn´t affect the already deleted tournament example. \n"
-"Unblock offering maximum games count.\n"
-"Fix tournament change when entering results.\n"
-"Added quick help for newcomers.\n"
-"Allow the final match also for singles."
-msgstr ""
-"Kích hoạt lại plugin không ảnh hưởng đến giải đấu mẫu đã bị xóa.\n"
-"Mở khóa lựa chọn số game tối đa.\n"
-"Sửa việc thay đổi giải đấu trong khi nhập kết quả.\n"
-"Thêm trợ giúp ngắn cho người mới.\n"
-"Cho phép trận chung kết cả ở đánh đơn."
+msgid "Reactivating the plugin doesn´t affect the already deleted tournament example. \nUnblock offering maximum games count.\nFix tournament change when entering results.\nAdded quick help for newcomers.\nAllow the final match also for singles."
+msgstr "Kích hoạt lại plugin không ảnh hưởng đến giải đấu mẫu đã bị xóa.\nMở khóa lựa chọn số game tối đa.\nSửa việc thay đổi giải đấu trong khi nhập kết quả.\nThêm trợ giúp ngắn cho người mới.\nCho phép trận chung kết cả ở đánh đơn."
 
 #. Found in changelog paragraph.
 #, gp-priority: low
-msgid ""
-"Added the option for single tournaments. \n"
-"Created an environment for additional sports."
-msgstr ""
-"Thêm khả năng tổ chức giải đánh đơn.\n"
-"Tạo môi trường cho các môn thể thao khác."
+msgid "Added the option for single tournaments. \nCreated an environment for additional sports."
+msgstr "Thêm khả năng tổ chức giải đánh đơn.\nTạo môi trường cho các môn thể thao khác."
 
 #. Found in changelog paragraph.
 #, gp-priority: low
-msgid ""
-"The administrator can now use 'hide' option when editing the match result.\n"
-"Free score input is allowed. This opens using not only for tennis but for example for table tennis or beach volleyball."
-msgstr ""
-"Quản trị viên giờ có thể dùng tùy chọn “ẩn” khi thay đổi kết quả trận đấu.\n"
-"Cho phép nhập tỉ số tự do. Nhờ đó plugin có thể dùng không chỉ cho quần vợt mà còn, ví dụ, cho bóng bàn hoặc bóng chuyền bãi biển."
+msgid "The administrator can now use 'hide' option when editing the match result.\nFree score input is allowed. This opens using not only for tennis but for example for table tennis or beach volleyball."
+msgstr "Quản trị viên giờ có thể dùng tùy chọn “ẩn” khi thay đổi kết quả trận đấu.\nCho phép nhập tỉ số tự do. Nhờ đó plugin có thể dùng không chỉ cho quần vợt mà còn, ví dụ, cho bóng bàn hoặc bóng chuyền bãi biển."
 
 #. Found in changelog paragraph.
 #, gp-priority: low
-msgid ""
-"Minor changes in code:\n"
-"* Allow to transfer organizer rights to a non-playing user.\n"
-"* Ensuring an even rotation of serves at the start of the tournament."
-msgstr ""
-"Thay đổi nhỏ trong mã nguồn:\n"
-"* Cho phép chuyển quyền nhà tổ chức cho người dùng không thi đấu.\n"
-"* Bảo đảm luân phiên giao bóng đều đặn ở đầu giải đấu."
+msgid "Minor changes in code:\n* Allow to transfer organizer rights to a non-playing user.\n* Ensuring an even rotation of serves at the start of the tournament."
+msgstr "Thay đổi nhỏ trong mã nguồn:\n* Cho phép chuyển quyền nhà tổ chức cho người dùng không thi đấu.\n* Bảo đảm luân phiên giao bóng đều đặn ở đầu giải đấu."
 
 #. Found in changelog paragraph.
 #, gp-priority: low
@@ -1286,23 +1225,3 @@ msgstr "Thay đổi nhỏ trên màn hình quản trị."
 #, gp-priority: low
 msgid "First release to public."
 msgstr "Bản phát hành công khai đầu tiên."
-
-#. Found in changelog header.
-#, gp-priority: low
-msgid "2.0.1 - 2026/10/08"
-msgstr "2.0.1 - 2026/10/08"
-
-#. Found in changelog list item.
-#, gp-priority: low
-msgid "Improvement - messages, headings and notices are translated as whole sentences, so languages with a different word order (e.g. Turkish, Hungarian, Hindi, Japanese, Korean and Chinese) read naturally"
-msgstr "Cải tiến – thông báo, tiêu đề và lời nhắc được dịch thành câu hoàn chỉnh, nhờ đó các ngôn ngữ có trật tự từ khác (ví dụ tiếng Thổ Nhĩ Kỳ, Hungary, Hindi, Nhật, Hàn và Trung) đọc tự nhiên"
-
-#. Found in changelog list item.
-#, gp-priority: low
-msgid "Improvement - the round-end notice of the tournament block no longer repeats the texts of its buttons"
-msgstr "Cải tiến – thông báo kết thúc vòng trong khối giải đấu không còn lặp lại nội dung các nút của nó"
-
-#. Found in changelog list item.
-#, gp-priority: low
-msgid "Add - English variants for the UK, Australia, Canada, New Zealand and South Africa"
-msgstr "Thêm mới – các biến thể tiếng Anh cho Vương quốc Anh, Úc, Canada, New Zealand và Nam Phi"

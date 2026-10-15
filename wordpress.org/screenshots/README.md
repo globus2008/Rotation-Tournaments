@@ -22,7 +22,7 @@ For another language switch the app language first (menu -> Change Language).
 
 A new locale: add it to `NAMES` (seed.py) and `TEXTS` (banner.py), then
 `seed.py --names xx_XX`, `capture_web.py xx_XX`, app shots, `compose.py xx_XX`, `banner.py xx_XX`, `seed.py --names en_US`.
-Done so far: en_US, es_CL (2026-10-15).
+Done so far: en_US, es_CL, cs_CZ (2026-10-15).
 
 The Android app icon is built from the same `icon.svg`: `c:/scr/doroto/tools/app-icon/build.py`.
 

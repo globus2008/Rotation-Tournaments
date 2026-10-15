@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plugins - Rotation Tournaments - Development Readme (trunk)\n"
-"PO-Revision-Date: 2026-10-08 18:18:50+0000\n"
+"PO-Revision-Date: 2026-10-15 07:57:04+0000\n"
 "Language: th\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -13,13 +13,161 @@ msgstr ""
 
 #. Short description.
 #, gp-priority: high
-msgid "Do you play Singles or Doubles Tournaments? This plugin manages Rotation Tournaments where players have a different partner in each game."
-msgstr "คุณเล่นทัวร์นาเมนต์ประเภทเดี่ยวหรือประเภทคู่หรือไม่ ปลั๊กอินนี้จัดการทัวร์นาเมนต์แบบหมุนเวียนที่ผู้เล่นจะได้คู่หูใหม่ในทุกเกม"
+msgid "Run doubles and singles tournaments where players get a new partner every match: fair draws, live results, standings and an Android app."
+msgstr "จัดทัวร์นาเมนต์ประเภทคู่และเดี่ยวที่ผู้เล่นได้คู่ใหม่ในทุกแมตช์: การสุ่มที่ยุติธรรม ผลการแข่งขันสด อันดับ และแอป Android"
 
 #. Plugin name.
 #, gp-priority: high
 msgid "Rotation Tournaments"
 msgstr "ทัวร์นาเมนต์แบบหมุนเวียน"
+
+#. Found in faq paragraph.
+msgid "An iOS version is planned, but there is no release date yet. The tournament pages work in any mobile browser, including iPhone and iPad."
+msgstr "มีแผนจะทำเวอร์ชัน iOS แต่ยังไม่มีวันเปิดตัว หน้าทัวร์นาเมนต์ใช้งานได้ในเบราว์เซอร์มือถือทุกตัว รวมถึง iPhone และ iPad"
+
+#. Found in description paragraph.
+msgid "The free <a href=\"https://play.google.com/store/apps/details?id=cz.doroto.app\">Rotation Tournaments app</a> connects to your website: players follow the tournament, enter their results and organizers manage it from the court. The app is available in 27 languages. Several devices can be signed in to one account."
+msgstr "<a href=\"https://play.google.com/store/apps/details?id=cz.doroto.app\">แอป Rotation Tournaments</a> ที่ใช้ได้ฟรีเชื่อมต่อกับเว็บไซต์ของคุณ: ผู้เล่นติดตามทัวร์นาเมนต์และกรอกผลของตัวเอง ส่วนผู้จัดดูแลทัวร์นาเมนต์ได้จากข้างสนาม แอปรองรับ 27 ภาษา และลงชื่อเข้าใช้บัญชีเดียวได้จากหลายอุปกรณ์"
+
+#. Found in description paragraph.
+msgid "<strong>Android app</strong>"
+msgstr "<strong>แอป Android</strong>"
+
+#. Found in description paragraph.
+msgid "<strong>For the website</strong>"
+msgstr "<strong>สำหรับเว็บไซต์</strong>"
+
+#. Found in description paragraph.
+msgid "<strong>The draw</strong>"
+msgstr "<strong>การสุ่ม</strong>"
+
+#. Found in description paragraph.
+msgid "<strong>How a tournament works</strong>"
+msgstr "<strong>ทัวร์นาเมนต์ดำเนินไปอย่างไร</strong>"
+
+#. Found in description paragraph.
+msgid "It is made for club evenings and social tournaments in <strong>tennis, padel, badminton, table tennis, squash, beach volleyball</strong> and other sports played one against one or two against two."
+msgstr "ออกแบบมาสำหรับค่ำคืนในสโมสรและทัวร์นาเมนต์กระชับมิตรใน <strong>เทนนิส พาเดล แบดมินตัน เทเบิลเทนนิส สควอช วอลเลย์บอลชายหาด</strong> และกีฬาอื่นที่เล่นหนึ่งต่อหนึ่งหรือสองต่อสอง"
+
+#. Found in description paragraph.
+msgid "<strong>Rotation Tournaments</strong> runs club tournaments in which nobody is knocked out. In doubles, every player gets a <strong>new partner in every match</strong> and meets as many different opponents as possible. The ranking is the ratio of games won to games lost, so everybody plays until the very end."
+msgstr "<strong>ทัวร์นาเมนต์แบบหมุนเวียน</strong> จัดทัวร์นาเมนต์ของสโมสรที่ไม่มีใครตกรอบ ในประเภทคู่ ผู้เล่นทุกคนได้ <strong>คู่ใหม่ในทุกแมตช์</strong> และได้พบคู่แข่งที่แตกต่างกันให้มากที่สุด อันดับคิดจากอัตราส่วนเกมที่ชนะต่อเกมที่แพ้ ทุกคนจึงได้เล่นจนจบ"
+
+#. Found in description list item.
+msgid "Video introduction:"
+msgstr "วิดีโอแนะนำ:"
+
+#. Found in description list item.
+msgid "<a href=\"https://doroto.ltcchrast.cz/rules-of-the-doubles-rotation-tournament/\">Rules of the Doubles Rotation Tournament</a>."
+msgstr "<a href=\"https://doroto.ltcchrast.cz/rules-of-the-doubles-rotation-tournament/\">กติกาทัวร์นาเมนต์ประเภทคู่แบบหมุนเวียน</a>"
+
+#. Found in description list item.
+msgid "<a href=\"https://doroto.ltcchrast.cz/\">Demo site</a> where you can create your own tournament."
+msgstr "<a href=\"https://doroto.ltcchrast.cz/\">เว็บไซต์สาธิต</a> ที่คุณสร้างทัวร์นาเมนต์ของตัวเองได้"
+
+#. Found in description list item.
+msgid "Players sign in with their WordPress accounts; full or shortened names (privacy)."
+msgstr "ผู้เล่นลงชื่อเข้าใช้ด้วยบัญชี WordPress ของตน; ชื่อเต็มหรือชื่อย่อ (ความเป็นส่วนตัว)"
+
+#. Found in description list item.
+msgid "Guided tours of the page and four example tournaments."
+msgstr "การนำชมหน้าเว็บและทัวร์นาเมนต์ตัวอย่างสี่รายการ"
+
+#. Found in description list item.
+msgid "Colors follow your theme; the block's Styles panel can change them."
+msgstr "สีเป็นไปตามธีมของคุณ; แผงรูปแบบของบล็อกเปลี่ยนสีได้"
+
+#. Found in description list item.
+msgid "Share dialog with a QR code and a link that opens the tournament in the app."
+msgstr "หน้าต่างแชร์พร้อมคิวอาร์โค้ดและลิงก์ที่เปิดทัวร์นาเมนต์ในแอป"
+
+#. Found in description list item.
+msgid "Live updates without reloading the page."
+msgstr "อัปเดตสดโดยไม่ต้องโหลดหน้าใหม่"
+
+#. Found in description list item.
+msgid "Blocks for the block editor: \"Rotation tournament\" (matches, results, players, statistics and settings on tabs), \"Tournament standings\", \"Tournament matches\", \"Tournament presentation\", \"Tournament list\" and \"Tournament invitation\". Shortcodes for the classic editor."
+msgstr "บล็อกสำหรับตัวแก้ไขบล็อก: “ทัวร์นาเมนต์แบบหมุนเวียน” (แมตช์ ผลการแข่งขัน ผู้เล่น สถิติ และการตั้งค่าในแท็บ) “อันดับของทัวร์นาเมนต์” “แมตช์ของทัวร์นาเมนต์” “การนำเสนอทัวร์นาเมนต์” “รายการทัวร์นาเมนต์” และ “คำเชิญเข้าร่วมทัวร์นาเมนต์” รวมถึงรหัสย่อสำหรับตัวแก้ไขแบบคลาสสิก"
+
+#. Found in description list item.
+msgid "Special group of players (e.g. women in a mixed tournament) with its own rules: mixed teams only, a separate winner and more."
+msgstr "กลุ่มพิเศษของผู้เล่น (เช่น ผู้หญิงในทัวร์นาเมนต์ประเภทคู่ผสม) ที่มีกติกาของตัวเอง: เฉพาะทีมผสม ผู้ชนะแยก และอื่น ๆ"
+
+#. Found in description list item.
+msgid "Works with any number of players from 4 up, odd numbers included; players can join, pause or leave at any time."
+msgstr "ใช้ได้กับผู้เล่นตั้งแต่ 4 คนขึ้นไป รวมถึงจำนวนคี่; ผู้เล่นเข้าร่วม พัก หรือออกได้ทุกเมื่อ"
+
+#. Found in description list item.
+msgid "Players with fewer games and longer rest go first; sides (left/right) and serve alternate."
+msgstr "ผู้เล่นที่ลงแข่งน้อยกว่าและพักนานกว่าได้เล่นก่อน; ฝั่ง (ซ้าย/ขวา) และการเสิร์ฟสลับกัน"
+
+#. Found in description list item.
+msgid "Opponents are chosen by previous meetings too, so the same players meet less often."
+msgstr "คู่แข่งยังถูกเลือกตามการพบกันครั้งก่อน ผู้เล่นคนเดิมจึงพบกันน้อยลง"
+
+#. Found in description list item.
+msgid "New teammates first: the plugin pairs players who have not played together yet."
+msgstr "คู่ใหม่มาก่อน: ปลั๊กอินจับคู่ผู้เล่นที่ยังไม่เคยเล่นด้วยกัน"
+
+#. Found in description list item.
+msgid "At the end the organizer closes the tournament and the best player and the best pair are announced."
+msgstr "ตอนท้าย ผู้จัดปิดทัวร์นาเมนต์และประกาศผู้เล่นยอดเยี่ยมกับคู่ยอดเยี่ยม"
+
+#. Found in description list item.
+msgid "Standings, statistics and the presentation on a big screen update live."
+msgstr "อันดับ สถิติ และการนำเสนอบนจอใหญ่อัปเดตสด"
+
+#. Found in description list item.
+msgid "Whoever finishes a match enters the score on the website or in the Android app; the next match is drawn at once."
+msgstr "ผู้ที่เล่นจบแมตช์กรอกสกอร์บนเว็บไซต์หรือในแอป Android; แมตช์ถัดไปถูกสุ่มทันที"
+
+#. Found in description list item.
+msgid "Players join (also later, during the tournament) and the plugin draws the first matches for the free courts."
+msgstr "ผู้เล่นเข้าร่วม (รวมถึงภายหลังระหว่างทัวร์นาเมนต์) แล้วปลั๊กอินจะสุ่มแมตช์แรกให้สนามที่ว่าง"
+
+#. Found in description list item.
+msgid "The organizer creates a tournament and shares the invitation link or QR code."
+msgstr "ผู้จัดสร้างทัวร์นาเมนต์และแชร์ลิงก์คำเชิญหรือคิวอาร์โค้ด"
+
+#. Screenshot description.
+msgid "Android app: entering results, standings and played matches."
+msgstr "แอป Android: การกรอกผล อันดับ และแมตช์ที่เล่นแล้ว"
+
+#. Screenshot description.
+msgid "Tournament settings for organizers."
+msgstr "การตั้งค่าทัวร์นาเมนต์สำหรับผู้จัด"
+
+#. Screenshot description.
+msgid "The \"Rotation tournament\" block in the block editor."
+msgstr "บล็อก “ทัวร์นาเมนต์แบบหมุนเวียน” ในตัวแก้ไขบล็อก"
+
+#. Screenshot description.
+msgid "Share the tournament with a QR code; it opens the tournament in the app."
+msgstr "แชร์ทัวร์นาเมนต์ด้วยคิวอาร์โค้ด; โค้ดนี้เปิดทัวร์นาเมนต์ในแอป"
+
+#. Found in description list item.
+msgid "Presentation mode for a TV or projector in the club house."
+msgstr "โหมดนำเสนอสำหรับทีวีหรือโปรเจกเตอร์ในคลับเฮาส์"
+
+#. Screenshot description.
+msgid "Statistics: how often a player played with and against each other player."
+msgstr "สถิติ: ผู้เล่นคนหนึ่งเล่นคู่กับและเล่นแข่งกับผู้เล่นแต่ละคนบ่อยเพียงใด"
+
+#. Screenshot description.
+msgid "Live standings by the ratio of games won to games lost, with the trend of each player."
+msgstr "อันดับสดตามอัตราส่วนเกมที่ชนะต่อเกมที่แพ้ พร้อมแนวโน้มของผู้เล่นแต่ละคน"
+
+#. Screenshot description.
+msgid "Results of all matches, with a filter by player."
+msgstr "ผลของทุกแมตช์ พร้อมตัวกรองตามผู้เล่น"
+
+#. Screenshot description.
+msgid "Ongoing matches: the next match is drawn as soon as a score is saved. Names of the special group are highlighted."
+msgstr "แมตช์ที่กำลังแข่ง: แมตช์ถัดไปถูกสุ่มทันทีที่บันทึกสกอร์ ชื่อในกลุ่มพิเศษถูกเน้นไว้"
+
+#. Screenshot description.
+msgid "The same tournament on the website and in the Android app."
+msgstr "ทัวร์นาเมนต์เดียวกันบนเว็บไซต์และในแอป Android"
 
 #. Found in installation paragraph.
 msgid "After installation, go to the app's settings and enter the address of your website where this plugin is installed."
@@ -33,25 +181,9 @@ msgstr "หรือดาวน์โหลดได้โดยตรงจา
 msgid "Search for \"Rotation Tournaments\" on the Google Play Store."
 msgstr "ค้นหา “Rotation Tournaments” ใน Google Play Store"
 
-#. Found in description paragraph.
-msgid "To get the full experience of managing tournaments on the go, download our mobile app, now available on Google Play!"
-msgstr "หากต้องการจัดการทัวร์นาเมนต์ได้อย่างเต็มที่ทุกที่ ดาวน์โหลดแอปมือถือของเรา ซึ่งมีให้ใช้แล้วบน Google Play!"
-
-#. Found in description paragraph.
-msgid "<strong>YouTube quick intro:</strong>"
-msgstr "<strong>แนะนำสั้นๆ บน YouTube:</strong>"
-
-#. Found in description list item.
-msgid "Video for a quick introduction to the Rotation Tournament:"
-msgstr "วิดีโอแนะนำทัวร์นาเมนต์แบบหมุนเวียนอย่างรวดเร็ว:"
-
 #. Found in faq paragraph.
 msgid "Yes. If you install the Rotation Tournaments plugin, allow player registration, and enable visibility in the website list, your site can appear in the Android app. Initially, someone must manually enter your website address into the app. After that, it becomes visible in the list for all users."
 msgstr "ได้ หากคุณติดตั้งปลั๊กอิน Rotation Tournaments อนุญาตให้ผู้เล่นลงทะเบียน และเปิดการแสดงในรายการเว็บไซต์ เว็บไซต์ของคุณจะปรากฏในแอป Android ได้ ในตอนแรกต้องมีคนใส่ที่อยู่เว็บไซต์ของคุณในแอปด้วยตนเอง หลังจากนั้นเว็บไซต์จะแสดงในรายการสำหรับผู้ใช้ทุกคน"
-
-#. Found in faq paragraph.
-msgid "Yes. An iOS version of the Rotation Tournaments app is planned and will be released in the near future."
-msgstr "ใช่ มีแผนจะออกแอป Rotation Tournaments เวอร์ชัน iOS ในอนาคตอันใกล้"
 
 #. Found in faq header.
 msgid "Will my website be visible in the Rotation Tournaments Android app?"
@@ -74,80 +206,12 @@ msgid "<strong>How to install the Android app:</strong>"
 msgstr "<strong>วิธีติดตั้งแอป Android:</strong>"
 
 #. Found in description paragraph.
-msgid "<strong>This plugin is the server-side for the \"Rotation Tournaments\" Android app.</strong>"
-msgstr "<strong>ปลั๊กอินนี้เป็นฝั่งเซิร์ฟเวอร์ของแอป Android “Rotation Tournaments”</strong>"
-
-#. Screenshot description.
-msgid "Individual tournament participants enter their results into the WordPress server and share the data with each other."
-msgstr "ผู้เข้าร่วมทัวร์นาเมนต์แต่ละคนใส่ผลการแข่งขันของตนลงในเซิร์ฟเวอร์ WordPress และแบ่งปันข้อมูลกัน"
-
-#. Screenshot description.
-msgid "Matches played. (Android app)"
-msgstr "แมตช์ที่แข่งแล้ว (แอป Android)"
-
-#. Screenshot description.
-msgid "Tournament table. (Wordpress)"
-msgstr "ตารางทัวร์นาเมนต์ (WordPress)"
-
-#. Screenshot description.
-msgid "Matches drawn. (Android app)"
-msgstr "แมตช์ที่สุ่มแล้ว (แอป Android)"
-
-#. Screenshot description.
-msgid "Editing tournament parameters. (Wordpress)"
-msgstr "การแก้ไขพารามิเตอร์ของทัวร์นาเมนต์ (WordPress)"
-
-#. Screenshot description.
-msgid "Table of players with rankings. (Android app)"
-msgstr "ตารางผู้เล่นพร้อมอันดับ (แอป Android)"
-
-#. Screenshot description.
-msgid "Matches played. (Wordpress)"
-msgstr "แมตช์ที่แข่งแล้ว (WordPress)"
-
-#. Screenshot description.
-msgid "Basic overview of the tournament. (Android app)"
-msgstr "ภาพรวมพื้นฐานของทัวร์นาเมนต์ (แอป Android)"
-
-#. Screenshot description.
-msgid "Matches drawn. (Wordpress)"
-msgstr "แมตช์ที่สุ่มแล้ว (WordPress)"
-
-#. Found in description paragraph.
-msgid "<strong>Rotation Tournaments</strong> provides a platform for organizing all kinds of sports Singles and Doubles Tournaments, e.g."
-msgstr "<strong>ทัวร์นาเมนต์แบบหมุนเวียน</strong> เป็นแพลตฟอร์มสำหรับจัดทัวร์นาเมนต์กีฬาทุกประเภททั้งประเภทเดี่ยวและประเภทคู่ เช่น"
-
-#. Found in description list item.
-msgid "Squash"
-msgstr "สควอช"
-
-#. Found in description list item.
-msgid "Beach Volleyball"
-msgstr "วอลเลย์บอลชายหาด"
-
-#. Found in description list item.
-msgid "Badminton"
-msgstr "แบดมินตัน"
-
-#. Found in description list item.
-msgid "Padel"
-msgstr "พาเดล"
-
-#. Found in description list item.
-msgid "Table Tennis"
-msgstr "เทเบิลเทนนิส"
-
-#. Found in description list item.
-msgid "Tennis"
-msgstr "เทนนิส"
+msgid "<strong>Try it</strong>"
+msgstr "<strong>ลองใช้</strong>"
 
 #. Found in faq paragraph.
-msgid ""
-"This plugin can be used for all types of sports where 2 or 4 players compete in singles or doubles.\n"
-"You can use this plugin for tennis, table tennis, squash, padel, badminton, beach volleyball and probably for more."
-msgstr ""
-"ปลั๊กอินนี้ใช้ได้กับกีฬาทุกประเภทที่มีผู้เล่น 2 หรือ 4 คนแข่งกันในประเภทเดี่ยวหรือประเภทคู่\n"
-"คุณสามารถใช้ปลั๊กอินนี้กับเทนนิส เทเบิลเทนนิส สควอช พาเดล แบดมินตัน วอลเลย์บอลชายหาด และอาจรวมถึงกีฬาอื่นๆ"
+msgid "This plugin can be used for all types of sports where 2 or 4 players compete in singles or doubles.\nYou can use this plugin for tennis, table tennis, squash, padel, badminton, beach volleyball and probably for more."
+msgstr "ปลั๊กอินนี้ใช้ได้กับกีฬาทุกประเภทที่มีผู้เล่น 2 หรือ 4 คนแข่งกันในประเภทเดี่ยวหรือประเภทคู่\nคุณสามารถใช้ปลั๊กอินนี้กับเทนนิส เทเบิลเทนนิส สควอช พาเดล แบดมินตัน วอลเลย์บอลชายหาด และอาจรวมถึงกีฬาอื่นๆ"
 
 #. Found in faq paragraph.
 msgid "Yes. When creating a tournament, you can choose whether to create a singles or a doubles tournament."
@@ -156,118 +220,6 @@ msgstr "ได้ เมื่อสร้างทัวร์นาเมน�
 #. Found in faq header.
 msgid "What sports tournaments is this plugin for?"
 msgstr "ปลั๊กอินนี้ใช้กับทัวร์นาเมนต์กีฬาประเภทใด"
-
-#. Found in description paragraph.
-msgid "<strong>General Features:</strong>"
-msgstr "<strong>คุณสมบัติทั่วไป:</strong>"
-
-#. Found in description paragraph.
-msgid "<strong>Doubles Rotation Tournament:</strong>"
-msgstr "<strong>ทัวร์นาเมนต์ประเภทคู่แบบหมุนเวียน:</strong>"
-
-#. Found in description paragraph.
-msgid "<strong>Singles Rotation Tournament:</strong>"
-msgstr "<strong>ทัวร์นาเมนต์ประเภทเดี่ยวแบบหมุนเวียน:</strong>"
-
-#. Found in description paragraph.
-msgid "The participants of a tournament change partners several times during the tournament by a random selection and play against different players. The ratio of games won to games lost is calculated for each participant. The winner of the tournament is the player with this highest ratio. While a Singles Rotation Tournament can be organized without the aid of technology, in the case of a Doubles Rotation Tournament, this is not possible."
-msgstr "ผู้เข้าร่วมทัวร์นาเมนต์จะเปลี่ยนคู่หูหลายครั้งระหว่างทัวร์นาเมนต์โดยการสุ่ม และแข่งกับผู้เล่นต่างๆ ผู้เข้าร่วมแต่ละคนจะถูกคำนวณอัตราส่วนเกมที่ชนะต่อเกมที่แพ้ ผู้ชนะทัวร์นาเมนต์คือผู้เล่นที่มีอัตราส่วนสูงสุด แม้ทัวร์นาเมนต์ประเภทเดี่ยวแบบหมุนเวียนจะจัดได้โดยไม่ต้องใช้เทคโนโลยี แต่ทัวร์นาเมนต์ประเภทคู่แบบหมุนเวียนทำเช่นนั้นไม่ได้"
-
-#. Found in description paragraph.
-msgid "The <strong>Rotation Tournaments</strong> have a strong social aspect because its goal is to keep players in the tournament until the very end. The situation where weaker players would leave the tournament due to elimination rounds is eliminated. It allows grouping players into a special category with special conditions. This special setting can be utilized, for example, in mixed tournaments."
-msgstr "<strong>ทัวร์นาเมนต์แบบหมุนเวียน</strong> มีมิติทางสังคมสูง เพราะมีเป้าหมายให้ผู้เล่นอยู่ในทัวร์นาเมนต์จนจบ ไม่มีสถานการณ์ที่ผู้เล่นที่อ่อนกว่าต้องออกจากทัวร์นาเมนต์เพราะรอบคัดออก สามารถจัดผู้เล่นไว้ในประเภทพิเศษที่มีเงื่อนไขพิเศษได้ การตั้งค่าพิเศษนี้ใช้ได้ เช่น ในทัวร์นาเมนต์คู่ผสม"
-
-#. Found in description paragraph.
-msgid "In <strong>Rotation Tournaments</strong>, each participant plays against every other participant and there are no eliminations in individual rounds. To maximize the variety of match combinations, the matches are typically played in a single set."
-msgstr "ใน <strong>ทัวร์นาเมนต์แบบหมุนเวียน</strong> ผู้เข้าร่วมแต่ละคนจะแข่งกับผู้เข้าร่วมคนอื่นทุกคน และไม่มีการคัดออกในแต่ละรอบ เพื่อให้ได้รูปแบบการจับคู่ที่หลากหลายที่สุด แมตช์มักแข่งกันเพียงเซตเดียว"
-
-#. Found in description list item.
-msgid "Suitable for various sports: tennis, table tennis, squash, padel, badminton, beach volleyball, and more."
-msgstr "เหมาะกับกีฬาหลายประเภท: เทนนิส เทเบิลเทนนิส สควอช พาเดล แบดมินตัน วอลเลย์บอลชายหาด และอื่นๆ"
-
-#. Found in description list item.
-msgid "Integration with website user accounts."
-msgstr "เชื่อมต่อกับบัญชีผู้ใช้ของเว็บไซต์"
-
-#. Found in description list item.
-msgid "No downtime during the tournament."
-msgstr "ไม่มีช่วงเวลารอระหว่างทัวร์นาเมนต์"
-
-#. Found in description list item.
-msgid "Comprehensive overview of player quality."
-msgstr "ภาพรวมฝีมือของผู้เล่นอย่างครบถ้วน"
-
-#. Found in description list item.
-msgid "User-friendly interface for administrators and participants."
-msgstr "หน้าจอใช้งานง่ายสำหรับผู้ดูแลและผู้เข้าร่วม"
-
-#. Found in description list item.
-msgid "Customizable settings for each tournament."
-msgstr "ปรับการตั้งค่าได้สำหรับแต่ละทัวร์นาเมนต์"
-
-#. Found in description list item.
-msgid "Real-time score tracking."
-msgstr "ติดตามคะแนนแบบเรียลไทม์"
-
-#. Found in description list item.
-msgid "Seamless scheduling of matches."
-msgstr "จัดตารางแมตช์ได้อย่างราบรื่น"
-
-#. Found in description list item.
-msgid "Announcement of the Best Player and Most Ideal Pair at the end of the tournament."
-msgstr "ประกาศผู้เล่นยอดเยี่ยมและคู่ในอุดมคติเมื่อจบทัวร์นาเมนต์"
-
-#. Found in description list item.
-msgid "Ranking based on the ratio of games won to games lost."
-msgstr "จัดอันดับตามอัตราส่วนเกมที่ชนะต่อเกมที่แพ้"
-
-#. Found in description list item.
-msgid "Individual players can join or leave the tournament at any time."
-msgstr "ผู้เล่นแต่ละคนเข้าร่วมหรือออกจากทัวร์นาเมนต์ได้ทุกเมื่อ"
-
-#. Found in description list item.
-msgid "Tournament can be interrupted or extended without disruption."
-msgstr "หยุดหรือขยายเวลาทัวร์นาเมนต์ได้โดยไม่กระทบการดำเนินทัวร์นาเมนต์"
-
-#. Found in description list item.
-msgid "Shorter matches for more participation."
-msgstr "แมตช์สั้นลงเพื่อให้เข้าร่วมได้มากขึ้น"
-
-#. Found in description list item.
-msgid "No eliminations, ensuring all players stay in the game."
-msgstr "ไม่มีการคัดออก ผู้เล่นทุกคนอยู่ในเกมตลอด"
-
-#. Found in description list item.
-msgid "Define special groups of players with unique conditions."
-msgstr "กำหนดกลุ่มพิเศษของผู้เล่นที่มีเงื่อนไขเฉพาะ"
-
-#. Found in description list item.
-msgid "Suitable for odd numbers of players and minimum lineups of 4 players."
-msgstr "เหมาะกับผู้เล่นจำนวนคี่และผู้เล่นขั้นต่ำ 4 คน"
-
-#. Found in description list item.
-msgid "Individuals can enter the tournament without a permanent teammate."
-msgstr "เข้าร่วมทัวร์นาเมนต์ได้โดยไม่ต้องมีคู่หูประจำ"
-
-#. Found in description list item.
-msgid "Rotation of teammates, ensuring variety in partnerships."
-msgstr "การหมุนเวียนคู่หูทำให้การจับคู่หลากหลาย"
-
-#. Found in description list item.
-msgid "Alternative form of a Doubles Tournament where players enter each match with a different partner and in different positions (alternating left and right sides)."
-msgstr "รูปแบบทางเลือกของทัวร์นาเมนต์ประเภทคู่ ที่ผู้เล่นจะเปลี่ยนคู่หูและตำแหน่งในทุกแมตช์ (สลับฝั่งซ้ายและขวา)"
-
-#. Found in description list item.
-msgid "Depending on the time options, everyone plays against everyone."
-msgstr "ตามเวลาที่มี ทุกคนจะได้แข่งกับทุกคน"
-
-#. Found in description list item.
-msgid "Alternative form of a Singles Tournament where players face each other without elimination rounds."
-msgstr "รูปแบบทางเลือกของทัวร์นาเมนต์ประเภทเดี่ยว ที่ผู้เล่นแข่งกันโดยไม่มีรอบคัดออก"
-
-#. Found in description header.
-msgid "Features"
-msgstr "คุณสมบัติ"
 
 #. Found in faq header.
 msgid "Is this plugin suitable for singles tournaments?"
@@ -306,16 +258,43 @@ msgid "Install the plugin as usual."
 msgstr "ติดตั้งปลั๊กอินตามปกติ"
 
 #. Found in description paragraph.
-msgid "Visit <a href=\"https://doroto.ltcchrast.cz/\">test page</a> for more information, try to create your own tournament and take a look at <a href=\"https://doroto.ltcchrast.cz/rules-of-the-doubles-rotation-tournament/\">Rules of the Doubles Rotation Tournament</a>."
-msgstr "เยี่ยมชม <a href=\"https://doroto.ltcchrast.cz/\">หน้าทดสอบ</a> เพื่อดูข้อมูลเพิ่มเติม ลองสร้างทัวร์นาเมนต์ของคุณเอง และดู <a href=\"https://doroto.ltcchrast.cz/rules-of-the-doubles-rotation-tournament/\">กติกาทัวร์นาเมนต์ประเภทคู่แบบหมุนเวียน</a>"
-
-#. Found in description paragraph.
 msgid "[youtube https://www.youtube.com/watch?v=NoL9aPTv8u8]"
 msgstr "[youtube https://www.youtube.com/watch?v=NoL9aPTv8u8]"
 
-#. Found in description header.
-msgid "More information"
-msgstr "ข้อมูลเพิ่มเติม"
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - readme: new description of the draw, the blocks and the app; new screenshots (also in Spanish for Chile)"
+msgstr "ปรับปรุง – readme: คำอธิบายใหม่ของการสุ่ม บล็อก และแอป; ภาพหน้าจอใหม่ (มีภาษาสเปนแบบชิลีด้วย)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - new plugin icon and banner, the same icon as the Android app"
+msgstr "ปรับปรุง – ไอคอนและแบนเนอร์ใหม่ของปลั๊กอิน ใช้ไอคอนเดียวกับแอป Android"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "2.0.2 - 2026/10/15"
+msgstr "2.0.2 - 2026/10/15"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - English variants for the UK, Australia, Canada, New Zealand and South Africa"
+msgstr "เพิ่ม – ภาษาอังกฤษแบบสหราชอาณาจักร ออสเตรเลีย แคนาดา นิวซีแลนด์ และแอฟริกาใต้"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - the round-end notice of the tournament block no longer repeats the texts of its buttons"
+msgstr "ปรับปรุง – การแจ้งเตือนจบรอบในบล็อกทัวร์นาเมนต์ไม่ซ้ำข้อความของปุ่มอีกต่อไป"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - messages, headings and notices are translated as whole sentences, so languages with a different word order (e.g. Turkish, Hungarian, Hindi, Japanese, Korean and Chinese) read naturally"
+msgstr "ปรับปรุง – ข้อความ หัวข้อ และการแจ้งเตือนได้รับการแปลเป็นประโยคเต็ม เพื่อให้ภาษาที่มีลำดับคำต่างกัน (เช่น ตุรกี ฮังการี ฮินดี ญี่ปุ่น เกาหลี และจีน) อ่านได้อย่างเป็นธรรมชาติ"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "2.0.1 - 2026/10/08"
+msgstr "2.0.1 - 2026/10/08"
 
 #. Found in changelog list item.
 #, gp-priority: low
@@ -1189,21 +1168,13 @@ msgstr "แก้ไข – หากลบทัวร์นาเมนต์�
 
 #. Found in changelog paragraph.
 #, gp-priority: low
-msgid ""
-"Trial tournament improvements.\n"
-"Added the option to announce the end of the tournament round."
-msgstr ""
-"ปรับปรุงทัวร์นาเมนต์ทดลอง\n"
-"เพิ่มตัวเลือกประกาศการจบรอบของทัวร์นาเมนต์"
+msgid "Trial tournament improvements.\nAdded the option to announce the end of the tournament round."
+msgstr "ปรับปรุงทัวร์นาเมนต์ทดลอง\nเพิ่มตัวเลือกประกาศการจบรอบของทัวร์นาเมนต์"
 
 #. Found in changelog paragraph.
 #, gp-priority: low
-msgid ""
-"Improved the visual appearance of the main page.\n"
-"Badminton added to the list of available tournaments."
-msgstr ""
-"ปรับปรุงหน้าตาของหน้าหลัก\n"
-"เพิ่มแบดมินตันในรายการทัวร์นาเมนต์ที่มี"
+msgid "Improved the visual appearance of the main page.\nBadminton added to the list of available tournaments."
+msgstr "ปรับปรุงหน้าตาของหน้าหลัก\nเพิ่มแบดมินตันในรายการทัวร์นาเมนต์ที่มี"
 
 #. Found in changelog paragraph.
 #, gp-priority: low
@@ -1212,65 +1183,33 @@ msgstr "ตัวเลือกประกาศผู้ชนะแยกก
 
 #. Found in changelog paragraph.
 #, gp-priority: low
-msgid ""
-"Notices after a plugin activation.\n"
-"Added player trend."
-msgstr ""
-"การแจ้งเตือนหลังเปิดใช้งานปลั๊กอิน\n"
-"เพิ่มเทรนด์ของผู้เล่น"
+msgid "Notices after a plugin activation.\nAdded player trend."
+msgstr "การแจ้งเตือนหลังเปิดใช้งานปลั๊กอิน\nเพิ่มเทรนด์ของผู้เล่น"
 
 #. Found in changelog paragraph.
 #, gp-priority: low
-msgid ""
-"Modified tournament editing tab.\n"
-"Added option to change tournament type."
-msgstr ""
-"ปรับแท็บแก้ไขทัวร์นาเมนต์\n"
-"เพิ่มตัวเลือกเปลี่ยนประเภททัวร์นาเมนต์"
+msgid "Modified tournament editing tab.\nAdded option to change tournament type."
+msgstr "ปรับแท็บแก้ไขทัวร์นาเมนต์\nเพิ่มตัวเลือกเปลี่ยนประเภททัวร์นาเมนต์"
 
 #. Found in changelog paragraph.
 #, gp-priority: low
-msgid ""
-"Reactivating the plugin doesn´t affect the already deleted tournament example. \n"
-"Unblock offering maximum games count.\n"
-"Fix tournament change when entering results.\n"
-"Added quick help for newcomers.\n"
-"Allow the final match also for singles."
-msgstr ""
-"การเปิดใช้งานปลั๊กอินอีกครั้งไม่กระทบทัวร์นาเมนต์ตัวอย่างที่ลบไปแล้ว\n"
-"ปลดล็อกตัวเลือกจำนวนเกมสูงสุด\n"
-"แก้ไขการเปลี่ยนทัวร์นาเมนต์ขณะใส่ผล\n"
-"เพิ่มวิธีใช้แบบย่อสำหรับผู้ใช้ใหม่\n"
-"อนุญาตแมตช์ชิงชนะเลิศสำหรับประเภทเดี่ยวด้วย"
+msgid "Reactivating the plugin doesn´t affect the already deleted tournament example. \nUnblock offering maximum games count.\nFix tournament change when entering results.\nAdded quick help for newcomers.\nAllow the final match also for singles."
+msgstr "การเปิดใช้งานปลั๊กอินอีกครั้งไม่กระทบทัวร์นาเมนต์ตัวอย่างที่ลบไปแล้ว\nปลดล็อกตัวเลือกจำนวนเกมสูงสุด\nแก้ไขการเปลี่ยนทัวร์นาเมนต์ขณะใส่ผล\nเพิ่มวิธีใช้แบบย่อสำหรับผู้ใช้ใหม่\nอนุญาตแมตช์ชิงชนะเลิศสำหรับประเภทเดี่ยวด้วย"
 
 #. Found in changelog paragraph.
 #, gp-priority: low
-msgid ""
-"Added the option for single tournaments. \n"
-"Created an environment for additional sports."
-msgstr ""
-"เพิ่มตัวเลือกทัวร์นาเมนต์ประเภทเดี่ยว\n"
-"สร้างสภาพแวดล้อมสำหรับกีฬาอื่นเพิ่มเติม"
+msgid "Added the option for single tournaments. \nCreated an environment for additional sports."
+msgstr "เพิ่มตัวเลือกทัวร์นาเมนต์ประเภทเดี่ยว\nสร้างสภาพแวดล้อมสำหรับกีฬาอื่นเพิ่มเติม"
 
 #. Found in changelog paragraph.
 #, gp-priority: low
-msgid ""
-"The administrator can now use 'hide' option when editing the match result.\n"
-"Free score input is allowed. This opens using not only for tennis but for example for table tennis or beach volleyball."
-msgstr ""
-"ตอนนี้ผู้ดูแลใช้ตัวเลือก “ซ่อน” ขณะแก้ไขผลแมตช์ได้\n"
-"อนุญาตให้ใส่คะแนนได้อิสระ ทำให้ใช้ได้ไม่เพียงกับเทนนิส แต่ยังใช้กับเทเบิลเทนนิสหรือวอลเลย์บอลชายหาดได้ด้วย"
+msgid "The administrator can now use 'hide' option when editing the match result.\nFree score input is allowed. This opens using not only for tennis but for example for table tennis or beach volleyball."
+msgstr "ตอนนี้ผู้ดูแลใช้ตัวเลือก “ซ่อน” ขณะแก้ไขผลแมตช์ได้\nอนุญาตให้ใส่คะแนนได้อิสระ ทำให้ใช้ได้ไม่เพียงกับเทนนิส แต่ยังใช้กับเทเบิลเทนนิสหรือวอลเลย์บอลชายหาดได้ด้วย"
 
 #. Found in changelog paragraph.
 #, gp-priority: low
-msgid ""
-"Minor changes in code:\n"
-"* Allow to transfer organizer rights to a non-playing user.\n"
-"* Ensuring an even rotation of serves at the start of the tournament."
-msgstr ""
-"การเปลี่ยนแปลงเล็กน้อยในโค้ด:\n"
-"* อนุญาตให้โอนสิทธิ์ผู้จัดให้ผู้ใช้ที่ไม่ได้เล่น\n"
-"* ทำให้การเสิร์ฟหมุนเวียนอย่างสม่ำเสมอเมื่อเริ่มทัวร์นาเมนต์"
+msgid "Minor changes in code:\n* Allow to transfer organizer rights to a non-playing user.\n* Ensuring an even rotation of serves at the start of the tournament."
+msgstr "การเปลี่ยนแปลงเล็กน้อยในโค้ด:\n* อนุญาตให้โอนสิทธิ์ผู้จัดให้ผู้ใช้ที่ไม่ได้เล่น\n* ทำให้การเสิร์ฟหมุนเวียนอย่างสม่ำเสมอเมื่อเริ่มทัวร์นาเมนต์"
 
 #. Found in changelog paragraph.
 #, gp-priority: low
@@ -1286,23 +1225,3 @@ msgstr "ปรับหน้าจอผู้ดูแลเล็กน้อ
 #, gp-priority: low
 msgid "First release to public."
 msgstr "เผยแพร่สู่สาธารณะครั้งแรก"
-
-#. Found in changelog header.
-#, gp-priority: low
-msgid "2.0.1 - 2026/10/08"
-msgstr "2.0.1 - 2026/10/08"
-
-#. Found in changelog list item.
-#, gp-priority: low
-msgid "Improvement - messages, headings and notices are translated as whole sentences, so languages with a different word order (e.g. Turkish, Hungarian, Hindi, Japanese, Korean and Chinese) read naturally"
-msgstr "ปรับปรุง – ข้อความ หัวข้อ และการแจ้งเตือนได้รับการแปลเป็นประโยคเต็ม เพื่อให้ภาษาที่มีลำดับคำต่างกัน (เช่น ตุรกี ฮังการี ฮินดี ญี่ปุ่น เกาหลี และจีน) อ่านได้อย่างเป็นธรรมชาติ"
-
-#. Found in changelog list item.
-#, gp-priority: low
-msgid "Improvement - the round-end notice of the tournament block no longer repeats the texts of its buttons"
-msgstr "ปรับปรุง – การแจ้งเตือนจบรอบในบล็อกทัวร์นาเมนต์ไม่ซ้ำข้อความของปุ่มอีกต่อไป"
-
-#. Found in changelog list item.
-#, gp-priority: low
-msgid "Add - English variants for the UK, Australia, Canada, New Zealand and South Africa"
-msgstr "เพิ่ม – ภาษาอังกฤษแบบสหราชอาณาจักร ออสเตรเลีย แคนาดา นิวซีแลนด์ และแอฟริกาใต้"

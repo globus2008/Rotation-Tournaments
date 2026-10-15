@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plugins - Rotation Tournaments - Development Readme (trunk)\n"
-"PO-Revision-Date: 2026-10-08 18:18:50+0000\n"
+"PO-Revision-Date: 2026-10-15 07:57:04+0000\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -13,13 +13,161 @@ msgstr ""
 
 #. Short description.
 #, gp-priority: high
-msgid "Do you play Singles or Doubles Tournaments? This plugin manages Rotation Tournaments where players have a different partner in each game."
-msgstr "Pelaatko kaksin- vai nelinpeliturnauksia? Tämä lisäosa hallinnoi kiertoturnauksia, joissa pelaajilla on jokaisessa pelissä uusi pari."
+msgid "Run doubles and singles tournaments where players get a new partner every match: fair draws, live results, standings and an Android app."
+msgstr "Järjestä nelin- ja kaksinpeliturnauksia, joissa pelaajat saavat jokaisessa ottelussa uuden parin: reilut arvonnat, reaaliaikaiset tulokset, sijoitukset ja Android-sovellus."
 
 #. Plugin name.
 #, gp-priority: high
 msgid "Rotation Tournaments"
 msgstr "Kiertoturnaukset"
+
+#. Found in faq paragraph.
+msgid "An iOS version is planned, but there is no release date yet. The tournament pages work in any mobile browser, including iPhone and iPad."
+msgstr "iOS-versio on suunnitteilla, mutta julkaisupäivää ei vielä ole. Turnaussivut toimivat kaikissa mobiiliselaimissa, myös iPhonessa ja iPadissa."
+
+#. Found in description paragraph.
+msgid "The free <a href=\"https://play.google.com/store/apps/details?id=cz.doroto.app\">Rotation Tournaments app</a> connects to your website: players follow the tournament, enter their results and organizers manage it from the court. The app is available in 27 languages. Several devices can be signed in to one account."
+msgstr "Ilmainen <a href=\"https://play.google.com/store/apps/details?id=cz.doroto.app\">Rotation Tournaments -sovellus</a> yhdistyy sivustoosi: pelaajat seuraavat turnausta ja syöttävät tuloksensa, ja järjestäjät hallitsevat sitä suoraan kentältä. Sovellus on saatavilla 27 kielellä. Samaan tiliin voi olla kirjautuneena useita laitteita."
+
+#. Found in description paragraph.
+msgid "<strong>Android app</strong>"
+msgstr "<strong>Android-sovellus</strong>"
+
+#. Found in description paragraph.
+msgid "<strong>For the website</strong>"
+msgstr "<strong>Sivustolle</strong>"
+
+#. Found in description paragraph.
+msgid "<strong>The draw</strong>"
+msgstr "<strong>Arvonta</strong>"
+
+#. Found in description paragraph.
+msgid "<strong>How a tournament works</strong>"
+msgstr "<strong>Miten turnaus etenee</strong>"
+
+#. Found in description paragraph.
+msgid "It is made for club evenings and social tournaments in <strong>tennis, padel, badminton, table tennis, squash, beach volleyball</strong> and other sports played one against one or two against two."
+msgstr "Se on tehty seurailtoihin ja leikkimielisiin turnauksiin <strong>tenniksessä, padelissa, sulkapallossa, pöytätenniksessä, squashissa, rantalentopallossa</strong> ja muissa lajeissa, joita pelataan yksi yhtä tai kaksi kahta vastaan."
+
+#. Found in description paragraph.
+msgid "<strong>Rotation Tournaments</strong> runs club tournaments in which nobody is knocked out. In doubles, every player gets a <strong>new partner in every match</strong> and meets as many different opponents as possible. The ranking is the ratio of games won to games lost, so everybody plays until the very end."
+msgstr "<strong>Kiertoturnaukset</strong> pyörittää seuraturnauksia, joissa kukaan ei putoa. Nelinpelissä jokainen pelaaja saa <strong>uuden parin jokaiseen otteluun</strong> ja kohtaa mahdollisimman monta eri vastustajaa. Sijoitus määräytyy voitettujen ja hävittyjen pelien suhteesta, joten kaikki pelaavat loppuun asti."
+
+#. Found in description list item.
+msgid "Video introduction:"
+msgstr "Esittelyvideo:"
+
+#. Found in description list item.
+msgid "<a href=\"https://doroto.ltcchrast.cz/rules-of-the-doubles-rotation-tournament/\">Rules of the Doubles Rotation Tournament</a>."
+msgstr "<a href=\"https://doroto.ltcchrast.cz/rules-of-the-doubles-rotation-tournament/\">Nelinpelin kiertoturnauksen säännöt</a>."
+
+#. Found in description list item.
+msgid "<a href=\"https://doroto.ltcchrast.cz/\">Demo site</a> where you can create your own tournament."
+msgstr "<a href=\"https://doroto.ltcchrast.cz/\">Esittelysivusto</a>, jossa voit luoda oman turnauksen."
+
+#. Found in description list item.
+msgid "Players sign in with their WordPress accounts; full or shortened names (privacy)."
+msgstr "Pelaajat kirjautuvat WordPress-tileillään; koko nimet tai lyhennetyt nimet (yksityisyys)."
+
+#. Found in description list item.
+msgid "Guided tours of the page and four example tournaments."
+msgstr "Opastetut kierrokset sivulla ja neljä esimerkkiturnausta."
+
+#. Found in description list item.
+msgid "Colors follow your theme; the block's Styles panel can change them."
+msgstr "Värit noudattavat teemaasi; lohkon Tyylit-paneelissa niitä voi muuttaa."
+
+#. Found in description list item.
+msgid "Share dialog with a QR code and a link that opens the tournament in the app."
+msgstr "Jaa-ikkuna, jossa on QR-koodi ja linkki, joka avaa turnauksen sovelluksessa."
+
+#. Found in description list item.
+msgid "Live updates without reloading the page."
+msgstr "Päivittyy reaaliajassa ilman sivun uudelleenlatausta."
+
+#. Found in description list item.
+msgid "Blocks for the block editor: \"Rotation tournament\" (matches, results, players, statistics and settings on tabs), \"Tournament standings\", \"Tournament matches\", \"Tournament presentation\", \"Tournament list\" and \"Tournament invitation\". Shortcodes for the classic editor."
+msgstr "Lohkot lohkoeditoriin: ”Kiertoturnaus” (ottelut, tulokset, pelaajat, tilastot ja asetukset välilehdillä), ”Turnauksen sijoitukset”, ”Turnauksen ottelut”, ”Turnauksen esitys”, ”Turnausluettelo” ja ”Turnauskutsu”. Lyhytkoodit klassiseen editoriin."
+
+#. Found in description list item.
+msgid "Special group of players (e.g. women in a mixed tournament) with its own rules: mixed teams only, a separate winner and more."
+msgstr "Pelaajien erityisryhmä (esim. naiset sekaturnauksessa) omilla säännöillään: vain sekaparit, erillinen voittaja ja muuta."
+
+#. Found in description list item.
+msgid "Works with any number of players from 4 up, odd numbers included; players can join, pause or leave at any time."
+msgstr "Toimii millä tahansa pelaajamäärällä neljästä ylöspäin, myös parittomalla; pelaajat voivat liittyä, pitää taukoa tai lähteä milloin tahansa."
+
+#. Found in description list item.
+msgid "Players with fewer games and longer rest go first; sides (left/right) and serve alternate."
+msgstr "Etusijalla ovat pelaajat, joilla on vähemmän otteluita ja pidempi lepo; puolet (vasen/oikea) ja syöttövuoro vaihtelevat."
+
+#. Found in description list item.
+msgid "Opponents are chosen by previous meetings too, so the same players meet less often."
+msgstr "Vastustajat valitaan myös aiempien kohtaamisten perusteella, joten samat pelaajat kohtaavat harvemmin."
+
+#. Found in description list item.
+msgid "New teammates first: the plugin pairs players who have not played together yet."
+msgstr "Ensin uudet parit: lisäosa yhdistää pelaajia, jotka eivät ole vielä pelanneet yhdessä."
+
+#. Found in description list item.
+msgid "At the end the organizer closes the tournament and the best player and the best pair are announced."
+msgstr "Lopuksi järjestäjä päättää turnauksen, ja paras pelaaja ja paras pari julkistetaan."
+
+#. Found in description list item.
+msgid "Standings, statistics and the presentation on a big screen update live."
+msgstr "Sijoitukset, tilastot ja suuren näytön esitys päivittyvät reaaliajassa."
+
+#. Found in description list item.
+msgid "Whoever finishes a match enters the score on the website or in the Android app; the next match is drawn at once."
+msgstr "Ottelun päättäjä syöttää tuloksen sivustolla tai Android-sovelluksessa; seuraava ottelu arvotaan heti."
+
+#. Found in description list item.
+msgid "Players join (also later, during the tournament) and the plugin draws the first matches for the free courts."
+msgstr "Pelaajat liittyvät (myös myöhemmin, turnauksen aikana), ja lisäosa arpoo ensimmäiset ottelut vapaille kentille."
+
+#. Found in description list item.
+msgid "The organizer creates a tournament and shares the invitation link or QR code."
+msgstr "Järjestäjä luo turnauksen ja jakaa kutsulinkin tai QR-koodin."
+
+#. Screenshot description.
+msgid "Android app: entering results, standings and played matches."
+msgstr "Android-sovellus: tulosten syöttö, sijoitukset ja pelatut ottelut."
+
+#. Screenshot description.
+msgid "Tournament settings for organizers."
+msgstr "Turnauksen asetukset järjestäjille."
+
+#. Screenshot description.
+msgid "The \"Rotation tournament\" block in the block editor."
+msgstr "”Kiertoturnaus”-lohko lohkoeditorissa."
+
+#. Screenshot description.
+msgid "Share the tournament with a QR code; it opens the tournament in the app."
+msgstr "Jaa turnaus QR-koodilla; se avaa turnauksen sovelluksessa."
+
+#. Found in description list item.
+msgid "Presentation mode for a TV or projector in the club house."
+msgstr "Esitystila television tai projektorin näytölle seuran tiloissa."
+
+#. Screenshot description.
+msgid "Statistics: how often a player played with and against each other player."
+msgstr "Tilastot: kuinka usein pelaaja on pelannut kunkin muun pelaajan kanssa ja vastaan."
+
+#. Screenshot description.
+msgid "Live standings by the ratio of games won to games lost, with the trend of each player."
+msgstr "Reaaliaikaiset sijoitukset voitettujen ja hävittyjen pelien suhteen mukaan, jokaisen pelaajan trendin kanssa."
+
+#. Screenshot description.
+msgid "Results of all matches, with a filter by player."
+msgstr "Kaikkien otteluiden tulokset, pelaajakohtaisella suodattimella."
+
+#. Screenshot description.
+msgid "Ongoing matches: the next match is drawn as soon as a score is saved. Names of the special group are highlighted."
+msgstr "Käynnissä olevat ottelut: seuraava ottelu arvotaan heti, kun tulos on tallennettu. Erityisryhmän nimet on korostettu."
+
+#. Screenshot description.
+msgid "The same tournament on the website and in the Android app."
+msgstr "Sama turnaus sivustolla ja Android-sovelluksessa."
 
 #. Found in installation paragraph.
 msgid "After installation, go to the app's settings and enter the address of your website where this plugin is installed."
@@ -33,25 +181,9 @@ msgstr "Tai lataa se suoraan tästä: https://play.google.com/store/apps/details
 msgid "Search for \"Rotation Tournaments\" on the Google Play Store."
 msgstr "Hae Google Playsta ”Rotation Tournaments”."
 
-#. Found in description paragraph.
-msgid "To get the full experience of managing tournaments on the go, download our mobile app, now available on Google Play!"
-msgstr "Hallinnoi turnauksia täysipainoisesti liikkeellä ollessasi: lataa mobiilisovelluksemme, joka on nyt saatavilla Google Playssa!"
-
-#. Found in description paragraph.
-msgid "<strong>YouTube quick intro:</strong>"
-msgstr "<strong>Lyhyt esittely YouTubessa:</strong>"
-
-#. Found in description list item.
-msgid "Video for a quick introduction to the Rotation Tournament:"
-msgstr "Video, jossa on lyhyt esittely kiertoturnauksesta:"
-
 #. Found in faq paragraph.
 msgid "Yes. If you install the Rotation Tournaments plugin, allow player registration, and enable visibility in the website list, your site can appear in the Android app. Initially, someone must manually enter your website address into the app. After that, it becomes visible in the list for all users."
 msgstr "Kyllä. Jos asennat Rotation Tournaments -lisäosan, sallit pelaajien rekisteröitymisen ja otat käyttöön näkyvyyden sivustoluettelossa, sivustosi voi näkyä Android-sovelluksessa. Ensin jonkun on syötettävä sivustosi osoite sovellukseen käsin. Sen jälkeen sivusto näkyy luettelossa kaikille käyttäjille."
-
-#. Found in faq paragraph.
-msgid "Yes. An iOS version of the Rotation Tournaments app is planned and will be released in the near future."
-msgstr "Kyllä. Rotation Tournaments -sovelluksen iOS-versio on suunnitteilla ja julkaistaan pian."
 
 #. Found in faq header.
 msgid "Will my website be visible in the Rotation Tournaments Android app?"
@@ -74,80 +206,12 @@ msgid "<strong>How to install the Android app:</strong>"
 msgstr "<strong>Android-sovelluksen asentaminen:</strong>"
 
 #. Found in description paragraph.
-msgid "<strong>This plugin is the server-side for the \"Rotation Tournaments\" Android app.</strong>"
-msgstr "<strong>Tämä lisäosa on Android-sovelluksen ”Rotation Tournaments” palvelinpuoli.</strong>"
-
-#. Screenshot description.
-msgid "Individual tournament participants enter their results into the WordPress server and share the data with each other."
-msgstr "Turnauksen osallistujat syöttävät tuloksensa WordPress-palvelimelle ja jakavat tiedot keskenään."
-
-#. Screenshot description.
-msgid "Matches played. (Android app)"
-msgstr "Pelatut ottelut. (Android-sovellus)"
-
-#. Screenshot description.
-msgid "Tournament table. (Wordpress)"
-msgstr "Turnauksen taulukko. (WordPress)"
-
-#. Screenshot description.
-msgid "Matches drawn. (Android app)"
-msgstr "Arvotut ottelut. (Android-sovellus)"
-
-#. Screenshot description.
-msgid "Editing tournament parameters. (Wordpress)"
-msgstr "Turnauksen parametrien muokkaus. (WordPress)"
-
-#. Screenshot description.
-msgid "Table of players with rankings. (Android app)"
-msgstr "Pelaajataulukko sijoituksineen. (Android-sovellus)"
-
-#. Screenshot description.
-msgid "Matches played. (Wordpress)"
-msgstr "Pelatut ottelut. (WordPress)"
-
-#. Screenshot description.
-msgid "Basic overview of the tournament. (Android app)"
-msgstr "Turnauksen yleiskatsaus. (Android-sovellus)"
-
-#. Screenshot description.
-msgid "Matches drawn. (Wordpress)"
-msgstr "Arvotut ottelut. (WordPress)"
-
-#. Found in description paragraph.
-msgid "<strong>Rotation Tournaments</strong> provides a platform for organizing all kinds of sports Singles and Doubles Tournaments, e.g."
-msgstr "<strong>Kiertoturnaukset</strong> on alusta kaikenlaisten kaksin- ja nelinpeliturnausten järjestämiseen, esimerkiksi:"
-
-#. Found in description list item.
-msgid "Squash"
-msgstr "Squash"
-
-#. Found in description list item.
-msgid "Beach Volleyball"
-msgstr "Rantalentopallo"
-
-#. Found in description list item.
-msgid "Badminton"
-msgstr "Sulkapallo"
-
-#. Found in description list item.
-msgid "Padel"
-msgstr "Padel"
-
-#. Found in description list item.
-msgid "Table Tennis"
-msgstr "Pöytätennis"
-
-#. Found in description list item.
-msgid "Tennis"
-msgstr "Tennis"
+msgid "<strong>Try it</strong>"
+msgstr "<strong>Kokeile</strong>"
 
 #. Found in faq paragraph.
-msgid ""
-"This plugin can be used for all types of sports where 2 or 4 players compete in singles or doubles.\n"
-"You can use this plugin for tennis, table tennis, squash, padel, badminton, beach volleyball and probably for more."
-msgstr ""
-"Tämä lisäosa sopii kaikkiin lajeihin, joissa 2 tai 4 pelaajaa kilpailee kaksin- tai nelinpelissä.\n"
-"Sitä voi käyttää tenniksessä, pöytätenniksessä, squashissa, padelissa, sulkapallossa, rantalentopallossa ja luultavasti muissakin lajeissa."
+msgid "This plugin can be used for all types of sports where 2 or 4 players compete in singles or doubles.\nYou can use this plugin for tennis, table tennis, squash, padel, badminton, beach volleyball and probably for more."
+msgstr "Tämä lisäosa sopii kaikkiin lajeihin, joissa 2 tai 4 pelaajaa kilpailee kaksin- tai nelinpelissä.\nSitä voi käyttää tenniksessä, pöytätenniksessä, squashissa, padelissa, sulkapallossa, rantalentopallossa ja luultavasti muissakin lajeissa."
 
 #. Found in faq paragraph.
 msgid "Yes. When creating a tournament, you can choose whether to create a singles or a doubles tournament."
@@ -156,118 +220,6 @@ msgstr "Kyllä. Turnausta luotaessa voit valita kaksin- tai nelinpeliturnauksen.
 #. Found in faq header.
 msgid "What sports tournaments is this plugin for?"
 msgstr "Millaisiin urheiluturnauksiin tämä lisäosa on tarkoitettu?"
-
-#. Found in description paragraph.
-msgid "<strong>General Features:</strong>"
-msgstr "<strong>Yleiset ominaisuudet:</strong>"
-
-#. Found in description paragraph.
-msgid "<strong>Doubles Rotation Tournament:</strong>"
-msgstr "<strong>Nelinpelin kiertoturnaus:</strong>"
-
-#. Found in description paragraph.
-msgid "<strong>Singles Rotation Tournament:</strong>"
-msgstr "<strong>Kaksinpelin kiertoturnaus:</strong>"
-
-#. Found in description paragraph.
-msgid "The participants of a tournament change partners several times during the tournament by a random selection and play against different players. The ratio of games won to games lost is calculated for each participant. The winner of the tournament is the player with this highest ratio. While a Singles Rotation Tournament can be organized without the aid of technology, in the case of a Doubles Rotation Tournament, this is not possible."
-msgstr "Turnauksen osallistujat vaihtavat satunnaisesti paria useita kertoja turnauksen aikana ja pelaavat eri pelaajia vastaan. Jokaiselle osallistujalle lasketaan voitettujen ja hävittyjen pelien suhde. Voittaja on pelaaja, jolla on paras suhde. Kaksinpelin kiertoturnauksen voi järjestää ilman tekniikkaa, nelinpelin ei."
-
-#. Found in description paragraph.
-msgid "The <strong>Rotation Tournaments</strong> have a strong social aspect because its goal is to keep players in the tournament until the very end. The situation where weaker players would leave the tournament due to elimination rounds is eliminated. It allows grouping players into a special category with special conditions. This special setting can be utilized, for example, in mixed tournaments."
-msgstr "<strong>Kiertoturnauksissa</strong> on vahva sosiaalinen ulottuvuus, koska niiden tavoitteena on pitää pelaajat mukana turnauksessa loppuun asti. Tilanne, jossa heikommat pelaajat poistuvat turnauksesta pudotuksen vuoksi, on poissuljettu. Pelaajia voi koota erityiskategoriaan erityisehdoin. Tätä erityisasetusta voi käyttää esimerkiksi sekaturnauksissa."
-
-#. Found in description paragraph.
-msgid "In <strong>Rotation Tournaments</strong>, each participant plays against every other participant and there are no eliminations in individual rounds. To maximize the variety of match combinations, the matches are typically played in a single set."
-msgstr "<strong>Kiertoturnauksissa</strong> jokainen osallistuja pelaa jokaista vastaan, eikä kukaan putoa yksittäisillä kierroksilla. Jotta yhdistelmiä saataisiin mahdollisimman paljon, ottelut pelataan yleensä yhteen erään."
-
-#. Found in description list item.
-msgid "Suitable for various sports: tennis, table tennis, squash, padel, badminton, beach volleyball, and more."
-msgstr "Sopii eri lajeihin: tennis, pöytätennis, squash, padel, sulkapallo, rantalentopallo ja muut."
-
-#. Found in description list item.
-msgid "Integration with website user accounts."
-msgstr "Integraatio sivuston käyttäjätileihin."
-
-#. Found in description list item.
-msgid "No downtime during the tournament."
-msgstr "Ei odotusaikoja turnauksen aikana."
-
-#. Found in description list item.
-msgid "Comprehensive overview of player quality."
-msgstr "Täydellinen kuva pelaajien tasosta."
-
-#. Found in description list item.
-msgid "User-friendly interface for administrators and participants."
-msgstr "Käyttäjäystävällinen käyttöliittymä ylläpitäjille ja osallistujille."
-
-#. Found in description list item.
-msgid "Customizable settings for each tournament."
-msgstr "Joustavat asetukset jokaiselle turnaukselle."
-
-#. Found in description list item.
-msgid "Real-time score tracking."
-msgstr "Tulosten seuranta reaaliajassa."
-
-#. Found in description list item.
-msgid "Seamless scheduling of matches."
-msgstr "Kätevä otteluaikataulun laadinta."
-
-#. Found in description list item.
-msgid "Announcement of the Best Player and Most Ideal Pair at the end of the tournament."
-msgstr "Parhaan pelaajan ja ihanteellisen parin julistaminen turnauksen lopussa."
-
-#. Found in description list item.
-msgid "Ranking based on the ratio of games won to games lost."
-msgstr "Sijoitukset määräytyvät voitettujen ja hävittyjen pelien suhteesta."
-
-#. Found in description list item.
-msgid "Individual players can join or leave the tournament at any time."
-msgstr "Pelaajat voivat liittyä turnaukseen tai poistua siitä milloin tahansa."
-
-#. Found in description list item.
-msgid "Tournament can be interrupted or extended without disruption."
-msgstr "Turnauksen voi keskeyttää tai sitä voi pidentää häiritsemättä sen kulkua."
-
-#. Found in description list item.
-msgid "Shorter matches for more participation."
-msgstr "Lyhyemmät ottelut suuremman osallistumisen hyväksi."
-
-#. Found in description list item.
-msgid "No eliminations, ensuring all players stay in the game."
-msgstr "Ei pudotuksia – kaikki pelaajat pysyvät pelissä."
-
-#. Found in description list item.
-msgid "Define special groups of players with unique conditions."
-msgstr "Erityisryhmien määrittäminen erityisehdoin."
-
-#. Found in description list item.
-msgid "Suitable for odd numbers of players and minimum lineups of 4 players."
-msgstr "Sopii parittomalle pelaajamäärälle ja vähintään 4 pelaajan kokoonpanolle."
-
-#. Found in description list item.
-msgid "Individuals can enter the tournament without a permanent teammate."
-msgstr "Turnaukseen voi osallistua ilman pysyvää paria."
-
-#. Found in description list item.
-msgid "Rotation of teammates, ensuring variety in partnerships."
-msgstr "Parien kierto takaa vaihtelevat parit."
-
-#. Found in description list item.
-msgid "Alternative form of a Doubles Tournament where players enter each match with a different partner and in different positions (alternating left and right sides)."
-msgstr "Nelinpeliturnauksen vaihtoehtoinen muoto, jossa pelaajat pelaavat jokaisen ottelun uuden parin kanssa ja eri paikoilla (vuorotellen vasemmalla ja oikealla puolella)."
-
-#. Found in description list item.
-msgid "Depending on the time options, everyone plays against everyone."
-msgstr "Ajan salliessa jokainen pelaa jokaista vastaan."
-
-#. Found in description list item.
-msgid "Alternative form of a Singles Tournament where players face each other without elimination rounds."
-msgstr "Kaksinpeliturnauksen vaihtoehtoinen muoto, jossa pelaajat kohtaavat toisensa ilman pudotuksia."
-
-#. Found in description header.
-msgid "Features"
-msgstr "Ominaisuudet"
 
 #. Found in faq header.
 msgid "Is this plugin suitable for singles tournaments?"
@@ -306,16 +258,43 @@ msgid "Install the plugin as usual."
 msgstr "Asenna lisäosa tavalliseen tapaan."
 
 #. Found in description paragraph.
-msgid "Visit <a href=\"https://doroto.ltcchrast.cz/\">test page</a> for more information, try to create your own tournament and take a look at <a href=\"https://doroto.ltcchrast.cz/rules-of-the-doubles-rotation-tournament/\">Rules of the Doubles Rotation Tournament</a>."
-msgstr "Vieraile <a href=\"https://doroto.ltcchrast.cz/\">testisivulla</a> saadaksesi lisätietoja, kokeile oman turnauksen luomista ja tutustu <a href=\"https://doroto.ltcchrast.cz/rules-of-the-doubles-rotation-tournament/\">nelinpelin kiertoturnauksen sääntöihin</a>."
-
-#. Found in description paragraph.
 msgid "[youtube https://www.youtube.com/watch?v=NoL9aPTv8u8]"
 msgstr "[youtube https://www.youtube.com/watch?v=NoL9aPTv8u8]"
 
-#. Found in description header.
-msgid "More information"
-msgstr "Lisätietoja"
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - readme: new description of the draw, the blocks and the app; new screenshots (also in Spanish for Chile)"
+msgstr "Parannus – readme: uusi kuvaus arvonnasta, lohkoista ja sovelluksesta; uudet kuvakaappaukset (myös Chilen espanjaksi)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - new plugin icon and banner, the same icon as the Android app"
+msgstr "Parannus – lisäosan uusi kuvake ja banneri, sama kuvake kuin Android-sovelluksessa"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "2.0.2 - 2026/10/15"
+msgstr "2.0.2 - 2026/10/15"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - English variants for the UK, Australia, Canada, New Zealand and South Africa"
+msgstr "Lisätty – englannin kielen versiot Yhdistyneelle kuningaskunnalle, Australialle, Kanadalle, Uudelle-Seelannille ja Etelä-Afrikalle"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - the round-end notice of the tournament block no longer repeats the texts of its buttons"
+msgstr "Parannus – turnauslohkon kierroksen päättymisilmoitus ei enää toista painikkeidensa tekstejä"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - messages, headings and notices are translated as whole sentences, so languages with a different word order (e.g. Turkish, Hungarian, Hindi, Japanese, Korean and Chinese) read naturally"
+msgstr "Parannus – viestit, otsikot ja ilmoitukset käännetään kokonaisina lauseina, joten kielet, joissa on eri sanajärjestys (esim. turkki, unkari, hindi, japani, korea ja kiina), kuulostavat luontevilta"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "2.0.1 - 2026/10/08"
+msgstr "2.0.1 - 2026/10/08"
 
 #. Found in changelog list item.
 #, gp-priority: low
@@ -1189,21 +1168,13 @@ msgstr "Korjaus – jos kaikki turnaukset oli poistettu, uutta turnausta ei voin
 
 #. Found in changelog paragraph.
 #, gp-priority: low
-msgid ""
-"Trial tournament improvements.\n"
-"Added the option to announce the end of the tournament round."
-msgstr ""
-"Harjoitusturnauksen parannus.\n"
-"Lisätty mahdollisuus ilmoittaa turnauskierroksen päättymisestä."
+msgid "Trial tournament improvements.\nAdded the option to announce the end of the tournament round."
+msgstr "Harjoitusturnauksen parannus.\nLisätty mahdollisuus ilmoittaa turnauskierroksen päättymisestä."
 
 #. Found in changelog paragraph.
 #, gp-priority: low
-msgid ""
-"Improved the visual appearance of the main page.\n"
-"Badminton added to the list of available tournaments."
-msgstr ""
-"Pääsivun ulkoasua parannettu.\n"
-"Sulkapallo lisätty käytettävissä olevien turnausten luetteloon."
+msgid "Improved the visual appearance of the main page.\nBadminton added to the list of available tournaments."
+msgstr "Pääsivun ulkoasua parannettu.\nSulkapallo lisätty käytettävissä olevien turnausten luetteloon."
 
 #. Found in changelog paragraph.
 #, gp-priority: low
@@ -1212,65 +1183,33 @@ msgstr "Mahdollisuus julistaa erilliset voittajat erityisryhmästä ja sen ulkop
 
 #. Found in changelog paragraph.
 #, gp-priority: low
-msgid ""
-"Notices after a plugin activation.\n"
-"Added player trend."
-msgstr ""
-"Ilmoitus lisäosan aktivoinnin jälkeen.\n"
-"Lisätty pelaajan trendi."
+msgid "Notices after a plugin activation.\nAdded player trend."
+msgstr "Ilmoitus lisäosan aktivoinnin jälkeen.\nLisätty pelaajan trendi."
 
 #. Found in changelog paragraph.
 #, gp-priority: low
-msgid ""
-"Modified tournament editing tab.\n"
-"Added option to change tournament type."
-msgstr ""
-"Turnauksen muokkausvälilehteä muutettu.\n"
-"Lisätty mahdollisuus vaihtaa turnaustyyppiä."
+msgid "Modified tournament editing tab.\nAdded option to change tournament type."
+msgstr "Turnauksen muokkausvälilehteä muutettu.\nLisätty mahdollisuus vaihtaa turnaustyyppiä."
 
 #. Found in changelog paragraph.
 #, gp-priority: low
-msgid ""
-"Reactivating the plugin doesn´t affect the already deleted tournament example. \n"
-"Unblock offering maximum games count.\n"
-"Fix tournament change when entering results.\n"
-"Added quick help for newcomers.\n"
-"Allow the final match also for singles."
-msgstr ""
-"Lisäosan uudelleenaktivointi ei vaikuta jo poistettuun esimerkkiturnaukseen.\n"
-"Pelien enimmäismäärän valinta avattu.\n"
-"Korjattu turnauksen muutos tuloksia syötettäessä.\n"
-"Lisätty lyhyt ohje aloittelijoille.\n"
-"Loppuottelu sallittu myös kaksinpelissä."
+msgid "Reactivating the plugin doesn´t affect the already deleted tournament example. \nUnblock offering maximum games count.\nFix tournament change when entering results.\nAdded quick help for newcomers.\nAllow the final match also for singles."
+msgstr "Lisäosan uudelleenaktivointi ei vaikuta jo poistettuun esimerkkiturnaukseen.\nPelien enimmäismäärän valinta avattu.\nKorjattu turnauksen muutos tuloksia syötettäessä.\nLisätty lyhyt ohje aloittelijoille.\nLoppuottelu sallittu myös kaksinpelissä."
 
 #. Found in changelog paragraph.
 #, gp-priority: low
-msgid ""
-"Added the option for single tournaments. \n"
-"Created an environment for additional sports."
-msgstr ""
-"Lisätty mahdollisuus kaksinpeliturnauksiin.\n"
-"Luotu ympäristö muille lajeille."
+msgid "Added the option for single tournaments. \nCreated an environment for additional sports."
+msgstr "Lisätty mahdollisuus kaksinpeliturnauksiin.\nLuotu ympäristö muille lajeille."
 
 #. Found in changelog paragraph.
 #, gp-priority: low
-msgid ""
-"The administrator can now use 'hide' option when editing the match result.\n"
-"Free score input is allowed. This opens using not only for tennis but for example for table tennis or beach volleyball."
-msgstr ""
-"Ylläpitäjä voi nyt käyttää piilotusvaihtoehtoa ottelun tulosta muuttaessaan.\n"
-"Sallittu tuloksen vapaa syöttäminen. Näin lisäosaa voi käyttää tenniksen lisäksi esimerkiksi pöytätenniksessä tai rantalentopallossa."
+msgid "The administrator can now use 'hide' option when editing the match result.\nFree score input is allowed. This opens using not only for tennis but for example for table tennis or beach volleyball."
+msgstr "Ylläpitäjä voi nyt käyttää piilotusvaihtoehtoa ottelun tulosta muuttaessaan.\nSallittu tuloksen vapaa syöttäminen. Näin lisäosaa voi käyttää tenniksen lisäksi esimerkiksi pöytätenniksessä tai rantalentopallossa."
 
 #. Found in changelog paragraph.
 #, gp-priority: low
-msgid ""
-"Minor changes in code:\n"
-"* Allow to transfer organizer rights to a non-playing user.\n"
-"* Ensuring an even rotation of serves at the start of the tournament."
-msgstr ""
-"Pieniä muutoksia koodiin:\n"
-"* Sallittu järjestäjän oikeuksien siirto käyttäjälle, joka ei pelaa.\n"
-"* Varmistettu syötön tasainen vuorottelu turnauksen alussa."
+msgid "Minor changes in code:\n* Allow to transfer organizer rights to a non-playing user.\n* Ensuring an even rotation of serves at the start of the tournament."
+msgstr "Pieniä muutoksia koodiin:\n* Sallittu järjestäjän oikeuksien siirto käyttäjälle, joka ei pelaa.\n* Varmistettu syötön tasainen vuorottelu turnauksen alussa."
 
 #. Found in changelog paragraph.
 #, gp-priority: low
@@ -1286,23 +1225,3 @@ msgstr "Pieni muutos ylläpitonäkymään."
 #, gp-priority: low
 msgid "First release to public."
 msgstr "Ensimmäinen julkinen julkaisu."
-
-#. Found in changelog header.
-#, gp-priority: low
-msgid "2.0.1 - 2026/10/08"
-msgstr "2.0.1 - 2026/10/08"
-
-#. Found in changelog list item.
-#, gp-priority: low
-msgid "Improvement - messages, headings and notices are translated as whole sentences, so languages with a different word order (e.g. Turkish, Hungarian, Hindi, Japanese, Korean and Chinese) read naturally"
-msgstr "Parannus – viestit, otsikot ja ilmoitukset käännetään kokonaisina lauseina, joten kielet, joissa on eri sanajärjestys (esim. turkki, unkari, hindi, japani, korea ja kiina), kuulostavat luontevilta"
-
-#. Found in changelog list item.
-#, gp-priority: low
-msgid "Improvement - the round-end notice of the tournament block no longer repeats the texts of its buttons"
-msgstr "Parannus – turnauslohkon kierroksen päättymisilmoitus ei enää toista painikkeidensa tekstejä"
-
-#. Found in changelog list item.
-#, gp-priority: low
-msgid "Add - English variants for the UK, Australia, Canada, New Zealand and South Africa"
-msgstr "Lisätty – englannin kielen versiot Yhdistyneelle kuningaskunnalle, Australialle, Kanadalle, Uudelle-Seelannille ja Etelä-Afrikalle"

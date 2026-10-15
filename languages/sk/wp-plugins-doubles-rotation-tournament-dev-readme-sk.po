@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plugins - Rotation Tournaments - Development Readme (trunk)\n"
-"PO-Revision-Date: 2026-10-08 18:18:50+0000\n"
+"PO-Revision-Date: 2026-10-15 07:57:04+0000\n"
 "Language: sk_SK\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -13,13 +13,161 @@ msgstr ""
 
 #. Short description.
 #, gp-priority: high
-msgid "Do you play Singles or Doubles Tournaments? This plugin manages Rotation Tournaments where players have a different partner in each game."
-msgstr "Organizujete turnaje vo dvojhre alebo vo štvorhre? Tento plugin spravuje rotačné turnaje, v ktorých majú hráči v každej hre iného partnera."
+msgid "Run doubles and singles tournaments where players get a new partner every match: fair draws, live results, standings and an Android app."
+msgstr "Organizujte štvorhry aj dvojhry, v ktorých hráči v každom zápase dostanú nového spoluhráča: spravodlivé žrebovanie, priebežné výsledky, poradie a aplikácia pre Android."
 
 #. Plugin name.
 #, gp-priority: high
 msgid "Rotation Tournaments"
 msgstr "Rotačné turnaje"
+
+#. Found in faq paragraph.
+msgid "An iOS version is planned, but there is no release date yet. The tournament pages work in any mobile browser, including iPhone and iPad."
+msgstr "Verzia pre iOS sa plánuje, ale termín vydania zatiaľ nie je. Stránky turnaja fungujú v každom mobilnom prehliadači vrátane iPhonu a iPadu."
+
+#. Found in description paragraph.
+msgid "The free <a href=\"https://play.google.com/store/apps/details?id=cz.doroto.app\">Rotation Tournaments app</a> connects to your website: players follow the tournament, enter their results and organizers manage it from the court. The app is available in 27 languages. Several devices can be signed in to one account."
+msgstr "Bezplatná <a href=\"https://play.google.com/store/apps/details?id=cz.doroto.app\">aplikácia Rotation Tournaments</a> sa pripojí k vášmu webu: hráči sledujú turnaj a zadávajú svoje výsledky, organizátori ho riadia priamo z kurtu. Aplikácia je dostupná v 27 jazykoch. K jednému účtu môže byť prihlásených viac zariadení."
+
+#. Found in description paragraph.
+msgid "<strong>Android app</strong>"
+msgstr "<strong>Aplikácia pre Android</strong>"
+
+#. Found in description paragraph.
+msgid "<strong>For the website</strong>"
+msgstr "<strong>Pre web</strong>"
+
+#. Found in description paragraph.
+msgid "<strong>The draw</strong>"
+msgstr "<strong>Žrebovanie</strong>"
+
+#. Found in description paragraph.
+msgid "<strong>How a tournament works</strong>"
+msgstr "<strong>Ako turnaj prebieha</strong>"
+
+#. Found in description paragraph.
+msgid "It is made for club evenings and social tournaments in <strong>tennis, padel, badminton, table tennis, squash, beach volleyball</strong> and other sports played one against one or two against two."
+msgstr "Je určený pre klubové večery a spoločenské turnaje v <strong>tenise, padeli, bedmintone, stolnom tenise, squashi, plážovom volejbale</strong> a ďalších športoch, ktoré sa hrajú jeden na jedného alebo dvaja na dvoch."
+
+#. Found in description paragraph.
+msgid "<strong>Rotation Tournaments</strong> runs club tournaments in which nobody is knocked out. In doubles, every player gets a <strong>new partner in every match</strong> and meets as many different opponents as possible. The ranking is the ratio of games won to games lost, so everybody plays until the very end."
+msgstr "<strong>Rotačné turnaje</strong> riadia klubové turnaje, v ktorých nikto nevypadáva. Vo štvorhre dostane každý hráč <strong>v každom zápase nového spoluhráča</strong> a stretne sa s čo najviac rôznymi súpermi. O poradí rozhoduje pomer vyhraných a prehraných gemov, takže všetci hrajú až do konca."
+
+#. Found in description list item.
+msgid "Video introduction:"
+msgstr "Video s predstavením:"
+
+#. Found in description list item.
+msgid "<a href=\"https://doroto.ltcchrast.cz/rules-of-the-doubles-rotation-tournament/\">Rules of the Doubles Rotation Tournament</a>."
+msgstr "<a href=\"https://doroto.ltcchrast.cz/rules-of-the-doubles-rotation-tournament/\">Pravidlá rotačného turnaja vo štvorhre</a>."
+
+#. Found in description list item.
+msgid "<a href=\"https://doroto.ltcchrast.cz/\">Demo site</a> where you can create your own tournament."
+msgstr "<a href=\"https://doroto.ltcchrast.cz/\">Ukážkový web</a>, kde si môžete vytvoriť vlastný turnaj."
+
+#. Found in description list item.
+msgid "Players sign in with their WordPress accounts; full or shortened names (privacy)."
+msgstr "Hráči sa prihlasujú svojimi účtami WordPress; celé alebo skrátené mená (súkromie)."
+
+#. Found in description list item.
+msgid "Guided tours of the page and four example tournaments."
+msgstr "Sprievodca stránkou a štyri ukážkové turnaje."
+
+#. Found in description list item.
+msgid "Colors follow your theme; the block's Styles panel can change them."
+msgstr "Farby sa riadia vašou témou; v paneli Štýly bloku ich môžete zmeniť."
+
+#. Found in description list item.
+msgid "Share dialog with a QR code and a link that opens the tournament in the app."
+msgstr "Dialóg Zdieľať s QR kódom a odkazom, ktorý otvorí turnaj v aplikácii."
+
+#. Found in description list item.
+msgid "Live updates without reloading the page."
+msgstr "Priebežná aktualizácia bez opätovného načítania stránky."
+
+#. Found in description list item.
+msgid "Blocks for the block editor: \"Rotation tournament\" (matches, results, players, statistics and settings on tabs), \"Tournament standings\", \"Tournament matches\", \"Tournament presentation\", \"Tournament list\" and \"Tournament invitation\". Shortcodes for the classic editor."
+msgstr "Bloky pre editor blokov: „Rotačný turnaj“ (zápasy, výsledky, hráči, štatistiky a nastavenia v záložkách), „Poradie turnaja“, „Zápasy turnaja“, „Prezentácia turnaja“, „Zoznam turnajov“ a „Pozvánka na turnaj“. Shortcody pre klasický editor."
+
+#. Found in description list item.
+msgid "Special group of players (e.g. women in a mixed tournament) with its own rules: mixed teams only, a separate winner and more."
+msgstr "Špeciálna skupina hráčov (napr. ženy v zmiešanom turnaji) s vlastnými pravidlami: len zmiešané dvojice, samostatný víťaz a ďalšie."
+
+#. Found in description list item.
+msgid "Works with any number of players from 4 up, odd numbers included; players can join, pause or leave at any time."
+msgstr "Funguje s ľubovoľným počtom hráčov od 4, aj s nepárnym; hráči sa môžu kedykoľvek pripojiť, pozastaviť alebo odísť."
+
+#. Found in description list item.
+msgid "Players with fewer games and longer rest go first; sides (left/right) and serve alternate."
+msgstr "Prednosť majú hráči s menším počtom zápasov a dlhším oddychom; strany (vľavo/vpravo) a podanie sa striedajú."
+
+#. Found in description list item.
+msgid "Opponents are chosen by previous meetings too, so the same players meet less often."
+msgstr "Súperi sa vyberajú aj podľa predchádzajúcich vzájomných zápasov, takže sa rovnakí hráči stretávajú menej často."
+
+#. Found in description list item.
+msgid "New teammates first: the plugin pairs players who have not played together yet."
+msgstr "Najskôr noví spoluhráči: plugin spája do dvojíc hráčov, ktorí spolu ešte nehrali."
+
+#. Found in description list item.
+msgid "At the end the organizer closes the tournament and the best player and the best pair are announced."
+msgstr "Na konci organizátor turnaj uzavrie a vyhlási sa najlepší hráč a najlepšia dvojica."
+
+#. Found in description list item.
+msgid "Standings, statistics and the presentation on a big screen update live."
+msgstr "Poradie, štatistiky aj prezentácia na veľkej obrazovke sa aktualizujú priebežne."
+
+#. Found in description list item.
+msgid "Whoever finishes a match enters the score on the website or in the Android app; the next match is drawn at once."
+msgstr "Kto dohrá zápas, zadá výsledok na webe alebo v aplikácii pre Android; ďalší zápas sa hneď vyžrebuje."
+
+#. Found in description list item.
+msgid "Players join (also later, during the tournament) and the plugin draws the first matches for the free courts."
+msgstr "Hráči sa prihlásia (aj neskôr, počas turnaja) a plugin vyžrebuje prvé zápasy na voľné kurty."
+
+#. Found in description list item.
+msgid "The organizer creates a tournament and shares the invitation link or QR code."
+msgstr "Organizátor vytvorí turnaj a zdieľa odkaz s pozvánkou alebo QR kód."
+
+#. Screenshot description.
+msgid "Android app: entering results, standings and played matches."
+msgstr "Aplikácia pre Android: zadávanie výsledkov, poradie a odohrané zápasy."
+
+#. Screenshot description.
+msgid "Tournament settings for organizers."
+msgstr "Nastavenia turnaja pre organizátorov."
+
+#. Screenshot description.
+msgid "The \"Rotation tournament\" block in the block editor."
+msgstr "Blok „Rotačný turnaj“ v editore blokov."
+
+#. Screenshot description.
+msgid "Share the tournament with a QR code; it opens the tournament in the app."
+msgstr "Zdieľanie turnaja QR kódom; otvorí turnaj v aplikácii."
+
+#. Found in description list item.
+msgid "Presentation mode for a TV or projector in the club house."
+msgstr "Režim prezentácie pre televízor alebo projektor v klubovni."
+
+#. Screenshot description.
+msgid "Statistics: how often a player played with and against each other player."
+msgstr "Štatistiky: ako často hráč hral s každým ďalším hráčom a proti nemu."
+
+#. Screenshot description.
+msgid "Live standings by the ratio of games won to games lost, with the trend of each player."
+msgstr "Priebežné poradie podľa pomeru vyhraných a prehraných gemov, s trendom každého hráča."
+
+#. Screenshot description.
+msgid "Results of all matches, with a filter by player."
+msgstr "Výsledky všetkých zápasov s filtrom podľa hráča."
+
+#. Screenshot description.
+msgid "Ongoing matches: the next match is drawn as soon as a score is saved. Names of the special group are highlighted."
+msgstr "Prebiehajúce zápasy: ďalší zápas sa vyžrebuje, len čo sa uloží výsledok. Mená špeciálnej skupiny sú zvýraznené."
+
+#. Screenshot description.
+msgid "The same tournament on the website and in the Android app."
+msgstr "Rovnaký turnaj na webe a v aplikácii pre Android."
 
 #. Found in installation paragraph.
 msgid "After installation, go to the app's settings and enter the address of your website where this plugin is installed."
@@ -33,25 +181,9 @@ msgstr "Alebo si ju stiahnite priamo z tohto odkazu: https://play.google.com/sto
 msgid "Search for \"Rotation Tournaments\" on the Google Play Store."
 msgstr "Vyhľadajte v Obchode Google Play „Rotation Tournaments“."
 
-#. Found in description paragraph.
-msgid "To get the full experience of managing tournaments on the go, download our mobile app, now available on Google Play!"
-msgstr "Ak si chcete naplno užiť správu turnajov na cestách, stiahnite si našu mobilnú aplikáciu, ktorá je už dostupná na Google Play!"
-
-#. Found in description paragraph.
-msgid "<strong>YouTube quick intro:</strong>"
-msgstr "<strong>Stručný úvod na YouTube:</strong>"
-
-#. Found in description list item.
-msgid "Video for a quick introduction to the Rotation Tournament:"
-msgstr "Video so stručným úvodom do rotačných turnajov:"
-
 #. Found in faq paragraph.
 msgid "Yes. If you install the Rotation Tournaments plugin, allow player registration, and enable visibility in the website list, your site can appear in the Android app. Initially, someone must manually enter your website address into the app. After that, it becomes visible in the list for all users."
 msgstr "Áno. Ak si nainštalujete plugin Rotation Tournaments, povolíte registráciu hráčov a zapnete viditeľnosť v zozname webov, váš web sa môže zobraziť v aplikácii pre Android. Najprv musí niekto adresu vášho webu zadať do aplikácie ručne. Potom sa web zobrazí v zozname všetkým používateľom."
-
-#. Found in faq paragraph.
-msgid "Yes. An iOS version of the Rotation Tournaments app is planned and will be released in the near future."
-msgstr "Áno. Verzia aplikácie Rotation Tournaments pre iOS sa pripravuje a vyjde v blízkej budúcnosti."
 
 #. Found in faq header.
 msgid "Will my website be visible in the Rotation Tournaments Android app?"
@@ -74,80 +206,12 @@ msgid "<strong>How to install the Android app:</strong>"
 msgstr "<strong>Ako nainštalovať aplikáciu pre Android:</strong>"
 
 #. Found in description paragraph.
-msgid "<strong>This plugin is the server-side for the \"Rotation Tournaments\" Android app.</strong>"
-msgstr "<strong>Tento plugin je serverová časť aplikácie „Rotation Tournaments“ pre Android.</strong>"
-
-#. Screenshot description.
-msgid "Individual tournament participants enter their results into the WordPress server and share the data with each other."
-msgstr "Jednotliví účastníci turnaja zadávajú svoje výsledky na server WordPress a zdieľajú údaje medzi sebou."
-
-#. Screenshot description.
-msgid "Matches played. (Android app)"
-msgstr "Odohrané zápasy. (Aplikácia pre Android)"
-
-#. Screenshot description.
-msgid "Tournament table. (Wordpress)"
-msgstr "Turnajová tabuľka. (WordPress)"
-
-#. Screenshot description.
-msgid "Matches drawn. (Android app)"
-msgstr "Vyžrebované zápasy. (Aplikácia pre Android)"
-
-#. Screenshot description.
-msgid "Editing tournament parameters. (Wordpress)"
-msgstr "Úprava parametrov turnaja. (WordPress)"
-
-#. Screenshot description.
-msgid "Table of players with rankings. (Android app)"
-msgstr "Tabuľka hráčov s poradím. (Aplikácia pre Android)"
-
-#. Screenshot description.
-msgid "Matches played. (Wordpress)"
-msgstr "Odohrané zápasy. (WordPress)"
-
-#. Screenshot description.
-msgid "Basic overview of the tournament. (Android app)"
-msgstr "Základný prehľad turnaja. (Aplikácia pre Android)"
-
-#. Screenshot description.
-msgid "Matches drawn. (Wordpress)"
-msgstr "Vyžrebované zápasy. (WordPress)"
-
-#. Found in description paragraph.
-msgid "<strong>Rotation Tournaments</strong> provides a platform for organizing all kinds of sports Singles and Doubles Tournaments, e.g."
-msgstr "<strong>Rotačné turnaje</strong> poskytujú platformu na organizovanie všetkých druhov športových turnajov vo dvojhre a štvorhre, napr."
-
-#. Found in description list item.
-msgid "Squash"
-msgstr "Squash"
-
-#. Found in description list item.
-msgid "Beach Volleyball"
-msgstr "Plážový volejbal"
-
-#. Found in description list item.
-msgid "Badminton"
-msgstr "Bedminton"
-
-#. Found in description list item.
-msgid "Padel"
-msgstr "Padel"
-
-#. Found in description list item.
-msgid "Table Tennis"
-msgstr "Stolný tenis"
-
-#. Found in description list item.
-msgid "Tennis"
-msgstr "Tenis"
+msgid "<strong>Try it</strong>"
+msgstr "<strong>Vyskúšajte si to</strong>"
 
 #. Found in faq paragraph.
-msgid ""
-"This plugin can be used for all types of sports where 2 or 4 players compete in singles or doubles.\n"
-"You can use this plugin for tennis, table tennis, squash, padel, badminton, beach volleyball and probably for more."
-msgstr ""
-"Tento plugin možno použiť pre všetky športy, v ktorých súťažia 2 alebo 4 hráči vo dvojhre alebo štvorhre.\n"
-"Tento plugin môžete použiť pre tenis, stolný tenis, squash, padel, bedminton, plážový volejbal a pravdepodobne aj ďalšie."
+msgid "This plugin can be used for all types of sports where 2 or 4 players compete in singles or doubles.\nYou can use this plugin for tennis, table tennis, squash, padel, badminton, beach volleyball and probably for more."
+msgstr "Tento plugin možno použiť pre všetky športy, v ktorých súťažia 2 alebo 4 hráči vo dvojhre alebo štvorhre.\nTento plugin môžete použiť pre tenis, stolný tenis, squash, padel, bedminton, plážový volejbal a pravdepodobne aj ďalšie."
 
 #. Found in faq paragraph.
 msgid "Yes. When creating a tournament, you can choose whether to create a singles or a doubles tournament."
@@ -156,118 +220,6 @@ msgstr "Áno. Pri vytváraní turnaja si môžete vybrať, či chcete vytvoriť 
 #. Found in faq header.
 msgid "What sports tournaments is this plugin for?"
 msgstr "Pre aké športové turnaje je tento plugin určený?"
-
-#. Found in description paragraph.
-msgid "<strong>General Features:</strong>"
-msgstr "<strong>Všeobecné vlastnosti:</strong>"
-
-#. Found in description paragraph.
-msgid "<strong>Doubles Rotation Tournament:</strong>"
-msgstr "<strong>Turnaj rotujúcich štvorhier:</strong>"
-
-#. Found in description paragraph.
-msgid "<strong>Singles Rotation Tournament:</strong>"
-msgstr "<strong>Turnaj rotujúcich dvojhier:</strong>"
-
-#. Found in description paragraph.
-msgid "The participants of a tournament change partners several times during the tournament by a random selection and play against different players. The ratio of games won to games lost is calculated for each participant. The winner of the tournament is the player with this highest ratio. While a Singles Rotation Tournament can be organized without the aid of technology, in the case of a Doubles Rotation Tournament, this is not possible."
-msgstr "Účastníci turnaja si počas turnaja niekoľkokrát náhodným výberom vymenia partnerov a hrajú proti rôznym hráčom. Pre každého účastníka sa vypočíta pomer vyhraných a prehraných gemov. Víťazom turnaja sa stáva hráč s najvyšším pomerom. Zatiaľ čo turnaj rotujúcich dvojhier možno zorganizovať bez pomoci techniky, pri turnaji rotujúcich štvorhier to možné nie je."
-
-#. Found in description paragraph.
-msgid "The <strong>Rotation Tournaments</strong> have a strong social aspect because its goal is to keep players in the tournament until the very end. The situation where weaker players would leave the tournament due to elimination rounds is eliminated. It allows grouping players into a special category with special conditions. This special setting can be utilized, for example, in mixed tournaments."
-msgstr "<strong>Rotačné turnaje</strong> majú silný spoločenský rozmer, pretože ich cieľom je udržať hráčov v turnaji až do úplného konca. Odpadá situácia, keď by slabší hráči z turnaja odchádzali kvôli vyraďovacím kolám. Hráčov možno zaradiť do osobitnej kategórie s osobitnými podmienkami. Toto osobitné nastavenie možno využiť napríklad v zmiešaných turnajoch."
-
-#. Found in description paragraph.
-msgid "In <strong>Rotation Tournaments</strong>, each participant plays against every other participant and there are no eliminations in individual rounds. To maximize the variety of match combinations, the matches are typically played in a single set."
-msgstr "V <strong>rotačných turnajoch</strong> hrá každý účastník proti každému a v jednotlivých kolách nikto nevypadáva. Aby bolo čo najviac rôznych kombinácií zápasov, hrajú sa zápasy zvyčajne na jeden set."
-
-#. Found in description list item.
-msgid "Suitable for various sports: tennis, table tennis, squash, padel, badminton, beach volleyball, and more."
-msgstr "Vhodné pre rôzne športy: tenis, stolný tenis, squash, padel, bedminton, plážový volejbal a ďalšie."
-
-#. Found in description list item.
-msgid "Integration with website user accounts."
-msgstr "Integrácia s používateľskými účtami webu."
-
-#. Found in description list item.
-msgid "No downtime during the tournament."
-msgstr "Žiadne prestoje počas turnaja."
-
-#. Found in description list item.
-msgid "Comprehensive overview of player quality."
-msgstr "Komplexný prehľad o kvalite hráčov."
-
-#. Found in description list item.
-msgid "User-friendly interface for administrators and participants."
-msgstr "Používateľsky prívetivé rozhranie pre administrátorov a účastníkov."
-
-#. Found in description list item.
-msgid "Customizable settings for each tournament."
-msgstr "Prispôsobiteľné nastavenia pre každý turnaj."
-
-#. Found in description list item.
-msgid "Real-time score tracking."
-msgstr "Sledovanie skóre v reálnom čase."
-
-#. Found in description list item.
-msgid "Seamless scheduling of matches."
-msgstr "Bezproblémové plánovanie zápasov."
-
-#. Found in description list item.
-msgid "Announcement of the Best Player and Most Ideal Pair at the end of the tournament."
-msgstr "Vyhlásenie najlepšieho hráča a najideálnejšej dvojice na konci turnaja."
-
-#. Found in description list item.
-msgid "Ranking based on the ratio of games won to games lost."
-msgstr "Poradie založené na pomere vyhraných a prehraných gemov."
-
-#. Found in description list item.
-msgid "Individual players can join or leave the tournament at any time."
-msgstr "Jednotliví hráči sa môžu do turnaja kedykoľvek zapojiť alebo z neho odísť."
-
-#. Found in description list item.
-msgid "Tournament can be interrupted or extended without disruption."
-msgstr "Turnaj možno prerušiť alebo predĺžiť bez narušenia jeho priebehu."
-
-#. Found in description list item.
-msgid "Shorter matches for more participation."
-msgstr "Kratšie zápasy pre väčšiu účasť."
-
-#. Found in description list item.
-msgid "No eliminations, ensuring all players stay in the game."
-msgstr "Žiadne vyraďovanie, takže všetci hráči zostávajú v hre."
-
-#. Found in description list item.
-msgid "Define special groups of players with unique conditions."
-msgstr "Definovanie špeciálnych skupín hráčov s osobitnými podmienkami."
-
-#. Found in description list item.
-msgid "Suitable for odd numbers of players and minimum lineups of 4 players."
-msgstr "Vhodné aj pre nepárny počet hráčov a minimálnu zostavu 4 hráčov."
-
-#. Found in description list item.
-msgid "Individuals can enter the tournament without a permanent teammate."
-msgstr "Jednotlivci môžu nastúpiť do turnaja bez stáleho spoluhráča."
-
-#. Found in description list item.
-msgid "Rotation of teammates, ensuring variety in partnerships."
-msgstr "Striedanie spoluhráčov zabezpečuje rozmanitosť dvojíc."
-
-#. Found in description list item.
-msgid "Alternative form of a Doubles Tournament where players enter each match with a different partner and in different positions (alternating left and right sides)."
-msgstr "Alternatívna forma turnaja vo štvorhre, v ktorej hráči nastupujú do každého zápasu s iným partnerom a na rôznych pozíciách (striedanie ľavej a pravej strany)."
-
-#. Found in description list item.
-msgid "Depending on the time options, everyone plays against everyone."
-msgstr "Podľa časových možností hrá každý s každým."
-
-#. Found in description list item.
-msgid "Alternative form of a Singles Tournament where players face each other without elimination rounds."
-msgstr "Alternatívna forma turnaja vo dvojhre, v ktorej proti sebe hráči nastupujú bez vyraďovacích kôl."
-
-#. Found in description header.
-msgid "Features"
-msgstr "Funkcie"
 
 #. Found in faq header.
 msgid "Is this plugin suitable for singles tournaments?"
@@ -306,16 +258,43 @@ msgid "Install the plugin as usual."
 msgstr "Nainštalujte plugin ako obvykle."
 
 #. Found in description paragraph.
-msgid "Visit <a href=\"https://doroto.ltcchrast.cz/\">test page</a> for more information, try to create your own tournament and take a look at <a href=\"https://doroto.ltcchrast.cz/rules-of-the-doubles-rotation-tournament/\">Rules of the Doubles Rotation Tournament</a>."
-msgstr "Navštívte <a href=\"https://doroto.ltcchrast.cz/\">testovaciu stránku</a> pre viac informácií, skúste si vytvoriť vlastný turnaj a pozrite si <a href=\"https://doroto.ltcchrast.cz/rules-of-the-doubles-rotation-tournament/\">pravidlá turnaja rotujúcich štvorhier</a>."
-
-#. Found in description paragraph.
 msgid "[youtube https://www.youtube.com/watch?v=NoL9aPTv8u8]"
 msgstr "[youtube https://www.youtube.com/watch?v=NoL9aPTv8u8]"
 
-#. Found in description header.
-msgid "More information"
-msgstr "Viac informácií"
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - readme: new description of the draw, the blocks and the app; new screenshots (also in Spanish for Chile)"
+msgstr "Vylepšenie – readme: nový popis žrebovania, blokov a aplikácie; nové snímky obrazovky (aj v španielčine pre Čile)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - new plugin icon and banner, the same icon as the Android app"
+msgstr "Vylepšenie – nová ikona a banner pluginu, rovnaká ikona ako pri aplikácii pre Android"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "2.0.2 - 2026/10/15"
+msgstr "2.0.2 - 2026/10/15"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - English variants for the UK, Australia, Canada, New Zealand and South Africa"
+msgstr "Pridané – anglické varianty pre Spojené kráľovstvo, Austráliu, Kanadu, Nový Zéland a Južnú Afriku"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - the round-end notice of the tournament block no longer repeats the texts of its buttons"
+msgstr "Vylepšenie – upozornenie na koniec kola v bloku turnaja už neopakuje texty svojich tlačidiel"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - messages, headings and notices are translated as whole sentences, so languages with a different word order (e.g. Turkish, Hungarian, Hindi, Japanese, Korean and Chinese) read naturally"
+msgstr "Vylepšenie – správy, nadpisy a upozornenia sa prekladajú ako celé vety, takže jazyky s iným slovosledom (napr. turečtina, maďarčina, hindčina, japončina, kórejčina a čínština) znejú prirodzene"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "2.0.1 - 2026/10/08"
+msgstr "2.0.1 - 2026/10/08"
 
 #. Found in changelog list item.
 #, gp-priority: low
@@ -1189,21 +1168,13 @@ msgstr "Oprava – ak boli vymazané všetky turnaje, nebolo možné vytvoriť n
 
 #. Found in changelog paragraph.
 #, gp-priority: low
-msgid ""
-"Trial tournament improvements.\n"
-"Added the option to announce the end of the tournament round."
-msgstr ""
-"Vylepšenia skúšobného turnaja.\n"
-"Pridaná možnosť ohlásiť koniec turnajového kola."
+msgid "Trial tournament improvements.\nAdded the option to announce the end of the tournament round."
+msgstr "Vylepšenia skúšobného turnaja.\nPridaná možnosť ohlásiť koniec turnajového kola."
 
 #. Found in changelog paragraph.
 #, gp-priority: low
-msgid ""
-"Improved the visual appearance of the main page.\n"
-"Badminton added to the list of available tournaments."
-msgstr ""
-"Vylepšený vzhľad hlavnej stránky.\n"
-"Bedminton pridaný do zoznamu dostupných turnajov."
+msgid "Improved the visual appearance of the main page.\nBadminton added to the list of available tournaments."
+msgstr "Vylepšený vzhľad hlavnej stránky.\nBedminton pridaný do zoznamu dostupných turnajov."
 
 #. Found in changelog paragraph.
 #, gp-priority: low
@@ -1212,65 +1183,33 @@ msgstr "Možnosť vyhlásiť samostatných víťazov zo špeciálnej skupiny a m
 
 #. Found in changelog paragraph.
 #, gp-priority: low
-msgid ""
-"Notices after a plugin activation.\n"
-"Added player trend."
-msgstr ""
-"Upozornenia po aktivácii pluginu.\n"
-"Pridaný trend hráča."
+msgid "Notices after a plugin activation.\nAdded player trend."
+msgstr "Upozornenia po aktivácii pluginu.\nPridaný trend hráča."
 
 #. Found in changelog paragraph.
 #, gp-priority: low
-msgid ""
-"Modified tournament editing tab.\n"
-"Added option to change tournament type."
-msgstr ""
-"Upravená záložka Úprava turnaja.\n"
-"Pridaná možnosť zmeny typu turnaja."
+msgid "Modified tournament editing tab.\nAdded option to change tournament type."
+msgstr "Upravená záložka Úprava turnaja.\nPridaná možnosť zmeny typu turnaja."
 
 #. Found in changelog paragraph.
 #, gp-priority: low
-msgid ""
-"Reactivating the plugin doesn´t affect the already deleted tournament example. \n"
-"Unblock offering maximum games count.\n"
-"Fix tournament change when entering results.\n"
-"Added quick help for newcomers.\n"
-"Allow the final match also for singles."
-msgstr ""
-"Opätovná aktivácia pluginu neovplyvní už vymazaný ukážkový turnaj.\n"
-"Odblokovaná ponuka maximálneho počtu gemov.\n"
-"Oprava zmeny turnaja pri zadávaní výsledkov.\n"
-"Pridaný rýchly pomocník pre nováčikov.\n"
-"Finálový zápas povolený aj pre dvojhru."
+msgid "Reactivating the plugin doesn´t affect the already deleted tournament example. \nUnblock offering maximum games count.\nFix tournament change when entering results.\nAdded quick help for newcomers.\nAllow the final match also for singles."
+msgstr "Opätovná aktivácia pluginu neovplyvní už vymazaný ukážkový turnaj.\nOdblokovaná ponuka maximálneho počtu gemov.\nOprava zmeny turnaja pri zadávaní výsledkov.\nPridaný rýchly pomocník pre nováčikov.\nFinálový zápas povolený aj pre dvojhru."
 
 #. Found in changelog paragraph.
 #, gp-priority: low
-msgid ""
-"Added the option for single tournaments. \n"
-"Created an environment for additional sports."
-msgstr ""
-"Pridaná možnosť turnajov vo dvojhre.\n"
-"Vytvorené prostredie pre ďalšie športy."
+msgid "Added the option for single tournaments. \nCreated an environment for additional sports."
+msgstr "Pridaná možnosť turnajov vo dvojhre.\nVytvorené prostredie pre ďalšie športy."
 
 #. Found in changelog paragraph.
 #, gp-priority: low
-msgid ""
-"The administrator can now use 'hide' option when editing the match result.\n"
-"Free score input is allowed. This opens using not only for tennis but for example for table tennis or beach volleyball."
-msgstr ""
-"Administrátor teraz môže pri úprave výsledku zápasu použiť možnosť „skryť“.\n"
-"Je povolené voľné zadávanie skóre. To otvára využitie nielen pre tenis, ale napríklad aj pre stolný tenis alebo plážový volejbal."
+msgid "The administrator can now use 'hide' option when editing the match result.\nFree score input is allowed. This opens using not only for tennis but for example for table tennis or beach volleyball."
+msgstr "Administrátor teraz môže pri úprave výsledku zápasu použiť možnosť „skryť“.\nJe povolené voľné zadávanie skóre. To otvára využitie nielen pre tenis, ale napríklad aj pre stolný tenis alebo plážový volejbal."
 
 #. Found in changelog paragraph.
 #, gp-priority: low
-msgid ""
-"Minor changes in code:\n"
-"* Allow to transfer organizer rights to a non-playing user.\n"
-"* Ensuring an even rotation of serves at the start of the tournament."
-msgstr ""
-"Drobné zmeny v kóde:\n"
-"* Povolený prenos práv organizátora na nehrajúceho používateľa.\n"
-"* Zabezpečenie rovnomerného striedania podania na začiatku turnaja."
+msgid "Minor changes in code:\n* Allow to transfer organizer rights to a non-playing user.\n* Ensuring an even rotation of serves at the start of the tournament."
+msgstr "Drobné zmeny v kóde:\n* Povolený prenos práv organizátora na nehrajúceho používateľa.\n* Zabezpečenie rovnomerného striedania podania na začiatku turnaja."
 
 #. Found in changelog paragraph.
 #, gp-priority: low
@@ -1286,23 +1225,3 @@ msgstr "Malá úprava obrazovky administrácie."
 #, gp-priority: low
 msgid "First release to public."
 msgstr "Prvé verejné vydanie."
-
-#. Found in changelog header.
-#, gp-priority: low
-msgid "2.0.1 - 2026/10/08"
-msgstr "2.0.1 - 2026/10/08"
-
-#. Found in changelog list item.
-#, gp-priority: low
-msgid "Improvement - messages, headings and notices are translated as whole sentences, so languages with a different word order (e.g. Turkish, Hungarian, Hindi, Japanese, Korean and Chinese) read naturally"
-msgstr "Vylepšenie – správy, nadpisy a upozornenia sa prekladajú ako celé vety, takže jazyky s iným slovosledom (napr. turečtina, maďarčina, hindčina, japončina, kórejčina a čínština) znejú prirodzene"
-
-#. Found in changelog list item.
-#, gp-priority: low
-msgid "Improvement - the round-end notice of the tournament block no longer repeats the texts of its buttons"
-msgstr "Vylepšenie – upozornenie na koniec kola v bloku turnaja už neopakuje texty svojich tlačidiel"
-
-#. Found in changelog list item.
-#, gp-priority: low
-msgid "Add - English variants for the UK, Australia, Canada, New Zealand and South Africa"
-msgstr "Pridané – anglické varianty pre Spojené kráľovstvo, Austráliu, Kanadu, Nový Zéland a Južnú Afriku"

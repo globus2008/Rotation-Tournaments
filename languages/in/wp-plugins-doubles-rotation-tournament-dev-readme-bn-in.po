@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plugins - Rotation Tournaments - Development Readme (trunk)\n"
-"PO-Revision-Date: 2026-10-08 18:18:50+0000\n"
+"PO-Revision-Date: 2026-10-15 07:57:04+0000\n"
 "Language: bn_IN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -13,13 +13,161 @@ msgstr ""
 
 #. Short description.
 #, gp-priority: high
-msgid "Do you play Singles or Doubles Tournaments? This plugin manages Rotation Tournaments where players have a different partner in each game."
-msgstr "আপনি কি সিঙ্গলস বা ডাবলস টুর্নামেন্ট খেলেন? এই প্লাগইন রোটেশন টুর্নামেন্ট পরিচালনা করে, যেখানে প্রতিটি গেমে খেলোয়াড়দের সঙ্গী বদলায়।"
+msgid "Run doubles and singles tournaments where players get a new partner every match: fair draws, live results, standings and an Android app."
+msgstr "এমন ডাবলস ও সিঙ্গেলস টুর্নামেন্ট চালান যেখানে প্রতি ম্যাচে খেলোয়াড়েরা নতুন সঙ্গী পান: ন্যায্য ড্র, সরাসরি ফলাফল, র‍্যাঙ্কিং এবং একটি Android অ্যাপ।"
 
 #. Plugin name.
 #, gp-priority: high
 msgid "Rotation Tournaments"
 msgstr "রোটেশন টুর্নামেন্ট"
+
+#. Found in faq paragraph.
+msgid "An iOS version is planned, but there is no release date yet. The tournament pages work in any mobile browser, including iPhone and iPad."
+msgstr "iOS সংস্করণের পরিকল্পনা আছে, তবে এখনও প্রকাশের তারিখ নেই। টুর্নামেন্টের পৃষ্ঠাগুলো iPhone ও iPad সহ যেকোনো মোবাইল ব্রাউজারে কাজ করে।"
+
+#. Found in description paragraph.
+msgid "The free <a href=\"https://play.google.com/store/apps/details?id=cz.doroto.app\">Rotation Tournaments app</a> connects to your website: players follow the tournament, enter their results and organizers manage it from the court. The app is available in 27 languages. Several devices can be signed in to one account."
+msgstr "বিনামূল্যের <a href=\"https://play.google.com/store/apps/details?id=cz.doroto.app\">Rotation Tournaments অ্যাপ</a> আপনার ওয়েবসাইটের সঙ্গে যুক্ত হয়: খেলোয়াড়েরা টুর্নামেন্ট অনুসরণ করেন ও নিজেদের ফলাফল দেন, আর আয়োজকেরা কোর্ট থেকেই তা পরিচালনা করেন। অ্যাপটি ২৭টি ভাষায় পাওয়া যায়। একটি অ্যাকাউন্টে একাধিক ডিভাইস থেকে সাইন ইন করা যায়।"
+
+#. Found in description paragraph.
+msgid "<strong>Android app</strong>"
+msgstr "<strong>Android অ্যাপ</strong>"
+
+#. Found in description paragraph.
+msgid "<strong>For the website</strong>"
+msgstr "<strong>ওয়েবসাইটের জন্য</strong>"
+
+#. Found in description paragraph.
+msgid "<strong>The draw</strong>"
+msgstr "<strong>ড্র</strong>"
+
+#. Found in description paragraph.
+msgid "<strong>How a tournament works</strong>"
+msgstr "<strong>টুর্নামেন্ট কীভাবে চলে</strong>"
+
+#. Found in description paragraph.
+msgid "It is made for club evenings and social tournaments in <strong>tennis, padel, badminton, table tennis, squash, beach volleyball</strong> and other sports played one against one or two against two."
+msgstr "এটি ক্লাবের সন্ধ্যা ও বন্ধুত্বপূর্ণ টুর্নামেন্টের জন্য তৈরি: <strong>টেনিস, প্যাডেল, ব্যাডমিন্টন, টেবিল টেনিস, স্কোয়াশ, বিচ ভলিবল</strong> এবং এক বনাম এক বা দুই বনাম দুইয়ে খেলা অন্যান্য খেলা।"
+
+#. Found in description paragraph.
+msgid "<strong>Rotation Tournaments</strong> runs club tournaments in which nobody is knocked out. In doubles, every player gets a <strong>new partner in every match</strong> and meets as many different opponents as possible. The ranking is the ratio of games won to games lost, so everybody plays until the very end."
+msgstr "<strong>রোটেশন টুর্নামেন্ট</strong> এমন ক্লাব টুর্নামেন্ট চালায় যেখানে কেউ বাদ পড়ে না। ডাবলসে প্রত্যেক খেলোয়াড় <strong>প্রতি ম্যাচে নতুন সঙ্গী</strong> পান এবং যত বেশি সম্ভব ভিন্ন প্রতিপক্ষের মুখোমুখি হন। র‍্যাঙ্কিং ঠিক হয় জেতা ও হারা গেমের অনুপাতে, তাই সবাই শেষ পর্যন্ত খেলেন।"
+
+#. Found in description list item.
+msgid "Video introduction:"
+msgstr "পরিচিতি ভিডিও:"
+
+#. Found in description list item.
+msgid "<a href=\"https://doroto.ltcchrast.cz/rules-of-the-doubles-rotation-tournament/\">Rules of the Doubles Rotation Tournament</a>."
+msgstr "<a href=\"https://doroto.ltcchrast.cz/rules-of-the-doubles-rotation-tournament/\">ডাবলস রোটেশন টুর্নামেন্টের নিয়ম</a>।"
+
+#. Found in description list item.
+msgid "<a href=\"https://doroto.ltcchrast.cz/\">Demo site</a> where you can create your own tournament."
+msgstr "<a href=\"https://doroto.ltcchrast.cz/\">ডেমো সাইট</a>, যেখানে আপনি নিজের টুর্নামেন্ট তৈরি করতে পারেন।"
+
+#. Found in description list item.
+msgid "Players sign in with their WordPress accounts; full or shortened names (privacy)."
+msgstr "খেলোয়াড়েরা নিজেদের WordPress অ্যাকাউন্ট দিয়ে সাইন ইন করেন; পূর্ণ বা সংক্ষিপ্ত নাম (গোপনীয়তা)।"
+
+#. Found in description list item.
+msgid "Guided tours of the page and four example tournaments."
+msgstr "পৃষ্ঠার নির্দেশিত ট্যুর এবং চারটি উদাহরণ টুর্নামেন্ট।"
+
+#. Found in description list item.
+msgid "Colors follow your theme; the block's Styles panel can change them."
+msgstr "রংগুলো আপনার থিম অনুসরণ করে; ব্লকের স্টাইল প্যানেল থেকে সেগুলো বদলানো যায়।"
+
+#. Found in description list item.
+msgid "Share dialog with a QR code and a link that opens the tournament in the app."
+msgstr "QR কোড ও টুর্নামেন্টকে অ্যাপে খোলার লিংকসহ শেয়ার ডায়ালগ।"
+
+#. Found in description list item.
+msgid "Live updates without reloading the page."
+msgstr "পৃষ্ঠা পুনরায় লোড ছাড়াই সরাসরি হালনাগাদ।"
+
+#. Found in description list item.
+msgid "Blocks for the block editor: \"Rotation tournament\" (matches, results, players, statistics and settings on tabs), \"Tournament standings\", \"Tournament matches\", \"Tournament presentation\", \"Tournament list\" and \"Tournament invitation\". Shortcodes for the classic editor."
+msgstr "ব্লক এডিটরের জন্য ব্লক: “রোটেশন টুর্নামেন্ট” (ট্যাবে ম্যাচ, ফলাফল, খেলোয়াড়, পরিসংখ্যান ও সেটিংস), “টুর্নামেন্টের র‍্যাঙ্কিং”, “টুর্নামেন্টের ম্যাচ”, “টুর্নামেন্ট উপস্থাপনা”, “টুর্নামেন্টের তালিকা” ও “টুর্নামেন্টের আমন্ত্রণ”। ক্লাসিক এডিটরের জন্য শর্টকোড।"
+
+#. Found in description list item.
+msgid "Special group of players (e.g. women in a mixed tournament) with its own rules: mixed teams only, a separate winner and more."
+msgstr "নিজস্ব নিয়মসহ খেলোয়াড়দের বিশেষ গ্রুপ (যেমন মিশ্র টুর্নামেন্টে নারীরা): শুধু মিশ্র দল, আলাদা বিজয়ী এবং আরও অনেক কিছু।"
+
+#. Found in description list item.
+msgid "Works with any number of players from 4 up, odd numbers included; players can join, pause or leave at any time."
+msgstr "৪ বা তার বেশি যেকোনো সংখ্যক খেলোয়াড়ের সঙ্গে কাজ করে, বিজোড় সংখ্যাও; খেলোয়াড়েরা যেকোনো সময় যোগ দিতে, বিরতি নিতে বা চলে যেতে পারেন।"
+
+#. Found in description list item.
+msgid "Players with fewer games and longer rest go first; sides (left/right) and serve alternate."
+msgstr "যাঁরা কম ম্যাচ খেলেছেন ও বেশিক্ষণ বিশ্রাম নিয়েছেন তাঁরা আগে খেলেন; দিক (বাম/ডান) ও সার্ভ পালাক্রমে বদলায়।"
+
+#. Found in description list item.
+msgid "Opponents are chosen by previous meetings too, so the same players meet less often."
+msgstr "আগের সাক্ষাৎ বিবেচনা করেও প্রতিপক্ষ বাছাই হয়, তাই একই খেলোয়াড়েরা কম মুখোমুখি হন।"
+
+#. Found in description list item.
+msgid "New teammates first: the plugin pairs players who have not played together yet."
+msgstr "আগে নতুন সঙ্গী: প্লাগইন সেই খেলোয়াড়দের জুটি বানায় যাঁরা এখনও একসঙ্গে খেলেননি।"
+
+#. Found in description list item.
+msgid "At the end the organizer closes the tournament and the best player and the best pair are announced."
+msgstr "শেষে আয়োজক টুর্নামেন্ট বন্ধ করেন এবং সেরা খেলোয়াড় ও সেরা জুটি ঘোষণা করা হয়।"
+
+#. Found in description list item.
+msgid "Standings, statistics and the presentation on a big screen update live."
+msgstr "র‍্যাঙ্কিং, পরিসংখ্যান এবং বড় পর্দার উপস্থাপনা সরাসরি হালনাগাদ হয়।"
+
+#. Found in description list item.
+msgid "Whoever finishes a match enters the score on the website or in the Android app; the next match is drawn at once."
+msgstr "যিনি ম্যাচ শেষ করেন, তিনি ওয়েবসাইটে বা Android অ্যাপে স্কোর দেন; পরের ম্যাচ সঙ্গে সঙ্গে ড্র হয়।"
+
+#. Found in description list item.
+msgid "Players join (also later, during the tournament) and the plugin draws the first matches for the free courts."
+msgstr "খেলোয়াড়েরা যোগ দেন (পরেও, টুর্নামেন্ট চলাকালীন) এবং প্লাগইন খালি কোর্টের জন্য প্রথম ম্যাচগুলো ড্র করে।"
+
+#. Found in description list item.
+msgid "The organizer creates a tournament and shares the invitation link or QR code."
+msgstr "আয়োজক টুর্নামেন্ট তৈরি করে আমন্ত্রণ লিংক বা QR কোড শেয়ার করেন।"
+
+#. Screenshot description.
+msgid "Android app: entering results, standings and played matches."
+msgstr "Android অ্যাপ: ফলাফল দেওয়া, র‍্যাঙ্কিং ও খেলা ম্যাচ।"
+
+#. Screenshot description.
+msgid "Tournament settings for organizers."
+msgstr "আয়োজকদের জন্য টুর্নামেন্টের সেটিংস।"
+
+#. Screenshot description.
+msgid "The \"Rotation tournament\" block in the block editor."
+msgstr "ব্লক এডিটরে “রোটেশন টুর্নামেন্ট” ব্লক।"
+
+#. Screenshot description.
+msgid "Share the tournament with a QR code; it opens the tournament in the app."
+msgstr "QR কোড দিয়ে টুর্নামেন্ট শেয়ার করুন; এটি টুর্নামেন্টকে অ্যাপে খোলে।"
+
+#. Found in description list item.
+msgid "Presentation mode for a TV or projector in the club house."
+msgstr "ক্লাব হাউসে টিভি বা প্রজেক্টরের জন্য উপস্থাপনা মোড।"
+
+#. Screenshot description.
+msgid "Statistics: how often a player played with and against each other player."
+msgstr "পরিসংখ্যান: একজন খেলোয়াড় অন্য প্রত্যেক খেলোয়াড়ের সঙ্গে ও বিপক্ষে কতবার খেলেছেন।"
+
+#. Screenshot description.
+msgid "Live standings by the ratio of games won to games lost, with the trend of each player."
+msgstr "জেতা ও হারা গেমের অনুপাত অনুযায়ী সরাসরি র‍্যাঙ্কিং, প্রত্যেক খেলোয়াড়ের প্রবণতাসহ।"
+
+#. Screenshot description.
+msgid "Results of all matches, with a filter by player."
+msgstr "সব ম্যাচের ফলাফল, খেলোয়াড় অনুযায়ী ফিল্টারসহ।"
+
+#. Screenshot description.
+msgid "Ongoing matches: the next match is drawn as soon as a score is saved. Names of the special group are highlighted."
+msgstr "চলমান ম্যাচ: স্কোর সংরক্ষণ হলেই পরের ম্যাচ ড্র হয়। বিশেষ গ্রুপের নামগুলো হাইলাইট করা থাকে।"
+
+#. Screenshot description.
+msgid "The same tournament on the website and in the Android app."
+msgstr "ওয়েবসাইটে ও Android অ্যাপে একই টুর্নামেন্ট।"
 
 #. Found in installation paragraph.
 msgid "After installation, go to the app's settings and enter the address of your website where this plugin is installed."
@@ -33,25 +181,9 @@ msgstr "অথবা সরাসরি এই লিংক থেকে ডা�
 msgid "Search for \"Rotation Tournaments\" on the Google Play Store."
 msgstr "Google Play Store-এ “Rotation Tournaments” খুঁজুন।"
 
-#. Found in description paragraph.
-msgid "To get the full experience of managing tournaments on the go, download our mobile app, now available on Google Play!"
-msgstr "চলতে চলতে টুর্নামেন্ট পরিচালনার পূর্ণ অভিজ্ঞতা পেতে আমাদের মোবাইল অ্যাপ ডাউনলোড করুন, এখন Google Play-তে পাওয়া যাচ্ছে!"
-
-#. Found in description paragraph.
-msgid "<strong>YouTube quick intro:</strong>"
-msgstr "<strong>YouTube-এ সংক্ষিপ্ত পরিচিতি:</strong>"
-
-#. Found in description list item.
-msgid "Video for a quick introduction to the Rotation Tournament:"
-msgstr "রোটেশন টুর্নামেন্টের সংক্ষিপ্ত পরিচিতির ভিডিও:"
-
 #. Found in faq paragraph.
 msgid "Yes. If you install the Rotation Tournaments plugin, allow player registration, and enable visibility in the website list, your site can appear in the Android app. Initially, someone must manually enter your website address into the app. After that, it becomes visible in the list for all users."
 msgstr "হ্যাঁ। আপনি Rotation Tournaments প্লাগইন ইনস্টল করে খেলোয়াড় নিবন্ধনের অনুমতি দিলে এবং ওয়েবসাইট তালিকায় দৃশ্যমানতা চালু করলে আপনার সাইট Android অ্যাপে দেখা যেতে পারে। প্রথমে কাউকে অ্যাপে আপনার ওয়েবসাইটের ঠিকানা নিজে লিখতে হবে। এরপর এটি সব ব্যবহারকারীর তালিকায় দেখা যাবে।"
-
-#. Found in faq paragraph.
-msgid "Yes. An iOS version of the Rotation Tournaments app is planned and will be released in the near future."
-msgstr "হ্যাঁ। Rotation Tournaments অ্যাপের iOS সংস্করণের পরিকল্পনা আছে এবং শিগগিরই প্রকাশিত হবে।"
 
 #. Found in faq header.
 msgid "Will my website be visible in the Rotation Tournaments Android app?"
@@ -74,80 +206,12 @@ msgid "<strong>How to install the Android app:</strong>"
 msgstr "<strong>Android অ্যাপ কীভাবে ইনস্টল করবেন:</strong>"
 
 #. Found in description paragraph.
-msgid "<strong>This plugin is the server-side for the \"Rotation Tournaments\" Android app.</strong>"
-msgstr "<strong>এই প্লাগইনটি “Rotation Tournaments” Android অ্যাপের সার্ভার অংশ।</strong>"
-
-#. Screenshot description.
-msgid "Individual tournament participants enter their results into the WordPress server and share the data with each other."
-msgstr "টুর্নামেন্টের প্রত্যেক অংশগ্রহণকারী WordPress সার্ভারে নিজের ফলাফল লেখেন এবং একে অপরের সঙ্গে ডেটা শেয়ার করেন।"
-
-#. Screenshot description.
-msgid "Matches played. (Android app)"
-msgstr "খেলা হয়ে যাওয়া ম্যাচ। (Android অ্যাপ)"
-
-#. Screenshot description.
-msgid "Tournament table. (Wordpress)"
-msgstr "টুর্নামেন্টের টেবিল। (WordPress)"
-
-#. Screenshot description.
-msgid "Matches drawn. (Android app)"
-msgstr "ড্র হওয়া ম্যাচ। (Android অ্যাপ)"
-
-#. Screenshot description.
-msgid "Editing tournament parameters. (Wordpress)"
-msgstr "টুর্নামেন্টের প্যারামিটার সম্পাদনা। (WordPress)"
-
-#. Screenshot description.
-msgid "Table of players with rankings. (Android app)"
-msgstr "র‍্যাঙ্কিংসহ খেলোয়াড়দের টেবিল। (Android অ্যাপ)"
-
-#. Screenshot description.
-msgid "Matches played. (Wordpress)"
-msgstr "খেলা হয়ে যাওয়া ম্যাচ। (WordPress)"
-
-#. Screenshot description.
-msgid "Basic overview of the tournament. (Android app)"
-msgstr "টুর্নামেন্টের মৌলিক সংক্ষিপ্ত বিবরণ। (Android অ্যাপ)"
-
-#. Screenshot description.
-msgid "Matches drawn. (Wordpress)"
-msgstr "ড্র হওয়া ম্যাচ। (WordPress)"
-
-#. Found in description paragraph.
-msgid "<strong>Rotation Tournaments</strong> provides a platform for organizing all kinds of sports Singles and Doubles Tournaments, e.g."
-msgstr "<strong>রোটেশন টুর্নামেন্ট</strong> সব ধরনের ক্রীড়া সিঙ্গলস ও ডাবলস টুর্নামেন্ট আয়োজনের একটি প্ল্যাটফর্ম, যেমন"
-
-#. Found in description list item.
-msgid "Squash"
-msgstr "স্কোয়াশ"
-
-#. Found in description list item.
-msgid "Beach Volleyball"
-msgstr "বিচ ভলিবল"
-
-#. Found in description list item.
-msgid "Badminton"
-msgstr "ব্যাডমিন্টন"
-
-#. Found in description list item.
-msgid "Padel"
-msgstr "প্যাডেল"
-
-#. Found in description list item.
-msgid "Table Tennis"
-msgstr "টেবিল টেনিস"
-
-#. Found in description list item.
-msgid "Tennis"
-msgstr "টেনিস"
+msgid "<strong>Try it</strong>"
+msgstr "<strong>চেষ্টা করে দেখুন</strong>"
 
 #. Found in faq paragraph.
-msgid ""
-"This plugin can be used for all types of sports where 2 or 4 players compete in singles or doubles.\n"
-"You can use this plugin for tennis, table tennis, squash, padel, badminton, beach volleyball and probably for more."
-msgstr ""
-"যেসব খেলায় 2 বা 4 জন খেলোয়াড় সিঙ্গলস বা ডাবলসে প্রতিদ্বন্দ্বিতা করেন, সেগুলোর সবকটিতে এই প্লাগইন ব্যবহার করা যায়।\n"
-"টেনিস, টেবিল টেনিস, স্কোয়াশ, প্যাডেল, ব্যাডমিন্টন, বিচ ভলিবল এবং সম্ভবত আরও খেলায় এটি ব্যবহার করতে পারেন।"
+msgid "This plugin can be used for all types of sports where 2 or 4 players compete in singles or doubles.\nYou can use this plugin for tennis, table tennis, squash, padel, badminton, beach volleyball and probably for more."
+msgstr "যেসব খেলায় 2 বা 4 জন খেলোয়াড় সিঙ্গলস বা ডাবলসে প্রতিদ্বন্দ্বিতা করেন, সেগুলোর সবকটিতে এই প্লাগইন ব্যবহার করা যায়।\nটেনিস, টেবিল টেনিস, স্কোয়াশ, প্যাডেল, ব্যাডমিন্টন, বিচ ভলিবল এবং সম্ভবত আরও খেলায় এটি ব্যবহার করতে পারেন।"
 
 #. Found in faq paragraph.
 msgid "Yes. When creating a tournament, you can choose whether to create a singles or a doubles tournament."
@@ -156,118 +220,6 @@ msgstr "হ্যাঁ। টুর্নামেন্ট তৈরির স
 #. Found in faq header.
 msgid "What sports tournaments is this plugin for?"
 msgstr "এই প্লাগইন কোন ক্রীড়া টুর্নামেন্টের জন্য?"
-
-#. Found in description paragraph.
-msgid "<strong>General Features:</strong>"
-msgstr "<strong>সাধারণ বৈশিষ্ট্য:</strong>"
-
-#. Found in description paragraph.
-msgid "<strong>Doubles Rotation Tournament:</strong>"
-msgstr "<strong>ডাবলস রোটেশন টুর্নামেন্ট:</strong>"
-
-#. Found in description paragraph.
-msgid "<strong>Singles Rotation Tournament:</strong>"
-msgstr "<strong>সিঙ্গলস রোটেশন টুর্নামেন্ট:</strong>"
-
-#. Found in description paragraph.
-msgid "The participants of a tournament change partners several times during the tournament by a random selection and play against different players. The ratio of games won to games lost is calculated for each participant. The winner of the tournament is the player with this highest ratio. While a Singles Rotation Tournament can be organized without the aid of technology, in the case of a Doubles Rotation Tournament, this is not possible."
-msgstr "টুর্নামেন্টের অংশগ্রহণকারীরা এলোমেলো নির্বাচনের মাধ্যমে টুর্নামেন্টে কয়েকবার সঙ্গী বদলান এবং বিভিন্ন খেলোয়াড়ের বিপক্ষে খেলেন। প্রত্যেক অংশগ্রহণকারীর জন্য জেতা ও হারা গেমের অনুপাত হিসাব করা হয়। সর্বোচ্চ অনুপাতধারী খেলোয়াড় টুর্নামেন্টের বিজয়ী। সিঙ্গলস রোটেশন টুর্নামেন্ট প্রযুক্তির সাহায্য ছাড়া আয়োজন করা গেলেও ডাবলস রোটেশন টুর্নামেন্টে তা সম্ভব নয়।"
-
-#. Found in description paragraph.
-msgid "The <strong>Rotation Tournaments</strong> have a strong social aspect because its goal is to keep players in the tournament until the very end. The situation where weaker players would leave the tournament due to elimination rounds is eliminated. It allows grouping players into a special category with special conditions. This special setting can be utilized, for example, in mixed tournaments."
-msgstr "<strong>রোটেশন টুর্নামেন্ট</strong>-এর একটি জোরালো সামাজিক দিক আছে, কারণ এর লক্ষ্য খেলোয়াড়দের একেবারে শেষ পর্যন্ত টুর্নামেন্টে রাখা। নকআউট রাউন্ডের কারণে দুর্বল খেলোয়াড়দের টুর্নামেন্ট ছেড়ে যাওয়ার পরিস্থিতি থাকে না। খেলোয়াড়দের বিশেষ শর্তসহ একটি বিশেষ বিভাগে রাখা যায়। এই বিশেষ সেটিং যেমন মিশ্র টুর্নামেন্টে কাজে লাগানো যায়।"
-
-#. Found in description paragraph.
-msgid "In <strong>Rotation Tournaments</strong>, each participant plays against every other participant and there are no eliminations in individual rounds. To maximize the variety of match combinations, the matches are typically played in a single set."
-msgstr "<strong>রোটেশন টুর্নামেন্ট</strong>-এ প্রত্যেক অংশগ্রহণকারী অন্য সবার বিপক্ষে খেলেন এবং কোনো রাউন্ডে কেউ বাদ পড়েন না। ম্যাচের সংমিশ্রণে সর্বোচ্চ বৈচিত্র্য আনতে ম্যাচগুলো সাধারণত এক সেটে খেলা হয়।"
-
-#. Found in description list item.
-msgid "Suitable for various sports: tennis, table tennis, squash, padel, badminton, beach volleyball, and more."
-msgstr "বিভিন্ন খেলার জন্য উপযোগী: টেনিস, টেবিল টেনিস, স্কোয়াশ, প্যাডেল, ব্যাডমিন্টন, বিচ ভলিবল ও আরও অনেক।"
-
-#. Found in description list item.
-msgid "Integration with website user accounts."
-msgstr "ওয়েবসাইটের ব্যবহারকারী অ্যাকাউন্টের সঙ্গে সংযুক্তি।"
-
-#. Found in description list item.
-msgid "No downtime during the tournament."
-msgstr "টুর্নামেন্টে কোনো অলস সময় নেই।"
-
-#. Found in description list item.
-msgid "Comprehensive overview of player quality."
-msgstr "খেলোয়াড়দের মান সম্পর্কে পূর্ণাঙ্গ ধারণা।"
-
-#. Found in description list item.
-msgid "User-friendly interface for administrators and participants."
-msgstr "প্রশাসক ও অংশগ্রহণকারীদের জন্য ব্যবহারবান্ধব ইন্টারফেস।"
-
-#. Found in description list item.
-msgid "Customizable settings for each tournament."
-msgstr "প্রতিটি টুর্নামেন্টের জন্য কাস্টমাইজযোগ্য সেটিংস।"
-
-#. Found in description list item.
-msgid "Real-time score tracking."
-msgstr "রিয়েল-টাইমে স্কোর অনুসরণ।"
-
-#. Found in description list item.
-msgid "Seamless scheduling of matches."
-msgstr "ম্যাচের নির্বিঘ্ন সময়সূচি।"
-
-#. Found in description list item.
-msgid "Announcement of the Best Player and Most Ideal Pair at the end of the tournament."
-msgstr "টুর্নামেন্টের শেষে সেরা খেলোয়াড় ও আদর্শ জুটির ঘোষণা।"
-
-#. Found in description list item.
-msgid "Ranking based on the ratio of games won to games lost."
-msgstr "জেতা ও হারা গেমের অনুপাতভিত্তিক র‍্যাঙ্কিং।"
-
-#. Found in description list item.
-msgid "Individual players can join or leave the tournament at any time."
-msgstr "খেলোয়াড়েরা যেকোনো সময় টুর্নামেন্টে যোগ দিতে বা ছাড়তে পারেন।"
-
-#. Found in description list item.
-msgid "Tournament can be interrupted or extended without disruption."
-msgstr "বাধা ছাড়াই টুর্নামেন্ট থামানো বা বাড়ানো যায়।"
-
-#. Found in description list item.
-msgid "Shorter matches for more participation."
-msgstr "বেশি অংশগ্রহণের জন্য ছোট ম্যাচ।"
-
-#. Found in description list item.
-msgid "No eliminations, ensuring all players stay in the game."
-msgstr "কেউ বাদ পড়েন না, সব খেলোয়াড় খেলায় থাকেন।"
-
-#. Found in description list item.
-msgid "Define special groups of players with unique conditions."
-msgstr "নিজস্ব শর্তসহ খেলোয়াড়দের বিশেষ গ্রুপ নির্ধারণ।"
-
-#. Found in description list item.
-msgid "Suitable for odd numbers of players and minimum lineups of 4 players."
-msgstr "বিজোড় সংখ্যক খেলোয়াড় ও ন্যূনতম 4 জন খেলোয়াড়ের জন্য উপযোগী।"
-
-#. Found in description list item.
-msgid "Individuals can enter the tournament without a permanent teammate."
-msgstr "স্থায়ী সঙ্গী ছাড়াই টুর্নামেন্টে যোগ দেওয়া যায়।"
-
-#. Found in description list item.
-msgid "Rotation of teammates, ensuring variety in partnerships."
-msgstr "সঙ্গীর পালাবদল, যা জুটিতে বৈচিত্র্য আনে।"
-
-#. Found in description list item.
-msgid "Alternative form of a Doubles Tournament where players enter each match with a different partner and in different positions (alternating left and right sides)."
-msgstr "ডাবলস টুর্নামেন্টের একটি বিকল্প রূপ, যেখানে খেলোয়াড়েরা প্রতিটি ম্যাচ ভিন্ন সঙ্গীর সঙ্গে ও ভিন্ন অবস্থানে খেলেন (বাঁ ও ডান দিক পালাক্রমে)।"
-
-#. Found in description list item.
-msgid "Depending on the time options, everyone plays against everyone."
-msgstr "সময় অনুযায়ী সবাই সবার বিপক্ষে খেলেন।"
-
-#. Found in description list item.
-msgid "Alternative form of a Singles Tournament where players face each other without elimination rounds."
-msgstr "সিঙ্গলস টুর্নামেন্টের একটি বিকল্প রূপ, যেখানে খেলোয়াড়েরা নকআউট রাউন্ড ছাড়াই মুখোমুখি হন।"
-
-#. Found in description header.
-msgid "Features"
-msgstr "বৈশিষ্ট্য"
 
 #. Found in faq header.
 msgid "Is this plugin suitable for singles tournaments?"
@@ -306,16 +258,43 @@ msgid "Install the plugin as usual."
 msgstr "স্বাভাবিক নিয়মে প্লাগইন ইনস্টল করুন।"
 
 #. Found in description paragraph.
-msgid "Visit <a href=\"https://doroto.ltcchrast.cz/\">test page</a> for more information, try to create your own tournament and take a look at <a href=\"https://doroto.ltcchrast.cz/rules-of-the-doubles-rotation-tournament/\">Rules of the Doubles Rotation Tournament</a>."
-msgstr "আরও তথ্যের জন্য <a href=\"https://doroto.ltcchrast.cz/\">পরীক্ষামূলক পৃষ্ঠা</a> দেখুন, নিজের টুর্নামেন্ট তৈরি করে দেখুন এবং <a href=\"https://doroto.ltcchrast.cz/rules-of-the-doubles-rotation-tournament/\">ডাবলস রোটেশন টুর্নামেন্টের নিয়ম</a> দেখে নিন।"
-
-#. Found in description paragraph.
 msgid "[youtube https://www.youtube.com/watch?v=NoL9aPTv8u8]"
 msgstr "[youtube https://www.youtube.com/watch?v=NoL9aPTv8u8]"
 
-#. Found in description header.
-msgid "More information"
-msgstr "আরও তথ্য"
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - readme: new description of the draw, the blocks and the app; new screenshots (also in Spanish for Chile)"
+msgstr "উন্নতি – readme: ড্র, ব্লক ও অ্যাপের নতুন বর্ণনা; নতুন স্ক্রিনশট (চিলির স্প্যানিশেও)"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - new plugin icon and banner, the same icon as the Android app"
+msgstr "উন্নতি – প্লাগইনের নতুন আইকন ও ব্যানার, Android অ্যাপের মতো একই আইকন"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "2.0.2 - 2026/10/15"
+msgstr "2.0.2 - 2026/10/15"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Add - English variants for the UK, Australia, Canada, New Zealand and South Africa"
+msgstr "যোগ – যুক্তরাজ্য, অস্ট্রেলিয়া, কানাডা, নিউজিল্যান্ড ও দক্ষিণ আফ্রিকার জন্য ইংরেজির রূপ"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - the round-end notice of the tournament block no longer repeats the texts of its buttons"
+msgstr "উন্নতি – টুর্নামেন্ট ব্লকের রাউন্ড শেষের বিজ্ঞপ্তি আর তার বোতামগুলোর লেখা পুনরাবৃত্তি করে না"
+
+#. Found in changelog list item.
+#, gp-priority: low
+msgid "Improvement - messages, headings and notices are translated as whole sentences, so languages with a different word order (e.g. Turkish, Hungarian, Hindi, Japanese, Korean and Chinese) read naturally"
+msgstr "উন্নতি – বার্তা, শিরোনাম ও বিজ্ঞপ্তি সম্পূর্ণ বাক্য হিসেবে অনুবাদ করা হয়, ফলে ভিন্ন শব্দক্রমের ভাষাগুলি (যেমন তুর্কি, হাঙ্গেরীয়, হিন্দি, জাপানি, কোরীয় ও চীনা) স্বাভাবিক শোনায়"
+
+#. Found in changelog header.
+#, gp-priority: low
+msgid "2.0.1 - 2026/10/08"
+msgstr "2.0.1 - 2026/10/08"
 
 #. Found in changelog list item.
 #, gp-priority: low
@@ -1189,21 +1168,13 @@ msgstr "সংশোধন – সব টুর্নামেন্ট মু�
 
 #. Found in changelog paragraph.
 #, gp-priority: low
-msgid ""
-"Trial tournament improvements.\n"
-"Added the option to announce the end of the tournament round."
-msgstr ""
-"পরীক্ষামূলক টুর্নামেন্টের উন্নতি।\n"
-"টুর্নামেন্ট রাউন্ড শেষের ঘোষণার বিকল্প যোগ।"
+msgid "Trial tournament improvements.\nAdded the option to announce the end of the tournament round."
+msgstr "পরীক্ষামূলক টুর্নামেন্টের উন্নতি।\nটুর্নামেন্ট রাউন্ড শেষের ঘোষণার বিকল্প যোগ।"
 
 #. Found in changelog paragraph.
 #, gp-priority: low
-msgid ""
-"Improved the visual appearance of the main page.\n"
-"Badminton added to the list of available tournaments."
-msgstr ""
-"মূল পৃষ্ঠার চেহারা উন্নত।\n"
-"উপলব্ধ টুর্নামেন্টের তালিকায় ব্যাডমিন্টন যোগ।"
+msgid "Improved the visual appearance of the main page.\nBadminton added to the list of available tournaments."
+msgstr "মূল পৃষ্ঠার চেহারা উন্নত।\nউপলব্ধ টুর্নামেন্টের তালিকায় ব্যাডমিন্টন যোগ।"
 
 #. Found in changelog paragraph.
 #, gp-priority: low
@@ -1212,65 +1183,33 @@ msgstr "বিশেষ গ্রুপ ও বিশেষ গ্রুপে�
 
 #. Found in changelog paragraph.
 #, gp-priority: low
-msgid ""
-"Notices after a plugin activation.\n"
-"Added player trend."
-msgstr ""
-"প্লাগইন সক্রিয় করার পর বিজ্ঞপ্তি।\n"
-"খেলোয়াড়ের ট্রেন্ড যোগ।"
+msgid "Notices after a plugin activation.\nAdded player trend."
+msgstr "প্লাগইন সক্রিয় করার পর বিজ্ঞপ্তি।\nখেলোয়াড়ের ট্রেন্ড যোগ।"
 
 #. Found in changelog paragraph.
 #, gp-priority: low
-msgid ""
-"Modified tournament editing tab.\n"
-"Added option to change tournament type."
-msgstr ""
-"টুর্নামেন্ট সম্পাদনার ট্যাব পরিবর্তিত।\n"
-"টুর্নামেন্টের ধরন বদলানোর বিকল্প যোগ।"
+msgid "Modified tournament editing tab.\nAdded option to change tournament type."
+msgstr "টুর্নামেন্ট সম্পাদনার ট্যাব পরিবর্তিত।\nটুর্নামেন্টের ধরন বদলানোর বিকল্প যোগ।"
 
 #. Found in changelog paragraph.
 #, gp-priority: low
-msgid ""
-"Reactivating the plugin doesn´t affect the already deleted tournament example. \n"
-"Unblock offering maximum games count.\n"
-"Fix tournament change when entering results.\n"
-"Added quick help for newcomers.\n"
-"Allow the final match also for singles."
-msgstr ""
-"প্লাগইন আবার সক্রিয় করলে ইতিমধ্যে মুছে ফেলা উদাহরণ টুর্নামেন্টে প্রভাব পড়ে না।\n"
-"সর্বোচ্চ গেম সংখ্যার বিকল্প উন্মুক্ত।\n"
-"ফলাফল লেখার সময় টুর্নামেন্ট বদল সংশোধন।\n"
-"নতুনদের জন্য দ্রুত সাহায্য যোগ।\n"
-"সিঙ্গলসেও ফাইনাল ম্যাচের অনুমতি।"
+msgid "Reactivating the plugin doesn´t affect the already deleted tournament example. \nUnblock offering maximum games count.\nFix tournament change when entering results.\nAdded quick help for newcomers.\nAllow the final match also for singles."
+msgstr "প্লাগইন আবার সক্রিয় করলে ইতিমধ্যে মুছে ফেলা উদাহরণ টুর্নামেন্টে প্রভাব পড়ে না।\nসর্বোচ্চ গেম সংখ্যার বিকল্প উন্মুক্ত।\nফলাফল লেখার সময় টুর্নামেন্ট বদল সংশোধন।\nনতুনদের জন্য দ্রুত সাহায্য যোগ।\nসিঙ্গলসেও ফাইনাল ম্যাচের অনুমতি।"
 
 #. Found in changelog paragraph.
 #, gp-priority: low
-msgid ""
-"Added the option for single tournaments. \n"
-"Created an environment for additional sports."
-msgstr ""
-"সিঙ্গলস টুর্নামেন্টের বিকল্প যোগ।\n"
-"অন্যান্য খেলার জন্য পরিবেশ তৈরি।"
+msgid "Added the option for single tournaments. \nCreated an environment for additional sports."
+msgstr "সিঙ্গলস টুর্নামেন্টের বিকল্প যোগ।\nঅন্যান্য খেলার জন্য পরিবেশ তৈরি।"
 
 #. Found in changelog paragraph.
 #, gp-priority: low
-msgid ""
-"The administrator can now use 'hide' option when editing the match result.\n"
-"Free score input is allowed. This opens using not only for tennis but for example for table tennis or beach volleyball."
-msgstr ""
-"ম্যাচের ফলাফল সম্পাদনার সময় প্রশাসক এখন “লুকান” বিকল্প ব্যবহার করতে পারেন।\n"
-"স্কোর মুক্তভাবে লেখার অনুমতি দেওয়া হয়েছে। এতে কেবল টেনিস নয়, যেমন টেবিল টেনিস বা বিচ ভলিবলেও ব্যবহার করা যায়।"
+msgid "The administrator can now use 'hide' option when editing the match result.\nFree score input is allowed. This opens using not only for tennis but for example for table tennis or beach volleyball."
+msgstr "ম্যাচের ফলাফল সম্পাদনার সময় প্রশাসক এখন “লুকান” বিকল্প ব্যবহার করতে পারেন।\nস্কোর মুক্তভাবে লেখার অনুমতি দেওয়া হয়েছে। এতে কেবল টেনিস নয়, যেমন টেবিল টেনিস বা বিচ ভলিবলেও ব্যবহার করা যায়।"
 
 #. Found in changelog paragraph.
 #, gp-priority: low
-msgid ""
-"Minor changes in code:\n"
-"* Allow to transfer organizer rights to a non-playing user.\n"
-"* Ensuring an even rotation of serves at the start of the tournament."
-msgstr ""
-"কোডে ছোট পরিবর্তন:\n"
-"* না-খেলা ব্যবহারকারীকে আয়োজকের অধিকার হস্তান্তরের অনুমতি।\n"
-"* টুর্নামেন্টের শুরুতে সার্ভের সমান পালাবদল নিশ্চিত।"
+msgid "Minor changes in code:\n* Allow to transfer organizer rights to a non-playing user.\n* Ensuring an even rotation of serves at the start of the tournament."
+msgstr "কোডে ছোট পরিবর্তন:\n* না-খেলা ব্যবহারকারীকে আয়োজকের অধিকার হস্তান্তরের অনুমতি।\n* টুর্নামেন্টের শুরুতে সার্ভের সমান পালাবদল নিশ্চিত।"
 
 #. Found in changelog paragraph.
 #, gp-priority: low
@@ -1286,23 +1225,3 @@ msgstr "অ্যাডমিন স্ক্রিনে ছোট পরিব
 #, gp-priority: low
 msgid "First release to public."
 msgstr "প্রথম সর্বজনীন প্রকাশ।"
-
-#. Found in changelog header.
-#, gp-priority: low
-msgid "2.0.1 - 2026/10/08"
-msgstr "2.0.1 - 2026/10/08"
-
-#. Found in changelog list item.
-#, gp-priority: low
-msgid "Improvement - messages, headings and notices are translated as whole sentences, so languages with a different word order (e.g. Turkish, Hungarian, Hindi, Japanese, Korean and Chinese) read naturally"
-msgstr "উন্নতি – বার্তা, শিরোনাম ও বিজ্ঞপ্তি সম্পূর্ণ বাক্য হিসেবে অনুবাদ করা হয়, ফলে ভিন্ন শব্দক্রমের ভাষাগুলি (যেমন তুর্কি, হাঙ্গেরীয়, হিন্দি, জাপানি, কোরীয় ও চীনা) স্বাভাবিক শোনায়"
-
-#. Found in changelog list item.
-#, gp-priority: low
-msgid "Improvement - the round-end notice of the tournament block no longer repeats the texts of its buttons"
-msgstr "উন্নতি – টুর্নামেন্ট ব্লকের রাউন্ড শেষের বিজ্ঞপ্তি আর তার বোতামগুলোর লেখা পুনরাবৃত্তি করে না"
-
-#. Found in changelog list item.
-#, gp-priority: low
-msgid "Add - English variants for the UK, Australia, Canada, New Zealand and South Africa"
-msgstr "যোগ – যুক্তরাজ্য, অস্ট্রেলিয়া, কানাডা, নিউজিল্যান্ড ও দক্ষিণ আফ্রিকার জন্য ইংরেজির রূপ"
