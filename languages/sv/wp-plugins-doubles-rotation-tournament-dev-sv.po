@@ -3892,7 +3892,7 @@ msgstr "Spelare %s har spelat lika många matcher med alla."
 #. translators: %s: player name
 #: includes/doroto-services.php:147
 msgid "Player %s has renewed participation."
-msgstr "Spelare %s deltar igen."
+msgstr "Spelare %s har återupptagit sitt deltagande."
 
 #. translators: %s: player name
 #: includes/doroto-services.php:142

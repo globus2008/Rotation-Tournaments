@@ -133,6 +133,15 @@
     "voer ... in" for Enter, "content", "icoon", "updaten/geüpdatet", "verversen", "omleiden", "terugzetten";
     plugin name untranslated ("Rotation Tournaments"); changelog prefixes with a plain hyphen ("Oplossing - ").
   - es_MX: plugin name untranslated (style guide). tr: "yeniden" (not "tekrar"), common nouns in lower case.
+  - Changelog headers ("2.0.2 - 2026/10/15"): the date is written in the locale's numeric format (nl asked for
+    "15-10-2026"). Formats: nl/es_CL dd-mm-yyyy; de*, da, nb, pl, ru, uk,
+    ro, tr dd.mm.yyyy; fi d.m.yyyy; cs/sk "d. m. yyyy"; fr, es*, it, pt*, en_GB/AU/NZ, ar, he, hi, bn, id, vi, th
+    dd/mm/yyyy; sv, en_CA, zh_CN yyyy-mm-dd; ja, zh_TW, en_ZA yyyy/mm/dd; hu "yyyy. mm. dd."; ko "yyyy. m. d.".
+  - sv editor rejected "Spelare %s deltar igen." and "Prova" (Try it); resubmitted 2026-10-15 as
+    "Spelare %s har återupptagit sitt deltagande." (like the accepted "har tillfälligt pausat sitt deltagande") and "Testa det".
+  - es_MX had 52 strings with no suggestion at all (the sentences rewritten on 2026-10-08); import file prepared 2026-10-15.
+  - Check gaps with the export `.../dev/<slug>/default/export-translations/?format=po&filters[status]=untranslated`
+    (strings without any suggestion) and `filters[status]=rejected`.
   - Status per locale: `https://translate.wordpress.org/projects/wp-plugins/doubles-rotation-tournament/dev/` (and
     `dev-readme/`); reasons are on each string's discussion page; filter `?filters[status]=changesrequested`.
 - The French PO files had a control character (0x01) instead of "»" or ":;!?" after a no-break space (since the first

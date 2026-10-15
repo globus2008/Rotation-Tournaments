@@ -274,7 +274,7 @@ msgstr "Mejora: nuevo icono y nuevo banner del plugin, el mismo icono que la apl
 #. Found in changelog header.
 #, gp-priority: low
 msgid "2.0.2 - 2026/10/15"
-msgstr "2.0.2 - 2026/10/15"
+msgstr "2.0.2 - 15-10-2026"
 
 #. Found in changelog list item.
 #, gp-priority: low
@@ -294,7 +294,7 @@ msgstr "Mejora: los mensajes, títulos y avisos se traducen como oraciones compl
 #. Found in changelog header.
 #, gp-priority: low
 msgid "2.0.1 - 2026/10/08"
-msgstr "2.0.1 - 2026/10/08"
+msgstr "2.0.1 - 08-10-2026"
 
 #. Found in changelog list item.
 #, gp-priority: low
@@ -354,7 +354,7 @@ msgstr "Agregado: bloques para el editor de bloques: “Torneo rotativo” (part
 #. Found in changelog header.
 #, gp-priority: low
 msgid "2.0.0 - 2026/10/06"
-msgstr "2.0.0 - 2026/10/06"
+msgstr "2.0.0 - 06-10-2026"
 
 #. Found in changelog list item.
 #, gp-priority: low
@@ -524,17 +524,17 @@ msgstr "Mejora: el sorteo elige el equipo rival (y el compañero) también segú
 #. Found in changelog header.
 #, gp-priority: low
 msgid "1.6.0 - 2026/10/02"
-msgstr "1.6.0 - 2026/10/02"
+msgstr "1.6.0 - 02-10-2026"
 
 #. Found in changelog header.
 #, gp-priority: low
 msgid "1.6.1 - 2026/10/02"
-msgstr "1.6.1 - 2026/10/02"
+msgstr "1.6.1 - 02-10-2026"
 
 #. Found in changelog header.
 #, gp-priority: low
 msgid "1.6.2 - 2026/10/04"
-msgstr "1.6.2 - 2026/10/04"
+msgstr "1.6.2 - 04-10-2026"
 
 #. Found in changelog list item.
 #, gp-priority: low
@@ -544,7 +544,7 @@ msgstr "Corrección: se han corregido algunos errores detectados por Plugin Chec
 #. Found in changelog header.
 #, gp-priority: low
 msgid "1.5.8 - 2026/06/12"
-msgstr "1.5.8 - 2026/06/12"
+msgstr "1.5.8 - 12-06-2026"
 
 #. Found in changelog list item.
 #, gp-priority: low
@@ -554,7 +554,7 @@ msgstr "Corrección: algunas traducciones"
 #. Found in changelog header.
 #, gp-priority: low
 msgid "1.5.7 - 2026/06/06"
-msgstr "1.5.7 - 2026/06/06"
+msgstr "1.5.7 - 06-06-2026"
 
 #. Found in changelog list item.
 #, gp-priority: low
@@ -564,7 +564,7 @@ msgstr "Corrección: registro y acceso en la aplicación de Android"
 #. Found in changelog header.
 #, gp-priority: low
 msgid "1.5.6 - 2026/05/13"
-msgstr "1.5.6 - 2026/05/13"
+msgstr "1.5.6 - 13-05-2026"
 
 #. Found in changelog list item.
 #, gp-priority: low
@@ -574,7 +574,7 @@ msgstr "Agregado: quitar un administrador desde la aplicación de Android"
 #. Found in changelog header.
 #, gp-priority: low
 msgid "1.5.5 - 2026/05/12"
-msgstr "1.5.5 - 2026/05/12"
+msgstr "1.5.5 - 12-05-2026"
 
 #. Found in changelog list item.
 #, gp-priority: low
@@ -584,252 +584,252 @@ msgstr "Corrección: el valor rest ahora es seguro"
 #. Found in changelog header.
 #, gp-priority: low
 msgid "1.0.0 - 2024/01/01"
-msgstr "1.0.0 - 2024/01/01"
+msgstr "1.0.0 - 01-01-2024"
 
 #. Found in changelog header.
 #, gp-priority: low
 msgid "1.0.1 - 2024/01/03"
-msgstr "1.0.1 - 2024/01/03"
+msgstr "1.0.1 - 03-01-2024"
 
 #. Found in changelog header.
 #, gp-priority: low
 msgid "1.0.2 - 2024/01/21"
-msgstr "1.0.2 - 2024/01/21"
+msgstr "1.0.2 - 21-01-2024"
 
 #. Found in changelog header.
 #, gp-priority: low
 msgid "1.0.3 - 2024/01/26"
-msgstr "1.0.3 - 2024/01/26"
+msgstr "1.0.3 - 26-01-2024"
 
 #. Found in changelog header.
 #, gp-priority: low
 msgid "1.0.4 - 2024/02/02"
-msgstr "1.0.4 - 2024/02/02"
+msgstr "1.0.4 - 02-02-2024"
 
 #. Found in changelog header.
 #, gp-priority: low
 msgid "1.1.0 - 2024/02/04"
-msgstr "1.1.0 - 2024/02/04"
+msgstr "1.1.0 - 04-02-2024"
 
 #. Found in changelog header.
 #, gp-priority: low
 msgid "1.1.1 - 2024/02/09"
-msgstr "1.1.1 - 2024/02/09"
+msgstr "1.1.1 - 09-02-2024"
 
 #. Found in changelog header.
 #, gp-priority: low
 msgid "1.1.2 - 2024/02/13"
-msgstr "1.1.2 - 2024/02/13"
+msgstr "1.1.2 - 13-02-2024"
 
 #. Found in changelog header.
 #, gp-priority: low
 msgid "1.1.3 - 2024/02/17"
-msgstr "1.1.3 - 2024/02/17"
+msgstr "1.1.3 - 17-02-2024"
 
 #. Found in changelog header.
 #, gp-priority: low
 msgid "1.1.4 - 2024/02/18"
-msgstr "1.1.4 - 2024/02/18"
+msgstr "1.1.4 - 18-02-2024"
 
 #. Found in changelog header.
 #, gp-priority: low
 msgid "1.1.5 - 2024/02/20"
-msgstr "1.1.5 - 2024/02/20"
+msgstr "1.1.5 - 20-02-2024"
 
 #. Found in changelog header.
 #, gp-priority: low
 msgid "1.1.6 - 2024/02/25"
-msgstr "1.1.6 - 2024/02/25"
+msgstr "1.1.6 - 25-02-2024"
 
 #. Found in changelog header.
 #, gp-priority: low
 msgid "1.1.7 - 2024/03/01"
-msgstr "1.1.7 - 2024/03/01"
+msgstr "1.1.7 - 01-03-2024"
 
 #. Found in changelog header.
 #, gp-priority: low
 msgid "1.1.8 - 2024/03/07"
-msgstr "1.1.8 - 2024/03/07"
+msgstr "1.1.8 - 07-03-2024"
 
 #. Found in changelog header.
 #, gp-priority: low
 msgid "1.1.9 - 2024/03/09"
-msgstr "1.1.9 - 2024/03/09"
+msgstr "1.1.9 - 09-03-2024"
 
 #. Found in changelog header.
 #, gp-priority: low
 msgid "1.2.0 - 2024/03/20"
-msgstr "1.2.0 - 2024/03/20"
+msgstr "1.2.0 - 20-03-2024"
 
 #. Found in changelog header.
 #, gp-priority: low
 msgid "1.2.1 - 2024/03/21"
-msgstr "1.2.1 - 2024/03/21"
+msgstr "1.2.1 - 21-03-2024"
 
 #. Found in changelog header.
 #, gp-priority: low
 msgid "1.2.2 - 2024/04/17"
-msgstr "1.2.2 - 2024/04/17"
+msgstr "1.2.2 - 17-04-2024"
 
 #. Found in changelog header.
 #, gp-priority: low
 msgid "1.2.3 - 2024/04/19"
-msgstr "1.2.3 - 2024/04/19"
+msgstr "1.2.3 - 19-04-2024"
 
 #. Found in changelog header.
 #, gp-priority: low
 msgid "1.2.4 - 2024/05/08"
-msgstr "1.2.4 - 2024/05/08"
+msgstr "1.2.4 - 08-05-2024"
 
 #. Found in changelog header.
 #, gp-priority: low
 msgid "1.2.5 - 2024/05/15"
-msgstr "1.2.5 - 2024/05/15"
+msgstr "1.2.5 - 15-05-2024"
 
 #. Found in changelog header.
 #, gp-priority: low
 msgid "1.2.6 - 2024/05/29"
-msgstr "1.2.6 - 2024/05/29"
+msgstr "1.2.6 - 29-05-2024"
 
 #. Found in changelog header.
 #, gp-priority: low
 msgid "1.2.7 - 2024/06/07"
-msgstr "1.2.7 - 2024/06/07"
+msgstr "1.2.7 - 07-06-2024"
 
 #. Found in changelog header.
 #, gp-priority: low
 msgid "1.2.8 - 2024/06/21"
-msgstr "1.2.8 - 2024/06/21"
+msgstr "1.2.8 - 21-06-2024"
 
 #. Found in changelog header.
 #, gp-priority: low
 msgid "1.2.9 - 2024/06/23"
-msgstr "1.2.9 - 2024/06/23"
+msgstr "1.2.9 - 23-06-2024"
 
 #. Found in changelog header.
 #, gp-priority: low
 msgid "1.3.0 - 2024/07/06"
-msgstr "1.3.0 - 2024/07/06"
+msgstr "1.3.0 - 06-07-2024"
 
 #. Found in changelog header.
 #, gp-priority: low
 msgid "1.3.1 - 2024/07/12"
-msgstr "1.3.1 - 2024/07/12"
+msgstr "1.3.1 - 12-07-2024"
 
 #. Found in changelog header.
 #, gp-priority: low
 msgid "1.3.2 - 2024/07/18"
-msgstr "1.3.2 - 2024/07/18"
+msgstr "1.3.2 - 18-07-2024"
 
 #. Found in changelog header.
 #, gp-priority: low
 msgid "1.3.3 - 2024/09/13"
-msgstr "1.3.3 - 2024/09/13"
+msgstr "1.3.3 - 13-09-2024"
 
 #. Found in changelog header.
 #, gp-priority: low
 msgid "1.3.4 - 2024/09/26"
-msgstr "1.3.4 - 2024/09/26"
+msgstr "1.3.4 - 26-09-2024"
 
 #. Found in changelog header.
 #, gp-priority: low
 msgid "1.3.5 - 2024/09/28"
-msgstr "1.3.5 - 2024/09/28"
+msgstr "1.3.5 - 28-09-2024"
 
 #. Found in changelog header.
 #, gp-priority: low
 msgid "1.3.6 - 2024/11/02"
-msgstr "1.3.6 - 2024/11/02"
+msgstr "1.3.6 - 02-11-2024"
 
 #. Found in changelog header.
 #, gp-priority: low
 msgid "1.3.7 - 2024/12/13"
-msgstr "1.3.7 - 2024/12/13"
+msgstr "1.3.7 - 13-12-2024"
 
 #. Found in changelog header.
 #, gp-priority: low
 msgid "1.3.8 - 2024/12/15"
-msgstr "1.3.8 - 2024/12/15"
+msgstr "1.3.8 - 15-12-2024"
 
 #. Found in changelog header.
 #, gp-priority: low
 msgid "1.3.9 - 2024/12/21"
-msgstr "1.3.9 - 2024/12/21"
+msgstr "1.3.9 - 21-12-2024"
 
 #. Found in changelog header.
 #, gp-priority: low
 msgid "1.4.0 - 2024/12/27"
-msgstr "1.4.0 - 2024/12/27"
+msgstr "1.4.0 - 27-12-2024"
 
 #. Found in changelog header.
 #, gp-priority: low
 msgid "1.4.1 - 2024/12/31"
-msgstr "1.4.1 - 2024/12/31"
+msgstr "1.4.1 - 31-12-2024"
 
 #. Found in changelog header.
 #, gp-priority: low
 msgid "1.4.2 - 2025/04/16"
-msgstr "1.4.2 - 2025/04/16"
+msgstr "1.4.2 - 16-04-2025"
 
 #. Found in changelog header.
 #, gp-priority: low
 msgid "1.4.3 - 2025/05/04"
-msgstr "1.4.3 - 2025/05/04"
+msgstr "1.4.3 - 04-05-2025"
 
 #. Found in changelog header.
 #, gp-priority: low
 msgid "1.4.4 - 2025/05/25"
-msgstr "1.4.4 - 2025/05/25"
+msgstr "1.4.4 - 25-05-2025"
 
 #. Found in changelog header.
 #, gp-priority: low
 msgid "1.4.5 - 2025/06/09"
-msgstr "1.4.5 - 2025/06/09"
+msgstr "1.4.5 - 09-06-2025"
 
 #. Found in changelog header.
 #, gp-priority: low
 msgid "1.4.6 - 2025/06/14"
-msgstr "1.4.6 - 2025/06/14"
+msgstr "1.4.6 - 14-06-2025"
 
 #. Found in changelog header.
 #, gp-priority: low
 msgid "1.4.7 - 2025/07/27"
-msgstr "1.4.7 - 2025/07/27"
+msgstr "1.4.7 - 27-07-2025"
 
 #. Found in changelog header.
 #, gp-priority: low
 msgid "1.4.8 - 2025/08/07"
-msgstr "1.4.8 - 2025/08/07"
+msgstr "1.4.8 - 07-08-2025"
 
 #. Found in changelog header.
 #, gp-priority: low
 msgid "1.4.9 - 2025/08/07"
-msgstr "1.4.9 - 2025/08/07"
+msgstr "1.4.9 - 07-08-2025"
 
 #. Found in changelog header.
 #, gp-priority: low
 msgid "1.5.0 - 2025/08/08"
-msgstr "1.5.0 - 2025/08/08"
+msgstr "1.5.0 - 08-08-2025"
 
 #. Found in changelog header.
 #, gp-priority: low
 msgid "1.5.1 - 2025/08/17"
-msgstr "1.5.1 - 2025/08/17"
+msgstr "1.5.1 - 17-08-2025"
 
 #. Found in changelog header.
 #, gp-priority: low
 msgid "1.5.2 - 2025/08/26"
-msgstr "1.5.2 - 2025/08/26"
+msgstr "1.5.2 - 26-08-2025"
 
 #. Found in changelog header.
 #, gp-priority: low
 msgid "1.5.3 - 2025/12/05"
-msgstr "1.5.3 - 2025/12/05"
+msgstr "1.5.3 - 05-12-2025"
 
 #. Found in changelog header.
 #, gp-priority: low
 msgid "1.5.4 - 2026/04/22"
-msgstr "1.5.4 - 2026/04/22"
+msgstr "1.5.4 - 22-04-2026"
 
 #. Found in changelog list item.
 #, gp-priority: low
