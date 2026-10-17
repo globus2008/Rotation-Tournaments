@@ -14,7 +14,7 @@ msgstr ""
 #. Short description.
 #, gp-priority: high
 msgid "Run doubles and singles tournaments where players get a new partner every match: fair draws, live results, standings and an Android app."
-msgstr "Organiseer dubbel- en enkeltoernooien waarin spelers elke wedstrijd een nieuwe partner krijgen: eerlijke lotingen, live uitslagen, standen en een Android-app."
+msgstr "Voer dubbel- en enkeltoernooien uit waarin spelers elke wedstrijd een nieuwe partner krijgen: eerlijke lotingen, live uitslagen, standen en een Android-app."
 
 #. Plugin name.
 #, gp-priority: high
@@ -1149,7 +1149,7 @@ msgstr "Mogelijkheid om spelers uit een al lopend toernooi te verwijderen."
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "New - Expanded the ability for tournament administrators to browse through players they have already met at the tournament."
-msgstr "Nieuw - toernooibeheerders kunnen meer spelers doorbladeren die ze al op een toernooi hebben ontmoet."
+msgstr "Nieuw - de ability van toernooibeheerders om spelers te doorbladeren die ze al op het toernooi hebben ontmoet, is uitgebreid."
 
 #. Found in changelog list item.
 #, gp-priority: low
@@ -1209,7 +1209,7 @@ msgstr "De beheerder kan nu de optie 'verbergen' gebruiken bij het bewerken van 
 #. Found in changelog paragraph.
 #, gp-priority: low
 msgid "Minor changes in code:\n* Allow to transfer organizer rights to a non-playing user.\n* Ensuring an even rotation of serves at the start of the tournament."
-msgstr "Kleine wijzigingen in de code:\n* Organisatorrechten kunnen worden overgedragen aan een niet-spelende gebruiker.\n* Gelijkmatige wisseling van de opslag aan het begin van het toernooi."
+msgstr "Kleine wijzigingen in de code:\n* Overdragen van organisatorrechten aan een niet-spelende gebruiker toestaan.\n* De opslag roteert aan het begin van het toernooi gelijkmatig."
 
 #. Found in changelog paragraph.
 #, gp-priority: low

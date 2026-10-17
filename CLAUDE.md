@@ -132,6 +132,11 @@
   - nl (Peter Smits): follow the glossary strictly - "site" (not website), "selecteren/geselecteerd" (not kiezen),
     "voer ... in" for Enter, "content", "icoon", "updaten/geüpdatet", "verversen", "omleiden", "terugzetten";
     plugin name untranslated ("Rotation Tournaments"); changelog prefixes with a plain hyphen ("Oplossing - ").
+    Second round (2026-10-17, 126 + 63 strings "changes requested"): the editor's checker also wants "allow" ->
+    "toestaan", "reports" -> "rapporteert", "run" -> "uitvoeren"/"draaien", "closing" -> "gesloten", "ability" ->
+    "ability", "log in/out" -> "inloggen/uitloggen", "edit" -> "bewerken", "choose" -> "selecteren".
+    The 2026-10-15 fixes had never reached GlotPress: import files with only the changes-requested strings
+    (exported with `filters[status]=changesrequested`) are easier to check than the whole PO file.
   - es_MX: plugin name untranslated (style guide). tr: "yeniden" (not "tekrar"), common nouns in lower case.
   - Changelog headers ("2.0.2 - 2026/10/15"): the date is written in the locale's numeric format (nl asked for
     "15-10-2026"). Formats: nl/es_CL dd-mm-yyyy; de*, da, nb, pl, ru, uk,
