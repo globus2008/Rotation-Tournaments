@@ -31,6 +31,10 @@ NAMES = {
     'en_US': ('Friday Mixed Doubles', 'Summer Padel Cup'),
     'es_CL': ('Dobles mixtos del viernes', 'Copa de pádel de verano'),
     'cs_CZ': ('Páteční smíšená čtyřhra', 'Letní padelový pohár'),
+    'es_MX': ('Dobles mixtos del viernes', 'Copa de pádel de verano'),
+    'nl_NL': ('Gemengd dubbel op vrijdag', 'Zomer Padel Cup'),
+    'ru_RU': ('Пятничный микст', 'Летний кубок по паделу'),
+    'sv_SE': ('Fredagens mixeddubbel', 'Sommarens padelcup'),
 }
 MEN = ['Liam Carter', 'Lucas Meyer', 'Noah Berg', 'Mateo Garcia', 'Oliver Hughes', 'Jonas Weber']
 

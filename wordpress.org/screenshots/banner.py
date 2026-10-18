@@ -5,6 +5,7 @@ Usage: python banner.py [LOCALE]   (another locale writes banner-*-<locale>.png 
                                     and the texts of TEXTS, English when the locale is missing there)
 """
 import base64
+import json
 import os
 import shutil
 import sys
@@ -24,8 +25,19 @@ TEXTS = {
               ['Tenis', 'Pádel', 'Bádminton', 'Tenis de mesa', 'Squash', 'Vóleibol playa']),
     'cs_CZ': ('Čtyřhra s novým spoluhráčem v každém zápase', 'novým spoluhráčem',
               ['Tenis', 'Padel', 'Badminton', 'Stolní tenis', 'Squash', 'Plážový volejbal']),
+    'es_MX': ('Dobles con una nueva pareja en cada partido', 'nueva pareja',
+              ['Tenis', 'Pádel', 'Bádminton', 'Tenis de mesa', 'Squash', 'Voleibol de playa']),
+    'nl_NL': ('Elke wedstrijd een nieuwe partner', 'nieuwe partner',
+              ['Tennis', 'Padel', 'Badminton', 'Tafeltennis', 'Squash', 'Beachvolleybal']),
+    'ru_RU': ('Новый партнёр в каждом матче', 'Новый партнёр',
+              ['Теннис', 'Падел', 'Бадминтон', 'Настольный теннис', 'Сквош', 'Пляжный волейбол']),
+    'sv_SE': ('Dubbel med ny partner i varje match', 'ny partner',
+              ['Tennis', 'Padel', 'Badminton', 'Bordtennis', 'Squash', 'Beachvolleyboll']),
 }
 TAGLINE, HIGHLIGHT, SPORTS = TEXTS.get(LOCALE, TEXTS['en_US'])
+# The browser view starts just below the tab bar; a longer app notice (ru_RU wraps it) moves the tabs down.
+TABS = json.load(open(os.path.join(RAW, 'meta.json'))).get('web-players', {}).get('tabs', 0.3118)
+OFFSET = TABS + 0.0502
 
 
 def b64(path, mime):
@@ -58,7 +70,7 @@ p b {{ color: #8fd14f; font-weight: 700; }}
             border-radius: 14px; overflow: hidden; box-shadow: 0 30px 70px rgba(0,0,0,.45); }}
 .browser .bar {{ height: 30px; background: #f1f3f6; display: flex; gap: 7px; align-items: center; padding: 0 14px; }}
 .browser .bar i {{ width: 10px; height: 10px; border-radius: 50%; background: #d4d9e1; }}
-.browser img {{ width: 100%; display: block; margin-top: -{0.362 * 620:.0f}px; }}
+.browser img {{ width: 100%; display: block; margin-top: -{OFFSET * 620:.0f}px; }}
 .phone {{ position: absolute; left: 1290px; top: 120px; width: 210px; height: 446px; background: #10151f;
           border-radius: 30px; padding: 8px; box-shadow: 0 30px 70px rgba(0,0,0,.5); }}
 .phone img {{ width: 100%; height: 100%; object-fit: cover; object-position: top; border-radius: 23px; display: block; }}
