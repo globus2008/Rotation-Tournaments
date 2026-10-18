@@ -25,7 +25,8 @@ with the same tournament names can reuse the es_CL app shots.
 A new locale: add it to `NAMES` (seed.py) and `TEXTS` (banner.py), then
 `seed.py --names xx_XX`, `capture_web.py xx_XX`, app shots, `statusbar.py xx_XX`, `compose.py xx_XX`, `banner.py xx_XX`,
 `seed.py --names en_US`. Keep the banner tagline on one line (short).
-Done so far: en_US, es_CL, cs_CZ (2026-10-15); nl_NL, ru_RU, sv_SE (2026-10-18).
+Done so far: en_US, es_CL, cs_CZ (2026-10-15); nl_NL, ru_RU, sv_SE, tr_TR (2026-10-18;
+tr_TR before its readme was approved).
 es_MX is waiting: on 2026-10-18 its translation dropped `%d`/`%s` in 22 strings ("Detalles del torneo n.º" without the
 number) and lacked "Match no. %d". Check the language pack (`.po` in `wp-content/languages/plugins`) for placeholders
 before a new locale.

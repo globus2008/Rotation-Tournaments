@@ -33,6 +33,8 @@ TEXTS = {
               ['Теннис', 'Падел', 'Бадминтон', 'Настольный теннис', 'Сквош', 'Пляжный волейбол']),
     'sv_SE': ('Dubbel med ny partner i varje match', 'ny partner',
               ['Tennis', 'Padel', 'Badminton', 'Bordtennis', 'Squash', 'Beachvolleyboll']),
+    'tr_TR': ('Her maçta yeni bir takım arkadaşı', 'yeni bir takım arkadaşı',
+              ['Tenis', 'Padel', 'Badminton', 'Masa tenisi', 'Squash', 'Plaj voleybolu']),
 }
 TAGLINE, HIGHLIGHT, SPORTS = TEXTS.get(LOCALE, TEXTS['en_US'])
 # The browser view starts just below the tab bar; a longer app notice (ru_RU wraps it) moves the tabs down.
