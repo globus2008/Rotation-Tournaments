@@ -307,6 +307,15 @@ function doroto_main_page_blocks(): string
 }
 
 /**
+ * Content of a tournament post built from the 2.0 blocks.
+ * @since 2.0.3
+ */
+function doroto_tournament_post_blocks(int $tournament_id): string
+{
+	return '<!-- wp:doroto/tournament ' . wp_json_encode(['tournamentId' => $tournament_id]) . " /-->\n";
+}
+
+/**
  * Does the main page already use the blocks (converted, or created by 2.0)?
  * @since 2.0.0
  */

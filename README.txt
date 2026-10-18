@@ -3,7 +3,7 @@ Contributors: globus2008
 Tags: tournament, tennis, padel, badminton, doubles
 Requires at least: 6.5
 Tested up to: 7.1.3
-Stable tag: 2.0.2
+Stable tag: 2.0.3
 License: GPLv3 or later
 License URI: [GNU GPL v3.0](https://www.gnu.org/licenses/gpl-3.0.html)
 
@@ -112,6 +112,9 @@ You can use this plugin for tennis, table tennis, squash, padel, badminton, beac
 
 
 == Changelog ==
+= 2.0.3 - 2026/10/18 =
+* Fix - a new tournament post uses the tournament block; it no longer shows the hint about the floating help icon, which the post does not have
+
 = 2.0.2 - 2026/10/15 =
 * Improvement - new plugin icon and banner, the same icon as the Android app
 * Improvement - readme: new description of the draw, the blocks and the app; new screenshots (also in Spanish for Chile)

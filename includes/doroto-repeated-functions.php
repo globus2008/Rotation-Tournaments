@@ -57,7 +57,7 @@ function doroto_info_messsages_shortcode()
 			$login_url = sanitize_text_field(wp_unslash($log_in_link));
 			$output .= '<a href="' . esc_url($login_url) . '">' . esc_html__('You can log in here.', 'doubles-rotation-tournament') . '</a></p>';
 		}
-	} elseif (empty($players) && !doroto_check_if_presentation_on()) {
+	} elseif (empty($players) && !doroto_check_if_presentation_on() && doroto_page_has_floating_help()) {
 		$output .= '<div class = "doroto-message-background">';
 		$output .= esc_html__('You might need a little help. You can start by clicking the floating help icon on the right.', 'doubles-rotation-tournament');
 		$output .= '</div>';
@@ -66,6 +66,17 @@ function doroto_info_messsages_shortcode()
 	return $output;
 }
 add_shortcode('doroto_info_messsages', 'doroto_info_messsages_shortcode');
+
+/**
+ * Does the current page show the floating help icon? Tournament posts and pages built
+ * from the blocks do not, so the hint pointing to it would be wrong there.
+ * @since 2.0.3
+ */
+function doroto_page_has_floating_help(): bool
+{
+	$post = get_post();
+	return $post instanceof WP_Post && has_shortcode($post->post_content, 'doroto_floating_help');
+}
 
 
 /**

@@ -343,6 +343,10 @@ function doroto_create_example_page()
 function doroto_tournament_post(int $tournament_id)
 {
 	$tournament_id = intval($tournament_id);
+	// 2.0: a site whose main page uses the blocks gets the tournament block in posts too.
+	if (doroto_main_page_uses_blocks()) {
+		return doroto_tournament_post_blocks($tournament_id);
+	}
 	$output = "
 		[doroto_info_messsages]
 		[doroto_tournament_log_link tournament_id=\"" . esc_html($tournament_id) . "\"]
