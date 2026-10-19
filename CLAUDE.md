@@ -137,6 +137,13 @@
     "ability", "log in/out" -> "inloggen/uitloggen", "edit" -> "bewerken", "choose" -> "selecteren".
     The 2026-10-15 fixes had never reached GlotPress: import files with only the changes-requested strings
     (exported with `filters[status]=changesrequested`) are easier to check than the whole PO file.
+  - ro (Dan Caragea, 2026-10-18, 35 + 13 strings): style guide https://ro.wordpress.org/team/handbook/ghid/ -
+    informal 2nd person singular (Poți, Introdu, Dă clic; never "dumneavoastră"), no gender ("Te-ai înscris", not
+    "Ești înscris"), the plugin speaks in the 1st person ("Am copiat legătura", changelog "Am adăugat ..."; the
+    passive "A fost adăugată" was rejected as "Bad Quality (AI?)"). Glossary: plugin -> modul, remove -> înlătura,
+    browser -> navigator, link -> legătură, icon -> icon, shortcode -> scurtcod, email (no hyphen), share -> partaja.
+    "turneu cu rotație" (not "turneu rotativ", rejected as grammar); plugin name untranslated. The whole PO file was
+    rewritten on 2026-10-19, not only the returned strings. General guide: `wordpress.org/translation-guide-ro.md`.
   - es_MX: plugin name untranslated (style guide). tr: "yeniden" (not "tekrar"), common nouns in lower case.
   - Changelog headers ("2.0.2 - 2026/10/15"): the date is written in the locale's numeric format (nl asked for
     "15-10-2026"). Formats: nl/es_CL dd-mm-yyyy; de*, da, nb, pl, ru, uk,
