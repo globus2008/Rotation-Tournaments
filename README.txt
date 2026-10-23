@@ -3,7 +3,7 @@ Contributors: globus2008
 Tags: tournament, tennis, padel, badminton, doubles
 Requires at least: 6.5
 Tested up to: 7.1
-Stable tag: 2.0.3
+Stable tag: 2.0.4
 License: GPLv3 or later
 License URI: [GNU GPL v3.0](https://www.gnu.org/licenses/gpl-3.0.html)
 
@@ -112,6 +112,11 @@ You can use this plugin for tennis, table tennis, squash, padel, badminton, beac
 
 
 == Changelog ==
+= 2.0.4 - 2026/10/23 =
+* Improvement - the tournament list shortcode sorts tournaments by the distance from the website's location; the visitor's IP address is no longer sent to ip-api.com
+* Security - the presentation link and the player filter of the guided tour are protected by a nonce
+* Improvement - database queries pass table names as identifiers, and the plugin passes the WordPress Plugin Check without errors or warnings
+
 = 2.0.3 - 2026/10/18 =
 * Fix - a new tournament post uses the tournament block; it no longer shows the hint about the floating help icon, which the post does not have
 
