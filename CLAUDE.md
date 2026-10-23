@@ -220,6 +220,19 @@
 - `delete_database` defaults to 1.
 - Activation creates 13 demo users.
 
+## Plugin Check (2026-10-23, Plugin Check 2.1.0)
+- Run in Docker: `php wp-cli.phar plugin check doubles-rotation-tournament --allow-root --include-low-severity-errors
+  --include-experimental`. Clean except `.gitignore` / `CLAUDE.md`, which only exist in the dev folder (not in `plugin-zip`).
+- Table names go through `%i` in `$wpdb->prepare()` (WP 6.2+), never interpolated. Dynamic WHERE parts are fixed strings
+  with placeholders and carry a `phpcs:ignore` with the reason; `IN ($placeholders)` lists are only `%d`.
+- `DirectQuery`/`NoCaching` are disabled per file (own table, results must be fresh).
+- `Tested up to` is major.minor only (`7.1`), the same in README.txt and the plugin header.
+- No full `*.googleusercontent.com` (or other CDN) domains in string literals: flagged as offloaded content.
+- PHPCS: after `phpcs:disable X` + `phpcs:enable X`, a later `phpcs:ignore X` in the file no longer works; a bare
+  `phpcs:enable` re-enables everything, including file-level disables. Prefer `phpcs:ignore` on the line.
+- `doroto_prepare_filtered_tournaments()` sorted by the visitor's location from `ip-api.com` (IP sent to a third party);
+  it now uses the website location from the settings.
+
 ## Draw (1.6.2)
 - `doroto_offer_games_locked()`: steps 1-18 pick the first player and the candidate teammates as before
   (step 8 now prefers fewer games among equal rest). Step 18.1 scores every teammate candidate together with

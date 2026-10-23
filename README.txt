@@ -2,7 +2,7 @@
 Contributors: globus2008
 Tags: tournament, tennis, padel, badminton, doubles
 Requires at least: 6.5
-Tested up to: 7.1.3
+Tested up to: 7.1
 Stable tag: 2.0.3
 License: GPLv3 or later
 License URI: [GNU GPL v3.0](https://www.gnu.org/licenses/gpl-3.0.html)

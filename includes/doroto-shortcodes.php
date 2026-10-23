@@ -3,6 +3,10 @@ if (!defined('ABSPATH')) {
 	exit; // Exit if accessed directly
 }
 
+// The tournaments live in the plugin's own table ({prefix}doroto_tournaments), which has no WordPress API,
+// and every read must see the latest data (results change all the time), so the queries are direct and uncached.
+// phpcs:disable WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
+
 /**
  * display tournament progress
  * @since 1.3.6
@@ -768,7 +772,7 @@ function doroto_player_filter_dropdown_shortcode(array|string $atts)
 			wp_die(esc_html__('Invalid request.', 'doubles-rotation-tournament'));
 		}
 
-		$selected_player = intval($_POST['doroto_selected_player']);
+		$selected_player = isset($_POST['doroto_selected_player']) ? intval($_POST['doroto_selected_player']) : -1;
 		if ($selected_player >= 0) {
 			update_user_meta($current_user_id, 'doroto_filter_results', $selected_player);
 		}
@@ -893,6 +897,7 @@ function doroto_add_player_shortcode($atts = [], $content = null, $tag = '')
 			$placeholders = implode(',', array_fill(0, count($players), '%d'));
 			// prepare() and get_results() in one step, with the arguments passed as an array
 			$users = $wpdb->get_results(
+				// phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared, WordPress.DB.PreparedSQLPlaceholders.UnfinishedPrepare -- $placeholders is a list of %d.
 				$wpdb->prepare("SELECT * FROM {$wpdb->users} WHERE ID NOT IN ($placeholders)", $players)
 			);
 		} else {
@@ -902,6 +907,7 @@ function doroto_add_player_shortcode($atts = [], $content = null, $tag = '')
 		if (!empty($new_players)) {
 			$placeholders = implode(',', array_fill(0, count($new_players), '%d'));
 			$users = $wpdb->get_results(
+				// phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared, WordPress.DB.PreparedSQLPlaceholders.UnfinishedPrepare -- $placeholders is a list of %d.
 				$wpdb->prepare("SELECT * FROM {$wpdb->users} WHERE ID IN ($placeholders)", $new_players)
 			);
 		} else {
@@ -1683,6 +1689,7 @@ function doroto_remove_player_shortcode($atts = [], $content = null, $tag = '')
 	if (!empty($players)) {
 		$placeholders = implode(',', array_fill(0, count($players), '%d'));
 		$users = $wpdb->get_results(
+			// phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared, WordPress.DB.PreparedSQLPlaceholders.UnfinishedPrepare -- $placeholders is a list of %d.
 			$wpdb->prepare("SELECT * FROM {$wpdb->users} WHERE ID IN ($placeholders)", $players)
 		);
 
@@ -2233,7 +2240,7 @@ function doroto_add_tournament_parameters()
 	$output .= '</td>';
 	$output .= '<td>';
 	$name_table = $wpdb->get_var(
-		$wpdb->prepare("SELECT name FROM $table_name WHERE id = %d", $tournament_id)
+		$wpdb->prepare("SELECT name FROM %i WHERE id = %d", $table_name, $tournament_id)
 	);
 	$output .= '<textarea id="doroto_tournament_parameters_name" name="doroto_tournament_parameters_name" style="width: 100%;height:100px;">';
 	$output .= esc_attr($name_table);
@@ -2247,7 +2254,7 @@ function doroto_add_tournament_parameters()
 	$output .= '</td>';
 	$output .= '<td>';
 	$courts_available = $wpdb->get_var(
-		$wpdb->prepare("SELECT courts_available FROM $table_name WHERE id = %d", $tournament_id)
+		$wpdb->prepare("SELECT courts_available FROM %i WHERE id = %d", $table_name, $tournament_id)
 	);
 	$output .= '<select id="doroto_tournament_parameters_courts_number" name="doroto_tournament_parameters_courts_number">';
 	$minValue = 1;
@@ -2266,7 +2273,7 @@ function doroto_add_tournament_parameters()
 	$output .= '</td>';
 	$output .= '<td>';
 	$tournament_type = $wpdb->get_var(
-		$wpdb->prepare("SELECT tournament_type FROM $table_name WHERE id = %d", $tournament_id)
+		$wpdb->prepare("SELECT tournament_type FROM %i WHERE id = %d", $table_name, $tournament_id)
 	);
 	$output .= '<select id="doroto_tournament_parameters_tournament_type" name="doroto_tournament_parameters_tournament_type">';
 
@@ -2309,7 +2316,7 @@ function doroto_add_tournament_parameters()
 	$output .= '</td>';
 	$output .= '<td>';
 	$average_result_table = $wpdb->get_var(
-		$wpdb->prepare("SELECT average_result FROM $table_name WHERE id = %d", $tournament_id)
+		$wpdb->prepare("SELECT average_result FROM %i WHERE id = %d", $table_name, $tournament_id)
 	);
 	$output .= '<select id="doroto_tournament_parameters_average_result" name="doroto_tournament_parameters_average_result" style="width: 100%;">';
 	$minValue = 1;
@@ -2331,7 +2338,7 @@ function doroto_add_tournament_parameters()
 	$output .= '</td>';
 	$output .= '<td>';
 	$announce_round_end_table = $wpdb->get_var(
-		$wpdb->prepare("SELECT announce_round_end FROM $table_name WHERE id = %d", $tournament_id)
+		$wpdb->prepare("SELECT announce_round_end FROM %i WHERE id = %d", $table_name, $tournament_id)
 	);
 	if ($announce_round_end_table > 2) {
 		$announce_round_end_table -= 2;
@@ -2356,7 +2363,7 @@ function doroto_add_tournament_parameters()
 	$output .= '</td>';
 	$output .= '<td>';
 	$games_hour = $wpdb->get_var(
-		$wpdb->prepare("SELECT games_hour FROM $table_name WHERE id = %d", $tournament_id)
+		$wpdb->prepare("SELECT games_hour FROM %i WHERE id = %d", $table_name, $tournament_id)
 	);
 	$output .= '<select id="doroto_tournament_parameters_games_hour" name="doroto_tournament_parameters_games_hour">';
 	$minValue = 1;
@@ -2395,7 +2402,7 @@ function doroto_add_tournament_parameters()
 	$output .= '</td>';
 	$output .= '<td>';
 	$whole_names_table = $wpdb->get_var(
-		$wpdb->prepare("SELECT whole_names FROM $table_name WHERE id = %d", $tournament_id)
+		$wpdb->prepare("SELECT whole_names FROM %i WHERE id = %d", $table_name, $tournament_id)
 	);
 	$output .= '<select id="doroto_tournament_parameters_whole_names" name="doroto_tournament_parameters_whole_names" style="width: 100%;">';
 	$options = array(0 => esc_html__("Abbreviated names", "doubles-rotation-tournament"), 1 => esc_html__("Full names", "doubles-rotation-tournament"));
@@ -2413,7 +2420,7 @@ function doroto_add_tournament_parameters()
 	$output .= '</td>';
 	$output .= '<td>';
 	$max_players_table = $wpdb->get_var(
-		$wpdb->prepare("SELECT max_players FROM $table_name WHERE id = %d", $tournament_id)
+		$wpdb->prepare("SELECT max_players FROM %i WHERE id = %d", $table_name, $tournament_id)
 	);
 	$output .= '<select id="doroto_tournament_parameters_max_players" name="doroto_tournament_parameters_max_players">';
 	for ($i = 0; $i <= 99; $i++) {
@@ -2434,7 +2441,7 @@ function doroto_add_tournament_parameters()
 	$output .= '</td>';
 	$output .= '<td>';
 	$allow_input_results_table = $wpdb->get_var(
-		$wpdb->prepare("SELECT allow_input_results FROM $table_name WHERE id = %d", $tournament_id)
+		$wpdb->prepare("SELECT allow_input_results FROM %i WHERE id = %d", $table_name, $tournament_id)
 	);
 	$output .= '<select id="doroto_tournament_parameters_allow_input_results" name="doroto_tournament_parameters_allow_input_results">';
 	$options = array(0 => esc_html__("No", "doubles-rotation-tournament"), 1 => esc_html__("Yes", "doubles-rotation-tournament"));
@@ -2452,7 +2459,7 @@ function doroto_add_tournament_parameters()
 	$output .= '</td>';
 	$output .= '<td>';
 	$visibility_table = $wpdb->get_var(
-		$wpdb->prepare("SELECT visibility FROM $table_name WHERE id = %d", $tournament_id)
+		$wpdb->prepare("SELECT visibility FROM %i WHERE id = %d", $table_name, $tournament_id)
 	);
 	$output .= '<select id="doroto_tournament_parameters_visibility" name="doroto_tournament_parameters_visibility">';
 	$options = array(0 => esc_html__("No", "doubles-rotation-tournament"), 1 => esc_html__("Yes", "doubles-rotation-tournament"));
@@ -2490,7 +2497,7 @@ function doroto_add_tournament_parameters()
 	$output .= '</td>';
 	$output .= '<td>';
 	$two_special_group_table = $wpdb->get_var(
-		$wpdb->prepare("SELECT two_special_group FROM $table_name WHERE id = %d", $tournament_id)
+		$wpdb->prepare("SELECT two_special_group FROM %i WHERE id = %d", $table_name, $tournament_id)
 	);
 	$output .= '<select id="doroto_tournament_parameters_two_special_group" name="doroto_tournament_parameters_two_special_group">';
 	$options = array(0 => esc_html__("No", "doubles-rotation-tournament"), 1 => esc_html__("Yes", "doubles-rotation-tournament"));
@@ -2508,7 +2515,7 @@ function doroto_add_tournament_parameters()
 	$output .= '</td>';
 	$output .= '<td>';
 	$two_out_group_table = $wpdb->get_var(
-		$wpdb->prepare("SELECT two_out_group FROM $table_name WHERE id = %d", $tournament_id)
+		$wpdb->prepare("SELECT two_out_group FROM %i WHERE id = %d", $table_name, $tournament_id)
 	);
 	$output .= '<select id="doroto_tournament_parameters_two_out_group" name="doroto_tournament_parameters_two_out_group">';
 	$options = array(0 => esc_html__("No", "doubles-rotation-tournament"), 1 => esc_html__("Yes", "doubles-rotation-tournament"));
@@ -2549,7 +2556,7 @@ function doroto_add_tournament_parameters()
 	$output .= '</td>';
 	$output .= '<td>';
 	$special_group_can_win_table = $wpdb->get_var(
-		$wpdb->prepare("SELECT special_group_can_win FROM $table_name WHERE id = %d", $tournament_id)
+		$wpdb->prepare("SELECT special_group_can_win FROM %i WHERE id = %d", $table_name, $tournament_id)
 	);
 	$output .= '<select id="doroto_tournament_parameters_special_group_can_win" name="doroto_tournament_parameters_special_group_can_win" style="width: 100%;">';
 	$options = array(
@@ -2571,7 +2578,7 @@ function doroto_add_tournament_parameters()
 	$output .= '</td>';
 	$output .= '<td>';
 	$minimum_matches = $wpdb->get_var(
-		$wpdb->prepare("SELECT minimum_matches FROM $table_name WHERE id = %d", $tournament_id)
+		$wpdb->prepare("SELECT minimum_matches FROM %i WHERE id = %d", $table_name, $tournament_id)
 	);
 	$output .= '<select id="doroto_tournament_parameters_minimum_matches" name="doroto_tournament_parameters_minimum_matches">';
 	$minValue = 1;
@@ -2590,7 +2597,7 @@ function doroto_add_tournament_parameters()
 	$output .= '</td>';
 	$output .= '<td>';
 	$temp_suspend_winner_table = $wpdb->get_var(
-		$wpdb->prepare("SELECT temp_suspend_winner FROM $table_name WHERE id = %d", $tournament_id)
+		$wpdb->prepare("SELECT temp_suspend_winner FROM %i WHERE id = %d", $table_name, $tournament_id)
 	);
 	$output .= '<select id="doroto_tournament_parameters_temp_suspend_winner" name="doroto_tournament_parameters_temp_suspend_winner">';
 	$options = array(0 => esc_html__("No", "doubles-rotation-tournament"), 1 => esc_html__("Yes", "doubles-rotation-tournament"));
@@ -2671,7 +2678,7 @@ function doroto_add_tournament_parameters()
 	$output .= '</td>';
 	$output .= '<td>';
 	$min_not_playing_table = $wpdb->get_var(
-		$wpdb->prepare("SELECT min_not_playing FROM $table_name WHERE id = %d", $tournament_id)
+		$wpdb->prepare("SELECT min_not_playing FROM %i WHERE id = %d", $table_name, $tournament_id)
 	);
 	$output .= '<select id="doroto_tournament_parameters_min_not_playing" name="doroto_tournament_parameters_min_not_playing">';
 	$options = array(0 => '1. ' . esc_html__("Wait", "doubles-rotation-tournament"), 1 => '2. ' . esc_html__("Draw", "doubles-rotation-tournament"));
@@ -2689,7 +2696,7 @@ function doroto_add_tournament_parameters()
 	$output .= '</td>';
 	$output .= '<td>';
 	$play_final_match_table = $wpdb->get_var(
-		$wpdb->prepare("SELECT play_final_match FROM $table_name WHERE id = %d", $tournament_id)
+		$wpdb->prepare("SELECT play_final_match FROM %i WHERE id = %d", $table_name, $tournament_id)
 	);
 	$output .= '<select id="doroto_tournament_parameters_play_final_match" name="doroto_tournament_parameters_play_final_match">';
 	$options = array(0 => esc_html__("No", "doubles-rotation-tournament"), 1 => esc_html__("Yes", "doubles-rotation-tournament"));
@@ -2707,7 +2714,7 @@ function doroto_add_tournament_parameters()
 	$output .= '</td>';
 	$output .= '<td>';
 	$payment_display_table = $wpdb->get_var(
-		$wpdb->prepare("SELECT payment_display FROM $table_name WHERE id = %d", $tournament_id)
+		$wpdb->prepare("SELECT payment_display FROM %i WHERE id = %d", $table_name, $tournament_id)
 	);
 	$output .= '<select id="doroto_tournament_parameters_payment_display" name="doroto_tournament_parameters_payment_display">';
 	$options = array(0 => esc_html__("No", "doubles-rotation-tournament"), 1 => esc_html__("Yes", "doubles-rotation-tournament"));
@@ -2760,7 +2767,7 @@ function doroto_add_tournament_parameters()
 	$output .= '</td>';
 	$output .= '<td>';
 	$invitation_table = $wpdb->get_var(
-		$wpdb->prepare("SELECT invitation FROM $table_name WHERE id = %d", $tournament_id)
+		$wpdb->prepare("SELECT invitation FROM %i WHERE id = %d", $table_name, $tournament_id)
 	);
 	$output .= '<textarea id="doroto_tournament_parameters_invitation" name="doroto_tournament_parameters_invitation" style="width: 100%;height:100px;">';
 	$output .= esc_attr($invitation_table);
@@ -2858,7 +2865,8 @@ function doroto_tournament_parameters_results()
 	foreach (array_keys(doroto_service_settings_fields()) as $key) {
 		$field = $prefix . ($key === 'courts_available' ? 'courts_number' : $key);
 		if (isset($_POST[$field])) {
-			$params[$key] = wp_unslash($_POST[$field]); // sanitized by the service
+			// phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- each field is sanitized by its own function in doroto_service_settings_fields().
+			$params[$key] = wp_unslash($_POST[$field]);
 		}
 	}
 	foreach (['delete_tournament', 'empty_tournament', 'new_post'] as $flag) {
@@ -3647,10 +3655,14 @@ function doroto_allow_presentation_shortcode()
 		$action_value = 0;
 	}
 
-	$output = "<div>" . '<a href="' . esc_url(add_query_arg('doroto_presentation_action', $action_value)) . '">' . esc_html($text) . '</a>' . "</div>";
+	$link = wp_nonce_url(add_query_arg('doroto_presentation_action', $action_value), 'doroto_presentation_action', 'doroto_presentation_nonce');
+	$output = "<div>" . '<a href="' . esc_url($link) . '">' . esc_html($text) . '</a>' . "</div>";
 
-	if (isset($_GET['doroto_presentation_action'])) {
-		$action_value = intval($_GET['doroto_presentation_action']);
+	if (
+		isset($_GET['doroto_presentation_action'], $_GET['doroto_presentation_nonce'])
+		&& wp_verify_nonce(sanitize_text_field(wp_unslash($_GET['doroto_presentation_nonce'])), 'doroto_presentation_action')
+	) {
+		$action_value = intval($_GET['doroto_presentation_action']) === 1 ? 1 : 0;
 		update_user_meta($user_id, 'doroto_presentation', serialize(array('allow_to_run' => $action_value, 'slide' => $slide_value)));
 	}
 	return $output;
@@ -3797,11 +3809,13 @@ add_shortcode('doroto_floating_help', 'doroto_floating_help_icon');
  */
 function doroto_get_tournament_id()
 {
+	// phpcs:disable WordPress.Security.NonceVerification.Missing -- read-only: returns the ID of an example tournament
 	if (!isset($_POST['tour'])) {
 		wp_send_json_error(['message' => 'Missing tour parameter']);
 	}
 
-	$tour = sanitize_text_field($_POST['tour']);
+	$tour = sanitize_text_field(wp_unslash($_POST['tour']));
+	// phpcs:enable WordPress.Security.NonceVerification.Missing
 	$tournament_id = '0';
 
 	switch ($tour) {
@@ -3898,6 +3912,7 @@ function doroto_register_add_player_shortcode($atts = [], $content = null, $tag 
 		if (!empty($players)) {
 			$placeholders = implode(',', array_fill(0, count($players), '%d'));
 			$users = $wpdb->get_results(
+				// phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared, WordPress.DB.PreparedSQLPlaceholders.UnfinishedPrepare -- $placeholders is a list of %d.
 				$wpdb->prepare("SELECT * FROM {$wpdb->users} WHERE ID NOT IN ($placeholders)", $players)
 			);
 		} else {
@@ -3907,6 +3922,7 @@ function doroto_register_add_player_shortcode($atts = [], $content = null, $tag 
 		if (!empty($new_players)) {
 			$placeholders = implode(',', array_fill(0, count($new_players), '%d'));
 			$users = $wpdb->get_results(
+				// phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared, WordPress.DB.PreparedSQLPlaceholders.UnfinishedPrepare -- $placeholders is a list of %d.
 				$wpdb->prepare("SELECT * FROM {$wpdb->users} WHERE ID IN ($placeholders)", $new_players)
 			);
 		} else {
@@ -3966,9 +3982,9 @@ function doroto_register_add_player_form_submit()
 	$tournament_id = isset($_POST['tournament_id']) ? intval($_POST['tournament_id']) : 0;
 	$result = doroto_service_create_player(
 		$tournament_id,
-		wp_unslash($_POST['email'] ?? ''),
-		wp_unslash($_POST['first_name'] ?? ''),
-		wp_unslash($_POST['last_name'] ?? '')
+		sanitize_email(wp_unslash($_POST['email'] ?? '')),
+		sanitize_text_field(wp_unslash($_POST['first_name'] ?? '')),
+		sanitize_text_field(wp_unslash($_POST['last_name'] ?? ''))
 	);
 	doroto_info_messsages_save(sanitize_text_field(doroto_service_message($result, $tournament_id)));
 	doroto_redirect_modify_url($tournament_id, "");

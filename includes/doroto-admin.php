@@ -278,12 +278,12 @@ function doroto_admin_stats(): array
 {
 	global $wpdb;
 	$table = $wpdb->prefix . 'doroto_tournaments';
-	// phpcs:disable WordPress.DB.DirectDatabaseQuery, WordPress.DB.PreparedSQL.InterpolatedNotPrepared
-	$total = intval($wpdb->get_var("SELECT COUNT(*) FROM $table"));
-	$playing = intval($wpdb->get_var("SELECT COUNT(*) FROM $table WHERE close_tournament = '0'"));
-	$registration = intval($wpdb->get_var("SELECT COUNT(*) FROM $table WHERE open_registration = '1'"));
-	$players_raw = $wpdb->get_col("SELECT players FROM $table WHERE players IS NOT NULL AND players != ''");
-	// phpcs:enable
+	// phpcs:disable WordPress.DB.DirectDatabaseQuery
+	$total = intval($wpdb->get_var($wpdb->prepare("SELECT COUNT(*) FROM %i", $table)));
+	$playing = intval($wpdb->get_var($wpdb->prepare("SELECT COUNT(*) FROM %i WHERE close_tournament = '0'", $table)));
+	$registration = intval($wpdb->get_var($wpdb->prepare("SELECT COUNT(*) FROM %i WHERE open_registration = '1'", $table)));
+	$players_raw = $wpdb->get_col($wpdb->prepare("SELECT players FROM %i WHERE players IS NOT NULL AND players != ''", $table));
+	// phpcs:enable WordPress.DB.DirectDatabaseQuery
 	$unique = [];
 	foreach ($players_raw as $serialized) {
 		$ids = maybe_unserialize($serialized);

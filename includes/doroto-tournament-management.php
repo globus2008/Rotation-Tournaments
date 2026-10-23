@@ -3,6 +3,10 @@ if (!defined('ABSPATH')) {
 	exit;
 }
 
+// The tournaments live in the plugin's own table ({prefix}doroto_tournaments), which has no WordPress API,
+// and every read must see the latest data (results change all the time), so the queries are direct and uncached.
+// phpcs:disable WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
+
 /**
  * display tournament progress
  * @since 1.3.6
@@ -880,7 +884,7 @@ function doroto_insert_tournament(int $tournament_type)
 	global $wpdb;
 	ob_start();
 	$table_name = $wpdb->prefix . 'doroto_tournaments';
-	if ($wpdb->get_var("SHOW TABLES LIKE '$table_name'") != $table_name) {
+	if ($wpdb->get_var($wpdb->prepare('SHOW TABLES LIKE %s', $wpdb->esc_like($table_name))) != $table_name) {
 		doroto_create_tournaments_table();
 	}
 
@@ -896,7 +900,8 @@ function doroto_insert_tournament(int $tournament_type)
 	$name = sanitize_text_field($tournament_short_name . ' ' . wp_date('d-H-i'));
 
 	$last_tournament = $wpdb->get_row($wpdb->prepare(
-		"SELECT * FROM $table_name WHERE admin_users LIKE %s ORDER BY id DESC LIMIT 1",
+		"SELECT * FROM %i WHERE admin_users LIKE %s ORDER BY id DESC LIMIT 1",
+		$table_name,
 		'%' . $wpdb->esc_like('i:' . $current_user->ID . ';') . '%'
 	));
 
@@ -1017,7 +1022,8 @@ function doroto_get_match_by_id(int $match_id)
 	$table_name = $wpdb->prefix . 'doroto_tournaments';
 
 	$result = $wpdb->get_var($wpdb->prepare(
-		"SELECT matches_list FROM $table_name WHERE ID = %d",
+		"SELECT matches_list FROM %i WHERE ID = %d",
+		$table_name,
 		$match_id
 	));
 
@@ -1943,6 +1949,7 @@ function doroto_matches_to_select_count(?stdClass $tournament, int $currently_pl
  */
 function doroto_toggle_tournament()
 {
+	// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- the nonce is checked by doroto_require_admin_action().
 	$tournament_id = isset($_REQUEST['tournament_id']) ? intval($_REQUEST['tournament_id']) : 0;
 	doroto_require_admin_action('doroto_toggle_tournament', $tournament_id);
 
@@ -1962,6 +1969,7 @@ add_action('wp_ajax_doroto_toggle_tournament', 'doroto_toggle_tournament');
  */
 function doroto_toggle_registration()
 {
+	// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- the nonce is checked by doroto_require_admin_action().
 	$tournament_id = isset($_GET['tournament_id']) ? intval($_GET['tournament_id']) : 0;
 	doroto_require_admin_action('doroto_toggle_registration', $tournament_id);
 
@@ -2039,7 +2047,7 @@ function doroto_create_tournament_record()
 
 	$table_name = $wpdb->prefix . 'doroto_tournaments';
 	$count = $wpdb->get_var(
-		$wpdb->prepare("SELECT COUNT(*) FROM $table_name", array()) // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+		$wpdb->prepare("SELECT COUNT(*) FROM %i", $table_name)
 	);
 
 	$players = [];
@@ -2617,8 +2625,9 @@ function doroto_choose_tournament(string $tournament_id = '')
 	global $wpdb;
 	$output = '';
 
-	if (isset($_GET['tournament_id'])) {
-		$tournament_id = intval($_GET['tournament_id']);
+	// The parameter only selects which tournament is displayed: no nonce needed.
+	if (isset($_GET['tournament_id'])) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		$tournament_id = intval($_GET['tournament_id']); // phpcs:ignore WordPress.Security.NonceVerification.Recommended
 	} else {
 		$output = sanitize_text_field(__("Tournament ID was not provided.", "doubles-rotation-tournament"));
 		doroto_info_messsages_save($output);
@@ -2678,6 +2687,7 @@ function doroto_prepare_filtered_tournaments()
 
 	$filtered_tournaments = [];
 
+	$where_args = [];
 	switch ($filter_option) {
 		case 1:
 			$where = "open_registration = 1";
@@ -2698,16 +2708,20 @@ function doroto_prepare_filtered_tournaments()
 		case 27:
 		case 28:
 		case 29:
-			$where = "tournament_type = $filter_option";
+			$where = "tournament_type = %d";
+			$where_args[] = $filter_option;
 			break;
 		default:
 			$where = "1=1";
 	}
 
 	if ($filter_option < 4 || $filter_option > 7) {
+		// $where is one of the fixed conditions above; values go through placeholders.
+		// phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared, PluginCheck.Security.DirectDB.UnescapedDBParameter
 		$tournaments = $wpdb->get_results(
-			$wpdb->prepare("SELECT * FROM {$wpdb->prefix}doroto_tournaments WHERE $where", array()) // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+			$wpdb->prepare("SELECT * FROM %i WHERE $where", array_merge(["{$wpdb->prefix}doroto_tournaments"], $where_args))
 		);
+		// phpcs:enable WordPress.DB.PreparedSQL.InterpolatedNotPrepared, PluginCheck.Security.DirectDB.UnescapedDBParameter
 	}
 
 	foreach ($tournaments as $tournament) {
@@ -2743,17 +2757,10 @@ function doroto_prepare_filtered_tournaments()
 		$filtered_tournaments[] = $tournament;
 	}
 
-	$user_lat = 50.0;
-	$user_lon = 15.0;
-
-	$response = wp_remote_get('http://ip-api.com/json/' . $_SERVER['REMOTE_ADDR']);
-	if (!is_wp_error($response)) {
-		$data = json_decode(wp_remote_retrieve_body($response));
-		if (!empty($data->lat) && !empty($data->lon)) {
-			$user_lat = floatval($data->lat);
-			$user_lon = floatval($data->lon);
-		}
-	}
+	// Sort by the distance from the website's location (plugin settings). The visitor's IP address
+	// was sent to ip-api.com before: a third-party service without consent (WordPress.org guideline 7).
+	$user_lat = floatval(doroto_read_settings('latitude', 50));
+	$user_lon = floatval(doroto_read_settings('longitude', 15));
 
 	usort($filtered_tournaments, function ($a, $b) use ($user_lat, $user_lon) {
 		$latA = floatval($a->latitude ?? 0);
@@ -2856,7 +2863,7 @@ function doroto_move_among_tournaments()
 
 	$filter_option = [];
 
-	if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+	if (isset($_SERVER['REQUEST_METHOD']) && $_SERVER['REQUEST_METHOD'] === 'POST') {
 		$display_rows = intval(doroto_read_settings('display_rows', 20));
 		if ($display_rows <= 0) {
 			$display_rows = 9999;
@@ -3124,6 +3131,7 @@ function doroto_notice_round_end(int $tournament_id, ?stdClass $tournament, int 
  */
 function doroto_hide_notice_round_end()
 {
+	// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- the nonce is checked by doroto_require_admin_action().
 	$tournament_id = isset($_REQUEST['tournament_id']) ? intval($_REQUEST['tournament_id']) : 0;
 	doroto_require_admin_action('doroto_hide_notice_round_end', $tournament_id);
 
@@ -3143,6 +3151,7 @@ add_action('wp_ajax_doroto_hide_notice_round_end', 'doroto_hide_notice_round_end
  */
 function doroto_next_notice_round_end()
 {
+	// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- the nonce is checked by doroto_require_admin_action().
 	$tournament_id = isset($_REQUEST['tournament_id']) ? intval($_REQUEST['tournament_id']) : 0;
 	doroto_require_admin_action('doroto_next_notice_round_end', $tournament_id);
 
@@ -3260,7 +3269,7 @@ function doroto_forward_foreign_tournament_links()
 	if (is_admin() || wp_doing_ajax() || empty($_GET['doroto_site']) || empty($_GET['tournament_id'])) {
 		return;
 	}
-	$site = esc_url_raw(trim(wp_unslash($_GET['doroto_site'])));
+	$site = trim(esc_url_raw(wp_unslash($_GET['doroto_site'])));
 	$tournament_id = absint(wp_unslash($_GET['tournament_id']));
 	// phpcs:enable WordPress.Security.NonceVerification.Recommended
 	$scheme = wp_parse_url($site, PHP_URL_SCHEME);
@@ -3276,8 +3285,8 @@ function doroto_forward_foreign_tournament_links()
 	$directory = $wpdb->prefix . 'doroto_websites';
 	// phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
 	if ($wpdb->get_var($wpdb->prepare('SHOW TABLES LIKE %s', $directory)) === $directory) {
-		// phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching, WordPress.DB.PreparedSQL.InterpolatedNotPrepared
-		$rows = $wpdb->get_results("SELECT website, doroto_url FROM `$directory`");
+		// phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
+		$rows = $wpdb->get_results($wpdb->prepare('SELECT website, doroto_url FROM %i', $directory));
 		foreach ((array) $rows as $row) {
 			if (doroto_site_key($row->website) === $key) {
 				// The tournament page of the club when known, else its home page

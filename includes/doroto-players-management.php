@@ -3,6 +3,10 @@ if (! defined('ABSPATH')) {
 	exit;
 }
 
+// The tournaments live in the plugin's own table ({prefix}doroto_tournaments), which has no WordPress API,
+// and every read must see the latest data (results change all the time), so the queries are direct and uncached.
+// phpcs:disable WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
+
 
 /**
  * add a new player to statistics array
@@ -301,7 +305,7 @@ function doroto_current_user_in_tournaments($level)
 
 	$table_name = $wpdb->prefix . 'doroto_tournaments';
 	// Only the two columns we need; SELECT * loaded all match lists and statistics.
-	$tournaments = $wpdb->get_results("SELECT players, admin_users FROM $table_name");
+	$tournaments = $wpdb->get_results($wpdb->prepare("SELECT players, admin_users FROM %i", $table_name));
 
 	foreach ($tournaments as $tournament) {
 		$players = maybe_unserialize($tournament->players);
@@ -416,6 +420,7 @@ function doroto_player_filter_help()
 		wp_send_json_error(['message' => 'User not logged in']);
 		return;
 	}
+	check_ajax_referer('doroto_help_tour', 'nonce');
 
 	$tournament_id = isset($_POST['tournament_id']) ? intval($_POST['tournament_id']) : 0;
 	if ($tournament_id === 0) {
@@ -475,7 +480,8 @@ function doroto_remove_deleted_user_from_tournaments($user_id)
 	$table = $wpdb->prefix . 'doroto_tournaments';
 	$like = '%' . $wpdb->esc_like('i:' . $user_id . ';') . '%';
 	$ids = $wpdb->get_col($wpdb->prepare(
-		"SELECT id FROM $table WHERE close_tournament = 0 AND (players LIKE %s OR admin_users LIKE %s)",
+		"SELECT id FROM %i WHERE close_tournament = 0 AND (players LIKE %s OR admin_users LIKE %s)",
+		$table,
 		$like,
 		$like
 	));

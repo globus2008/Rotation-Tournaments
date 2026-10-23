@@ -3,6 +3,10 @@ if (!defined('ABSPATH')) {
 	exit; // Exit if accessed directly
 }
 
+// The tournaments live in the plugin's own table ({prefix}doroto_tournaments), which has no WordPress API,
+// and every read must see the latest data (results change all the time), so the queries are direct and uncached.
+// phpcs:disable WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
+
 /**
  * Services: tournament changes shared by the web forms, the REST API and the blocks.
  *

@@ -3789,6 +3789,7 @@ function doroto_set_player_filter_help(
       tournament_id: tournamentId,
       filter_input: filter_input,
       special_group_output: special_group_output,
+      nonce: typeof dorotoAjax !== "undefined" ? dorotoAjax.nonce : "",
     }),
   })
     .then((response) => response.json())

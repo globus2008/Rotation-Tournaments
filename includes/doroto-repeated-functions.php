@@ -3,6 +3,10 @@ if (! defined('ABSPATH')) {
 	exit;
 }
 
+// The tournaments live in the plugin's own table ({prefix}doroto_tournaments), which has no WordPress API,
+// and every read must see the latest data (results change all the time), so the queries are direct and uncached.
+// phpcs:disable WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
+
 
 /**
  * check if a user is log in
@@ -10,6 +14,7 @@ if (! defined('ABSPATH')) {
  */
 function doroto_not_logged_message()
 {
+	// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- read-only request parameter.
 	if (isset($_GET['log_in'])) {
 		return '<p class="doroto-red-text"><b>' . esc_html__("If you want to register for the tournament, you must log in to your account!", "doubles-rotation-tournament") . '</b></p>';
 	} else {
@@ -187,10 +192,13 @@ function doroto_getTournamentId()
 	$table_name = $wpdb->prefix . 'doroto_tournaments';
 
 	// We will try to get the tournament_id from the URL if it is available
+	// phpcs:disable WordPress.Security.NonceVerification.Recommended -- read-only request parameter.
 	if (isset($_GET['tournament_id'])) {
 		$tournament_id = intval($_GET['tournament_id']);
+		// phpcs:enable WordPress.Security.NonceVerification.Recommended
 		$exists = $wpdb->get_row($wpdb->prepare(
-			"SELECT * FROM $table_name WHERE id = %d",
+			"SELECT * FROM %i WHERE id = %d",
+			$table_name,
 			$tournament_id
 		));
 		if ($exists) {
@@ -203,11 +211,11 @@ function doroto_getTournamentId()
 	}
 
 	// We will try to get the highest tournament ID where close_tournament = 0 and the player is present    
-	$results = $wpdb->get_results("
-        SELECT id, players FROM $table_name 
-        WHERE close_tournament = 0 
+	$results = $wpdb->get_results($wpdb->prepare("
+        SELECT id, players FROM %i
+        WHERE close_tournament = 0
         OR (play_final_match = 1 AND (final_result = '' OR final_result IS NULL))
-    ");
+    ", $table_name));
 
 	if (!empty($results)) {
 		foreach ($results as $result) {
@@ -220,13 +228,13 @@ function doroto_getTournamentId()
 	}
 
 	// If that fails, we take the highest ID where close_tournament = 0    
-	$result = $wpdb->get_row("SELECT MAX(id) as max_id FROM $table_name WHERE close_tournament = 0");
+	$result = $wpdb->get_row($wpdb->prepare("SELECT MAX(id) as max_id FROM %i WHERE close_tournament = 0", $table_name));
 	if ($result && $result->max_id != null) {
 		return intval($result->max_id);
 	}
 
 	// If all else fails, let's take the highest ID ever
-	$result = $wpdb->get_row("SELECT MAX(id) as max_id FROM $table_name");
+	$result = $wpdb->get_row($wpdb->prepare("SELECT MAX(id) as max_id FROM %i", $table_name));
 	if ($result && $result->max_id != null) {
 		return intval($result->max_id);
 	} else {
@@ -311,7 +319,8 @@ function doroto_prepare_tournament(int $tournament_id)
 
 	$table_name = $wpdb->prefix . 'doroto_tournaments';
 	$tournament = $wpdb->get_row($wpdb->prepare(
-		"SELECT * FROM $table_name WHERE id = %d",
+		"SELECT * FROM %i WHERE id = %d",
+		$table_name,
 		$tournament_id
 	));
 	return $tournament;

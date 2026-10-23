@@ -3,6 +3,10 @@ if (! defined('ABSPATH')) {
 	exit;
 }
 
+// The tournaments live in the plugin's own table ({prefix}doroto_tournaments), which has no WordPress API,
+// and every read must see the latest data (results change all the time), so the queries are direct and uncached.
+// phpcs:disable WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
+
 
 /**
  * run by hook to update voluntary DoRoTo pages
@@ -19,9 +23,7 @@ function doroto_update_pages()
 		doroto_update_terms_of_service_page_on_activation();
 
 		$table_name = $wpdb->prefix . 'doroto_tournaments';
-		$query = "SELECT COUNT(*) FROM $table_name";
-		// phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared
-		$count = $wpdb->get_var($query);
+		$count = $wpdb->get_var($wpdb->prepare("SELECT COUNT(*) FROM %i", $table_name));
 
 		if ($count < 2) {
 			doroto_update_example_page_content_on_activation();

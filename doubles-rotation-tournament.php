@@ -11,7 +11,7 @@
  * License URI: http://www.gnu.org/licenses/gpl-3.0.txt
  * Text Domain: doubles-rotation-tournament
  * Requires at least: 6.5
- * Tested up to: 7.1.3
+ * Tested up to: 7.1
  * Requires PHP: 8.0
  * Stable tag: 2.0.3
  * 
@@ -471,6 +471,7 @@ function doroto_show_activation_notice()
 		}
 
 		$notice_content = sprintf(
+			/* translators: %s: link to the plugin's introduction page */
 			__('To quickly understand the capabilities of the Rotation tournaments plugin, start on this page: %s', 'doubles-rotation-tournament'),
 			$page_link
 		);
@@ -495,7 +496,7 @@ add_action('admin_notices', 'doroto_display_app_notice');
 function doroto_plugin_update_and_notice_logic()
 {
 	if (isset($_GET['doroto_dismiss_app_notice']) && isset($_GET['_wpnonce'])) {
-		if (wp_verify_nonce($_GET['_wpnonce'], 'doroto_dismiss_app_notice_nonce')) {
+		if (wp_verify_nonce(sanitize_text_field(wp_unslash($_GET['_wpnonce'])),'doroto_dismiss_app_notice_nonce')) {
 			update_option('doroto_show_app_notice', 'false');
 		}
 	}

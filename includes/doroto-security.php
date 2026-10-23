@@ -112,6 +112,7 @@ function doroto_user_may_submit_form(string $action, array $rule, int $tournamen
  */
 function doroto_guard_form_submission()
 {
+	// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- only picks the rule; the rule checks the nonce.
 	$action = isset($_REQUEST['action']) ? sanitize_key(wp_unslash($_REQUEST['action'])) : '';
 	$rules = doroto_form_permissions();
 	if (!isset($rules[$action])) {
