@@ -144,6 +144,10 @@
     browser -> navigator, link -> legătură, icon -> icon, shortcode -> scurtcod, email (no hyphen), share -> partaja.
     "turneu cu rotație" (not "turneu rotativ", rejected as grammar); plugin name untranslated. The whole PO file was
     rewritten on 2026-10-19, not only the returned strings. General guide: `wordpress.org/translation-guide-ro.md`.
+    Result (checked 2026-10-23): the editor rejected the whole 2026-10-19 import (dev and dev-readme, ~950 + ~255
+    strings) at 18:28 UTC the same day, without any comment; ro is at 47 translated, 0 waiting, 0 changes requested.
+    The same editor reviewed Fair Member Fees normally (reasons per string), so the likely cause is the bulk
+    re-import of a whole reviewed project. Ask him before importing again.
   - es_MX: plugin name untranslated (style guide). tr: "yeniden" (not "tekrar"), common nouns in lower case.
   - Changelog headers ("2.0.2 - 2026/10/15"): the date is written in the locale's numeric format (nl asked for
     "15-10-2026"). Formats: nl/es_CL dd-mm-yyyy; de*, da, nb, pl, ru, uk,

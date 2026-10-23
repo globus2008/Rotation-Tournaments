@@ -41,6 +41,11 @@ Dan Caragea (2026-10-18), the team style guide <https://ro.wordpress.org/team/ha
 - **Do not translate** plugin, theme and service names (keep e.g. "Rotation Tournaments"), URLs, placeholders
   (%s, %1$s, %d - keep all of them), HTML tags, shortcode/parameter names.
 - **Avoid literal (machine-like) translation.** Short clear sentences; rephrase awkward English.
+  The reason "Grammar" comes without details (Fair Member Fees, 2026-10-22). What it meant there: English-style ";"
+  between clauses (use ", iar" or a full stop), literal clauses ("după închiderea orelor perioadei", "măsurat în ..."),
+  wrong word sense (a member is not "neplătit" -> "cotizația membrului este neachitată"; "linked" is not "legat"
+  -> "asociat"), headings with the article ("Membrii și orele lor" -> "Membri și ore de voluntariat").
+- **Translate block keywords** (`msgctxt "block keyword"`) - an untranslated keyword came back as "Grammar".
 
 ## 3. Glossary terms that came up
 | English | Romanian |
@@ -65,6 +70,9 @@ Dan Caragea (2026-10-18), the team style guide <https://ro.wordpress.org/team/ha
 | endpoint | punct-final |
 | nonce | nunic |
 | player (media) | player - for a sports player use "jucător" |
+| login | autentifica / autentificare; "login" (user name) = "nume de autentificare" |
+| membership | apartenență (glossary); "calitate de membru" is accepted |
+| user account | cont utilizator (approved form, without "de") |
 Check the full CSV for every new string: the editor's tool underlines glossary words and flags a different translation.
 
 ## 4. Deliver
@@ -73,3 +81,8 @@ Check the full CSV for every new string: the editor's tool underlines glossary w
   from the fixed local PO (by msgid) and give these files to the owner to import on translate.wordpress.org.
 - Check placeholders and that every returned string really changed before handing the files over.
 - Add new findings (new glossary terms, editor's reasons) to the plugin's CLAUDE.md.
+- **Do not re-import the whole PO file after a review.** Rotation Tournaments (2026-10-19): the rewritten PO of all
+  ~950 strings was imported at 16:57 UTC and the editor rejected all of it at 18:28 UTC with no comment
+  (dev and dev-readme, also strings that were correct). Fair Member Fees, imported in full only BEFORE any review,
+  got a normal review (113 approved, 8 returned with reasons). Send only the returned strings, wait for the review
+  of the rest, and ask the editor (comment with @dancaragea, or #ro on WordPress Slack) before a larger import.
